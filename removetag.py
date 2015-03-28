@@ -99,7 +99,7 @@ if __name__ == '__main__':
     fileList = []
     schools = ['cornell/','misc/','texas/','washington/','wisconsin/']
     labels = ['course/','department/','faculty/','other/','project/','staff/','student/']
-    #这里是网页文件的文件夹，手工在这个目录里建一个名叫final的文件夹，用于存放处理后的文件
+    #这里是网页文件的文件夹
     for label in labels:
         rootpath = '/Users/Tony/Desktop/webkb/'+ label
         savepath = '/Users/Tony/Desktop/webkb/newfile/' + label
