@@ -1,0 +1,112 @@
+<head></head><body>cse 501: implementation of programming languages
+winter quarter, 1996
+
+
+important course information
+
+
+
+
+meeting times 
+ m, w, f from 1:30 to 2:20 in meb 235
+
+ instructor
+ craig
+chambers (chambers@cs), office hours: t, th 11-12
+(starting second week), sieg 309.
+
+ ta
+ vass litvinov (vass@cs), office hours: we 11:00-12:00,
+ fr 11:30-12:30, sieg 423 / a cubicle on the 4th floor.
+
+
+
+archives
+
+
+
+slides from lecture are available here.
+
+
+handouts are available here.
+
+
+reading assignments are available here.
+the full reading list for the class is available here.
+
+
+homework assignments are available here.
+
+
+messages sent to the cs501@cs mailing list are archived
+here.
+
+
+last year's midterm exam &amp; answers are available here.
+
+last year's final exam &amp; answers are available here.  (note that this test was closed
+book &amp; 2 hrs, which affected the kind of questions that were
+asked.)
+
+this year's midterm exam is available here.
+sample solutions are here.
+
+this year's final exam &amp; answers are available here.
+
+
+
+
+
+cecil and vortex information
+
+handouts from tutorials
+
+
+
+the cecil language tutorial
+
+the vortex compiler tutorial
+
+how to use the vortex c/c++ front-end
+
+a list of compiler files of
+    interest
+
+dead-assign-elim.cecil
+    -- a simple example of an idfa
+
+cfg-traversal-interface.cecil -- the cfg traversal framework
+
+vortex rtl textual description
+    grammar
+
+
+
+
+cecil reference documentation
+
+documentation is available both in html and postscript formats:
+
+
+the cecil language reference manual (postscript version)
+
+how to use the vortex compiler (postscript version)
+
+the cecil standard library reference manual (postscript version)
+
+
+
+
+other resources
+
+the previous quarter's web page, including all the old slides, etc.,
+is available here.
+
+ 
+
+more information about compiler and language research can be found on
+mark leone's programming language research page.
+
+
+
+chambers@cs.washington.edu</body><tag>course</tag>

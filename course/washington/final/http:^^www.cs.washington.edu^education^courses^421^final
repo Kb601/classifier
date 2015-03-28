@@ -1,0 +1,120 @@
+<head></head><body>cse 421: intro. to algorithms winter 1996
+  larry ruzzo &amp; martin tompa
+
+
+
+class messages: 
+      (check this or your email frequently.
+       last update:
+           
+          
+          03/15/96 at 02pm.)
+
+
+
+text book errata lists. 
+
+handouts:
+    
+      
+        latex:
+        syllabus
+        midtem solution
+      
+      
+        acrobat  :
+        syllabus
+        midtem solution
+      
+      
+        postscript:
+        syllabus
+        midtem solution
+      
+    
+
+homework:
+    
+      
+        latex:
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+      
+      
+        acrobat  :
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+      
+      
+        postscript:
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+      
+    
+
+421 webs from previous quarters
+
+
+  
+     winter 1995 (karlin)
+  
+
+
+
+
+
+about file formats:  most of the
+course materials above are provided in three formats:
+
+
+
+
+
+  latex:
+    plain ascii text including formating commands.
+    simple things (e.g. assignments) are generally quite legible in
+    this format.  for figures and complex math stuff, these are
+    hard-to-impossible to read.
+  adobe acrobat  :
+    the latest &amp; greatest.
+    get a free viewer from adobe's 
+    acrobat and the web page.
+    
+  postscript:
+    the 
+    ghostscript home page
+    has free viewers (mac, windows, os/2, linux, ...)
+  
+at this time, acrobat is supported on fewer systems, but is
+preferable if you can use it -- files are smaller, rendering is
+faster and more legible, and it can print (which mac ghostscript
+can't, for example).
+
+
+
+
+
+
+
+
+{ ruzzo | tompa | aberman } @cs.washington.edu
+
+(last update: 
+  
+  02/28/96
+)</body><tag>course</tag>

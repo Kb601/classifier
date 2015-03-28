@@ -1,0 +1,82 @@
+<head></head><body>cse/ee 461: intro. to computer communication networksautumn 1996
+
+
+instructor:
+arun somani,
+somani@cs
+
+
+
+
+lecture: mwf 8:30am - 9:20am in meb103 
+office sieg 316/eeb306
+phone: 543-9348/685-1602
+office hours: m w and f 9:30-10:30
+
+
+
+ta: 
+jari kristensen,
+jari@cs
+
+
+office eeb 331
+office hours: t th 9:00 - 1:00 pm ( ta's office hours has been changed to
+match prof. somani's office hours, thus covering every day in the week and
+providing a larger timewindow for consultations.)
+
+
+class messages 
+      (check this or your email frequently.)
+
+lecture overheads
+homeworks
+projects
+interesting stuff
+
+
+attention
+
+
+if you would like to request academic accommodations due to a disability, please
+contact disabled student services, 448 schmitz, 543-8924(v/tdd). if you have
+a letter from disabled student services indicating you have a disability that requires
+academic accommodations, please present the letter to me so we can discuss the 
+accommodations you might need for class.
+
+
+
+
+
+about file formats:  most of the course 
+materials above are provided in three formats:
+
+
+
+
+
+  html:
+    hypertext markup language (html) is the document format handled by 
+    www browsers, in fact you are currently looking viewing an html 
+    document.  many of the handouts we've provided were originally latex 
+    documents that have been converted to html using 
+    latex2html, 
+    which is why they can be a bit strange.
+  latex:
+    plain ascii text including formating commands.
+    simple things (e.g. assignments) are generally quite legible in
+    this format.  for figures and complex math stuff, these are
+    hard-to-impossible to read.
+  postscript:
+    the 
+    ghostscript home page
+    has free viewers (mac, windows, os/2, linux, ...)
+  
+
+
+
+
+
+
+
+jari@cs.washington.edu</body><tag>course</tag>

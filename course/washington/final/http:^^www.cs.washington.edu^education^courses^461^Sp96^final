@@ -1,0 +1,67 @@
+<head></head><body>cse/ee 461: intro. to computer communication networksspring 1996
+
+
+
+instructor:
+richard ladner,
+ladner@cs
+
+
+lecture: mwf 8:30am - 9:20am in sieg 325
+office sieg 311
+phone: 543-9347
+office hours: w and th 11am - noon
+
+
+ta:
+william chan,
+wchan@cs
+
+
+office hours: t 11:30am - 12:20pm in sieg 225, th 2:30pm - 3:20pm in sieg 326.
+
+
+class messages 
+      (check this or your email frequently.)
+
+lecture overheads
+homeworks
+projects
+
+
+
+
+about file formats:  most of the course 
+materials above are provided in three formats:
+
+
+
+
+
+  html:
+    hypertext markup language (html) is the document format handled by 
+    www browsers, in fact you are currently looking viewing an html 
+    document.  many of the handouts we've provided were originally latex 
+    documents that have been converted to html using 
+    latex2html, 
+    which is why they can be a bit strange.
+  latex:
+    plain ascii text including formating commands.
+    simple things (e.g. assignments) are generally quite legible in
+    this format.  for figures and complex math stuff, these are
+    hard-to-impossible to read.
+  postscript:
+    the 
+    ghostscript home page
+    has free viewers (mac, windows, os/2, linux, ...)
+  
+
+
+
+
+
+
+
+ladner@cs.washington.edu
+
+wchan@cs.washington.edu</body><tag>course</tag>

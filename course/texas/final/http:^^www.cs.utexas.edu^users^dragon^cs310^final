@@ -1,0 +1,543 @@
+<head></head><body>computer organization and programming  
+     cs310 (fall 1996) 
+
+
+
+ this page is constantly under construction:
+last update on
+mon dec  9 14:22:23 cst 1996
+
+
+
+
+
+
+
+
+
+ course   	 cs310 
+  
+ title 		 computer organization and programming 
+
+ prerequisite 	 cs315 with a grade of at least c 
+
+ professor	 chris edmondson-yurkanan (dragon@cs.utexas.edu)
+
+
+
+
+
+
+
+
+ important dates  
+12/17 final exam (10am lecture): wed 12/11 9-noon ** tay 2.106 **, 
+tues 12/17 in ** tay 2.106 **. 
+see  handout #40  
+............................................. 
+12/11 final exam (9am lecture): wed 12/11 9-noon wel 2.246 
+see  handout #40 
+............................................. 
+ news  
+............................................. 
+12/9  program #5 example solution posted: 
+  see the program solution section 
+............................................. 
+
+12/6  exam objectives (for the final) :  handout 40
+: check out the extra office hours. 
+............................................. 
+11/15 fantasm page is up : visit now!
+............................................. 
+11/10 fantasm faq: v1.2 : updated version (11/10/96)
+  
+............................................. 
+
+
+
+
+
+ contents 
+ 
+	 class info
+	  
+	    meeting time and place (lectures and 
+		discussion sessions)
+	    professor 
+	    tas 
+	   course operations (info, syllabus & grading info.)
+	  
+	 calendar 
+	  
+	   important dates
+	    lecture, homework, test schedule at a glance 
+	  
+	 lectures 
+	 handouts (class notes, homeworks, 
+		programming assignments)
+	 discussion sessions
+	 resources
+	  
+	    utexas.class.cs310  
+		newsgroup
+	   homework solutions 
+	   programming solutions
+	   tests and solutions 
+	   programming resources
+	    old exams and study guide
+	  
+
+
+
+
+
+ meeting time and place (lectures and discussion sessions) 
+
+
+
+
+ time  		place 
+		unique 	discussion session
+		ta
+ 
+ mwf 9am-10am   tay 2.006 
+		 47465   th 930-1030 ecj 1.214
+		yoonsuck choe
+ 
+   
+		 47470   th 930-1030 pai 3.14
+		ge zhang
+ 
+   
+		 47475   th 1100-1200 pai 3.14
+		ge zhang
+ 
+   
+		 47480   th 1230-130p pai 3.14
+		deepa ramani
+ 
+ mwf 10am-11am   tay 2.006 
+		 47485   th 1230-130p rlm 5.216
+		cynthia he
+ 
+   
+		 47490   th 200-300p pai 3.14
+		yoonsuck choe
+ 
+   
+		 47495   th 330-430p pai 3.14
+		deepa ramani
+ 
+   
+		 47500   th 500-600p pai 3.14
+		cynthia he
+
+
+
+
+|back to contents|
+
+
+
+ professor
+
+
+
+professor  chris edmondson-yurkanan (your-cannon)  
+
+office  tay 3.148; 471-9546 
+
+email dragon@cs.utexas.edu 
+
+office hours  tu 1030-1200p, th 1030-1130p 
+
+
+|back to contents|
+
+
+
+ tas 
+
+	all ta office hours are located in pai 3.04n. you may go to any of the
+	ta office hours.  there are no ta office hours on thursday.
+	attend the discussion sections you are registered for.
+	
+
+
+ta email office hours (& place) 
+
+ 
+yoonsuck choe yschoe@cs.utexas.edu
+m 1230-130p, tu 230-4p (pai 3.04n) 
+
+cynthia he cxh@cs.utexas.edu
+m 330-500p, tu 1230-130p (pai 3.04n) 
+
+deepa ramani dparam@cs.utexas.edu
+w 300-430p, f 1200-100p (pai 3.04n) 
+
+ge zhang gzhang@cs.utexas.edu
+f 100-330p (pai 3.04n) 
+
+
+	for discussion sessions conducted by each ta, please go 
+	to  "meeting time and place" .
+
+|back to contents|
+
+
+
+ calendar 
+
+	
+  	 important dates 
+	
+		 9/2 : labor day holiday
+		 9/3 : last day to add using tex
+		 9/13: 12th class day : last day to drop using tex,
+		last day to drop with a refund, last day to add w/o rare or
+		extenuating circumstances.
+		 9/14 : automatic q drop period begins
+		 9/25 : last day to drop a course w/o academic penalty,
+		q/f period starts
+		 10/23 : last day to drop a course for academic reasons,
+		last day to withdraw from the university, last day to change 
+		registration in a course to or from pass/fail, deadline to 
+		apply for graduation.
+		 11/28-30 : thanksgiving holiday
+		 12/6 : last class day, last day to appeal for a
+		non-academic drop or withdrawal.
+	
+	
+  	 lecture, homework, test schedule at a glance
+	
+		 9/4 :  homework #1 (correct version) due by 9/9 
+		monday 10am 
+		 typo in hw#1 : 2-(d) (2)&(4), 4-(2)&(4) : 
+		it has 9 bits in all, so remove the rightmost bit to make 
+		it 8 bits.
+		 9/11 :  homework #2 due by 9/16 
+		monday 10am 
+		 9/16 :  program #1(part 1) 
+		due by 9/25 wednesday 10am. early date 9/24 tues tay 3.148 
+		11am (5% bonus)
+		 9/18 :  program #1(part 2) 
+		 9/25 :  program #2(part 1) 
+		due by 10/4 friday 10am. early date 10/3 thursday , 
+		late date 10/5 saturday : tay 3.148 
+		 9/27 :  program #2(part 2) 
+		 9/27 :  homework #3 
+		due by 10/2 wednesday 10am.
+		 10/2 :  program #2 and exam 1 
+		objectives  
+		 10/3 :  homework #3 solution 
+		 10/4 :  practice problems 
+		 10/8 :  night exam 1 : 7-9pm wel 2.224 
+		 10/11 :  program #3(part 1) 
+		due by 10/21 monday 10am. late due : 10/22 11am tay3.148(-15%)
+		 10/16 :  exam#1 solution 
+		 10/16 :  program #3 announcements
+		 : due date changed to 10/24(thu) 11am,
+		tay 3.148 (slide it under the door).
+		early date (+5%) 10/23(wed) 10am, tay 2.006. 
+		late date(-15%) 10/25(fri) 10am tay 2.006. 
+		late date(-30%) 10/28(mon) 10am tay 2.006. 
+		 10/21 : 
+		program #3 testing/turn-in procudure 
+		 10/25 : 
+		program #4 
+		wed nov 6th 10a.m. 100%, thurs nov 7th 11a.m. 90%,
+		fri nov 8th 10a.m. 80%.
+		 11/8 :  exam 2 (11/13 wednesday
+		7-9pm, wel 2.224) objectives 
+		 11/8 : exam 2 practice problems : not available 
+			electroncally
+		 11/20: 
+			program #5 : 
+			wed dec 4th (early) 10am tay 2.006, 
+			thu dec 5th (100%) 11am tay 3.148,
+			fri dec 6th (90%) 10am tay 2.006.
+		 12/11: final exam 9-noon : see  
+			exam objectives . 
+			9am lecture - wel 2.246, 10am lecture - tay 2.106.
+		 12/17: final exam 9-noon : see 
+			exam objectives .
+			tay 2.106
+
+	
+
+|back to contents|
+
+
+
+ lectures
+ 
+	see handouts. 
+
+|back to contents|
+
+
+
+ handouts (class notes, homeworks, and programming assignments)
+ 
+if handouts are not available electronically, please check the box
+in front of prof. yurkanan's office (tay 3.148). 
+ class handouts 
+ 
+	 8/28 handout 0: letter to students 
+	 8/28 handout 1: overview description of 
+		the course topics 
+	 8/28 handout 2: course operations 
+	 8/30 lecture note: day3, slides 1 - 12 (single page).
+	 8/30 ascii code chart
+	 9/4  handout 3: home work#1: due by 
+		monday 9/9 10am in class 
+		 typo in hw#1 : 2-(d) (2)&(4), 4-(2)&(4) : 
+		it has 9 bits in all, so remove the rightmost bit to make 
+		it 8 bits.
+	 9/9  handout 4:  class info: office hours
+		and discussion sections 
+	 9/11 handout 5:  homework #2 : due 
+		by 9/16 monday 10am.
+	 9/13 handout 6: endianess & memory hierarchy (not available electronically. pick it up from
+		the box in front of tay 3.148)
+	 9/16 handout 7:
+		 program #1(part 1) 
+		due by 9/25 wednesday 10am. early date 9/24 tues tay 3.148 
+		11am (5% bonus)
+	 9/18 handout 8:
+		 program #1(part 2) 
+	 9/25 handout 9:  program #2(part 1) 
+		due by 10/4 friday 10am. early date 10/3 thursday tay 3.148 
+		11am (5% bonus), late date 10/5 saturday 4pm tay 3.148: 
+		submit what you have!!!
+	 9/27 handout 10: program #2(part 2) 
+	 9/27 handout 11: homework #3 
+		due by 10/2 wednesday 10am.
+	 10/2 handout 12:  program #2 and exam 1 
+		objectives  
+	 10/3 handout 13:  homework #3 solution
+	
+	 10/4 handout 14:  practice problems  
+	 10/11 handout 15:   
+	program #3(part 1) due by 10/21 monday 10am. late due : 
+	10/22 11am tay3.148(-15%)
+	 10/16 handout 16:  exam#1 solution 
+	 10/16 handout 17:  
+	program #3 announcements  : due date changed to 10/24(thu) 11am,
+		tay 3.148 (slide it under the door).
+		early date (+5%) 10/23(wed) 10am, tay 2.006. 
+		late date(-15%) 10/25(fri) 10am tay 2.006. 
+		late date(-30%) 10/28(mon) 10am tay 2.006. 
+	 10/21 handout 18: 
+		program #3 testing/turn-in procudure 
+	 10/24 handout 19: 
+		fantasm user's manual : also available in the 
+		[system disk]->[fantasm]->[f96.io.v1.0], documents folder
+		in the pai powermacs (not the old quadras).
+	 10/24 handout 20:  fantasm
+		program example: also available on the pai macs: start.s and
+		p4_globals.s
+	 10/25 handout 21: 
+		program #4 
+		wed nov 6th 10a.m. 100%, thurs nov 7th 11a.m. 90%,
+		fri nov 8th 10a.m. 80%.
+	 10/28 handout 22: class note - pick up from tay 3.148
+	 10/30 handout 23: class note - passing parameters (using registers
+		and stack), function : not available electronically. pick
+		it up from tay 3.148.
+	 10/30 handout 24: 
+		examples of parameter passing 
+	 10/31 handout 25: (discussion section) 
+		macsbug instructions
+	 11/1 handout 26: 
+		 important fantasm info and turn-in requirements
+	 11/8 handout 27: comments on real compilers and proc/func calls:
+		class note - pick up from tay 3.148
+	 11/8 handout 28: example of how a compiler might use 
+		32 registers (in a risc architecture) including some 
+		for call by value parameter passing:
+		class note - pick up from tay 3.148
+	 11/8 handout 29:  exam 2 (11/13 wednesday
+		7-9pm, wel 2.224) objectives 
+	 11/8 handout 30: exam 2 practice problems : 
+			not available 
+			electroncally - pick up from tay 3.148
+	 11/8 handout 31: exam 2 practive problems - solution: 
+			not available 
+			electroncally - pick up from tay 3.148
+	 11/18 handout 32:  program #5  : obsolete - 
+		see handout 33.
+	 11/20 handout 33: 
+			program #5 spec and turnin procedure: 
+			wed dec 4th (early) 10am tay 2.006, 
+			thu dec 5th (100%) 11am tay 3.148,
+			fri dec 6th (90%) 10am tay 2.006.
+	 11/xx handout 34: ??
+	 11/xx handout 35: ??
+	 11/25 handout 36: programming model for a generic disk dma
+		interface. not available electoronically - pick up from 
+			tay 3.148.
+	 11/25 handout 37: problem with the character oriented model.
+		not available electoronically - pick up from 
+			tay 3.148.
+	 12/4 handout 38: exam #2 solution.
+		not available electoronically - pick up from 
+			tay 3.148.
+	 12/11 handout 40: 
+			exam objectives .  12/11 9-noon: 
+			9am lecture - wel 2.246, 10am lecture - tay 2.106.
+			 12/17 9-noon: tay 2.106
+
+
+ discussion session handouts 
+
+	 8/29 cheating policy 
+	 8/29 questionaire 
+	 10/3 handout 13:  homework #3 solution
+	 10/24 fantasm user's manual: 
+		user's manual : also available in the 
+		[system disk]->[fantasm]->[f96.io.v1.0], documents folder
+		in the pai powermacs (not the old quadras).
+	 10/24 example program: 
+		also available on the pai macs: start.s and
+		p4_globals.s
+	 10/31  macsbug instructions
+
+
+
+|back to contents|
+
+
+
+ discussion sessions 
+
+	you must go to the discussion sessions you are officially registered
+	for. no exceptions other than going to other discussion sessions
+	held by the same ta who you are registered for.
+	
+	see the meeting time & place and
+	 handout 4 for more info.
+
+|back to contents|
+
+
+
+ utexas.class.cs310 newsgroup
+ the class newsgroup is at
+ utexas.class.cs310
+
+
+|back to contents|
+
+
+ homework solutions
+
+	 
+		  homework #1 solution 
+		  homework #2 solution 
+		  homework #3 solution 
+
+	
+
+|back to contents|
+
+
+ programming solutions
+
+	you are free to use these solutions towards your next 
+	programming assignment.
+	 
+		 program #1 example solution (thanks to brett james): 
+			 pascal source, 
+			 output (test #1), 
+			
+			 test #2 data, and
+			
+			 output (test #2).
+		 program #2 example solution: 
+			 pascal source,
+			 
+			test #2 output 
+			new :  
+			c++ source 
+		 program #4 example solution:
+			 
+			4.1 p4_globals.s,	
+			
+			4.1 start.s	
+			 
+			4.2 p4_globals.s,	
+			
+			4.2 start.s	
+			 
+			4.3 p4_globals.s,	
+			
+			4.3 start.s	
+		 program #5 example solution:
+			
+			5.1 p4_globals.s 
+			 
+			
+			5.1 start.s
+			 
+			
+			5.1 macsbug log
+			 
+			
+			5.2 p4_globals.s
+			 
+			
+			5.2 tb.bcf
+			 
+			
+			5.2 start.s
+			 
+			
+			5.2 subroutine_file.s
+			 
+			
+			5.2 exception_file.s
+			 
+	
+
+|back to contents|
+
+
+ tests and solutions
+
+	 
+		 exam #1 solution
+		 exam #2 solution: see handout #38 - not avaliable 
+			electronically: pick up from tay 3.148.
+	
+
+|back to contents|
+
+ programming resources
+
+	check out the new fantasm page.
+
+|back to contents|
+
+
+ old exams and study guide
+
+
+	 check out  handout #12:exam objectives 
+		(exam 1)  and 
+	handout #14: practice problems.
+	  handout #29: exam objectives (exam 2)
+		, handout #30: practice problems (not available electronically)
+	 handout #40: exam objectives (exam 3)
+
+
+|back to contents|
+
+
+this page is maintained by 
+yoonsuck choe (yschoe@cs.utexas.edu)
+
+| ut austin 
+| utcs
+|</body><tag>course</tag>
