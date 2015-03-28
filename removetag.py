@@ -4,6 +4,8 @@
 import os
 import re
 rootpath = ''
+filepath = ''
+savepath = ''
 
 #获取path目录下所有的文件名
 def getfiles(path):
@@ -14,7 +16,8 @@ def getfiles(path):
             fileList.append(f)
     return fileList
 
-#从html文件中提取title和body
+#这个是用来分feild提取，现在不用了
+'''
 def process(file):
     global rootpath
     content=''
@@ -50,30 +53,31 @@ def process(file):
     with open(rootpath+'final/'+file+'final', 'w') as f:
         #根据网页类别填写下面的tag
         f.write('<head>'+head+'</head>'+'<body>'+body+'</body>'+'<tag>course</tag>')
-
+'''
 
 def processbagofword(file):
-    global rootpath
+    global filepath, rootpath, savepath
     content=''
-    with open(rootpath+file, 'r') as f:
+    with open(filepath+file, 'r') as f:
         content = f.read().lower()
-    #print len(content.split('<'),1)
-    content = '<'+content.split('<',1)[1]
-    print content
+    if len(content.split('<',1))>1:
+        content = '<'+content.split('<',1)[1]
+    #print content
     content = removetag(content)
     
-    with open(rootpath+'final/'+file+'final', 'w') as f:
+    with open(savepath+file+'final', 'w') as f:
         #根据网页类别填写下面的tag
-        f.write(content+'<tag>course')
+        f.write(content)
 
 
-#删除title和body内部的html标签
+#删除html标签
 def removetag(content):
     dr = re.compile(r'<[^>]+>',re.S)
     dd = dr.sub('',content)
 
     return dd.strip()
 #检查html文件的标签是否正确
+'''
 def check(file):
     global rootpath
     content=''
@@ -88,17 +92,24 @@ def check(file):
             print file
     elif len(content.split('<body>'))==1:
             print file
-    
+'''   
 
 #主函数
 if __name__ == '__main__':
     fileList = []
+    schools = ['cornell/','misc/','texas/','washington/','wisconsin/']
+    labels = ['course/','department/','faculty/','other/','project/','staff/','student/']
     #这里是网页文件的文件夹，手工在这个目录里建一个名叫final的文件夹，用于存放处理后的文件
-    rootpath = '/Users/Tony/Desktop/webkb/course/cornell/test/'
-    fileList = getfiles(rootpath)
-    for fl in fileList:
-        if fl != '.DS_Store':
-            #check(fl)
-            processbagofword(fl)
+    for label in labels:
+        rootpath = '/Users/Tony/Desktop/webkb/'+ label
+        savepath = '/Users/Tony/Desktop/webkb/newfile/' + label
+        for univ in schools:
+            filepath = rootpath+univ
+            fileList = getfiles(filepath)
+            for fl in fileList:
+                if fl != '.DS_Store':
+                    #check(fl)
+                   processbagofword(fl)
+        print label
         
         
