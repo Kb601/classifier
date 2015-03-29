@@ -25,8 +25,7 @@ def processbagofword(files):
     with open(files, mode) as fin:
         content += fin.read()
 
-    start = 0
-    end = 0
+        # the part that is not clear
     tokenizer = RegexpTokenizer('\w+|\$[\d\.]+|\S+')
     # words = nltk.tokenize(content)
     allwords = tokenizer.tokenize(content)
@@ -64,15 +63,31 @@ def processbagofword(files):
     # for word in wordlist:
     #     termcount[word]=termcount.get(word,0)+1
 
+# put top 2000 words into top2000words dict
+def getTop2000words(allwordsDict, top2000words):
+    count = 0
+    for element in sorted(allwordsDict.items(), key=lambda x: -x[1]):
+        if count < 2000:
+            count += 1
+            top2000words[element[0]] = element[1]
+        else:
+            break    
+
+# put top2000words dict into csv
+def create2000DictCsv(top2000words):
+    with open('top2000csvfile.csv', 'wb') as f:  
+        w = csv.DictWriter(f, top2000words.keys())
+        w.writeheader()
+        w.writerow(top2000words)    
 
 
 if __name__ == '__main__':
     fileList = listFiles("webkb/newfile")
-    processbagofword(fileList[0])
-    processbagofword(fileList[1])
     allwordsDict = dict()
     onefileDict = dict()
     top2000words = dict()
+
+    # merge the main word dict with next one file dict
     for fl in fileList:
         onefileDict = processbagofword(fl)
         for element in onefileDict:
@@ -80,22 +95,18 @@ if __name__ == '__main__':
                 allwordsDict[element] += onefileDict[element]
             else:
                 allwordsDict[element] = 1
+
     print allwordsDict
-    count = 0
-    for element in sorted(allwordsDict.items(), key=lambda x: -x[1]):
-        if count < 2000:
-            count += 1
-            top2000words[element[0]] = element[1]
-        else:
-            break
+
+    getTop2000words(allwordsDict, top2000words)
+    
+
     for i in xrange(10):
         print ""
     print "Top 2000 words:"
     print top2000words  
-    with open('top2000csvfile.csv', 'wb') as f:  # Just use 'w' mode in 3.x
-        w = csv.DictWriter(f, top2000words.keys())
-        w.writeheader()
-        w.writerow(top2000words)
+    create2000DictCsv(top2000words)
+
 
 
 
