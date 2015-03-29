@@ -1,0 +1,48 @@
+22c:096 topics in computer science, orientation 
+
+
+ 
+
+
+
+
+
+syllabus :
+assignments :
+grading :
+reading list :
+going public :
+completed projects
+
+
+
+
+
+what this class is about
+help
+
+
+
+
+
+to the
+department of computer science
+
+
+direct any errors in the 22c:096 pages to sgelo@cs.uiowa.edu.
+this page has been accessed 2876 times since friday, march 1, 1996 at 3:58:29 pm.
+
+
+
+
+function loopmessage(seed) {
+var message = " welcome to 22c:096! 	 be sure to sign up for the spring semester of topics in computer science, orientation.	the course # will be changed to 22c:003 (sections 1 and 2) " ;
+var display = " " ;
+var i = 1 ;
+if ( seed > 180 ) {
+seed -= 2 ;
+var cmd = "loopmessage(" + seed + ")" ;
+window.settimeout(cmd,100) ;
+}
+else if ( seed  0 ) {
+for ( i=0; i

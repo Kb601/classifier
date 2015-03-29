@@ -1,0 +1,203 @@
+gvu: pvanim -- visualization/animation in cluster environments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+pvanim -- visualization/animation in cluster environments
+
+
+
+
+
+
+
+
+
+
+
+pvanim is an enhancement package for pvm 3.3 that produces
+animations of the execution of pvm applications.  this document
+describes the subsystem that shows fine-grained post-mortem
+visualizations of pvm applications.  another subsystem, pvanim 2.0 provides on-line,
+low-overhead, minimal perturbation visualizations as well.
+
+
+
+pvanim provides a general purpose set of views that work with all pvm
+applications, and provides support for users to build custom
+application specific animations.  the two main components of pvanim
+are a tracing library and a general purpose set of animations that
+work with all pvm applications.
+
+
+
+the pvanim system provides its own robust tracing package for pvm.  this
+package not only drives the general purpose animations, but also provides
+support for user trace events for use with custom application specific 
+animations.  the pvanim tracing package provides comprehensive
+timestamping techniques.  pvanim not only performs clock
+synchronization and tachyon removal for its ``wall clock'' timestamp,
+but it also provides a pure lamport logical timestamp as an aid in
+determining the concurrency and causality of events that take place in
+the application.  
+
+
+
+the second main component of pvanim is a general purpose library of
+animations that work with all pvm applications.  this library was
+developed using the the polka animation 
+designer's package, and users may also use this package to develop
+their own application specific animations.
+included below are snapshots from the pvanim system.
+
+
+
+all of the pvanim system is available via anonymous ftp from 
+ftp.cc.gatech.edu
+ under pub/people/stasko.
+the support platform required for this is a machine running the x
+window system with motif, and a c++ compiler. from the ftp site
+mentioned above, you will need to retrieve the files
+pvanimtrace.tar.z and
+pvanimviz.tar.z.
+
+
+
+
+
+
+
+
+
+
+when users begin a session with pvanim, they are presented with the pvanim
+menu, an information box, and a polka control panel.
+the pvanim information box displays message communication information 
+that can be acquired by 
+clicking with the left mouse button on objects in some of the views.  the
+polka control panel allows you to change the speed of the animation, step 
+through it, or pause the animation.  the pvanim menu displays the general 
+purpose views that are currently available.
+
+
+
+
+the history view is the first option available in the pvanim menu. 
+this scrolling view maintains a history of messages
+that have been sent or received.  the y-axis of this view is labeled with
+lamport clock values with time proceeding from bottom to top.  
+the x-axis is labeled with process identifiers.  
+squares that are associated with message
+sends are filled in with dark colors.  lighter colors of the same hue 
+fill squares that are 
+associated with the corresponding message receives.  
+message size is encoded by filling squares
+with various amounts of color.  this can be deciphered by using the
+history legend view, the second option listed in the pvanim menu.
+
+
+
+
+
+
+  the third option available in the pvanim menu is the causality view.
+this view is a more complex version of a feynman diagram, and is also
+known to many as a lamport timeline view.
+in this view, the y-axis 
+is labeled with process identifiers and the x-axis is labeled with lamport
+clock values.  when a message is sent, a circle appears at the 
+appropriate logical time coordinate.    
+varying circle radii are used to denote message size and the color of the
+circle is the same as that used in the history view.  when a message is 
+delivered, an arrow ``grows'' from the coordinate of where the message
+was sent to the correct lamport delivery time on the receiver's timeline.
+simultaneously, the circle representing the message moves along this path
+and then disappears.  arrows may be clicked by the users with the left mouse
+button.  this will place in the pvanim information box pertinent data
+regarding the arrow (which represents a message communication) such as who
+sent the message, who received it, its type and length.  this view is 
+similar to the history view in the  information it provides, but is 
+very useful when trying to distinguish communication patterns.
+
+
+
+
+
+
+the fourth option available in the pvanim menu is the message passing view.
+in this view, all the processes are laid out around the outside circle.  
+messages are represented as circles that smoothly move into the center of 
+the ring of processes
+when sent near and end up in the vicinity of the process that the message is
+intended to be received by.  at any time messages may be clicked by the 
+user with the left mouse button.  in the pvanim information box will 
+appear data such as who sent the message, who received it, its type and length.
+when a process receives a message, the message moves from its
+position in the center of the ring to the process.  the color of the message
+is the same color as used in the history view.  contrail lines are provided 
+so that it is clear where the message came from.  the user may turn these
+lines off if the view becomes too cluttered by clicking on the ``lines off''
+button provided in the inside of the message passing view.  
+further,
+the radius of the circles representing messages is proportional
+to message size.   messages that are never delivered conspicuously remain
+in the center.  also, the smooth animation of message traffic helps portray 
+actions such as message broadcasts.
+
+
+
+
+
+
+the fifth and final option available is the gant view.  this is a famous
+paragraph view where each process is represented as being computing,
+sending a message, or receiving a message.  when a message is computing,
+a green line is drawn, when it is sending a message, a yellow line is drawn,
+and when it is receiving, a red line is drawn.  this is a simplistic version
+of the paragraph view as it automatically provides a time scaling such that
+the entire view fits in the gant window.
+
+
+
+ back to software visualization home page
+
+
+
+
+
+
+questions or comments?  email 
+  gvu-webmaster@cc.gatech.edu.

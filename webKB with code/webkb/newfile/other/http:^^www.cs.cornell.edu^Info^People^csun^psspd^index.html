@@ -1,0 +1,27 @@
+psspd: parallel solution of sparse symmetric positive
+definite systems
+
+
+psspd(parallel solution of sparse symmetric positive
+definite systems) is a sparse matrix package
+for solving large, sparse, symmetric positive
+systems on distributed-memory machines.
+this package is implemented in ansi c
+using double-precision arithmetic.
+the message-passing interface(mpi) is used
+for communication among processors.
+
+
+psspd is a parallel direct sparse solver.
+it solves a sparse symmetric positive system ax=b
+by computing the sparse cholesky factorization pap'=ll',
+where p is a permutation matrix.
+psspd is designed to be run on all processors
+in a communicator in parallel.
+the sparse matrix a and the right hand side vector b
+are distributed among the processors in the communicator.
+however, psspd doesn't assume any particular data-to-processor
+distribution of matrix a or vector b among the processors.
+ a user's guide to psspd is available here.
+for further information regarding psspd, please contact
+the author(csun@cs.cornell.edu).

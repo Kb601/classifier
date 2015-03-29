@@ -1,0 +1,50 @@
+a protocol and server for a distributed digital technical report library
+a protocol and server for a distributed digital technical report library
+ james r. davis and  carl lagoze
+tr94-1418
+june 24, 1994
+
+ this paper describes {\bf dienst} -- a distributed interactive extensible network server for techreports. the dienst protocol is based on the world wide web protocol http, and provides an object-oriented interface to a document model. the document model allows one to access the document as a whole or by named sub-parts and it supports multiple formats for the document. we have also implemented a gateway from a web server that supports the dienst protocol. using a world wide web client (e.g. mosaic), a user may search for documents at distributed sites, browse ``thumbnail'' (very small page) images, view the full documents, and print them.
+
+how to view this document
+
+display an overview of the document in one of the following formats.
+
+overview of thumbnail pagesstructural overview
+
+display a selected page in one of the following formats (document has 9 pages).
+
+
+raw ocr output
+hi-resolution tiff image
+inline gif image
+
+
+
+
+display the whole document in one of the following formats.
+
+ocr text
+ (produced by ocr, may have errors) 20925 bytes.
+postscript
+ 274280 bytes.
+
+
+
+print or download all or selected pages.
+
+
+
+ 
+you are granted permission for the non-commercial reproduction, distribution,
+display, and performance of this technical report in any format, but this
+permission is only for a period of 45 (forty-five) days from the most recent
+time that you verified that this technical report is still available from
+the computer science department of cornell university under terms that
+include this permission.  all other rights are reserved by the author(s).
+ 
+[ search
+ | home page
+ ]
+
+ncstrlthis server operates at cornell university. send email to tech-reports@cs.cornell.edu

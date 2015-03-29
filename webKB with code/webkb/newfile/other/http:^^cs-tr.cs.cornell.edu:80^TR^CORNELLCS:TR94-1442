@@ -1,0 +1,48 @@
+design and performance of horus: a lightweight group communications  system
+design and performance of horus: a lightweight group communications  system
+ robbert van renesse,  takako m. hickey and  kenneth p. birman
+tr94-1442
+august 1994
+
+ the horus project seeks to develop a communication system addressing the requirements of a wide variety of distributed applications. horus implements the group communications model providing (among others) unreliable or reliable fifo, causal, or total group multicasts. it is extensively layered and highly reconfigurable allowing applications to only pay for services they use. this architecture enables groups with different communication needs to coexist in a single system. the approach permits experimentation with new communication properties and incremental extension of the system, and enables us to support a variety of application-oriented interfaces. our initial experiments show good performance.
+
+how to view this document
+
+display an overview of the document in one of the following formats.
+
+overview of thumbnail pagesstructural overview
+
+display a selected page in one of the following formats (document has 20 pages).
+
+
+raw ocr output
+hi-resolution tiff image
+inline gif image
+
+
+
+
+display the whole document in one of the following formats.
+
+ocr text
+ (produced by ocr, may have errors) 46537 bytes.
+
+
+
+print or download all or selected pages.
+
+
+
+ 
+you are granted permission for the non-commercial reproduction, distribution,
+display, and performance of this technical report in any format, but this
+permission is only for a period of 45 (forty-five) days from the most recent
+time that you verified that this technical report is still available from
+the computer science department of cornell university under terms that
+include this permission.  all other rights are reserved by the author(s).
+ 
+[ search
+ | home page
+ ]
+
+ncstrlthis server operates at cornell university. send email to tech-reports@cs.cornell.edu

@@ -1,0 +1,67 @@
+cse567 homework assignment #3
+
+
+
+
+cse 567: principles of digital systems design 
+carl ebeling, fall 1996 
+
+
+
+homework 3
+
+distributed: friday oct. 18 - due monday oct. 28, in class
+
+
+for problems involving verilog code, hand in your code and your
+simulation log (or at least part of it if it's really long).  for the
+synthesis problems, hand in a printout of the circuit schematic generated.
+
+ generate all the kernels of the following expression using the
+rectangle covering method:
+
+ f = ace + acg + bce + bcg + ade + adg + bde + bdg
+
+
+ minimize the following expression using multi-level logic.  the
+cost of this expression implemented directly as gates is 7 gates and
+30 inputs (literals).  minimize this circuit in terms of literals.
+
+use the rectangle method to find interesting kernel and cube divisors.
+remember that as each time you factor the function, you create a new
+expression and new rectangle covering table.
+
+x = adeg + cdeg + afg + hi + bdeg + cfg + bfg
+
+
+ look at the two verilog implementations of a comparator in
+/projects/lis/cse567/verilog/examples/comparator/ and simulate each
+using the verilog simulator.  ("verilog.exe compare_tb.v" will do the
+trick)
+
+ use the comparator verilog module to construct a min/max
+circuit.  this min/max module has two 4-bit inputs, a and b, and two
+4-bit outputs, large and small, where large is the larger of a and b
+and small is the smaller.  simulate your circuit to validate its
+behavior.
+
+ use the min/max circuit to implement a sorting network that sorts
+four numbers.  simulate and validate its behavior.
+
+ synthesize the circuit for the expression in problem 2 using
+synopsys.  (directions for synthesis)
+does synopsys give you the same circuit you found? 
+
+ synthesize the 4-bit comparator module in compare2.v.  try
+different opimization settings, including the defaults.  what's the
+"best" circuit you can come up with?
+
+ try synthesizing a 32-bit comparator using synopsys.  how well
+can you guide the results by fiddling different timing and cost
+constraints?
+
+
+
+
+
+ebeling@cs.washington.edu

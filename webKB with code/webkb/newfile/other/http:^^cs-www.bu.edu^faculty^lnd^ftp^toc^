@@ -1,0 +1,49 @@
+l. levin. theory of computation.	
+
+  leonid levin.  fundamentals of computing. 
+
+  the dvi file; the postscript file;
+ the buggy  html  files.
+
+  the latex sources:  foreword. 
+
+  models of computations; polynomial time and church's thesis. 
+
+ 	deterministic computation.	
+ 	rigid models.			
+ 	pointer machines.		
+ 	simulation.			
+
+ 	universal algorithm; diagonal results.		
+
+ 	universal turing machine.	
+ 	uncomputability; godel theorem.	
+ 	intractability; compression and speed-up
+				theorems.			
+
+ 	games; alternation; exhaustive search; time v. space. 
+
+ 	how to win.			
+ 	exponentially hard games.	
+ 	reductions; non-deterministic and alternating
+				tm; time/space.			
+ 	fast and lean computations.	
+
+ 	nondeterminism; inverting functions; reductions. 
+
+  example of a narrow computation: inverting a function.
+ 
+ 	complexity of np problems.	
+ 	an np-complete problem: tiling. 
+
+ 	randomness in computing.			
+
+ 	a monte-carlo primality tester.	
+  randomized algorithms and random inputs. 
+ 	randomness and complexity.	
+ 	pseudo-randomness.		
+ 	cryptography.		
+
+ 	references.				
+
+  see also *.dvi files with some of my papers.

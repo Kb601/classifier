@@ -1,0 +1,68 @@
+cse 542: operating system design
+
+
+
+cse 542: operating system design
+
+instructor:
+vincent w. freeh
+354 fitzpatrick hall
+phone: 1-9131
+email: vin@cse.nd.edu
+office hours: tu, th 12:30-1:30, or by appointment
+
+text:
+andrew s. tanenbaum. distributed operating systems, 
+prentice-hall, 1995.
+
+class newsgroup:
+nd.courses.cse542
+
+final exam: 
+december 17, 1996, 10:30-12:30
+
+handouts:
+
+
+ course information
+
+ program 1: hot potato
+
+  description
+ listen.c
+ speak.c
+ makefile
+for listen.c and speak.c
+
+
+   paper 1:
+
+carl a. waldspurger and william e. weihl. 
+lottery scheduling:flexible proportional-share resource management
+osdi '94.
+
+
+ program 2: ash (a shell)
+
+  description
+ ash manual page
+ parsing example (tar file)
+
+
+  paper 2:
+
+mendel rosenblum and john k. ousterhout
+the design and implementation of a log-structured file system
+sosp '91.
+
+
+ project description
+
+case study 1: plan-9
+
+
+
+lecture notes
+
+
+grades

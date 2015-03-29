@@ -1,0 +1,286 @@
+coms 1001 - introduction to computers
+
+
+
+this page was last updated on november 18, 1996.
+
+
+table of contents
+
+general course information
+fall 1996 lecture notes
+fall 1996 homework assignments
+links
+to interesting web sights
+
+
+
+
+
+about the course
+cs1001 introduction to computers is an introductory course intended
+primarily for those not planning to do further work in computer science.
+the course will focus on some of the many ways that one can use a
+computer.  we will study how to use email, how to access and post to
+newsgroups and other resources on the internet.  our major focus for this
+semester, however, is to write programs.  we will use the scheme, a
+dialect of the lisp programming language to solve problems and accomplish
+tasks.  another goal for this course is to make you, the user, "computer
+literate: so that you will be familiar with the common jargon of computer
+folks and have a sense of the historical development of computing.
+
+
+meeting time: tuesday, thursday 1:10 - 2:25
+meeting place: room 717 hamilton hall 
+course information sheet
+ 
+syllabus.mss 
+
+
+syllabus.ps
+
+books
+required: simply scheme by harvey and wright
+recommended:  the world wide web 1996 unleashed by december and
+randall and the whole internet by ed krol
+
+
+instructor
+
+
+dragomir r. radev
+office hours: tuesday 2:30 - 3:30, thursday 2:30 - 3:30 in 725
+cepsr
+
+
+teaching assistants
+
+joey yee
+ office hours: monday 6:00-7:00 friday 1:00-2:00 in 251 engineering
+terr.
+tom nardozzi
+ office hours: monday 3:00-4:00 wednesnay 1:00-2:00 in 251 engineering
+terr.
+edmund louie
+ office hours: monday 3:00-4:00 wednesnay 3:00-4:00 in 251 engineering
+terr.
+vasilis hatzivassiloglou
+ office hours: tuesday 4:00-5:00 thursday 4:00-5:00 in 251 engineering
+terr.
+
+
+students
+
+
+
+
+
+course notes
+tuesday, sep 3 
+class1.mss  
+
+
+class1.ps
+
+thrusday, sep 5 
+class2.mss  
+
+
+class2.ps
+
+tuesday, sep 10 
+class3.mss  
+
+
+class3.ps
+
+thursday, sep 12 
+class4.mss  
+
+
+class4.ps
+
+tuesday, sep 17 
+class5.mss  
+
+
+class5.ps
+
+thursday, sep 19 
+class6.mss  
+
+
+class6.ps
+
+tuesday, sep 24 
+class7.mss  
+
+
+class7.ps
+
+thursday, sep 26 
+class8.mss  
+
+
+class8.ps
+
+tuesday, oct. 1 
+class9.mss  
+
+
+class9.ps
+
+thursday, oct. 3 
+class10.mss  
+
+
+class10.ps
+
+tuesday, oct. 8 
+class11.mss  
+
+
+class11.ps
+
+thursday, oct. 10 
+class12.mss  
+
+
+class12.ps
+
+tuesday, oct. 15 
+class13.mss  
+
+
+class13.ps
+
+thursday, oct. 17 midterm
+
+tuesday, oct. 22 
+class14.mss  
+
+
+class14.ps
+
+thursday, oct. 24 
+class15.mss  
+
+
+class15.ps
+
+tuesday, oct. 29 
+class16.mss  
+
+
+class16.ps
+
+thursday, oct. 31 
+class17.mss  
+
+
+class17.ps
+
+thursday, nov. 7 
+class18.mss  
+
+
+class18.ps
+
+tuesday, nov. 12 
+class19.mss  
+
+
+class19.ps
+
+thursday, nov. 14 
+class20.mss  
+
+
+class20.ps
+
+tuesday, nov. 19 
+class21.mss  
+
+
+class21.ps
+
+thursday, nov. 21 
+class22.mss  
+
+
+class22.ps
+
+
+
+
+
+homework assignments
+
+homework #1
+
+hw1 .mss format
+
+
+hw1 .ps format
+
+homework #2
+
+hw2 .mss format
+
+
+hw2 .ps format
+
+homework #3
+
+hw3 .mss format
+
+
+hw3 .ps format
+
+homework #4:
+
+hw4 .mss format
+
+
+hw4 .ps format
+homework #5:
+
+hw5 .mss format
+
+
+hw5 .ps format
+homework #6: due wed. nov. 27 
+
+
+hw6 .mss format
+
+
+hw6 .ps format
+
+project assignment:  due monday, dec. 9 
+
+team project .mss format
+
+
+team project .ps format
+
+
+
+other readings
+
+unix comand handout .mss format
+
+
+unix comand handout .ps format
+
+several files containing information on 
+usenet
+
+
+
+
+backto table of contents
+
+
+background by carel: copyright&copy; 1996, carel lyn ashzryl. 
+tjn9@columbia.edu

@@ -1,0 +1,333 @@
+ssgrg publications page
+
+
+
+
+publications
+the following is a list of publications from our research group (largely listed in order of 
+publication date). each entry consists of a citation, an abstract, and a hypertext link to 
+the actual paper. 
+
+related web pages:  utcs general  ssgrg title page  ssgrg project index
+
+
+guillermo jimenez-perez and don batory memory simulators and software generators, to appear in 1997 
+symposium on software reuse.we present results on re-engineering a highly tuned and hand-coded memory simulator using the p2 container data structure 
+generator. this application was chosen because synthesizing the simulator's data structures would not exploit p2's primary 
+advantage of automatically applying sophisticated code optimization techniques. thus we initially believed that using p2 would 
+be an overkill and that p2's generated code would provide no performance advantages over hand coding. on the contrary, we 
+found that p2 produced more efficient code and that it offered significant advantages to software development that we had not 
+previously realized. 
+
+don batory and bart j. geraci. composition validation and subjectivity in genvoca generators, 
+to appear in ieee transactions on software engineering, special issue on software reuse.genvoca generators synthesize software systems by composing components from reuse libraries. genvoca components are 
+designed to export and import standardized interfaces, and thus be plug-compatible, interchangeable, and interoperable with 
+other components. in this paper, we examine two different but important issues in software system synthesis. first, not all 
+syntactically correct compositions of components are semantically correct. we present simple, efficient, and 
+domain-independent algorithms for validating compositions of genvoca components. second, components that export and 
+import immutable interfaces are too restrictive for software system synthesis. we show that the interfaces and bodies of 
+genvoca components are subjective, i.e., they mutate and enlarge upon instantiation. this mutability enables software systems 
+with customized interfaces to be composed from components with &quot;standardized&quot; interfaces. 
+
+vivek p. singhal. a programming language for writing domain-specific software system generators. ph.d. 
+dissertation. department of computer sciences, university of texas at austin, september 1996. automating routine programming tasks is an effective way to increase the productivity of software development. software 
+system generators have the potential to achieve this goal: customized software systems can be quickly and easily assembled 
+from component libraries. our research demonstrates that for generators to be successful, component libraries must be 
+scalable. scalability enables libraries to be small, because the components of the library implement distinct and largely 
+orthogonal features. these components can be combined to yield an enormous family of software systems and subsystems. 
+generators thus become tools for combining components to manufacture these systems and subsystems. in genvoca, the 
+programming model that forms the foundation of our research, components act as large-scale refinements which simultaneously 
+transform multiple classes from one abstraction to another. because genvoca advocates a novel style of program organization, 
+there is little language or tool support for this paradigm. we have developed a programming language called p++, which 
+extends c++ with specialized constructs to support the genvoca model. it permits components to be treated as 
+transformations which can simultaneously refine several classes in a consistent manner. to validate the utility of this language, 
+we solved a &quot;challenge problem&quot; in software reuse: we reimplemented the booch c++ components data structures library as a 
+scalable p++ library. we were able to reduce the volume of code and number of components by approximately a factor of 
+four, without compromising the performance of generated systems. 
+
+e.e. villarreal and don batory. rosetta: a generator of data language compilers, to appear in 1997 symposium on 
+software reuse. also, technical report tr-96-04, department of computer sciences, university of texas at austin, april 
+1996. a data language is a declarative language that enables database users to access and manipulate data. there are families of 
+related data languages; each family member is targeted for a particular application. unfortunately, building compilers for such 
+languages is largely an ad hoc process; there are no tools and design methods that allow programmers to leverage the design 
+and code of compilers for similar languages, or to simplify the evolution of existing languages to include more features. rosetta 
+is a generator of relational data language compilers that demonstrates practical solutions to these problems. we explain how 
+domain analysis identifies primitive building blocks of these compilers, and how grammar-based definitions (e.g. genvoca) of 
+the legal compositions of these blocks yields compact and easily-evolvable specifications of data languages. rosetta 
+automatically transforms such specifications into compilers. experiences with rosetta are discussed. 
+
+dinesh das and don batory. synthesizing rule sets for query optimizers from components, technical report 
+tr-96-05, department of computer sciences, university of texas at austin, april 1996. query optimizers are complex subsystems of database management systems. modifying query optimizers to admit new 
+algorithms or storage structures is quite difficult, but partly alleviated by extensible approaches to optimizer construction. 
+rule-based optimizers are a step in that direction, but from our experience, the rule sets of such optimizers are rather 
+monolithic and brittle. conceptually minor changes often require wholesale modifications to a rule set. consequently, much can 
+be done to improve the extensibility of rule-based optimizers. as a remedy, we present a tool called prairie that is based on an 
+algebra of layered optimizers. this algebra naturally leads to a building-blocks approach to rule-set construction. defining 
+customized rule sets and evolving previously defined rule sets is accomplished by composing building-blocks. we explain an 
+implementation of prairie and present experimental results that show how classical relational optimizers can be synthesized from 
+building-blocks, and that the efficiency of query optimization is not sacrificed. 
+
+don batory. software system generators, transformation systems, and compilers. working paper, october 1995. genvoca generators assemble customized, high-performance software systems automatically from components. in this paper, 
+we explain how genvoca generators are actually compilers for domain-specific module interconnection languages and that the 
+underlying compilation technology is a special class of transformation systems. 
+
+don batory. software component technologies and space applications. in proceedings of the international 
+conference on integrated micro-nano technology for space applications, november 1995. in the near future, software systems will be as reconfigurable than hardware. this will be possible through the advent of 
+software component technologies, which have been prototyped in universities and research labs. in this paper, we outline the 
+foundations for these technologies and suggest how they might impact software for space applications. 
+
+lance tokuda. program transformations for evolving software architectures. oopsla'95 position paper for 
+workshop on adaptable and adaptive software, 1995. software evolution is often driven by the need to extend existing software. &quot;design patterns&quot; express preferred ways to extend 
+object-oriented software and provide desirable target states for software designs. this paper demonstrates that some design 
+patterns can be expressed as a series of parameterized program transformations applied to a plausible initial software state. a 
+software tool is proposed that uses primitive transformations to allow users to evolve object-oriented applications by visually 
+altering design diagrams. 
+
+don batory. subjectivity and genvoca generators. in proceedings of the international conference on 
+software reuse '96 (orlando), 1996. see ieee tse journal version. expanded technical report tr-95-32, 
+department of computer sciences, university of texas at austin, june 1995. the tenet of subjectivity is that no single interface can adequately describe any object; interfaces to the same object will vary 
+among different applications. thus, objects with standardized interfaces seem too brittle a concept to meet the demands of a 
+wide variety of applications. yet, objects with standardized interfaces is a central idea in domain modeling and software 
+generation. standard interfaces make objects plug-compatible and interchangeable, and it is this feature that is exploited by 
+generators to synthesize high-performance, domain-specific software systems. interestingly, generated systems have 
+customized interfaces that can be quite different from the interfaces of their constituent objects. 
+in this paper, we reconcile this apparent contradiction by showing that the objects (components) in the genvoca model of 
+software generation are not typical software modules; their interfaces and bodies mutate upon instantiation to a &quot;standard&quot; that 
+is application-dependent. 
+
+don batory. issues in domain modeling and software system generation. oopsla'95 position paper for panel on 
+objects and domain engineering, 1995. 
+
+don batory and jeff thomas. p2: a lightweight dbms generator. technical report tr-95-26, department of 
+computer sciences, university of texas at austin, june 1995. a lightweight database system (lwdb) is a high-performance, application-specific dbms. it differs from a general-purpose 
+(heavyweight) dbms in that it omits one or more features and specializes the implementation of its features to maximize 
+performance. although heavyweight monolithic and extensible dbmss might be able to emulate lwdb capabilities, they 
+cannot match lwdb performance. 
+in this paper, we describe p2, a generator of lightweight dbmss, and explain how it was used to reengineer a hand-coded, 
+highly-tuned lwdb used in a production system compiler (leaps). we present results that show p2-generated lwdbs 
+reduced the development time and code size of leaps by a factor of three and that the generated lwdbs executed 
+substantially faster than versions built by hand or using an extensible heavy weight dbms. 
+
+dinesh das. making database optimizers more extensible. ph.d. dissertation. department of computer sciences, 
+university of texas at austin, may 1995. query optimizers are fundamental components of database management systems (dbmss). an optimizer consists of three 
+features: a search space, a cost model, and a search strategy. the experience of many researchers has shown that hard-wiring 
+these features results in an optimizer that is very inflexible and difficult to modify. 
+rule-based optimizers have been developed to alleviate some of the problems of monolithic optimizers. unfortunately, 
+contemporary rule-based optimizers do not provide enough support to enable database implementers (dbi) to fully realize the 
+potential of open systems. we have identified four requirements that a rule-based optimizer should satisfy to address these 
+needs. first, rules should be specified using high-level abstractions, insulating the dbi from underlying implementation details. 
+second, rule sets should be easily extensible, with a minimum of reprogramming required. third, rule sets should be easily 
+reconfigurable, that is, changeable to meet a variety of user needs, interfaces, database schemes, etc. fourth, rule-based 
+optimizers should be fast, that is, performance should not be sacrificed for the sake of high-level specifications. 
+in this dissertation, we describe prairie, an environment for specifying rules for rule-based optimizers that satisfies all four of the 
+above requirements. the prairie specification language is presented and we show how it allows a dbi to design an easily 
+extensible rule set for a rule-based optimizer. experimental results are presented using the texas instruments open odd 
+optimizer rule set to validate the claim of good performance using prairie. finally, a building blocks approach of constructing 
+rule sets is presented; this results in easily reconfigurable rule sets whose features are changeable simply by assembling the 
+blocks in various ways. 
+
+don batory, lou coglianese, mark goodwill, and steve shaver. creating reference architectures: an 
+example from avionics. in proceedings of the symposium on software reusability, seattle washington, 
+april 1995. adage is a project to define and build a domain-specific software architecture (dssa) environment for assisting the 
+development of avionics software. a central concept of dssa is the use of software system generators to implement 
+component-based models of software synthesis in the target domain. in this paper, we present the adage component-based 
+model (or reference architecture) for avionics software synthesis. we explain the modeling procedures used, review our initial 
+goals, and examine what we were (and were not) able to accomplish. the contributions of our paper are the lessons that we 
+learned; they may be beneficial to others in future modeling efforts. 
+
+don batory, lou coglianese, steve shafer, and will tracz. the adage avionics reference architecture. in aiaa 
+computing in aerospace-10 conference, san antonio, march 1995. adage is a project to define and build a domain-specific software architecture (dssa) environment for avionics. a central 
+concept of adage is the use of generators to implement scalable, component-based models of avionics software. in this 
+paper, we review the adage model (or reference architecture) of avionics software and describe techniques for avionics 
+software synthesis. 
+
+dinesh das and don batory. prairie: a rule specification framework for query optimizers. in proceedings 11th 
+international conference on data engineering (taipei), march 1995. from our experience, current rule-based query optimizers do not provide a very intuitive and well-defined framework to define 
+rules and actions. to remedy this situation, we propose an extensible and structured algebraic framework called prairie for 
+specifying rules. prairie facilitates rule-writing by enabling a user to write rules and actions more quickly, correctly and in an 
+easy-to-understand and easy-to-debug manner. 
+query optimizers consist of three major parts: a search space, a cost model and a search strategy. the approach we take is 
+only to develop the algebra which defines the search space and the cost model and use the volcano optimizer-generator as our 
+search engine. using prairie as a front-end, we translate prairie rules to volcano to validate our claim that prairie makes it 
+easier to write rules. 
+we describe our algebra and present experimental results which show that using a high-level framework like prairie to design 
+large-scale optimizers does not sacrifice efficiency. 
+
+don batory, david mcallester, lou coglianese, and will tracz. domain modeling in engineering of computer-based 
+systems. in proceedings of the 1995 international symposium and workshop on systems engineering of computer 
+based systems, tucson, arizona, february 1995. domain modeling is believed to be a key factor in developing an economical and scalable means for constructing families of 
+related software systems. in this paper, we review the current state of domain modeling, and present some of our work on the 
+adage project, an integrated environment that relies heavily on domain models for generating real-time avionics applications. 
+specifically, we explain how we detect errors in the design of avionics systems that are expressed in terms of compositions of 
+components. we also offer insights on how domain modeling can benefit the engineering of computer-based systems in other 
+domains. 
+
+lance tokuda and don batory. automated software evolution via design pattern transformations. in proceedings of 
+the 3rd international symposium on applied corporate computing, monterrey, mexico, october 1995. also tr-95-06, 
+department of computer sciences, university of texas at austin, february 1995. software evolution is often driven by the need to extend existing software. &quot;design patterns&quot; express preferred ways to extend 
+object-oriented software and provide desirable target states for software designs. this paper demonstrates that some design 
+patterns can be expressed as a series of parameterized program transformations applied to a plausible initial software state. a 
+software tool is proposed that uses primitive transformations to allow users to evolve object-oriented applications by visually 
+altering design diagrams. 
+
+jeff thomas and don batory. p2: an extensible lightweight dbms. technical report tr-95-04, department of 
+computer sciences, university of texas at austin, february 1995. a lightweight database system (lwdb) is a high-performance, application-specific dbms. it differs from a general-purpose 
+(heavyweight) dbms in that it omits one or more features and specializes the implementation of its features to maximize 
+performance. although heavyweight monolithic and extensible dbmss might be able to emulate lwdb capabilities, they 
+cannot match lwdb performance. 
+in this paper, we explore lwdb applications, systems, and implementation techniques. we describe p2, an extensible 
+lightweight dbms, and explain how it was used to reengineer a hand-coded, highly-tuned lwdb used in a production system 
+compiler (leaps). we present results that show p2-generated lwdbs for leaps executes substantially faster than versions 
+built by hand or that use an extensible heavyweight dbms. 
+
+don batory and bart j. geraci. validating component compositions in software system generators, in 
+proceedings of the international conference on software reuse '96 (orlando), 1996. see ieee tse 
+journal version. also, expanded technical report tr-95-03, department of computer sciences, university of texas at 
+austin, june 1995. generators synthesize software systems by composing components from reuse libraries. in general, not all syntactically correct 
+compositions are semantically correct. in this paper, we present domain-independent algorithms for the genvoca model of 
+software generators to validate component compositions. our work relies on attribute grammars and offers powerful 
+debugging capabilities with explanation-based error reporting. we illustrate our approach by showing how compositions are 
+debugged by a genvoca generator for container data structures. 
+
+don batory, jeff thomas, and marty sirkin. reengineering a complex application using a scalable data structure 
+compiler. in proceedings of the acm sigsoft '94 conference (new orleans), december 1994. p2 is a scalable compiler for collection data structures. high-level abstractions insulate p2 users from data structure 
+implementation details. by specifying a target data structure as a composition of components from a reuse library, the p2 
+compiler replaces abstract operations with their concrete implementations. 
+leaps is a production system compiler that produces the fastest sequential executables of ops5 rule sets. leaps is a 
+hand-written, highly-tuned, performance-driven application that relies on complex data structures. reengineering leaps using 
+p2 was an acid test to evaluate p2's scalability, productivity benefits, and generated code performance. 
+in this paper, we present some of our experimental results and experiences in this reengineering exercise. we show that p2 
+scaled to this complex application, substantially increased productivity, and provided unexpected performance gains. 
+
+emilia e. villarreal. automated compiler generation for extensible data languages. ph.d. dissertation. department of 
+computer sciences, university of texas at austin, december 1994. to meet the changing needs of the dbms community, e.g., to support new database applications such as geographic or 
+temporal databases, new data languages are frequently proposed. most offer extensions to previously defined languages such 
+as sql or quel. few are ever implemented. the maturity of the area of data languages demands that researchers go beyond 
+the proposal stage to have hands-on experience with their languages, if only to separate the good ideas from the bad. tools 
+and methodologies for building families of similar languages are definitely needed; we solve this problem by automating the 
+generation of compilers for data languages. 
+our work, rosetta, is based on two concepts. first, underlying the domain of data languages is a common backplane of 
+relational operations. backplane operations are primitive building blocks for language execution and construction, where a 
+building block has standardized semantics. the definition of a well-designed backplane is implementation-independent; that is, 
+the backplane is defined once but can be used to model arbitrarily many data languages. 
+second, there exist primitive building-blocks for language construction. from our analysis of the database data language 
+domain, we have identified three classes of building-blocks: one class maps language syntax to backplane functions, another 
+builds an internal representation of the backplane operator tree, and a third class manages contextual information. 
+for modeling data languages, we define the rosetta specification language, a grammar-based specification language tailored to 
+our needs with the power to define syntax, map it to the target language, and build an operator tree all in one rule. thus each 
+rule is a microcosmic model of a language clause which encapsulates input parsing and code generation. 
+our specification language models data languages based on the composition of primitive building blocks for semantics and the 
+customization of the syntax for invoking the compositions. a compiler for a data language is generated by first modeling the 
+language and then compiling the specification. the ease and efficiency with which rosetta customizes languages derives from 
+the reuse of the backplane operations and the high-level specification supported. 
+
+don batory. the leaps algorithms. technical report tr-94-28, department of computer sciences, university of texas 
+at austin, november 1994. leaps is a state of the art production system compiler that produces the fastest sequential executable ops5 rule sets. the 
+performance of leaps is due to its reliance on complex data structures and search algorithms to speed rule processing. in this 
+paper, we explain the leaps algorithms in terms of the programming abstractions of the p2 data structure compiler. 
+
+don batory, bart geraci, and jeff thomas. introductory p2 system manual. technical report tr-94-26, department of 
+computer sciences, university of texas at austin, november 1994. p2 is a prototype container data structure precompiler. it is a superset of the c language offering container and cursor 
+abstractions as part of the linguistic extensions to c. p2 is based on the genvoca model of software system generators. this 
+document is the users manual for programming in the p2 language. 
+
+don batory, bart geraci, and jeff thomas. advanced p2 system manual. technical report tr-94-27, department of 
+computer sciences, university of texas at austin, november 1994. this manual documents how layers are written in p2. there is a special language, xp, which was designed specifically for 
+defining p2 building blocks (i.e., primitive data structure layers). 
+
+don batory, vivek singhal, jeff thomas, sankar dasari, bart geraci, and marty sirkin. the genvoca model of 
+software-system generators. ieee software, september 1994. an emerging breed of generators synthesize complex software systems from libraries of reusable components. these 
+generators, called genvoca generators, produce high-performance software and offer substantial increases in productivity. 
+
+don batory. products of domain models. in proceedings of arpa domain modeling workshop, george mason 
+university, september 1994. we argue that domain models should produce four basic products: identification of reusable software components, definition of 
+software architectures that explain how components can be composed, a demonstration of architecture scalability, and a direct 
+relationship of these results to software generation of target systems. 
+
+martin j. sirkin. a software system generator for data structures. ph.d. dissertation. department of computer 
+science and engineering, university of washington, march 1994. although data structures are a fundamental part of most applications, using and writing data structures is time-consuming, 
+difficult, and error-prone. programmers often select inappropriate data structures for their applications because they do not 
+know which data structure to use, they do not know how to implement a particular data structure, or they do not have an 
+existing implementation of the data structure to use. 
+this dissertation describes a model and a technology for overcoming these problems. our approach is based on non-traditional 
+parameterized types (npts). npts are an extension to traditional parameterized types (tpts), which are already familiar to 
+most programmers. our npts are based on the genvoca domain modeling concepts, vertical parameterization, a consistent 
+high-level interface, and a transformational compiler. 
+our research has led to the construction of a software system generator for data structures called predator. predator is able to 
+transform data structure declarations and data structure-independent functions into efficient code. predator also allows 
+programmers to adjust a data structure's implementation by simply changing its declaration and recompiling. 
+this dissertation discusses our model (and how it differs from standard models), our predator compiler, and the results of our 
+validation efforts. 
+
+don batory, vivek singhal, jeff thomas, and marty sirkin. scalable software libraries. in proceedings of the acm 
+sigsoft '93 conference (los angeles), december 1993. many software libraries (e.g., the booch c++ components, libg++, nihcl, cool) provide components (classes) that 
+implement data structures. each component is written by hand and represents a unique combination of features (e.g. 
+concurrency, data structure, memory allocation algorithms) that distinguishes it from other components. 
+we argue that this way of building data structure component libraries is inherently unscalable. libraries should not enumerate 
+complex components with numerous features; rather, libraries should take a minimalist approach: they should provide only 
+primitive building blocks and be accompanied by generators that can combine these blocks to yield complex custom data 
+structures. 
+in this paper, we describe a prototype data structure generator and the building blocks that populate its library. we also 
+present preliminary experimental results which suggest that this approach does not compromise programmer productivity nor 
+the run-time performance of generated data structures. 
+
+vivek singhal and don batory. p++: a language for software system generators. technical report tr-93-16, 
+department of computer sciences, university of texas at austin, november 1993. p++ is a programming language that supports the genvoca model, a particular style of software design that is intended for 
+building software system generators. p++ is an enhanced version of c++: it offers linguistic extensions for component 
+encapsulation, abstraction, parameterization, and inheritance, where a component is a suite of interrelated classes and functions. 
+this paper describes the motivations for p++, the ideas which underlie its design, the syntax and features of the language, and 
+related areas of research. 
+
+jeff thomas, don batory, vivek singhal, and marty sirkin. a scalable approach to software libraries. in proceedings 
+of the 6th annual workshop on software reuse (owego, new york), november 1993. software libraries offer a convenient and accessible means to achieve the benefits of reuse. the components of these libraries 
+are written by hand, and each represents a unique combination of features that distinguishes it from other components. 
+unfortunately, as the number of features grows, the size of these libraries grows exponentially, making them unscalable. 
+predator is a research project to develop abstractions and tools to provide the benefits of software libraries without incurring 
+the scalability disadvantages just mentioned. our approach relies on a careful analysis of an application domain to arrive at 
+appropriate high-level abstractions, standardized (i.e., plug-compatible) interfaces, and layered decompositions. predator 
+defines language extensions for implementing components, and compilers to automatically convert component compositions 
+into efficient programs. 
+
+vivek singhal and don batory. p++: a language for large-scale reusable software components. in 
+proceedings of the 6th annual workshop on software reuse (owego, new york), november 1993. p++ is a programming language that supports the genvoca model, a particular style of software design that is intended for 
+building software system generators. p++ is an enhanced version of c++: it offers linguistic extensions for component 
+encapsulation, abstraction, parameterization, and inheritance, where a component is a subsystem, i.e., a suite of interrelated 
+classes and functions. 
+
+marty sirkin. predator: a data structure compiler. a manual describing the features and syntax of p1, a prototype data 
+structure compiler (unpublished). 
+&#160;
+marty sirkin, don batory, and vivek singhal. software components in a data structure precompiler. in proceedings of 
+the 15th international conference on software engineering (baltimore, md), may 1993, pages 437-446. predator is a data structure precompiler. that generates efficient code for maintaining and querying complex data 
+structures. it embodies a novel component reuse technology that transcends traditional generic data types. in this paper, we 
+explain the concepts of our work and our prototype system. we show how complex data structures can be specified as 
+compositions of software building blocks, and present performance results that compare predator output to 
+hand-optimized programs. 
+
+don batory, vivek singhal, and jeff thomas. database challenge: single schema database management systems. 
+technical report tr-92-47, department of computer sciences, university of texas at austin, december 1992. many data-intensive applications require high-performance data management facilities, but utilize only a small fraction of the 
+power of a general-purpose database system (dbms). we believe single schema database systems (ssts), i.e., 
+special-purpose dbmss that are designed for a single schema and a predeclared set of database operations, are a vital need 
+of today's software industry. the challenge is to create a technology for economically building high-performance ssts. sst 
+research will combine results from object-oriented databases, persistent object stores, module interconnection languages, 
+rule-based optimizers, open-architecture systems, extensible databases, and generic data types. 
+
+don batory and sean o'malley. the design and implementation of hierarchical software systems with reusable 
+components. acm transactions on software engineering and methodology, 1(4):355-398, october 1992. we present a domain-independent model of hierarchical software system design and construction that is based on 
+interchangeable software components and large-scale reuse. the model unifies the conceptualizations of two independent 
+projects, genesis and avoca, that are successful examples of software component/building-block technologies and domain 
+modeling. building-block technologies exploit large-scale reuse, rely on open architecture software, and elevate the granularity 
+of programming to the subsystem level. domain modeling formalizes the similarities and differences among systems of a 
+domain. we believe our model is a blue-print for achieving software component technologies in many domains. 
+
+don batory, vivek singhal, and marty sirkin. implementing a domain model for data structures. international 
+journal of software engineering and knowledge engineering, 2(3):375-402, september 1992. we present a model of the data structure domain that is expressed in terms of the genvoca domain modeling concepts. we 
+show how familiar data structures can be encapsulated as realms of plug-compatible, symmetric, and reusable components, 
+and we show how complex data structures can be formed from their composition. the target application of our research is a 
+precompiler for specifying and generating customized data structures. 
+
+
+
+last modified: december 24, 1996
+
+don batory (batory@cs.utexas.edu)

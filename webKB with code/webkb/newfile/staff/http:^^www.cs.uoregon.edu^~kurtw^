@@ -1,0 +1,108 @@
+home page | research | surfing/skiing info | www hotlist | personal
+
+
+
+
+
+ 
+kurt windisch
+
+kurt windisch - university of oregon
+
+
+
+
+
+
+i am a research assistant in the 
+dept. of computer science at the 
+university of oregon.
+
+active research projects:
+
+ 
+ 
+	resource allocation issues in parallel supercomputers.
+	specifically, we are currently looking at 
+	workload traces 
+	from production parallel machines,
+	with an interest in how they can be used in preformance evaluation
+	of resource management algorithms.
+
+ a program development environment, 
+	
+	tau
+	for the pc++/sage++
+	parallel language.  this is a project of the 
+	paraducks
+	group.
+
+ i have a small part in the 
+	
+	daqv 
+	(ptools
+	 distributed array query and 
+	visualization) project.
+
+
+
+publications
+full index and abstracts are available here.
+
+ a comparison of workload traces from two production parallel
+	machines, kurt windisch, virginia lo, dror feitelson, bill
+	nitzberg, reagan moore, 1996. accepted to the 6th symposium on the 
+	frontiers of massively parallel computation.
+	
+	postscript
+ non-contiguous processor allocation algorithms for mesh-connected 
+	multicomputers, virginia lo, kurt windisch, wanqian liu, 
+	bill nitzberg, 1995. accepted for ieee transactions on parallel and
+	distributed computing (shorter version published in 
+	proceedings of supercomputing 94, november 1994, pages 227-236).
+	
+	postscript
+ contiguous and non-contiguous processor allocation algorithms for 
+	k-ary n-cubes, kurt windisch, virginia lo, and bella bose,
+	1995. 1995 international conference on parallel processing.
+	
+	postscript
+ procsimity: an experimental tool for processor allocation and 
+	scheduling in highly parallel systems, kurt windisch, 
+	jayne valenti miller, virginia lo, 1995.
+	proceedings of the fifth symposium on the frontiers of massively 
+	parallel computation, february 1995, pages 414-421.
+	
+	postscript
+ metrics: a tool for the display and analysis of mappings in 
+	message-passing multicomputers, virginia m. lo, kurt windisch,
+	and rajen datta, 1991.
+	proceedings of the 6th distributed memory computing conference, 
+	april 1991.
+	
+	postscript
+
+
+
+how to contact me ...
+
+
+  (503) 346-4436
+  (503) 346-5373
+ 
+	kurtw@cs.uoregon.edu
+ 
+	
+	department of computer and information science 
+ 
+	university of oregon 
+ 
+	eugene , 
+	or 97403
+  
+	office: deschutes hall, room 254
+
+
+
+
+kurtw@cs.uoregon.edu

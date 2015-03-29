@@ -1,0 +1,180 @@
+uw-madison dbms research group
+
+
+
+  the wisconsin dbms 
+research home page 
+
+what's here
+
+
+ information about database research and
+researchers at wisconsin.
+
+
+information and source code for  uw database software, 
+including coral, exodus, oo7,
+paradise, shore, zetasim and zoo.
+
+ information about uw dbms  mailing lists.
+
+pointers to  other database information.
+
+
+
+uw dbms research
+the research interests of the dbms group at madison are wide and
+varied.  a good overview of ongoing work can be found by reading the
+home pages of the faculty, and by reading about the various software
+projects that are underway.
+ people
+the dbms research group at uw-madison is made up of a large group of
+faculty, students and staff.  the "official" dbms faculty include:
+
+ mike carey (now at ibm almaden.)
+ david dewitt
+ yannis ioannidis
+ jeff naughton
+ raghu ramakrishnan
+
+
+additionally, miron livny
+ and 
+marvin
+solomon are involved in dbms research in conjunction with their
+other interests. 
+
+
+the bulk of the group is made up of a number of graduate students, and also a dedicated crew of full
+time staff.  we also have a large and
+distinguished group of alumni and alumnae.
+
+
+
+ uw database graduate students 
+(mail updates to this list to: 
+tufte@cs.wisc.edu)
+
+
+ anastassia 
+ailamaki
+ kevin beyer
+ guangshun 
+chen
+ prasad deshpande
+ donko 
+donjerkovic
+ minos garofalakis
+ johannes gehrke
+ jonathon 
+goldstein
+ qi jin
+ navin kabra
+ johan larson
+ mark
+mcauliffe
+ jussi myllymaki
+ biswadeep nag
+ lance paavola
+ jignesh
+patel
+ karthik 
+ramasamy
+ john shafer
+ uri shaft
+ amit shukla
+ andy therber
+ kristin tufte
+ jie-bing
+yu
+ markos 
+zaharioudakis
+ tian zhang
+ yihong zhao
+
+
+
+
+ uw database staff 
+
+ josef burger (bolo)
+ curt ellmann
+ shaun 
+flisakowski
+ nancy hall
+ jim kupsch
+ daniel
+schuh
+ kent wenger
+
+
+uw dbms software projects.
+information, technical reports, and (sometimes) source code are
+available for the following uw dbms software packages:
+
+ coral, a deductive dbms.
+ exodus/e,
+an extensible object-oriented database system toolkit
+ oo7, an oodbms benchmark.
+ paradise, a
+geographic information system built on shore.
+ shore, a
+high-performance, scalable, persistent object repository. 
+ zetasim, a parallel dbms simulator.  (link under construction)
+ zoo, a database system for scientific experiment management (link
+under construction)
+
+
+
+dbms-related mailing lists
+we maintain two mailing lists targeted toward the uw dbms community:
+
+ dbseminar is for announcements about dbms-related talks
+and academic activities in the department.  the weekly database
+seminar is usually held friday afternoons at 1:15pm, in 2310 cs.
+ dbpilgrims is for announcements of social events
+(especially "pilgrimages" to the memorial union), birthday cake
+distributions, and other
+diversions.  though targeted at the dbms group, we welcome
+wannabes.
+
+
+to subscribe to either of these lists: these lists are
+maintained via the listproc package.  to subscribe to a list, send
+e-mail to listproc@cs.wisc.edu, with a message (not a subject line!)
+containing only the words:
+
+subscribe &lt;list name&gt; &lt;your name in real life&gt;
+
+as an example, one database wannabe might send the message:
+
+to: listproc@cs.wisc.edu
+subject: i wannabe!
+
+subscribe dbpilgrims alan turing
+
+unsubscribing is similar:
+
+to: listproc@cs.wisc.edu
+subject: can't make it any more
+
+unsubscribe dbpilgrims
+
+
+
+pointers to other database information
+
+the best source of additional database-related information is the
+
+acm-sigmod home page.
+
+
+paul
+aoki maintains a list of pointers 
+to  other
+random dbms information.
+
+michael ley maintains a compendium of info on database systems and logic programming.
+
+ last modified: fri sep 22 17:26:22 1995 by kristin tufte
+tufte@cs.wisc.edu

@@ -1,0 +1,72 @@
+cse 590b: graphics seminar: linear programming
+
+
+linear programming
+
+
+oops... chuck was sick.  ronen subbed in without slides.  here's the
+notes he spoke from:
+
+
+- define linear programming  (nr 10.8.1-10.8.5)
+
+    objective function
+    nonnegative values (amount of stuff).
+        combinatorial hard
+        polynomial hard
+
+    define quadratic programming (m 1.11)
+        np hard
+        algorithms for psd case
+        (example? mimum distance, m p.26,27)
+
+- geometric interpretation
+    simplex
+    solution on the boundary -- at a vertex
+    (no solution if it's open and maximum "spills"
+
+- define:
+    feasible vector
+    feasible basic vector (vertex)
+
+   (no feasible vectors if it's overconstrained)
+
+- combinatorial problem: which vertex?
+
+
+- slack variables.  turn inequalities into equalities.
+  turn things into standard form.
+
+
+
+- techniques:
+    simplex method -- generally fast, worst-case exponential
+        searches vertices
+    ellipsoid method -- provably polynomial, impractical
+        closes in on vertices
+    karmakar -- provably polynomial, arguably practical
+        searches interior points
+
+
+- do simplex method for reduced form. (nr 10.8.8, 10.8.9)
+
+
+- define linear complementary problem (m 1.6-1.8)
+    note:  square matrix
+           choice of w or z is 0
+
+           no objective function!
+
+
+- turn lp into lcp (m 1.9-1.10)
+
+- turn lcp into quadratic
+    (trivial: minimize sum of w.z.  better be 0!)
+
+- can also turn quadratic into lcp.
+    (too hard!)
+
+in the above,
+
+     nr refers to numerical recipes
+     m refers to k.g.murty, linear complementarity

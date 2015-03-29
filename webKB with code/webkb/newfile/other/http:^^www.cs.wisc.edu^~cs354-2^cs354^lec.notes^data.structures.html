@@ -1,0 +1,117 @@
+lecture notes - chapter 7 - data structures
+
+
+
+ chapter 7 -- data structures
+
+
+
+
+data structures
+---------------
+
+common theme in programming:
+  space vs. time tradeoff
+       space is memory space
+       time is time to execute program
+
+  it is often possible to write a program such that it 
+    1. executes very fast, but wastes/utilizes more memory
+     or
+    2. utilizes little memory, but executes quite slow
+
+  data structures can make memory useage efficient or inefficient
+
+
+data structures we will discuss:
+  arrays, stacks, and queues  (in that order)
+
+arrays
+------
+
+array implementation is important
+ 1. most assembly languages have no concept of arrays
+ 2. from an array, any other data structure we might want can be built
+
+properties of arrays:
+ 1. each element is the same size (char = 1 byte, integer = 1 word)
+ 2. elements are stored contiguously, with the first element
+    stored at the smallest memory address
+
+so, the whole trick in assembly language is
+  1.  allocate correct amount of space for an array
+  2.  an address tells the location of an element
+
+
+
+memory can be thought of as an array
+    it is a giant array of bits or bytes or words (picture needed here!)
+    the element numbering starts at 0
+    the element number is an address
+
+    if each byte has a unique address, we have byte addressing.
+    (the mips has this, as do many machines)
+
+
+
+sal access of the memory array
+
+    we can access any element (byte) of memory
+
+    m[address]    refers to the element (contents) at address
+    m[20]   is the byte numbered address 20, the 21st byte of memory.
+	  
+	  important:  20 is the address
+		      m[20] is the contents of the byte at address 20
+
+    m[address]    refers to the element (contents) at address
+    m[20]   is the word at byte address 20, the 21st-24th byte of memory.
+
+    it is common to have byte addressibility, and address words.
+    a word address is defined to be the byte address of the 
+    smallest byte.
+
+    there are also machines designed such that they only have
+    word addressibility.  (then the words are numbered with
+    unique addresses.)
+
+
+    
+
+sal declarations of arrays within memory
+
+    to allocate a portion of memory (more than a single variable's worth)
+      (allocating an array within memory)
+
+
+     variablename:  type     initvalue:numelements
+
+
+       type is just like before --   .byte, .word or .float
+       numelements is just that,
+	   numbering always starts at 0
+       initvalue is a value given to each element of the array
+
+new directive:
+  name:  .space    numberofbytes
+
+  .space is a way of allocating space (bytes) within memory,
+  but not give them an initial value.  note: the type of the
+  data within this space cannot be inferred.
+
+
+   example:
+
+      arrayname: .byte  0:8
+	 8 character elements, numbered 0 - 7, initialized to 0
+      name: .space  18
+	 18 bytes of memory
+
+an example of how to calculate the address of an element:
+
+  byte (character) elements --
+       array1:  array[6..12] of char;   /* pascal */
+
+
+        6   7   8   9  10  11  12     0
+            digit

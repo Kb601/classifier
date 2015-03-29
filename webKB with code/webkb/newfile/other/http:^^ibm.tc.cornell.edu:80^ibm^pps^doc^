@@ -1,0 +1,51 @@
+ibm powerparallel systems: documentation, papers, and reports
+
+
+
+
+
+ a parallel primer
+
+
+   scheduling parallel jobs on the sp2 - a loadleveler primer
+
+
+   sp1 high performance switch
+
+
+  architecture and implementation of vulcan
+
+
+  the sp2 communication subsystem (html version/10 nov 94)
+
+
+  the sp2 communication subsystem (postscript version/10 nov 94)
+
+
+  pvme release 3.1 reame information
+
+
+  reducing the variance of point-to-point
+transfers for parallel real-time programs
+by ronald mraz, from the ieee parallel & distributed technology, vol. 2, no. 4, winter 1994
+,special issue: parallel and distributed real-time computing
+
+
+
+  time synchronization on sp1 and sp2 parallel systems (postscript version 3 may 95)
+by b&uumllent abeli and craig b. stunkel
+
+
+  routing algorithms for ibm sp1/sp2 (postscript version 18 may 95)
+by b&uumllent abeli and cevdet aykanat
+
+
+
+
+ 
+
+
+ copyright 1994 ibm corporation.
+comments to ibm@tc.cornell.edu.
+
+last modified: fri may 19 14:16:49 1995

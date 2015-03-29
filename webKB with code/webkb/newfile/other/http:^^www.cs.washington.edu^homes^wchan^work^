@@ -1,0 +1,191 @@
+william chan
+
+
+
+
+
+
+william chan
+
+
+department of computer science and engineering
+university of washington,
+box 352350
+seattle, 
+wa
+98195-2350,
+usa
+office:
+chateau
+112
+
+fax: (206) 543-2969
+phone: (206) 616-1853
+email: wchan@cs.washington.edu
+
+
+
+i am a third year 
+grad student
+from
+hong kong,
+working towards my doctoral degree in the
+computer science department at
+the university of washington.
+when i'm not at work, i shoot.
+(my officemates also like to
+shoot,
+but in a different way.)
+
+research interests
+
+
+i am working on validating large software system requirements specifications
+using symbolic model checking.
+this is joint work with a group of smart people:
+richard anderson,
+paul beame,
+steve burns,
+francesmary modugno,
+david notkin,
+and
+jon reese.
+recently we analyzed an early version of the
+tcas ii 
+(traffic alert and collision avoidance system)
+system requirements specification written in 
+the
+requirements state machine language
+(rsml)
+using a
+bdd
+based model checker, the 
+symbolic model verifier
+(smv).
+a 
+paper appeared in
+acm sigsoft '96 (fse 4).
+
+
+i have continued interests in
+systems
+and
+theory.
+when i was an undergrad at
+cornell,
+i worked with
+ken birman 
+and robbert van renesse
+in the 
+horus 
+project (a distributed system based on group communications).
+
+publications
+
+
+
+richard anderson,
+paul beame,
+steve burns,
+william chan,
+francesmary modugno,
+david notkin
+and
+jon reese.
+model checking large software specifications
+[postscript | gzipped postscript].
+proceedings of the fourth acm symposium on the foundation of
+software engineering
+(sigsoft 1996),
+pages 156-166, october 1996.
+
+awards
+
+microsoft fellowship, 1996-1997.
+sir edward youde memorial scholarship for overseas studies,
+	hong kong, 1991-1994.
+
+
+teaching
+
+
+i have been a teaching assistant in
+
+cse 143 computer programming ii
+cse 451 operating systems
+cse/ee 461 introduction to computer-communication networks
+cse 473 artificial intelligence
+cse 521 design and analysis of algorithms (grad)
+
+
+education
+
+left my high school 
+	queen's college,
+	hong kong, in 1991.
+received bachelor of science (with distinction) from the
+	computer science department at
+	cornell university, ny, in 1994.
+
+
+related links
+
+university of washington
+
+software engineering
+software safety
+
+university of minnesota
+
+mats heimdahl
+
+university of waterloo
+
+joanne atlee
+
+cmu
+
+formal methods
+model checking
+
+
+stanford university
+
+hardware verification group
+
+
+university of california, berkeley
+
+design technology warehouse
+tom henzinger
+
+
+sri formal methods and dependable systems
+
+formal methods at bell labs
+
+sigsoft
+esec/fse 97
+
+floc 96
+dac
+fmcad 96
+cav 97
+
+
+computing research association
+unified computer science tr index
+computer science technical report archive sites
+networked computer science technical reports library
+glimpse search at university of arizona
+university of washington libraries
+on-line dictionary of computing
+advice on research and writing
+elements of style
+
+
+
+
+
+william chan
+(wchan@cs.washington.edu)

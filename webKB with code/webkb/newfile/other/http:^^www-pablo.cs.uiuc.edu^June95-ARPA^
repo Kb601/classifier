@@ -1,0 +1,277 @@
+building successful performance tools 	
+
+
+ building successful performance tools 
+
+ july 1995 arpa principal investigators meeting
+
+the
+
+pablo 
+
+project is exploring tools and techniques for performance
+analysis and optimization of scalable parallel systems. 
+major projects include
+
+
+
+pablo performance analysis environment
+
+
+
+high-performance fortran integration (hpf)
+
+
+
+virtual reality for performance data immersion
+
+
+
+www server performance analysis
+
+
+
+portable parallel file system (ppfs)
+
+
+
+input/output characterization
+
+
+
+scalable i/o initiative
+
+
+
+
+the slides below discuss the problems inherent in building portable,
+extensible performance tools for parallel systems.  you might find a 
+
+white paper on the same topic
+
+of possible interest.
+it was prepared for the recent forum on federal information and communications
+research and development held to discuss the
+
+
+committee on information and communications (cic) strategic
+implementation plan 
+.
+
+
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+		
+
+   			
+
+        
+	
+
+
+
+
+
+by clicking on the thumbnail pages above, you can peruse the slides
+from this presentation.  alternatively, you can retrieve a single
+
+postscript file
+
+containing the entire presentation.
+
+
+
+
+you are the
+399th
+visitor since september 29, 1995.
+
+
+
+
+
+jump to the pablo group home page
+
+
+last change: 26 july 1995/
+
+dan reed
+(reed@cs.uiuc.edu)

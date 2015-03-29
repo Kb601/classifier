@@ -1,0 +1,107 @@
+a brief introduction to tcas ii
+
+
+
+
+
+
+a brief introduction to tcas ii
+
+
+
+ an edited excerpt from
+introduction to tcas ii,
+u.s. department of transportation, federal aviation administration,
+march 1990:
+
+
+
+after many years of extensive analysis, development, and flight
+evaluation by the federal aviation administration and the aviation
+industry, a solution is available to the problem of reducing the risk
+of midair collisions between aircraft.  this solution is known as the
+traffic alert and collision avoidance system (tcas).
+
+tcas is a family of airborne devices that function independently of the
+ground-based air traffic control (atc) system, and provide collision 
+avoidance protection for a borad spectrum of aircraft types.
+
+tcas i provides proximity warning only, to assist the pilot in the
+visual acquisition of intruder aircraft.  it is intended for use by
+smaller commuter aircraft and by general aviation aircraft.
+
+tcas ii provides traffic advisories and resolution advisories
+(recommended escape maneuvers) in a vertical direction to avoid
+conflicting traffic.  airline aircraft, and larger commuter and
+business aircraft, use tcas ii equipment.
+
+tcas iii, which is still under development, will provide traffic
+advisories and resolution advisories in the horizontal as well as the
+vertical direction to avoid conflicting traffic.
+
+the tcas concept makes use of the radar beacon transponders
+routinely carried by aircraft for ground atc purposes.  the level of
+protection provided by tcas equipment depends on the type of
+transponder the target aircraft is carrying.  it should be noted that
+tcas provides no protection against aircraft that do not have an
+operating transponder.
+
+
+
+ a sample display (obtained from here).
+the little white cross in the lower-middle of the display is the
+aircraft that this display is on.  the little red square at starboard
+is another aircraft that tcas ii has issued a resolution advisory on,
+i.e., it is considered a ``threat''.  the +03 over the
+threat indicates that the threat is 300 feet above this aircraft.  this
+visual resolution advisory is accompanied by an aural advisory, such as
+``descend, descend.''
+
+
+
+
+
+ tcas ii was originally specified by a minimal operational
+performance standard, abbreviated as--you guessed it--mops.  the
+mops is composed of two volumes.  volume i is a textual description of
+the overall system, including hardware and communications algorithms.
+volume ii defines the collision-avoidance logic, and is a combination
+of textual description and pseudocode (called e), the text
+describing the code.  the pseudocode is actually divided into
+``high-level'' and ``low-level'' logic, so the logic is presented in
+three different ways.  the text and high-level logic are not
+rigorously defined, so the low-level logic is the standard with which
+avionics manufacturers must comply.  here is an example of tcas ii
+low-level logic:
+
+
+process no_weaken_test;
+
+    if (wl.status ne $new)
+        then if (itf.reverse eq $true)
+                   then noweaken_time = p.trvsnoweak;
+                   else noweaken_time = p.tnoweak;
+             if (eval(tf.permtent) le eval(owntent))
+                  then if (itf.taur gt max(p.strofir, p.frthr(itf.lev,itf.ifirm))
+                             then owntent = tf.permtent;
+             elseif (tf.permtent(4,5) eq '10')
+                   then call check_projection
+                          in (itf.rz, g.alim, owntent)
+                          out (inthr);
+                        if (inthr eq $true)
+                             then owntent = tf.permtent;
+                             else if ((g.tcur-itf.tcmd) lt noweaken_time
+                                       or itf.ifirm lt p.minfirm)
+                                       then owntent = tf.permtent;
+             otherwise if ((g.tcur-itf.tcmd) lt noweaken_time or
+                            itf.ifirm lt p.minfirm)
+                            then owntent = tf.permtent;
+
+end no_weaken_test;
+
+
+
+
+
+ 
+     jon damon reese

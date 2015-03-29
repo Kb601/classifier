@@ -1,0 +1,36 @@
+sareddy home page
+
+
+
+
+
+var gt = unescape('%3e');
+var popup = null;
+var over = "launch pop-up navigator";
+  popup = window.open('', 'popupnav', 'width=250,height=495,resizable=0,scrollbars=1');
+  if (popup != null) {
+    if (popup.opener == null) {
+      popup.opener = self;    
+}
+    popup.location.href = 'http://www.ccs.neu.edu/home/sareddy/choices.html';
+  }
+
+
+
+
+welcome to sareddy's home page   
+
+ this page is under construction.please bear with me.
+ hi!my name is bhanuprakash sareddy.i am a graduate
+student in northeastern university
+
+
+ sareddy bhanuprakash reddy 
+860 huntington avenue ,#3 
+boston,ma 02115.
+ph:617-566-4116
+email:sareddy@ccs.neu.edu
+ 
+
+dateobject = new date();
+document.write("the current date and time are "+""+date()+"");

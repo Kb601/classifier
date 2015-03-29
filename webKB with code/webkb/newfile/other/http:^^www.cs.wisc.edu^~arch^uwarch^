@@ -1,0 +1,386 @@
+architecture home page 
+
+
+univ. of wisconsin cs computer architecture group
+
+
+
+this is the world wide web home page for the computer architecture group at the 
+university of wisconsin-madison department of computer sciences.  for more information about computer architecture, visit the 
+www computer architecture page.
+
+table of contents:
+
+ research impact
+ projects
+ faculty
+ courses
+ industrial affiliates program
+ tech reports, exams, seminars, mailing list
+ graduate students
+ graduating students
+ architecture alumni
+
+
+
+industrial impact of computer architecture research
+at the university of wisconsin-madison (updated june 1994)
+
+this document highlights the industrial impact of
+research in computer architecture at the
+university of wisconsin since 1980.
+there are four broad areas of contributions:
+(i) processor design, with an emphasis of instruction-level
+parallel processor technology, (ii) cache memory systems,
+(iii) multiprocessor systems, and (iv) enabling technologies.
+
+processor technologies
+one of the early contributions in instruction level parallel (also
+called ilp) processor technology was the development
+of the decoupled architecture concept.
+developed before the term ``superscalar'' was coined,
+a decoupled architecture is, 
+in fact, a superscalar architecture that supports
+issuing multiple instructions per cycle from a sequential instruction stream.
+what is now commonly regarded as the first commercially-available superscalar
+processor, the astronautics zs-1, appeared in 1988 and was developed
+as a direct spin-off of the university of wisconsin research efforts.
+since the zs-1, many superscalar processors have used the decoupled architecture
+principles to separate addressing activity from computation activity,
+thereby increasing the amount of instruction level parallelism
+that can be exploited.  recent processors which follow the decoupled
+architecture principles include the ibm power series of processors,
+and the silicon graphics r8000 (previously called the silicon graphics tfp).
+
+another major contribution was the development of precise interrupt
+and register renaming techniques for out-of-order instruction execution.
+smith and pleszkun provided the first published work directed specifically
+at implementation of precise interrupts.  this paper laid out the
+fundamental problems and proposed a number of solutions and techniques.
+sohi extended the precise interrupt maintenance mechanisms to carry out
+register renaming, and articulated the organization of a dynamically-scheduled
+superscalar processor using register renaming and having precise interrupts.
+this body of research has been fundamental to
+the emergence of superscalar processors in the 1990s.
+the mechanisms proposed by uw researchers are
+at the core of many modern superscalar processors, including the motorola 88110,
+the recently-announced powerpc 604, and the upcoming powerpc 620.
+several other soon-to-be-announced superscalar processors
+also have the above mechanisms at their core.
+
+industrially-relevant work in ilp processors is continuing at uw.
+recent research contributions include novel ways of integrating
+guarded execution into existing instruction sets and a new
+paradigm for exploiting instruction level parallelism.
+this new paradigm, called multiscalar,
+has several inherent properties that make it more promising than the
+existing superscalar and vliw paradigms for a turn-of-the-century processor.
+
+cache memory systems
+wisconsin researchers have also had a long history of
+contributions in the design of memory systems, particularly caches.
+anticipating the era when memory bandwidth would severely restrict
+system performance,
+goodman showed that caches can be used not only to reduce
+average memory latency but also to limit peak memory bandwidth requirements
+by focusing on temporal, rather than spatial, locality.
+wisconsin researchers provided much of the motivation for the
+recent shift from set-associative to direct-mapped caches.
+smith and goodman showed circumstances under which
+direct-mapped caches obtain better hit ratios than fully associative caches.
+hill demonstrated that direct-mapped caches can yield better
+performance than set-associative ones despite having larger
+miss ratios, and provided insight into cache design with
+the 3c model which separates the compulsory, capacity,
+and conflict components of the miss ratio.
+
+in the area of cache design,
+goodman showed how static-column drams (scrams)
+can be used as a "poor man's"
+cache, providing some of the benefits of cache memory without using sram.
+hill and wood participated in the first studies of 
+multi-megabyte cache design (which some contemporaries
+criticized as never to become practical).
+sohi showed why processors would have to change from using (then prevalent)
+blocking caches to non-blocking caches as they became more
+aggressive in exploiting ilp.
+
+each one of these contributions can be found, to varying extents,
+in modern computer systems.
+for example, both sun microsystems and compaq have built
+computers containing scram caches,
+direct-mapped caches are now at least as common as set-associative ones,
+multi-megabyte second level caches are widely used,
+and most recently-announced superscalar microprocessors
+use non-blocking caches.
+multiprocessor systems
+
+in multiprocessor systems, goodman published the first paper
+describing a snooping cache coherence protocol.
+snooping cache protocols enabled 
+the construction of shared-bus multiprocessors,
+also called symmetric multiprocessors, in the marketplace.
+such multiprocessors were one of the earliest
+available general-purpose multiprocessor systems and
+have become the most common form of multiprocessing available today.
+among the earliest snooping-cache systems were the
+sequent balance and the encore multimax,
+both of which were directly influenced by the wisconsin work.
+some microprocessors, such as the motorola 88000,
+have implemented almost exactly the write-once protocol as
+described by goodman.  recent multiprocessor workstations
+and servers, such as those manufactured by sun microsystems,
+also use snooping cache protocols.
+
+goodman and sohi contributed to the ieee standard 1596
+scalable coherent interface,
+the first commercial-grade directory-based coherence scheme.
+goodman contributed extensively to the basic cache coherence protocol,
+and to the development of options for achieving higher performance.
+goodman and sohi were primary contributors to the development of
+protocols for large numbers of caches (kiloprocessor extensions).
+the convex exemplar system is the first commercial system
+to use the scalable coherent interface,
+but many other systems are currently under development,
+including at unisys and ibm.
+
+goodman and vernon developed the first synchronizing prefetch primitive,
+which was incorporated in the sci standard.
+this technique, known as qolb,
+for synchronizing shared memory accesses,
+also inspired software implementations for implementing
+efficient locks that minimize network traffic during contention.
+in particular, the qolb-inspired mcs lock has become the standard
+locking mechanism for shared-memory multiprocessors.
+another synchronization mechanism invented by uw researchers is a
+novel technique to combine fetch&increment operations.
+the applicability of this technique is likely to grow
+as more powerful multiprocessors, with more aggressive synchronization
+requirements, are built.
+
+another area of contributions is
+memory consistency models which specify the semantics of shared memory.
+wisconsin researchers were among the first to recognize that memory
+consistency was not synonymous with cache coherence.  goodman defined
+processor consistency that codified the general effect of buffering
+writes.  hill showed how weak ordering could be viewed as sequential
+consistency (the strongest model) by data-race-free programs.  this
+formalization and subsequent generalizations allow more sophisticated
+compiler and hardware optimizations than were previously possible.  the
+full industrial impact of memory consistency models has yet to be felt,
+however, and probably must await the wide deployment of out-of-order
+issue processors, non-blocking caches, and software/hardware hybrid
+coherence solutions.
+
+practical research in multiprocessors is continuing at wisconsin.
+recent research includes
+contributions in the ``middle interface'': below languages and
+compilers and above system software and hardware.
+for example, uw researchers are developing tempest,
+a novel approach to provide support for shared-memory,
+message-passing, and hybrid combinations of the two.
+
+enabling technologies
+the design of a computer system requires quantitative assessments
+of various design criteria.  wisconsin researchers have advanced both
+theory and practice of these important enabling technologies.
+hill developed new algorithms, and software tools that use these algorithms,
+for simultaneously simulating multiple alternative cache organizations.
+larus developed new techniques, and software tools using these techniques, 
+for rewriting executables to profile programs.
+wood and hill advanced the state-of-the-art of
+trace sampling techniques, which are important techniques in the
+study of very large caches.
+
+equally important, wisconsin researchers have transferred
+their new techniques and software tools to industry and academia so that
+others can synergistically build on the work.
+tools such as ae, cprof, dinero,
+tycho, qpt, have
+been used at more than one thousand other
+(academic and industrial) sites.
+uw researchers have also provided data that industry uses to design
+computers.  for example, designers can download spec miss ratio
+data from our ftp site, which would otherwise require four machine years 
+to regenerate. 
+
+more recently, uw researchers developed the wisconsin wind
+tunnel, the first effective parallel simulator of parallel computers.
+running on a thinking machines cm-5, the wisconsin wind
+tunnel permits efficient evaluation of real application performance on
+proposed hardware.
+
+current projects:
+
+ multiscalar
+ galileo
+ wisconsin wind tunnel
+
+
+faculty: 
+
+james r. goodman  
+mark d. hill  
+gurindar sohi  
+david a. wood  
+
+visiting/adjunct faculty: 
+
+james e. smith - department of electrical and computer engineering
+
+
+architecture courses: 
+
+cs/ece 352 - digital system fundamentals
+cs/ece 354 - machine organization and programming
+cs/ece 552 - introduction to computer architecture
+cs/ece 752 - advanced computer architecture i
+cs/ece 755 - vlsi systems design
+cs/ece 756 - computer-aided design for vlsi
+cs/ece 757 - advanced computer architecture ii
+
+other recommended courses: 
+
+cs 536 - introduction to compilers
+cs 537 - operating systems
+cs 547 - introduction to performance modeling
+cs 701 - compilers
+cs 736 - advanced operating systems
+cs 747 - advanced performance modeling
+statistics 424 - experimental design for engineers
+
+
+industrial affiliates program
+the computer architecture group has set up a program for industrial affiliates.
+for more information, please read the public affiliates page.
+computer architecture 
+industrial affiliates page(access restricted to current affiliates only)
+
+other useful information:  
+
+ recent architecture tech reports
+ architecture qualifying exams
+ computer architecture seminar
+ to join the architecture mailing list, mail 
+listproc@cs.wisc.edu with the 
+single-line body:
+subscribe architecture jane doe
+
+graduate students:  
+(note that student home page content is not restricted or endorsed by the
+univ. of wisconsin.)
+
+
+ scott breach
+ doug burger
+ babak falsafi
+ alain k&auml;gi
+ stefanos kaxiras
+ andreas moshovos
+ shubu mukherjee
+ subbarao palacharla
+ steve reinhardt
+ yannis schoinas
+ avinash sodani
+ t.n. vijaykumar
+
+
+(sohi)
+(goodman)
+(wood)
+(goodman)
+(goodman)
+(sohi)
+(hill)
+(smith)
+(wood)
+(hill)
+(sohi)
+
+
+
+ architecture ph.d. alumni
+
+ todd m. austin - april 1996
+advisor: guri sohi
+thesis: 
+ hardware and software mechanisms for reducing load latency
+
+ dionisios pnevmatikatos - december 1995
+advisor: guri sohi
+thesis: 
+incorporating guarded execution in existing instruction sets
+
+ alvin r. lebeck - november 1995
+advisor: david wood
+thesis: 
+tools and techniques for memory system design and analysis
+
+madhusudhan talluri - august 1995
+advisor: mark hill
+thesis: 
+use of superpages and subblocking in the address translation hierarchy
+
+manoj franklin - december 1993 
+advisor: guri sohi
+thesis: 
+the multiscalar architecture
+
+sarita v. adve - november 1993 
+advisor: mark hill
+thesis: 
+designing memory consistency models for shared-memory multiprocessors
+
+ross johnson - june 1993
+advisor: jim goodman
+thesis: 
+extending the scalable coherent interface for large-scale shared-memory
+
+steve scott - august 1992
+advisor: jim goodman
+thesis: 
+toward the design of large-scale, shared-memory multiprocessors
+
+mark friedman - january 1992 
+advisor: guri sohi
+thesis: 
+an architectural characterization of prolog execution
+
+sriram vajapeyam - december 1991 
+advisor: guri sohi
+thesis: 
+instruction level characterization of the cray y-mp processor
+
+men-chow chiang -  september 1991 
+advisor: guri sohi
+thesis: 
+memory system design for bus based multiprocessors
+
+richard e. kessler - july 1991 
+advisor: mark hill
+thesis: 
+analysis of multi-megabyte secondary cpu cache memories
+
+wei-chung hsu - august 1987
+advisor: jim goodman
+thesis: register allocation and code scheduling for load/store architectures
+william cox - august 1986
+advisor: jim goodman
+thesis: the performance of disk servers
+
+koujuch liou - august 1985
+advisor: jim goodman
+thesis: design of pipelined memory systems for decoupled architectures
+
+honesty c. young - june 1985
+advisor: jim goodman
+thesis: evaluation of a decoupled computer architecture and 
+the design of a vector extension
+
+
+
+
+
+last modified by
+dburger@cs.wisc.edu
+tue apr 30 15:16:00 cdt 1996

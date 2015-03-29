@@ -1,0 +1,53 @@
+using vista
+
+
+
+
+getting started with vista
+
+
+ 
+   
+before using vista add
+
+/p/vision/ip-tools/vista/bin
+
+to your path variable (in .cshrc or .cshrc.local), and do:
+
+setenv manpath /usr/man/sunos-4.1.3-overlay:/p/vision/ip-tools/vista/man
+
+
+to make the man pages available.
+
+
+next, read the two man pages: vista(7vi) and vtutorial(7vi) (simply do a
+man vista and man vtutorial.  if in doubt, look at the directory
+/p/vision/ip-tools/vista/man/man7).  there will
+be a document, introduction to vista programming, available at
+doit documentation.  
+try out the examples given in vtutorial.
+
+
+there are a few basic operations to learn right away:
+
+
+    display an image
+    examples may be found in /p/vision/ip-tools/vista/src/data. 
+    vista files have .v extensions.  to display an image, use
+    vxview filename.  try to convert your own image into a .v
+    file by using tifftopnm and pnmtov.
+
+    create an image
+    the directory /p/vision/ip-tools/vista/src/examples/ramp has
+    a sample program which does just that.  the intro to vista document
+    mentioned above explains how to read this program.
+
+    open an existing image and access its contents
+    the binarize directory in the same src directory has a simple
+    program to do that.  read the intro document.
+
+    print an image
+    pipe the results of the votps program on an image to 
+    your favorite postscript printer: 
+
+    vtops einstein.v | lpr -plaser1

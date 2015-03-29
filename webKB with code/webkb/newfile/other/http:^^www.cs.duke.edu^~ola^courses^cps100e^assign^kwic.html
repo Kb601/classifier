@@ -1,0 +1,333 @@
+cps 100e, fall 1996, second assignment
+
+
+
+programming assignment #1, cps 100e, fall 1996: 
+searching kwicly (24 points)
+
+(this problem appeared in a slighly different format in the internet
+programming contest.)
+
+
+
+
+due date: early bonus: wednesday, october 2, midnight
+final due date: monday, october 7, midnight
+
+ 
+this assignment will provide practice with structs, vectors, sorting, reading
+from files using getline, streams, writing classes, and iterative
+enhancement. 
+
+
+table of contents
+
+ 
+
+[
+introduction |
+input/output |
+coding |
+grading |
+submitting |
+extra credit
+]
+
+ 
+
+(a makefile and sample input files are accessible in
+~ola/cps100e/kwic on the acpub system.  be sure to
+create a subdirectory kwic for this problem and to
+set the permissions for access by prof/uta/ta by typing
+fs setacl kwic ola:cps100e read.)
+ 
+
+ introduction
+
+
+searching and sorting are prototypical computer applications.  for this
+assignment you'll write a program that organizes titles (or sentences)
+for efficient "human search" based on different key words.
+given a list of titles and a list of words to ignore, you are to
+write a program that generates a kwic (key word in context) index of the
+titles.  in a kwic-index, a title is listed once for each keyword that
+occurs in the title.  the kwic-index is alphabetized by keyword.
+keywords are any words that are not listed in the list of words to ignore.
+
+
+for example, if words to ignore are
+ the, of, and, as, a  and the list
+of titles is:
+
+descent of man
+the ascent of man
+the old man and the sea
+a portrait of the artist as a young man
+
+
+a kwic-index of these titles is given by:
+
+
+
+                  a portrait of the artist as a young man 
+                                the ascent of man 
+                                    descent of man 
+                         descent of man 
+                      the ascent of man 
+                            the old man and the sea 
+a portrait of the artist as a young man 
+                                the old man and the sea 
+                                  a portrait of the artist as a young man 
+                the old man and the sea 
+      a portrait of the artist as a young man 
+
+
+ 
+each title is listed as many times as there are key words in the title.
+for example, "a portrait of the artist as a young man" is listed four
+times, once each for "portrait", "artist", "young", and "man".
+
+
+ input/output
+
+your program should read from a file whose name
+you enter when you run the program.
+legal input files contain a list of words to ignore (one per line)
+followed by a list of titles (one per line)
+the string :: on a line by itself is used to
+separate the list of words to ignore from the list of titles.  each of
+the words to ignore appears in lower-case letters on a line by itself
+and is no more than 10 characters in length.  each title appears on a
+line by itself and may consist of mixed-case (upper and lower) letters.
+words in a title are separated by whitespace.  no title contains more
+than 25 words.
+
+
+there will be no more than 100 words to ignore, no more than than 500
+titles, and no more than 50,000 characters in the titles and words to
+ignore combined.  no characters other than 'a'--'z', 'a'--'z', and white
+space will appear in the input.
+
+
+ the output 
+
+the output should be a kwic-index of the titles, with each title
+appearing once for each keyword in the title, and with the kwic-index
+alphabetized by keyword.  if a word appears more than once in a title,
+each instance is a potential keyword.  in other words the title
+a rose is a rose is an aphorism would appear three times (once
+for each occurrence of rose and once for aphorism.)
+
+
+the keyword should appear in all upper-case
+letters. all other words in a title should be in lower-case letters.
+case (upper or lower) is irrelevant when determining if a word is to be
+ignored.  titles should be roughly centered as shown above with all key
+words capitalized and justified somewhere near the middle of an 80
+column screen (don't worry about this part at first).  assume titles
+will fit on a line, don't worry about handling weird cases, just handle
+cases assuming that the longest title will fit properly.
+
+
+
+titles in the kwic-index with the same keyword should appear in the same
+order as they appeared in the input file.
+in the case where multiple
+instances of a word are keywords in the same title, the keywords should
+be capitalized in left-to-right order.
+  a sort that maintains the original order of elements with
+equal keys is called a stable sort.  insertion sort is stable.
+the code for insertion sort can be found in the tapestry text,
+it is reproduced below for a vector of ints.
+
+
+
+
+
+
+
+void insertsort(vector & a, int numelts)
+// precondition: a contains numelts ints
+// postcondition: elements of a are sorted in non-decreasing order
+{
+    int k,loc;
+    int hold;
+    
+    for(k=1; k 
+
+
+
+sample input
+
+is
+the
+of
+and
+as
+a
+but
+::
+descent of man
+the ascent of man
+the old man and the sea
+a portrait of the artist as a young man
+a man is a man but bubblesort is a dog
+
+
+
+corresponding output
+
+
+                  a portrait of the artist as a young man 
+                                the ascent of man 
+                 a man is a man but bubblesort is a dog 
+                                    descent of man 
+ a man is a man but bubblesort is a dog 
+                         descent of man 
+                      the ascent of man 
+                            the old man and the sea 
+a portrait of the artist as a young man 
+                                  a man is a man but bubblesort is a dog 
+                         a man is a man but bubblesort is a dog 
+                                the old man and the sea 
+                                  a portrait of the artist as a young man 
+                the old man and the sea 
+      a portrait of the artist as a young man 
+
+
+
+
+
+coding requirements and help
+
+ideally you will maintain only one copy of each title, you will not
+store a title once for each keyword although you will print a title
+once for each keyword.  you may choose not to worry about this.  this
+assignment is worth 24 points and 4 of the points are for minimizing
+storage by storing titles only once.  
+as a first pass, you may decide to store each
+title once for each occurrence of a keyword.  that might lead to the
+following declarations.  a diagram below 
+shows how the struct kwictitle is used
+to store the title the old man and the sea.
+ 
+
+
+   struct kwictitle
+   {
+       vector mytitle;
+       int            mykeyindex;
+   };
+
+   bool operator 
+
+
+
+in the diagram below the title is stored as 4 kwictitle objects, 
+once for each keyword. note that when two two kwictitles are compared
+(using less than: operator &lt;) 
+the index of the
+keyword determines which string in the kwictitles are compared (you may
+need to think about this).
+ 
+
+
+
+
+minimizing storage
+
+one option for storing titles once is to use a vector of titles, storing
+each title once in the vector (of course the titles may be vectors
+of strings, but this isn't a problem --- you can also make the titles
+structs that contain a vector of strings).  
+then you can replace mytitle in
+the declaration of kwictitle with an index into the vector of
+titles.  with this solution there will still be four kwictitle
+objects for the sun also rises but mytitle is now an
+index to a title rather than a title (again, think about this carefully
+and ask questions.)
+
+ developing a class 
+
+you'll probably find it useful to develop a class to solve this problem.
+for example, public member functions could include read and
+printindex.  there will probably be several private member
+functions that will be called from printindex and that will
+call each other.  for example, you might store the words to ignore in a 
+vector&lt;string&gt; myignore and then write a function as
+shown below to search this vector.
+
+    bool kwic::isignore(const string & s)
+    {
+        int k;
+        for(k=0; k 
+of course you don't need to do this, it's just an example of a private
+member function (kwic::isignore) that could be useful.
+
+
+grading standards
+
+this assignment is worth 24 points.  points will be awarded as follows:
+
+
+
+ behavior
+ points
+
+generates kwic-index
+6
+
+sorted properly
+2
+
+handles duplicate key words in title
+2
+
+nice output (centered)
+2
+
+memory efficient
+4
+
+coding style (uses classes, comments)
+6
+
+readme
+2
+
+
+
+
+submission
+
+you should create a readme file for this and all assignments.
+all readme files should include your name as well as the name(s)
+of anyone with whom you collaborated on the assignment and the amount of
+time you spent.
+
+
+to submit your assignment, type:
+
+   submit100e kwic readme kwic.cc makefile ...
+
+
+be sure to submit all source files (e.g., you may decide to write a
+seperate header file although this is not required.)
+
+
+
+extra credit
+
+for extra credit you should not use a vector to store the words in a
+title, you should use a list (see chapter 6 of tapestry).  
+you can still use an index for each keyword, but you'll need to count
+words rather than index directly to the keyword because the list class
+doesn't support random access.  you are free to change
+kwictitle completely, but you must minimize storage and you
+must use lists to store any titles.
+
+to submit the extra credit assignment, type:
+
+   submit100 kwic.xtra readme ..........
+
+where you include all the files you use for this version of the kwic program.

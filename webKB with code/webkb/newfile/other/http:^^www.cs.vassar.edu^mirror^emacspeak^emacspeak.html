@@ -1,0 +1,150 @@
+emacspeak --a speech output subsystem for emacs
+
+
+
+emacspeak --a speech output subsystem for emacs  
+
+ announcing  emacspeak, a full-fledged speech output interface to emacs.
+  
+
+  emacspeak is the first full-fledged speech output system that will allow
+someone who cannot see to work directly on a unix system.
+(until now, the only option available to visually
+impaired users has been to use a talking pc as a terminal.)
+emacspeak is built on top of emacs. once you start emacs with emacspeak
+loaded, you get spoken feedback for everything you do.  your mileage will vary
+depending on how well you can use emacs.there is nothing that you
+cannot do inside emacs:-)
+
+
+publications and talks
+
+
+  chi 96 presentation
+     you can also get a
+      text version of the slides.
+       talk at stanford on emacspeak
+     you can also get a
+      text version of the slides.
+       publications describing the design philosophy and architecture of
+          emacspeak
+          can be found  at
+          in the publications directory.
+
+
+emacspeak mailing list
+
+there is a mailing list emacspeak@cs.vassar.edu
+that is being used to disseminate information about emacspeak. if you use
+emacspeak, you can subscribe by sending email to
+
+greg e. priest-dorman.
+see the news pagefor details on what's new in the
+latest release of emacspeak.
+
+description
+i currently  use emacspeak
+at work on my sparc20 workstation running sunos4.1;
+while at digital i used emacspeak on my decalpha workstation running digital
+unix.
+i also use  emacspeak as
+the only speech output system on my laptop running linux.
+as a useful addition,
+
+contains the necessary files
+ to make emacs easier to use at the linux console. 
+emacspeak currently supports the new
+ dectalk express  
+speech synthesizer, as
+well as older versions of the dectalk e.g. the multivoice.  on the decalpha,
+you can use it with the software dectalk.
+(if you have a decalpha and also have software dectalk installed at your site,
+    please get in touch with   
+krishna mangipudi --digital.
+    
+
+
+you need gnu fsf emacs 19 (version 19.23 or later) and tclx 7.3b (extended
+tcl) to run emacspeak.
+ tclx --the executable is called tcl on most systems-- is *not* plain
+tcl --typically called tclsh on most systems.
+see the emacspeak distribution for additional details.
+
+
+see the latest  release notes
+to see what is new in the latest release.
+
+you can  download 
+emacspeak (390k)  from this page.
+ for a list of frequently asked questions about emacspeak along with their
+answers, see the emacspeak faq.
+
+
+emacspeak comes with full source level documentation. there is an online info
+manual as well, but this is still incomplete.
+emacs subsystems 
+
+emacspeak currently has extensions for many popular emacs subsystems
+including: 
+
+
+
+    w3: a full-fledged w3 browser
+       available  by ftp
+. emacspeak implements a voice-lock mode analogous to emacs' font-locking
+       that allows it to speak www hotlinks using different voice
+       personalities.
+        gnus: the emacs news reader.
+            emacspeak provides a fluent extension to gnus that allows you to
+            listen to usenet news without taking your fingers off the four
+            arrow keys.
+         vm: the emacs vm mail reader.
+            emacspeak works with vm to present email messages using different
+            voices; parts of a message that are cited from a previous message
+            are voicifiedto produce effective aural presentations.
+         eterm: the emacs 19 terminal emulator. (this will be part of
+            emacs 19.29).
+            you can obtain a beta copy of eterm
+            
+            via anonymous ftp.
+            i have used emacspeak and eterm to successfully login to work from
+            my laptop and interface with running applications on my office
+            workstation (including running emacs sessions!). 
+
+
+emacspeak also works well with emacs addons like auctex for editing tex
+documents, the emacs calculator (calc --a symbolic algebra system) etc. 
+
+
+emacspeak works fluently with all emacs addons; writing an extension makes its
+ use even more pleasurable. 
+if you would like to write an emacspeak addon for your favorite package please
+get in touch with me so we do not end up duplicating work. 
+
+support for emacspeak  
+
+emacspeak comes as is, please see the accompanying 
+copyright 
+notice.
+see the readmefile for details about this release and
+how to install emacspeak on your system.
+
+
+
+i work on emacspeak in my spare time, and may not be able to answer
+ questions  on emacspeak immediately.
+if you do download and use emacspeak, please subscribe to the mailing list
+emacspeak@adobe.comby sending a message to 
+emacspeak-request@adobe.com.
+
+
+
+
+
+
+t. v. raman
+raman@adobe.com
+
+
+
+last modified: fri nov 22 13:41:59 1996

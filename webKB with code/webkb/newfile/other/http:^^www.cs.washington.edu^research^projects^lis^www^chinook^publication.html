@@ -1,0 +1,255 @@
+chinook paper list 
+
+
+chinook paper list and abstracts
+
+
+
+
+ chinook overview 
+
+
+	[cob95a] pai chou, ross b. ortega, gaetano borriello, 
+	
+	"the chinook hardware/software co-synthesis system,"
+	in international symposium on system synthesis,
+	cannes, france, september 13-15, 1995.  also appears as
+	
+	uw-cse tech report 95-03-04.
+	
+	embedded systems are becoming more commonplace and are being
+	designed by larger numbers of designers with ever tighter
+	constraints on design time.  unfortunately, computer aided design
+	tools for embedded systems have not kept pace with these trends and
+	are still fundamentally identical to those used twenty years ago.
+	the chinook co-synthesis system, under development at the university
+	of washington, addresses the automation of the most time-consuming
+	and error-prone tasks in embedded controller design, namely: the
+	synthesis of interface hardware and software needed to integrate
+	system components; the migration of functions between
+	processors and/or custom logic; and the co-simulation of system
+	specifications before, during, and after synthesis.  in this
+	paper, we describe the principal elements of the chinook system and
+	discuss its application to a variety of embedded designs.
+	
+
+
+
+	[bco95] gaetano borriello, pai chou, ross b. ortega, 
+	
+	"embedded system co-design: towards portability and rapid
+	integration," hardware/software co-design,
+	m.g. sami and g. de micheli, eds., kluwer aacademic publishers,
+	1995.
+	
+
+	with the ever increasing performance and capacity of microprocessors
+	and programmable logic devices, more and more digital systems are being
+	designed as embedded systems.
+	designing these systems requires the skills of both software and
+	hardware engineers.  but frequently, due to the interface between these
+	two groups, design options are not fully explored.  unfortunately,
+	embedded system design tools support this separation of design
+	responsibilities and design data, thereby further exacerbating the
+	problem.  some of the principal issues in the design process that
+	require attention are: the proper evaluation of design tradeoffs, the
+	portability of design specifications, the integration of system
+	components, and rapid prototyping of the resulting design.  in this
+	chapter, we discuss an approach to these issues that we believe will
+	lead to a new generation of embedded system design tools that will
+	permit designers to more fully explore the design space and attain a
+	higher confidence in the appropriateness of their designs.  one of the
+	first steps in this direction is embodied in the chinook
+	co-synthesis system, under development at the university of washington.
+	it addresses the automation of the most time-consuming and error-prone
+	tasks in embedded controller design, namely: the synthesis of the
+	interface hardware and software needed to integrate system components;
+	the migration of functions between processors and/or custom logic; and
+	the co-simulation of system specifications before and after synthesis.
+	although others, as exemplified by many of the contributions in this
+	volume, have looked at virtually all of these issues, chinook's
+	approach is different in its focus on design space exploration that
+	will, hopefully, mature into an embedded system designer's assistant.
+	
+
+
+
+
+ interface synthesis 
+
+	 [cob95b] pai chou, ross b. ortega, gaetano borriello, 
+	
+		"interface co-synthesis techniques for embedded systems",
+		in  proceedings of the ieee/acm international conference on 
+		computer-aided design, san jose, ca, november, 1995, pp.280-287.
+	
+	a key aspect of the synthesis of embedded systems is the automatic 
+	integration of system components.  this entails the derivation of
+	both the hardware and software interfaces that will bind these elements 
+	together and permit them to communicate correctly and efficiently.
+	without the automatic synthesis of these interfaces, designers are not
+	able to fully simulate and evaluate their systems.  frequently, they
+	are discouraged from exploring the design space of different 
+	hardware/software partitions because practical concerns mandate 
+	minimizing changes late in the design cycle, thus leading to more 
+	costly implementations than necessary.
+	this paper presents a set of techniques that form the basis of a
+	comprehensive solution to the synthesis of hardware/software interfaces.
+	software drivers and glue logic are generated to connect processors
+	to peripheral devices, hardware co-processors, or communication
+	interfaces while meeting bandwidth and performance requirements.  
+	we use as examples a set of devices that communicate over an infrared
+	local communications network (highlighting a video wrist-watch display)
+	to explain our techniques and the need for design space exploration 
+	tools for embedded systems.
+
+	
+
+         [cob92] pai chou, ross ortega, gaetano borriello, 
+        
+             "synthesis of the hardware/software interface in
+              microcontroller-based systems,"
+             proceedings of the ieee/acm international conference on
+              computer-aided design, santa clara, ca, november 1992,
+	      pp.488-495.
+        
+	microcontroller-based systems require the design of a
+	hardware/software interface that enables software running on the
+	microcontroller to control external devices.  this interface consists
+	of the sequential logic that physically connects the devices to the
+	microcontroller and the software drivers that allow code to access the
+	device functions.  this paper presents a method for automatically
+	synthesizing this hardware/software interface using a recursive
+	algorithm.  practical examples are used to demonstrate the utility of
+	the method and results indicate that the synthesized circuit and
+	driver code are comparable to that generated by human designers.  this
+	new tool will be used by higher-level synthesis tools to
+	evaluate partitionings of a system between hardware and
+	software components.
+	
+
+         [wb94a] e. a. walkup, g. borriello, 
+	
+	"interface timing verification with application to synthesis" 
+	31st design automation conference proceedings, june, 1994.
+	
+	a fundamental timing analysis problem in the verification and 
+	synthesis of interface logic circuitry is the determination of 
+	allowable time separations, or skews between interface events, 
+	given timing constraints and circuit propagation delays.  these 
+	skews are used to verify timing properties and determine allowable 
+	propagation delays for logic synthesis.  this paper presents an
+	algorithm that provides tighter skew bounds with better asymptotic
+	running time than previous methods, and shows how to apply the
+	method to synthesis tasks.
+	
+
+	 [wb94b] e. a. walkup and g. borriello, 
+	
+	"automatic synthesis of device drivers for hardware/software co-design"
+	
+	 university of washington department of computer science
+		technical report 94-06-04
+	 
+	automatically synthesizing device drivers,
+	the hardware and software needed
+	to interface a device to a processor, is an important element
+	of hardware/software co-design.  driver software consists of
+	the sequences of instructions needed for the processor to 
+	control its interactions with the device.  driver hardware
+	consists of the digital logic necessary to physically
+	connect the devices and generate signal events while meeting
+	timing constraints.  we describe an approach that begins
+	with device specifications in the form of timing and state
+	diagrams and determines which signals can be controlled
+	directly from software and which require indirect control
+	through intervening hardware.  minimizing this hardware
+	requires solving a simultaneous scheduling and partitioning
+	problem whose goal is to limit the number of wires whose
+	events are not directly generated by the processor software.
+	we show that even the simplest version of this problem is 
+	np-hard and discuss a heuristic solution that should work 
+	well in practical situations.
+	
+
+
+
+
+
+ scheduling 
+
+         [cwb94] pai chou, elizabeth walkup, gaetano borriello, 
+        
+             "scheduling issues in the co-synthesis of
+             reactive real-time systems,"
+             in ieee micro, august 1994, pp.37-47.
+	     also appeared as technical report 94-09-04,
+	     dept. of computer science and engineering,
+	     university of washington, seattle, wa  98195.
+	
+	many embedded control applications must respect intricate timing
+	requirements on their interactions with the external environment.
+	these constraints are derived from response time, rate of execution,
+	and low-level signaling requirements.  currently, most of these
+	systems are being designed in an ad hoc manner.
+	many tools assume the designer
+	has already finalized the scheduling, while most schedulers make
+	simplifying assumptions and often cannot handle general timing 
+	constraints. 
+	in this paper, we discuss the scheduling issues that must be addressed
+	by co-synthesis tools for embedded systems and outline possible 
+	approaches to the problems.  our perspective is based on experience 
+	with chinook, a hardware-software co-synthesis system for reactive 
+	real-time systems, currently under development at the university of 
+	washington.  chinook is initially targeting embedded applications
+	without operating system support.  from a high-level specification
+	and a device library, chinook synthesizes both interface hardware
+	and a software program to realize the design.
+	
+
+         [cb95] pai chou, gaetano borriello, 
+        
+             "interval scheduling: fine grained code scheduling
+             for embedded systems,"
+             dac-95, june 1995.
+	
+	a central problem in embedded system co-synthesis is the generation
+	of software for low-level i/o.
+	scheduling still remains a manual task because existing
+	coarse-grained real-time scheduling algorithms are not applicable:
+	they assume fixed delays even though the run times are often variable,
+	and they incur too much overhead.
+	to solve this problem, we present a new static ordering technique,
+	called interval scheduling, for meeting general timing
+	constraints on fine-grained, variable-delay operations without using
+	a run-time executive.
+	
+
+         [cb94] pai chou, gaetano borriello, 
+        
+             "software scheduling in the co-synthesis of
+             reactive real-time systems,"
+             in proceedings of the design automation
+             conference, san diego, ca, june 1994, pp.1-4.
+	
+	existing software scheduling techniques limit
+	the functions that can be implemented in software
+	to those with a restricted class of timing constraints,
+	in particular those with a coarse-grained, uniform, periodic behavior.
+	in practice, however, many systems change their i/o behavior
+	in response to the inputs from the environment.
+	this paper considers one such class of systems, called
+	reactive real-time systems, where timing requirements can include
+	sequencing, rate, and response time constraints.
+	we present a static, non-preemptive, fine-grained
+	software scheduling algorithm to meet these constraints.
+	this algorithm is suitable for control-dominated embedded
+	systems with hard real-time constraints, and is part of the
+	core of a hardware/software co-synthesis system.
+	
+
+
+
+
+last updated
+mon nov 13 21:03:37 pst 1995

@@ -1,0 +1,24 @@
+pssls: parallel solution of sparse least squares problems
+
+
+pssls(parallel solution of sparse least squares problems)
+is a sparse matrix package
+for solving large, sparse,
+linear least squares problems
+on distributed-memory machines.
+this package is implemented in ansi c 
+using double-precision arithmetic.
+the ibm message-passing library(mpl)
+is used for communication among processors.
+
+
+pssls is a parallel direct sparse solver.
+to solve a sparse linear least squares problem,
+a sparse qr decomposition is computed. 
+then a sparse triangular system is solved.
+both the sparse qr factorization
+and the triangular solution are carried out 
+by a blocked-oriented parallel multifrontal scheme.
+ a user's guide to pssls is available here.
+for further information regarding pssls, please contact 
+the author(csun@cs.cornell.edu).

@@ -1,0 +1,114 @@
+zen timer code
+
+zen timer code
+
+i have implemented a class library in c++ that uses an undocumented
+feature of the intel(tm)
+pentium(tm) processor to very precisely time your executable code for
+purposes of profiling. information about this feature and other
+undocumented pentium features is available
+here. simultaneous timing of any
+number of routines is supported, as well as suspending and resuming
+the timing at any point during the timed interval.
+
+
+
+this code was inspired by michael abrash's excellent book  zen of code
+optimization.
+
+
+
+my code works by accessing a 64-bit register in the intel pentium
+processor that is incremented on every clock cycle.  on a 100 mhz
+pentium, this gives a clock resolution of 10 nanoseconds (one cycle),
+and a maximum time interval of about 5,800 years.
+
+
+
+this code keeps track of the minimum, maximum, and average time
+intervals for the pieces of code that you are profiling.  in addition,
+it is possible to specify a dribble file that will record every
+interval of time measured.
+
+
+
+this code has been implemented and tested on a pentium running linux
+1.2.13 with gcc 2.7.0 and the gnu assembler version
+cygnus/linux-2.5.2l.15.  to use this code, you must patch your
+assembler with the supplied patch file.
+
+
+
+click here to download a copy of the
+zen timer code.
+
+
+
+click here to
+download a copy of the patch file for the gnu assembler.
+
+
+
+click here to download a test program
+that makes use of the timer code.
+
+
+
+i also developed two useful utilities for use with the zen timer.
+the first converts a time dribble file into an ascii (human
+readable) version.
+
+
+
+click here to download the time2ascii
+code.
+
+
+
+the second converts a time dribble file into an ascii histogram file
+(suitable for use with a spreadsheet for example).
+
+
+
+click here to download the time2histo
+code.
+
+
+
+an important note on accounting for the overhead caused by the
+timer itself
+
+
+
+the zen timer introduces some overhead into every timed interval by
+virtue of it having to execute a few instructions to do the profiling.
+in an attempt to account for this overhead, i have defined some macros
+in the file zentimer.h that have overhead values that work for my
+system.
+
+
+
+i have, however, found that there are a number of different factors
+that can affect the overhead introduced by running the timer.  in
+particular, i suggest that you not use x-windows while using the timer
+as it seems to add particularly unpredictable overheads to the timing
+results.  also, different disks, or a different system board can cause
+these overheads to change.  you should try running the timer on your
+system with my small test program, and see if you get an average
+interval of 0 cycles.  if not, adjust the overhead macros in
+zentimer.h until you do.
+
+
+
+
+
+
+
+  last updated 10/03/95
+  mark johnstone.
+  any  suggestions, comments welcome.
+  department of computer sciences
+  at  ut austin 
+
+  click to send e-mail to 
+  mark johnstone

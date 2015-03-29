@@ -1,0 +1,27 @@
+a comparison of algorithms for large scale mixed complementarity problems 
+a comparison of algorithms for large scale mixed complementarity problems 
+ stephen c. billups,  steven p. dirkse and  michael c. ferris
+mp-tr-95-16
+october 1995
+
+ this paper provides a means for comparing various computer codes for solving large scale mixed complementarity problems. we discuss inadequacies in how algorithms are currently compared, and present a testing environment that partially solves these inadequacies. this testing environment consists of a library of test problems, along with gams and matlab interfaces that allow these problems to be easily accessed. eight different algorithm implementations for large scale mixed complementarity problems are briefly described and tested with default parameter settings using the new testing environment.
+
+how to view this document
+
+
+display the whole document in one of the following formats.
+
+postscript
+ 93325 bytes. (compressed on disk, will be sent uncompressed)
+
+
+
+print or download all or selected pages.
+
+
+
+ you are granted permission for the non-commercial reproduction, distribution,display, and performance of this technical report in any format, but thispermission is only for a period of 45 (forty-five) days from the most recenttime that you verified that this technical report is still available fromthe computer science department of the university of wisconsin - madison underterms that include this permission.  all other rights are reserved by theauthor(s). 
+[ search
+ ]
+
+ncstrlthis server operates at uw madison computer sciences technical reports . send email to www@cs.wisc.edu

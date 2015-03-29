@@ -1,0 +1,208 @@
+what is importance-based feature extraction?
+
+
+
+
+
+outline
+
+
+the main idea
+an example from real life
+a neural net example, with gaussian detector nodes
+what's new about importance-based feature extraction?
+
+
+
+the main idea 
+
+suppose that an autonomous agent has feature detectors which identify
+its state, and that it uses reinforcement learning to learn to succeed
+in its environment.  importance-based feature extraction aims to tune
+the agent's feature detectors to be most sensitive to states where the
+agent's choice of action is critical.  if the agent's action from this
+state will have little bearing on the agent's future success, we say
+that the state is unimportant; we define an
+important state as one having very different predictions of
+reinforcement for taking different actions.  in terms of q-learning,
+this means that an important state is one from which the different
+actions have very different q-values.
+
+ 
+
+important states are not necessarily the most frequently seen.
+frequency-based feature extraction can be misled by
+frequently-occurring "red herring" states, and may miss states which
+represent "rare opportunities."  for example, if the agent frequently
+finds itself in a particular state where almost any action is equally
+good, frequency-based feature tuning would cluster detectors around
+that state; however, those detectors will be of little use to the
+agent because its choice of action at this state has little bearing on
+its future reinforcement.  or the agent may find itself in a
+rarely-seen state where its choice of action is critical for future
+success; such a state is important, though infrequent.  of course,
+this view is based on the assumption that the agent's task is to
+act in a way which optimizes its reinforcement, regardless of
+its understanding of aspects of the world which have no bearing on its
+strategy selection.
+
+
+
+furthermore, important states need not be associated with the most
+extreme reinforcement values.  for example, there may be a state from
+which the agent will fail, no matter what action it takes.  therefore,
+this state will be strongly associated with failure, and most likely,
+extremely negative reinforcement values.  but detecting this state is
+not very helpful to the agent, because when it is in this state there
+is nothing it can do to prevent failure.  the agent would be better
+off using detectors to identify the state from which it made some
+critical mistake.  that would be a state from which a correct action
+might have led to success instead of failure.  the q-values at this
+state might not be as great in absolute magnitude as those associated
+with a state from which the agent always fails, or a state from which
+the agent always succeeds.  but since some actions from this state
+lead to success and some to failure, it has a greater span of
+q-values associated with the actions; this makes it an important
+state.
+
+
+
+an example from real life
+
+cognitive economy is one of the principles we use to cope with daily
+life.  people tend to use broad classifications whenever possible,
+because this allows them to apply information learned from a few
+samples to any of a large collection of objects; they avoid having to
+re-learn how to handle each new individual object.  but this kind of
+stereotyping is only of use if the classifications relate to our goals
+and the feedback we receive.  when our goals require us to respond to
+some particular features of an individual, we need to learn to
+recognize those features which make this individual a special case.
+
+
+
+for example, consider the concept of "snow."  my concept of snow has
+to do with whether i can pack it into a snowball ("wet snow"), or not
+("fluffy snow").  otherwise, snow is just something pretty that piles
+up and requires me to get out the shovel.  but skiers talk about more
+varieties of snow, and the distinctions are relevant to them because
+different kinds of snow will have different effects on their skiing.
+i may not remember all the varieties of snow which my skier friends
+have spoken of; this is not necessarily a comment on my memory, but is
+more likely due to the fact that i do not ski and i derive no benefit
+from knowing the distinctions.  supposedly, eskimos have words for
+many different kinds of snow.  but to someone who lived their whole
+life close to the equator, snow might simply be "snow," some form of
+white precipitation which they've never seen.  in each case, we are
+alloting cognitive resources for those distinctions which relate to
+our goals.  this is an example of importance-based feature extraction,
+since we are "tuning" our "feature detectors" to respond to those
+features which make a difference in the things we have to do, and
+otherwise falling back on broad stereotypes.
+
+
+
+a neural net example, with gaussian detector 
+nodes
+
+a common architecture for a reinforcement-learning agent is a
+feed-forward connectionist network which has inputs, a layer of hidden
+nodes, and an output layer of nodes which control action selection.
+we can think of the hidden nodes as feature detectors, which provide a
+distributed representation of the current system state.
+importance-based feature extraction attempts to tune the feature
+detectors according to their importance in selecting the agent's
+actions; a detector is considered important if the links from it to
+the outputs have very different weights.  if the weights were all the
+same, that detector would contribute the same impulse to each of the
+competing output nodes, and thus would have no influence on the
+agent's choice of action.  since the link weights are used to
+calculate q-values, a detector with a sizable spread of weights on its
+outgoing links represents a state from which different actions have
+very different expectations of reinforcement.  in other words, this
+detector is valuable because it detects a state from which the agent's
+choice of action will strongly affect the agent's liklihood of
+success.
+
+
+
+in a system having gaussian detector nodes, importance-based feature
+extraction tunes their centers in order to maximize each detector's
+estimate of its importance.  i have found it convenient to define
+the importance of detector i as the variance of the weights on
+its links to the output nodes;  however, alternative definitions are
+certainly possible.
+
+
+
+what's new about importance-based feature 
+extraction?
+
+in reinforcement learning problems the sparseness of the feedback
+increases the difficulty of feature extraction.  importance-based
+feature extraction addresses this problem by relying on bottom-up
+feature extraction.  other examples of this general approach include
+the use of bottom-up clustering methods such as kohonen's
+self-organized map, chapman & kaelbling's use of a "relevance"
+criterion, and statistical approaches built around principal component
+analysis.
+
+
+
+bottom-up clustering methods are based on the frequency of states.
+kohonen's self-organized map and related clustering methods attempt to
+distribute the feature detectors according to the probability density
+function of the states seen by the agent.  in contrast,
+importance-based feature extraction recognizes that, to an autonomous
+agent, the important states are not necessarily the most frequent, as
+noted above.  what the agent needs is not to detect commonly-seen
+states, but important states---states which matter in terms
+of the action decisions the agent must make.  the self-organized map
+was designed for a different type of problem, that of
+modelling some feature domain and producing a brain-like
+mapping from inputs to common features.  here, there is no
+reinforcement, and the topological structure of the feature space is
+what is important.  but in a control task, the
+frequency-based approach is blind toward the reinforcement, and the
+reinforcement is what makes some states more important than others to
+the agent.
+
+
+
+chapman & kaelbling's concept of "relevance" biases feature extraction
+toward the detection of features which are associated with extreme
+reinforcement values.  as discussed above, extreme reinforcement
+values do not necessarily indicate an important state, from which the
+agent's choice of action really matters.  relevance tuning produces
+feature detectors which are relevant to predicting the agent's future
+success, but which may not be relevant to choosing its next action.
+when the agent detects a feature, if all its actions will produce
+outcomes which are equally good, that feature doesn't make any
+difference in determining its strategy, even if the feature is
+relevant to predicting its future success.  relevance tuning cannot
+tell that such features are unimportant. 
+
+
+
+
+rarely are developments in neural networks unanticipated by the field
+of statistics, although researchers may not recognize the common
+threads at first glance.  but i am not aware of a concept like
+importance-based feature extraction in statistics.  principal
+component analysis can very efficiently give the structure of the
+feature space, but it is blind toward the reinforcement seen by the
+agent.  therefore, like the other approaches, it cannot guide feature
+extraction according to the reinforcements the agent receives for
+various state/action combinations under its current performance task.
+
+
+
+return to:
+
+top of this document
+djf's reinforcement learning page
+
+
+
+
+finton@cs.wisc.edu, november 30, 1994.

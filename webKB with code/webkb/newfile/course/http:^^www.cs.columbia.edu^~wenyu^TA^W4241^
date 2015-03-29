@@ -1,0 +1,56 @@
+homepage for w4241 - continuous algorithms 
+
+
+
+ w4241: continuous algorithms and complexity, fall 1996 
+
+  note: this homepage is still under
+construction.  
+
+
+instructor: prof. joseph traub
+
+class schedule: tue thu 1:10-2:25pm
+
+office hours: tue 12:30-1:00pm thu 2:45-3:15pm, or by appointment.
+
+required textbook: none.
+
+recommended readings: tba.
+
+ta: wenyu jiang 
+wenyu@cs.columbia.edu 
+
+ta office hours: tue 3-4pm thu 10-11am, or by appointment.
+
+newsgroup: 
+columbia.fall.cs4241 
+
+
+ homeworks: 
+
+ assignment c1, c2 , due: c1 - sept.12,
+c2 - sept. 17
+
+ solution to c1 
+
+ assignment pp1, c3 , due: sept.19
+ assignment c4, pp2,c5 , due: sept.26
+ assignment pp3, pp4, c6 , due: oct.3
+ assignment c7 , due: oct.10
+ assignment c8,pp5,xc1 , due: oct.29
+ assignment pp6 , due: nov.14; c9,xc2,xc3,xc4, due: nov. 19
+ for an examplanation of xc3,xc4, see  this ...
+ assignment c10,xc5,xc6 , due: nov. 26
+ assignment pp7,c12,c13 , due: not assigned yet
+
+
+ readings: 
+
+krongo: algorithms. qa 76.6k76 1987
+ralston/rabinowitz: first course in numerical analysis qa.297.r3 1978
+isaacson: analysis of numberical methods qa.297.i8 1994
+borodin: computational complexity of algebraic... qa.76.b65
+forsythe: computer solution of linear algebraic... qa.297.f52 (2 copies available)
+dahlquist: numerical methods qa.297.d3313 1974
+wilkinson: rounding error in algebraic... qa275.w64 1994

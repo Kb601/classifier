@@ -1,0 +1,114 @@
+cs 302 section 70 - quiz 1
+
+
+
+
+quiz #1
+
+
+note: this was a more difficult quiz than i'd originally intended. don't worry if you had some problems with this one; that'll be taken into account when the semester's over.
+
+
+suppose that inside you computer, the variable fubar has the binary value 01100011. what is its decimal value if fubar is declared as
+a) integer
+
+---------------------------------
+| 0 | 1 | 1 | 0 | 0 | 0 | 1 | 1  |      = 2^6 + 2^5 + 2^1 + 2^0 = 99
+--------------------------------- 
+ 2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
+
+
+
+b) real (4 digit mantissa, 4 digit exponent)
+
+  0110     0011 is
+
+1.0110 x 2^0011       = [2^0 + 2^(-2) + 2^(-3)] x 2^3 = 11.0
+
+
+
+find one type of each error (syntax,semantic,run-time,logical)
+(assume no line-position problems) 
+
+	program spam
+	implicit none
+
+c	number of eggs, sausage, beans, spam
+c	vikings, dead frogs, and health code violations 
+	intefer eggs,sausag,beans,spam
+	integer viking,ddfrog,health
+
+	eggs = 40
+	sausag = 200
+	beans = 100
+	spam = 20000
+	edible = eggs + sausag + beans + spam
+
+	viking = 20
+	ddfrog = 0
+	health = 300
+
+	print *,'edible food per viking', viking/edible
+	print *,'(crunchy) dead frogs per viking',ddfrog/viking
+	print *,'health violations per dead frog',health/ddfrog
+	
+	stop
+	end
+
+
+a) syntax error:
+    intefer instead of integer on line 6
+
+b) semantic error:
+    edible undeclared
+
+c) run-time error:
+    health/ddfrog is dividing by 0
+
+d) logical error:
+    edible food per dead vikingshould be edible/viking (not viking/edible)
+
+
+
+what would be the value of fubar after the following statements:
+a) 
+character*3 fubar
+fubar = 'congress'
+
+only the first three characters can be stored, so fubar = 'con'
+
+
+b) 
+integer fubar
+fubar = 3.6
+
+integers truncate, so fubar = 3
+
+
+c) 
+integer fubar
+fubar = mod(18,5)
+
+the remainder of 18 when divied by 5 is 3.
+
+
+d) (hint: remember the conversion rules)
+real fubar
+integer x,y
+fubar = 5/3
+
+5 and 3 are integers, so the expression 5/3 = 1
+*then* we convert to the type of fubar, so fubar = 1.0
+(note: to avoid this, you need something like real(5)/3, or 5.0/3
+(one operand must be real).
+
+
+
+
+
+
+
+
+
+
+copyright &copy 1996 jeff lampert (tick@cs.wisc.edu).  last modified september 10, 1996.

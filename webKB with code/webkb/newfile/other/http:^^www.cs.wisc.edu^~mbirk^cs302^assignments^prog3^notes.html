@@ -1,0 +1,281 @@
+notes on the hangman programming assignment 
+
+
+
+
+ notes on the hangman programming assignment 
+
+i have been getting a lot of questions about the hangman program.  some
+people have had minor problems getting the string class to work, or
+interpreting a particular error message.  however, others claim to be
+completely lost, and cannot figure out how to approach the problem of
+writing a program to play hangman.  maybe i didn't prepare you properly for
+this assignment.  i don't think it is a terribly hard assignment, but i may
+have rushed through the material on the string class.
+
+
+
+so i decided to write a detailed document describing how to do the
+assignment.  much of the code that you will need to use in your program is
+given to you right here; all you have to do is assemble it into a coherent
+structure and fill in the details.
+
+
+
+note: the code in this document does not address a small problem:
+treating both upper- and lower-case letters as the same.  instead, it treats
+the two versions of each letter as totally different letters.  this is not
+correct behavior for the assignment, though.  you are responsible for
+modifying the program to handle upper- and lower-case letters.  if the user
+guesses the letter 'e' (either upper- or lower-case), your program should
+"reveal" all letters 'e' in the secret phrase (both upper- and lower-case).
+however, i recommend that you do this only after you have the rest of
+the program working.
+
+ basic implementation 
+
+one way to implement the hangman game is to keep two strings: the secret
+phrase, and the "partially-revealed" secret phrase.  the secret phrase is
+initialized at the beginning of the program and doesn't change.  the
+partially-revealed secret phrase is the same as the secret phrase, but all
+of the letters are "blanked out".  when the user guesses a letter in the
+secret phrase, the corresponding letter in the partially-revealed secret
+phrase is "unblanked".  for example, say the secret phrase is howdy
+doody!.  then the partially-revealed secret phrase will contain the
+string _____ _____! - each of the letters has been replaced with the
+underscore character.
+
+
+
+now, if the user guesses the letter "o", then the partially-revealed secret
+phrase will be modified; for each "o" in the secret phrase howdy
+doody!, the corresponding character in the partially-revealed secret
+phrase is changed from the underscore character to the letter "o".
+
+ pseudo-code 
+
+
+ get random secret phrase
+ initialize the "partially revealed phrase"
+ initialize number of chances
+ display partially revealed secret phrase
+ initialize guessed letters to empty string
+
+
+ loop until out of chances or secret phrase has been guessed
+   
+    ask user for guess
+    if not a letter
+      
+       error "not a letter"
+      
+    else if already guessed
+      
+       error "already guessed"
+      
+    else
+      
+       add guess to string of guessed letters
+       if guess is in secret phrase
+         
+          message "good guess"
+          reveal matching letters in partially revealed phrase
+         
+       else
+         
+          message "bad guess"
+          subtract one from number of chances
+         
+      
+    display partially revealed secret phrase
+   
+ if secret phrase guessed
+   
+    message "congratulations"
+   
+ else
+   
+    message "sorry, secret phrase was: " secret_phrase
+   
+
+
+
+ get the random secret phrase 
+
+for this program, you "get" the random secret phrase by calling the function
+random_secret_phrase.  this function has the following prototype:
+
+
+
+
+      string random_secret_phrase ();
+
+
+ this prototype tells us that the random_secret_phrase function
+has no inputs, and returns (outputs) a string.  so we call this function by
+simply putting an empty pair of parentheses after its name:
+
+
+      random_secret_phrase ();
+
+
+however, if we just wrote this line in our program, it would call the
+function, but throw away its return value!  this is definitely not what we
+want.  in general, we must use the return value of a function in some way. 
+for random_secret_phrase, its return value is a string which is
+randomly selected from a list.  the appropriate thing to do with this string
+is to store it in a variable, so we can refer to that value whenever we need
+to.
+
+
+      string secret_phrase = random_secret_phrase ();
+
+
+this creates a variable secret_phrase of type string, and
+initializes it with the value returned by the random_secret_phrase
+function call.
+
+ initialize the partially-revealed secret phrase 
+
+the partially-revealed secret phrase should be the same as the secret
+phrase, but with all letters changed to underscores.  non-letters, such as
+the space character or punctuation should be left as is.  to decide if a
+character is a letter, us the isalpha function.  this function is
+declared in the header file ctype.h.  it has the following
+prototype:
+
+
+      bool isalpha (char ch);
+
+
+this prototype tells us that the isalpha function takes one input,
+a character, and returns a boolean value (true or false).  if the given
+character is a letter, it returns true.
+
+
+      string partial_phrase = secret_phrase;
+      for (int i = 0; i &lt; partial_phrase.length(); i++) {
+         if ( isalpha (partial_phrase [i]) )
+            partial_phrase [i] = '_';
+      }
+
+
+this code loops over each of the characters in the partially-revealed secret
+phrase; each character that is a letter is changed to an underscore. since
+we know the number of characters in the partially-revealed secret phrase is
+partial_phrase.length(), we can use a simple counting loop.  we use
+the bracket operator to access each character; the index variable i
+tells us which character we are working on.
+
+ checking whether a letter has already been guessed 
+
+to decide if the user has guessed a letter previously, you need to keep
+track of which letters they have already guessed.  this can be done with a
+string that holds all previously-guessed letters.  at the beginning of the
+game, this will be the empty string.  each time the user guesses a new
+letter, add it to the end of the string.
+
+
+
+to decide whether a letter has already been guessed, use the function
+char_in_string.  this function has the following prototype:
+
+
+      bool char_in_string (char ch, string str);
+
+
+this tells us that the function has two inputs (one character and one
+string), and returns a boolean (i.e., true or false) value.  if it returns
+true, then one of the characters of the given string is the character
+ch.
+
+
+
+so, if you call this function, and supply as inputs the guess and the string
+of previously-guessed letters, it will tell you whether or not the guess has
+been made before.  the function call will look like:
+
+
+      char_in_string (guess, guessed_letters)
+
+
+but, as usual, we need to do something with the return value of this
+function!  since char_in_string returns a boolean value, we can use
+the return value as the condition of an if statement:
+
+
+      if ( char_in_string (guess, guessed_letters) )
+
+
+ add guess to string of guessed letters 
+
+
+       guessed_letters += guess;
+
+
+remember that the += is just a shorthand for the following:
+
+
+      guessed_letters = guessed_letters + guess;
+
+
+the character guess is automatically converted to a string, and the
++ operator concatenates the two strings into a single string.
+
+ checking if the guess is in the secret phrase 
+
+this step is similar to checking whether the guess had been made previously. 
+use the char_in_string function, but instead of searching the
+string of previously-guessed characters, search the secret phrase itself.
+
+
+      if ( char_in_string (guess, secret_phrase) )
+
+
+ reveal the matching letters in the secret phrase 
+
+when the user guesses a letter which is in the secret phrase, you must
+"unblank" the correct letters in the partially-revealed secret phrase by
+changing them to the guessed letter.  do this by looping over each character
+in the secret phrase; if that character is the same as the guess, then
+"reveal" the corresponding character in the partially-revealed secret phrase
+by changing it from an underscore to the corresponding character in the
+secret-phrase.
+
+
+      for (int i = 0; i 
+
+ checking whether the game is over 
+
+the game ends when either the player has run out of chances or has
+completely guessed the secret phrase.  the first condition can be checked
+with the boolean expression
+
+
+      num_chances == 0
+
+
+the second condition can be checked by comparing the secret phrase to the
+partially-revealed secret phrase.  if they are the same, then the player has
+won the game.  this can be checked with the boolean expression
+
+
+
+      secret_phrase == partial_phrase
+
+
+the game ends when either of these two boolean expressions is true:
+
+
+      num_chances == 0 || secret_phrase == partial_phrase
+
+
+however, the game must continue as long as neither of these conditions is
+true.  thus the condition in our loop would be:
+
+
+      while (num_chances > 0 && secret_phrase != partial_phrase) {
+
+
+
+ mbirk@cs.wisc.edu

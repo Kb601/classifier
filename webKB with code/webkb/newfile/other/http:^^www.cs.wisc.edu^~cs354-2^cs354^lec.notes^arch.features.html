@@ -1,0 +1,164 @@
+lecture notes - chapter 13 - performance features
+
+
+
+ chapter 13 -- performance features
+
+
+
+
+architectural features used to enhance performance
+--------------------------------------------------
+
+  (loosely following chapter 13)
+what is a "better" computer?  what is the "best" computer?
+  the factors involved are generally cost and performance.
+
+  cost factors: cost of hardware design
+		cost of software design (os, applications)
+		cost of manufacture
+		cost to end purchaser
+  performance factors:
+		what programs will be run?
+		how frequently will they be run?
+		how big are the programs?
+		how many users?
+		how sophisticated are the users?
+		what i/o devices are necessary?
+
+
+  (this chapter discusses ways of increasing performance)
+
+there are two ways to make computers go faster.
+ 
+ 1. wait a year.  implement in a faster/better/newer technology.
+    more transistors will fit on a single chip.
+    more pins can be placed around the ic.
+    the process used will have electronic devices (transistors)
+      that switch faster.
+
+ 2. new/innovative architectures and architectural features.
+
+
+
+
+memory hierarchies
+------------------
+known in current technologies:  the time to access data
+   from memory is an order of magnitude greater than a
+   cpu operation.
+
+   for example:  if a 32-bit 2's complement addition takes 1 time unit,
+   then a load of a 32-bit word takes about 10 time units.
+
+since every instruction takes at least one memory access (for
+the instruction fetch), the performance of computer is dominated
+by its memory access time.
+
+  (to try to help this difficulty, we have load/store architectures,
+   where most instructions take operands only from memory.  we also
+   try to have fixed size, small size, instructions.)
+
+
+what we really want:
+   very fast memory -- of the same speed as the cpu
+   very large capacity -- 512 mbytes
+   low cost -- $50
+
+   these are mutually incompatible.  the faster the memory,
+   the more expensive it becomes.  the larger the amount of
+   memory, the slower it becomes.
+
+what we can do is to compromise.  take advantage of the fact
+(fact, by looking at many real programs) that memory accesses
+are not random.  they tend to exhibit locality.
+  locality -- nearby.
+  2 kinds:
+
+  locality in time (temporal locality)
+    if data has been referenced recently, it is likely to
+    be referenced again (soon!).
+
+    example:  the instructions with in a loop.  the loop is
+    likely to be executed more than once.  therefore, each
+    instruction gets referenced repeatedly in a short period
+    of time.
+
+    example: the top of stack is repeatedly referenced within
+    a program.
+
+
+
+  locality in space (spacial locality)
+    if data has been referenced recently, then data nearby
+    (in memory) is likely to be referenced soon.
+
+    example:  array access.  the elements of an array are
+    neighbors in memory, and are likely to be referenced
+    one after the other.
+
+    example: instruction streams.  instructions are located
+    in memory next to each other.  our model for program
+    execution says that unless the pc is explicitly changed
+    (like a branch or jump instruction) sequential instructions
+    are fetched and executed. 
+
+we can use these tendencies to advantage by keeping likely
+to be referenced (soon) data in a faster memory than main
+memory.  this faster memory is called a cache.
+
+
+	cpu-cache    memory
+
+
+it is located very close to the cpu.  it contains copies of
+parts of memory.
+
+a standard way of accessing memory, for a system with a cache:
+ (the programmer doesn't see or know about any of this)
+  
+ instruction fetch (or load or store) goes to the cache.
+ if the data is in the cache, then we have a hit.
+  the data is handed over to the cpu, and the memory access is completed.
+ if the data is not in the cache, then we have a miss.
+   the instruction fetch (or load or store) is then sent on
+   to main memory.
+
+ on average, the time to do a memory access is
+
+       = cache access time + (% misses  *  memory access time)
+
+this average (mean) access time will change for each program.
+it depends on the program, and its reference pattern, and how
+that pattern interracts with the cache parameters.
+
+
+
+
+cache is managed by hardware
+
+	keep recently-accessed block -- exploits temporal locality
+
+	break memory into aligned blocks (lines) e.g. 32 bytes
+		-- exploits spatial locality
+
+	transfer data to/from cache in blocks
+
+	put block in "block frame"
+		state (e.g valid)
+		address tag
+		data
+
+>>>> simple cache diagram here  inf	1-f + f/s
+	
+	 f	speedup
+	---	-------
+	1%      1.01
+	2%      1.02
+	5%      1.05
+	10%     1.11
+	20%     1.25
+	50%     2.00
+
+
+this says that we should concentrate on the common case!

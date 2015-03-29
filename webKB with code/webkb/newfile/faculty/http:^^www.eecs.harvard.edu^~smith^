@@ -1,0 +1,84 @@
+michael d. smith's home page
+
+
+
+michael d. smith
+
+
+assistant professor of electrical engineering and computer science
+architectures and compilation techniques for high-performance computer
+systems
+
+individual advances in hardware and software technology continue to
+spawn advances in the capability and performance of computer systems.
+as impressive as these advances are, even better systems are often
+possible if one redesigns the architectural interface that couples the
+hardware and software.  professor smith's research focuses on the
+experimental realization of these innovative compilers and computer
+architectures.
+
+professor smith's work consists of the design, implementation, and
+evaluation of novel architectural mechanisms for high-performance
+computer systems through the innovative combination of vlsi, compiler,
+operating system, and network technologies.  for the last few years,
+professor smith has worked on superscalar architectures, global
+instruction scheduling algorithms, and compile-time transformations to
+improve branch prediction and instruction fetching.  presently, his
+research team is exploring sophisticated compiler algorithms and novel
+computer architectures that address the performance needs of
+multimedia and system-intensive applications.
+
+for more information, please 
+view the slides from my 
+latest research overview talk
+and visit the
+
+harvard hube research group homepage and the
+
+morph project homepage.
+
+i also encourage you to visit our 
+harvard industrial partnership (hip) for information technology
+homepage.
+
+
+
+office:
+
+
+130 pierce hall  /  29 oxford street  /  cambridge, ma  /  02138
+phone: 617-496-5661  /  fax: 617-496-5508
+email: smith@eecs.harvard.edu
+
+
+courses:
+
+
+spring semester (1995-96):
+    cs253: adv. principles of programming lang. compilation.
+fall semester (1996-97):
+    
+    cs141: computing hardware.
+fall semester (1996-97):
+    cs245r: compilers and computer architecture.
+spring semester (1996-97):
+    cs246r: computer architecture and implementation.
+
+
+calls for conferences:
+
+
+euro-par '97
+(call for workshop on ilp)
+isca '97
+micro-29
+
+
+other:
+
+
+curriculum vitae
+listing of papers
+my anonymous ftp site: ftp.eecs.harvard.edu; cd users/smith
+software packages: please visit my ftp site or the
+    hube webpage

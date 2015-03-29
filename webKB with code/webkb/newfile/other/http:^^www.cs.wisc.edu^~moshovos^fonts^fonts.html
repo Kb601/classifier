@@ -1,0 +1,142 @@
+obtaining and installing greek fonts
+
+
+ disclaimer:
+this page and the files it points to are local copies of the originals
+from 
+
+www.hyper.gr
+.
+it is provided in the hope that it will help overcome the slow response
+time experienced when accessing www.hyper.gr from "remote" places.
+for comments or suggestions please contact the owner of the page 
+
+dimitris@hyper.gr
+
+
+
+obtaining and installing greek fonts
+
+
+
+to correctly display the greek www pages on your screen, your
+system needs to support greek according to the standard iso 8859-7.
+if it doesn't, you need to install a suitable greek "font". you also
+need to correctly configure your www-browser (netscape, mosaic etc).
+
+we provide the software and instructions on how to do this on various
+platforms. note that sofar our solutions enable you to view/print greek
+text (but not actually write greek on all systems). we would appreciate
+your feedback and expert's opinion to
+dimitris@hyper.gr
+
+ms windows 3.1
+
+to add greek fonts to your windows 3.1x system
+
+1) get the file
+arial.exe
+(165 kb) and execute it in your \windows\system
+directory. it is a self-extracting lha file that contains greek
+truetype fonts.
+
+2) add the "arial greek" font to your windows.
+select [main] -> [control panel]. in the [control panel]
+double-click the [fonts] icon. click [add new font] and
+select all four "arial greek" as the fonts you want to add.
+
+3) in netscape, from menu [options] select [preferences].
+then, from [set preferences on] choose [fonts and colors].
+finally, using the [choose font] buttons, select "arial greek"
+as your viewing font.
+
+
+
+macintosh / system 7.1 or later
+
+get file
+patcher.sit
+(unpack it with stuffit) and apply the patch to netscape 1.1n. you can then
+use your own high-quality greek (non-standard) mac fonts, which yield
+best results for the moment. (tsaoutos@hyper.gr)
+
+alternatively, for an elot-928 compliant mac font, get
+hellastimes.sit.hqx
+(70 kb) and once you've decompressed its contents, drop the font files in
+the system folder. select "hellastimes" as the font to use in netscape
+and "macroman" encoding (options -> preferences -> etc). (topalis@euclid.iacm.forth.gr)
+
+
+
+dos
+(lynx or www and unix shell account / terminal sw)
+
+these solutions require a vga graphics adapter (hercules etc not supported).
+get the file
+abcgrl.com
+(16 kb) and run it from dos. it offers support for iso 8859-7 (elot 928)
+and older, obsolete character sets. switch to elot 928 with alt-3.
+other options are ibm 851 (alt-2) and ibm 437 (alt-1). (lialiamb@hyper.gr)
+
+a more "orthodox" way, using the dos-supplied programs for handling
+different codepages, uses a cpi file. get 
+dosgreek.zip
+(12 kb) a zip file which contains gauss.cpi and grkeyb.com.
+to add the greek font gauss.cpi under dos 6.xx or dos 7.0/win95. (mchris@hyper.gr)
+
+
+1) add the following lines to your config.sys file:
+
+if you have dos 7.0/win95
+	device=c:\win95\command\display.sys con=(ega,,1)
+	country=xxx,737,c:\win95\command\country.sys
+
+if you have dos 6.22 or earlier
+	device=c:\dos\display.sys con=(ega,,1)
+	country=xxx,737,c:\dos\country.sys
+
+where xxx is your country code.
+	
+
+2) add the following lines to your autoexec.bat file:
+
+if you have dos 7.0/win95
+	c:\win95\command\mode con codepage prepare=((437) c:\path\gauss.cpi)
+	c:\win95\mode con codepage select=437
+
+if you have dos 6.22 or earlier
+	c:\dos\mode con codepage prepare=((437) c:\path\gauss.cpi)
+	c:\dos\mode con codepage select=437
+
+where path is where is the gauss.cpi file.
+
+3) restart the computer.
+
+to add greek dos keyboard driver add the following line to your
+config.sys file:
+
+install=c:\path\grkeyb.com
+
+where "path" is where is the grkeyb.com file.
+
+the swap between the greek and us keyboard is with ctrl-alt-space.
+
+
+
+x11 window system release 5 or later
+
+get file
+x11_greek_fonts.tar.z
+(58 kb) and decompress it with gnu gzip.
+
+
+you can find an excellent description on installing greek under x11 in
+[greek and x11]
+(ngramm@hyper.gr).
+we also recommend that you read
+[greek in www]
+by the democritus university of thrace. consult the manual of your
+system for details.
+
+back to main newspage of www.hyper.gr
+ &copy 1995 hypernet ltd

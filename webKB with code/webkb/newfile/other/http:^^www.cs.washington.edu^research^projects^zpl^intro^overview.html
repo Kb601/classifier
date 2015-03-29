@@ -1,0 +1,337 @@
+zpl overview
+
+
+
+
+ zpl overview
+
+
+
+zpl is a new array programming language designed for engineering and
+scientific programs that would previously have been written in fortran.
+because its design goals were machine independence and high performance, zpl
+programs run fast on both sequential and parallel computers.  because it is
+"implicitly parallel," i.e. the programmer does not express the parallelism,
+zpl programs are simple and easy to write.
+
+on this page, zpl is described at a high level by answering the "obvious"
+questions about it and its implementation. the page concludes with a zpl fact
+sheet.
+
+
+
+what is an array language? in scalar languages like fortran, c,
+pascal and ada, operations apply only to single values, so a + b expresses
+the addition of two numbers.  in such languages adding two arrays requires
+indexing and looping:
+
+
+   do 10 i = 1, n                     for ( i=0; i&ltn; i++) {
+      do 10 j = 1, n		          for ( j=0; j&ltn; j++){
+10       a(i,j) = a(i,j) + b(i,j)             a[i][j] = a[i][j]+b[i][j];
+                                          }
+                                      }
+            fortran 77                               c
+
+
+this need to loop and index to perform operations on arrays is both
+tedious and error prone.
+
+in zpl operations are generalized to apply to both scalars and arrays.
+thus, a + b expresses the sum of two scalars if a and b were declared as
+scalars, or arrays if they were declared as arrays.  when applied to arrays,
+the operations act on corresponding elements as illustrated in the loops
+above.  indeed, when the zpl compiler encounters the statement
+
+
+	a := a + b;
+
+
+and a and b are two dimensional arrays, it generates code that is effectively
+the same as the c loops shown above.  an array language, therefore,
+simplifies programming.
+
+why create a new array language? programming languages are created
+all the time in computer science, but the widespread adoption of a new
+programming language is an extremely rare event.  the recent use of
+object-oriented languages shows that it does occur from time-to-time.
+nevertheless, the cardinal rule is, "if you want your research to be applied
+in practice, do not invent a new language."  it is much better to extend or
+enhance an existing language that has an established user base.
+
+parallelism, in the opinion of zpl's designers, is a phenomenon that
+cannot be fully exploited through the medium of existing programming
+languages, even existing array languages, such as fortran 90 and apl
+[greenlaw90].  case after case demonstrates that effective parallel
+computations are typically accomplished through a "paradigm shift" away from
+sequential solutions.  this shift, which is more frequently discontinuous
+than the term "shift" implies, is inhibited by languages designed for
+sequential computers.
+
+a new language can avoid these problems and facilitate the paradigm
+shift.  further, by choosing its primitives carefully, new research in
+parallel compilation can apply.  so, zpl has been designed from first
+principles (see below) to realize these goals.
+
+isn't programming with arrays hard? programmers unfamiliar with
+them may find array languages a little different initially, but technical
+programmers, meaning scientists, engineers, mathematicians, statisticians,
+etc., will generally find them natural.  indeed, many science and engineering
+problems are formulated in a way that is perhaps closer to array languages
+than scalar languages.
+
+as a trivial example, consider the computation of the mean and standard
+deviation of a sample of n items.  the
+textbook definitions of these quantities are: 
+
+
+
+
+
+in zpl, mu and sigma are computed by
+single statements which mirror the definitions:
+
+
+    mu    := +&lt;&lt;sample/n;                   -- mean
+
+    sigma := sqrt((+&lt;&lt;sqr(sample-mu))/n);   -- std deviation
+
+
+the array sample contains the items, and the operator
++&lt;&lt; sums them.  so m is a direct translation.  the computation
+is analogous and illustrates several features of zpl, including subtracting
+mu from each item of sample, (this is called
+promoting a scalar to an array), promoting a scalar function sqr to be
+an array function by applying it to each item of the array, etc.  these
+properties of zpl, e.g. promotion, are simply programming language
+terminology for natural concepts technically educated people already know.
+
+
+after using zpl for a few months, a graduate student research assistant in
+civil engineering rebelled when told to program in c again.
+
+high performance is widely claimed; why believe it for zpl? for
+some languages "high performance" is part of the name.  for zpl, "high
+performance" is part of the description, as backed by experimental evidence
+[dikaiakos,lewis,lin95.]
+this evidence takes different forms, but is always relative to other means of
+achieving good performance.  for example, fortran 77 programs run
+sequentially, or c programs customized to a parallel platforms (with user
+specified communication), are regarded as reasonable ways to establish good
+baselines, since these usually represent the best alternatives to achieving
+good performance.
+
+the evidence of zpl's high performance derives from several types of
+experiments [lin94, lin95], one of which will be mentioned here:  simple is a
+fluid dynamics program developed at lawrence livermore national laboratories
+to benchmark new computers and compilers.  the computation has been widely
+used in the study of parallel computing.  a parallel version of the original
+2400 line fortran 77 program was developed by gannon and panetta [gannon86].
+a high quality, variable grain version written in c requires approximately
+5000 lines [lee92].  this c program, customized to the intel paragon and the
+kendal square research ksr-2, was compared to the 520 line zpl program for
+simple [lin94].  the speedups of these programs are shown for experiments
+involving 10 iterations on a 256 x 256 size problem.
+
+
+ 
+
+
+the experiments indicate that the high level zpl performs as well as the
+low-level c program for these two machines.  other information suggests that
+similar behavior can be expected on any mimd parallel computer [lin90].
+
+why does zpl have such good performance? zpl does not have parallel
+"directives" or other forms of explicit parallelism.  instead, it exploits
+the fact that when programmers describe computations in terms of arrays, many
+scalar operations must be performed to implement the array operations. this
+"implied" computation can be parceled out to different processors to get
+concurrency.  thus, the parallelism comes simply from the semantics of the
+array operations.
+
+what does 'zpl was designed from first principles' mean? zpl is
+actually the dataparallel sublanguage of a more powerful parallel programming
+language, called advanced zpl [lin94] or a-zpl.  a-zpl is a fully general
+parallel language for "power" users, i.e. programmers with extreme
+performance requirements and the sophistication to use more demanding
+technology.  a-zpl is not yet implemented, and its completion is not expected
+for at least two years.
+
+advanced zpl (known previously as orca c) implements a programming model,
+called phase abstractions [griswold90].  the phase abstractions model is
+capable of expressing task parallelism, pipelined parallelism and other
+parallel programming paradigms, not just data parallelism.  the phase
+abstractions programming model is built on and generalizes a parallel machine
+model, called the cta [snyder86].  the cta abstracts the family of
+multiple-instruction-multiple-data (mimd) computers.  the two models are the
+mechanism by which the benefits and costs of parallel computation are
+succinctly conveyed to a-zpl programmers [snyder93].  the models balance the
+conflicting requirements that to write efficient code, the programmer needs
+to make decisions based on how the program will be executed, but to be
+machine independent (portable) the programmer must avoid reliance on any
+particular machine facilities.  the relationships of this approach to others
+have been described [snyder95], and feasibility studies indicate that the
+approach works [lin92].
+
+the phase abstractions programming model recognizes three different
+"programming levels":
+
+
+process or "x" level -- a composition of instructions,
+phase or "y" level -- a composition of processes into a parallel 
+                        algorithm,
+problem or "z" level -- a composition of phases to solve the overall 
+                          application.
+
+
+the letter name of this highest, problem solving programming level
+motivates the language's name.
+
+learning the language.  a simple introduction of some of the basic
+zpl concepts is available online as a walk-through of a zpl program.  a tutorial
+introduction to programming in zpl is available as the zpl programmer's
+guide.  the zpl language manual defines the language specifics.  sample
+programs and scientific research papers are also available.
+
+writing your first program.  perhaps the simplest way to write and
+run a zpl program on your unix machine is to use the web compiler.  you paste a zpl program (your own or
+one of ours) into a window, and click "compile." the program is packaged up
+and sent to a machine at the uw cse department.  it is compiled into ansi c
+and returned to you.  a "make" of this file will result in an executable that
+can be run on your sequential computer.
+
+parallel use of zpl.  to run on a parallel computer zpl must first
+be targeted to that parallel computer.  this is an operation that is
+typically not performed by zpl applications programmers, but is
+straightforward for parallel computer systems administrators.  the present
+platforms on which zpl runs are
+
+
+intel paragon
+cray research t3d
+kendal square research ksr-2
+pvm running on a scientific workstation
+sequential unix platforms.
+
+
+for information on targeting to a new platform, click here.
+
+once zpl has been targeted to your type of parallel computer and the
+libraries installed at your facility, you are ready to use zpl in parallel.
+it is not necessary to install the zpl compiler on your workstation, because
+for the near term all zpl compilation will be performed at the university of
+washington.  this is to assist in rapidly disseminating compiler improvements
+to the user community.  (you can't have a stale version of the compiler!)
+however, we provide some software that you will want to install on your
+workstation which will simplify this remote compilation, and give you the
+convenience similar to compiling locally.
+
+to learn more about running zpl in parallel, click here.
+
+
+
+zpl fact sheet
+
+name.  zpl is short for the z (level) programming language; see
+discussion of programming model, above.
+
+origin.  zpl was designed and implemented by the orca project of
+the computer science and engineering department at the university of
+washington.
+
+type.  zpl uses the array abstraction to implement a dataparallel
+programming model; it is a standalone subset of advanced zpl.
+
+history.  implementation of the zpl compiler began in march 1993.
+it generated code approximately 15 months later.  zpl will be officially
+"released" during the fourth quarter, 1995.
+
+approach.  zpl is translated into a conventional abstract syntax
+tree representation on which program analysis and optimizations are
+performed.  ansi c code is generated as the object code.  this c program is
+machine independent, and implements certain operations in abstract form.
+this code is compiled using the native c compiler on the target machine with
+custom libraries.  in this second compilation the abstract operations are
+customized to the specific platform.  
+
+team.  the creators of zpl are: brad chamberlain, sung-eun choi,
+marios dikaiakos, george forman, e christopher lewis, calvin lin, larry
+snyder, and w. derrick weathersby with assistance from ruth anderson and kurt
+partridge.
+
+funding.  the foundational research for the zpl compiler was funded
+in part by the office of naval research n00014-89-j-1368.  the compiler
+itself was funded in part by the advanced research projects agency,
+n00014-92-j-1824.
+
+
+
+references
+
+[dikaiakos] m.d. dikaiakos, c. lin, d. manoussaki and d. woodward.  "the
+portable parallel implementation of two novel mathematical biology algorithms
+in zpl,"  the 9th int'l conference on supercomputing,  pp. 365-374,
+1995.
+
+[gannon] d. gannon and j. panetta, "restructuring simple for the chip
+architecture," parallel computing, 3:305-326, 1986 
+
+[greenlaw90] r. greenlaw and l. snyder, "achieving speedups for apl on an
+simd distributed memory machine," int'l j. of parallel programming,
+19(2):111-117, 1990 
+
+[griswold90] w. g. griswold, g. a. harrison, d. notkin, and l. snyder,
+"scalable abstractions for parallel programming," proc. 5th distributed
+memory computer conference, ieee, pp. 1008-1016, 1990
+
+[lee92] j. lee, c. lin and l. snyder, "programming simple for parallel
+portability," languages and compilers for parallel computing, uptal
+banerjee, david gelernter, alexamdru nicolau and david padua, eds, pp. 84-98,
+1992.
+
+[lewis] e. lewis, c. lin, l. snyder and g. turkiyyah.  "a portable
+parallel n-body solver," the 7th siam conference on parallel processing
+for scientific computing pp.  331-336. 1995.
+
+[lin92] c. lin, the portability of parallel programs across mimd
+computers, ph.d. dissertation, university of washington, 1992.
+
+[lin90] c. lin and l. snyder, "a comparison of programming models for
+shared memory multiprocessors," proceedings of the international
+conference on parallel processing, pp. ii 163-180, 1990.
+
+[lin94] c. lin and l. snyder, "simple performance results in zpl,"
+languages and compilers for parallel computing, k. pingali, u.
+banerjee, d. gelernter, a. nicolau, and d. padua, eds, pp. 361-375, 1994.
+
+[lin95]
+c. lin, l. snyder, r. anderson, b. chamberlain, s. choi, g. forman, e.
+lewis, and w. d. weathersby.  zpl vs. hpf: a comparison of performance and
+programming style, cse technical report, university of washington, 1994.
+
+[snyder94] l. snyder, "foundations of practical parallel programming
+languages," in j. ferrante and a. j. g hey (eds.), portability and
+performance for parallel processing, john wiley and sons, ltd., pp. 1-19,
+1994.
+
+[snyder86] l. snyder.  "type architecture, shared memory and the corollary
+of modest potential,"  annual review of computer science,  pp.
+1:289-317. 1986.
+
+[snyder95]l. snyder, "experimental validation of models of parallel
+computation," in a. hofmann and j. van leeuwen, lecture notes in computers
+science, v. 1000, springer-verlag, 1995.  
+
+
+
+ 
+
+ 
+
+[
+zpl | 
+uw cse |
+uw
+]
+
+zpl-info@cs.washington.edu

@@ -1,0 +1,150 @@
+jon damon reese's home page
+
+
+
+
+
+
+
+
+
+jon damon reese
+post-doctoral researcher
+
+           safety-critical software group
+
+
+
+department of computer science and engineering
+university of washington
+box 352350 
+seattle,
+   wa
+   98195 
+
+
+
+	office:				
+	106 chateau (guggenheim annex) 	
+
+
+
+	phone:				
+   	(206) 616-1844 			
+
+
+	fax:				
+    (206) 543-2969 			
+
+
+	e-mail:				
+jdreese@cs.washington.edu
+
+
+
+
+
+
+
+
+ research 
+
+
+    
+    i am interested in the problem of safety-critical
+    software.  we are all aware of devices, systems, and
+    structures that can cause catastrophes when they fail.  as
+    computer hardware becomes less expensive and as more expectations
+    are placed on software, computers are being placed in control of a
+    wider range of these applications.  software has advantages over
+    conventional technologies, e.g., flexibility.  
+    but these advantages come at a price.  software behavior can be
+    very complex and unpredictable.  perhaps the best publicized example is
+    the three mile island incident, in which operators had great
+    difficulty in diagnosing the state of the system during an emergency.
+
+
+    the requirements stage of software development is key to a project's
+    success, especially with respect to safety.  for that reason, 
+    my colleagues and i have concentrated on requirements, especially
+    the communication of requirements via a requirements specification.
+    to that end we have developed a state-based language called
+    
+    requirements state machine language, or rsml.
+    we have validated the usefulness of this language by
+    specifying tcas ii, 
+    an avionics system.
+
+
+    for my doctoral thesis i invented a hazard analysis procedure
+    based on the hazard and operability (hazop) study.
+
+    the most significant concept that this new procedure borrows from
+    hazop is that of a deviation, hence the name deviation
+    analysis.  see below for a link to an html transcription of
+    the dissertation.
+
+
+
+ current projects 
+
+
+ deviation analysis
+     
+      write conference article summarizing deviation analysis.
+      make deviation analysis software available to uw safety-critical 
+          software group.
+      study the possibility of dynamic display and control of 
+          deviation analysis searches.  (with siang lin loo)
+     
+ rsml tool set
+     
+      integrate deviation analysis software with rsml tool set.  
+          (with kurt partridge)
+      make alpha version of rsml tool set publicly available. 
+          (with kurt partridge and sean sandys)
+     
+ rsml semantics
+      
+      draft semantics document, including discussion of rsml variants
+      develop example of improved semantics
+     
+
+     
+ academic history 
+
+
+ ph.d. (1996), 
+    information and computer science, 
+    university of california, irvine
+    dissertation: software deviation analysis
+    (postscript)
+ b.a. (1989), computer science/linguistics, 
+    rice university.
+ waxahachie high school (1985), waxahachie, tx.
+
+
+ publications 
+
+
+ nancy g. leveson, mats p.e. heimdahl, holly hildreth, and jon reese.
+     requirements specification for process-control systems.
+     ieee transactions on software engineering, se-20(9),
+     september 1994.
+(postscript)
+
+ steven b. dolins and jon d. reese.  
+     a curve interpretation and diagnostic technique for industrial processes.
+     ieee transactions on industry applications, 28(1),
+     january/february 1992.
+ n.g. leveson, m.p.e. heimdahl, h. hildreth, j.d. reese, and r. ortega.
+     experiences using statecharts for a system requirements specification.
+     sixth international workshop on software specification and design,
+     como, italy, october 1991.
+
+
+ etc. 
+
+
+
+    jdreese@cs.washington.edu

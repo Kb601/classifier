@@ -1,0 +1,170 @@
+reading assignments
+
+
+
+
+
+
+
+1996 autumn quarter
+
+
+
+
+
+
+reading list
+
+
+
+
+  graphics hardware
+  
+   foley et al., sections 1.5, 4.2 - 4.5
+   optional:
+    
+      i. e. sutherland.  sketchpad: a man-machine graphics
+  communication system.   proceedings of the spring joint computer
+  conference, 329-346, 1963.
+      t. h. myer and i. e. sutherland.  on the design of display
+  processors.  communications of the acm  11(6): 410-414, 1968.
+    
+  
+  displaying images
+   
+   foley et al., sections 4.3.1, 4.4.1, 13 
+         (especially 13.1.1, 13.2 (intro), 13.2.1, 13.3.1), 5.4
+   optional:
+    
+     k. sims. artificial evolution for computer graphics.
+  computer graphics (siggraph '91) 25(4), 319-328.
+    
+  
+  image morphing
+  
+   t. beier and s. neely, feature-based image metamorphosis.
+  computer graphics (siggraph '92) 26(2), 35-42.
+   optional:
+    
+     a. lerios, c. garfinkle, and m. levoy. feature-based volume
+    metamorphosis. computer graphics proceedings, annual
+    conference series (siggraph 95), 449-456.
+    
+  
+  texture mapping
+   
+   foley et al., section 16.3.2, 17.4.3
+   neider, davis & woo, chapter 9
+   optional:
+    
+     james f. blinn and martin e. newell.  texture and reflection
+    in computer generated images.  communications of the acm 19(10):
+    542-547, october 1976.
+     paul s. heckbert.  survey of texture mapping.  
+    ieee computer graphics and applications 6(11): 56-67, november 1986.
+     paul haeberli and mark segal.  texture mapping as a
+    fundamental drawing primitive.   proceedings of the fourth
+    eurographics workshop on rendering (paris, france), 259-266,
+    june 1993. 
+    
+  
+  image compositing
+   
+   foley et al., section 17.6
+   thomas porter and tom duff. compositing digital images. 
+       computer graphics (siggraph '84) 18(3), 253-259.
+   optional:
+    
+     neider, davis & woo, chapter 7
+    
+  
+  line drawing
+   
+   foley et al., sections 3.2, 3.17
+   optional:
+    
+     foley et l., section 14.10
+     robert f. sproull.  using program transformations to derive
+    line-drawing algorithms.  acm transactions on graphics 1(4):
+    259-273, october 1982.
+     satish gupta and robert f. sproull.  filtering edges for
+    gray-scale displays.   computer graphics 15(3): 1-5, august
+    1981.
+    
+  
+  polygon scan conversion
+   
+   foley et al., sections 3.5, 3.6, 19.2.8
+  
+  curves
+   
+   foley et al., sections 11(intro), 11.1.1, 11.2
+  
+  surfaces
+   
+   foley et al., section 11.3
+  
+  hidden surface algorithms
+   
+   foley et al., chapter 15
+   optional:
+    
+     i. e. sutherland, r. f. sproull, and r. a. schumacker, a 
+characterization of ten hidden surface algorithms,  acm computing 
+surveys 6(1): 1-55, march 1974.
+    
+  
+  local illumination models
+   
+   foley et al., sections 16.1, 16.2, 16.5
+   optional:
+    
+     michael oren and shree k. nayar. generalization of lambert's
+    reflectance model. computer graphics proceedings, annual
+    conference series (siggraph 94), 239-246.
+    
+  
+  ray tracing
+   
+   foley et al., sections 16.11, 16.12
+   optional:
+    
+     t. whitted. an improved illumination model for shaded
+    display.  communications of the acm 23(6), 343-349, 1980.
+     j. painter and k. sloan. antialiased ray tracing by adaptive 
+    progressive refinement. computer graphics (siggraph 89) 23(3): 
+    281-288.
+    
+  
+  rendering tricks
+   
+   foley et al., sections 16.3, 16.4, 16.6, 16.12.1
+   optional:
+    
+     william t. reeves, david h. salesin, and robert l. cook.
+rendering antialiased shadows with depth maps.  computer
+graphics (siggraph '87) 21(4): 283-291, july 1987.
+     jody duncan shay.  young sherlock holmes: anything but
+elementary.  cinefex 26: 36--67, may 1986.
+    
+  
+  global illumination
+   
+   foley et al., sections 16.7, 16.13
+   optional:
+    
+     c. m. goral, k. e. torrance, d. p. greenberg, et al. modeling
+    the interaction of light between diffuse surfaces. computer
+    graphics (siggraph '84) 18(3), 213-222.
+     b. e. smits, j. r. arvo, and d. h. salesin. an
+    importance-driven radiosity algorithm. computer graphics
+    (siggraph '92) 26(2), 273-282.
+  
+  
+  wavelets and multiresolution analysis 
+   
+   optional:
+    
+    chapters 1-8 in e.j. stollnitz, t.d. derose, d.h. salesin. wavelets
+       for computer graphics theory and applications. morgan kaufmann
+       publishers, inc.

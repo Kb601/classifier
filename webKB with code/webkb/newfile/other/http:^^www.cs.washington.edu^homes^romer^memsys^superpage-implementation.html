@@ -1,0 +1,108 @@
+implementation of dynamic superpage management
+implementation of dynamic superpage management
+
+we're looking for someone to help us implement dynamic superpage
+management as a quals or masters project.  send me (romer@cs.washington.edu)
+mail if you're interested.
+background
+in recent work, 
+wayne ohlrich, 
+anna karlin, 
+brian bershad, 
+and
+i
+have
+explored policies that monitor application memory reference patterns
+in order to identify and resolve tlb performance problems. poor tlb
+performance results when the tlb is too small to cover the current
+application's working set.  several modern architectures support
+superpages: pages whose size is a multiple of the system's base page
+size. on these systems tlb performance can be improved by using larger
+pages, but at the cost of wasted memory due to internal
+fragmentation. we explored several policies that adapt the page size
+dynamically to different regions of an application's address space,
+constructing superpages by copying the component pages to a contiguous
+region of memory. we developed a policy that monitors tlb misses, and
+balances the potential benefit of having a superpage (a reduction in
+future tlb misses) against the cost of constructing the superpage (an
+in-memory copy). by constructing superpages only when and where tlb
+miss patterns warrant, this policy attains the tlb performance of
+large pages without their internal fragmentation.
+
+see the paper 
+reducing tlb and memory overhead using online superpage promotion
+for more information (to appear in isca95).
+
+our simulations show this works.  we'd like to validate our results by
+implementing some of these policies on an architectures that support
+superpages, namely, the dec alpha.
+sales pitch
+this should make an interesting quals or masters project:
+
+
+  the project is in a fundamentally interesting area, the interaction 
+  between operating systems and architecture.
+
+  although we have a roadmap for an implementation, there are still
+  some issues to resolve, so you get to apply your creative genius
+  to resolving them.
+
+  you'll learn your way around a modern architecture (the alpha)
+  and operating system (digital unix).
+
+  we're very interested in having a working implementation, so we'll
+  be on hand to help out when things get rough.
+
+  we're likely to learn something new in the process, which 
+  means something publishable.
+
+  superpages are just plain cool.  why?  the policies we describe in the
+  paper are magical: they make each individual tlb miss take more
+  time, yet by reducing the total number of tlb misses, they improve
+  overall execution time.
+
+
+details
+an implementation would have several parts:
+
+
+
+mechanisms:
+
+
+  add support to construct and tear down superpages to the machine-dependent
+  component of the virtual memory system (pmap.c, pmap.h).
+  
+  superpages are constructed (from smaller pages) when the policy
+  identifies a contiguous region of virtual memory that can be more
+  effectively mapped by a single tlb entry.  superpages are torn down
+  when a client of the virtual memory system changes the attributes of a
+  base page that is component to a superpage.
+
+  add a module to manage physical memory allocation in order to allow
+  efficient allocation of contiguous, aligned regions of physical memory.
+
+  modify the tlb miss handler to gather the information needed
+  to drive the policies.  we have experience hacking the alpha tlb
+  miss handler, so this shouldn't be too daunting.
+
+
+policies:
+
+
+  adapt the policies described in the paper to work within the limitations
+  of the alpha 21064 implementation.  in particular, the paper assumes
+  that on a tlb miss it is known which tlb entry will be replaced.
+  unfortunately, the 21064 does not directly provide this information.
+
+  also, the 21064 provides hardware support for four page sizes (8kb, 64kb,
+  512kb, 4mb), rather than the 13 page sizes (4, 8, 16, 32, 64, ... 4 mb)
+  considered in the paper.
+
+  in the course of addressing these two issues you would probably want
+  to learn to use the simulator we used to generate the results in the
+  paper.
+
+
+
+   memory systems research at uw

@@ -1,0 +1,93 @@
+alexandros poulos' urcs home page
+
+
+
+
+
+ 100) {
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                timertwo=window.settimeout(cmd,100);
+        }
+        else if (seed  0) {
+                for (c=0 ; c 
+
+
+
+ 
+
+
+alexandros 
+poulos, 
+urcs 
+home 
+page
+
+
+
+
+java script requires netscape 2.0 
+e
+n
+h
+a
+n
+c
+e
+d
+
+
+
+
+
+
+
+personal data
+
+
+publications
+
+
+
+parallel computing
+
+
+
+carnival visualization tool home page
+
+
+
+www pointers
+
+
+a guide to the greek islands
+
+
+
+finger
+
+
+george's "what's what in rochester, ny"
+
+
+
+the jazzy page
+
+
+
+12 monkeys home page and 
+
+
+clip
+
+
+
+
+
+back to urcs grads directory
+
+back to urcs home page
+
+last change: feb 28 1995 / 
+
+poulos@cs.rochester.edu

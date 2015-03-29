@@ -1,0 +1,663 @@
+computer system design--more information
+
+
+computer system design--additional information
+g22.2233
+
+thursday 5:00-7:00
+
+room 101, cims
+
+pradeep k. dubey
+
+
+
+
+
+
+back to the computer system design home page.
+
+
+
+table of contents
+
+
+
+
+
+
+course description
+
+
+
+
+
+
+about the instructor
+
+
+
+
+
+
+textbook
+
+
+
+
+
+
+ta information and how/where to get help?
+
+
+
+
+
+
+class news
+
+
+
+
+
+
+class notes
+
+
+
+
+
+
+homework/exam policy
+
+
+
+
+
+
+assigned homeworks
+
+
+
+
+
+
+
+solutions to assigned homeworks
+
+
+
+
+
+
+
+
+course description
+
+intended to give students whose main interest is in software, an
+introduction to the important principles of computer organization
+and design.  topics covered include:  logic design basics,
+basics of performance evaluation, instruction sets, arithmetic
+for computers, processor datapath and control, pipelining,
+memmory hierarchy, interfacing processors and peripherals,
+parallel processor basics.
+
+
+about the instructor
+
+pradeep k. dubey is an adjunct assistant professor at the
+department of computer science at new york university.
+he is currently employed by
+ibm
+at the
+t. j. watson research center
+as a member of the advanced risc systems group.
+he worked for intel corporation
+intel corporation
+from 1984 to 1991 and was on the design teams of the 80386,
+80486, and pentium processors.
+he received the b.s. degree in electronics, with distinction from
+birla institute
+of technology, mesra, india, in 1982,
+m.s. degree in electrical and computer engineering from
+university of massachusetts
+at amherst, in 1984, and the ph.d.
+in electrical engineering from
+purdue university in 1991.
+he has also participated in 
+advanced processor research
+efforts at
+stanford university.
+his research interests include
+computer architecture
+and performance modeling.
+he is also a senior member of
+ieee.
+
+
+textbook
+
+patterson and hennessy, computer organization and design: 
+the hardware / software interface, morgan kaufmann.
+
+
+ta information
+
+
+fangzhe chang
+
+(212)998-3363
+
+fangzhe@cs.nyu.edu 
+
+
+if you need help with the class material, you have the following four
+options:
+
+
+send me an email with your question
+
+send the ta an email with your question
+
+meet me during my office hour right after the class in my office
+
+send an email to the ta to set-up a meeting time.
+
+
+
+
+
+class news
+important announcement:
+
+
+final exam score distribution
+rangenumber of students
+90-1002
+81-900
+71-802
+61-702
+51-604
+41-504
+31-401
+21-302
+0-200
+
+
+
+
+final grade distribution
+gradenumber of students
+a2
+b+5
+b3
+b-4
+c+2
+c1
+c-0
+
+
+
+
+final exam solutions:
+final exam solution
+
+
+
+important announcement:
+final exam will be on may 9, 1996 (thu) from 5-7p in the same class room.
+it will cover all the material covered in class lectures and
+homeworks upto the last lecture on may 2.
+it will be a closed book exam.
+
+important announcement:
+final homework solutions will be posted 
+on the course homepage on may 2 (last day of class).  so if you intend
+to turn in this homework and have not yet done so,
+you must turn it in latest by may 1.
+
+in order to not lose a lecture and cover more material,
+i have decided not to offer any midterm.  midterm weight
+will be added to the final exam. 
+homework weight stays the same.
+
+
+
+spim access information 
+
+1. login sparky or slinky or any other machine which can access slinky.b file system.
+
+2. cd ~fangzhe/spim/bin
+
+3. type "xspim" or "spim". (xspim provides x-window interface.)
+
+4. load any .s file in the directory ../tests
+
+5. if you like you can add
+      /slinky.b/csphd/fangzhe/spim/bin
+    in your path environment variable
+
+6. there is documentation available in the directory ~fangzhe/spim/documentation. you can also read appendix a of the textbook.
+
+
+
+class notes (postscript files)
+
+
+
+
+
+
+class-1: 1/25/96
+
+
+
+
+
+
+class-2: 2/1/96
+
+
+
+
+
+
+class-3: 2/8/96
+
+
+
+
+
+
+class-4: 2/15/96
+
+
+
+
+
+
+class-5: 2/22/96
+
+
+
+
+
+
+class-6: 2/29/96
+
+
+
+
+
+
+class-7: 3/7/96
+
+
+
+
+
+
+class-8: 3/21/96
+
+
+
+
+
+
+class-9: 3/28/96 -- text chapter 5, sections 5.1 to 5.3
+
+
+
+
+
+
+class-10: 4/4/96 -- text chapter 5, sections 5.4 to 5.5
+
+
+
+
+
+
+class-11: 4/11/96 -- text chapter 6, sections 6.1 to 6.6
+
+
+
+
+
+
+class-12: 4/18/96 -- chapter 6 completed + some additional material
+
+
+
+
+
+
+class-12: chapter 7 + some additional material
+
+
+
+
+
+
+class-14: 5/2/96
+
+
+
+
+
+
+homework/exam policy
+
+weightage for final grade:
+
+
+homeworks: 30 percent
+
+no mid-term
+
+final: 70 percent
+
+
+note-1:
+
+all homeworks regardless of their total points will carry equal
+weight in the final grade.
+
+
+note-2:
+
+please note that a good on-time homework record can boost
+your final grade, if you are on the fence.
+
+
+note-3:
+
+homeworks may be emailed to the ta (fangzhe@cs.nyu.edu).
+for those of you who submit hardcopy homework (instead of email'ing
+a soft copy):
+
+if you plan to return the homework outside the class
+and office hours, please make arrangements with the ta
+(fangzhe@cs) and leave it in his mailbox instead of mine.
+
+
+
+
+assigned homeworks
+
+
+homework-5:     due: apr 25 (points same as in text)
+
+
+5.1 - 5.16 (you can use fig. 5.47 in prob. 5.7)
+
+6.1-6.3, 6.8-6.9
+
+i strongly urge you to go through the example on pp. 389,
+covering figs. 6.25 to 6.29.
+
+
+homework-4:     due: apr 4 (points same as in text or shown in large brackets)
+
+
+4.1 - 4.19
+
+4.26 - 4.30
+
+4.39, 4.41, 4.42
+
+using the algorithm in fig. 4.41, carry out the following addition in binary:
+-0.625 + 1.4375. assume 5 bits of precision (4 bits after decimal). you
+must show all steps. [10]
+
+using the algorithm in fig. 4.43, carry out the following multiplication in 
+binary: -0.625 x 1.4375. assume 5 bits of precision (4 bits after decimal). you
+must show all steps. [10]
+
+
+
+homework-3:     due: mar 21 (points shown in large brackets)
+
+
+
+text b.7 [15]
+
+
+
+text b.8 [15]
+
+
+
+text b.12 [15]
+
+
+
+consider the following gate called
+implication gate which implements the following
+function: c = a -> b :
+
+
+a=f, b=f => c=t
+
+a=f, b=t => c=t
+
+a=t, b=f => c=f
+
+a=t, b=t => c=t
+
+
+a) can you build an invertor using this gate? [5]
+
+b) is this gate universal? explain your answer. [10]
+
+
+
+
+[i added this problem beyond the ones mentioned in class on 3/7]
+
+using the laws of boolean algebra on page b-6 (without using
+truth tables), prove the following:
+
+
+these are known as "consensus theorems": [10]
+
+
+xy + x'z + yz = xy + x'z
+
+(x + y) (x' + z) (y + z) = (x + y) (x'+ z)
+
+note-1:  x' refers to complement or invert of x, and so on.
+
+note-2: the redundant term "yz" or "(y + z)" are also called 'consensus'
+
+note-3: earlier (prior to mar 18) part 2 had a typo.
+the correct third term is (y+z).  it was mistyped as: (y'+z).
+however, note-2 had the proper redundant term.
+
+
+use the consensus theorems to prove the following: [15]
+
+abcd + b'cde + a'b' + bce' = a'b' + bce' + acde
+
+
+use the consensus theorem to prove the following addition theorem: [10]
+
+(x + y) (x' + z) = xz + x'y
+
+
+use the theorems above to show: [20]
+
+(a + b + c') (a + d' + e) (a + b + d) (a' + c)
+= ac + a'bd' + a'be + a'c'de
+
+
+
+
+show the pla implementation (similar to figs. b.6 or b.7) of the following
+functions: [10]
+
+
+f1 = a'bd + abd + ab'c' + b'c
+
+f2 = c + a'bd
+
+f3 = bc + ab'c' + abd
+
+
+
+
+text b.13 [15].
+
+
+
+using d flip-flops and other combinational logic elemnts, if needed,
+construct the following:
+
+
+a 4-bit counter which has the following counting sequence: [10]
+0001, 0010, 0100, 1000, 0001, ...
+
+
+a 4-bit register which has the initial content of 0000 and shifts left
+a '1' on each clock tick, starting at the least-significant-bit
+position. [10]
+
+
+a 4-bit register which has the initial content of 0000 and shifts right
+a '1' on each clock tick, starting at the most-significant-bit
+position. [10]
+
+note: prior to mar 18, there was typo here and it incorrectly said:
+'least-significant' instead of 'most-significant'.  you cannot
+shift right starting as least-significant-bit position!
+
+
+
+
+
+modify the state diagram in fig. b.28 for the following modifed
+traffic controler: [15]
+
+north-south road has priority over east-west road. so, nslite
+should normally be green and trun to red only if a) there
+is a car waiting on e-w road and there is no car on n-s road,
+or, b) there is a car waiting on e-w road for more than 4 mins.
+the ewlite should turn to red if there is no car on e-w road.
+or if there is car waiting on n-s road for more than 2 mins.
+
+
+
+
+homework-2: 	due: mar 7
+(points same as the problem rating given in text)
+
+
+all problems from the text, chapter 3:
+
+
+3.1 through 3.8
+
+3.12 through 3.22
+
+3.26
+
+3.37 through 3.38
+
+
+
+homework-1: 	due: feb 22 (points shown in large brackets)
+
+
+
+problem 1:
+
+exercise 1.a on slide-11 of class-1 notes [5]
+
+
+
+problem 2:
+
+repeat problem 1 with the two cost-model improvements
+suggested in slide-11 of class-1 notes. [5]
+
+
+
+problem 3:
+
+text 2.14 [10], 2.15 [5], 2.16 [10], 2.17 [5], 2.18 [5], 2.19 [10]
+
+
+
+problem 4:
+
+repeat the class example (slide 26) with system-3
+execution times for normalization, i.e., using system-3
+execution times as the relative measures of workloads.
+in other words, you need to calculate average execution rates
+(normalized with respect to system-3 execution times)
+of the four systems using unweighted and weighted
+versions of arithmetic, geometric, and harmonic means.
+note that the  workload represented by program i,
+i.e., wi will be given by its execution
+time on system-3, i.e., ti3.
+
+[20]
+
+
+
+problem 5:
+
+text 2.32 [5] 2.33 [10], 2.34 [10]
+
+
+
+
+solutions to assigned homeworks
+
+
+
+
+
+
+solutions-1
+
+
+
+
+
+
+solutions-2
+
+
+
+
+
+
+solutions-3, part-1
+solutions-3, part-2
+solutions-3, part-3
+solutions-3, part-4
+solutions-3, part-5
+solutions-3, part-6
+
+
+
+
+
+
+solutions-4
+
+
+
+
+
+
+solutions-5
+
+
+
+
+
+
+
+segmentation fault (core dumped)

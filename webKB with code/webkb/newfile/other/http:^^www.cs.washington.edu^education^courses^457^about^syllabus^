@@ -1,0 +1,126 @@
+cse 457 syllabus
+
+
+
+
+
+
+
+1996 autumn quarter
+
+
+
+
+
+syllabus
+
+administrivia:
+
+ time: mwf 2:30-3:20
+ place: loew 101
+  course personnel 
+
+
+
+prerequisites:
+
+ data structures (cse/326)
+ a good working knowledge of c and c++ programming
+ linear algebra
+ some mathematical sophistication
+ (no prior knowledge of graphics is assumed.)
+
+
+
+ required text: 
+
+ foley, van dam, feiner, hughes. computer
+graphics principles and practice, second edition in c. addison wesley, 1996.
+
+
+ optional texts: 
+
+ opengl reference manual. addison-wesley, 1992.
+ jackie neider, tom davis, and mason woo. opengl programming
+guide. addison-wesley, 1993. 
+ josie wernecke, the inventor mentor. addison-wesley, 1994.
+
+
+
+
+
+
+grading:
+
+ project (same grade for whole team): 30%+
+ project knowledge (individual): 15%
+ project write-up (individual): 5%
+ project artifact (individual): 5%+
+ written assignments: 25%
+ final: 20%
+
+
+(a "+" denotes an area in which extra credit can be earned.)
+
+projects:
+
+this is the second year that cse/457 is being taught using our new graphics instructional lab consisting of 14
+silicon graphics indy r4400s.  the lab is located in sieg 228.
+
+
+
+there will be four projects.  you'll work indvidually only on the
+first project (project #0).  for the next three projects, you'll work
+with a team of 2 to 3 students.  each project will require you and
+your teammate to make substantial extensions to an existing
+interactive graphical application.  the projects we have in mind are:
+
+
+
+ project 0: mandelbrot:
+ a simple program to create pictures of a mandelbrot set.
+
+ project 1: morph:
+ a program to create video animations by ``morphing'' (blending)
+between a pair of images. 
+
+ project 2: sweeper:
+ a program to create complex surfaces by extruding (sweeping) a
+curve along a path in three dimensions.
+
+ project 3: trace:
+ a program to create beautiful raytraced images, complete with
+shadows, reflections, and transparent effects.
+
+
+
+projects will be graded during in-person sessions with one of the tas. during the grading session, a ta will run
+the project to make sure that it conforms to the project guidelines.
+the ta will then quiz individual members of the team to determine how
+well they understand the structure of the code, the design trade-offs,
+and the implemented algorithms.
+
+one grade will be assigned for all members of the team for the
+project's implementation.  separate grades will be recorded for each
+team member's "knowledge of the project."  a third component of the
+grade is based on your individual project write-up.  the last
+component of the grade involves using your project to create an
+artifact, hopefully, of some artistic merit.  extra credit
+will be given for the nicest artifacts, as determined by class vote.
+click here for more information
+on project grading.
+
+project turn-in & late policy:
+
+assignments are due at the beginning of lecture on the due date.
+this means that the modification stamp on the project executable
+must be earlier than the start of lecture on the due date. late
+assignments are marked down at a rate of 33% per day (not per
+lecture), meaning that if you fail to turn in an assignment on time
+it is worth 66% for the first 24 hours after the deadline, 33%
+for the next 24 hours, and it is worth nothing after that.  in
+addition, no extra credit for bells and whistles will be awarded
+for any late assignment.
+
+exceptions will be given only in extreme circumstances and only
+in advance.

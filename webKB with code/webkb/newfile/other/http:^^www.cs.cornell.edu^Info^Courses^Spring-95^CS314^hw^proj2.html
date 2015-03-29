@@ -1,0 +1,130 @@
+ps314 instruction set simulator
+
+
+
+[back to cs314 home page]
+
+ project 2: ps314 instruction set simulator 
+
+date assigned:   march 2, 1995
+
+date due:   march 16, 1995
+
+before a new processor is built, the architects usually implement an
+instruction-set simulator.  this simulator runs programs written for
+the new architecture so that the instruction set can be fine-tuned for
+usability and work on software can be started before the hardware is
+available.
+
+this assignment involves the implementation of a ps314 instruction-set
+simulator in m68k assembly language.
+we will give you an m68k assembly language program
+which accomplishes
+part of this task, and you will add whatever assembly language code is necessary
+to make the simulator fully functional.
+
+this project is due thursday, march 16 at the start of class.
+you are encouraged to work in groups of at most two in building this
+program.
+
+the completed program should simulate ps314 machine language
+instructions stored in a simulated ps314 memory.  the simulator
+should:
+
+
+actually only implement ps314 physical memory address 0 through
+2^8 - 1.  an attempt by a (simulated) ps314 instruction to fetch or store
+a memory address in the range 2^8 through 2^15 - 1 should cause an
+exception.
+
+memory fetches and stores to addresses in the range 2^15 through
+2^16 - 1 should cause input or output to occur.  a memory fetch to
+an address a in this range should cause a to be printed out in
+hexadecimal, followed by a question mark, "?".  the simulator should
+then accept a 16-bit hexadecimal constant to be input from the
+keyboard and should return that input as the fetched word.  a memory
+store to an address a in this range should cause a to be printed
+out in hexadecimal, followed by a colon, ":", and the value to be
+stored, also printed in hexadecimal.
+
+when started, your ps314 simulator should enter an input loop
+which allows values to be entered into the simulated ps314 memory.
+the input loop should behave as follows:
+
+read 2 16-bit hexadecimal constants, one per line.  the first will be
+a count l (in words), the second will be a legal ps314 memory
+address a.  your simulator should then read l hexadecimal 16-bit
+constants---one per line---storing the first at memory location a,
+the second at a + 1, ... and the last at a + ( l - 1 ).
+
+this should be repeated until a count (l) of 0 is input.
+
+the simulator should then start executing instructions from location 0.
+
+once the simulated ps314 processor has executed a halt instruction,
+the simulator should print, in hexadecimal, the contents of registers
+d0, ..., d15, pc, status register bits n, z, v, c, and the 
+contents of its memory addresses 0 through 2^8 - 1.
+
+since there is no mechanism for creating a reset or i/o device
+interrupt in the software simulator, these interrupts need not be
+addressed.
+
+
+ what to modify
+make the following modifications to the ps314 instruction set simulator.
+
+ remove any bugs which might be lurking in the top-level fetch/execute loop.
+ complete the implementation of any ps314 opcodes which are missing
+  or not fully implemented.
+ complete the implementation of any bcc cases which are missing
+  or not fully implemented.
+ implement the i/o cases in load and store.
+ make halt compliant with the ps314 specification.
+ make sure that the simulator reads from/writes to valid m68k memory locations
+  in all cases.  in particular, look at the implementation of rti and at the
+  interruption handler.  when could these routines make invalid memory accesses?
+  fix any problems that you find.  if a bad memory access of this sort
+  occurs in the interruption handler or in the rti implementation, print an error message and
+  halt the simulator.
+ make any other modifications necessary to bring the simulator into compliance
+  with the ps314 specification.
+
+mark your modifications in the simulator source code with highly visible
+comments.  rows of asterisks accompanied by a word or two explanation of the
+type of modification are recommended.  a reader should be able to easily distinguish
+your modifications from the original source code.  examples:
+
+
+        move.l  a4,d4
+        ;***begin: insertion*************************************
+        move.l  d4,d5
+        ;***end: insertion***************************************
+        rts
+
+
+and
+
+
+        move.l  a4,d4
+        ;***deletion*********************************************
+
+
+
+ what to hand in
+please hand in the following in a single envelope marked clearly with your
+name(s):
+
+ a hardcopy of the full source of the completed simulator program.
+
+a hardcopy of the ouput produced by the listing/run option for the
+simulator run on the example given in the ps314 specification.
+
+a hardcopy of the output produced by the run option for the simulator
+run on your own additional test cases.
+
+a disk containing the assembly language for your ps314 instruction-set
+simulator (clearly named).
+
+
+[back to cs314 home page]

@@ -1,0 +1,200 @@
+plt information 
+
+
+
+ cs w4115: programming languages and translators 
+(fall 1996) 
+
+
+course benefits:
+
+       understand  different paradigms of programming
+           languages
+ 
+       understand important issues in implementing
+           programming languages
+ 
+       learn to design new programming languages tailored
+           for specific applications
+
+
+
+
+  instructor: 
+    professor mukesh dalal 
+office hours: tuesdays and thursdays 1:30-2:30 pm 
+office phone:         (212) 939-7114 
+email address:        dalal@cs.columbia.edu
+ 
+  teaching assistants: 
+ li yang (head) 
+     office hours: monday and wednesday 4:00-5:00 pm  
+     email address: lyang@cs.columbia.edu 
+ maggie lee 
+     office hours: tuesday 4:00-6:00pm 
+     location: student research lab (cs department) 
+     email address: maggie@cs.columbia.edu 
+ 
+  lecture days and time: 
+ tuesdays and thursdays 2:40-3:55 pm 
+     627 mud
+ 
+ credits for course: 
+    3
+ 
+ description: 
+
+covers programming language design issues; syntax; the translation
+process; names, locations and values; control structures; data types;
+input
+and output; procedures and parameters; nesting and scope; object-
+oriented programming, encapsulation, and inheritance; logic
+programming;
+functional programming; and concurrent programming.
+ 
+ prerequisites:         
+
+introduction to software engineering, computability and models of
+computation, and computer organization; or permission of instructor.
+ 
+ required texts:  
+
+ravi sethi.  programming languages concepts and constructs (2nd
+edition).
+     addison-wesley, 1996 [s]. 
+ 
+alfred aho, ravi sethi, and jeffrey ullman. compilers principles,
+techniques, and tools.  addison-wesley, 1988 [asu] (some sections
+only).
+ 
+ reference texts:         
+
+charles fisher and richard j. leblanc, jr. crafting a compiler in c.
+benjamin cummings, 1991 [fl]. 
+ 
+raphael finkel, advanced programming language design. addison-wesley,
+     1995 [f]. 
+ 
+ all texts would be available at papyrus bookstore
+ 
+ midterm: 
+            1 hour, closed book
+ 
+ final exam:      
+    3 hours, closed book
+ 
+ homework(s):     
+    six assignments, four of which will comprise a
+                        large implementation project
+ 
+ project groups:     
+ at most three students each
+ 
+ grading: 
+            homework 40%, midterm 20%, final 40%
+ 
+ hardware requirements: 
+    access to a computer
+ 
+ software requirements: 
+
+cunix account will provide all software including lex, yacc, c, c++,
+sml, schem\
+e, prolog, smalltalk, and some other common packages.
+ 
+ homework submission: 
+    mostly by electronic mail directly to the head ta.
+ 
+
+
+
+
+ course information 
+
+general
+information (postscript) 
+
+schedule
+(postscript) 
+
+homework
+submission (postscript) 
+
+
+
+
+ references 
+
+yacc
+(postscript) 
+
+more about lex/yacc
+ 
+
+app documents
+(postscript) 
+
+app user commands 
+(postscript) 
+
+app environments 
+(postscript) 
+
+scheme
+(postscript) 
+
+sml (text) 
+
+
+
+ assignments 
+
+homework
+(postscript) 
+
+homework 1
+(postscript) 
+
+homework 2
+(postscript) 
+
+homework 3 & 4
+(postscript) 
+
+ homework 4 solution
+
+
+homework 5
+(postscript) 
+
+homework 6
+(postscript) 
+
+
+
+
+ midterm 
+questions
+(postscript) 
+
+solutions
+(text) 
+
+
+
+
+
+ mukesh dalal 
+&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;dalal@cs.columbia.edu&gt
+
+
+ maggie lee 
+&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;maggie@cs.columbia.edu&gt
+
+
+last modified: mon oct 14 11:33:23 1996
+
+
+homepage for fall 1995

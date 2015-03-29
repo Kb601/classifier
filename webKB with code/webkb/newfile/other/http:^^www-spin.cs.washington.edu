@@ -1,0 +1,135 @@
+spin web server
+
+
+
+
+
+
+
+
+spin@cs.washington.edu
+welcome to the spin web server running on spin 
+
+you have connected to a machine at the university of washington
+running the real live spin operating system. our web server runs
+as a dynamically linked extension on top of the spin kernel. it
+relies on a set of system extensions, most notably disk extents,
+unix like sockets, file-system, and networking support. the figure
+below shows the system configured with several extensions used
+by the web server.  our server is structured as a three-level
+cache - memory, fast extent based file system, and a remote nfs
+server. on a miss to the memory cache, the local extent file system
+is queried.  on a miss there, the files are fetched from a remote
+nfs server.  this structure allows us to optimize our disk layout
+for fast contiguous reads.
+
+
+
+the web server exports some commands that
+you can send to the running spin os. they show information on
+the number of threads, the set of instantiated domains, and the
+state of the heap, for example. for more information about spin,
+please read on. 
+
+the spin operating system
+
+spin is an extensible operating system kernel that supports the
+dynamic adaptation of system interfaces and implementations through
+direct application control, while still maintaining system integrity
+and inter-application isolation. spin allows applications to load
+code into the kernel at runtime. because it runs in the kernel,
+this extension code can access hardware and other operating systems
+services with almost no overhead (basically a procedure call),
+and data can be passed by reference, rather than copied. the spin
+kernel itself provides a core set of interfaces and capabilities
+to basic resources. these are used by collections of extensions
+to implement general system services such as address spaces, ipc,
+threads, and networking. all extension code (and most of the kernel)
+is written in the type safe language modula-3. the property of
+type safety prevents extensions from crashing the system by attempting
+to manipulate arbitrary pieces of code or data. spin runs on dec
+alpha workstations. we're using it to write both specialized applications
+such as network video systems, as well as for supporting general
+purpose unix programs. 
+quick results 
+
+this structure allows programs to extend operating system services
+with low overhead. for example, with spin running on a 133 mhz
+alpha, an application can handle and recover from a page fault
+in 29 microseconds. it takes 22 microseconds to create a new thread
+of control, execute it, terminate, and synchronize with its termination
+(fork/join). a protected procedure call to another extension or
+to a kernel function takes .13 microseconds. a cross-machine rpc
+(application to application) over ethernet takes under 600 microseconds;
+over atm (on really old adapters) it takes less than 450 microseconds.
+the same operations under mach or digital unix take up to 30 times
+longer on the same hardware. time them yourself (or see our benchmarks page
+and save yourself the effort). 
+recent reports and papers 
+
+extensibility, safety and performance in the spin operating system 
+
+a design, implementation and performance paper. appeared in the
+15th sosp. 
+
+an extensible protocol architecture for application-specific networking 
+
+a design, implementation and performance paper. appeared in 1996
+usenix winter conference. 
+
+writing an operating system using modula-3 
+
+describes our experiences using modula-3 to build a high performance
+extensible system. makes clear the distinction between a language
+and its implementation. 
+
+language support for extensible operating systems 
+
+we've been pretty happy with m3, but we've had to deal with a
+few shortcomings in order to use the language in a safe extensible
+operating system. this paper describes how we've addressed those
+shortcomings. 
+
+safe dynamic linking in an extensible operating system 
+
+describes the dynamic linker we use to load code into the kernel.
+key point is the ability to create and manage linkable name spaces
+that describe interfaces and collections of interfaces. 
+
+language and runtime support for dynamic interposition of system code 
+
+describes the kernel's internal communication and extension facilities.
+shows use of dynamic code generation to improve the performance
+of a critical kernel service. 
+more information 
+
+paper trail : project reports,
+talks. papers, etc. 
+
+project members :who we
+are. 
+
+benchmarks:
+interested in the bottom-line? go here. 
+
+modula-3 : information
+on modula-3. 
+
+arpa project overview : the
+executive summary and regular reports. 
+
+our friends : we've gotten
+a lot of assistance from academia and industry on this project.
+this page says who we're involved with. 
+
+some related projects :
+pointers to other extensible systems projects. 
+
+internal documentation :
+the latest status for project members 
+
+our mascot : we're encouraged
+that so many people have decided to adopt our mascot as their
+own. 
+
+this page maintained by brian bershad.

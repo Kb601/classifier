@@ -1,0 +1,64 @@
+paradyn project overview
+
+
+
+
+    paradyn project overview page
+
+overview
+
+the paradyn parallel program performance tools project is exploring new
+approaches to building scalable tools for parallel program performance.
+
+traditional performance tools for sequential machines fail to scale to
+large parallel systems.  normal post-mortem-style tools typically
+collect information about all events that occur during execution; this
+can produce trace data at a rate of several gigabytes per second on a
+machine with thousands of nodes, a rate which is impossible for a
+performance tool to cope with.  the standard solution to this problem
+is to collect only a small subset of available performance data.
+however, choosing the right set of metrics is difficult or impossible
+to know a priori, and places a large decision-making burden on the
+programmer.
+
+paradyn takes a new approach, called dynamic instrumentation, 
+that is based
+on dynamically controlling what performance data is to be collected.
+dynamic instrumentation allows data collection instructions to be inserted
+into an application program during runtime. paradyn
+is able to look for a variety of performance problems during
+a single execution, while not being overwhelmed with all the available
+data at any one time.  in addition, dynamic instrumentation that has
+not be inserted incurs no overhead, in contrast to instrumentation
+that is staticly-inserted but currently disabled.
+
+paradyn provides decision support for the tool user.  paradyn
+assists the user in deciding which bottlenecks to look for; in fact,
+paradyn can search automatically to isolate performance bottlenecks,
+and then explain them to the user using descriptions or
+visualizations.
+
+paradyn incorporates a new approach for describing performance
+information to users of high-level parallel languages; paradyn maps
+performance data between multiple layers of abstraction, and user can
+choose to look at it in terms of high-level language constructs or
+low-level machine structures.
+
+since fall 1994, we have been collaborating with the
+wisconsin
+wind tunnel project
+to support paradyn on their blizzard platform
+(both cm-5 and cluster of workstation versions).
+
+a recent wisconsin week article
+summarizes our current arpa funding and has commentary from profs. bart miller
+and mark hill.
+
+paradyn release 1.1 is available for sunos, solaris, aix, sp2, hp-ux, and
+pvm.
+
+
+last modified:
+mon aug 19 14:35:57 cdt 1996
+by
+bart

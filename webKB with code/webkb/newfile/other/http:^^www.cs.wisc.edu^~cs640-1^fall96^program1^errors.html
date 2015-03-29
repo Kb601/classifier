@@ -1,0 +1,32 @@
+error / warning codes
+
+assignment 1 error / warning codes
+
+
+code | meaning
+-----+-----------------------------------------------------------------
+ e1  | no comments 
+ e2  | no output 
+ e3  | program didn't work 
+ e4  | failed to check return values from system calls 
+ e5  | didn't convert from/to network order 
+ e6  | didn't use gethostbyname
+ e7  | didn't have correct packet structure (int is not always 4 bytes)
+ e8  | sent packet without removing gaps
+ e9  | used a pointer cast vs. memcpy() for extracting data
+ e10 | sent entire object/structure as packet 
+ e11 | invalid requests not handled properly 
+ e12 | didn't initialize length of sockaddr structure before recvfrom() 
+ mf  | make failed 
+ mw  | make generated unexplained warnings 
+
+ 
+ no points were deducted for these warnings...
+ ------------------------------------------
+ w1  | sending 262 bytes everytime, even when the
+	    string field is less than 256 bytes
+ w2  | using perror at all places, not just after
+	    system calls/library functions
+ w3  | sendto/recvfrom should not fail on eintr
+ w4  | should not hardwire client return address
+ w5  | server exits on receiving invalid requests

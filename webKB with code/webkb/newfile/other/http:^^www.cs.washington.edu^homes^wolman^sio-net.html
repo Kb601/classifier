@@ -1,0 +1,89 @@
+protocol service decomposition for scalable multiprocessors
+
+
+protocol service decomposition for scalable multiprocessors
+
+
+
+overview
+
+this project investigates the use of parallelism in high performance
+internetworking.
+in particular, our goal is to support low overhead
+scalable communication between a multiprocessor and remote hosts
+over ethernet, fddi, atm, and hippi networks.  our initial platform
+will be to support the bsd socket interface on top of the tcp/ip
+and udp/ip protocol stacks.
+
+
+the key observation behind our strategy is that an application's interface
+to the network is distinct and separable from its interface to the
+operating system.  we take advantage of this observation by decomposing
+the protocol implementation into a protocol library and a privileged
+server process.
+
+
+we present a brief overview of this architecture here, and a detailed
+description can be found in 
+ protocol service decomposition for high performance networking
+ by maeda and bershad, sosp 1993.
+
+a protocol library resides within each application process and
+communicates directly with the network interface for the common case
+operations of send and receive.
+the library makes use of a privileged system server for all operations
+that either have non-critical performance requirements or that
+cannot be handled within the application while maintaining the
+original operating system semantics. this server (the proxy server)
+handles a variety of tasks such as connection establishment and teardown,
+routing, arp, fork and select.      
+
+
+this architecture is particularly well-suited to parallel environments
+because each processor can maintain its own copy of the network
+protocol stack and protocol endpoint data structures.  since the
+logically distinct endpoints are now structurally distinct, they
+can run in parallel with scalable performance.
+
+
+in addition to providing the basic socket interface, we plan to
+investigate providing a collective i/o interface for parallel
+applications.  we will explore different ways of mapping a collective
+i/o interface onto the abstractions provided by the socket interface
+combined with tcp and udp.
+we also plan to leverage off of the parallel file system interfaces being
+designed as part of the scalable i/o initiative, modifying them where
+necessary to apply them to network communication.
+
+implementation
+
+the initial implementation of this architecture on a uniprocessor
+is described in
+ protocol service decomposition for high performance networking
+.
+we started by taking this implementation and porting it to the intel
+paragon running the osf/1 operating system.  porting the library is
+complete, and porting the proxy server is in progress.  the original
+implementation was done as part of the mach project, where the microkernel
+provides the device management and the unix server provides the traditional
+operating system functionality.  the proxy server was implemented as a
+set of modifications to the unix server.  for better modularity and 
+stability, we are currently separating the proxy server functionality 
+from the osf/1 server into a separate privileged process.
+
+participants
+faculty:
+
+ brian bershad
+
+students:
+
+ alec wolman
+
+related work
+this work is being done in the context of the 
+scalable i/o initiative.
+
+ 
+ last updated fri 19 jan 1996 
+ wolman@cs.washington.edu

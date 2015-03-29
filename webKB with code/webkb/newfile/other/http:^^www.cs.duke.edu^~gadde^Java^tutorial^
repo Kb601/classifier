@@ -1,0 +1,214 @@
+the java tutorial
+
+
+
+
+
+
+
+
+table of contents
+
+
+
+
+
+
+
+
+welcome to
+the java tutorial
+object-oriented programming for the internet
+
+a practical, online guide
+to writing programs in the java language
+
+this is an online version of the java tutorial by
+mary campione and kathy walrath. this is the fifth book in
+the java series,
+to be published by addison-wesley this summer.
+
+
+
+notes:
+
+
+this document was last updated 9 july 96.
+
+copyright.
+
+this version reflects the api
+distributed in the 1.0.2 java developers kit (jdk).
+for information on how the api has changed and how to get the jdk,
+see the jdk home page.
+
+for the change history of the tutorial,
+how to download
+the tutorial in postscript and html formats,
+and other information about this document,
+see about this draft.
+
+for information about the structure and organization of this tutorial
+please refer to how to use the tutorial.
+
+
+
+
+getting started
+
+the most common java programs are applications and applets.
+applications are standalone programs,
+such as the hotjava browser.
+applets are similar to applications,
+but they don't run standalone. 
+instead, applets adhere to a set of conventions
+that lets them run within a java-compatible browser.
+if you're using a browser that can view applets,
+you should see an animation just below this paragraph --
+that's an applet embedded in this html page.
+
+
+
+        
+        
+        
+        
+
+
+
+
+
+
+
+    
+        
+    
+    
+        the "hello world" application --
+        start here if you want to create standalone java applications.
+    
+
+
+
+
+
+    
+        
+    
+    
+        the "hello world" applet --
+        start here if you are interested in writing applets only.
+    
+
+
+
+
+
+
+what next?
+
+now that you've seen how to write a java program,
+you can proceed with any of the topics below.
+
+
+
+
+
+    
+	
+    
+    
+	writing java programs --
+	these lessons discuss techniques and concepts
+	that any java programmer can use.
+	the book version of this tutorial breaks this trail in two:
+	
+	
+	writing java programs,
+	which contains the first three lessons shown on the index page
+	for the trail.
+	
+	using the core java classes,
+	which contains the remaining six lessons.
+	
+
+    
+
+
+
+
+
+    
+        
+    
+    
+        writing applets --
+        these lessons discuss techniques and concepts
+        that are specific to writing java applets.
+    
+
+
+
+
+    
+
+    
+	
+    
+    
+	creating a user interface --
+	here's the information you need
+	to create the user interface of your applet or application.
+    
+
+
+
+
+    
+
+    
+	
+    
+    
+	custom networking and security --
+	the lessons on this trail
+	teach you how to connect your applications and applets
+	to the information on the internet! also, this trail contains
+	a lesson that shows you how you can create an install your own
+	security manager which can help to protect your computer and data
+	from violation.
+    
+
+
+
+
+
+    
+
+    
+	
+    
+    
+	integrating native methods into java programs --
+	these lessons show you everything you need to know to
+	write native methods in the java language. a native method is a java method
+	whose implementation is provided in another programming language such as c.
+	this lesson includes step-by-step instructions
+	and a comprehensive example program.
+	
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+table of contents

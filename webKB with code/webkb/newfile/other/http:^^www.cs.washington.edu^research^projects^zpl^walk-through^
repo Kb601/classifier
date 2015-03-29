@@ -1,0 +1,364 @@
+zpl program walk-through
+
+
+
+
+ zpl program walk-through
+
+
+
+ though zpl is a new, powerful array language, users of other
+languages such as c, fortran, pascal, etc. find it quite
+intuitive after a brief introduction.  therefore, looking at a sample
+program is, perhaps, the fastest introduction to zpl. 
+
+ the accompanying zpl program solves the jacobi computation: 
+
+   jacobi: given an array a,
+iteratively replace its elements with the average of their four
+nearest neighbors, until the largest change between two consecutive
+iterations is less than delta.   
+
+ for this example a will be a two dimensional
+array, and the program will generate its own data: a
+is initialized to 0.0, except for its southern boundary, which is set
+to the constant 1.0 in all positions.  the tolerance
+delta will be 0.0001. 
+
+
+
+ 1 /*                      jacobi                                  */
+ 2 
+ 3 program jacobi;
+ 4 
+ 5 config var n       : integer = 10;                -- declarations
+ 6            delta   : float   = 0.0001;
+ 7 
+ 8 region     r       = [1..n, 1..n];
+ 9 
+10 direction  north   = [-1, 0]; south = [ 1, 0];
+11            east    = [ 0, 1]; west  = [ 0,-1];
+12 
+13 procedure jacobi();                               -- entry point
+14 var a, temp : [r] float;
+15     err     :     float;
+16 
+17              begin
+18 [r]              a := 0.0;                        -- initialization
+19 [north of r]     a := 0.0;
+20 [east  of r]     a := 0.0;
+21 [west  of r]     a := 0.0;
+22 [south of r]     a := 1.0;
+23 
+24 [r]              repeat                           -- main body
+25                      temp := (a@north+a@east+a@west+a@south) / 4.0;
+26                      err  := max&lt;&lt; abs(a-temp);
+27                      a    := temp;   
+28                  until err 
+
+ figure 1: zpl program for the jacobi computation. 
+ 
+
+ a quick skim of the jacobi program shows that it is organized
+pretty much like other programs 
+
+
+   declarations (lines 5-11) 
+   starting point for the executable part of the computation (line 13) 
+       
+   initialization of the 
+       a array (lines 18-22) 
+   iteration loop to compute the result 
+       (lines 24-28) 
+   result output (line 30). 
+
+
+ the quick look also reveals that assignment is written
+:= rather than = as in c or fortran,
+and that every statement is terminated by a semicolon.  comments
+starting with -- extend to the end of the line, while
+/* and */ are comment "brackets." 
+
+ the main thing that is unconventional about zpl is that it
+computes with whole arrays rather than individual array elements.
+thus, line 18 
+
+
+    [r]      a := 0.0;
+
+
+ sets the entire array a to zero.  no indexing.  no
+looping.  the [r] specifies the region of
+a to be assigned, which in this case is all of
+a.  compare with similar computations expressed in
+other languages that must manipulate individual elements: 
+
+
+
+  fortran 77            c                             pascal
+     do 10 i = 1,n      for (i = 0;i 
+
+ even fortran 90, another array language, is more cumbersome
+because of its required range specification: 
+
+
+    a[1:n,1:n] = 0.0                     !fortran 90.
+
+
+ concepts like "regions," explained momentarily, simplify zpl,
+because the programmer can think more abstractly, and leave the low
+level details like indexing and looping to the language.  as shown
+below no performance is lost to have this convenience. 
+
+ the jacobi program is explained in the following.  it might
+be convenient to 
+
+ clone your window to keep a copy of the program
+visible.
+
+ a more thorough introduction to zpl can be found in the zpl
+programmer's guide. 
+
+
+
+  regions and declarations  
+
+ a fundamental concept in zpl is the notion of a region.  a
+region is simply a set of indices.  for example, (line 8),
+
+
+    region r = [1..n, 1..n];
+
+
+specifies the standard indices of an n x
+n array, i.e. the set of ordered pairs {(1,1), (1,2),
+. . ., (n,n)}.  regions can be used to
+declare arrays, which means the array is defined for those indices.
+thus, (line 14),
+
+
+    var   a, temp : [r] float;
+
+
+declares two n x n array variables,
+a and temp, composed of floating point
+numbers (called "real" in some languages) with indices given by region
+r.  the final variable declaration, (line 15),
+
+
+    err: float;
+
+
+does not mention a region, and so err is declared to
+be a simple scalar variable. 
+
+
+
+ the program next declares a set of four directions.  directions
+are used to transform regions, as in the expression north of
+r (line 19).  they are vectors with as many elements as the
+region has dimensions.  the four direction declarations, (lines
+10-11),
+
+
+    direction  north   = [-1, 0]; south = [ 1, 0];
+               east    = [ 0, 1]; west  = [ 0,-1];
+
+
+point unit distance in the four cardinal compass directions.  the
+figures below illustrate transformations on region r
+using these directions. 
+
+  initializations  
+
+ regions also allow zpl computations to be extended to operate on
+entire arrays without explicit looping.  by prefixing a statement with
+a region specifier, which is simply the region name in brackets, the
+operations of the statement are applied to all elements in the array.
+thus, (line 18),
+
+
+    [r]  a := 0.0;
+
+
+
+
+assigns 0.0 to all n^2 elements of array a with
+indices in r.  
+
+ since many scientific problems have boundary conditions, the
+region specifier can be used to augment arrays with boundaries.
+extending the array a with boundaries and initializing
+their values is the role of the next four lines, (lines 19-22), 
+
+
+    [north of r] a := 0.0;
+    [east  of r] a := 0.0;
+    [west  of r] a := 0.0;
+    [south of r] a := 1.0;
+
+
+ the region specifier [d of r]
+defines the index set of a region adjacent to r in the
+d direction; the statement is then applied to the elements of
+the region.  thus, [north of r] defines the index set
+which is a "0th" row for a, and the assignment
+a := 0.0 initializes these elements.  the successive
+effects of these initialization statements are illustrated in figure
+2.  
+
+
+
+
+
+
+  figure 2.  definition and initialization of boundaries 
+for a. 
+
+
+  program body  
+
+ with the declarations and initialization completed, programming
+the jacobi computation is simple.  the repeat-loop, which iterates
+until the condition becomes true, has three statements:
+
+
+   compute a new approximation by averaging 
+       all elements (line 25). 
+   determine the largest amount of change 
+       between this and the new iteration (line 26). 
+   update a with the new 
+       iteration (line 27). 
+
+
+ all statements are executed in the context of the
+r region, since the repeat statement is prefixed by
+the [r] region specifier.  the statements operate as
+follows.
+
+ averaging.  the averaging illustrates
+how explicit array indexing is avoided in zpl by referring to adjacent
+array elements using the @ operator.  the statement,
+(line 25),
+
+
+    temp := (a@north+a@east+a@west+a@south)/4.0;
+
+
+finds for each element in a the average of its four
+nearest neighbors and assigns the result to temp.  an
+expression a@d, executed in the context of a
+region r, results in an array of the same size and
+shape as r composed of elements of a
+offset in the direction d.  as illustrated in figure 3,
+a@d can be thought of as adding d to
+each index, or equivalently in this case, shifting
+a. 
+
+
+
+
+
+
+ figure 3.  "at" references to a and its
+boundaries executed in the context of a region specifier covering all
+of a; the dots shown in a correspond
+to element (1,1) in the shifted arrays.  
+
+
+ the four arrays are combined elementwise, yielding the effect of
+computing for element (i,j) the sum of its four nearest
+neighbors.  this can be seen by the following identities:
+
+
+    (i,j)@north  =  (i, j) + north  =  (i, j) + (-1, 0)  =  (i-1, j  )
+    (i,j)@east   =  (i, j) + east   =  (i, j) + ( 0, 1)  =  (i  , j+1)
+    (i,j)@west   =  (i, j) + west   =  (i, j) + ( 0,-1)  =  (i  , j-1)
+    (i,j)@south  =  (i, j) + south  =  (i, j) + ( 1, 0)  =  (i+1, j  )
+
+
+the elements are then each divided by 4.0 and the result is stored
+into temp.  
+
+ maximum finding.  to compute the largest
+change of any element between the current and the next iteration,
+(line 26), more elementwise array operations are performed.  the bold
+subexpression,
+
+
+    err := max&lt;&lt;abs(a-temp);
+
+
+causes the elements of temp to be subtracted from the
+corresponding elements of a, and then the absolute value
+of each element is found i.e. abs(a[1,1]-temp[1,1]),
+abs(a[1,2]-temp[1,2]),. . . ,
+abs(a[n,n]-temp[n,n]).  this computes the magnitude of
+change of all the elements.  to find the largest among these, a maximum
+reduction (max&lt;&lt;) is performed.  this operation "reduces"
+the entire array to its largest element.  this maximum is then assigned
+to err, a scalar variable, that controls the loop. 
+
+ update.  the final statement of the
+loop, (line 27),
+
+
+    a := temp;
+
+
+simply installs temp as the current value of
+a. 
+
+
+ performance 
+
+ although the zpl program is written at a high level that relieves
+the programmer of many tedious details, it was not necessary to give
+up performance for this convenience.  the jacobi program has been
+hand-coded in c and customized to two representative parallel
+computers, the intel paragon and the kendall square research ksr-2.
+the results, shown in the accompanying graph, demonstrate that for
+this problem at least, zpl was just as efficient as a "low level"
+programming solution.  
+
+
+
+ 
+
+
+
+  figure 4.  speedup of the jacobi program for 929 iterations
+(n=512) on the kendall square research ksr-2, the intel paragon,
+and a c program handcoded for each machine.   
+
+ zpl programs perform well because the higher level array concepts
+are easier for a compiler to analyze and "understand."  this means
+that the zpl compiler is frequently successful at finding
+opportunities to optimize the program.  
+
+ summary.  the jacobi program illustrates fundamental
+properties of zpl.  computations are performed on whole arrays,
+avoiding error prone indexing and tedious looping.  global operations
+like finding the maximum element of an array are provided as language
+primitives.  in general
+
+zpl's high level array concepts simply the
+programmer's task and allow the compiler to produce very efficient
+code.  
+
+zpl is therefore ideal for array-based scientific and engineering
+computations that require high performance. 
+
+
+
+
+
+ 
+
+[
+zpl | 
+uw cse |
+uw
+]
+
+zpl-info@cs.washington.edu

@@ -1,0 +1,129 @@
+hu song's homepage 
+welcome to hu song's homepage!!!  
+my world: science, 
+              art, 
+              sports and 
+              news    
+ 
+scienc make the world reasonable. 
+  
+  biology and biochemistry let me know who am i.  
+    
+    biology
+      
+       a branch of knowledge that deals with living organisms and vital
+     processes.
+        the plant and animal life of a region or environment.
+       the life processes of an organism or group.
+      
+    biochemistry
+      
+      chemistry that deals with the chemical compounds and processes 
+          occurring in organisms
+       the chemical characteristics and reactions of a particular living
+           system or biological substance (as chlorophyll) 
+      
+    
+  computer science let me know why i should stay in this world.
+     
+     programming language enable me talk to computer.
+       
+       c programming lauguage
+       c++ programming lauguage
+       assembling laugage
+       html laugage
+       
+     data structure make me manage my world logically.
+     software extend my power to other areas 
+     
+  
+art make the world beautiful.
+  
+  nature is art.
+  lauguages is art.
+  friendship is art.
+  art is art.
+  
+sports make the living. 
+news make the comparison.
+   
+   
+
+this is the end of first p. 
+this is the end of second paroagrph.
+link to test2 file  
+this is link to ccic.ifcss.org
+jump to clients
+ this is the jump place for clients 
+ 
+oranges
+peaches
+grapes
+
+  national center for supercomputing applications
+   ncsa is located on the campus of the university
+  of illinois at urbana-champaign. ncsa is a one of
+  four member institutions in the national metacenter for
+  computational science and engineering.
+   cornell theory center
+   ctc is located on the campus of cornell
+  university in ithaca, new york. ctc is another member
+  of the national metacenter for  computational science
+  and engineering.
+  
+
+
+
+   a few new england states:
+    
+     vermont
+     new hampshire
+    
+   one midwestern state:
+    
+     michigan
+    
+ 
+    
+  #!/bin/csh
+  cd $scr
+  cfs get mysrc.f:mycfsdir/mysrc.f
+  cfs get myinfile:mycfsdir/myinfile
+  fc -02 -o mya.out mysrc.f
+  mya.out
+  cfs save myoutfile:mycfsdir/myoutfile
+  rm *
+
+
+    
+  let us not wallow in the valley of despair. i say to you, my
+  friends, we have the difficulties of today and tomorrow. 
+
+  i still have a dream. it is a dream deeply rooted in the
+  american dream. 
+
+  i have a dream that one day this nation will rise up and
+  live out the true meaning of its creed. we hold these truths
+  to be self-evident that all men are created equal. 
+  
+
+
+  a beginner's guide to html / ncsa / pubs@ncsa.uiuc.edu
+  
+ italic
+      text puts text in italics (html primer)
+      text also italicizes text (only one viewer)
+      text is used for citations of names of manuals,
+      sections, or books (html primer)
+      text indicates a variable (filename)
+   bold
+      text puts text in bold (important)
+      text also emphasizes text (note:)
+   fixed width font
+      text puts text in a fixed-width font (1 su = 1 cpu
+      hour)
+      text also puts text in a fixed-width font (1 su
+      = 1 cpu hour)
+      text formats text for samples (-la)
+      text displays the names of keys on the keyboard (
+      help)

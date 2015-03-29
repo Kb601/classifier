@@ -1,0 +1,108 @@
+james f. allen's home page
+
+
+
+
+
+
+james f. allen, urcs faculty member
+
+b. 1950. ph.d. (1979) university of toronto. assistant professor
+(79-84), associate professor (84-87), department chair (87-90),
+professor (87-present), dessauer chair (92-present); university of
+rochester. editor-in-chief, computational linguistics (83-93;
+presidential young investigator (84-89); author of 
+natural language
+understanding, benjamin cummings (87), 2nd edition (1995); reasoning about plans, morgan
+kaufmann (91); co-editor of readings in planning, morgan kaufmann (90);
+fellow of the aaai.
+
+james allen's research interests span a range of issues covering
+natural language understanding, discourse, knowledge representation,
+common-sense reasoning and planning. these areas of research are
+combined in the trains project, a long term effort co-directed with
+len schubert. the trains system is an intelligent planning assistant
+that can converse in spoken natural language with a person to create,
+discuss and evaluate various plans involving freight shipments by
+train. in particular, allen's research breaks down into two main
+subareas, broadly classified as research in discourse and research in
+plan reasoning.
+
+the research in discourse is focused on two-person extended dialogs
+in which the speakers have specific tasks to accomplish. an emphasis
+in this work is the representation and use of the context of the
+dialog to solve problems in semantic interpretations and the
+recognition of the intentions underlying the speakers' utterances.
+work in this area has included developing the first computational
+model of speech acts, the development of a multi-level plan-based
+analysis involving discourse-level plans as well as domain-level
+plans, and the development of several different discourse-plan
+recognition algorithms. in addition, we are exploring how prosody and
+intonation signals discourse intentions and how this interacts with
+the plan-based dialog model. while it is important for work to be
+formally well-defined and understood, it is equally important that
+computational theories can lead to effective implementations. as a
+result, a considerable amount of effort has also been made in
+developing an expressive hybrid knowledge representation system that
+can support complex reasoning about plans and actions.
+
+the research in plan reasoning draws much of its motivation from the
+dialog work. in particular, the representation of plans must support a
+wide range of different forms of reasoning: plan construction (i.e.
+traditional planning), plan recognition, plan evaluation, and the
+communication of plans between agents. much of our work in this area
+has focused on the representation of time and action, and we have
+reformulated the planning problem as a problem in temporal reasoning.
+within this framework, we have developed a representation of plans
+that is temporally explicit and supports plan construction,
+recognition and communication. we are also exploring methods of
+temporal reasoning that are viable even with large data sets of
+temporal information.
+
+key publications on temporal reasoning
+
+ allen, j.f. ``maintaining knowledge about temporal intervals.''
+     communications of the acm 26, 11, 832-843, november 1983.
+ allen, j.f. ``a general model of action and time.'' artificial
+     intelligence 23, 2, july 1984. 
+ allen, j.f. and p.j. hayes. ``moments and points in an
+     interval-based temporal logic.'' computational intelligence,
+     january 1990. 
+ allen, j.f. "time and time again:  the many ways to represent time," int'l. jr. of intelligent systems 6, 4, 341-356, july 1991.
+ allen, j.f. and ferguson, g. "actions and events in interval temporal logic", j. logic and computation 4, 5, 1994.
+
+key publications in planning and plan recognition
+
+ kautz, h. and allen, j.f. "generalized plan recognition" in proc., proc., aaai nat'l. conf. on artificial intelligence, philadelphia, pa, 1986
+ allen, j.f. ``planning as temporal reasoning.'' in proc., 2nd
+     principles of knowledge representation and reasoning, morgan
+     kaufmann, 1991. 
+ allen, j.f. et al. reasoning about plans, morgan kaufmann, 1991. 
+ ferguson, g. and allen, j.f. "arguing about plans: plan representation and reasoning for mixed-initiative planning", proc. 2nd int'l conf. on artificial intelligence planning systems (aips-94), aaai press, 1994.
+
+key publications in natural language and dialogue
+
+ allen, j.f. natural language understanding, benjamin cummings, 1987, second edition, 1994.
+ allen, j.f. ``natural language, knowledge representation and
+     logical form.'' in m. bates, r. weischedel (eds.), challenges in
+     natural language processing, cambridge university press, 1993.
+ allen, j.f. and d.j. litman. ``a plan recognition model for
+     subdialogues in conversations.'' cognitive science 11, 2,
+     163-200, 1987. 
+ allen, j.f. and d.j. litman. ``discourse processing and common sense plans.'' in p.r. cohen, j. morgan, and m. pollack, intentions and communication, mit press, 1990.
+ hinkelman, e. and j.f. allen. ``two constraints on speech act
+     ambiguity.'' in proc., 27th meeting of the assoc. for
+     computational linguistics, 1989.
+ a study on prosody and discourse structure in cooperative dialogs (with s. nakajima), phonetica, 1993.
+ heeman, p. and allen, j.f. "detecting and correcting speech repairs",  proc.  32nd meeting of the assoc. for computational linguistics, 1994.
+ traum, d. and allen, j.f. "discourse obligations in dialogue processing"  proc.  32nd meeting of the assoc. for computational linguistics, 1994.
+allen, j.f. et al, the trains project: a case study in defining a conversational planning agent, journal of experimental and theoretical ai, 1995.
+spoken dialogue and interactive planning (with g. ferguson, b. miller and e. ringger), proc. arpa spoken language systems technology workshop, 1995.
+
+software available
+the parser from the trains-95 system is a bottom-up chart parser that closely follows the development of the parser in natural language understanding, second edition.  the  users manual is available by ftp. the system is written in common lisp and supports a range of features that help manage large-scale grammars. 
+
+
+ back to urcs faculty directory
+
+ back to urcs home page

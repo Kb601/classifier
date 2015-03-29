@@ -1,0 +1,88 @@
+learning in games: othello, checkers, and hearts
+
+
+
+learning in games: othello, checkers, and hearts
+
+our interest in these games is mainly from the perspective of
+machine learning and ai search.  that is, we try out different search
+strategies, time management and learning approaches to see what works
+best.  for this purpose, paul utgoff describes simple protocols,
+implemented for all three games, that allow programs to play each
+other on request, directly over an internet connection.  the protocols
+are described in a technical
+report.  source code implementing the protocols, as well as
+basic player programs, is also available for anonymous ftp.
+
+if you are interested in machine learning for games, you may also
+want to check out jay
+scott's page.
+
+othello (or reversi)
+
+reversi, better known as othello&trade; (a registered trademark of
+tsukuda original, licensed by anjar co., &copy; 1973, 1990 by pressman
+toy corporation), is an ancient game where two players alternate turns
+flipping two-colored disks on an 8 by 8 grid, according to certain rules;
+the player with the most disks on the board at the end of the game is
+the winner.
+
+there are a number of good sources of information on the www:
+
+brockington's
+guide to the game of othello, where some of this information is
+from.
+yahoo's
+links to othello pages, servers, and so on.
+
+
+to implement your own player, the simplest approach is to get the source
+code in c for o-admin (the game administrator), o-listen (the
+listening program to start a player remotely), and the basic player
+program (that does random legal moves) and substitute your own
+strategies.
+see the technical
+report for further details on the protocol, the programs, and some
+related issues.
+
+a special administrator for ladder tournaments is in the works, as
+well as a www interface to show games and play human players against
+the programs.
+
+checkers
+
+a similar protocol has now also been developed for checkers,
+described in the same technical
+report.
+
+hearts
+
+a third protocol has been developed for hearts--a
+multiplayer card-game.  details of the protocol and the implementation
+are described in the same technical
+report.
+
+other games
+
+some of the above games have variant rule sets (e.g., russian
+checkers) that are not currently implemented in the protocols;  it
+should be fairly simple to modify the code to implement other rule
+sets, simply by changing the function that generates legal moves.  if
+you do, please consider making the code available by sending mail to
+paul utgoff at utgoff@cs.umass.edu such that
+the code (and appropriate credit) can be included in the next release.
+
+similarly, using the internet communication and principles described
+in the technical
+report, other games can be implemented.
+please let us know should you decide to do so, such that we can
+provide the appropriate links to the code on this page.
+
+
+
+last updated july 21 1995.
+
+paul utgoff -
+utgoff@cs.umass.edu
+
+url: http://www.cs.umass.edu/~lrn/othello.html

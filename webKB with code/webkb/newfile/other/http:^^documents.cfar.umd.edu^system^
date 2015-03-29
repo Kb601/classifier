@@ -1,0 +1,85 @@
+document information server design and usage
+
+
+
+
+
+
+
+
+
+
+
+the server is provided as a repository for information, data, and public
+domain code relating to the field of document image understanding.  although
+the core resources will be compiled by researchers at the university of
+maryland, the success of such a system depends on user support and
+contributions. 
+
+
+system statistics 
+
+ 
+	current statistics
+
+ 
+	daily usage graph (postscript format) 
+
+ 
+	 
+	weekly usage graph (gif format) 
+
+
+1995 statistics
+
+	
+	full statistics
+
+
+	
+	1995 usage graph
+
+
+
+
+physical description 
+
+ 
+ site
+  location: center for automation research, university of maryland,
+	college park 
+  internet connection: documents.cfar.umd.edu
+  access: world wide web, gopher client, telnet, or anonymous ftp
+
+ hardware
+	 
+		1 - sparcstation ipx, gx, 16-inch mid-range color monitor,
+	 
+		32-mbyte, and 424-mbyte internal scsi disk
+	 
+		1 - 2.1-gb fast differential scsi-2 internal expansion disk
+	 
+		1 - 644-mb desktop suncd pack
+
+
+
+ server access 
+users will be able to access the server in several ways.  the primary
+access to the server is through the www server.  large files or binary
+files can be transfered by ftp.  anonymous ftp access is available for
+selected files at documents.cfar.umd.edu.  for users who do not have
+direct internet access, a listserver has been implemented and will
+eventually allow access to many of the files on the server.
+
+
+ 
+	 ftp access 
+ 
+	 www home page 
+
+
+
+
+
+
+back to the homepage

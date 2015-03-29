@@ -1,0 +1,128 @@
+herve a. jamrozik
+
+
+
+herve a. jamrozik 
+
+
+
+
+
+
+
+i have been a postdoc at the university of washington since september 1995.
+
+
+
+department of computer science and engineering
+
+university of washington
+box 352350 
+
+seattle,
+
+wa
+98195  
+
+
+office:  433  sieg hall 
+phone:   (206) 685-2675
+fax:     (206) 543-2969
+e-mail:  
+jamrozik@cs.washington.edu
+
+
+
+
+
+
+ research: 
+my main interests are in distributed systems, object-oriented languages and software engineering.
+
+currently, i am working on global memoy management in a workstation cluster with
+
+ 
+hank levy 
+ 
+mary vernon 
+ 
+anna karlin 
+ 
+mike feeley 
+ 
+geoff voelker 
+
+
+new high-speed networks greatly encourage the use of network memory as a cache for virtual memory and file pages, thereby reducing the need for disk access. network nodes with memory-intensive applications can use the primary memory of lightly-loaded nodes as temporary backing store. this introduce a new level of the memory hierarchy: namely, a global memory cache that lies (logically) between local memory and disk.
+because pages are the fundamental transfer and access units in remote memory systems, page size is a key performance factor. recently, page sizes of modern processors have been increasing in order to provide more tlb coverage and amortize disk access costs. unfortunately, for high-speed networks, small transfers are needed to provide low latency. this trend in page size is thus at odds with the use of network memory on high-speed networks. we studied the use of subpages as a means of reducing transfer size and latency in a remote-memory environment.
+
+
+
+reducing network latency using subpages in a global memory environment.
+h.a. jamrozik, m.j. feeley, g.m. voelker, j. evans ii, a.r. karlin, h.m. levy, and m.k. vernon.  in
+
+proceedings of the seventh acm conference on architectural support for programming languages and operating systems,
+october 1996.
+[postscript]
+
+
+
+i did my thesis research on debugging in an distributed object-oriented system in 1993 at the
+
+universite joseph fourier,
+ grenoble .
+i was involved in the 
+
+guide
+project at the 
+
+laboratoire bull-imag
+, part of the 
+
+imag
+institut.
+
+
+
+fun: 
+
+
+there is a way to go to the extreme people &reg area. it's
+
+not here.
+ 
+
+visit the louvre gallery 
+
+ 
+
+
+look at the maps of
+ france , 
+ europe  
+and 
+ world  .
+
+
+some
+
+family pictures.
+ 
+
+some
+
+friends pictures.
+ 
+
+
+
+
+
+jamrozik@cs.washington.edu
+
+
+
+
+v1.1 mai 6, 1996
+v1.0 march 21, 1996
+v0.1 december 28, 1995

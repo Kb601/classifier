@@ -1,0 +1,228 @@
+cs472 fall 95 course materials
+
+
+
+
+
+cs472 fall 1995
+foundations of artificial intelligence
+course materials
+
+
+
+
+
+cs472 handouts
+cs472 lecture notes
+cs472 homeworks and solutions
+cs473 handouts and project information
+cs473 lisp labs
+cs473 presentation schedule
+
+
+
+
+cs472 handouts
+
+
+(tentative) course syllabus  (last modified 10/3)
+
+
+
+cs472 lecture notes
+
+
+introduction to ai
+
+
+(sep 01)  defining artificial intelligence
+
+(sep 04)  knowledge representation: semantic networks and frames
+
+
+problem-solving as search
+
+
+(sep 06)  state space search, iterative deepening
+
+(sep 08)  heuristic search: hill-climbing, simulated annealing 
+
+(sep 11)  heuristic search: beam search, best-first search
+
+(sep 13)  optimal search: a*
+
+(sep 15)  adversarial search
+
+(sep 18)  alpha-beta pruning 
+
+
+rule-based reasoning
+
+
+(sep 20)  history of game-playing; components of rule-based systems
+(sep 22)  no class
+
+(sep 25)  algorithms for forward and backward chaining 
+(sep 27)  no class 
+
+(sep 29)  conflict resolution; expert systems 
+
+
+machine learning
+
+
+
+(oct 2)  introduction to machine learning  
+
+(oct 4)  instance-based learning, decision tree induction 
+
+(oct 6)  learning as search 
+(oct 9)  fall break  
+
+(oct 11)  the version space algorithm 
+
+(oct 13)   neural nets (backprop) 
+
+(oct 16)  neural nets ii, intro to genetic algorithms 
+
+(oct 18)  genetic algorithms 
+(oct 20)  midterm 
+
+
+knowledge representation and inference
+
+
+(oct 23)  representing knowledge in first-order logic  
+
+(oct 25)  inference in first-order logic  
+
+(oct 27)  resolution theorem proving  
+
+(oct 30)  logical reasoning systems  
+
+
+planning
+
+
+(nov 01)  planning: introduction 
+
+(nov 03)  partial-order planning  
+
+(nov 06)  hierarchical decomposition 
+
+
+
+uncertain knowledge and reasoning
+
+
+(nov 8)  abduction and bayes rule  
+
+(nov 10)  belief networks  
+
+(nov 13)  constructing belief networks  
+
+(nov 15)  inference in belief networks  
+
+
+natural language understanding
+
+(nov 17)  ambiguity in language, stages of processing  
+
+(nov 20)  syntactic analysis as state-space search  
+(nov 22)  no class  
+(nov 24)  thanksgiving break  
+
+(nov 27)  a bottom-up chart parser 
+
+(nov 29)  semantic analysis: conceptual analysis  
+
+(dec 1)  conceptual analyzers today (circus); the problem of
+inference 
+
+(dec 4)  inference and scripts 
+
+
+putting it all together
+
+(dec 6)   nlp and learning and planning and selected project presentations 
+(dec 8)   selected cs473 project presentations  
+
+
+cs472 homeworks and solutions
+
+this section intentionally left blank...
+
+
+cs473 handouts and project information
+
+
+ course syllabus and project information 
+
+ project ideas and proposal format   
+
+ ***final project submission***: what, where, when, etc.   
+
+examples of code with  good procedural and data abstraction as well
+as good, consistent indentation. 
+courtesy of ed wayt and oumi mehrotra. 
+     gene.lisp  
+         genetic.lisp  
+   
+
+getting started with the project:  it will be easier if you write
+your code in stages. as a result, you'll have to turn in your code for review
+regularly --- whether or not it's running. 30% of your final grade is based
+on these intermediate code reviews. here is how i'd suggest working on the
+code. (if, for some reason, you think that your particular project doesn't fit
+well into the structure below, let me know and we'll create a personalized
+schedule that does...) 
+
+     first, think about the major ``modules'' that your project requires and the
+knowledge structures (e.g., rules, state descriptions, board representations) that you'll
+need (including any related constructor functions and accessor functions --- as described by
+winston in our main text). implement the modules   as ``stubs,'' i.e., lisp functions that
+have no substantive code, but that specify all of the necessary parameters and that make calls
+to the appropriate module stubs.  write the code to implement your (generic) knowledge
+structures.  (completed for code review 1, 31 oct)  
+
+     get the system running from beginning to end as soon as possible --- just on a
+simple example. this will invariably require making many simplifying
+assumptions.   (completed for code review 2, 14 nov) 
+ 
+     design and implement the inference engine or control strategies needed for your
+system. e.g., specific search strategy, rule interpreter, move generator,
+learning algorithm.  (completed for code review 3, 27 nov)  
+
+     incrementally remove the simplifying assumptions by adding the
+necessary code. evaluate the system appropriately.   (by project end)  
+    
+
+
+ common lisp the language, guy steele 
+
+ common lisp resouces from cmu ai repository (including the lisp faq) 
+
+
+cs473 lisp labs
+
+
+lab 1, sep 12 lists, taking lists apart, firing up lisp   (due sep 15)  
+
+lab 2, sep 19 more primitives, edit-eval loop, procedures  (due sep 22)  
+
+lab 2 solution shows how to declare global variables; example of
+reasonable indentation and documentation. 
+
+lab 3, sep 26 conditionals, recursion, procedural abstraction
+ (due sep 29) 
+
+lab 3 solution example of reasonable indentation.     
+
+lab 4, oct 3 data abstraction, mapping, iteration  (due oct 6) 
+
+lab 5, oct 17 i/o, debugging, structures, clos  (due oct 23)  
+
+
+
+return
+to cs472 home page

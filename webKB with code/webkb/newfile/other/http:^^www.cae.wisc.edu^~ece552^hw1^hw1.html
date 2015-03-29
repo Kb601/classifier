@@ -1,0 +1,92 @@
+homework #1
+
+
+
+
+  ece/cs 552: introduction to computer architecture 
+ 
+(fall 1996-97)
+
+  problem set 1 
+date: september 12, 1996 thursday  
+ due date: september 26, 1996 thursday
+
+
+ ( 20 points) answer the questions 2.1, 2.2, 2.3 from pages
+81-82 of chapter 2 of the text. you may want to read this chapter by
+yourself but you should be able to do this problem even without reading
+the text.  
+
+ ( 20 points) answer the questions  2.27 from page 87 of chapter
+2 of the text. you may want to read this chapter by yourself but 
+you should be able to do this problem even without reading the text.
+
+ ( optional)
+ design architect training workbook is available on-line through
+ bold browser. from this workbook do the following lab exercises.
+
+lab exercises 1 to 5 in module 2 -- pages 2-59 to 2-74  
+lab exercises 1 to 4 in module 3 -- pages 3-59 to 3-82  
+you need not submit this work.
+
+ ( optional)
+ quicksim ii training workbook is available on-line through
+ bold browser. from this workbook do the following lab exercises.
+
+lab exercises in module 1 -- pages 1-32 to 1-45  
+lab exercises in module 7 -- pages 7-30 to 7-42  
+lab exercises in module 8 -- pages 8-30 to 8-41  
+you need not submit this work.
+
+ ( 60 points)
+      design a fully synchronous sequential circuit  match,
+      to detect a pattern 3201 in a sequence of digits ( 0, 1, 2, 3). 
+      this circuit has
+      two input lines (for the encoded input digits), a  clock input,
+      and a  reset input. the circuit has one output called  det.
+      the  reset input is used to initialize  match to an all 
+      zero state.  thus on application of  reset = high, 
+      all the flip-flops in the circuit are set to zero states on occurrence 
+      of the appropriate edge of the  clock.
+      if the  reset is high the output  det remains low 
+      irrespective of the input sequence.  
+      if  reset is low,  det goes high when the above pattern is 
+      found in  the input sequence and the circuit continues to look for
+      another occurrence the same pattern. the output  det remains high  for
+      at least one-half (1/2) clock cycle 
+      (see more on this in the next paragraph) and then it reverts to look for
+      the next occurrence for the pattern 3201.
+
+      the  clock signal has a period of 100ns and it is low 
+      from 0 to 50ns and high from 50 to 100ns.
+      all input signals, namely the signals associated with the input digits
+      and the  reset signal, change only in the window 
+      +/- 0.1ns of the rising edge of  clock. 
+      the output  det must go 
+      high as soon as the last 1 of the pattern arrives 
+      (i.e., well before the next falling edge of the  clock) 
+      and remain high till
+      the falling edge of the clock.
+
+      design your circuit with appropriate state assignment. 
+      use fewest number of states and state-variables to complete your design.
+      remember that the circuit is fully synchronous and the  reset
+      input does not reset the flip-flops asynchronously.
+
+      assume that the flip-flops have a small non-zero 
+      setup time and a zero hold time. in your submission include
+      the state table, provide the sate assignment, schematic, force files 
+      showing your test sequence, 
+      and a well commented quicksim output for your test sequence. 
+      also submit a clear documentation explaining the steps you used to
+      arrive at the design.
+
+      your work that is to be submitted for this problem should be 
+       no more than five pages. thus provide all the necessary
+      information in reasonably compact manner with appropriate comments.
+
+ 
+
+
+course account ece552 
+wed sep 11 11:14:00 cdt 1996

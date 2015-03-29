@@ -1,0 +1,232 @@
+cs418 lab 12
+
+
+
+
+
+ 
+cs 418: laboratory 12 
+ procedural textures 
+
+ introduction. 
+in this lab you will investigate texture generation by fourier methods,
+cellular automata (ca), and partial differential equations.
+
+
+procedure:
+
+download:
+
+  surfacetension.net 
+  surfacetension.cfg 
+
+  ffttextures.net 
+  ffttextures.cfg 
+
+  reaction.net 
+  reaction.cfg 
+
+
+
+
+ fourier transform textures  
+the program ffttexture.net takes as input an array of points or user defined
+pixels, then computes the fourier transform of the points. since the
+output of the fft is complex, the program allows the user
+to choose either the phase,
+magnitude, real part or imaginary part, scales the result and displays
+it.
+
+transform texture examples: 
+
+
+
+
+
+
+
+
+
+
+
+ cellular automaton textures  
+
+the program surfacetension.net is a ca which simulates the effect of
+surface tension. areas tend to get smoother, rounder, and less
+fragmented. an 
+ mpeg 
+animation shows a typical evolution. the rule for
+this ca is:
+
+ sum the 8 nearest neighbors of each cell and the cell itself
+ (cells are binary valued).
+ if the sum is less than 4 or equal to 5, set the cell to zero.
+otherwise set it to one.
+
+
+
+ reaction/diffusion textures  
+the program reaction.net simulates a chemical reaction coupled to diffusion.
+there are two reacting chemicals called "red" and "blue". you can think
+of these as chemically reacting inks. the inks can also spread across
+the paper at different rates, refered to as their "diffusion constants".
+many different behaviors can be simulated by changing the chemical
+reactions and specific parameters. 
+ 
+one specific reaction scheme described below results in this 
+ dynamically changing texture. 
+ 
+red diffusion constant: dred=0.03 
+blue diffusion constant: dblue=0.1
+red initial concentration is random with maximum of 0.5.
+blue initial concentration is the letters "test diff" in a polygon font.
+to step time:
+newred concentration = red + 0.2*red*blue - 0.1*red + dred*del^2(red)
+newblue concentration = blue - 0.2*red*blue + 0.1*blue + dblue*del^2(blue)
+where del^2(x) is the sum of the second partial
+derivitives of concentration of x with respect to x and y,
+as described in the water wave section of the 
+ 
+dynamics description.
+
+in dx, the second derivitive operators are calculated using the filter
+module.
+  another example 
+uses the same reaction kinetics as above, but the
+initial condition is blue dots.
+
+assignment:
+execute the programs to understand their behavior, then modify them as
+follows:
+
+
+
+
+modify the program surfacetension.net, to compute  a ca version of 
+a percolation cluster. a percolation cluster is a set of cells which are
+connected to an initial group of cells. 
+the automaton rule for each time step is:
+
+ sum the 8 nearest neighbors of each cell (cells are binary valued, 0/1).
+ test to find out if the current cell has ever been visited before.
+ compute a random number for the current cell.
+ if the sum is greater than zero (at least one neighbor) and
+the random number exceeds a threshold value,  and   the cell has
+never been visited before,  then  set the cell to one.
+if the sum is greater than zero (at least one neighbor) and
+ the random number does not exceed a threshold value, 
+ set the "visited" flag for the cell.  (correction 3/20/96) 
+
+below is an example of a percolation cluster using a stroke font as an
+initial condition. the threshold probability for each cell was set to 0.3
+for the first three time steps. then changed to 0.65. an
+ mpeg animation  of 
+the cluster growth shows its evolution.
+
+
+
+
+extend surfacetension.net to 3d. now there 26 nearest neighbors. you
+will have to change the 0/1 thresholds to appropriate values. the 3d
+array may be rendered by connecting it to an isosurface module (with
+it's second input set to 0.5) then to an image module. use this 
+ code fragment
+to map the ca array to the surface of a torus. the mark-compute-unmark
+scales to object to lie inside the ca volume. the wire entering from the
+left is a floated version of the 3d ca array. this 
+ mpeg animation shows the ca array 
+on the left
+(isosurface rendered) and the array used to control the color of a
+torus.
+
+
+ build a 1d ca simulator which fills a 2d array, one row at a time. 
+assume a neighborhood 
+extending one cell on each side of the current cell. 
+you might use the foreachn module to 
+control the loop which causes the program to visit each row once. 
+assuming that the 1d ca rule is based on summing the cells, 
+try several rules. this 
+ mpeg animation 
+ is based on the rule:
+
+if sum==0 newstate=0 
+if sum==1 newstate=1
+if sum==2 newstate=1
+if sum==3 newstate=0
+
+
+
+ modify reaction.net to include a ca component. the ca should take
+as initial conditions the thresholded "blue" concentration. the ca rule
+should be 
+
+conway's game of life. 
+life is based on the rule (where sum is over the 8-membered neighborhood):
+
+if sum==3 newstate=1 
+if sum==2 newstate=oldstate
+if sum
+if sum>3 newstate=0
+
+
+
+the ca should be coupled back into the
+reaction/diffusion equations as a source term for blue or for red with
+an interactor to control the strength of each source. so for each cell,
+there needs to be a term in the newred and newblue equations of the form
+ 
+strength * ca
+
+where ca is the value (1/0) of the automaton cell.
+use text as initial conditions.  make an mpeg animation
+of your favorite reaction/ca texture resulting from this process. 
+
+one  example 
+shows this process
+with a ca source strength of 0.05 for blue and 0.0 for red, and using
+text as an initial condition for the ca. another 
+ example  shows a process with a 
+ca source strength of 0.1 for blue and 0.05 for red, and using two
+strips as an initial condition for the ca. for both of these examples,
+the reaction equations were the same as above, except that 
+ 
+red diffusion constant: dred=0.05 
+blue diffusion constant: dblue=0.2
+
+
+
+
+
+be prepared to demo the modified programs to show:
+ the percolation ca
+ the 3d ca
+ the 1d ca
+ the reaction/diffusion program modified to include a ca.
+
+
+ some results from 1996. 
+
+
+you should be able to explain your programs. you should use
+transmitters/receivers, macros, and comments 
+in the "notation" field of each module
+so that you and the grader can understand the program. 
+control panels, if any,
+should be well organized, labeled, and with the appropriate numeric ranges.
+
+the
+ lab 12 grading guide 
+will be filled out by a consultant during section to evaluate your work.
+
+
+
+back to main page
+ 
+
+last modified, 11/7/95, b. land.
+
+
+
+ 
+copyright statement

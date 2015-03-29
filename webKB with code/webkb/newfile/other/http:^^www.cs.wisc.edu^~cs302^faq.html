@@ -1,0 +1,512 @@
+cs 302 frequently asked questions (faq)
+
+
+
+cs 302 frequently asked questions (faq)
+
+this faq came about because of problems that many students were encountering.
+it is not comprehensive, and it will probably be constantly evolving.
+it is grouped by which language is being used, and there is a list of non-
+language-specific problems at the end.  if you don't find what you want here,
+ask a consultant.  if you are a consultant, you can e-mail me at 
+perkinst@cs.wisc.edu.
+
+
+  c++ common problems:  using the borland ide and the c++ language 
+
+
+  compiler and linker errors  : when borland
+refuses to run your program. 
+  runtime errors : crashes, floating point errors,
+protection faults -- errors that occur while your program is running. 
+  borland ide problems : difficulties with your program
+files or project files, windows, the screen editor.  in general, problems with the 
+mechanics of using the borland ide. 
+  input/output errors : problems with reading in input, 
+sending output to files, etc. 
+  it's just not working!!  
+
+
+  a fortran hint:  how to write and run programs efficiently
+  miscellaneous problems:  printing, e-mail, disk quotas... 
+
+
+
+
+c++
+
+
+ compiler and linker errors 
+
+
+error: statement missing ; 
+ 
+ 
+
+fix: click on this message, and will get the highlighted line in your
+source file. this line or the line immediately before it is not ended
+with a ; (semicolon).  all lines of c code except statements
+which can be followed by compound statements ( if ,
+else, do, etc.) should have a ; to mark the end of the
+statement.   
+ 
+
+
+error: declaration syntax error
+
+
+
+fix: if this line isn't declaring a variable, then the problem
+is definitely that some variable declaration immediately before it is
+missing a ; (semicolon).  otherwise, this may still be the problem,
+but you may have also done something else like missed a , (comma) in
+between variable names, or put a space in a variable name. (variables
+must be one word)
+ 
+
+
+
+
+error: unable to assign char* to char
+
+
+
+fix: a char variable is a single keystroke like 's' or
+'\n'. (note the single quotes) a char* variable is an array of
+characters (a string) like "hello there!" (note the double quotes).
+for beginner's purposes, view them as entirely different animals.  in
+particular, 's' is not the same as "s".  ('s' takes up 1 byte of
+memory whereas "s" is stored as a byte containing 's' followed by a
+byte containing the end of string message.)
+
+
+
+
+
+ the program seemed to be (nearly) working before, but now it gets all sorts of 	errors involving i/ostreams when i run it.   
+
+it is linking the program without compiling the source code. 
+click inside the .cpp window, and select project,compile.  then try running
+it again.
+
+
+why do i get that annoying "linker error in owlmain"?
+
+
+chances are that you have not created/opened a project.  you must do this
+through the project menu...you cannot do it through the file menu.  once you
+have created/opened a project, make sure that you choose the build all option
+under the project menu.  if you don't, chances are that you will get many more
+linker errors.
+
+
+
+
+my program source file has a ".c" extension and the borland compiler
+complains when i attempt to compile it.  how do i make it a c++ file?
+
+
+this is caused by forgetting to choose the "advanced" option when creating a
+project file.  the easiest way to fix this problem is to select the source
+code file name in the project window (you will know it is selected because it
+will be highlighted).  press the right mouse button and a menu will pop up.
+choose "edit node attributes" from this menu.  it will produce a window that
+will allow you to change the default extension for the file...choose ".cpp".
+if you have saved the program source file with the ".c" extension, you will 
+want to resave the file with a ".cpp" extension.  use the "save as" option
+under the "file" menu.
+
+
+
+
+
+ run-time errors 
+
+
+my program gives me some weird windows error message when i run it.
+what can i do?
+
+
+unfortunately, this is a very wide open problem and can be caused by numerous
+things.  common problems are the following:  trying to use a pointer that
+points to null, accessing elements beyond the bounds of an array, creating
+large data structures (like 2-dimensional integer arrays) as local variables
+to functions, running out of disk space, etc.  unfortunately, some of these
+problems don't exhibit consistent behavior, but most times you can use the
+interactive debugger to figure out what the problem is.
+
+
+
+
+my program starts to run, but then it stops, and i get a
+window that tells me "general protection exception".
+
+this error is caused by access memory outside of legal bounds for your
+program.  if often means you used an array, and tried to access or set
+elements outside of the array bounds.  for instance, if you have an
+array x[10], you may have asked for x[-2] or x[14].  another possible
+cause for this error is that you are using pointers, and you attempted
+to access a pointer that had not yet been initialized.  to find such an
+error, it is often easiest to use the debugger to trace down the line of
+code that causes the memory error.
+
+  while the programming is running i get a "floating point
+underflow" or "floating point:division by zero", and the program stops.  
+
+a floating point underflow can be caused by uninitialized variables.  if
+you declare some floats or doubles and don't set them to some value before
+you use them, they may start out with huge or tiny values that cause errors
+in calculations.  the simple fix is to initialize all your floats to zero. 
+
+a division by zero error may not be obvious to look at the code, but can
+occur when variables have unexpected values.  often you will be performing
+some calculation inside a loop, and the loop goes one place too far or the
+very first or very last iterations form special cases, resulting in a 
+division by zero.  unless you can spot it right away, the best way to find
+such an error is probably to use the debugger to track down the offending
+line of code. then you can run the program again and
+use the watch feature to view the variables involved, and see what causes
+things to run afoul. 
+
+
+
+
+ borland ide errors 
+
+
+why do i see nothing when i open a project?
+
+
+if you open an existing project and all you see is the background of the
+borland ide, choose the project option under the view menu.  this will show
+you the project window.
+
+
+
+
+why is there nothing in my project window?
+
+
+good question...could be an accidental thing or a fluke.  the way to fix this
+is to select the target option under the project menu.  the easy thing to do
+is to use the same name as the project (minus the .ide extension).  then you
+go through the same process as creating a project.
+
+
+
+
+when i try to open my program file (.cpp extension), i get some 
+weird message about truncating lines.  what's up with that?
+
+
+another good question...more than likely, you named your project with a ".cpp"
+extension.  the default extension for a project file is ".ide" and should be
+left this way.  unfortunately, it is questionable if you will be able to get
+your source program back.  ask a consultant to attempt to salvage your code
+from network backups.
+
+
+
+
+my program source file has a ".c" extension and the borland compiler
+complains when i attempt to compile it.  how do i make it a c++ file?
+
+
+this is caused by forgetting to choose the "advanced" option when creating a
+project file.  the easiest way to fix this problem is to select the source
+code file name in the project window (you will know it is selected because it
+will be highlighted).  press the right mouse button and a menu will pop up.
+choose "edit node attributes" from this menu.  it will produce a window that
+will allow you to change the default extension for the file...choose ".cpp".
+if you have saved the program source file with the ".c" extension, you will 
+want to resave the file with a ".cpp" extension.  use the "save as" option
+under the "file" menu.
+
+
+
+
+borland c++ always crashes when i attempt to run it.  how can i fix
+this?
+
+
+
+i would recommend that you ask a consultant to do this.  there are borland
+configuration files that have apparently been corrupted.
+
+
+
+
+
+
+
+ input/output errors 
+
+
+
+
+i'm trying to do a "cin.getline", but it's not working.  when i
+run the program, it just goes right by the getline as if it weren't there.
+
+this is a very common problem.  there can be problems when you mix "cin >>"
+and "cin.getline" input statements in a program.  the "cin >>" function will
+take input, but it leaves a newline character in the input buffer.  if a
+getline call follow a "cin >>", then the getline will read this single newline
+character and stop.  it will appear as if the getline read nothing at all.
+so whenever you have a getline following a "cin >>" you must clear the
+newline character from the buffer either with a "cin.ignore" or another
+"cin.getline".  this should, of course, be placed between the "cin >>" and
+the "cin.getline" that really takes input.  here's an example that suffers
+from this error: 
+
+	cin >> golfscore;
+	cin.getline( playername, max_str, '\n' );
+
+in this case the playername would just get the null string because of the
+newline character left in the input buffer by the "cin >>".  here are the
+two ways to problem can be fixed.
+
+	cin >> golfscore;
+	cin.ignore( max_str, '\n' );
+	cin.getline( playername, max_str, '\n' );
+
+or
+
+	cin >> golfscore;
+	cin.getline( dummy_buffer, max_str, '\n' );
+	cin.getline( playername, max_str, '\n' );
+
+
+
+my program runs correctly and now i am redirecting the output to a 
+file.  when i ran the program the first time, it worked great, but now when i 
+run it i get the same output as the first time, no matter how i change the 
+input.  what's the problem?
+
+
+chance are that you still have the output file open from the first time you
+ran the program.  windows basically will lock files that are in open windows
+so that you cannot overwrite the contents of the file.  to remedy this, just
+close the output file after you have printed it.  to find out if you do have
+the output file open, choose the window menu.  it will tell you exactly what
+you have open.
+
+
+
+
+when i run my program and redirect the output to a file, the output
+file is always empty.  why?
+
+
+if you are also redirecting the input, you want to check to make sure that
+you have the path name to the file typed in correctly.  if you have the path
+name hard coded in your program, you want to make sure that you have used two
+backslashes "\" for every one in your path.  for example, the following file
+r:\public\jjason\myfile.in would be coded as follows in your program:
+
+ifstream input("r:\\public\\jjason\\myfile.in");
+
+also, make sure that if you copied the input file from an instructor, that you
+copied to the correct directory.
+
+
+
+
+
+  i'm trying to output with "cout", but a get a compiler error telling
+me, "illegal structure operation."   
+
+cout is used to print strings and numbers and such, but if you want to print
+out some more complex object, you must use other means.  for instance, if
+you have defined a class foo, you may have given it an output method
+with prints some of its internal variables or other messages: 
+
+class foo {
+	...
+	public:
+	void output();
+	...
+};
+
+when you want to print out such an object, students sometimes make the mistake
+of making the call to the output member part of a cout: 
+
+	foo fooa;
+
+	cout 
+the output function works on its own, and should not be a part of a cout.
+despite the odd notation, "cout 
+	cout 
+
+
+
+
+ it's just not working!! 
+
+
+if you're really having difficulties, remember that there are consultants
+in the lab to help you most hours of the day.  they keep a "consultant" sign
+on top of the computer at which they are working and wear nametags, so they
+are easy to spot. 
+
+my program doesn't give me the results i had hoped for.  or, my 
+program runs, but it does some really strange things.  help!
+
+
+your best bet is to run the interactive debugger.  consultants are also able
+to help you, but chances are they will run the debugger themselves.  since
+you are the one most familiar with your program, you would be the one most
+likely to spot errors quickly using the debugger.  i recommend learning the
+basic features of the debugger - stepping through a program and viewing the
+contents of variables.
+
+
+
+
+
+
+
+
+
+fortran
+
+a little suggestion to make you more productive
+
+
+when going through the program development cycle, it helps immensely if you
+have two windows open with the ms-dos prompt.  in one window, you can use the 
+editor to work on your program.  the other one you can leave at the dos prompt
+so that you can compile and run the program.  this alleviates the need to
+exit the editor every time you want to compile your program.  note:
+make sure that you save your program in the editor before attempting to compile
+it in the other window.
+
+
+
+
+
+
+miscellaneous
+
+i have run out of disk space.  how do i get more?
+
+
+you will want to use the file manager to delete files from your user directory
+(drive u:\).  first of all, don't delete the files that start with the 
+letters "bc" as these are used by the borland c++ compiler.  likely candidates 
+are files with the following extensions:  ".exe", ".obj", ".csm" and ".bak".  
+these files are easy to reproduce.  a word of warning, only get rid of 
+files that you know you created (or were created on your behalf, for instance by
+compiling your program).  if you are not sure what you can delete, ask
+a consultant.
+
+
+
+
+i have been "locked out" of my account.  how do i gain access?
+
+
+
+if you type your login password wrong enough times, you will be locked out of
+the network for around 15 minutes.  you will have to wait until that time has
+expired before you can log in again.
+
+
+
+
+i get a message that i have "exceeded maximum logins" and i am
+refused access.  how can i log in?
+
+
+
+this is caused by you being logged in to more than one computer.  make sure
+that you are not logged into any other machines...this includes machines in
+other places in which you have logged into the computer science network.  also,
+if you were working on a machine that crashed, and you immediately attempted
+to log into another computer, you need to log into the machine that crashed
+and log out before you can log into another machine.
+
+
+
+
+i have been "locked out" of my email.  how do i gain access?
+
+
+
+(from d. parter)  if you type your email password wrong enough times, kerberos 
+locks the entry.  you should go to the systems lab (2350 cs&st) to get it
+unlocked.
+
+
+
+
+there are no free computers in the 1370 lab.  are there others we
+can use? 
+
+
+try the computers in the doit lab in the basement of the computer sciences
+building.  there should be information outside of the 1370 lab on how to get
+to the doit lab.
+
+
+
+
+i send a job to the printer, but it never prints out.  what is
+wrong?
+
+
+there are two likely causes of this.  the first is that the print server is not
+working.  the second is that you have exceeded your printer quota.  whatever
+the problem, don't continue sending your files to the printer until you know
+the cause of the problem.  use the check print queues program in the
+administration group to view.  run this program and make sure all the laser
+printers are selected (the box next to the printer names should have an 'x';
+if not, click in the box and one will appear).  clicking the "check queues"
+button will show you a list of all the printers, and the documents waiting
+to be printed on each.  you can spot your print jobs because they are labelled
+with your username.  if the queue are exceedingly long and not moving, inform
+a consultant or the unix ta in 1359; there may be a problem with the printers.
+the check print queues program also allows you to check your paper quota by
+clicking on the "check quota" button.  if you have already printed as many 
+pages as you are allowed, you must go to the computer systems lab in
+2350, and pay for more paper to be credited to your account.
+
+
+
+
+
+i would like to forward my cs e-mail to my student e-mail account.
+is that possible?
+
+
+of course.  you will want to use the user util program mentioned above.  after
+you log in (using your login id and your e-mail password), from the menu you
+can select to forward your e-mail.  just follow the directions...of course
+this assumes that you have memorized your student e-mail address.  you can also
+use this program to stop any forwarding of e-mail.
+
+
+
+
+i have forwarded my e-mail and i would like to be able to check
+it from the 1370 lab.  is that possible?
+
+
+what you need to do is go into the e-mail program (eudora).  select the special
+menu and from there, select the configuration option.  in the box labeled pop
+account, type in the e-mail account which you would like to check.  this next
+part is very important.  again select the special menu and
+this time select the switches option.  make sure that the box marked "leave
+mail on server" has an "x" in it.  if you don't have this box selected, when
+you check your e-mail from the 1370 lab, it will download all of the mail in
+the mailbox to your user directory.  this means that you will not be able to
+check that e-mail from anywhere else.  trust me...i learned this one the hard
+way.
+
+
+
+
+
+
+last modified february 12, 1996
+ted perkins / 
+perkinst@cs.wisc.edu

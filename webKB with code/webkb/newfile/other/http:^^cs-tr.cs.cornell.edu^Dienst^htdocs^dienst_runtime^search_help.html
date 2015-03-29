@@ -1,0 +1,114 @@
+help on searching
+
+
+
+ncstrl documentation
+
+help on searching
+
+you can search for a document with either a simple
+search or a fielded search.
+
+simple search
+
+simple search consists of a single text entry box on the ncstrl server
+home page.  enter keywords in this box (e.g., "digital
+library") to search the author, title,
+and abstract fields of the bibliographic entries for technical
+reports.   the entire
+ncstrl collection is searched.  the search returns documents whose
+bibliographic entries contain all the words you enter in either the
+author, title, or abstract fields.  
+
+
+
+fielded search
+
+the fielded search form has three logical components.  first, there
+are three text entry fields for bibliographic keyword entry, and two
+radio buttons to specify whether the keywords entered should be
+"anded" or "ored" together.  second, there is a menu of the publishers
+in the ncstrl collection, and a check box to use all publishers.
+finally, there is a text entry field in which you may specify a
+document identifer.  
+ 
+to specify search criteria, do the following:
+
+ if you wish to specify search criteria based on bibliographic
+keywords (author, title or abstract), fill one of the keyword fields (see the rules
+for bibliographic keyword matching) :
+
+author - the author's first or last name or names .
+title - the  words in the title of the document.
+abstract - the words in the abstract of the document.
+
+and select the "and" or "or" radio button.
+ select at least one
+of the publishers from the list on the form, or select the
+checkbox to search all publishers.  unfortunately, each web
+browser has a different rule for multiple selections in a menu.
+consult the documentation for your browser for help with this.
+document identifier - the identifying "name" of the document,
+unique for any given publisher.  your entry will be matched against
+any substring of the document identifiers; e.g., the entry "94"
+will match "94-1435" and "89-194".  a document identifier entry is
+always "anded" to bibliographic keyword entries; i.e., only
+documents which meet the bibliographic keyword criteria and the
+document name criteria will be returned.
+
+please take note that not all documents in the collection have 
+abstracts. 
+if you want your search request to include documents without abstracts, 
+enter your search criteria under title as well as abstract.
+
+your search criteria will be rejected if you don't select at least one
+publisher (or the "all" checkbox), and specify at least one
+bibliographic keyword or a document identifier. 
+
+
+ rules for bibliographic keyword matching
+
+words that you enter in the three bibliographic keyword fields
+(author, title, abstract) are matched to
+bibliographic entries according to the following rules:
+
+each word that you enter matches any word in the respective field
+that begins with respective word.  for example, the word "comp"
+matches "computer", "computation", "comprehensive", etc.
+
+you may choose either the logical connector and or
+or between the bibliographic keyword fields by using one of
+the radio buttons below the fields.  for example, if you select the
+or button and the word "robot" in the title field and
+"robotics" in the abstract field, the search will return
+documents that have either "robot" in their titles or "robotics" in
+their abstracts.  if you select the and button, the search will
+return only those documents that have "robot" in their titles and "robotics" in
+their abstracts.
+
+you may also use logical connectors "and" and "or" within fields.
+for example, if you enter "robotics or vision" in the abstract field,
+the search will return documents that have the word "robotics" or
+"vision" in their abstracts.  if you enter "robotics and vision" in the abstract field,
+the search will return documents that have both the word "robotics" and
+"vision" in their abstracts.  multiple words that are not separated by
+"and" are assumed to be "and" separated.  for example, if you enter
+"computer vision" in the abstract field, the search will return
+documents that have both the words "computer" and "vision" in their
+abstracts.  finally, you may use parentheses to group words.  for
+example, if you enter "gries or (teitelbaum and field)" in the
+author field, the search will return documents authored by
+"gries" or by "teitelbaum" and "field".
+
+note:  do not use short, common words or single letters in the
+bibliographic keyword fields (e.g., "the", "a", "s").  you will
+be asked to re-eenter your search if the keyword you enter matches too
+many words in the database.
+
+
+ 
+up to main information menu
+
+
+ncstrl documentation
+ any comments or questions? contact us at help@ncstrl.org.

@@ -1,0 +1,100 @@
+cs 537 - quiz #8
+
+
+
+
+
+
+university of wisconsin-madison
+
+computer sciences department
+
+
+
+
+cs 537
+
+spring 1996 
+bart miller
+
+
+quiz #8
+
+wednesday, april 17
+
+
+
+paging to disk
+consider computer whose operating systems is
+using demand paging.
+we measure the various resource utilizations under a particular workload
+and see:
+
+
+
+cpu utilization:
+20% of the time
+
+paging disk utilization:
+99% of the time
+
+
+
+which of these (if any) should improve the cpu utilization in these
+circumstances?
+why or why not?
+
+
+get a faster cpu.
+
+this system appears to be limited by the speed of the paging disk.
+so, a faster cpu would only
+decrease cpu utilization.
+
+
+
+
+get a bigger disk.
+
+the size of the disk would allow large virtual address spaces or
+allow more processes to run, but would not increase cpu utilization.
+it might actually decrease it, if disk head seek time was increased.
+
+
+
+
+get a faster disk.
+
+a faster disk would allow paging requests to be handled faster and
+would probably
+increase cpu utilization.
+
+
+
+
+increase the degree of multiprogramming.
+
+increasing multiprogramming
+might
+increase the utilization, if the jobs did not do much paging.
+most likely, it would just add to the disk queue, further slowing the system
+(decreasing cpu utilization).
+
+
+
+
+decrease the degree of multiprogramming.
+
+decreasing the multiprogramming level would likely increase
+cpu utilization if
+the system was thrashing because too many jobs were competing for the
+page frames.
+
+
+
+
+
+last modified:
+wed apr 17 14:02:29 cdt 1996
+by
+bart

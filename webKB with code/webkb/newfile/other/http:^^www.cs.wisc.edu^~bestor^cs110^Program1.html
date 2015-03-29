@@ -1,0 +1,87 @@
+cs 110 section 1, program #1
+
+
+
+
+ program #1 - wind-chill factor
+
+
+
+
+   due date:
+   monday 4/8/96, 8:50 am
+
+   grade:
+   25% of your final grade.
+
+   text covered:
+   chp. 1, 2 and 3.
+
+   problem description:
+   as you have already probably noticed, winters in wisconsin can get very cold, especially when it is windy outside.  for this assignment you are to write a program to compute the wind-chill factor (wcf) from the current temperature and wind speed.  the wcf indicates how cold it will feel if you are outside on a windy day.  your program will ask the user to enter the current temperature in degrees fahrenheit followed by the wind speed in mph.  both values should be read in as integers.  your program will then compute and print the wcf in degrees fahrenheit given by the formula
+
+
+
+
+
+where vel is the wind speed and temp is the temperature.  after you print the wcf in degrees fahrenheit convert this temperature to degrees celsius and print it using the formula
+
+
+
+
+
+the values you compute for the wcf in deg. f and deg. c will be real numbers, however print these values as integer's rounded to the nearest whole degree.  finally, print an english description of the current weather.  in particular, if the wind speed is less than 10 mph then it is "calm", less than 20 mph then it is "windy", or greater than or equal to 20 mph then it is "very windy".  similarly, if the wcf is less than -20 deg. f then it is "bitterly cold", less than 10 deg. f then it is "cold", or greater than or equal to 10 deg. f then it is "cool".  this description must be printed on a single line.
+
+   example:
+   if the current temperature is 11 deg. f and the wind speed is 17 mph then your program should display (hint: use this to check your results)
+
+	the wind-chill factor is          -21 deg. f
+	the wind-chill factor is          -30 deg. c
+	the weather is windy      and bitterly cold
+
+   do worry if you get extra spaces in your output as shown above.  later we will see how to get rid of these spaces using formatted output.
+
+   what to hand in:
+   hand in your assignment online by copying your fortran source code file "program1.for" and the compiled executable file "program1.exe" to your handin directory.
+
+   your files are timestamped with the current time when you copy them to your handin directory.  this will be used to check they were handed in on time or whether late day penalties apply. important - make sure you copy the correct versions of your program files because these are what will be graded.
+
+   you also have to hand in a printed copy of your fortran source code file and a printed copy of the output when your program is run with the five sets of test data given in the gradesheet.
+
+   gradesheet:
+   the following gradesheet will be used to grade this assignment.  please take a close look at it to make sure you do everything that is required.  note that you will be graded on correct output for the input values given below, so before handing it in you must run your program with these values and manually check that your program gives the correct results in every case (e.g. use a calculator).
+   
+correct output                                                  [20]
+   temperature = 5 deg. f, wind speed = 7 mph            [4]
+   temperature = 32 deg. f, wind speed = 10 mph          [4]
+   temperature = -16 deg. f, wind speed = 20 mph         [4]
+   temperature = -6 deg. f, wind speed = 12 mph          [4]
+   temperature = -16 deg. f, wind speed = 5 mph          [4]
+
+user interface                                                  [8]
+   useful prompts for the temperature and wind speed     [4]
+   meaningful display of the wcf and weather description [4]
+
+implementation                                                  [14]
+   correct implementation of formulas                    [4]
+   correct use of if/then/else/end if statement          [4]
+   correct use of other fortran statements               [2] 
+   meaningful variable names                             [2]
+   indenting and neatness                                [2]
+
+documentation                                                   [8]
+   program description                                   [4]
+   variable definitions and section comments             [4]
+____________________________________________________________________
+
+total (25%)                                                     [50]
+   
+   
+
+
+
+
+
+
+
+copyright &copy 1996 gareth s. bestor (bestor@cs.wisc.edu).  last modified april 4, 1996.

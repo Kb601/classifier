@@ -1,0 +1,1335 @@
+cse 457 libui documentation
+
+
+
+
+
+
+
+1996 autumn quarter
+
+
+
+
+
+
+libui: the interface library
+
+  overview
+       
+  reference
+       
+	 data types and constants
+	 macros
+	 routines
+	      
+		initialization routines
+		window routines
+		control routines
+		image routines
+		drawing routines
+		miscellaneous routines
+	      
+	 glossary
+       
+  index
+
+
+
+this documentation still needs work.  if you find anything confusing
+or incomplete, please 
+let me know. any comments may you have will greatly facilitate
+ it's revision.
+
+
+
+
+overview
+the user-interface library you will be using in 457 is designed to be
+powerful and simple to use. it provides you with buttons, toggle buttons, 
+sliders, rectangular drawing areas, file dialogs, and a text feedback area.
+
+the main things that the libui library provides you with are:
+
+  a main application window
+       the application will have a main window which will hold all
+       the controls, the text area, drawing areas, etc. this window
+       is created when the application calls
+       uiinitwindow().
+       
+  buttons
+       you can add buttons to the control area in the upper-right part
+       of the main window which take some action when pressed. buttons
+       are created and their actions specified by calling
+       uiaddbutton().
+       
+  toggle buttons
+       you can add toggle buttons to the control area 
+       of the main window which can be set to either true or false
+       by the user. toggle buttons are created by calling
+       uiaddtogglebutton(). 
+       the current state (true/false) of a toggle button can be queried
+       by calling 
+       uigettogglebuttonstate().
+       
+  sliders
+       sliders can be added to the control area to allow the user to
+       control a continuous parameter. sliders are created with a call to
+       uiaddslider(). 
+       the current value of the slider can be retrieved using
+       uigetslidervalue().
+       you can set the value of the slider by using 
+       uisetslidervalue().
+       
+       
+  menus
+       menus can be added to control area to allow the user to select
+       the desired option.  menus are created with a call to 
+       uimakemenu().
+       menu item can be added using 
+       uiaddmenuitem().
+       
+       
+  drawing areas
+       these are rectangular areas within the main application window
+       that can be rendered into using opengl.	these are created by
+       calling uiaddwindow().
+       
+       
+  text area
+       there is an optional area at the bottom of the main window that
+       is used to do display text and/or allow the user to input text.
+       the text to be displayed can be set using 
+       uisettext() and can be examined
+       with uigettext().
+       
+  file-selection dialogs
+       applications can present file-selection dialog boxes to let the
+       user specify a file. the dialog box is presented by calling
+       uipostfiledialog().
+       this call returns immediately after the dialog is put up - the
+       application is notified that the ok button has been pressed by
+       having a callback procedure invoked.
+       
+  event handling
+       applications respond to user and systems actions such as buttons
+       being pressed and windows becoming visible through event
+       callbacks. these are routines that are called by the system
+       in response to these types of events. callbacks are usually
+       specified when an interface element is created.
+       there is also a function call 
+       uibusycursor() to prevent all user interactions until
+       the program finishes executing a certain process.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+reference
+
+data types and constants
+
+  uibool
+  boolean type:
+       typedef enum {uifalse, uitrue}
+       uibool;
+
+  uicolorrgb
+  rgb color type:
+       
+typedef struct
+{
+  float r;
+  float g;
+  float b;
+} uicolorrgb;
+
+  uidrawingplane
+  the different planes to draw into. specified when calling
+       uisetcurrentwindow()
+       .
+       typedef enum {uinormal, 
+       uioverlayplane} uidrawingplane;
+
+       
+	 uinormal
+	 the normal drawing plane. this is a full-color drawing plane,
+	      where colors are specified using the glcolor*
+	      calls. most drawing will take place in this plane.
+	 uioverlayplane
+	 the overlay plane. this is a drawing plane that sits on top of
+	      the normal plane, which can be used to draw on top of things
+	      without disturbing them. this plane is an indexed-color plane,
+	      so colors are specified using glindex(). index
+	      0 is transparent.
+       
+       
+       
+  uiappoptions
+  options for the uiinitwindows()
+       call. the options parameter of this call should
+       be the logical or of the desired options, or
+       uinone for none of them.
+       typedef enum {uihasnone = 0, 
+       uihascontrols = 1, uihastext = 2, 
+       uihasdouble = 4 } uiappoptions;
+       
+       
+	 uihasnone
+	 none of the following.
+	 uihascontrols
+	 the control area in the upper-right of the main window is
+	      present.
+	 uihastext
+	 the text area at the bottom of the main window is present.
+	 uihasdouble
+	 double-buffering is enabled for the application.
+	 uiindexedcolormode
+	 main windows use indexed color.
+       
+
+       examples:
+       uiinitwindows( 0, null, uihascontrols );
+       uiinitwindows( 0, null, uihascontrols | uihastext);
+       
+
+
+  uimouseaction
+  enumerated type indicating what kind of mouse action has taken place.
+       
+       typedef enum {
+       uileftmousedown, uileftmouseup,
+       uileftmousedrag, uileftmouseclick,
+       uirightmousedown, uirightmouseup,
+       uirightmousedrag, uirightmouseclick
+       
+       } uimouseaction;
+
+       
+	 uileftmousedown, uirightmousedown
+	      
+	 the left or right mouse button was pressed.
+	 uileftmouseup, uirightmouseup
+	      
+	 the left or right mouse button was released.
+	 uileftmousedrag, uirightmousedrag
+	      
+	 the mouse was moved while a button was held down.  a drag action
+	      will always be preceeded by a corresponding uimousedown
+	       action.
+	 uileftmouseclick, uirightmouseclick
+	      
+	 the mouse button has been briefly pressed and released without
+	      motion in between. when a uimouseclick
+	      action is reported, the corresponding uimousedown
+	       and uimouseup actions are not
+	       reported.
+       
+
+  uiwindow
+  opaque type returned from 
+       uiaddwindow().
+
+  uislider
+  slider type returned from 
+       uiaddslider().
+
+  uitogglebutton
+  toggle button type returned from 
+       uitogglebutton().
+       
+callback types
+
+  typedef void (* 
+       uiexposecallback)( uiwindow
+        *window);
+  exposure callback routine. called in response to a window being
+       exposed.
+       
+	 window: the window which has been exposed
+       
+
+       the application can force the exposure routine to be called by
+       calling uidirtywindow()
+       .
+
+  typedef int (* 
+       uiidlecallback) (void);
+  idle procedure. called
+       periodically when the system has nothing better to do.  an idle
+       procedure is added to the work queue with
+       uisetidlecallback(),
+       and removed depending upon
+       the return value of your idle procedure:
+       
+	 true
+	 the idle procedure is through with its task, and should be
+	      removed from the work queue.  (to put it back on the
+	      queue, you need to call uisetidlecallback again.)
+	 false
+	 the idle procedure is not through with its task, and
+	      will remain on the event queue
+       
+       
+  typedef int (* 
+       uitimercallback) (void);
+  similar to an idlecallback, only also incorporates a pause
+       interval.  a timer procedure is added
+       with uisettimercallback()
+       where you define a pause interval (in milliseconds).  like
+       an idle procedure, a timer procedure is added and removed
+       depending on its return value:
+       
+	 true
+	 the timer procedure is through, remove this from
+	      the timer queue.  (to put it back on the queue, you
+	      need to call uisettimercallback again.)
+	 false
+	 the timer procedure is not through with its task,
+	      and will remain on the event queue.
+       
+       
+       
+
+  typedef void (* uicallback
+       ) (void);
+  button or slider callback. called in response to the user pressing
+       the button or moving the slider with which it is associated.  see 
+       uiaddbutton(), 
+       uiaddtogglebutton()
+        and uiaddslider()
+       .
+
+  typedef void (* 
+       uimousecallback) (uiwindow
+        *window, int x, int y,
+       uimouseaction
+       action);
+  mouse action callback - called in response to mouse input in 
+       window.
+       
+	 window
+	 the window in which the mouse action took place.
+	 x, y
+	 the location of the mouse action.
+	 action
+	 the mouse action which caused the callback to be invoked.
+       
+
+       applications specify the mouse callback routine in 
+       uiaddwindow().
+
+  typedef void (* 
+       uifileboxcallback) (char *filename);
+       
+  file-selection dialog callback routine.
+       
+	 filename
+	 the name of the file that was selected when the ok button was
+	      pressed.
+       
+
+       uimenucallback
+        !!!! 
+
+image library types
+
+
+  typedef enum { scalar, vector } 
+       argtype;
+  color depth of an image.
+       
+	 scalar
+	 image is black and white
+	 vector
+	 image is color
+       
+       
+  typedef struct {
+              real x, y, z;
+       
+       } vector;
+  vector type. for images, x is used as the red component, y is used
+       as green and z is used as blue.
+
+  typedef struct {
+       
+	 int _width, _height;
+	 argtype _type;
+	 union { 
+	 
+	   real *scal_image;
+	   vector *vec_image;
+	 
+	 } _image;
+	 int _scale_pixel_values;
+	 real _pixel_scale_factor;
+  
+  } image;
+  image type. routines are available for accessing all the fields of
+       this structure, so you shouldn't have to worry about them.
+
+
+
+macros
+
+the following macros are defined by libui:
+
+  #define min(a,b)
+       ((a)
+  fairly simple, expands to find the minimum of two items
+  #define max(a,b)
+       ((a)>(b)?(a):(b))
+  min's complement
+  #define clamp(x,lo,hi)
+       (max(min(x,hi),lo))
+  clamps number specified by x to be between
+       hi and lo
+
+	 
+
+
+
+
+
+
+
+routines
+
+initialization routines
+
+  void uisetcontrolwidth
+       (int width);
+       void uisetcontrolheight
+       (int height);
+  sets the width and height of the control area in which buttons and
+       sliders are placed. the control area is located in the upper-right
+       corner of the main application window.
+
+  void uisettextheight
+       ( int height );
+  sets the height of the text area at the bottom of the application
+       window. the text displayed in this area can be changed and examined by
+       calling uisettext() and
+       uigettext().
+
+  void 
+       uisetmainwindowwidth (int width);
+       void 
+       uisetmainwindowheight (int height);
+  sets the size of the main application window. this includes the
+       control area and the text area. it is up to the application to make
+       sure that this window is big enough to hold all of the things it wants
+       to place inside of it.
+
+  uibool uiinitwindows
+       (unsigned int argc, char **argv,
+       uiappoptions options);
+       
+  initializes the interface library and creates the main application
+       window.
+       
+	 argc, argv
+	 if you wish, you can pass the arguments from main
+	      to uiinitwindows(). 
+	      normally, you would just pass 0 and null
+	      .
+	 options
+	 sets what aspects of the application windows will be enabled.
+	      you may elect to have a text region, control region, double
+	      buffer, or more.  see the definition of
+	      uiappoptions for a complete
+	      list of options.  to select two or more options, pass in
+	      their logical or.
+       
+
+       the application should call uiinitwindows to initialize
+       the ui library. this call should be made after the sizes of the parts
+       of the application have been set.
+
+  void uimainloop();
+  this function starts the applications' main loop.  in this loop,
+       libui will process user interaction, and call the appropriate
+       callbacks where defined.  nb:  this function never
+       returns, so it should be the last statement in your main()
+       function.
+
+
+
+
+
+
+
+
+window routines
+
+  uiwindow *uiaddwindow
+       (int x, int y, int width, int
+       height, uiexposecallback
+       expose, uimousecallback
+       mouse, void *userdata );
+  adds a drawing area inside the main window.
+       
+	 x, y
+	 the (x, y) location of the upper-left
+	      corner of the new window relative to the upper-left corner of
+	      the main application window.  note: the coordinate
+	      system used by this call (unfortunately) considers the origin
+	      to be at the upper-left, with x increasing going
+	      to the right and y increasing going down. this is 
+	      not the same coordinate system used by opengl,
+	      which considers the origin to be the lower-left corner, with
+	      y increasing going up.
+       
+	 width, height
+	 the width and height of the new window.
+	      
+	 expose
+	 a callback to be invoked when the window is exposed.  if no
+	      callback is to be invoked, pass null for the the expose
+	       paramater.
+	      
+	 mouse
+	 a callback to be invoked in response to mouse input for this
+	      window.  if no mouse callback is to be invoked, pass null
+	      for the mouse paramater.
+	      
+	 userdata
+	 a pointer to some private data you wish to associate with this
+	      window.  if no private data is necessary, pass null for the
+	      userdata paramater.
+       
+
+       drawing areas are rectangular regions in which the application can do
+       drawing.  to specify which window is to be drawn into, the application
+       must call 
+       uisetcurrentwindow().
+
+  void uisetuserdata
+       ( uiwindow *window, void
+       *data );
+  sets window's private data to point to data.
+       
+
+  void *uigetuserdata
+       ( uiwindow *window );
+       
+  retrieves window's private data.
+
+  void uisetcurrentwindow
+       (uiwindow *window, 
+       uidrawingplane plane);
+       
+  sets the current drawing window.
+       
+	 window
+	 the window into which drawing should be done.
+	 plane
+	 the drawing layer onto which drawing should be done. if
+	      plane is uinormal, drawing will
+	      take place in the normal drawing window. if plane
+	      is uioverlayplane, drawing will take place
+	      in the overlay plane.
+       
+       note that the normal drawing plane (uinormal) is a
+       full-color rgb plane, while the overlay plane (uioverlayplane
+       ) is an indexed plane.
+
+  void uidirtywindow
+       (uiwindow *window);
+  forces a window's expose callback
+       to be invoked.
+       
+	 window
+	 the window whose expose callback is to be invoked.
+       
+       this call is used to signal a window to redisplay it's contents.
+       this can be useful if the application is written in such a way that
+       drawing is done only (mostly?) inside of expose callbacks.  this
+       helps to concentrate the drawing code in one area, which in turn
+       helps to locate drawing-related bugs.
+
+  void uigetwindowsize
+       (uiwindow *window, int
+       *width, int *height);
+  returns the size of window in width and
+       height.  pass null to either if you don't
+       care about their values.
+
+  void uimapcoordinates
+        (uiwindow *src,
+       uiwindow *dst, int *x, int *y);
+       
+  maps a location from the coordinate space of one window to the
+       coordinate space of another.  this is most often used when one
+       window is contained withing another.
+       
+	 src
+	 the source window, in which the coordinates are initially
+	      expressed.
+	 dst
+	 the destination window, to which the coordinates are to be
+	      translated.
+	 x, y
+	 the point in window src to be translated.  after
+	      the routine returns, they will be set to the transformed
+	      coordinates.
+       
+
+
+
+
+
+
+
+
+control routines
+
+  void uiaddbutton
+       (char *label, uicallback
+       pushcallback);
+  adds a button control to the control area.
+       
+	 label
+	 the text to be used as a label for the button.
+	 pushcallback
+	 the callback procedure to be invoked when the button is
+	      pushed.
+       
+
+       controls (buttons, sliders, menus, etc.) are added one below another,
+       starting at the top of the control area.
+
+  uitogglebutton 
+       uiaddtogglebutton( char *label, uibool
+       initialstate, uicallback
+       valuechangedcallback);
+  adds a toggle button to the control area.
+       
+	 label
+	 the text to be used as a label for the button.
+	      
+	 initialstate
+	 the initial state for the toggle button.
+	      
+	 valuechangedcallback
+	 the callback procedure to be invoked when the state of the toggle
+	      button changes.
+       
+       a toggle button (or checkbox) is a small button which can be set to
+       either true or false by the user.  toggle buttons, like other
+       controls, are added one below another, starting at the top of the
+       control area. 
+
+  uibool 
+       uigettogglebuttonstate ( 
+       uitogglebutton button );
+  returns the current state of button.
+
+  void 
+       uisettogglebuttonstate ( 
+       uitogglebutton button, uibool state);
+       
+  sets the current state of toggle button button to be
+       state.
+       
+  uislider uiaddslider
+       ( char *label, double value, double
+       min, double max, int decimals,
+       
+       uicallback valuechangedcallback );
+  adds a slider control to the control area.
+       
+	 label
+	 the name for the slider.
+	 value
+	 the initial value for the slider.
+	 min, max
+	 the minimum and maximum values that the slider can have.
+	 decimals
+	 number of decimals to use (eg, 10 is 0 decimals, 10.5 is 1, etc.)
+	 valuechangedcallback
+	 the callback procedure to be invoked when the slider's value is
+	      changed. note that you can always get the value of a slider
+	      with uigetslidervalue()
+	      , so you only really need to use the callback in
+	      cases where you want to take some immediate action in response
+	      to a slider being changed.  additionally, the callback only
+	      occurs when the user has released the mouse, not while
+	      the user is dragging the slider.
+       
+
+       sliders, like all other controls, are added one below another,
+       starting at the top of the control area.
+
+  double uigetslidervalue
+       ( uislider slider );
+  returns the current value of slider.
+
+  void uisetslidervalue
+       ( uislider slider, double t);
+       
+  sets the value of the slider.
+
+  void uisetsliderparams
+       ( uislider slider, double min,
+       double max, double current, int 
+       decimal_points)
+  sets the various paramaters of the slider.
+       
+	 slider
+	 the uislider that is being
+	      modified.
+	 min
+	 the new minimum value for the slider.  the minimum value must
+	      be less than both the current and the max
+	      values.
+	 max
+	 the maximum value for the slider.  the maximum value must
+	      be greater than both the current and the min
+	       values.
+	 current
+	 the new &quot;current&quot; value that the slider will show.
+	      the current value must be between min and 
+	      max, inclusive.
+	 decimal_points
+	 the number of digits to the right of the decimal that will be
+	      displayed and reported.  valid ranges are any non-negative
+	      integer.
+       
+       see also 
+       uigetsliderparams()
+       for obtaining the current parameter set for a slider.
+
+  void uigetsliderparams
+       (uislider slider, double *min,
+       double *max, double *current, int *
+       decimal_points)
+  get the various parameters for slider.
+       
+	 slider
+	 the uislider that is being read.
+	 min
+	 a pointer to where the minimum value of the slider should
+	      be written.
+	 max
+	 a pointer to where the maximum value of the slider should
+	      be written.
+	 current
+	 a pointer to where the current value of the slider should
+	      be written.
+	 decimal_points
+	 a pointer to where the current number of significant digits
+	      right of the decimal should be stored.
+       
+       see also uisetsliderparams()
+       .
+       
+  uimenu uimakemenu
+       (char *menutitle);
+  this function creates the "menu button".  when the user clicks on this
+       button, a pop-up menu will appear.  to add items to this popup menu,
+       call uiaddmenuitem(),
+       passing in the uimenu type returned by this function.
+       
+       
+  void uiaddmenuitem
+       (uimenu menu, char *menutext, uimenucallback callback,
+       int userdata);
+  add a menu item to the menu menu, which was created with
+       uimakemenu().
+
+       
+	 menu
+	 the menu to which this menu item is to be appended.  menu
+	       is the value returned by 
+	      uimakemenu.
+	      
+	 menutext
+	 this is the label to be associated with this menu item.  when
+	      the user clicks on the menu button to reveal the popup menu,
+	      it is this text that the user will see.
+	 callback
+	 the callback routine to be invoked when the user selects this
+	      menu item.  if no such callback routine is to be used, pass
+	      null for this argument.
+	 userdata
+	 this is the optional user data associated with this menu item.
+	      when the callback is invoked in response to user activity,
+	      this data is passed to the callback routine.
+       
+
+       although the userdata is only an int, it can
+       still be useful.  typically, the id of the menu item being created
+       is used for userdata, so that one callback routine can be
+       used for the entire menu.  all that the callback routine would have
+       to do, then, is process its argument userdata in a 
+       switch ... case ... break block.
+
+
+  void uisettext
+       ( char *text );
+  sets the contents of the text field at the bottom of the window.
+       
+	 text
+	 the text to be displayed.  pass null if no text is to be
+	      displayed.
+       
+       this function only has effect if
+       uiinitwindows() was called with the
+       uihastext option.
+
+  char *uigettext
+       ( void );
+  returns a pointer to the string in the text field at the bottom of the
+       window.  this pointer points to memory allocated just for your
+       program.  if you don't call uifreetext(),
+       that memory won't be freed, and you'll have a memory leak!
+
+  void uifreetext(char *
+       s);
+  frees the memory allocated by libui when
+       uigettext() is called.  without this
+       freeing call, you will have a memory leak!
+
+
+
+
+
+
+
+
+
+
+
+image routines
+
+  image *uinewimage (int
+       width, int height, argtype type );
+       
+  returns a newly allocated image.
+       
+	 width
+	 the width of new image.
+	 height
+	 the height of new image.
+	 type
+	 the type of image - either scalar, for a grayscale
+	      image, or vector, for a color image.
+       
+       note that this routine allocates the memory for the image, so you need
+       to call uideleteimage() to free up this
+       memory when you're done with the image.
+
+  void uideleteimage
+       ( image *im );
+  frees the memory that has been allocated for an image.
+
+  image *uiopenimage (char
+       * filename, int width, int height);
+       
+  opens an rgb file, and reads it into memory.  returns a pointer to the
+       new image.
+       
+	 filename
+	 name of rgb file to be opened.
+	 width
+	 desired width of new image.  if the rgb image on disk has a
+	      different width, the image will be scaled.
+	 height
+	 desired height of new image.  if the rgb image on disk has a
+	      different height, the image will be scaled.
+       
+       if the file cannot be opened, or some other error occurs, 
+       uiopenimage() returns null.  all images that
+       are opened are created as vector images.  when you are done
+       with this image, be sure to call
+       uicloseimage() to properly free the memory
+       associated with the image.
+
+  void uisaveimage(image
+       *image, char *filename);
+  save an image to disk as an rgb file.
+       
+	 image
+	 pointer to image to be saved.  this image can either be vector
+	       or scalar.
+	 filename
+	 name of file to save image to.  this name should end with ".rgb"
+	      (no quotes).  if it does not, a .rgb extention will be added
+	      for you.
+       
+       pixel scaling is disabled in uisaveimage,
+       so you must call uiscalepixelvalues()
+       to reenable scaling, if desired.
+       
+  void uicloseimage
+       (image *im);
+  close the image im that was opened with
+       uiopenimage().
+
+  int uiimagewidth
+       ( image *im );
+       int uiimageheight
+       ( image *im );
+  returns the width or height of an image.
+
+  argtype uiimagetype ( image
+       *im );
+  returns the type of an image, either scalar, for
+       a grayscale image, or vector for a color image.
+       
+  void uisetscalarvalue
+        ( image *im, int ix, int iy,
+       real val );
+  sets the grayscale intensity of a pixel in an image.
+       
+	 im
+	 the image to modify.
+	 ix, iy
+	 the coordinates of the pixel whose color is to be set.
+	 val
+	 the grayscale value of the pixel.  this should be normalized to be
+	      between 0.0 and 1.0.
+       
+
+  void uisetvectorvalue
+       ( image *im, int ix, int iy, vector
+       val );
+  sets the color of a pixel in an image.
+       
+	 im
+	 the image to modify.
+	 ix, iy
+	 the coordinates of the pixel whose color is to be set.
+	 val
+	 the color of the pixel.  this is a vector where the first (x)
+	      component is taken to be the red value, the second (y)
+	      component is taken to be the green value, and the the third (z)
+	      component is taken to be the blue value.  all values should be normalized
+	      to be between 0.0 and 1.0.
+       
+
+  real uigetscalarvalue
+       ( image *im, int ix, int iy );
+       
+  returns the gray value of a pixel.
+       
+	 im
+	 the image.
+	 ix, iy
+	 the coordinates of the pixel.
+       
+
+  vector uigetvectorvalue
+        ( image *im, int ix, int iy
+       );
+  returns the color value of a pixel.
+       
+	 im
+	 the image.
+	 ix, iy
+	 the coordinates of the pixel.
+       
+
+  unsigned long uigetpixelvalue
+        ( image *im, int ix, int iy
+       );
+  returns the color value of a pixel in a packed representation that opengl
+       is familiar with.
+       
+	 im
+	 the image.
+	 ix, iy
+	 the coordinates of the pixel.
+       
+       the return value of this function is a packed representation of the pixel
+       color. that is, the 32-bit unsigned long that is returned "looks like"
+       rrggbbaa, where the red component is the upper 8 bits, the green is the
+       next 8, blue next, and alpha is the lowest 8 bits.  this value can be
+       used as the argument to a glcolor4ub call.
+       
+
+  unsigned long *uigetpixeldata
+        ( image *im );
+  returns an array of pixel values that the call gldrawpixels
+        can understand.
+       
+	 im
+	 the image to get the pixel data from.
+       
+       this is just like calling uigetpixelvalue()
+        for each pixel in the image.
+
+  void uiscalepixelvalues
+        ( image *im, uibool val );
+  specifies whether or not to scale the intensity values of an image when
+       retreiving pixel data from it (using
+       uigetpixelvalue() or
+       uigetpixeldata().
+       
+	 im
+	 the image.
+	 val
+	 uitrue if you want to enable pixel value
+	      scaling, and uifalse if you want to
+	      disable it.
+       
+
+  void uisetscalefactor
+       ( image *im, real val );
+  sets the pixel scaling factor for an image.
+       
+	 im
+	 the image to set the scaling factor of.
+	 val
+	 the scale factor to use when generating pixel values for this
+	      image.
+       
+       this procedure sets a constant scaling factor to multiply the value of
+       each pixel with when querying pixel values.
+
+
+
+drawing routines
+
+  void
+       uigetcolortableparams (int *start, int
+       *size);
+  only valid when using indexed color
+       mode in the main window(s).
+       sets *start to be the starting
+       index of the color table and *size to be the size of the
+       table.
+       
+       
+  void
+       uisetcolortableentry (int which,
+       float red, float green,
+       float blue);
+  only valid when using indexed color
+       mode in the main window(s).
+       sets one entry of the color table.
+       
+	 which
+	 index # to set
+	 red, green, blue
+	 floating-point values [0.0, 1.0] for red, green,
+	      and blue channels
+       
+       
+       
+  void
+       uisetcolortable (int start, int
+       length, float *data);
+  only valid when using indexed color
+       mode in the main window(s).
+       sets a set of entries of the color table.
+       
+	 start
+	 starting index of the color table
+	 length
+	 number of entries to set
+	 data
+	 array of data containing floating-point values [0.0, 1.0]
+	      for red, green, and blue channels
+       
+       
+		        
+  void uisetcolorindex
+       (uicolorindex index);
+  set the current drawing color to an indexed-color.
+       
+	 index
+	 index in color map to assign current color
+       
+       
+       
+  void uisetcolorrgb
+       (uicolorrgb color); 
+  set the current drawing color to the rgb color specified.
+       
+	 color
+	 rgb color to assign current color
+       
+       
+
+  int uigetblackpixel
+       (void);
+  returns the color index that will produce black on the overlay
+       plane.
+
+  int uigetwhitepixel
+       (void);
+  returns the color index that will produce white on the overlay
+       plane.
+
+  void uisetbackground
+       ( void );
+  sets the current drawing color to the window's background color.
+       
+  void uidrawline
+       (int x1, int y1,
+       int x2, int y2);
+  draws a line between two points.  this must be preceeded by a
+       uisetcurrentwindow
+       call, and must be followed by a uiflush
+       call.
+       
+	 x1, y1
+	 first point
+	 x2, y2
+	 second point
+       
+       
+       
+  void uisetdrawmode
+       (uidrawmode mode);
+  used to specify the drawing mode.  this can only be used
+       when drawing with indexed-color
+       
+	 mode
+	 mode to do drawing
+		ui_xor : specifies drawing in xor mode
+		ui_copy : specifies drawing in standard draw mode
+       
+       
+       
+  void uidrawimage
+       (image * im, int x, int y);
+  draws image to given coordinates
+       
+	 im
+	 pointer to image in memory
+	 x, y
+	 coordinates to draw image
+       
+       
+       
+  void uiflush();
+  signal to draw queued objects immediately.  the function
+       uidrawline must be followed
+       by a call to uiflush
+       
+
+
+
+miscellaneous routines
+
+  void
+       uisetidlecallback
+       (uiidlecallback idleproc
+       );
+  defines an idle procedure to be called periodically when the
+       program has nothing better to do.  you may call
+       uisetidlecallback()
+       anywhere in your program, just as long as
+       uiinitwindows() has already been called.
+       to disable an idle procedure, the procedure should return 
+       true; this will remove the procedure from the work
+       queue (you need to call uisetidlecallback again to replace it).
+       to leave an idle procedure on the work queue, the procedure
+       should return false.  because idle procedures,
+       even empty ones, consume large amounts of system resources, it is
+       best to leave them disabled until needed.
+
+  void
+       uisettimercallback
+       (uitimercallback
+       timerproc, unsigned long interval);
+  like an idle callback, only is called at a defined interval
+       (in milliseconds).  will be continually called until the callback
+       procedure returns true when it is removed from the
+       event queue.  to replace it, you must call uisettimercallback
+       again.
+       
+       
+  void uiquit();
+  shuts down the interface library.  this function never returns --
+       uiquit() calls exit(1) as its last
+       statement.
+
+  void uipostfiledialog
+       (char *title, char *filter,
+       uifileboxcallback okcallback
+       );
+  presents a file-selection dialog.
+       
+	 title
+	 the title of the dialog box.
+	 filter
+	 an optional filter that filenames must satisfy in
+	      order to be shown. (for example, "*.c" to show files ending
+	      with ".c")
+	 okcallback
+	 the callback procedure to be invoked when the user presses the
+	      ok button in the dialog. this is where the name of the selected
+	      file is made available.  if no callback is to be invoked, pass
+	      null for this argument.
+       
+       when the application calls uipostfiledialog(), a
+       file-selection box is presented.  the uipostfiledialog
+       call returns control to the application immediately (while the dialog
+       box is still up), and the application is notified when the ok button
+       has been pressed via the
+       okcallback.
+
+  void uibusycursor
+       (int state, int interruptable)
+  sets the cursor the watch.  this is a useful user interface routine to
+       let the user know that the current operation could take some time.
+       
+	 state
+	 determines whether the the cursor should be changed to the watch,
+	      or changed back.  to change to the watch, use 
+	      enable_busy_cursor.  to change back to the default icon,
+	      use disable_busy_cursor.  when the cursor is set to
+	      the watch, no user interaction will be allowed.  additionally,
+	      user interation will not be queued.
+	 interruptable
+	 this variable is currently not used.  always set it to 0.
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+glossary
+
+  callback procedure
+  a routine that is called by the interface library in response to some
+       action (the user presses a button, a window becomes visible, etc)
+       
+       
+       
+  idle procedure
+  a routine that is called periodically by the interface library, when
+       there is nothing else to do.
+       
+  overlay plane
+  a drawing plane which lies above another drawing area and whose image is
+       drawn on top of the image beneath it.  one color index (typically 0)
+       is specified to be transparent.
+
+
+
+
+
+
+
+
+
+index
+
+  clamp
+  max
+  min
+  uiaddmenuitem
+  uiaddslider
+  uiaddtogglebutton
+  uiaddwindow
+  uiappoptions
+  uibool
+  uibusycursor
+  uicallback
+  uicloseimage
+  uideleteimage
+  uidirtywindow
+  uidrawingplane
+  uidrawimage
+  uidrawline
+  uiexposecallback
+  uifileboxcallback
+  uiflush
+  uifreetext
+  uigetblackpixel
+  uigetcolortableparams
+  uigetpixeldata
+  uigetpixelvalue
+  uigetsliderparams
+  uigetscalarvalue
+  uigetslidervalue
+  uigettext
+  uigettogglebuttonstate
+  uigetuserdata
+  uigetvectorvalue
+  uigetwhitepixel
+  uigetwindowsize
+  uiidlecallback
+  uiimagetype
+  uiimagewidth
+  uiinitwindows
+  uimainloop
+  uimakemenu
+  uimapcoordinates
+  uimouseaction
+  uimousecallback
+  uinewimage
+  uiopenimage
+  uipostfiledialog
+  uiquit
+  uisaveimage
+  uiscalepixelvalues
+  uisetbackground
+  uisetcolorindex
+  uisetcolorrgb
+  uisetcolortable
+  uisetcolortableentry
+  uisetcontrolheight
+  uisetcontrolwidth
+  uisetcurrentwindow
+  uisetdrawmode
+  uisetidlecallback
+  uisetmainwindowheight
+  uisetmainwindowwidth
+  uisetscalarvalue
+  uisetscalefactor
+  uisetsliderparams
+  uisetslidervalue
+  uisettextheight
+  uisettimercallback
+  uisettogglebuttonstate
+  uisetuserdata
+  uisetvectorvalue
+  uislider
+  uitimercallback
+  uitogglebutton
+  uiwindow
+
+  
+
+
+back to the cs457 home page
+
+
+
+
+
+
+mtwong@cs.washington.edu   (last modified: 19 mar 1996)

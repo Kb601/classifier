@@ -1,0 +1,59 @@
+suggested projects for cs664  
+suggested projects for cs664  
+
+
+
+ robotics
+
+
+ edge clustering develop algorithm for clustering of
+edges that represent a single object.
+
+performance simulations investigate how high-performance vision
+and image processing applications perform on modern architectures, vision
+applications tend to use large data structures (images) that can exhibit both
+good and bad spatial locality.  ideally, one would have a processor simulator
+that would be configureable: cache size, cache associativity, memory size,
+processor speed, instruction set, etc.  the simulator should be able to
+generate statistics such as cache hit/miss ratio.  hopefully the simulator
+could be extended to simulate a shared memory multiprocessor (smmp).  starting
+from scratch will be very hard, it may be better to adapt an existing program
+to our needs.  starting points: uw.
+
+image databases there is currently a project here at cornell to
+develop a general purpose image database that will allow "intelligent"
+searching for images based on a large number of image features.  we need
+people to implement different measures, for basics such as texture pattern
+matching to face recognition.  starting points: the competitors.
+
+camera gaze control create or adapt an existing object tracking
+algorithm so that the output can be used to control the pan/tilt positions of
+a desktop camera.  the robotics lab is developing a relatively-cheap pan/tilt
+hardware for a standard ccd camera.  we would like the user to be able to
+click on a portion of the image and have the camera pan/tilt to keep the
+object centered in focus.  
+
+find a cool use for stereo vision existing programs allow us to
+generate good depth maps at near-real time speeds (5-15 fps).  we would like
+someone to create a "cute" application using the robots or some other platform
+that would use the depth maps to perform some task, such as navigation or
+collision avoidance (these are not actually the same, currently the easiest
+way for the robot to navigate is for it to go until it "crashes" into
+something, back up a little, then turn).  
+
+stereo camera calibration develop a robust, reliable procedure
+for calibrating a pair of stereo cameras, using a feedback loop between the
+output of the cameras as they view a test pattern and their next adjusted
+view.
+
+text segmentation develop a system that can detect text in an
+image or series of images.  this is not the same as ocr, where one tries to
+take an image of printed text and recover the text; rather, you should
+concentrate on how to find text in an image.  typical examples of texts that
+one might want to identify from a video signal include the bylines on network
+news and scores and player stats from sports games.
+
+human face segmentation basically, find the objects in a scene
+that look like human faces.  how many people are there?  how certain is this
+answer?  starting point: 
+univ. maryland, also work at cmu by kanade's group.

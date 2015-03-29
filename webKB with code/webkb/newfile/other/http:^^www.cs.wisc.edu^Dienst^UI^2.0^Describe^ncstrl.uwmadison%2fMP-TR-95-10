@@ -1,0 +1,27 @@
+accessing realistic mixed complementarity problems within matlab 
+accessing realistic mixed complementarity problems within matlab 
+ michael c. ferris and  thomas f. rutherford
+mp-tr-95-10
+june 1995
+
+ this paper describes a suite of programs that allow realistic complementarity problems to be accessed from within the matlab programming environment. the suite of programs uses data generated from the gams/mcp library and makes function and jacobian evaluations available directly to the matlab user. all the required data is stored in a binary encoding of the problems, completely independent of gams. use of the programs is described here, along with a list of all the problems that are currently available in binary form. details on how the binary files are generated from gams are also given.
+
+how to view this document
+
+
+display the whole document in one of the following formats.
+
+postscript
+ 154228 bytes. (compressed on disk, will be sent uncompressed)
+
+
+
+print or download all or selected pages.
+
+
+
+ you are granted permission for the non-commercial reproduction, distribution,display, and performance of this technical report in any format, but thispermission is only for a period of 45 (forty-five) days from the most recenttime that you verified that this technical report is still available fromthe computer science department of the university of wisconsin - madison underterms that include this permission.  all other rights are reserved by theauthor(s). 
+[ search
+ ]
+
+ncstrlthis server operates at uw madison computer sciences technical reports . send email to www@cs.wisc.edu

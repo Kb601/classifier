@@ -1,0 +1,27 @@
+the gams callable program library for variational and complementarity solvers 
+the gams callable program library for variational and complementarity solvers 
+ s. p. dirkse,  m. c. ferris,  p. v. preckel and  t. rutherford
+mp-tr-94-07
+june 1994
+
+ the gams modeling language has recently been extended to enable the formulation of mixed complementarity problems (mcp). the gams callable program library (cplib) is a set of fortran subroutines developed as an extension for the gams i/o library and designed to provide a simple and convenient interface to the mcp defined by a gams model. this paper provides technical documentation for cplib for use by those who are developing or have developed algorithms for mcp, in order that their solvers may be made available as gams subsystems.
+
+how to view this document
+
+
+display the whole document in one of the following formats.
+
+postscript
+ 152310 bytes. (compressed on disk, will be sent uncompressed)
+
+
+
+print or download all or selected pages.
+
+
+
+ you are granted permission for the non-commercial reproduction, distribution,display, and performance of this technical report in any format, but thispermission is only for a period of 45 (forty-five) days from the most recenttime that you verified that this technical report is still available fromthe computer science department of the university of wisconsin - madison underterms that include this permission.  all other rights are reserved by theauthor(s). 
+[ search
+ ]
+
+ncstrlthis server operates at uw madison computer sciences technical reports . send email to www@cs.wisc.edu

@@ -1,0 +1,28 @@
+netscape configuration changes 
+
+
+
+
+after unpacking the tar file (which contains two executables, mraviewer.const and
+mraviewer.linear), place the resulting executables somewhere in your
+path.  then add the following lines to your personal types file (it's
+usually ~/.mime.types - see preferences under the options menu and
+choose "helper applications"):
+
+application/x-mramesh   mrh
+application/x-mramesh-linear   mrl
+
+if you are on a machine that supports texture mapping, add these lines
+to your personal mailcap file (usually ~/.mailcap):
+
+application/x-mramesh;  mraviewer.const -t %s
+application/x-mramesh-linear;  mraviewer.linear %s
+
+otherwise, add these lines: 
+
+application/x-mramesh;  mraviewer.const %s
+application/x-mramesh-linear;  mraviewer.linear %s
+
+you're ready.
+
+back to andrew certain's home page.

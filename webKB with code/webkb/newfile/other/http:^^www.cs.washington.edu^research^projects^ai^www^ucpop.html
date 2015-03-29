@@ -1,0 +1,97 @@
+the ucpop planner
+
+
+
+
+
+the ucpop planner
+
+
+version 4.0 of ucpop now available!
+
+
+common lisp source code for the ucpop partial order planner, version 4.0,
+is now available via anonymous ftp.
+ucpop operates with actions that have
+conditional effects and universally quantified preconditions and effects.  it 
+accepts universally quantified goals.  in addition, ucpop 4.0 allows domain
+axioms and predicates that call common lisp code to determine
+satisfiability.  with a conservative search strategy ucpop is both sound
+and complete for this representation, but one can add aggressive,
+domain-dependent search control with convenient declarative rules. our
+common lisp implementation is simple enough for classroom use, yet quite
+efficient (requiring between 2-20ms to explore and refine a partial plan).
+
+
+version 4.0 replaces and subsumes version 2.0.  highlights include:
+
+
+
+ twice as fast at plan elaboration
+ the revamped, improved graphical plan debugger (
+
+pdb) (requires clim 2.0)
+ safety constraints (as explained here).
+ improved quantification over dynamic universes
+ more sophisticated search control strategies (including schubert and
+gerevini's zlifo)
+ improved user's manual
+
+
+
+
+this builds on the features introduced in version 2.0:
+
+
+ declarative specification of search control rules 
+ universal quantification over dynamic universes (object creation and
+       destruction) 
+ domain axioms
+ predicates expanding to lisp code
+ larger set of domain theories & search functions for testing.
+
+
+ this work was first presented at kr-92:
+ 
+    penberthy, j. s. and weld, d., ``ucpop: a sound, complete, partial-order
+    planner for adl,'' third international conference on knowledge
+    representation and reasoning (kr-92), cambridge, ma, october 1992.  
+
+
+
+an experimental implementation of ucpop 2.0 in c++ is also available.  
+it is about an order of magnitude faster than the lisp implementation 
+but it doesn't have all the extensions.  please send us 
+mail 
+for more information. 
+
+
+
+
+
+
+  
+   
+   
+   
+  
+    back to ai home page
+  
+
+
+
+
+  
+   
+   
+   
+  
+    back to cse home page
+  
+
+
+
+
+	
+	
+	bug-ucpop@cs.washington.edu

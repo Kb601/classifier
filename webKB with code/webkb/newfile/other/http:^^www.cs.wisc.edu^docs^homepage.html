@@ -1,0 +1,247 @@
+8 easy steps to having your own www page
+
+
+
+ 8 easy steps to having your own www page on the cs unix machines
+
+ in this document we will go through a step-by-step procedure for creating
+a simple www home page on the departmental workstations.  it should take 
+you about 30
+minutes to complete the steps described here.  the page you create will 
+probably not be exactly what you want, but going through these instructions
+will give you a general idea of what is involved in creating web pages,
+and after you understand more of how the system works you can go back and
+edit or replace it.  some of what is said in this document isn't strictly
+true, as you will see when you continue learning about the web.
+
+  note:  the term home page has come to 
+mean two different things.  some people refer to a page that describes 
+a person or institution as its "home page."  others think a "home page" 
+is a page you create for your own use that contains a list of links to 
+the sites you visit frequently.  the page you are creating is of the 
+first type. 
+
+ step 0: what you should have in front of you.
+
+ chances are you have probably completed most of this step already.
+this document assumes you are logged into the console of a unix workstation
+in the cs department, and that you are running mosaic for x to view 
+this page.  if you are using some other browser or you aren't logged into
+a cs machine, some of the instructions below won't work and might not
+make sense, and you will have to move or be prepared to improvise.  
+
+ you will probably want to read both this document and the page you
+are editing at the same time, so to make that easier you can create a 
+second mosaic window.  keeping in mind that you will have to put the first
+window back on top to continue reading, press the "new window" button on 
+the bottom of mosaic.  we'll use this other window later.
+
+ in addition to mosaic, you should have a window with a shell available
+because you will be typing a few commands.  finally, you should have 
+your favorite text editor in a fourth window.  this document doesn't assume 
+any html-specific editor modes; you will be editing the file directly.  make 
+sure you can switch between the windows easily. 
+
+ step 1: create your public www directory.
+
+ if you have never put a document on the web, you will need to create your
+publicly accessible www directory.  in your shell, execute the following
+command: 
+
+mkdir ~/public/html
+
+ this directory is where you will keep all of your web documents.  it has
+a special place in the namespace of our web server.  if this command did
+not work because you do not have a ~/public directory, you have to
+do a little more work.  please see this note.
+
+ step 2: copy the sample home page.
+
+ in your shell, run the following command:
+
+cp /common/www/home-sample.html ~/public/html/username.html
+
+ where username is your own unix login name.  this file contains
+a www home page for you to personalize.
+
+ step 3: edit the home page file.
+
+ what you do to accomplish this will depend on what editor you use.  the
+first few lines of the file should look like this:
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;felix's home page&lt;title&gt;
+&lt;head&gt;
+&lt;body&gt;
+
+ don't change anything yet.  
+
+ step 4: view the document in mosaic.
+
+in the other mosaic window you created,
+click on the open... button at the bottom.  a dialog box with a 
+text field and some buttons will appear.  if there is anything in the text 
+field, press the clear button.  now type
+
+http://www.cs.wisc.edu/~username/
+
+ in the text field.  if you make a mistake, the backspace key
+should delete the character before the cursor, and the delete key 
+should delete the character after it. 
+
+ in the other mosaic window there should be a short list of directories
+and files, one of which is username.html.  just as the 
+string ~username/public/html/ is a complete path in the
+filesystem pointing to the directory you created, the string
+http://www.cs.wisc.edu/~username/ is a complete path (or
+full url) to
+that same directory in the web namespace.  if you had wanted to load the
+document directly, you could have entered
+
+http://www.cs.wisc.edu/~username/username.html
+
+ however, the server was nice enough to make a directory listing for you,
+so you can just click on the name of the file to view it.  
+
+ step 5: examine the file.
+
+ the file you are editing is written in html, the hypertext markup 
+language.  we are not going to go into detail about html here, but there is
+a reasonably complete description in another 
+document.  here is an 
+over-simplified summary of html markup.  as you read it, look for examples 
+in the file:
+
+ 
+ markup in html is done with elements and entities.
+ elements consist of tags, which are names inside
+angle brackets, as in &lt;title&gt;.
+ tag names are not case-sensitive.
+ some elements are containers, which consist of two
+tags: a start tag and an end tag.  start tags and end tags
+are generally the same, except that end tags start with a "/".  for
+example, if &lt;foo&gt; is a start tag, &lt;/foo&gt; is
+its end tag.  whatever is between the start and end tags is inside the 
+container.
+ entities are names that start with &amp; and end 
+with ; that represent characters which cannot normally 
+be written in ascii, and characters used for markup.  
+ the only entities you need to know right now are &amp;lt; 
+for &lt;, &amp;gt; for &gt;, and &amp;amp;
+for &amp;.  
+
+
+ also notice that tabs, spaces, and newlines 
+separate words, but are otherwise interchangeable.  you can format your
+html document however you want to, and any combination of "whitespace" 
+characters will not have an effect on the finished product.  while there
+is a blank line between paragraphs in the sample file, it is the 
+&lt;p&gt; tags that cause space to be included in the
+mosaic window.
+
+ to make an html document, you simply need to know the elements and 
+entities and how to use them.  the use of entities is very simple.  whenever
+you need to enter a character special or markup character into your document,
+instead of typing the character itself you type the entity.  the use of 
+elements is more complicated, so for now we will just tell you what you
+need to know to alter the sample home page.
+
+ there are a number of tags that get included in every document that we
+will not discuss.  here we will only discuss the title, and the 
+body.
+
+ step 6:  edit the title.
+
+ the third line of the sample home page looks like this:
+
+&lt;title&gt;felix's home page&lt;/title&gt;
+
+ if you look at the top of your mosaic window where it says "document 
+title:" you will see that the string in the title container is
+displayed there.  different browsers use the title in different ways.  the
+title should be short and summarize the contents of the document.  in this 
+case you can replace "felix" with your own name.  
+
+ after you have made the change, save the file without exiting your editor
+and press the reload button on the bottom of the other mosaic window.  
+the new title should appear.  from now on, whenever you make changes to the 
+file you can save it in your editor and reload it into your browser to see 
+the result.
+
+ step 7:  edit the body.
+
+ the body is everything between the &lt;body&gt; and
+&lt;/body&gt; tags (if you look at the end of the document, you
+will see the &lt;/body&gt; tag).  the body is where you put your
+text, entities, and most of the elements.  the sample file has a number of 
+elements you might want to use in your own home page.  don't delete a
+sample element until you have left at least one example of its use in 
+the file or decided you don't want to use it.
+
+ as you look at the sample page in your editor and in mosaic it should
+become clear what the different elements do in mosaic for x.  
+different browsers have different interpretations of the tags.  here is a 
+list of the elements in the document and what they do in mosaic:
+
+
+ &lt;b&gt; is a container that emboldens its contents.
+ &lt;em&gt; is a container that italicizes its contents (em stands for emphasis).
+ &lt;h1&gt; is a container that creates a heading. 
+ &lt;p&gt; separates paragraphs.
+ &lt;ul&gt; creates a "bullet-ed list" (ul stands for unordered list).
+ &lt;li&gt; is used to specify list items inside a list container.
+ &lt;a&gt; is used to make a link to another document.
+ &lt;img&gt; is used to include a picture.
+
+
+ there are also a number of elements not included in the sample document.  
+here is a list of some of them:
+
+
+ &lt;h2&gt; through &lt;h6&gt; are like &lt;h1&gt; and create headings with progressively smaller fonts.
+ &lt;ol&gt; is like &lt;ul&gt;, but creates a numbered
+list (ol stands for ordered list).
+ &lt;hr&gt; makes a horizontal rule.
+ &lt;br&gt; inserts a line break.
+
+
+ two of the included tags, &lt;a&gt; and &lt;img&gt;, 
+had attributes.  the a container was used to create a link to 
+another document, which was specified in the 
+href="/cgi-bin/finger?keeper@spacely" attribute.  in this case,
+that document is a script that fingers a user (keeper@spacely) and 
+creates a document with the result.  note that path (url) to the
+document starts with a "/".  when you link from one document to another 
+in the web, you can refer to the new location relative to the current one.
+in this case, we could omit the http://www.cs.wisc.edu because
+both documents are on the same server.  
+
+ the &lt;img&gt; tag, as we said before, is used to include a
+picture.  the picture must be either an x bitmap, or a gif file.  the 
+src attribute is used to specify the location of the picture.  the 
+filenames of x bitmaps must end with the extension .xbm and gif 
+filenames must end in .gif.  if you had a gif file called 
+me.gif, and you wanted to include it in your document, you could
+put it in the same directory where the document is located, and use the
+tag &lt;img src="me.gif"&gt;.  the alt attribute specifies
+a string to be printed if a browser cannot display pictures. 
+
+ now that you know what the elements do, you should figure out what 
+you want to say (the hard part), and then use the tags and text to create the 
+"look" you want.  remember that you can preview what you create in mosaic
+as you go along by saving the document and clicking the reload
+button.
+
+ every night, every page that matches the pattern 
+~username/public/html/username.html is mapped
+into the master list of home pages.
+
+ step 8:  read the other documents.
+
+ you don't have to read them now, but before you do more work with html or 
+the server you should get the complete description of how they work.  in 
+particular, read the html document.  
+using mosaic to test your html for
+correctness can leave your documents looking pretty in mosaic, and 
+non-sensical in other browsers.

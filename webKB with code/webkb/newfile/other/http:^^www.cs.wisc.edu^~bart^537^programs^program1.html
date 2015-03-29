@@ -1,0 +1,172 @@
+cs 537 - programming assignment #1
+
+
+
+
+
+
+university of wisconsin-madison
+
+computer sciences department
+
+
+
+
+cs 537
+
+spring 1996 
+bart miller
+
+
+programming assignment #1
+
+(due thursday, february 8, at 5pm)
+
+
+
+i/o processing in c++
+there are several goals for this assignment.
+first, you will get a chance to familiarize yourself with the c++
+programming language.
+second, you will learn how to use some of the i/o facilities and library
+functions provided by unix and c++.
+third, you will write code that will be useful for future assignments.
+
+your assignment is to write a program that takes an input file, reads through
+it line by line, do some simple processing on each line, and then produces
+some output.
+your program, to be called
+writer,
+will be invoked:
+
+	writer filename
+
+your program will open file
+filename
+and process it as described below in
+program details.
+unix manual pages
+you should become familiar with the unix manuals and the online
+"man" facility.
+this will be a great help in working on these assignments.
+for example, if you wanted to know how the
+fork
+(create process) system call works, you would type:
+
+	man fork
+
+the unix manual is organized into many sections.
+you will be mainly interested in the first three sections.
+section 1 is for commands, like
+ls,
+g++,
+or
+cc.
+section 2 is for unix system calls (calls directly to the unix kernel),
+such as
+fork,
+open,
+or
+read.
+you will typically not
+use section 2.
+most of what you use will be in the unix library routines in section 3.
+these are calls such as
+atof,
+or
+strcpy.
+more details about the online manual will be given in discussion sections.
+
+program details
+
+your program will first print out the name of the input file.
+then it will open a file (perhaps using the
+ifstream
+constructor), read each
+line (using the
+getline method)
+and process them.
+for more information on c++ input/output, you can read the c++ book or
+type
+
+	man iostream
+	man fstream
+
+
+each line is of the form:
+
+character-string  number1  number2
+
+each of these three pieces will be separated by any number of blank characters
+(spaces or tabs).
+the numbers can have decimal points and fractional parts.
+for each input line, you will print to standard output (using
+cout )
+a line containing the
+character-string,
+the two numbers, and the sum of the two numbers.
+
+the program will continue until the end of the input file.
+
+unix supplies several library routines to make this assignment easier.
+for example, to convert a ascii string to a number, you can use
+atoi
+or
+atof
+(pronounced,
+"a to i",
+ascii to integer, and
+"a to f",
+ascii to float).
+use the "man"
+command to look up the details.
+to copy strings, you can use
+strcpy;
+to compare strings, you can use
+strcmp.
+do a
+man string
+to look up these routines.
+command line parameters
+
+unix and c++ make command line parameters easily available.
+the main procedure in your program should look like:
+
+	#include &lt;iostream.h>
+	#include &lt;fstream.h>
+
+	int
+	main (int argc, char *argv[])
+	{
+
+	    cout 
+
+the command line is processed (by the shell) into a list of character strings,
+one for each argument (including the command name).
+you can reference the integer
+argc
+to tell you the number of arguments.
+the array
+argv
+is the list of strings.
+so, if you typed in the command appearing at the beginning of this assignment,
+argc would contain the value 2,
+argv[0]
+would contain the string "writer",
+and
+argv[1]
+would contain the
+string "filename".
+deliverables
+
+you should hand in a print-out of your program and output from your program
+on the sample files that we will provide.
+we will announce in class where to find these files.
+
+
+
+
+last modified:
+fri jan 26 11:26:21 cst 1996
+by
+bart

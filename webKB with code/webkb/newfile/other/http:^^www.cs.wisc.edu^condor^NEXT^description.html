@@ -1,0 +1,49 @@
+next! description
+
+
+
+
+
+
+what is next!?
+
+
+
+
+
+the goal of the next! project is to develop tools for exploratory
+analysis of large, non-traditional datasets.  the name of the project
+is an acronym (non-traditional data exploration toolkit) that is
+also a play on the fact that a major emphasis is on supporting
+*sequence* data exploration.  we use the term *sequence* broadly,
+and include as examples trace data, time series data from a variety 
+of domains, and satellite or sensor observations.
+
+the next! project has three main components.  first, there is a
+visual data exploration tool called 
+ devise 
+that supports a
+paradigm called *visual queries*.  each visual query is in essence
+an abstract description of how a collection of sequence data 
+is to be mapped to the user's screen.  the query serves as a
+template that can be applied to any data set with the appropriate
+schema, and the visual presentation can subsequently be explored
+in detail by standard operations such as scrolling, zooming and
+probing.
+
+the second component of next! is a system called 
+ seq 
+that supports
+sql-style queries over sequence data.  seq is distinguished from
+standard sql in that it provides easy (and efficient) ways to
+pose queries that use the sequentiality in the data set, for
+example, ``find the n-day moving average of ibm''.  seq can be
+used in conjunction with devise, with devise serving as a visual
+browser and seq as a data manipulation backend.
+
+the third component of next! is an on-going effort to investigate
+novel ways of analysing large data sets (often called *data mining*).
+in particular, we have developed a tool called 
+ birch 
+that can
+effectively cluster very large data sets.

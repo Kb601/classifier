@@ -1,0 +1,94 @@
+cse 322  
+assignment 2 solution set  
+friday, january 19, 1996
+
+
+
+
+
+
+
+                 
+ next:    about this document 
+  
+
+cse 322  
+assignment 2 solution set  
+friday, january 19, 1996
+
+
+
+ 
+prove that  for all .
+
+we can prove this by induction on i:
+
+basis: the statement is true for i = 0 because  for
+any x and so
+
+inductive hypothesis: assume that the statement is true for i=k:
+
+inductive step: from this we need to show it is true for i=k+1:
+
+by induction, the statement is true for all .
+
+ regular expressions
+ the set of strings over  that contain the substring aa exactly once:
+
+ the set of strings over  that do not contain the substring aa:
+
+ the set of strings over  where the total number of a's and
+b's is 3:
+
+
+ 
+consider the equation:
+
+where a and b are fixed sets and x is a set variable.  assume that
+b is not empty.  
+ argue that  is a solution to the equation.
+
+to do this, we verify that  below:
+
+
+ argue that if x solves the equation, then .
+
+let x be a solution to the equation.
+one way of proving that  
+is by showing that  for
+any .  intuitively, we can see this by substituting
+ for x into the equation a few times:
+
+first we notice that  = x, so it must be true that
+.  similarly, after the first substitution we can say that
+, so
+.  thus, for any i we can apply i substitutions to
+get . the union of these is also a subset of x, so
+
+
+
+the answer above is all i really wanted, 
+although to be truly formal we should prove 
+that  for all  by induction:
+
+basis: we know that  from above.
+inductive hypothesis: assume  for some .
+inductive step: from the inductive hypothesis, we know that
+.  this means there must be some y where 
+.  substituting this into the equation we get
+.  
+from this we can see that that  .
+
+therefore,  for all .
+
+ 
+ 
+    about this document ... 
+
+                
+ next:    about this document 
+  
+ 
+
+james fix 
+mon jan 29 18:15:01 pst 1996

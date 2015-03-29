@@ -1,0 +1,314 @@
+m-eng projects
+
+
+
+masters ofengineeringprojects 
+
+
+this place is a first attempt at collecting m-eng projects. the goal is
+to provide a show-case for sucessfully completed projects as well as
+ideas for new projects. contributions are welcome...
+
+
+this page is from 1995! some of the projects might still be available.
+
+
+
+a few reminders:
+
+this is an incomplete list. if you have a specific topic in mind, feel
+free to contact the appropriate faculty member directly.
+many of the projects can be adapted from 3 to 6 credits depending on
+how much work you can put in.
+you need to sign up 'til sept. 30th if you want to get project credits
+this semester. however, there is generally no reason to. you can
+do the project now and get credit in the spring...
+if you find that most of the interesting projects require knowledge
+you don't have, look into extending a course project into the m-eng
+project. that's the best way to get the background.
+
+
+project proposals
+
+claire cardie
+
+
+
+build any of a number of statistical models of language
+processing to be used for tasks such as part-of-speech tagging and
+word sense tagging of natural language text.  we will evaluate the
+models by testing their performance on a corpus of real-world text
+and comparing the results to the performance of an existing language
+learning system that relies instead on symbolic machine learning
+techniques. note: no knowledge of linguistics is required.
+
+we have a language acquisition system that uses symbolic machine
+learning techniques to perform a number of disambiguation tasks on
+natural language texts at the word level (e.g., decide the
+appropriate meaning or part of speech of a word in a given context).
+this project would involve extending the system to handle any of a
+number of higher level disambiguation tasks like (1) deciding what
+phrase a prepositional phrase modifies (e.g., "i went to the store
+in june" vs.  "i went to the store in ithaca"), or (2)
+distinguishing metaphorical from literal uses of a phrase (e.g.,
+deciding that "...killing two birds with one stone" does not imply a
+real murder).  note: no knowledge of linguistics is required.  
+
+docu-vault project: the file cabinet of
+the future.
+
+
+
+nikos chrisochoides
+
+
+a number of projects on problem solving environments
+
+robert constable
+
+any project i offer will be part of cs572 and will
+assume knowledge of nuprl taught in that course.
+i will have several ideas for projects during the
+course.
+
+caroline hecht
+
+a number of projects
+are available in the theory center.
+
+thomas henzinger
+     
+for the following projects, you should be familiar with c and c++ 
+programming, finite automata theory, a little bit of logic, and 
+college level calculus.  the additional requirements for each project 
+are listed below.
+          
+
+     
+hybrid system simulation:  write a simulator for hybrid systems, 
+which are distributed real-time systems that consist of interacting
+digital and analog components.
+
+user interface:  write a parser for a graphical hybrid system 
+description language, which provides the input for the hybrid system 
+simulator.  you have to know x-window programming.
+     
+scientific visualization:  use computer graphics and animation
+tools to visualize the output of the hybrid system simulator.
+you have to know x-window programming, some computer graphics,
+and an animation tool.
+     
+programming language translation:  write a compiler to translate 
+one hybrid system description language into another.  you have to know 
+lex and yacc.
+
+
+
+
+bruce land
+
+possible projects:
+
+visuailzation of parallel algorithms
+dstool interface to dx
+greyscale stereogram by cycling through several b/w stereograms
+mosaic document structure browser
+compress/decompress modules for network computing
+mosaic conversion of cs418/417 documents
+parallelize tensor modules-eigenvalue/vector, arithmetic
+matrix inversion module
+high dimensional vis development -- rotations, figure id, correlations,
+hyperplanes
+neural simulator module, single compartment, nonlinear cell or abstract
+neuron
+robot vision/pattern recognition modules
+vector field texture calculation --siggraph93
+surface integral module -- sum over s of (v dot n)
+oriented particles -- siggraph 92, page 185
+sea shell modeling -- siggraph 92, page 379
+evolution for graphics -- siggraph 91, page 319
+extraction of geometry from volume data -- siggraph 91, page 217
+particle animation using data parallel methods -- siggraph 90, page 405
+surfaces and spherical harmonics -- ieee computer graphics july 88
+distributed vol rendering -- ieee computer graphics, nov 1993, p16
+distributed wave computation -- sc'93 proceedings, p22
+parallel rendering -- sc'93 proceedings, pp 690, 699, 709
+antialias filter module for image output (convolution, also sig91 page
+133 \& sig94 page 59)
+ntsc filter module
+psych application visual stimuli
+hdf to dx \& dx to hdf data translator, particularly image format
+dx to mathematica using mathlink from wolfram research
+dx to matlab
+dx module to perform surface construction from sample points
+wavelet transform
+
+
+joe skovira
+
+parallel job
+scheduling.
+
+brian smith
+
+chunguang sun
+
+parallel graph-theoretic algorithms for sparse matrix factorizations
+
+we are interested in the design and implementation
+of scalable parallel algorithms for three fundamental
+sparse matrix problems: sparse cholesky factorization
+sparse lu factorization and sparse qr factorization.
+a typical sparse matrix factorization algorithm consists of 
+a symbolic phase and a numeric phase. in the symbolic phase,
+the adjacency graph of a sparse matrix is reordered and 
+the symbolic structure of its matrix factors is determined.
+in the numeric phase, the numerical values of the matrix 
+factors are computed. while several efficient parallel 
+algorithms for the numeric phase have recently been proposed,
+efficient and practical parallel algorithms for the symbolic phase 
+are yet to be developed. among the projects in this area are:
+
+develop parallel algorithms for reordering a sparse matrix
+and implement them on the ibm sp2.
+
+develop parallel algorithms for structural prediction
+in a sparse matrix factorization and implement them on the ibm sp2.
+
+if you are interested in these projects, please
+contact chunguang sun, 729 rhodes hall(csun@cs.cornell.edu).
+
+
+steve vavasis
+
+qmg
+is a c++ software package for finite element mesh generation.
+i have several projects connected with qmg including graphics,
+interoperation with other software packages, and extensions to
+the basic algorithms.  prerequisites for this project are knowledge
+of c++, matlab, and a numerical analysis course (e.g. cs421).
+
+thorsten von eicken
+
+
+a 155mbit atm network with 8 sparc-20's is available for
+projects. some of thes
+involve parallel programming for which the ibm sp-2 is also available.
+
+www project: develop extensions to www servers,
+protocols, and browsers to enhance the support of video, interactivity, 
+customizability, etc...
+
+docu-vault project: the file cabinet of
+the future.
+
+
+
+werner vogels
+
+
+air-traffic simulator project: build
+the various blocks that make up a real air-traffic control system so
+that we can construct an experimental environment for the next
+generation air traffic control systems.
+
+horus groupware project: build a
+collection of small modules using horus that will assist the software
+designer in building a wide variety of groupware applications.
+
+(distributed) operating systems research 
+projects
+to give students the opportunity to get their hands dirty on
+some real operating systems research we are offering
+a number of projects based on the
+ plan9 
+distributed operating system and on the
+ vsta 
+public micro kernel.
+
+
+
+ramin zabih
+
+
+
+write a package for displaying images and color overlays, probably on top of
+x11r6 or opengl.
+
+build a system for finding and tracking people in a sequence of images.
+experience with c and images required.
+
+experiment with the use of visual motion for image compression.
+
+write c programs that write c programs for extremely efficient local image
+processing.  experience with images not required, but extensive experience
+with c (and perhaps some knowledge of lisp) is necessary.
+
+construct and benchmark algorithms for visual motion and stereo based on
+robust statistics (especially: least median of squares).  minimal experience
+with images is required.
+
+various projects
+in the robot-vision lab.
+
+
+
+
+rich zippel
+
+there are two basic areas in which we are active, development of very high
+level software development tools, especially in scientific computation, and
+infrastructure to support collaboration among people separated by time and
+space.
+
+in the very high level software area we are developing a new programming
+paradigm, where very high level specifications of computations are
+converted to executable programs via a sequence of user controlled program
+transformations.  among the projects in this area are:
+
+
+
+develop and code new program transformations (e.g. for
+parallelization, new numerical computation techniques, or transformation
+that instantiate a particular concurrency control mechanism).
+
+by couple the existing transformations and external tools, perform
+some large scale simulations, e.g. bone growth, explosion of a comet,
+gravitation collapse of a pair of black holes.
+
+develop and improve the user interface to the program transformation
+process using either apple common lisp, unix emacs or the synthesizer
+generator.  since this our programs include descriptions of three
+dimensional objects this may include some novel interactions with graphics
+programs.
+
+linkage of program transformation technology with the theorem
+proving and computational logic techology being developed by prof.
+constable's group.
+
+
+
+for collaboration, we would like to integrate our tools and technologies
+with the emerging standards on the internet.  a few of these projects are
+listed below, but there are a wide number of different possibilities.
+
+
+
+the manuals for our tools have been written in framemaker. for
+highest quality printing, we would perfer to latex.  develop tools and
+processes so that world wide web documents (html) can be mantained in
+parallel with the framemaker documents.  develop automatic tools and
+processes for going back and forth between framemaker and latex.
+
+a www manual should be organized and linked in a different fashion
+than a printed manual.  develop mechanisms and guidelines to aid in
+maintaining printed and on-line manuals concurrently.
+
+develop databases and links between lotus notes and www for running a
+software development project.  how should bug tracking be handled,
+releases, versions of manuals, user's comments, demonstrations, etc.?
+
+
+
+
+for further information about this www page contact thorsten von eicken

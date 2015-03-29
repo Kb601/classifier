@@ -1,0 +1,91 @@
+a road map through nachos
+
+
+
+
+
+
+       
+ next: contents
+  
+
+a road map through nachos
+thomas nartendepartment of computer scienceslevine science research centerduke universitybox 90129 durham, n.c. 27708-0129    narten@cs.duke.edu
+wed jan  4 13:21:16 est 1995
+
+abstract:
+nachos is instructional software that allows students to examine,
+modify and execute operating system software. nachos provides a
+skeletal operating system that supports threads, user-level processes,
+virtual memory and interrupt-driven input output devices. nachos is a
+complex piece of software and it is difficult for beginning students
+(and instructors) to easily gain on overall understanding of the
+various system pieces and how they fit together.
+
+this document provides a road map to understanding the nachos system.
+it gives a high-level overview of the source code, focusing on the big
+picture rather than on the details.  it is not intended as a
+replacement for reading the source code.  rather, it is a companion
+that is intended to help students (and instructors) overcome the
+initial learning curve encountered when learning and using the system.
+
+
+ 
+ 
+ contents
+  introduction to nachos
+  nachos machine
+ 
+  machine components
+  interrupt management
+  real-time clock interrupts
+  address translation
+ 
+  linear page tables
+  software managed tlb
+ 
+  console device
+  disk device
+ 
+  nachos threads
+ 
+  mechanics of thread switching
+  threads &amp; scheduling
+  synchronization and mutual exclusion
+  special notes
+ 
+  user-level processes
+ 
+  process creation
+  creating a noff binary
+  system calls and exception handling
+  execution trace of user-level process
+ 
+  nachos filesystem
+ 
+  synchdisk
+  filesystem object
+  openfile object
+  file system physical representation
+ 
+  file header
+  directories
+  putting it all together
+ 
+ 
+  experience with nachos assignments
+ 
+  general tips
+  synchronization
+  multiprogramming
+  virtual memory
+  file system
+  common errors
+ 
+  mips architecture
+   about this document ... 
+
+ 
+
+ thomas narten 
+wed jan  4 13:19:55 est 1995

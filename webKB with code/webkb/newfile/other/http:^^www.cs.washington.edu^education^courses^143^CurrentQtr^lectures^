@@ -1,0 +1,139 @@
+cse 143 lecture notes
+
+
+cse 143 lecture notes
+
+
+
+lecture slides
+
+
+on-line versions of the lecture slides (6 per page) are available
+here, in postscript and acrobat formats.
+
+
+
+
+ administrivia, monday 9/30 [postscript
+| acrobat]
+
+ intro to abstraction, monday 9/30 [postscript
+| acrobat]
+
+ modules, monday 9/30, wednesday 10/2 [postscript
+| acrobat]
+
+ error handling, wednesday 10/2 [postscript
+| acrobat]
+
+ adts and classes, friday 10/4 [postscript
+| acrobat]
+
+ constructors, monday 10/7 [postscript
+| acrobat]
+
+ overloading, monday 10/7 [postscript
+| acrobat]
+
+ collection adts, wednesday 10/9 [postscript
+| acrobat]
+
+ more collection adts, monday 10/14 [postscript
+| acrobat]
+
+ pointers and dynamic memory allocation, friday 10/18 [postscript
+| acrobat]
+
+ linked lists, monday 10/21 [postscript
+| acrobat]
+
+ insertion &amp; removal in linked lists, wednesday 10/23 [postscript
+| acrobat]
+
+ doubly-linked lists, friday 10/25 [postscript
+| acrobat]
+
+ pointers, arrays, and copying, friday 10/25 [postscript
+| acrobat]
+
+ delete, friday 10/25 [postscript
+| acrobat]
+
+ pointers and addresses, monday 10/28 [postscript
+| acrobat]
+
+ summary of pointers, wednesday 10/30 [postscript
+| acrobat]
+
+ recursion, friday 11/1 [postscript
+| acrobat]
+
+ algorithmic efficiency &amp; big-o notation, monday 11/4 [postscript
+| acrobat]
+
+ analysis of searching and sorting, wednesday 11/6 [postscript
+| acrobat]
+
+ hashing, wednesday 11/13 [postscript
+| acrobat]
+
+ trees, friday 11/15 [postscript
+| acrobat]
+
+ binary search trees, monday 11/18 [postscript
+| acrobat]
+
+ tree traversals, friday 11/22 [postscript
+| acrobat]
+
+ syntax trees, monday 11/25 [postscript
+| acrobat]
+
+ templates, wednesday 11/27 [postscript
+| acrobat]
+
+ object-oriented programming, monday 12/2 [postscript
+| acrobat]
+
+ 
+
+on the lab machines acrobat reader is automatically
+started up by netscape when you follow the link.
+
+
+on other macs, pc compatibles, and some versions of
+unix acrobat reader may be downloaded free directly from adobe.  this web
+site also includes instructions for setting your web browser to invoke
+acrobat reader automatically.  some versions of ghostscript also
+support acrobat. 
+
+
+
+extra lecture material
+
+i've produced a revised, tested implementation of the two-way-list adt using
+doubly-linked lists as the implementation, correcting the
+implementation slides from friday 10/25: 
+
+ twlist.h
+ twlist.cp
+ main.cp
+(a test suite)
+ 
+
+i've also produced a template version of this interface and
+implementation, which can be instantiated with any type of element
+automatically: 
+
+ twlist-template.h
+ twlist-template.cp
+ main-template.cp
+(a test suite)
+ 
+these template versions work under symantec c++ on the mac, and i
+think they'll compile correctly on other c++ systems that support
+templates, but let me know if you find problems. 
+
+
+
+cse143-webmaster@cs.washington.edu

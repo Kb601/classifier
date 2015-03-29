@@ -1,0 +1,63 @@
+homework #3, part ii solutions
+
+
+
+homework #3, part ii solutions
+
+
+ problem 6 a schematic of a 16-bit alu.  there
+are several schematics which are part of this design, and they are listed
+here. 
+
+16-bit and unit 
+
+16-bit logical shift left (lsl) unit 
+
+2x1 16-bit mux 
+
+these next 2 components were created in homework #2:
+
+16-bit cla adder 
+
+4x1 16-bit mux 
+
+
+
+
+
+ problem 7
+a schematic of a memory unit, plus its
+component part schematics:
+
+memory control unit 
+
+ram module 
+
+
+
+
+
+ problem 8 
+
+implementing mycalc requires you to use the alu and memory module that you
+created in the previous two design questions, plus you must make a program
+counter which can count up by 1.  beyond this, the rest of the design is a
+finite state machine which must be able to cycle through the instructions
+in the memory (which you pre-loaded into the ram) and execute them.  the
+control for mycalc must be able to synchronize the actions of the memory
+and the program counter.  the alu is purely combinational, so it deosn't
+really require synchronization.  however, it would be a nice feature if
+the output of mycalc (i.e., the output of the alu) was tristated off if
+the value was invalid (before the first instruction is executed). 
+
+
+to prove that mycalc works correctly, it must be simulated with a wide
+range of input sequences that exercises all of mycalc's capabilities.  the
+simulation results must illustrate that every part of it works - hiding
+something that doesn't work will not suffice!!
+
+
+ 
+
+
+course account ece552

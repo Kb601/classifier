@@ -1,0 +1,138 @@
+hypertext c-code 
+  
+  
+
+    hypertext c-code experiment 
+  
+  this experiment grew out of the observation that the  etags
+ command (used in conjunction with  emacs  tags
+functions) builds a general function and type definition cross
+reference for a body of c-code. this tags file can be used to generate
+hypertext versions of the source code. 
+  this page is a demonstration of the  tags2html  utility
+that i wrote. i took a small program, obtained a flow graph (using the
+ cflow  command ) and then generated hypertext versions of
+the source and flow graph automatically. 
+  for more information, send me mail at sammy@cs.utexas.edu 
+
+  
+
+    flow-graph
+    
+    
+1	display_tree: () void, &lt;bdd_graphics.c 27&gt;
+2		printf: () int, &lt;&gt;
+3		is_leaf: () int, &lt;tree.h 74&gt;
+4	redraw_bdd_cb: () void, &lt;tree.h 232&gt;
+5		redraw_bdd: () void, &lt;tree.h 186&gt;
+6			xsetlineattributes: () int, &lt;&gt;
+7			xmstringextent: () int, &lt;&gt;
+8			xmstringdraw: () int, &lt;&gt;
+9			xdrawrectangle: () int, &lt;&gt;
+10			is_leaf: 3
+11			xdrawline: () int, &lt;&gt;
+12	go_away_cb: () void, &lt;bdd_graphics.c 243&gt;
+13		xtparent: () int, &lt;&gt;
+14		xtunrealizewidget: () int, &lt;&gt;
+15		cleanup: () void, &lt;tree.h 129&gt;
+16			is_top: () int, &lt;tree.h 65&gt;
+17			split: () void, &lt;tree.h 49&gt;
+18			cfree: () int, &lt;&gt;
+19	build_bdd_cb: () void, &lt;bdd_graphics.c 252&gt;
+20		xmtextgetstring: () int, &lt;&gt;
+21		parse_and_build_bdd: () * struct, &lt;bdd_grammer.y 68&gt;
+22			yyparse: () int, &lt;bdd_grammer.y 299&gt;
+23				yyerror: () int, &lt;bdd_grammer.y 83&gt;
+24					printf: 2
+25				yylex: () int, &lt;lex.yy.c 114&gt;
+26					setlocale: () * char, &lt;&gt;
+27					yylook: () int, &lt;lex.yy.c 512&gt;
+28						yywinput: () int, &lt;lex.yy.c 913&gt;
+29							mbsinvalid: () int, &lt;&gt;
+30							mbtowc: () int, &lt;&gt;
+31						yywunput: () void, &lt;lex.yy.c 933&gt;
+32							wctomb: () int, &lt;&gt;
+33						yyback: () int, &lt;lex.yy.c 823&gt;
+34						yywreturn: () int, &lt;lex.yy.c 942&gt;
+35							wcstombs: () unsigned long, &lt;&gt;
+36						yywoutput: () void, &lt;lex.yy.c 928&gt;
+37							wctomb: 32
+38					yywrap: () int, &lt;&gt;
+39					new: () * struct, &lt;tree.h 15&gt;
+40						calloc: () int, &lt;&gt;
+41					atoi: () int, &lt;&gt;
+42					var_tree: () * struct, &lt;tree.h 154&gt;
+43						new: 39
+44						insert: () void, &lt;tree.h 39&gt;
+45					fprintf: () int, &lt;&gt;
+46				combine_bdd: () * struct, &lt;tree.h 130&gt;
+47					combine: () * struct, &lt;tree.h 78&gt;
+48						is_leaf: 3
+49						apply_op: () int, &lt;tree.h 96&gt;
+50							fprintf: 45
+51						new: 39
+52						level: () int, &lt;tree.h 84&gt;
+53							is_leaf: 3
+54						insert: 44
+55					reduce_by_equality: () int, &lt;tree.h 33&gt;
+56						is_leaf: 3
+57						find_reduce_equals: () int, &lt;tree.h 10&gt;
+58							is_leaf: 3
+59							eq: () int, &lt;tree.h 195&gt;
+60							replace: () void, &lt;tree.h 173&gt;
+61								split: 17
+62								insert: 44
+63							cleanup: 15
+64					reduce_by_redundancy: () int, &lt;bdd_core.c 53&gt;
+65						is_leaf: 3
+66						replace: 60
+67						cleanup: 15
+68					cleanup: 15
+69				new: 39
+70			cleanup: 15
+71		xtappcreateshell: () int, &lt;&gt;
+72		xtvacreatemanagedwidget: () int, &lt;&gt;
+73		xtaddcallback: () int, &lt;&gt;
+74		xtrealizewidget: () int, &lt;&gt;
+75		build_graphics_info: () void, &lt;tree.h 152&gt;
+76			count_levels: () int, &lt;bdd_graphics.c 55&gt;
+77				is_leaf: 3
+78				level: 52
+79			count_by_level: () int, &lt;tree.h 73&gt;
+80				level: 52
+81				is_leaf: 3
+82			assign_by_level: () void, &lt;tree.h 100&gt;
+83				level: 52
+84				is_leaf: 3
+85				xmstringcreatesimple: () int, &lt;&gt;
+86				sprintf: () int, &lt;&gt;
+87		printf: 2
+88		xtsetkeyboardfocus: () int, &lt;&gt;
+89	exit_cb: () void, &lt;bdd_graphics.c 286&gt;
+90		exit: () int, &lt;&gt;
+91	main: () int, &lt;bdd_graphics.c 291&gt;
+92		xtappinitialize: () int, &lt;&gt;
+93		xtvacreatemanagedwidget: 72
+94		xtaddcallback: 73
+95		xtrealizewidget: 74
+96		xtsetkeyboardfocus: 88
+97		xtdisplay: () int, &lt;&gt;
+98		xloadqueryfont: () int, &lt;&gt;
+99		printf: 2
+100		xmfontlistcreate: () int, &lt;&gt;
+101		xtappmainloop: () int, &lt;&gt;
+102	bdd_input: () char, &lt;lex.yy.c 67&gt;
+103		printf: 2
+104	bdd_unput: () int, &lt;lex.yy.c 81&gt;
+105		printf: 2
+106	yyinput: () int, &lt;lex.yy.c 955&gt;
+107	yyoutput: () void, &lt;lex.yy.c 959&gt;
+108	yyunput: () void, &lt;lex.yy.c 963&gt;
+109	yymbinput: () int, &lt;lex.yy.c 967&gt;
+110		yywinput: 28
+111	yymboutput: () void, &lt;lex.yy.c 971&gt;
+112		yywoutput: 36
+113	yymbunput: () void, &lt;lex.yy.c 975&gt;
+114		yywunput: 31
+115	yymbreturn: () int, &lt;lex.yy.c 979&gt;
+116		yywreturn: 34

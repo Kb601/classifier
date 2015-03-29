@@ -1,0 +1,94 @@
+howard pu's home page 
+
+')
+        document.write ('')
+        document.write ('')
+        var bannerid = null
+        rollmsg()       //get the banner rolling
+}
+function rollmsg() {
+        nowmsg=document.banner.banner.value
+        nowmsg=nowmsg.substring(1,nowmsg.length)+nowmsg.substring(0,1)
+        document.banner.banner.value = nowmsg
+        bannerid=settimeout("rollmsg()",250) 
+}
+var bannerid = 0
+// done hiding -->
+
+
+
+ 
+ 
+ welcome to howard pu's home page 
+
+ 
+banner("for god so loved the world, that he gave his only begotten son, that whosoever believes in him should not perish, but have ever lasting life. (john 3:16)",70)
+ 
+  
+
+  
+ 
+
+ 1974 be computer science, 
+     university of tamkang, taiwan
+ 1976 mba management information systems, university of tamkang
+ 1988 ph.d. information systems, 
+     university of pittsburgh
+ 1988 assistant professor, 
+     computer information science, 
+     csu
+ 1995 associate professor, computer information science, csu
+
+
+
+
+
+
+cis 306, fall 1996
+ 
+
+
+what's out there
+
+
+using sybase sql server on grail 
+
+
+
+
+
+    advanced html/images/javascript learning 
+
+
+
+  
+
+dr. howard pu's office: uc 483 phone: (216)687-3685 fax: (216)687-5448  
+
+
+pu@cis.csuohio.edu
+
+
+please type any questions, comments, or suggestions
+on how i can improve this site to better serve my readers, in the box below.
+don't forget to include your return e-mail address if you're posting a
+question.
+
+
+comment,
+question, suggestion:
+
+my e-mail address is
+
+
+
+
+
+
+
+
+you visited this page at ",rightnow,
+   "")
+  document.write("this page was last modified at ",
+    document.lastmodified," ")
+//-->

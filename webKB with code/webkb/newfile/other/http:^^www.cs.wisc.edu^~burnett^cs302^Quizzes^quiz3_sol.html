@@ -1,0 +1,63 @@
+solutions to quiz three
+
+
+solutions to quiz three
+the quiz itself
+disclaimer: answer key code has not been tested.
+
+ 
+ for loops
+
+
+	int i, j;
+	for (i = 9; i >= 1; i--) {
+
+	   for (j = i; j 
+
+working with structures.
+
+
+	
+	write a definition for a struct apptpage (appointment page).
+	each apptpage should have a field for the date and a field
+	for the number of appointments. (3 points)
+
+
+	struct apptpage {
+	   date date;
+	   int num_appts;
+	};
+
+
+	write a code segment that declares an appointment page variable,
+	sets the date to october 31 and sets the number of appointments to 5.
+	
+
+
+	apptpage ap;
+	ap.date.month = oct;
+	ap.date.day = 31;
+	ap.num_appts = 5;
+
+or
+
+	apptpage ap = {{oct, 31}, 5};
+
+	
+	write a function that takes a date and returns a logical
+	value based on whether that date is valid or not.
+
+
+	int validdate(date d) {
+
+	   int valid;  // 1 if valid, 0 if invalid
+
+	   switch (d.month) {
+	      case jan:
+	      case mar:
+	      case may:
+	      case jul:
+	      case aug:
+	      case oct:
+	      case dec:
+	         valid = (d.day >= 1 && d.day = 1 && d.day = 1 && d.day

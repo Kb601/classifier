@@ -1,0 +1,139 @@
+recent zpl language changes
+
+
+  recent zpl language changes
+
+
+
+
+
+the changes below are effective july 25, 1996.
+
+the newly installed version of zpl is improved in two ways:  a 
+multitude of small language changes have been incorporated to make 
+the language more convenient/powerful, and many bugs have been 
+fixed.  the resulting compiler is considerably more stable, and the 
+language is more convenient.  however... 
+
+most existing zpl programs will have to change somewhat.
+
+though possibly causing some inconvenience for the moment, this is 
+a one-time change.  zpl is essentially stable, with all subsequent 
+research being applied to a new language.
+
+the following language feature changes will likely require 
+modifications to existing programs: 
+
+
+   some data type have been introduced, eliminated, or renamed.  
+       signed and unsigned byte data types are now supported (sbyte 
+       and ubyte), and unsigned char no longer exists.  the
+       unsigned data types have been renamed as summarized below.
+
+        unsigned shortint ---> ushortint
+        unsigned integer  ---> uinteger
+        unsigned longint  ---> ulongint
+
+
+  exponentiation added.  the binary operator ^  has been added.  the 
+expression a^b raises a to the b power. the compiler generates a 
+direct evaluation when b is an integer constant 2, 3 or 4. all other 
+cases compile to a call on pow().  the functions sqr() and cube() have 
+been removed.
+
+   bit operations have been changed.
+
+        &  --->  band(a,b)     bitwise and of integers a, b
+        |  --->  bor(a,b)      bitwise or of integers a, b
+        ~  --->  bnot(a)       bitwise negation of integer a
+        ^  --->  bxor(a,b)     bitwise exclusive or of integers a, b
+          bsl(a,b)      integer a left shifted b bit positions
+        >> --->  bsr(a,b)      integer a right shifted b bit positions
+
+
+  logical operations have been changed.
+
+        and ---> &
+        or  ---> |
+        (! continues to be correct for logical negation)
+
+
+  compound assignments >= have been removed.
+
+  double brackets may optionally be removed in most instances.
+dynamic region specifiers not involving prepositions do not require
+double brackets.  thus
+
+        [[1..m, i..n]]  --->  [1..m, i..n]
+        [[1..m, *]]     --->  [1..m, *]
+
+but
+
+        [[1..m,i..n] at west]
+        [[1..m, 1..n] with m]
+
+require both sets of brackets.  this is not yet implemented.
+
+  rank-defined arrays in procedure specifications have been 
+replaced with dynamic regions that inherit their dimension information 
+from the call site.  thus
+
+        procedure example (x, y:[2] float);
+
+becomes
+
+        procedure example (x, y:[,] float);
+
+the inheritance capability is available with all region specifications 
+-- empty dimensions are inherited from the enclosing scopes.
+
+  reduce, scan and flood operators have changed
+
+        reduce   +\  --->  +&lt;&lt;
+        scan     +\\ --->  +||
+        flood    \\\ --->  &gt;&gt;
+
+the heuristic here is that the result of reduce (&lt;&lt;) is "smaller" than 
+the operand, the result of scan (||) is the same size as the operand, 
+and the result of flood (&gt;&gt;) is "larger" than the operand.
+
+  region change removed.
+the region change construct, used to specify the regions for partial 
+reduce and flood, has been removed.  thus, the "left arrow" construct
+
+        [r 
+is no longer legal.  accordingly, the partial reduce and flood 
+operators have changed in that both specify a region following the 
+operator which describes the operand.  this region, together with 
+the region "on the statement" which describes the result, supply the 
+needed region information for these operations.  
+
+thus, for example in the partial reduction
+
+	[1..n, 1]  a := +
+
+the region following the operator is the region of the operand, i.e. 
+the region to be reduced.  the region on the statement specifies the 
+result region, which since relative to the operand region it has the 
+second as a collapsed dimension, the elements of each row are 
+added, and the result is stored into the first column of a.
+
+similarly, for the flood
+
+	[*,1..m]  fl := >>[3,1..m] a; -- replicate a's 3rd row into fl
+
+the region following the operand specifies the array to be 
+replicated, and the region on the statement specifies the region of 
+the result.  so, relative to the result region the first dimension is 
+collapsed.
+
+
+ 
+
+[
+zpl | 
+uw cse |
+uw
+]
+
+zpl-info@cs.washington.edu

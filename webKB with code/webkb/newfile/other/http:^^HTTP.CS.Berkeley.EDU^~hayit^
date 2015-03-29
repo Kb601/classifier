@@ -1,0 +1,175 @@
+list of publications
+
+
+
+ 
+list of publications
+
+
+
+
+ 
+journal papers
+
+
+  
+projection-based approach to image
+analysis: the position-orientation space
+ h. greenspan, m. porat and y. y. zeevi
+ pami-92  
+ ieee transactions on pattern analysis and machine intelligence (pami), vol. 14, no. 11, 1105-1110, 1992.
+
+
+ 
+learning texture discrimination rules in a multiresolution system
+ h. greenspan, r. goodman, r. chellappa and c. anderson
+  pami-94 
+ special issue on ``learning in computer vision" of the ieee transactions
+        on pattern analysis and machine intelligence (pami), vol. 16, no. 9, 894-901, september 1994.
+
+
+
+ 
+invariant texture recognition using a steerable pyramid
+ h. greenspan, s. belongie and  p. perona
+  pami-95 
+ submitted to pami, aug 1995.
+
+
+
+
+
+
+books and technical reports
+
+
+ 
+learning textures
+ h. greenspan
+ invited book-chapter in
+``early visual learning", shree nayar and tommy poggio eds.,
+ oxford university press, 1996.
+
+                               
+combining image processing and image compression schemes
+ h. greenspan and m.-c. lee
+ the telecommunications and data acquisition progress report 42-120, october-december  1994, pp. 54-77, jet propulsion laboratory,
+pasadena, ca.,  feb. 15, 1995.
+
+                               
+multiresolution image processing and learning for texture
+recognition and image enhancement
+ h. greenspan
+ ph.d. thesis, caltech - california
+institute of technology, june 1994.
+
+                                 
+image analysis in the combined spatial orientational space
+ h. greenspan
+ m.sc. thesis (in hebrew), technion - israel institute of technology,
+june 1989.
+
+
+
+
+ 
+
+conference papers
+
+ 
+finding objects in image databases by grouping
+ j. malik, d. forsyth, m. fleck, h. greenspan, t. leung, c. carson, s. belongie and c. bregl
+er
+ invited presentation at icip-96, special session on  "images in
+  digital libraries".
+ ieee international conference on image processing, september 1996.
+
+
+ 
+ finding pictures of objects in large collections of images
+d. forsyth, j. malik, m. fleck, h. greenspan, t. leung, s. belongie, c. carson and c. bregler
+ international workshop on
+      object recognition for computer vision.  april 13-14 1996 -
+      university of cambridge, england (proceedings eccv'96).
+
+ 
+nonlinear edge enhancement
+ h. greenspan and s. akber 
+  icip-95 
+ ieee international conference on image processing, october 1995.
+ 
+  
+learning textures
+ h. greenspan  
+ presented in 
+machines that learn conference, snowbird, utah, april 4-7, 1995.
+
+  
+rotation invariant
+texture recognition using a steerable pyramid
+ h. greenspan, s. belongie, p. perona and r. goodman
+  icpr-94 
+ 12th
+international conference on pattern recognition (icpr)}, jerusalem, israel, october 1994
+
+  
+overcomplete steerable pyramid filters and rotation invariance
+ h. greenspan, s. belongie, p. perona, r. goodman, s. rakshit and c. anderson
+  cvpr-94 
+  proceedings of the ieee conference on computer vision and pattern
+recognition (cvpr)}, seattle, washington, pp. 222-228, june 1994.
+
+
+ 
+image enhancement by non-linear extrapolation
+in frequency space
+ h. greenspan and c. h. anderson
+  spie-94 
+ proceedings of the is\&t/spie symposium on electronic
+imaging
+science and technology - image and video processing ii, vol. 2182, pp. 2-13, feb. 1994.
+
+
+ 
+learning in computer vision and image understanding
+ h. greenspan 
+  nips-94  
+ workshop summary in
+    advances in neural information processing systems (nips) 6, san mateo,    ca: morgan kaufmann publishers, 1994
+
+
+ 
+remote sensing image analysis via
+        a texture classification neural network
+ h. greenspan  and r. goodman
+  nips-93 
+ in c. l. giles, s. j. hanson, and j. d. cowan (eds.),
+     advances in neural information processing systems (nips) 5, 425-432, san mateo,
+    ca: morgan kaufmann publishers, 1993
+
+ 
+combined neural network
+   and rule-based framework for probabilistic pattern recognition and
+    discovery
+ 
+  h. greenspan, r. goodman and r. chellappa
+  nips-92 
+ in j. e. moody, s. j. hanson, and r. p. lippman (eds.),
+     advances in neural information processing systems (nips) 4, 444-452, san mateo,
+    ca: morgan kaufmann publishers, 1992
+
+  
+texture analysis via
+    unsupervised and supervised learning
+ 
+  h. greenspan, r. goodman and r. chellappa
+  proceedings of the 1991
+        international joint conference on neural networks (ijcnn), 639-644, 1991.
+
+   
+texture classification using information theory
+  
+  h. greenspan and r. goodman 
+  info-91    
+  proceedings of the 1991 ieee international symposium on information theory,
+budapest, hungary, june 1991.

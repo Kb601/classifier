@@ -1,0 +1,237 @@
+yair amir 
+
+
+
+
+
+
+
+
+yair amir 
+
+assistant professor, the johns hopkins university
+
+
+ 
+
+
+life is what happens to you while you're busy making other
+plans -- john lennon
+
+
+daniel is what happens to you after making careful plans -- michal & yair
+
+
+
+
+
+department of computer science
+
+
+
+
+the johns hopkins university
+
+
+
+
+baltimore, md 21218
+
+office phone: 410-516-4803, fax: 410-516-6134 
+home phone: 301-897-9680 
+e-mail: yairamir@cs.jhu.edu
+
+http://www.cs.jhu.edu/~yairamir 
+main machine: winpal.cs.jhu.edu (thinkpad 760cd)
+
+
+
+
+education 
+
+
+1995  ph.d.  the hebrew university  computer science 
+1990  m.sc.  the technion           computer science
+1985  b.sc.  the technion           information systems engineering
+
+
+
+research interests
+
+
+distributed systems, communication protocols, conferencing, and
+replication.
+currently, i am building the distributed systems and communication
+lab at the department of computer science here at hopkins, and
+also am affiliated with the center of excellence in space data
+and information sciences (cesdis),
+the goddard space flight center, nasa.
+
+
+the main project in the distributed systems and communication
+lab is commedia, a cross-platform 
+infrastrcuture for multimedia conferencing. commedia will combine a 
+reliable multicast toolkit
+(spread) with video, voice, graphics, and application sharing
+over local and wide area networks. the development is done over
+bsdi unix and win95. we are just strating, so it is not too late
+to join!
+
+
+since i received my b.sc., i gained vast experience in building
+distributed systems. i spent six years building such a defense
+system, heading a 50 man-years effort and delivering an operational
+solution to the customer.
+subsequently, i spent four years researching and building (i.e.
+playing with) distributed systems, network protocols and replicated
+databases. and guess what: i even got a phd for that :)
+i was one of the initiators and main participants of the transis
+project with professor danny dolev
+at the hebrew university of jerusalem, israel. transis is a group
+communication tool that supports reliable multicast services over
+a partitioned network. transis utilizes the hardware unreliable
+multicast where possible, optimizing the performance for existing
+networks.
+i also took part in building the totem
+group communication protocol with professors melliar-smith
+and moser
+at the university of california, santa barbara.
+other people i enjoy collaborating with, are david breitgand,
+gregory chockler,
+nabil huleihel,
+and avishai wool.
+
+
+
+ a complete
+resume ( ps, ps.z,
+ps.gz )
+ 
+
+ my ph.d. presentation ( ps,
+ps.z, ps.gz
+)
+ 
+
+  my ph.d. thesis ( ps,
+ps.z, ps.gz
+)
+
+
+courses:
+
+
+ distributed systems (600.437)
+
+
+ advanced distributed systems and communication (600.667)
+
+ introduction to computer science (600.103)
+
+
+
+
+publications:
+
+
+
+
+group communication as an infrastructure for distributed system
+management ( ps, ps.z,
+ps.gz )
+
+authors: y. amir, d. breitgand, g. v. chockler and d. dolev.
+the international workshop on services in distributed and networked
+environment (sdne), 1996, to appear.
+
+
+evaluating quorum systems over the internet ( ps,
+ps.z, ps.gz
+)
+
+authors: y. amir and a. wool. 
+the annual international symposium on fault-tolerant computing
+(ftcs), 1996, to appear.
+
+
+ the totem single-ring ordering and
+membership protocol( ps, ps.z,
+ps.gz )
+
+authors: y. amir, l. e. moser, p. m. melliar-smith, d. a. agarwal
+and p. ciarfella. 
+acm transactions on computer systems, 13(4), pages 311-342 november
+1995.
+
+
+ extended virtual synchrony( ps,
+ps.z, ps.gz
+)
+
+authors: l. e. moser, y. amir, p. m. melliar-smith and d. a. agarwal.
+
+the 14th ieee international conference on distributed computing
+systems (ic-dcs), pages 56-65, june 1994.
+
+
+ fast message ordering and membership
+using a logical token-passing ring( ps,
+ps.z, ps.gz
+)
+
+authors: y. amir, l. e. moser, p. m. melliar-smith, d. a. agarwal,
+p. ciarfella. 
+the 13th ieee international conference on distributed computing
+systems (ic-dcs), pages 551-560, may 1993.
+
+
+ membership algoritms for multicast
+communication groups( ps, ps.z,
+ps.gz )
+
+authors: y. amir and d. dolev and s. kramer and d. malki.
+6th intl. workshop on distributed algorithms proceedings (wdag),
+lncs 647, pages 292-312, november 1992.
+
+ transis: a communication sub-system
+for high availability( ps, ps.z,
+ps.gz )
+
+authors: y. amir and d. dolev and s. kramer and d. malki.
+22nd annual international symposium on fault-tolerant computing
+(ftcs), pages 76-84, july 1992.
+a full version of this paper, including preliminary wan handling,
+can be found in the transis technical report.
+
+
+
+ a highly available application in the
+transis environment( ps, ps.z,
+ps.gz )
+
+authors: o. amir, y. amir and d. dolev.
+the hardware and software architectures for fault tolerance workshop,
+le mont saint-michel, france, lncs 774, pages 125-139, june 1993,
+invited submission. 
+
+ robust and efficient replication using
+group communication( ps, ps.z,
+ps.gz )
+
+authors: y. amir, d. dolev, p. m. melliar-smith, l. e. moser.
+
+technical report cs94-20, institute of computer science, the hebrew
+university of jerusalem, november 1994. 
+
+ the transis approach to high availability
+cluster communication( ps, ps.z,
+ps.gz )
+
+authors: d. malki, y. amir, d. dolev and s. kramer. 
+technical report cs94-14, institute of computer science, the hebrew
+university of jerusalem, october 1994.
+
+
+last modified: 14/may/1996. (using microsoft word)
+
+:) yair.

@@ -1,0 +1,373 @@
+cse 531 bboard/mail log
+
+
+
+
+cse 531 - automata, computability, and complexity
+    bboard/e-mail log
+
+    fall 1996
+
+
+below is a log of all email sent to the class mailing list
+cse531@cs.  we will use this list for announcements of
+general interest to the class.  students should also feel free
+to use it to ask questions, post information, or initiate
+discussions  of general interest to the class.  of course,
+questions or comments that don't seem of general interest can be
+directed to the 
+  ta         (nitin@cs) or 
+  instructor (ruzzo@cs),
+instead.  
+  
+following usual internet conventions, administrative requests
+concerning the mailing list itself, such as add/delete/address
+change requests, should be addressed to cse531-request@cs.
+
+index of messages
+(latest message monday, 21-oct-96 21:58:33 pdt.)
+
+
+10 oct 96 nitin@june ____ a question regarding homework
+13 oct 96 nitin@june ____ homework #1
+13 oct 96 nitin@june ____ re: homework #1
+14 oct 96 kayee@cs ______ re: homework #1
+14 oct 96 nitin@june ____ re: cse531
+16 oct 96 nitin@june ____ re: subset construction's optimality
+16 oct 96 dewey@cs ______ re: subset construction's optimality   
+16 oct 96 gjb@cs ________ re: subset construction's optimality 
+21 oct 96 ruzzo@cs ______ hw#2
+21 oct 96 ruzzo@cs ______ course web
+
+
+
+
+
+
+messages
+
+from: nitin@june (nitin sharma)
+subject: a question regarding homework
+to: dewey@june (brian k dewey), cse531@june
+date: thu, 10 oct 1996 12:37:25 -0700 (pdt)
+
+
+&gt;
+&gt; from: brian k dewey &lt;dewey@scoter.cs.washington.edu&gt;
+&gt; 
+&gt; i'm obviously misinterpreting the third problem in homework one, because -- 
+&gt; under my interpretation -- the answer is trivial...  here's the way i read the 
+&gt; question:
+&gt; 
+&gt; let n(n) be the set of all nfas with n states.  we must find a function f(n) 
+&gt; such that *no* nfa in n(n) has an equivalent dfa containing fewer than f(n) 
+&gt; states.  
+&gt; 
+&gt; if that's the case:  isn't it trivial to show that one can construct an nfa 
+&gt; with n states that accepts sigma star (e.g. n states, fully connected, all 
+&gt; states are final)?  and that n-state nfa has an equivalent dfa with one state. 
+&gt;  thus, f(n) = 1.
+&gt; 
+
+ not quite.  the problem doesn't ask you to find f(n) s.t. no nfa 
+ in n(n) has an equivalent dfa containing fewer than f(n) states.
+
+  you are asked to find f(n) s.t. there is *some* n-state nfa which has
+ no equivalent dfa with fewer than f(n) states.
+
+  and you have to find the largest such function.
+
+  so, the answer f(n) = 1, satisfies the first condition, but it is not
+  the largest such function.
+
+   also, since pumping lemma has not been covered yet, and the hint 
+  suggests using an idea like in the proof of pumping lemma, it makes
+  sense to extend the deadline a bit.
+
+   so, hw1 is not due before thursday, oct. 17.
+
+   -nitin
+
+
+
+from: nitin@june (nitin sharma)
+subject: homework #1
+to: cse531@june
+date: sun, 13 oct 1996 17:22:50 -0700 (pdt)
+
+
+hi!,
+
+ some of you had asked me about what lemmas and theorems referred to
+ in problems 1.10, 1.11 and 1.13 actually are. 
+
+ lemma 1.27 referred to in problem 1.10 contains the proof for showing the 
+ construction of nfas for regular expressions.
+
+  has nfa's for 
+  i) r = a.
+  ii) r= epsilon
+  iii) r= phi
+  iv) r = r1 + r2
+  v) r = r1.r2 and 
+  6) r = r1* 
+
+ lemma 1.29 contains the construction of reg exprs for fa's.
+ uses kleene's approach.
+
+  compute rij(n) = rij(n-1) +   rik(n-1). rkk(n-1)* rkj(n-1)
+
+  for all i,j. union of r1m(n), m in f gives the desired expression.
+
+ thm 1.17 shows the equivalence of dfa's and nfa's using subset
+ construction.
+
+  since sipser text is not out yet, hopcroft ulman's text is a
+  good substitute for these topics as the sipser's treatment is
+  quite similar to h&amp;u's.
+
+   if some of you still find any problem, let me know. i can get
+  you copies of the relevant sections of the text.
+
+  -nitin
+
+
+
+
+from: nitin@june (nitin sharma)
+subject: re: homework #1
+to: ambrose@cs.washington.edu (bret ambrose)
+date: sun, 13 oct 1996 23:08:23 -0700 (pdt)
+cc: cse531@june
+
+
+&gt; 
+&gt; hi,
+&gt; 
+&gt; problem 1.10(b) is improperly parenthesized.  depending on where you put
+&gt; the needed parantheses, you get two different expressions.
+&gt; how should we interpret this?
+
+ thanks for pointing this out.
+
+ it should read as:
+
+  ( ((00)* 11) + 01 )*
+ 
+  -nitin
+
+
+date: mon, 14 oct 1996 09:14:04 -0700 (pdt)
+from: ka yee yeung &lt;kayee@cs.washington.edu&gt;
+to: nitin sharma &lt;nitin@cs.washington.edu&gt;
+cc: cse531@cs.washington.edu
+subject: re: homework #1
+
+
+
+hey everybody,
+
+sipser is now in the bookstore.  :)
+
+ka yee
+--------------------------------------------------------------------------
+say hello to others. you will have a happier day.
+--------------------------------------------------------------------------
+
+
+
+from: nitin@june (nitin sharma)
+subject: re: cse531
+to: kayee@june.cs.washington.edu (ka yee yeung)
+date: mon, 14 oct 1996 13:09:15 -0700 (pdt)
+cc: cse531@june
+
+
+&gt; 
+&gt; i think you'll have office hour today at 3:30. where will you be for office
+&gt; hour?
+
+ in case i forgot to tell, all my office hours are to be in 326-a sieg.
+
+ -nitin
+
+
+
+from: nitin@june (nitin sharma)
+subject: re: subset construction's optimality
+to: gjb@sturgeon.cs.washington.edu (greg badros)
+date: wed, 16 oct 1996 17:00:49 -0700 (pdt)
+cc: cse531@june
+
+
+&gt; 
+&gt; to paraphrase the other question about the question posed on the hw, i, 
+&gt; too, must be missing something obvious, because i'd think the family of 
+&gt; nfa-s the question mentions (nth character from end is a &quot;1&quot;) is a n+1 
+&gt; state nfa which can't be reduced to a dfa w/ fewer than 2^(n+1) states, 
+&gt; so f(n) can be as big as is possibly could be; that is, f(n) = n^2.
+
+ it requires a proof, of course.
+ but that will prove f(n) = 2^n, and not n^2.
+
+  but it is not clear (to me at least) that 2^(n+1) states bound can
+ be proven for this example. (be careful with constant factors!) 
+
+   i think a slightly lower bound could be proven, but even that is 
+ not trivial.
+  
+  note that you have to *prove* that *no* dfa with states &lt; f(n) can 
+ accept this set (nth symbol from the right is a '1') 
+
+ if you find it tough, come up with as high a lower bound on f(n) as you
+ can.
+
+ -nitin
+
+
+to: cse531@cs
+subject: re: subset construction's optimality 
+             &lt;199610170000.raa15729@june.cs.washington.edu&gt; 
+date: wed, 16 oct 1996 17:08:44 pdt
+from: brian k dewey &lt;dewey@scoter.cs.washington.edu&gt;
+
+
+to throw in my own two cents.
+
+&gt; &gt; 
+&gt; &gt; to paraphrase the other question about the question posed on the hw, i, 
+&gt; &gt; too, must be missing something obvious, because i'd think the family of 
+&gt; &gt; nfa-s the question mentions (nth character from end is a &quot;1&quot;) is a n+1 
+&gt; &gt; state nfa which can't be reduced to a dfa w/ fewer than 2^(n+1) states, 
+&gt; &gt; so f(n) can be as big as is possibly could be; that is, f(n) = n^2.
+
+actually, isn't the n-th character from the end a &quot;1&quot; set of languages a set 
+that requires n+1 states in an nfa, but 2^n states in a dfa?
+
+&gt; 
+&gt;  it requires a proof, of course.
+&gt;  but that will prove f(n) = 2^n, and not n^2.
+&gt; 
+
+i'm a little perplexed by what you mean by that last sentence.
+
+&gt;    i think a slightly lower bound could be proven, but even that is 
+&gt;  not trivial.
+
+i certainly hope a slightly lower bound can be proven --- that's what i'm 
+attempting to do!  blatant advertisement for collaboration:  who's been 
+working on this problem and making headway?  i'd love to bounce ideas off 
+someone late tonight/sometime tomorrow...
+
+
+
+date: wed, 16 oct 1996 18:24:20 -0700 (pdt)
+from: greg badros &lt;gjb@cs.washington.edu&gt;
+to: brian k dewey &lt;dewey@scoter.cs.washington.edu&gt;
+cc: cse531@cs.washington.edu
+subject: re: subset construction's optimality 
+
+
+on wed, 16 oct 1996, brian k dewey wrote:
+
+&gt; to throw in my own two cents.
+&gt; 
+&gt; &gt; &gt; 
+&gt; &gt; &gt; to paraphrase the other question about the question posed on the hw, i, 
+&gt; &gt; &gt; too, must be missing something obvious, because i'd think the family of 
+&gt; &gt; &gt; nfa-s the question mentions (nth character from end is a &quot;1&quot;) is a n+1 
+&gt; &gt; &gt; state nfa which can't be reduced to a dfa w/ fewer than 2^(n+1) states, 
+&gt; &gt; &gt; so f(n) can be as big as is possibly could be; that is, f(n) = n^2.
+i mistyped here                                               ^^^^^^^^^^^
+
+&gt; 
+&gt; actually, isn't the n-th character from the end a &quot;1&quot; set of languages a set 
+&gt; that requires n+1 states in an nfa, but 2^n states in a dfa?
+
+it seems like the 1th (last) character from the end = &quot;1&quot; would require 
+only 2 = 2^1 states, so i think you're right.  computational complexity 
+theory sure encourages off-by-one errors! :-)
+
+&gt; 
+&gt; &gt; 
+&gt; &gt;  it requires a proof, of course.
+&gt; &gt;  but that will prove f(n) = 2^n, and not n^2.
+&gt; &gt; 
+&gt; 
+&gt; i'm a little perplexed by what you mean by that last sentence.
+
+i just mistyped f(n) = n^2 instead of 2^n.  he was correcting my mistake.
+
+good luck with your proof.
+
+greg
+
+
+date: 21 oct 1996 10:38 pdt
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse531@cs
+subject: hw#2
+
+
+for those of you who can't wait to get started, here's your next
+homework.  i'll have a paper copy to hand out tomorrow.
+
+531 homework \#2
+due tuesday, 10/29.
+
+in all problems below requiring you to construct a machine or
+greammar (e.g., 1.27, 2.4, 2.5, 2.17), {\em explain\/} your
+construction in english, in addition to providing a correctness
+proof if requested.  e.g., you might want to say something like
+``in my grammar, variable a generates a string of zero or more
+0's, and variable b generates strings of balanced parens...''
+these problems are otherwise extremely difficult to read (and
+grade!)
+\begin{enumerate}
+    \item text 1.14(b,c).
+    \item text 1.27.
+    \item text 1.28.
+    \item text 2.4(e).  
+    \item text 2.5(e).
+    \item text 2.17(a).
+    \item text 2.19.  give an informal argument for (b).
+    \item 
+        let $m=(\q,\sigma,\gamma,\delta,q_{0},f)$ be a pda.  
+        \begin{enumerate}
+            \item explain how it might be possible that there is
+		a string $w \in l(m)$ on which $m$ has
+		arbitrarily long accepting computations.  i.e.,
+		there is no integer $t$ such that all accepting
+		computations of $m$ on $w$ use fewer than $t$
+		steps.  furthermore, explain how that could
+		happen even if $m$ never repeats a configuration
+		during its accepting computation.
+            \item however, prove that there is a constant $c$
+	        such that every $w \in l(m)$ is accepted by
+		{\em some\/} computation of length at most
+		$c(n+1)$, where $n=|w|$.  give an upper bound on
+		$c$ in terms of $|q|$, $|\sigma|$, $|\gamma|$,
+		etc.
+        \end{enumerate}
+\end{enumerate}
+
+date: 21 oct 1996 21:55 pdt
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse531@cs
+subject: course web
+
+
+i've finally set up a course web page.  usual url:
+http://www.cs.washington.edu/education/courses/531/96a
+
+it includes office hours, a log of all class email, handouts,
+sipser's errata page, etc.
+
+
+
+
+
+cse531-webmaster@cs.washington.edu	
+(last update: 
+   
+  10/21/96)

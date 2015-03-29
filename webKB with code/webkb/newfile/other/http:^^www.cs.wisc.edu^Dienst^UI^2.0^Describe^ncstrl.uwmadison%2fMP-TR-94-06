@@ -1,0 +1,27 @@
+perturbed minimization 
+perturbed minimization 
+ o. l. mangasarian and  m. v. solodov
+mp-tr-94-06
+june 1994
+
+ the fundamental backpropagation (bp) algorithm for training artificial neural networks is cast as a deterministic nonmonotone perturbed gradient method . under certain natural assumptions, such as the series of learning rates diverging while the series of their squares converging, it is established that every accumulation point of the online bp iterates is a stationary point of the bp error function. the results presented cover serial and parallel online bp, modified bp with a momentum term, and bp with weight decay.
+
+how to view this document
+
+
+display the whole document in one of the following formats.
+
+postscript
+ 49215 bytes. (compressed on disk, will be sent uncompressed)
+
+
+
+print or download all or selected pages.
+
+
+
+ you are granted permission for the non-commercial reproduction, distribution,display, and performance of this technical report in any format, but thispermission is only for a period of 45 (forty-five) days from the most recenttime that you verified that this technical report is still available fromthe computer science department of the university of wisconsin - madison underterms that include this permission.  all other rights are reserved by theauthor(s). 
+[ search
+ ]
+
+ncstrlthis server operates at uw madison computer sciences technical reports . send email to www@cs.wisc.edu

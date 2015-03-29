@@ -1,0 +1,116 @@
+no title
+
+
+
+
+
+
+
+                 
+ next:    about this document 
+  
+
+midterm #2 a22.0002 afternoon session 
+ april 24, 1995 samuel marateck 
+  do any 5 problems and do all the work on the exam sheet 
+
+  your name
+
+1. (20 points points) what does the following program produce as output?
+program one(input, output);
+const blank = ' ';
+var j, k:integer;
+begin
+     for j:= 1 to 5 do
+     begin 
+         write('*':j); 
+         for k:= 1 to (6 - j) do
+         begin
+            write(blank)
+         end;
+         writeln('*'
+      end
+end.
+
+
+2. (20 points) write a program that reads a number  n (an  integer)
+from the keyboard and:
+
+(a) prints all the numbers less than or equal to   n
+that are prime numbers. a prime number is one that is divisible only by 1 and 
+the number itself. when a number is divisible by another number 
+there is no remainder. for example, 7 is a prime number because it is not
+divisible by 2, 3, 4, 5, 6.
+
+hint: test whether the values of the loop control variable,  j
+are divisors of  n.
+here are some questions that should help you
+do the problem:
+
+is  n read before or in the loop?
+
+if  j is the loop control
+variable, what is its upper limit?
+
+what is the test determining whether  j is a divisor
+of  n?
+
+
+
+3. (20 points) what does the following program produce?
+program two(input, output);
+var j:integer;
+    letter:char;
+
+procedure plot(j:integer);
+var i:integer;
+begin
+     for i:= 1 to j do
+            write('*':i);
+         writeln
+end {plot};
+
+begin
+    for letter:= 'a' to 'e' do
+    begin
+        j:= ord(letter) - ord('a');
+        plot(j)
+    end  
+end.
+
+
+4. (20 points) evaluate the following (you may use the table on the board):
+(a) (3 &lt;= 7) and not (9 = 8)	    (b) not (4 &gt;= 5) or (3 &lt;= 3)
+
+(c) not ((5 &lt;= 9) or  (3 &lt; 2))	    (d) (6 &lt;= 8) or (3 &gt; 5) or (3 = 3)
+
+
+5. (20 points) what does the following procedure produce for  plot(1,'x')?
+     procedure plot ( top : integer; ch:char);
+     var j : integer;
+     begin
+               case top of
+                    1 : for j := 1 to 5 do 
+                              begin
+                                   writeln (ch:j, ch:(11 - (2 * j)))
+                              end;
+                    2 : for j := 5 downto 1 do 
+                              begin
+                                   writeln (ch:j, ch:(11 - (2 * j)))
+                              end
+               end
+     end;
+
+
+6. (20 points) write a procedure called  makex that produces 
+the block letter x by using procedure  plot shown in problem 5.
+the block letter should be formed from asterisks (*).
+
+ 
+ 
+    about this document ... 
+
+ 
+
+sam marateck 
+tue nov 19 20:15:29 est 1996

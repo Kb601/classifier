@@ -1,0 +1,36 @@
+index of /classes/machineorg/hw/
+index of /classes/machineorg/hw/
+readme file:
+most files are in postscript (with .ps extension)
+
+1. mid: contains the midterm and its solution
+
+2. hw2: contains the second homework assignment
+
+3. hw2-hints: contains supplementary notes for hw2
+	(discussion about bigbin, bigdec, muldig, etc)
+
+4. hw2-data: various numbers in decimal and hex, and their
+	sums and products.  useful notes about how
+	to test your procedures.
+
+5. proj: final project description.
+
+6. proj-hints: hints for doing your project.
+	this file is continually being updated.
+	so please check from time to time.
+
+
+ name            last modified     size  description              
+
+ parent directory
+ hw2-data        08-nov-96 00:18     1k 
+ hw2-hints       31-oct-96 20:25     3k 
+ hw2.ps          07-nov-96 23:06    34k 
+ mid.ps          07-nov-96 23:04    37k 
+ proj-hints      11-dec-96 12:57    11k 
+ proj.ps         18-nov-96 15:59    22k 
+ rcs/            01-dec-96 22:38      - 
+ readme          10-dec-96 11:42     1k 
+ xhint           03-dec-96 13:42     1k 
+9 files

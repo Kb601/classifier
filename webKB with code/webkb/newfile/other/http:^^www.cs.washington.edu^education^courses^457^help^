@@ -1,0 +1,101 @@
+cse 457 help
+
+
+
+
+
+
+
+1996 autumn quarter
+
+
+
+
+
+help
+
+  basic help
+  why does the page look so weird?
+  mosaic, netscape, lynx -- what's the difference?
+  
+    more info on mosaic
+    more info on netscape
+    more info on lynx
+  
+  using netscape on the indys
+       
+
+
+
+
+basic help
+point.  click.  repeat until sufficiently bored.  you'll find more
+in-depth help on the help menu of your browser.
+
+
+why does the page look so weird?
+the cse/457 home page uses tables, a feature that is best supported by
+netscape.  mosaic tends to completely leave out any table entries containing
+links, and occasionally even seg-faults.  if you are unable to use tables,
+there is a version of the home page done in traditional html style:
+
+http://www.cs.washington.edu/education/courses/457/notables.html
+
+
+
+mosaic, netscape, lynx -- what's the difference?
+mosaic was the original graphical web browser, created by marc andreesen
+and others at university of illinois at urbana-champaigne.  after graduating,
+though, most of the team that created mosaic created the company that is
+now netscape communications.
+
+so what's the difference between the two?  well, mosaic is still being
+(slowly) worked on at uiuc.  netscape, on the other hand, has been screaming
+ahead in technology.  universities tend to support mosaic, because it is
+free, and the source is distributed, so it can compile on obscure and
+obsolete operating systems (eg ultrix).  netscape gives their products away
+to educational institutions for free, but usually users have to install
+and support it themselves.
+
+netscape is considered "faster" because it displays a page as it loads.
+with mosaic, you have to wait until the entire page is loaded.  netscape
+also supports a larger set of formatting tags, and its next version will
+include enhanced email and newsgroup reading, as well as extensions to
+support advanced technologies such as macromedia director, adobe acrobat,
+sun's java, and more.
+
+netscape also works better with color.  it uses 24-bit color if available,
+whereas mosaic is limited to 8-bit color.  this is one of the main reasons
+we suggest you use netscape for cse/457.
+
+what about lynx?  lynx is a text-based web browser.  it isn't very exciting,
+but it can be useful if you can't support graphics -- like if you are
+dialing in from home and not using a slip/ppp connection.
+
+
+more information on all three can be found on these pages:
+
+  department info on mosaic
+  ncsa mosaic
+  netscape communications
+  about lynx
+
+
+
+
+using netscape on the indys
+though netscape isn't officially supported in the indylab, we have a copy
+for you to use.  this can be found at
+/cse/courses/cse457/bin/netscape.  you might want to make an
+alias, or include /cse/courses/cse457/bin/ in your path list.
+
+you'll need to set up one thing in netscape so that you can use helper
+applications (eg sound-players, movie-players, installer-scripts, etc.).
+under the options menu select preferences.  change the
+options-menu to helper applications.  then simply change the word
+netscape (after global types file and global mailcap file)
+to mosaic.
+
+more help
+if you need any additional help, try the help menu on your browser.  or,
+ask one of the tas for help.

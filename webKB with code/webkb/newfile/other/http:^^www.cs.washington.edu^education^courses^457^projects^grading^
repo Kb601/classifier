@@ -1,0 +1,97 @@
+cse 457
+
+
+
+
+
+
+
+1996 autumn quarter
+
+
+
+
+
+
+
+
+project grading
+
+
+projects are graded during 30 minute in-person grading
+sessions. a sign up sheet will be posted in sieg 228
+just prior to the due date for the assignment.
+
+
+grading sessions will consist of:
+
+
+  each team member giving a demonstration of different portions of
+   the program, showing that it satisfies the required part of
+   the assignment and implements an appropriate number of bells
+   and whistles. this is also the time to show off any great
+   extensions or enhancements.
+
+  question and answers: the ta will ask a variety of questions.
+   some questions will be open for response from any team member,
+   but others will be directed at individuals.  each team member is
+   expected to have a thorough understanding of all required extentions
+   of the project, and any bells and whistles s/he may have done.  
+   here is a sample of the kind of questions that might be asked:
+
+   
+     why did you choose to implement feature x using technique
+      y rather than technique z?
+
+     describe the steps that you'd have to carry out to implement
+      new feature x. what new data structures would you need? what
+      modules would you have to modify?
+
+     please make the following small change to the program, then
+      recompile and run it.
+   
+
+
+ the project implementations will be graded on a 10-point scale.
+unlimited extra credit is possible on each project; however, each
+additional point of extra credit is twice as difficult to achieve as
+the previous point.
+
+ each extra credit item is rated with a nominal value of "bells"
+and "whistles".  one bell carries the same credit as two whistles.  an
+actual implementation of an extra credit item may be worth somewhat
+more or less than its nominal value, depending on how well it was
+implemented.
+
+ in general, every team member will receive the same project
+implementation grade (although not necessarily the same project
+knowledge grade).  however, we reserve the right to give different
+project implementation grades to different students on the team, for
+extreme circumstances in which it is clear that one or more members of
+the team contributed little or nothing to the project.
+
+ project knowledge will be graded on a 3-point scale, separately
+for each team member. here's a rough breakdown to give you a feeling
+for how points will be assigned:
+
+
+1 pt:
+
+       almost clueless: answers
+       to questions showed a severe lack of understanding. (i don't
+       expect anybody to get this grade!)
+
+2 pts:
+
+       answers to questions showed an understanding at only a
+       superficial level. 
+
+ 3 pts:
+   answers to questions demonstrated a thorough
+       understanding of the project.  this is is the grade we expect
+       to give almost all of the time.
+
+
+ the project write-up should be a 1- to 2-page document describing
+the main design choices and overall implementation of the project.
+here's a sample write-up.

@@ -1,0 +1,185 @@
+cs 314 lectures: table of contents 
+
+
+
+
+ back to the cs 314 home page 
+
+ cs 314 lectures 
+
+when you see this symbol  in this document, press it
+to get the postscript file for that document.  it's a little cleaner than
+the html printout.
+
+
+sections in this document:
+
+    introduction to computer systems
+    
+    cpu organization
+    
+    68000 programming
+    
+    procedures, recursion, and stacks
+    
+    assemblers, linkers and loaders
+    
+    interrupts and i/o
+    
+    introduction to logic design
+    
+
+
+
+
+ topic 1: introduction to computer systems  
+
+      readings 
+      the what and why of cs 314  
+      how pascal really works 
+      how can we handle complexity? 
+      where do other courses fit in? 
+      intro to design 
+      design strategies 
+      design documentation 
+      anatomy of a computer 
+      history of modern computers 
+      generations of computers 
+
+
+  topic 2: cpu organization 
+
+      readings 
+      the cpu design problem 
+      registers and the control unit 
+      the program as machine language 
+      put data in memory 
+      implementing loops 
+      the arithmetic-logic unit (alu) 
+      register transfer languages 
+      microprogramming 
+      summary 
+
+
+  topic 3: 68000 programming 
+
+      readings 
+      68000 architecture: registers, data sizes, memory layout 
+      68000 instructions: general 
+      68000 instructions: assembler directives 
+      68000 instructions: assembler data movement 
+      68000 instructions: arithmetic 
+      68000 instructions: logic 
+      68000 instructions: control 
+      68000 addressing: immediate 
+      68000 addressing: data register direct 
+      68000 addressing: address register direct 
+      68000 addressing: address register indirect 
+      68000 addressing: address register indirect with increment/decrement 
+      68000 addressing: address register indirect with displacement 
+      68000 addressing: address register indirect with index and displacement 
+      68000 addressing: program counter with displacement 
+      68000 addressing: program counter with index and displacement 
+
+
+  topic 4: procedures, recursion, and stacks 
+
+      readings for this topic 
+      writing an absolute value function in 68k assembler 
+      solution 1: registers and jmp 
+      solution 2: storing the return address in a register 
+      problems with recursion 
+      introduction to stacks 
+      solution 3: use stack for return address 
+      the jsr and ret instructions 
+      saving state: function prologs and epilogs 
+      prologs: another example 
+      stack frames 
+      using the stack frame to pass parameters 
+      using the stack frame for local variables 
+      parameter order: an important detail 
+      accesing parameters: a problem 
+      its solution: frame pointers 
+      frame pointers: a detailed example 
+      68000 subroutine linkage instructions 
+      passing arguments by reference 
+      case study: memory management on the mac 
+      virtual memory 
+      page tables 
+      summary 
+
+
+  topic 5: assemblers, linkers and loaders 
+
+      readings for this topic 
+      preparing an assembly program for execution 
+      machine code 
+      example: the clr instruction 
+      example: the add instruction 
+      example: the move instruction 
+      the assembler 
+      pass 1: build the symbol table 
+      pass 2: generate code and build rld 
+      structure of object module 
+      linking programs 
+      the linker 
+      the loader 
+      summary 
+
+
+  topic 6: interrupts and i/o 
+
+      readings for this topic 
+      what happens when you do something wrong? 
+      fetch/decode/execute 
+      how does processor call the service routine? 
+      supervisor versus user mode. 
+      how exception is processed on 68k 
+      writing exception handlers 
+      tracing 
+      breakpoints 
+      operating system calls 
+      reset 
+      input/output 
+      interrupts on the 68000 
+      more properties of peripheral interrupts 
+      summary 
+
+
+  topic 7: introduction to logic design 
+
+      readings 
+      digital systems 
+      gates 
+      truth tables 
+      boolean algebra 
+      combinatorial and sequential circuits 
+      sequential circuits 
+      physical level 
+      choosing a technology 
+      making gates (ttl) 
+      making gates (ttl -- cont) 
+      making gates (ttl -- cont) 
+      other gates (ttl) 
+      packages 
+      fan in/ fan out 
+      physical to logical level 
+      boolean algebra 
+      some theorems of boolean algebra 
+      proving boolean equations 
+      generating boolean equations from truth tables 
+      canonical form 
+      canonical form is not minimal form 
+      karnaugh maps 
+      rules of thumb for finding minimal expressions 
+      mapping real problems to boolean equations 
+      implementing sop using only nand gates 
+      implementing sop using only nor gates 
+      multiplexers 
+      another silver bullet: the programmed logic array (pla) 
+      the programable read-only memory (prom) 
+      summary 
+
+
+
+ back to the cs 314 home page

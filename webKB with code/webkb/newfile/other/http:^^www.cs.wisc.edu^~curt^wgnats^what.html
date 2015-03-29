@@ -1,0 +1,72 @@
+gnats for paradise
+
+
+gnats for paradise
+
+
+this document tells you what you need to know to use
+gnats for reporting  paradise bugs.
+
+where it is
+
+
+gnats is installed in afs under /p/paradise/gnats.  that means
+that everyone has access to the paradise gnats database where the
+problem records are kept.
+
+there are 3 things you can do with gnats: report problems, query the
+problem database, and edit problems.  gnats provides command line tools
+for all of these things.
+
+reporting problems
+
+problems are reported using the 
+
+send-pr program
+.  
+if you run /p/paradise/gnats/bin/send-pr, you will find yourself in
+the vi editor with a problem report template.  you can edit the 
+template, and then do a "write-quit" to send the report to 
+gnats.
+
+
+note:you can try out the system by reporting a problem within
+the test category.
+
+querying the problem database
+you can query the problem database using the 
+query-pr program.
+
+
+ using webgnats
+webgnats is a web based interface to the gnats reporting and query
+programs.  you can do most everything you need to, through
+the
+webgnats
+interface.
+
+
+problem reporting in web gnats is handled through an html form.  each problem 
+category can have its own form.  this allows different questions to be
+posed for bug reports concerning different parts of the system.
+
+
+in order to edit problems, you'll need to be running webgnats from
+a workstation with afs access, and you'll need to have the following
+in your .mailcap file.
+
+
+x-application/problem_edit; /p/paradise/gnats/bin/problem_edit %s
+
+
+
+
+ emacs 
+
+you can use gnats from within emacs by loading the gnats emacs 
+interfaces. the files are located in /p/paradise/gnats/lib/emacs/lisp.
+look at the file gnats.el in that directory for configuration instructions.
+
+
+curt ellmann 
+paradise project

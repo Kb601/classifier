@@ -1,0 +1,115 @@
+program 1 
+
+
+  program 1  
+
+
+ cs110 section 7
+ ta: michael birk
+ assigned: tue 9/10/96
+ due: tue 9/17/96
+
+
+in program 1 you will write a program to calculate grade point average
+(gpa).  you will ask the user to type in the number of classes in which they
+received an a, ab, b, bc, c, d, and f, then print out the number of grade
+points, the number of credits, and the gpa.  for this assignment assume all
+classes are 3 credits.
+
+the number of grade points earned for a class can be calculated
+by multiplying the number of credits of the class by the grade
+earned, using the following scale:
+
+
+ a = 4.0
+ ab = 3.5
+ b = 3.0
+ bc = 2.5
+ c = 2.0
+ d = 1.0
+ f = 0.0
+
+
+for example, a grade of ab in a 3 credit class would earn 3*3.5 = 10.5
+grade points.  note that in this system we'll count f's as credits - a f
+should lower the gpa.
+
+ what to do 
+
+ part i: creating the program 
+
+run borland c++ and create a new file in which to type in your source
+code by choosing "file" and then "new" from the menu. (or use the blank
+window that's already there if there is one.)
+
+type in your program.  start with this extremely simple program:
+one which simply prints out your name and cs110 section number.
+
+then compile and run the program
+by clicking on the small "lightning bolt" icon (or choose "debug" and then
+"run" from the menu), as in program 0.  if you have any compiler errors,
+a "message" window will appear indicating the approximate line number
+and reason for each error.  if you do not understand a particular compiler
+error, ask a consultant for help.
+
+now extend the program by adding a few statements to it.  first add
+the variable declarations to hold the various user inputs and the
+cin statements.  then compile and run the program to make
+sure this part works.  then add the part that performs the computation
+and prints the results.  run this program a few times, entering
+different numbers and checking the results to make sure you don't have
+a "bug."
+
+ part ii: using the debugger
+
+in this part, you will learn to use the borland c++ debugger.
+to use the debugger, press the f8 function keyboard (or choose
+debug/next from the menu).  this will start executing your code
+statement-by-statement.  note how each time you press the f8
+key, it executes the current statement.
+
+keep "walking" through your program with f8.  when you get to
+a cin statement, the program will stop and wait for you to
+type the input in the window.  after you type in the input, click on
+that variable name in your program.  then click the right mouse
+button for a "pop up" menu.  in this menu choose inspect.  this
+brings up a window which shows you the value of that variable.  use this
+inspect feature to see how uninitialized variables have "garbage values."
+
+you can use the debugger as many times as you like to investigate the
+various aspects of your program.  (note: there is nothing to hand in
+for this part.)
+
+ what to hand in 
+
+you will need to hand in a paper copy of your source code
+and also the printed output.  to print the output, click on the system
+menu box (the small horizontal bar) in the upper-left corener of the
+window which has your program's output.  this brings up a menu - choose
+"print ..." from this menu.  make sure that your program prints out
+your name, etc. so that you know which printout is yours!
+
+ sample program output 
+
+
+john q. doe's gpa program
+cs110 section 7  program #1
+
+hello, this program will ask you for your grades and
+then compute your gpa.  it assumes all your classes are
+3 credits.
+
+how many as did you get? 2
+how many abs did you get? 1
+how many bs did you get? 0
+how many bcs did you get? 0
+how many cs did you get? 1
+how many ds did you get? 0
+how many fs did you get? 0
+
+you have a total of 40.5 grade points with 12 credits,
+for a gpa of 3.375
+
+
+
+ mbirk@cs.wisc.edu

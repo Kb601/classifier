@@ -1,0 +1,71 @@
+voronoi/delaunay applet  
+
+
+  voronoi diagram  / 
+delaunay triangulation  
+
+
+
+if you were running a java-compatible web browser, such
+as netscape 2, then you would see a voronoi diagram /
+delaunay triangulation here.  
+
+
+
+
+
+  the mouse:  click the mouse in the drawing region to add
+new sites to the voronoi diagram or delaunay triangulation.
+
+  the voronoi diagram and delaunay triangulation checkboxes:
+ these toggle between the voronoi diagram and the delaunay
+triangulation.  your current set of sites remains the same for both
+diagrams.
+
+  the clear button:  press this to begin a new diagram with
+no sites.
+
+  the show empty circles button:  press this to see the
+empty circles for your set of sites.  each voronoi vertex (or delaunay
+triangle) has a corresponding empty circumcircle.
+
+
+
+ what is it? 
+
+ the  voronoi diagram  has the property that for each site
+(clicked with the mouse) every point in the region around that site is
+closer to that site than to any of the other sites.
+
+ the  delaunay triangulation  is the geometric dual of the
+voronoi diagram.  alternately, it can be defined as a triangulation of
+the sites with the additional property that for each triangle of the
+triangulation, the circumcircle of that triangle is empty of all other
+sites.
+
+ these closely related data structures have been found to be among
+the most useful data structures of the field of computational geometry.
+
+ additional information 
+
+ the actual data structure here is a delaunay triangulation.  the
+voronoi diagram is built on-the-fly from the delaunay triangulation.
+
+ the delaunay triangulation is built within a large triangle whose
+vertices are well off-screen.  that's why in the delaunay
+triangulation there are lines heading off to the upper left, the upper
+right, and down.  this technique makes the code simpler, since
+otherwise additional code would be needed to handle new sites that are
+outside the convex hull of the previous sites.
+
+  the algorithm:  to insert a new site, we walk across the
+triangulation, starting from the most recently created triangle, until
+we find the triangle that contains the new site.  this triangle and
+any adjacent triangles that contain this new site in their
+circumcircle are eliminated and the resulting empty spot is
+retriangulated.  this site-insertion technique is commonly called the
+bowyer-watson algorithm.  the expected time to insert a new site is
+roughly o(n1/2) where n is the current number of sites.
+
+ author: paul
+chew, chew@cs.cornell.edu

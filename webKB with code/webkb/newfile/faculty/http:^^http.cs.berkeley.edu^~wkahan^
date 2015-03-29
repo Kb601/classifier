@@ -1,0 +1,93 @@
+william kahan
+
+
+
+
+william kahan
+ph.d., university of toronto
+professor
+(510) 642-5638
+wkahan@cs.berkeley.edu
+
+
+awards/lectureships
+
+    acm fellow, 1994
+    acm turing award, 1989
+    siam activity group on linear algebra, prize for outstanding paper 
+    in 1988-1990 (with j. demmel), 1991
+    acm 1st g. e. forsythe memorial award, 1972
+
+
+selected publications
+
+     
+	 
+     analysis and refutation of the lcas
+     acm signum newsletter, vol. 26, 
+     no. 3, july 1991, pp. 2-15. also, acm sigplan notices, vol. 27,
+     no. 1, january 1992, pp.61-74.
+     
+
+	 
+     accurate singular values of bidiagonal matrices
+     (with j. demmel), siam j. scientific statistical computation,
+     vol. 11, no. 5, 1990, pp. 873-912.
+	 
+
+     
+     branch cuts for complex elementary functions, or much ado about 
+nothing's sign bit
+     in the state of the art in numerical analysis, 
+(eds. iserles and powell), clarendon press, oxford, 1987.
+     
+
+     
+     a wordsize- and radix-independent standard for floating-point 
+arithmetic
+     (with w. j. cody et al.), ieee micro, august 1984, 
+pp. 86-100. 
+
+
+     
+     mathematics written in sand
+     proc. joint statistical mtg. of the 
+american statistical association, 1983, pp. 12-26.
+
+
+     
+     norm-preserving dilations and their applications to optimal error 
+bounds
+     (with c. davis and h. f. weinberger), siam j. numerical 
+analysis, vol. 19, 1982, pp. 445-469.
+
+
+     
+     residual bounds on approximate eigensystems of nonnormal
+		matrices
+     (with b. n. parlett and e. liang), siam j. numerical analysis,
+	 vol. 19, 1982, pp. 470-484.
+     
+
+     
+
+
+files available from this homepage
+
+        notes for math. 221,  fall semester 1996.
+	abstracts of the following papers,  updated  31 may 1996.
+	
+		documents relating to ieee standard 754 for binary floating-point arithmetic
+	the improbability of probabilistic error analyses for numerical computations (postscript)
+	srtest  is a fortran/dos program for testing accuracy of floating-point division
+	pi-related programs (c and lisp)
+	how to test whether  sqrt  is rounded correctly (postscript)
+	test programs for the ix87's fist (float-to-integer store) instruction
+	beastly numbers, a paper about two different computers upset in the same way by the same two floating-point numbers
+	approximate trisection of an angle (postscript)
+	gregorian calendar and  matlab  programs for it. (text files)
+
+
+
+
+william kahan's self-portrait.

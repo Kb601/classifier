@@ -1,0 +1,203 @@
+qualitative modeling & diagnosis
+
+qualitative modeling & diagnosis
+
+to view a paper, click on the open book image.  
+
+
+
+
+
+
+
+
+
+ qualitative multiple-fault diagnosis of continuous dynamic systems using
+behavioral modes
+siddarth subramanian and raymond j. mooney
+
+proceedings of the thirteenth national conference on aritificial intelligence,
+pp. 965-970, portland, or, august, 1996. (aaai-96)
+
+
+most model-based diagnosis systems, such as gde and sherlock, have
+concerned discrete, static systems such as logic circuits and use
+simple constraint propagation to detect inconsistencies. however,
+sophisticated systems such as qsim and qpe have been developed for
+qualitative modeling and simulation of continuous dynamic systems.  we
+present an integration of these two lines of research as implemented
+in a system called qdocs for multiple-fault diagnosis of continuous
+dynamic systems using qsim models. the main contributions of the
+algorithm include a method for propagating dependencies while solving
+a general constraint satisfaction problem and a method for verifying
+the consistency of a behavior with a model across time. through
+systematic experiments on two realistic engineering systems, we
+demonstrate that qdocs demonstrates the best balance of generality,
+accuracy, and efficiency among competing methods.
+
+
+
+
+
+
+
+
+
+qualitative multiple-fault diagnosis of continuous dynamic systems using
+behavioral modes
+
+siddarth subramanian
+
+ph.d. thesis, department of computer sciences, university of texas at austin, august, 1995.
+
+
+
+as systems like chemical plants, power plants, and automobiles get
+more complex, online diagnostic systems are becomingly increasingly
+important.  one of the ways to rein in the complexity of describing
+and reasoning about large systems such as these is to describe them
+using qualitative rather than quantitative models.
+
+model-based diagnosis is a class of diagnostic techniques that use
+direct knowledge about how a system functions instead of expert rules
+detailing causes for every possible set of symptons of a broken
+system.  our research builds on standard methods for model-based
+diagnosis and extends them to the domain of complex dynamic systems
+described using qualitative models.
+
+we motivate and describe out algorithm for diagnosing faults in a
+dynamic system given a qualitative model and a sequence of qualitative
+states.  the main contributions in this algorithm include a method for
+propagating dependencies while solving a general constraint
+satisfaction problem, and a method for verfying the compatibility of a
+behavior with a model across time.  the algorithm can diagnose
+multiple faults and uses models of faulty behavior, or behavioral
+modes.
+
+we then demonstrate these techniques using an implemented program
+called qdocs and test it on some realistic problems.  through our
+experiments with a model of the reaction control system (rcs) of the
+space shuttle and with a level-controller for a reaction tank, we show
+that qdocs demonstrates the best balance of generality, accuracy and
+efficiency among known systems.
+
+
+
+
+
+
+
+
+
+
+  multiple-fault diagnosis using general qualitative models with fault modes    
+
+siddarth subramanian and raymond j. mooney 
+
+working notes of the ijcai-95 workshop on engneering problems for qualitative reasoning, monreal, quebec, august 1995.
+
+
+this paper describes an approach to diagnosis of systems described by
+qualitative differential equations represented as qsim models.  an
+implemented system qdocs is described that performs multiple-fault,
+fault-model based diagnosis, using constraint satisfaction techniques,
+of qualitative behaviors of systems described by such models. we
+demonstrate the utility of this system by accurately diagnosing
+randomly generated faults using simulated behaviors of a portion of
+the reaction control system of the space shuttle.
+
+
+
+
+
+
+
+
+
+
+multiple-fault diagnosis using general qualitative models with fault modes  
+siddarth subramanian and raymond j. mooney 
+
+ working papers of the fifth international workshop on
+principles of diagnosis, pp. 321-325, new paltz, ny, 1994. 
+
+
+this paper describes an approach to diagnosis of systems described by
+qualitative differential equations represented as qsim models.  an
+implemented system qdocs is described that performs multiple-fault,
+fault-model based diagnosis, using constraint satisfaction techniques,
+of qualitative behaviors of systems described by such models. we
+demonstrate the utility of this system by accurately diagnosing
+randomly generated faults using simulated behaviors of a portion of
+the reaction control system of the space shuttle.
+
+
+
+
+
+
+
+
+
+ learning qualitative models for systems with multiple operating regions
+
+sowmya ramachandran, raymond j. mooney and benjamin j. kuipers 
+
+proceedings of the eight international workshop of qualitative
+reasoning about physical systems, pp. 212-223, nara, japan,
+june 1994. (qr-94)
+
+
+the problem of learning qualitative models of physical systems from
+observations of its behaviour has been addressed by several
+researchers in recent years. most current techniques limit themselves
+to learning a single qualitative differential equation to model the
+entire system.  however, many systems have several qualitative
+differential equations underlying them.  in this paper, we present an
+approach to learning the models for such systems.  our technique
+divides the behaviours into segments, each of which can be explained
+by a single qualitative differential equation.  the qualitative model
+for each segment can be generated using any of the existing techniques
+for learning a single model.  we show that results of applying our
+technique to several examples and demonstrate that it is effective.
+
+
+
+
+
+
+
+
+
+
+  automatic abduction of qualitative models   
+
+bradley l. richards, ina kraan, and benjamin j. kuipers  
+
+ proceedings of the tenth national conference on artificial
+intelligence, pp. 723-728, san jose, ca, july 1992. 
+
+
+we describe a method of automatically abducing qualitative models from
+descriptions of behaviors.  we generate, from either quantitative or
+qualitative data, models in the form of qualitative differential equations
+suitable for use by qsim.  constraints are generated and filtered both by
+comparison with the input behaviors and by dimensional analysis.  if the
+user provides complete information on the input behaviors and the
+dimensions of the input variables, the resulting model is unique,
+maximally constrainted, and guaranteed to reproduce the input behaviors.
+if the user provides incomplete information, our method will still
+generate a model which reproduces the input behaviors, but the model
+may no longer be unique.  incompleteness can take several forms:  missing
+dimensions, values of variables, or entire variables.
+
+
+
+
+
+
+
+
+
+
+estlin@cs.utexas.edu

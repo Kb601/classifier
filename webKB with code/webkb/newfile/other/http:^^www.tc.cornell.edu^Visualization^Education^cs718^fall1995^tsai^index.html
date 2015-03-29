@@ -1,0 +1,121 @@
+cs 718 project report
+
+
+
+visualization of diffusely distributed pollutants using spatially-explicit
+landscape models
+
+table of contents
+
+introduction
+data transformation
+visualization procedures
+results
+conclusion
+figures and mpeg's
+acknowledge
+references
+
+
+
+
+ introduction
+geographic information system (gis) is a powerful tool used in many fields, especially in the environmental monitoring and analysis. however, most of gis software packages are focus on the analysis, so they often have limited presentation ability. the combination of gis and scientific visualization enables the researchers in the field of gis to present the processes and results of their work to the audience in a manner of more realistic sense.
+
+this project visualized the processes and results of a gis analysis for simulating the distribution of nitric pollutants in a watershed in accordance with the geographic (topological) and environmental conditions. the analysis was done by a team coordinated by prof. stephen degloria of the  center for the environment at cornell using various gis software packages and independently developed programs. the goal of this project is to generat a flexible prototype of visualization modules for a typical gis work using ibm data explorer.
+
+
+
+
+data transformation
+like most visualization work, the first task of this project is to acquire all necessary data. the data used in the analysis include the digital elevation models (dem), hydrology models (runoff, water content...), soil data, landuse types, etc. the hydrology data were collected in a two year series. the results of the analysis consist of the distribution of three nitrogen compounds for the study time series. each nitric pollutant are simulated in four different layers at the same region of study area.
+
+since the data came from different sources and the simulation was done by the analysis team using different packages and self-developed programs, the data formats are diverse. in addition, considering the huge data volume and the limitation of data storage in most machines, the data are stored in cornell theory center's unitree mass storage set, and then retrived via afs whenever needed. after the data were fetched, they were converted into consistent format using several unix shell scripts and c programs. one of the purposes of the data conversion is to speed up the data extraction from the two-year master hydrology or nitrogen data, otherwise, it will be time consuming to deal with different formats of different data sets.
+
+
+
+
+visualization procedures
+some of the shell scripts and programs used in data conversion were extended to generate the dx input file for various data set, for example  dem.dx for importing the dem into the dx. these scripts and programs are in a flexible form, so the dx can retrive various data at different time period without changing anything except the right parameters to call the programs and scripts properly.
+
+after importing the data, dx needs to conduct coordinate transformation because dx has a right-hand coordinate system and most of gis data are in left-hand coordinat systems, some of them are even in their own particular coordinate systems. in addition, since the data came from different sources, they may be collected at different time, and in different cell resolutions. if two or more data sets are involved in one application, the data have to be interpolated and/or manually adjusted to correct the coordinate displacements.
+
+assume the data are all in correctly correspondent positions, the next step is to construct the prototype of two-dimensional and three-dimensional display. several color look-up tables have been generated and in the format of dx compatible, these lut's are for soil, and landuse displays. hydrology and nitrogen data are colored by the colormap module of dx. however, because most of the distributions of the nitrigen and hydrology data are not linear, a special log scale scheme was adopted to log transform the data interactively. the log algorithm is described below:
+
+by adopting this algorithm, the values of data will be scaled to values between 0 (if newmin is specified as 1.0) to 1. unfortunately, the results of this log algorithm varies with user sepecified newmin and newmax, therefore, different data sets need different parameters to accomplish a reasonable redistribution of the data values.
+
+the last part of the visualization procedures is to provide adjustible animation options for different scenarios. in this project, both two-dimensional and three-dimensional animations are provided.
+
+in order to provide ultimate flexibility, parameters are built in the control panels for users to specify the values interactively. these parameters include file (data) selectors, data layer selectors, coordinate correction parameters, log algorithm parameters, display options, viewing control, etc.
+
+
+
+
+results
+in addition to the shell scripts and programs in c code mentioned above, several dx nets have been accomplished for this project. they provide visualization and animation functions for different demands. these dx nets are also equiped with control-panel-type user interfaces for inputing and interactively adjusting the data and displays as well as generating images and animations according to different scenarios. the final results are actually dependent on the scenarios. if desired, the visualization outputs of dx can also be redirected into other packages and instruments for post-processing, for example, generating a broadcast quality video tape. i have include several images and animations generated from the dx nets in the  figures and mpeg's section of this report.
+
+
+
+
+conclusion
+scientific visualization techniques strengthen the presentation power of gis. by providing the thorough viewing options in multi-dimensional space, it extends the gis into another world. moreover, the interactive adjusting and psudo-real time display changes for examining the data also improve the accuracy of gis analysis.
+
+the dx nets generated in this project provide the analysis team an alternative to review their work in different perspectives and to present the processes and results in a more effective and understandable way. since those dx nets were built to provide a prototype for visualizing the gis work, they can be used to generate various displays and animations in accordance with different purposes. they can also be easily modified for similar gis analysis projects to adopt.
+
+the tentative future work of this project might be to incorporate the visualization algorithms with the internet utilities, for example, build up the vrml applications in the web pages.
+
+
+
+
+pictures and mpeg's
+a perspective view of colored dem. last updated on nov. 18, 1995
+the watershed area. last updated on nov. 18, 1995
+the soil map. last updated on nov. 19, 1995
+landuse map for test #1. last updated on nov. 19, 1995
+isosurface generate from a volumetric (4-layer) nitrogen data. last updated on nov. 26, 1995
+a slice of the organic-nitrogen volume. last updated on nov. 26, 1995
+
+an animation of the runoff data (day-1 to day-50) for test #1.last updated on nov. 20, 1995
+an animation of the watercontent changes (day-1 to day-50) for test #1.last updated on nov. 20, 1995
+isosurfaces of the mean values of a 30-day sequence of organic-nitrogen data.last updated on nov. 27, 1995
+a 30-frame animation of a one-day organic-nitrogen volume from its mean to mean+2std.last updated on nov. 27, 1995 and a similar example for the nh4 volume. last updated on nov. 27, 1995
+
+
+
+
+acknowledge
+this project is conducted in the class of cs-718 topics in computer graphics instructed by  prof. bruce land. thanks prof. land's instruction during the semester.
+
+i also want to thank chris pelkie at the visualization group of cornell's theory center for providing me helpful information about the ibm data explorer.
+
+also thank prof. stephen degloria for coordinating the gis work and visualization work for the project, and thank ms. wenling kuo and mr. dennis swaney for providing me the original data.
+
+
+
+
+references
+1. asporth, v., hakansson, a., revay, p., "gis application for
+visualization of streams" in computers, environment and urban system, mar.
+1994, p-103.
+
+2. graf, k. ch., suter, m., nuesch, d., "perspective terrain
+visualization-a fusion of remote sensing, gis, and computer graphics." in
+computers & graphics, 1994 v18 n6, p-795.
+
+3. wood, j. d. and fisher, p.f., "assesing interpolation accuracy in
+elavation models.", in ieee computer graphics and applications, mar. 1993,
+p-48.
+
+4. denzer, r., "graphics for environmental decision making.", in ieee computer graphics and applications, mar. 1993,
+p-58.
+
+5. theresa rhyne et. al., "visualizing environmental data at the epa.", in ieee computer graphics and applications, mar. 1993,
+p-34.
+
+6. ibm data explorer document.
+
+
+
+your comments are welcome. please e-mail me your opinions.
+
+fu-an tsai dec. 12, 1995

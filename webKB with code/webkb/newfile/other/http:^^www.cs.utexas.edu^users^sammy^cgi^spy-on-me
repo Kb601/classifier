@@ -1,0 +1,58 @@
+spy on sammy
+  
+ 
+
+ 
+
+  spy on sammy 
+
+
+
+
+ rwho 
+this output will tell you which machines i have session running on.
+
+
+
+
+
+
+
+
+ finger 
+this output will tell you about my account here.
+
+
+
+[cs.utexas.edu] 
+[cs.utexas.edu: phingerd responds at mon jan  6 15:23:21 1997]
+
+last login:   never logged in
+
+name:         samuel z. guyer                                                 
+org:          computer sciences, tay 2.124, ut austin, austin tx  78712-1188  
+office:                                                                       
+office ph#:                                                                   
+
+home ph#:     512 912 8180             birthday:   may 25                    
+
+login:        sammy                    sponsor:    porter                    
+group:        grad                     type:       phd                       
+shell:        /lusr/bin/tcsh           expires:    dec 1, 1999               
+server:       /v/hank/v1/sammy         quota:      unlimited                 
+
+mailbox:      (utxcs local net via nfs)
+status:       mailbox was modified mon jan  6 14:38:25 1997
+              mailbox was accessed fri jan  3 13:42:13 1997
+
+[plan]
+am i logged on?
+
+try finger sammy@darkwing.cs.utexas.edu
+
+
+
+
+
+
+back to my  home page .

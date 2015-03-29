@@ -1,0 +1,231 @@
+cs 537 - problem set #1
+
+
+
+
+
+
+university of wisconsin-madison
+
+computer sciences department
+
+
+
+
+cs 537
+
+spring 1996 
+bart miller
+
+
+problem set #1
+
+
+
+
+
+
+
+problem 1
+you have been hired by the wisconsin department of transportation
+to computerize traffic control at a 3-way intersection (pictured below).
+
+
+
+
+
+
+the east-west street is one-way (westbound).
+the north-south street is two-way.
+the rules for this intersection are:
+
+
+each car (process) arriving at the intersection will call a
+procedure enter(indir, outdir),
+where indir
+and outdir
+are parameters whose value is one of the defined constants:
+north, south, east, or west.
+the parameter indir
+is the direction that you enter the intersection, and outdir
+is the direction that you will leave the intersection.
+this procedure returns only when it is safe to proceed through the intersection.
+
+after leaving the intersection, the car (process) must call
+procedure leave(outdir),
+where outdir
+is defined the same as above.
+
+cars can proceed straight or make legal turns.
+u turns are illegal.
+
+if cars are waiting from both the north and east directions,
+they should proceed at the same time if they
+can safely do so.
+
+if cars are waiting from both the north and east directions,
+and they cannot both safely proceed at the same time, they
+must alternate (this prevents starvation).
+
+the east-west street has a single lane.
+the north-south street has two lanes - one in either direction.
+
+
+you are to write the code for the
+enter()
+and
+leave()
+procedures.
+you can assume that you are supplied with (already written) a procedure
+called
+drivethroughtheintersection().
+you have no idea how long this procedure takes to execute.
+
+you should write three versions of the program.
+for all three of these programs, you should use the c++.
+
+
+the first program will be written using semaphores as the synchronization
+mechanism.
+assume that car each is a process.
+you are to define the global variables (including semaphores) that are to be
+used, and how they are initialized.
+you are to then write the code that the cars
+will use.
+
+
+the second program will be written using monitors.
+use c++ with monitor classes (as we have done in lecture).
+again, assume that each car is a process.
+you are to first describe the monitor(s) that will be used by the cars.
+for each monitor, you should describe the data maintained by the monitor,
+and the initial values.
+you should also describe the procedures within each monitor that are used
+for synchronization.
+last, describe the code that the cars use
+(to call the monitors, etc.) to be properly synchronized.
+
+the procedures
+enter()
+and
+leave()
+will probably
+not
+be in a monitor, or else rule 4 will be difficult to obey.
+enter()
+and
+leave()
+will probably call
+procedures within a monitor (or monitors).
+
+
+the third program will be written using messages.
+assume that we have processes communicating via messages.
+the processes do not have any shared memory.
+each mail box has a unique name, which is a character string
+(like
+bart
+or
+hithere).
+
+you will have three communications primitives,
+send,
+receive,
+and
+createmailbox.
+the send operation looks like:
+
+send (const char *mailboxname, const char *contents)
+
+
+the
+mailboxname
+is a string naming the destination mail box and
+you might want to use names such as
+waitqueue
+or
+trafficcop.
+the
+contents
+are anything you want to send in the message.
+the send operation does not block, and we will assume that there are
+no error cases (like unknown mail box) to be handled.
+after a send, you know that the message is queued in the mail box.
+the receive operation looks like:
+
+receive (const char *mailboxname, char *contents)
+
+
+the
+mailboxname
+is a string naming the mail box.
+the receive operation blocks until a message gets delivered.
+if a message is already available, or if a message arrives after the
+receiver has blocked, then the receive returns.
+when the receive returns, the
+contents
+gets filled in with the contents that were sent with the message.
+
+the create operation looks like:
+
+createmailbox (const char *mailboxname)
+
+
+the
+mailboxname
+is a string naming the newly created mail box.
+mail box names must be unique.
+
+you are to design the code that will be executed by each process.
+as with the first two programs, assume that each car is a process.
+you may also create any extra processes that you find useful.
+
+
+
+
+problem 2
+
+you are given a system that has binary semaphores.
+that is, you can declare variables with the class
+binsem,
+and you can perform the constructor and
+binp() and
+binv()
+methods on these variables.
+
+using these binary semaphores, you are to implement general semaphores
+on this system.
+you will define a new class called
+gensem
+and write the code for the constructor and
+genp and
+genv
+methods.
+
+
+
+problem 3
+
+a important aspect of multiprocessing is using multiple
+processes to concurrently compute a single problem.
+with this in mind, write a c++
+program that uses four processes to multiply two 4 by 4
+matrices a and b, and store the result in (the 4 by 4
+matrix) c.
+the heart of your program will be a procedure called
+matrixmult(row, column),
+that multiples row row of a times
+column column of b and stores it in
+c[row,column].
+assume the matrices are in memory global to all the processes.
+
+what (if any) synchronization mechanisms or primitives do you need for
+your solution?
+why?
+
+
+
+last modified:
+fri feb  9 12:52:06 cst 1996
+by
+bart

@@ -1,0 +1,81 @@
+tex  
+
+
+			   tex & friends faq 
+
+
+
+
+ 1.  how do i get a .ps file? 
+ 2.  what's a good latex2e book? 
+ 3.  i've made my own .fmt file, how do i get tex to use it? 
+ 4.  how do i get tex to use the macros in /p/lib/tex/macros? 
+ 5.  how do i get tex and dvips to use my fonts? 
+ 6.  how do i print a .dvi file?
+
+
+
+  1. how do i get a .ps file? 
+use the -o flag.
+
+  dvips foo.dvi -o  
+
+the above will create a file named foo.ps
+
+
+
+
+  2. what's a good latex2e book? 
+"the latex companion" by goossens, mittelbach, and samarin (isbn
+0-201-54199-8) is a good book.  i was able to get a copy from the
+university co-op.
+
+if you know a better one, let me know.
+ 
+
+
+
+ 3. i've made my own .fmt file, how do i get tex to use it?
+the easiest way to do this is to set the texformats enviroment
+variable.  let's say i keep my .fmt files in /u/pkn/tex/lib/formats,
+then i would set texformats to:
+
+	setenv texformats /u/pkn/tex/lib/formats:
+
+that would search my directory first and the the default directory
+(/lusr/tex/lib/tex/formats)
+
+
+
+
+ 4. how do i get tex to use the macros in
+/p/lib/tex/macros? 
+you need to set the  texinputs  enviroment variable to
+
+	setenv texinputs /p/lib/tex/macros:
+
+that will cause tex to look in /p first, then the current directory,
+and finally in the default directory (/lusr/tex/lib/tex/macros).  if
+you want tex to look in /p last, put the colon before /p/lib/tex/macros
+
+
+
+
+  5. how do i get tex and dvips to use my fonts? 
+you need to set  texfonts  to the directory with the .tfm files
+in it.   dvips  need  texpks  set to the directory with the .pk
+files in it.
+
+
+
+
+  6. how do i print a .dvi file? 
+with  dvips .  if you have the  printer  enviroment variable
+set you can just type:
+
+	dvips filename
+
+where  filename  is the name of the .dvi file.  if you don't have
+ printer  set, use the -p printername  flag
+
+	dvips -p printername filename

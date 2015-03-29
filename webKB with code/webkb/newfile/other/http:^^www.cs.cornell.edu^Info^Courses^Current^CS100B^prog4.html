@@ -1,0 +1,31 @@
+cs100b program 4 solution
+
+
+
+
+cs100b program 4
+solution
+
+
+
+i decided to implement my bigint as
+
+
+#define digits 512
+
+typedef struct {
+   unsigned short array[digits];
+   int digits;
+   } bigint;
+
+
+i will keep the least significant digit in index 0, and the most significant
+digit in (digits-1).
+
+
+the implementation of my bigint library.
+
+
+the sterling's approximation code. many programs i saw
+used two loops to determine n!. this was very inefficient; you only need one
+loop.

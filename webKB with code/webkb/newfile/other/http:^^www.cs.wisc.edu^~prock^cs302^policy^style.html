@@ -1,0 +1,343 @@
+cs 302 style guide
+
+
+
+cs 302 style guide
+introduction
+
+as you are aware, compilers do not care what your source code looks
+like as long as it is correct syntax for the language.  so, why does
+it matter what the source code looks like?  it matters because humans
+will also be reading your source code.  in this class your program
+needs to be easily understood by you and by your instructor/grader.
+in other environments your program will need to be understood by
+other members of your programming team, by members of a testing team,
+and by programmers who will be maintaining your code after you leave a
+project.  thus, good programming style is an important ingredient to
+good software engineering.  the more readable your code, the more
+efficient the software production process will be.
+
+think of your source code as a document describing your
+implementation.  like writing a paper, article, or blueprint, you have
+the freedom to make choices regarding how to present your document.
+however, you also know that if you stay within the guidelines of
+popular convention for the type of document you are creating, then
+people reading your document will have an easier time understanding it.
+there is a tension between your creative freedom and the
+conventions dictating your style.  it is your responsibility to find
+an appropriate balance.
+
+what is style?
+
+style is the format or layout of a program as commented source code.
+in the context of cs 302, we will concentrate on the following aspects:
+
+
+indentation
+placement of curly brackets
+whitespace
+comments
+identifier names
+
+
+indentation
+  fixed width indentation
+  almost all indentation occurs in fixed width intervals, usually using
+  an interval of a single tab or two or more spaces.  the following example
+  program is indented by four spaces per indentation.
+
+  
+    // program 0:    the bean counter
+    int main () {
+        int number_of_beans;                // number of beans (from user)
+        const double bean_weight = 2.051;   // average bean weight in grams
+        cout > number_of_beans;
+        if (number_of_beans >= 0) {
+            cout 
+
+  i don't care how much you indent, but you must be consistant in your 
+  indenting.  if you indent two spaces from level 0 to level 1, you must
+  indent two more spaces from level 1 to level 2.  furthermore, if you
+  indent two spaces anywhere in your code, you must indent two spaces
+  everywhere in your code.
+
+  level 0
+
+  the following items begin at level 0:
+
+  
+  preprocessor directives (e.g. #include &lt;iostream.h&gt;)
+  function headers and class headers
+  global variables (and other global declarations)
+  
+
+  level 1+
+
+  other statements are indented.  indent once for being in a function,
+  and once more for each control statement the statement is nested within.
+  always indent whether or not the control statement uses curly brackets.
+  it is not necessary to indent case labels within a switch statements and
+  public/private labels within class definitions,
+  but you may do so if you wish (see below).
+
+  
+  if
+  
+    if (beans == bacon) {
+        beans++;
+        bacon++;
+    }
+  
+
+  if/else
+  
+    if (beans == bacon)
+        beans++;
+    else
+        bacon++;
+  
+
+  while
+  
+    while (beans == bacon)
+        beans++;
+  
+
+  do while
+  
+    do {
+        beans++;
+    } while (beans == bacon);
+  
+
+  switch (#1)
+  
+    switch (number_beans) {
+        case 0:
+            cout 
+
+  switch (#2)
+  
+    switch (number_beans) {
+    case 0:
+        cout 
+  
+
+placement of curly brackets
+  there are several common styles used for lining up curly brackets.
+  the most important thing is to be consistant.  if you use one style 
+  anywhere in your code, you must use the same style everywhere in your code.
+  
+
+  option 1
+  
+    header {
+        body
+        body
+    }
+  
+
+  option 2
+  
+    header
+        {
+        body
+        body
+        }
+  
+
+  option 3
+  
+    header
+    {
+        body
+        body
+    }
+  
+
+whitespace
+  vertical whitespace
+  a program should have two or more blank lines between functions.
+  furthur, it should have a single blank line to break up statements
+  within a function into logical units.
+
+  
+    // function:     eat_beans
+    // description:  notice how there are two blank lines between this
+    //               function and the next function.
+    void eat_beans (void) {
+      cout 
+
+  horizontal whitespace
+  there should be a single space between most operators and their operands.
+  for example:
+
+  
+      // do it like this:
+      int i = 5 + 8 * (9 - 3);
+      cout 
+
+  but some operators, like ++, [] and unary -,
+  generally do not take horizontal whitespace.
+
+  
+      // do it like this:
+      beans[i++] = -j;
+
+      // not like this:
+      beans [ i ++ ] = - j;
+  
+
+comments
+  program header
+  each program should have a block of comments at the top of the 
+  file that contains the main() function.  these comments must
+  contain the name of the program, your name, your course and section, 
+  the date and your email address.  in addition, you must include 
+  a brief summary of the program that describes what the program does,
+  what kinds of inputs are necessary and any bugs or deficiencies.
+
+  
+    // program 0:    the bean counter
+    // name:         gregory c. sharp
+    // class:        cs 302 section 99
+    // date:         jan 1, 1999
+    // e-mail:       greg@cs.wisc.edu
+    //
+    // description:  this program calculates the number of navy beans
+    //               in the known universe based on a user's estimate
+    //               of the universal navy bean constant.
+  
+
+  file header
+  every other file in a multi file program should have a header.  
+  the file header should include a description of what is contained
+  in the file, and how the code in the file relates 
+  to the rest of the program.
+
+  
+    // program 0:    the bean counter
+    // file:         bean.h
+    // description:  class definition of the bean class.
+  
+
+  function header
+  most functions should have a header.  the function header explains 
+  the inputs, outputs and side effects of the function, as well as
+  a short description of what the function does.
+
+  
+    // function:     count_beans
+    // inputs:       weight of beans (in tons)
+    // outputs:      number of beans
+    // description:  calculates the number of beans based on the
+    //               average weight of a navy bean at sea level.
+    int count_beans (double weight) {
+      return int (weight / bean::average_weight());
+    }
+  
+
+  a related group of small functions can share a single comment.
+
+  
+    // function:     user input routines
+    // description:  these utility routines control simple user inputs.
+    int getint (char *prompt) {
+      int i;
+      cout > i;
+      return i;
+    }
+
+    char getyn (char *prompt) {
+      char c;
+      cout > c;
+      while (c != 'n' && c != 'n' && c != 'y' && c != 'y') {
+        cout > c;
+      }
+      return c;
+    }
+  
+
+  comments by object definitions
+  most objects need a comment to describe what the variable does.
+
+  
+    double weight;        // weight of beans (in tons)
+    double mass;          // mass of beans (in kg)
+  
+
+  however, temporary variables, loop variables and input variables 
+  should not have a comment.
+
+  
+    int i;                // loop variable doesn't need a commment!
+    for (i = 0; i > d;
+      bean[i].set_weight (d);
+    }
+  
+
+  comments embedded in the code
+  comments should be embedded in code for the following reasons.
+
+  
+  to introduce a logically distinct section of code.
+  to explain an unusual coding technique.
+  
+
+  the following is an example of a function which contains embedded 
+  comments.
+
+  
+    // function:     count_beans
+    // description:  first take a sample of the beans database to aproximate
+    //               the weight, and then use this to estimate the total number
+    //               in the carton.
+    //               return the number of beans.
+    int count_beans (carton carton) {
+
+      // sample the beans database to get the average weight
+      int i;
+      double average = 0;         // average weight within sample
+      for (i = 0; i 
+
+identifier names
+  naming conventions
+  most identifiers, including most variables and all functions and classes,
+  should have a descriptive name.  the name need not be long, 
+  but it must relate to the semantic meaning of the identifier.
+
+  
+  // do it like this:
+  double starting_location, time, velocity;
+  double location = starting_location + time * velocity;
+
+  // not like this:
+  double s, t, v;
+  double l = s + t * v;
+  
+
+  but on the other hand, you should use short (1 letter) identifiers for
+  temporary variables, loop variables and input variables.
+
+  
+  // do it like this:
+  int i;
+  for (i = 0; i 
+
+  and finally, please use all capital letters for constants.
+
+  
+  // do it like this:
+  const int max_beans = 100;
+
+  // not like this:
+  const int max_beans = 100;
+  
+
+
+last modified 
+sat sep  7 18:39:12 cdt 1996
+by greg sharp
+
+greg@cs.wisc.edu
+| http://www.cs.wisc.edu/~greg/greg.html

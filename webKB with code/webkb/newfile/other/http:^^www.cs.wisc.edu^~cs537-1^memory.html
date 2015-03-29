@@ -1,0 +1,391 @@
+cs 537 - memory management
+
+
+
+
+
+cs 537lecture notesmemory management
+
+
+
+
+contents
+
+ allocating main memory 
+
+ algorithms for memory management 
+ compaction and garbage collection 
+ swapping 
+
+
+
+
+
+  allocating main memory  
+we first consider how to manage main (``core'') memory (also called
+random-access memory (ram)).
+in general, a memory manager provides two operations:
+
+    address allocate(int size);
+    void deallocate(address block);
+
+the procedure allocate receives a request for a contiguous block
+of size bytes of memory and returns a pointer to such a block.
+the procedure deallocate releases the indicated block, returning
+it to the free pool for reuse.
+sometimes a third procedure is also provided,
+
+    address reallocate(address block, int new_size);
+
+which takes an allocated block and changes its size, either returning part
+of it to the free pool or extending it to a larger block.
+it may not always be possible to grow the block without copying it to
+a new location, so reallocate returns the new address of the block.
+
+memory allocators are used in a variety of situations.
+in unix, each process has a data segment.
+there is a system call to make the data segment bigger, but no system call
+to make it smaller.
+also, the system call is quite expensive.
+therefore, there are library procedures (called malloc, free,
+and realloc) to manage this space.
+only when malloc or realloc runs out of space is it necessary
+to make the system call.
+the c++ operators new and delete are just dressed-up versions
+of malloc and free.
+the java operator new also uses malloc, and the
+java runtime sustem calls free when an object is no found to be
+inaccessible during garbage collection (described below).
+
+the operating system also uses a memory allocator to manage space
+used for os data structures and given to ``user'' processes for their own use.
+as we saw
+
+before, there are several reasons why we might want multiple
+processes, such as serving multiple interactive users or controlling multiple
+devices.
+there is also a ``selfish'' reason why the os wants to have multiple processes
+in memory at the same time:
+to keep the cpu busy.
+suppose there are n processes in memory (this is called the
+level of multiprogramming) and each process is blocked
+(waiting for i/o) a fraction p of the time.
+in the best case, when they ``take turns'' being blocked, the cpu will be
+100% busy provided n(1-p) &ge; 1.  for example, if
+each process is ready 20% of the time, p = 0.8 and the cpu could
+be kept completely busy with five processes.
+of course, real processes aren't so cooperative.  in the worst case, they
+could all decide to block at the same time, in which case, the cpu
+utilization (fraction of the time the cpu is busy) would be only
+1 - p (20% in our example).
+if each processes decides randomly and independently when
+to block, the chance that all n processes are blocked at the
+same time is only pn, so cpu utilization is
+1 - pn. 
+continuing our example in which n = 5 and p = 0.8, the
+expected utilization would be 1 - .85 = 1 - .32768 = 0.67232.
+in other words, the cpu would be busy about 67% of the time on the average.
+see figure 3-2 on page 77 of the text.
+
+  algorithms for memory management  
+
+clients of the memory mangager keep track of allocated blocks (for now,
+we will not worry about what happens when a client ``forgets'' about a block).
+the memory manager needs to keep track of the ``holes'' between them.
+the most common data structure is a doubly linked list of holes, 
+sorted by address.
+this data structure is called the free list.
+this free list doesn't actually consume any space (other than the
+head and tail pointers), since the links between holes can be stored in
+the holes themselves (provided each hole is at least as large as two
+pointers).
+to satisfy an allocate(n) request, the memory manager finds a hole
+of size at least n and removes it from the list.
+if the hole is bigger than n bytes, it can split off the tail
+of the hole, making a smaller hole, which it returns to the list.
+to satisfy a deallocate request, the memory manager turns the
+returned block into a ``hole'' data structure and inserts it into
+the appropriate place in the free list.  if the new hole is immediately
+preceded or followed by a hole, the holes can be coalesced
+into a bigger hole.
+
+how does the memory manager know how big the returned block is?
+the usual trick is to put a small header in the allocated block,
+containing the size of the block and perhaps some other information.
+the allocate routine returns a pointer to the body of the block, not
+the header, so the client doesn't need to know about it.
+the deallocate routine subtracts the header size from its argument
+to get the address of the header.
+the client thinks the block is a little smaller than it really is.
+so long as the client ``colors inside the lines'' there is no problem, but
+if the client has bugs and scribbles on the header, the memory manager
+can get completely confused.
+this is a frequent problem with malloc in unix programs written in c or
+c++.
+the java system uses a variety of runtime checks to prevent this kind of bug.
+
+how does the memory manager choose a hole to respond to an allocate
+request?
+at first, it might seem that it should choose the smallest hole that is
+big enough to satisfy the request.
+this strategy is called best fit.
+it has two problems. first, it requires an expensive search of the
+entire free list to find the best hole (although fancier data structures
+can be used to speed up the search).
+more importantly, it leads to the creation of lots of little holes
+that are not big enough to satisfy any requests.
+this situation is called fragmentation, and is a problem for
+all memory-management strategies, although it is particularly bad for
+best-fit.
+one way to aviod making little holes is to give the client a bigger block
+than it asked for.
+for example, we might round all requests up to the next larger multiple
+of 64 bytes.
+that doesn't make the fragmentation go away, it just hides it.
+unusable space in the form of holes is called external fragmentation,
+while unused space inside allocated blocks is called internal
+fragmentation.
+
+another strategy is first fit, which simply scans the
+free list until a large enough hole is found.
+despite the name, first-fit is generally better than best-fit because
+it leads to less fragmentation.
+there is still one problem:  small holes tend to accumulate near the
+beginning of the free list, making the memory allocator search farther
+and farther each time.
+this problem is solved with next fit, which starts each search
+where the last one left off, wrapping around to the beginng when the
+end of the list is reached.
+
+yet another strategy is to maintain separate lists, each containing
+holes of a different size.
+tanenbaum's ``multiprogramming with fixed partitions'' (section 3.1.3
+on page 78) can be viewed as an extreme case of this approach, in which
+the number of ``holes'' is very small.
+this approach works well at the application level, when only a few
+different types of objects are created (although there might be
+lots of instances of each type).
+it can also be used in a more general setting by rounding all requests
+up to one of a few pre-determined choices.
+for example, the memory mangager may round all requests up to the next
+power of two bytes (with a minimum of, say, 64) and then keep lists
+of holes of size 64, 128, 256, ..., etc.  assuming the largest request
+possible is 1 megabyte, this requires only 14 lists.
+this is the approach taken by most implementations of malloc.
+this approach eliminates external fragmentation entirely, but internal
+fragmenation may be as bad as 50% in the worst case (which occurs when
+all requests are one byte more than a power of two).
+
+another problem with this approach is how to coalesce neighboring holes.
+one possibility is not to try.  the system is 
+initialized by splitting memory up into a fixed set of holes (either all the
+same size or a variety of sizes).  each request is matched to an
+``appropriate'' hole.  if the request is smaller than the hole size, the
+entire hole is allocated to it anyhow.  when the allocate block is released,
+it is simply returned to the appropriate free list.
+most implementations of malloc use a variant of this approach (some
+implementations split holes, but most never coalesce them).
+
+an interesting trick for coalescing holes with multiple free lists is the
+buddy system.
+assume all blocks and holes have sizes which are powers of two
+(so requests are always rounded up to the next power of two) and each
+block or hole starts at an address that is an exact multiple of its size.
+then each block has a ``buddy'' of the same size adjacent to it, such that
+combining a block of size 2n with its buddy creates a properly
+aligned block of size 2n+1
+for example, blocks of size 4 could start at addresses 0, 4, 8, 12, 16, 20, etc.
+the blocks at 0 and 4 are buddies; combining them gives a block at 0 of
+length 8.  similarly 8 and 12 are buddies, 16 and 20 are buddies, etc.
+the blocks at 4 and 8 are not buddies even though they are neighbors:
+combining them would give a block of size 8 starting at address 4, which
+is not a multiple of 8.
+the address of a block's buddy
+can be easily calculated by flipping the nth bit from the right in the
+binary representation of the block's address.
+for example, the pairs of buddies (0,4), (8,12), (16,20) in binary are
+(00000,00100), (01000,01100), (10000,10100).  in each case, the two addresses
+in the pair differ only in the third bit from the right.
+in short, you can find the address of the buddy of a block by taking the
+exclusive or of the address of the block with its size.
+to allocate a block of a given size, first round the size up to the next
+power of two and look on the list of blocks of that size.
+if that list is empty, split a block from the next higher list (if that
+list is empty, first add two blocks to it by splitting a block from the
+next higher list, and so on).
+when deallocating a block, first check to see whether the block's buddy
+is free.  if so, combine the block with its buddy and add the resulting
+block to the next higher free list.  as with allocations, deallocations
+can cascade to higher and higher lists.
+
+  compaction and garbage collection  
+
+what do you do when you run out of memory?
+any of these methods can fail because all the memory is allocated,
+or because there is too much fragmentation.
+malloc, which is being used to allocate the data segment
+of a unix process, just gives up and calls the (expensive) os call to
+expand the data segment.
+a memory manager allocating real physical memory doesn't have that
+luxury.  the allocation attempt simply fails.
+there are two ways of delaying this catastrophe, compaction and garbage
+collection.
+
+compaction attacks the problem of fragmentation by moving all the allocated
+blocks to one end of memory, thus combining all the holes.
+aside from the obvious cost of all that copying, there is an important
+limitation to compaction:
+any pointers to a block need to be updated when the block is moved.
+unless it is possible to find all such pointers, compaction is not possible.
+pointers can stored in the allocated blocks themselves as well as other
+places in the client of the memory manager.
+in some situations, pointers can point not only to the start of blocks
+but also into their bodies.
+for example, if a block contains executable code, a branch instruction
+might be a pointer to another location in the same block.
+compaction is performed in three phases.
+first, the new location of each block is calculated to determine the
+distance the block will be moved.
+then each pointer is updated by adding to it the amount that the block it
+is pointing (in)to will be moved.
+finally, the data is actually moved.
+there are various clever tricks possible to combine these operations.
+
+garbage collection finds blocks of memory that are inaccessible and 
+returns them to the free list.
+as with compaction, garbage collection normally assumes we find all
+pointers to blocks, both within the blocks themselves and ``from the outside.''
+if that is not possible, we can still
+do ``conservative'' garbage collection in which
+every word in memory that contains a value that appears to be a pointer
+is treated as a pointer.
+the conservative approach may fail to collect blocks that are garbage,
+but it will never mistakenly collect accessible blocks.
+there are three main approaches to garbage collection:
+reference counting, mark-and-sweep, and generational algorithms.
+
+reference counting keeps in each block a count of the number of pointers
+to the block.
+when the count drops to zero, the block may be freed.
+this approach is only practical in situations where there is some
+``higher level'' software to keep track of the counts (it's much too hard
+to do by hand), and even then, it will not detect cyclic structures of
+garbage:
+consider a cycle of blocks, each of which is only pointed to by its
+predecessor in the cycle.
+each block has a reference count of 1, but the entire cycle is garbage.
+
+mark-and-sweep works in two passes:
+first we mark all non-garbage blocks by doing a depth-first search
+starting with each pointer ``from outside'':
+
+    void mark(address b) {
+        mark block b;
+        for (each pointer p in block b) {
+            if (the block pointed to by p is not marked)
+                mark(p);
+        }
+    }
+
+the second pass sweeps through all blocks and returns the unmarked ones
+to the free list.
+the sweep pass usually also does compaction, as decribed above.
+
+there are two problems with mark-and-sweep.
+first, the amount of work in the mark pass is proportional to the amount of
+non-garbage.  thus if memory is nearly full, it will do a lot
+of work with very little payoff.
+second, the mark phase does a lot of jumping around in memory, which is
+bad for virtual memory systems, as we will soon see.
+
+the third approach to garbage collection is called generational
+collection.
+memory is divided into spaces.
+when a space is chosen for garbage collection, all subsequent references
+to objects in that space cause the object to be copied to a new space.
+after a while, the old space either becomes empty and can be returned to the
+free list all at once, or at least it becomes so sparse that a mark-and-sweep
+garbage collection on it will be cheap.
+as an empirical fact, objects tend to be either short-lived or long-lived.
+in other words, an object that has survived for a while is likely to
+live a lot longer.
+by carefully choosing where to move objects when they are referenced,
+we can arrange to have some spaces filled only with long-lived objects,
+which are very unlikely to become garbage.
+we garbage-collect these spaces seldom if ever.
+
+  swapping  
+
+when all else fails, allocate simply fails.
+in the case of an application program, it may be adequate to simply
+print an error message and exit.
+an os must be able recover more gracefully.
+
+we motivated memory management by the desire to have many processes in
+memory at once.
+in a batch system, if the os cannot allocate memory to start a new job, it
+can ``recover'' by simply delaying starting the job.
+if there is a queue of jobs waiting to be created, the os might
+want to go down the list, looking for a smaller job that can be
+created right away.
+this approach maximizes utilization of memory, but can starve large jobs.
+the situation is analogous to short-term cpu scheduling, in which sjf
+gives optimal cpu utilization but can starve long bursts.
+the same trick works here: aging.
+as a job waits longer and longer, increase its priority, until its
+priority is so high that the os refuses to skip over it looking for
+a more recently arrived but smaller job.
+
+an alterantive way of avoiding starvation is to use
+a memory-allocation scheme with fixed partitions (holes
+are not split or combined).  assuming no job is bigger than the biggest
+partion, there will be no starvation, provided that each time a partition
+is freed, we start the first job in line that is smaller than that
+partition.
+however, we have another choice analogous to the
+difference between first-fit and best fit.
+of course we want to use the ``best'' hole for each job (the smallest
+free partition that is at least as big as the job), but suppose the
+next job in line is small and all the small partitions are
+currently in use.
+we might want to delay starting that job and look through the arrival
+queue for a job that better uses the partitions currently available.
+this policy re-introduces the possibility of starvation, which we
+can combat by aging, as above.
+
+if a disk is available, we can also swap blocked jobs out to disk.
+when a job finishes, we first swap back jobs form disk before allowing
+new jobs to start.
+when a job is blocked (either because it wants to do i/o or because our
+short-term scheduling algorithm says to switch to another job), we have a
+choice of leaving it in memory or swapping it out.
+one way of looking at this scheme is that it increases the multiprogramming
+level (the number of jobs ``in memory'') at the cost of making it
+(much) more expensive to switch jobs.
+a variant of the mlfq (multi-level feedback queues) cpu scheduling algorithm is
+particularly attractive for this situation.
+the queues are numbered from 0 up to some maximum.
+when a job becomes ready, it enters queue zero.
+the cpu scheduler always runs a job from the lowest-numbered non-empty
+queue (i.e., the priority is the negative of the queue number).
+it runs a job from queue i for a maximum of i quanta.
+if the job does not block or complete within that time limit, it is
+added to the next higher queue.
+this algorithm behaves like rr with short quata in that short bursts
+get high priority, but does not incur the overhead of frequent
+swaps between jobs with long bursts.
+the number of swaps is limited to the logarithm of the burst size.
+
+
+
+
+
+
+solomon@cs.wisc.edu
+
+
+thu oct 31 15:38:54 cst 1996
+
+
+
+copyright &#169; 1996 by marvin solomon.  all rights reserved.

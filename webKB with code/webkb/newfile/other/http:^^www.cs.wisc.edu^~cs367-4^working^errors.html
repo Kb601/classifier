@@ -1,0 +1,236 @@
+common c++ programming errors
+
+
+
+common c++ programming errors
+
+this page list common c++ coding errors, some of which are legal c++ code
+but have an unexpected behavior.  if you have suggestions for this list, please
+send email to skrentny@cs.wisc.edu.
+these common errors are ordered into the following categories:
+
+
+ c++ basics
+ control structures
+ basic data structures
+ functions
+
+
+
+
+c++ basics
+
+
+ case isn't case isn't case
+     c++ is case sensitive!  different capitalizations can be used to
+     make different identifiers.  the convention that i follow uses allcaps
+     for constants, initial_cap for type names, and lower_case for variable
+     names.
+     
+     typedef float case;
+     const case case = 22.0;
+     case case = case;
+     
+ dividing division
+     any time both operands of the / (division op) are
+     integral types (i.e. integers) the operation becomes whole number
+     division rather than fractional division.  you must change one of the
+     operands by using type casting to a real number (e.g. float, double)
+     to get fractional division.  the code below displays
+      5,5,5.5 
+     
+     int i = 11, j = 2;
+     float k = i/j;
+     cout 
+ something is true and nothing is false
+     any nonzero value means logical true, whereas only 0 is false.  our
+     g++ compiler provides the bool type and the values
+     true and false for booleans.
+     since this is now supported, it is preferred to use this type rather than
+     an enumerated boolean type as shown in the text or the integers 0 and 1.
+     for a simple example see bool.cc.  if you
+     use an enumerated type or #include &lt;boolean.h&gt; as
+     shown in the text you may get a compiler warning message that can be
+     ignored.
+     
+ inner cities may have inadvertent locals
+     variables are created when they are defined and destroyed when they
+     fall out of scope.  there are many places where variables can be defined 
+     and unintentionally be within a code block that limits the variables scope.
+     
+     {   int i;
+         cout 
+ leading with zeros can be confusing
+     numbers with at least one leading zeros are treated as octal (i.e. base
+     8) not decimal (i.e. base 10).  the code below displays  81,121 
+     
+     int i = 0121, j = 121;
+     cout 
+ 's' is not "s"
+     character values are enclosed in single quotes, whereas strings are
+     enclosed in double quotes and are terminated with a null character.
+     the code below should give a syntax error, but may not.
+     
+     if ( 's' == "s" )
+     
+
+
+
+
+control structures
+
+
+ if only == where = but they are not equal
+     probably the most common error is using = (assignment op)
+     rather than == (equality op).  since assignment is often legal
+     where equality comparison is desired, this error may not create a syntax
+     error.  if you ever use assignment where equality would be expected,
+     comment your code to say the assignment was intentional.
+     
+     if ( apples = oranges )  // oops! or is this intentional?
+     
+ && and || are "and" and "or" but not & and |
+     like equality comparisons, logical "and" and logical "or" must use
+     the appropriate symbol doubled with no space between.
+     
+ greatest greater great
+     when a sequence of comparisons (i.e ==, , >=) are made you can
+     only compare two things at a time and must join the comparisons using logical
+     "and".  the conditions below may look good but evaluate to false.
+     
+     if ( 33 > 22 > 11 )    // should be: (33 > 22) && (22 > 11)
+     if ( 11 == 11 == 11 )  // should be: (11 == 11) && (11 == 11)
+     
+ compounding the problem
+     only a single statement follows as the body of most control structures
+     unless you compound the statements using a statement block.  it is a good
+     practice to always use { }.
+     
+     if ( apples == oranges )
+        cout 
+ to break or not to break
+     a break; statement must follow every case in a switch
+     statement, unless you intend to flow through to the next case.  it is a
+     good practice to even put a break after the last case.
+     
+     switch ( menu_choice )
+     {
+      case 'a':           // intentional flow through to next case
+      case 'a':
+         add( item );     // accidental flow through to next case
+      case 'd':           // intentional flow through to next case
+      case 'd':
+         delete( item );
+         break;           // good practice
+     }
+     
+ the bodyless loop
+     a misplaced semicolon can behead a loop.  in the examples below the
+     loops have a null body due to the extra semicolon, and the compiler won't
+     complain.
+     
+     for ( i = 0; i 
+ scoping for counters
+     the scoping rules for for loops have changed to the new
+     ansi rules.  this is generating many warning messages for programs that mix
+     old and new styles, and sometimes results in syntax errors.  for more detail
+     see code example.  i recommend the
+     following to eliminate problems:
+     
+      loop counters that are used outside the loop body are defined
+          outside of the loop.
+          
+     int i, j;
+     for (i=1, j=-1; i
+      loop counters that are used only inside of the loop body can be
+	  defined in the for loop in the manner shown below.
+          
+     // defines two local counters m,n that are used only inside loop
+     for (int m=1, n=-1; m
+      using the old style of defining two loop counters may give syntax
+	  errors and should be avoided.
+          
+     // notice the ||| second int below?
+     //            vvv
+     for (int m=1, int n=-1; m
+     
+
+
+
+
+basic data structures
+
+
+ start indexing at 0
+     array indices always begin at 0.  the example below creates a array
+     with 11 elements with the first at index 0 and the last at index 10.
+     
+     int a[11];
+     a[0]  =  121;
+     a[11] = 1331;     // error! last index is 10
+     
+ your out of bounds
+     there is nothing to prevent your from indexing beyond the bounds of
+     an array, except perhaps that your program may misbehave intermittently
+     or even crash.  unfortunately the compiler doesn't verify that your
+     indices are in range, so programs will compile with bad indices.
+     
+ a[i,j] is like being out of your element
+     elements of multidimensional arrays are accessed by
+     a[i][j].  however, a[i,j] is legal!  the
+     comma is an operator that evaluates each operand and results in the value
+     of the right-hand operand.  this means a[i,j] is the same as
+     a[j], which does not access the element of the two dimensional
+     array as you intended.
+     
+ arrays are not the same
+     unlike all other data types (e.g. int, char, structs), arrays by default
+     are passed to functions by reference, and can not be returned from a
+     function using a return statement.
+     
+ classes end in a semicolon
+     don't forget to end your class definitions with a semicolon!
+     
+     class example
+     {
+     };      // 
+
+
+
+
+functions
+
+
+ mismatched arguments
+     the formal arguments listed in a function's header and prototype must
+     match in order, number, and type.  if there is a mismatch you may get
+     a syntax error from the compiler or an undefined symbol error from the
+     linker.  additionally, reference and constant arguments must match.
+     
+ no arguing about parentheses
+     even when a function takes no arguments, you must still include the
+     ( )s when calling the function, as well as in the prototype
+     and the function header.  leaving the parentheses out may not cause a
+     syntax error because a function name by itself refers to the function's
+     address.  the example below shows this:
+     
+     void display();
+     int main()
+     {
+         display;      // oops! this doesn't call the function
+         //...
+     }
+     int display()
+     {
+         cout 
+ arrays can cause troubles, see above
+     
+     
+
+
+
+
+
+
+copyright &copy 1996 james d. skrentny,
+skrentny@cs.wisc.edu

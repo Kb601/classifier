@@ -1,0 +1,80 @@
+find properties of horus stacks
+
+
+
+
+find properties of horus stacks
+
+
+
+see also
+validating the horus protocols
+
+
+
+
+
+
+the tool below allows you to build horus stacks and see interactively
+what kind of communications properties they will give you.
+
+
+
+in ``add/delete'' mode,
+click on a ``network'' button (lower right-hand side of the applet)
+to define or redefine which network you'll be working over.
+click on the ``layers'' buttons at the right to drop new layers
+on top of the stack.
+click on layers in the stack to delete them.
+look on the left side to see what kind of properties the designer
+of a user application over this stack might want to provide,
+and the properties that the protocol stack will provide when the
+application provides the checked-off properties.
+(if you see checkboxes, you can click on them to experiment with 
+providing or not providing the requested properties.)
+
+
+
+in ``document'' mode, clicking on the name of a layer or property
+will produce a window describing the layer or property.
+
+
+
+try stacking the sign and nak layers on top of udp.
+notice that it makes a big difference in which order the layers are
+stacked.
+notice that chksum and nak over udp is not very good (because
+the stack is subject to attacks by an intruder), but if you replace
+udp with a physically secure network (called secure in this demo)
+you do better.
+
+
+ 
+notice that you can remove the maxsend application requirement by
+adding the appropriate-sized frag layer on top of nak.  
+this is the usual approach.
+a less usual approach is to put frag directly over the network,
+and layer sign (or chksum, depending on the security of your network)
+and nak on top of that.  try it.
+
+
+
+(the interactive horus stack property-finder should appear
+in this space.  you must not have the ability to run java applets.
+too bad!)
+
+
+
+
+see also
+validating the horus protocols
+
+
+
+
+
+copyright fri apr 26 00:03:12 edt 1996 by cornell university. 
+maintained by
+david a. karr.
+send corrections to
+karr@cs.cornell.edu.

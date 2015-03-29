@@ -1,0 +1,53 @@
+mpeg browser
+mpeg browser
+
+
+
+ what is mpeg browser? 
+
+until now we could view mpegs just like we could watch
+movies. unfortunately, we were  unable to take the advantage of
+digital format: i have not seen mpeg players allowing user to skip to
+arbitrary frame, fast forward, rewind, etc. 
+
+even more importantly, the video was basically a sequence of frames
+with no structure. but it is obvious that video higher structure than
+frames: we can partition video into shots, scenes and larger chunks,
+like movies, tv shows, etc. we can also partition the video accoding
+to the content, for example we might want to select a segment of video
+in which a particular actor appears. 
+
+mpeg_browse provides an interface for browsing video. user can play
+video, stop at arbitrary point, fast forward. what is the advantage of
+mpeg browse over other video players? mpeg browse adds a very limited,
+yet useful structure to the video: it partitions the video into
+shots. based on these information, the browser can skip to the next
+shot, much like a cd player can skip to the next song.  the scene
+break algorithm was developed by ramin zabih, justin miller, and kavin
+mai. for more details about the algorithm see .....href......
+
+mpeg_browse works in two modes: preprocessing and
+browsing. preprocessing is necessary for two reasons: the algorithm
+for detecting scene breaks doesn't run in real time, and the decoder
+is not fast enough (which means that in order to skip to some place in
+the movie, the user would have to wait about as long as it would take
+to play the sequence). preprocessing is madatory, since the
+information generated is essential to the work of browser. the
+preprocessing has to be done only once: the information for each mpeg
+file is saved on the disk, in file filename.inf, where the
+filename is the name of the mpeg. 
+
+ in addition to video browsing mpeg_browse supports a wide variety of
+options, both command line and menu. most options have no effect after
+the start of the video, but future releases will allow change of
+many options (like dithering, frame rate, or skiping frames) at
+arbitrary times.
+
+mpeg_browse runs on linux, sunos, solaris, and probably any machine
+other which has wish and can compile berkeley mpeg_play.
+
+  visitors  
+download distribution of mpeg browse
+
+send comments and suggestions to  robert szewczyk
+(szewczyk@cs.cornell.edu)

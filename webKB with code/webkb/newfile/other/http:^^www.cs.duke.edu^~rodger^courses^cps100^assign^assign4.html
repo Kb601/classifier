@@ -1,0 +1,359 @@
+cps 100 - assignment 4 - fall 1996 
+
+
+ cps 100 fall 1996: assignment #4 
+
+
+
+  due: monday, oct. 28 by 8am 
+
+  last date to turn in: monday, nov. 4 by 8am 
+
+ 40 points 
+
+
+
+
+in your cps100 directory, create a directory called assign4 using the
+mkdir command. change into the assign4 directory. 
+
+
+in order to do this assignment, you need to copy some files using the 
+following  cp command (don't forget the trailing period, or dot): 
+
+
+       cp  ~rodger/cps100/assign4/*  .
+
+
+
+this command will copy  files 
+into your directory for you to use. 
+if you type  ls you should see the following files: 
+makefile, ladder.cc, ladder.h, ladderq.cc, queuear.h, queuear.cc, 
+and template.cc.
+
+
+for this assignment, you'll be using a database of english five-letter
+words from the stanford graphbase (knuth.dat, a list compiled by don knuth).  this
+list has about 6,000 words in it.  there is a smaller file of data
+to work with also called words5.dat.
+
+
+
+in your ladder directory, create a link to these data files
+by typing:
+
+
+
+   ln -s ~rodger/data/knuth.dat  knuth.dat
+   ln -s ~rodger/data/words5.dat  words5.dat
+
+
+then you can access these files without specifying a long path-name for
+the files.
+
+
+for the programming problem that follows, you should use the
+style rules discussed in class, which includes meaningful variable names,
+indentation, and  comments (pre and postconditions)
+at the top of the file and for each function. also include your name,
+date, course, and purpose in a comment at the top of the program.
+
+
+ problem: word ladder: turning stone into money 
+
+
+the input to the program is the name of a word file.  the user should
+then be prompted for
+two words of the same length (5 characters).
+the output is a sequence of words
+in which consecutive words share all but one letter, starting with the
+first word and ending with the last.
+one letter can be changed to another letter only if the resulting
+symbols form a valid word. for example, to turn stone into money, one possible
+ladder is (replace 't' by 'h', replace 'o' by 'i', etc.):
+
+
+
+stone
+shone
+shine
+chine
+chins
+coins
+corns
+cores
+cones
+coney
+money
+
+
+
+all of these words can be found in the knuth file and in a dictionary.
+the user will continue to enter words, and word ladders searched for,
+until either of the words entered is not 5 letters in length.
+
+
+
+assignment: part i
+
+you are to write a program ladderq.cc that uses a file of 5-letter
+words to find the shortest ladder from one word to another using a
+process outlined below.
+you must develop a class to do this, the class ladder has been
+started for you,
+but you will need to add more member functions (both public and private).
+
+
+your program should:
+
+
+ read and store the words from a file (specified by the user).
+
+ prompt the user to enter two five-letter
+words (and continue to prompt), 
+for each pair of words, output a shortest ladder from the first
+word to the second. if one of the words is not of length 5, your program
+should halt.
+
+
+a sample run:
+
+
+> ladderq
+  enter filename: words5.dat
+
+  enter two 5-letter words (length != 5 to end): smart brain
+
+  here is the ladder:
+  smart
+  start
+  stark
+  stack
+  slack
+  black
+  blank
+  bland
+  brand
+  braid
+  brain
+
+  enter two 5-letter words (length != 5 to end): angel devil
+  there is no path from angel to devil
+
+  enter two 5-letter words (length != 5 to end): no more
+>
+
+
+ 
+the file knuth.dat has extraneous information in it. ignore lines that
+begin with *, and only process the first 5 characters on other lines.
+knuth asks that the file not be altered, hence these restrictions.  code
+to read this file is included as the member function loadwords,
+already written for you to use.
+
+
+
+
+ algorithm 
+
+to find the shortest ladder, you should use the templated
+queue class provided (queuear, the modified queue class
+from the weiss book)
+first, store all of the words from the file in a vector of
+type wnode * (this is done for you in loadwords).
+
+
+
+   struct wnode
+   {
+      string word;
+      wnode * prev;
+   };
+
+(this assumes the use of the class string from cpstring.h.  you
+can use some other kind of string if you want).
+
+
+a ladder is found by putting the starting word (or rather 
+a pointer to it) on
+the queue, then putting all words 1 letter away from this word on the
+queue, then putting all words 2 letters away on the queue, then all
+words 3 letters away, etc.  as each word is taken off the queue, if the
+last (target) word is found the process can stop (there may be other
+words on the queue, but they'll be ignored).
+
+a word w isn't actually stored
+on the queue, a pointer to a struct containing w
+is stored.  the other field of the struct is a pointer to the word
+that is one letter away from w and that caused w to be
+put on the queue (the word's predecessor).  
+for example, if w is house, 
+then pointers to
+structs containing  mouse, louse, douse, horse (and so on) are
+enqueued with each struct pointing to house since this word
+preceeded the others and caused them to be enqueued.  the first word
+doesn't have a predecessor.  it's field cannot be 0/null since this is
+used for another purpose.  an easy fix is to make the pointer
+self-referential, it points to the struct itself (and this will need to
+be checked when printing ladders).
+
+ more details 
+
+
+the first word (entered by the user) is looked up in the list of words,
+and a pointer to the struct containing the word is enqueued.  for extra
+credit your program should be able to handle a first word even if the
+word is not in the list of words (all other words in the ladder, except
+perhaps for the last, must be in the list of words).
+
+
+put a pointer to the struct containing the
+word onto the queue (it's a queue of wnode pointers).  then repeat the
+dequeue/enqueue process below.
+
+
+dequeue an element (it's a pointer).  find all words one letter apart
+from the dequeued word.  if one of these is the target word, you're done
+(or if one of the words is one apart from the target word you're done,
+you can stop early).
+otherwise enqueue each of the words found 
+if it hasn't been queued up
+before (you can use the prev
+pointer fields in a wnode to determine if a word
+has been enqueued before --- initially all prev fields
+should be set to 0/null, this helps determine if a word has been
+enqueued before).  this means each word is enqueued
+at most once.
+
+
+when the target word is derived, you'll need to print out the ladder
+from the first word to the target word.  the prev pointer in
+the wnode stores information that will allow the ladder to be
+recreated, you may need to use recursion or a vector since the ladder
+will be backwards (but should be printed properly). alternatively you
+can store the words in an array/vector and print them out in reverse
+without using recursion, but using a loop over the vector.
+
+
+ ladder member functions 
+
+you must implement the functions described below.  you'll find it useful
+to implement other member functions.  sometimes the functions should be
+private.  this is the case when a member function is a helper function
+for other member functions, but shouldn't be called by the user.  making
+a helper function private ensures that only other member functions can
+access the helper function, but client programs cannot.
+
+
+ clear(), sets all prev fields to 0/null.
+ findladder(), tries to find a ladder between two words that are
+parameters to the function.  findladder returns a boolean value
+true if a ladder is found, and false otherwise.  pass the strings to
+this function as const reference parameters.
+ printladder() prints the word ladder.  private data may be
+needed to store the last node of the ladder (the prev field of 
+the last node can be used to access all other ladder nodes, the first
+node in the ladder has a self-referential pointer).
+
+
+you'll probably find it useful to write a function isoneapart()
+that is used to determine if two strings are one letter apart.  to do
+this, count the letters that are equal.  if this is one less than the
+total number of letters in the words, the words are one apart.  this
+function does not need to be a member function, it has two strings as
+parameters (const reference) and returns true if the strings are one
+letter apart.  you can just define this function in ladder.cc
+and use it there.
+
+you'll probably want debugging code/member functions to verify what's
+going on.  if you build helping/debugging member functions into your
+class you'll save time in the long run since the member functions can be
+used to help debug code.
+
+you may want to write a separate function to find a word in the vector
+of words (pointers to words) read in.  you can write this code inline
+(rather than making a function out of it), but the function can be
+useful in debugging and developing.
+
+it is advisable that you test out each function you write to make
+sure it works correctly. in order to do so, it would be 
+very helpful  to create a small data file with about 8 words
+containing a small ladder of size 4 in it for testing. 
+
+
+using templates
+
+to use the templated queue class you'll need to do use a file
+called template.cc.
+template code needs to be seen by the compiler. to this end, all .h and
+.cc files are #included in a separate file template.cc.
+this file is illustrated below.
+
+
+   #include "queuear.h"
+   #include "queuear.cc"
+   #include "ladder.h"
+
+
+   template class queue;
+
+
+
+if you want several kinds of queues, just put another definition in the
+template.cc file.  once the template.cc file is compiled to template.o,
+you only need to relink, not recompile, every time you make a change
+in ladder.cc. this will make your recompiles much faster.
+
+
+
+extra credit (5 pts)
+
+write a new version of ladderq.cc called ladxtra.cc.
+this program
+should process the words so that only "good" matches are tried when
+ladders are found.  the preprocessing step will take a long time, but
+word ladders will be found very quickly.
+
+the idea is that for each word, all words one-letter away are determined
+(and stored somehow) when the words are loaded. when looking for
+candidate words to enqueue, only words that are one-letter away (these
+are already known) are checked for previous use.  this saves searching
+through the entire list of words and checking whether each is one letter
+away.  
+
+
+
+ submitting program 
+
+when your programs 
+compile and produce the correct output, create a "readme" file
+(please use all capital letters).  include your name, 
+the date, and an
+estimate of how long you worked on the assignment in the "readme"
+file.  you must also include a list of names of all those people
+(students, prof, tas, tutor) with
+whom you consulted on the assignment. see the rules for collaboration
+in the cps 100 syllabus.
+
+
+to submit your programs electronically type (leave off ladxtra.cc if you
+didn't do the extra credit):
+
+
+
+   submit100 assign4 readme ladderq.cc ladder.h ladder.cc template.cc ladxtra.cc
+
+
+
+you should receive a message telling you that the program was submitted
+correctly. if it doesn't work try typing  ~rodger/bin/submit100 
+in place
+of  submit100 above.
+
+
+you can submit by typing make submit (or  make
+submitx  if you did the extra credit program) if
+the correct readme file
+is in the directory from which you submit.  you can always edit the
+makefile command submit or submitx to add or change filenames.

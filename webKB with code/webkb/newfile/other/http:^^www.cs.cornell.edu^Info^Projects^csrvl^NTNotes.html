@@ -1,0 +1,165 @@
+notes on moving to nt
+
+
+
+
+
+
+notes on moving the csrvl to windows nt
+
+
+
+justin voskuhl, voskuhl@cs.cornell.edu
+
+
+last updated 18 october 1995
+
+csrvl projects and windows nt
+for a number of csrvl research projects supervised by
+ramin zabih will be moving to
+windowsnt.  we are hopeful that this move will be supported by microsoft.
+
+about windows nt
+what is windows nt?
+windows nt is microsoft's highly portable, next-generation 32-bit windows operating system.
+even with its radically different architecture, windows nt provides backward compatibility
+with ms-dos, windows 3.1, os/2, and posix applications, even on non-intel processors.
+
+windows nt is designed to be as extensible as possible.  borrowing from the design of cmu's
+mach, windows nt consists of priviledged executive, and a set of non-priviledged servers
+called protected subsystems.  nt's design is unique in that protected subsystems execute
+in user mode like applications do.  this structure allows protected subsystems to be modified
+or added without affecting the integrity of the executive.  in addition to protected
+subsystems, nt provides a modular executive that can be easily extended.  nt represents
+system resources as objects, that can only be modified through object-specific apis.
+new system objects can be added without undermining existing objects.  nt supports drivers
+that can be changed while the system is running, and nt can support new file systems,
+devices, networks, or transport protocols simply by writing a new driver.  rpc is built
+into nt, so that an application can call remote services without regard to their location
+on the network.  new services can be added to any machine on the network and be made
+available immediately.
+
+windows nt is designed to be as portable as possible.  it is written primarily in c, with
+small portions written in c++.  the only parts that are written in assembler are those
+that must directly talk to the hardware, and are carefully isolated from the rest of
+the system.  this means there are a variety of cpus that can run nt, including intel x86,
+mips, powerpc, and alpha chips.  nt can run on systems with one or more processors.
+
+windows nt provides several machanisms to increase reliability.  nt responds predictably
+to error conditions, even those caused by hardware failures.  structured exception handling
+is used to catch software errors.  whenever an abnormal event occurs, exception handling
+code, which exists throughout the system, is automatically invoked in response to the
+condition, ensuring no undetected error wreaks havoc on user programs or the system itself.
+in addition nt implements a new file system, called ntfs, which can recover from all kinds
+of disk errors, including those in critical disk sectors.  it uses redundancy and a transaction
+based scheme for storing data to ensure recoverability.  nt security measures are c2 class
+government certified.
+
+finally, windows nt is designed to be fast.  each component was written with an eye towards
+performance, with each protected subsystem optimized to maximize the speed of frequently
+used system calls.  to increase speed of communication between protected subsystems, 
+local procedure call facilities are provided as an integral part of the os.  finally, 
+networking is built into windows nt to achieve the best possible performance.
+
+in summary, windows nt is a thoroughly modern, full-featured, highly compatible operating system for 90's and beyond.
+
+--(mostly) taken from section 1.2 of helen custer's "inside windows nt" microsoft press
+
+why windows nt?
+the gap between the performance of the typical pc and the sparc
+machines has grown smaller and smaller.  at the same time,
+operating systems for the pc have grown more and more advanced.
+there are a number of reasons for moving to nt from current unix-based
+environment.  they include having the results of csrvl work being
+immediately usable by the large and growing win32 user base outside of
+cornell.  also, basic hardware to run nt has a higher performance/price
+ratio than many of the sparc machines available.  another advantage
+is using the same os from our "low-end" pentium pcs all the way up to smp risc machines.
+
+moving to nt
+
+notes on moving to nt
+there are a number of issues involved in moving some of the research
+in the csrvl to windows nt.  there are both software and hardware
+hurdles we need to leap before researchers can do productive work
+under nt.  note we don't want to make anyone use nt who is more
+familiar with unix, or has reasons for doing work in unix.  this
+will just be another option for doing work in the csrvl.  interoperability
+with the existing unix investment is important.
+
+hardware
+right now the csrvl is populated mostly with sparc ipc/ipx systems, with a
+few sparcstation5 machines and pc clones.  soon we'll have a dual processor micron
+133mhz pentium system as well.  none of the sparc systems will run nt, and
+as far as i'm aware, won't run nt in the near future.  we will therefore need a number of 
+nt workstations, which will probably be pc clones, and we're
+also interested in a multi-processor system, which may be intel or
+risc.  microsoft maintains a 
+
+list of the smp hardware nt will run on.
+
+software
+microsoft is going to provide software to completely outfit ten nt machines initially.
+we get to determine what "complete" means.
+to this end, i've put together a list of software of interest to the csrvl.
+you can find descriptions of most of these products at the microsoft web site.
+
+visual c++ 4.0 (recently released to manufacturing at ms)
+windows nt workstation 3.51
+windows nt resource kit
+visual basic pro 4.0
+fortran powerstation
+office '95 pro productivity suite
+subscription to msdn level two for each researcher
+unix interoperability tools, x11 emulator, nfs software
+
+
+projects to move to nt 
+the following are brief descriptions
+of projects that are ongoing in the csrvl and could benefit from
+windows nt.  
+
+spatial energy histograms in many applications, color
+histograms are used to compare images.  their advantages are their
+efficiency, and their insensitivity to small changes in camera
+viewpoint.  their chief drawback is their lack of spatial information,
+which can lead images with very different appearances to have similar
+histograms.  we describe a histogram-based method for comparing images
+that incorporates spatial information.
+
+mpeg browser and scene
+break detector until now we could view mpegs just like we
+could watch movies. unfortunately, we were unable to take the
+advantage of digital format: i have not seen mpeg players allowing
+user to skip to arbitrary frame, fast forward, rewind, etc.
+
+even more importantly, the video was basically a sequence of frames
+with no structure. but it is obvious that video higher structure than
+frames: we can partition video into shots, scenes and larger chunks,
+like movies, tv shows, etc. we can also partition the video accoding
+to the content, for example we might want to select a segment of video
+in which a particular actor appears. 
+
+mpeg_browse provides an interface for browsing video. user can play
+video, stop at arbitrary point, fast forward. what is the advantage of
+mpeg browse over other video players? mpeg browse adds a very limited,
+yet useful structure to the video: it partitions the video into
+shots. based on these information, the browser can skip to the next
+shot, much like a cd player can skip to the next song. the scene break
+algorithm was developed by ramin
+zabih, justin miller
+, and kevin mai. for more details about the algorithm see the web
+page.
+
+atm camera
+matt welsh
+is designing a realtime video source for the cornell/nynet atm
+cluster which will allow machines on the cluster to capture and
+process images at high speeds. the video source employs a framegrabber
+and atm interface card both over pci. i am implementing kernel drivers
+for both cards, as well as some form of active messages and u-net for
+this machine. the video source should be compatible with the cornell
+ibm sp/2 as well.
+
+
+voskuhl@cs.cornell.edu

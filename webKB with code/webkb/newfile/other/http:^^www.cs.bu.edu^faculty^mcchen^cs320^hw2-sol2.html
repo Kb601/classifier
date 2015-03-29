@@ -1,0 +1,162 @@
+concepts in programming languages. hw2 & sol2
+
+
+
+
+
+
+
+ 
+
+ cla cs320 
+concepts in programming languages, spring 1995
+
+ assignment #2  due 2/17/95
+
+ chapter 5, pages 133; problems 7, 9, 11, 12, 23. 
+ chapter 6, pages 160 -- 162; problems 1, 2, 7, 8, 12.
+
+
+
+solutions for assignment #2.
+
+
+chapter 5.
+ 
+
+7.  see pages 114-15.  packed decimal is an encoding for integers that uses
+   one half-byte per decimal digit.  within those four bits, codes 0000 to
+   1001 represent the digits - through 9, and codes 1010 to 1111 do not repre
+   sent digits.  business computers used this encoding in the 1960s and many
+   computers still support this encoding today.
+
+   the advantage of packed decimal encoding is that input and output conversion
+   are much faster than with binary integer encoding.  the disadvantage is
+   that arithmetic is slower.  thus, it is most often used for data processing
+   applications with lots of i/o and little computation.
+
+
+
+9.  see page 117.  sign and magnitude:  the high-order bit represents a sign
+   (0 for positive, 1 for negative) and the other bits represent the magnitude.
+   thus, 10000 0000 0000 0001 is negative 1 and 0000 0000 0000 0001 is positive
+   1.
+
+
+ one's complement:
+ the representation of a positive number is the same as 
+   for sign and magnitude.  the  representation of negative number is the bit-
+   wise complement of the corresponding positive number.  thus, -1 is 1111
+   1111 1111 1110. 
+
+   the advantage of any complement encoding is that subtraction can be done by
+   complementing and adding.  the high-order bit can be interpreted as a sign,
+   but is not treated differently from any other bit by the arithmetic hard-
+   ware.  thus, it is cheaper to implement than sign and magnitude representa-
+   tion.  the disadvantage of one's complement is that there are two represen-
+   tations for zero: positive 0 is 0000 0000 0000 0000 and negative zero is
+   1111 1111 1111 1111.  also, during an addition operation, a carry off the
+   left end must be added back in to the right end. 
+
+ two's complement:
+ the representation of a positive number is the same as
+   for sign and magnitude.  the representation of a negative number is the bit-
+   wise complement of the corresponding positive number, plus 1.  thus, -1 is
+   1111 1111 1111 1111.  this representation has all the advantages of comple-
+   ment encoding but none of the disadvantages; there is only one zero 0000
+   0000 0000 0000, and carries off the left end may be ingored.
+
+
+
+11. see pages 118-19.  a floating-point number has two parts, the exponent and 
+   the mantissa.  both are signed numbers.  according to the ieee standard, 
+   floating point numbers can be single length (4 bytes) or double length (8
+   bytes).
+
+   problems sometimes arise because this is an approximate encoding; many dif-
+   ferent external real numbers may be represented by the same internal float-
+   ing point encoding.  a four-byte number can only represent about 6 decimal 
+   places accurately before truncation must happen.  arithmetic operations can
+   increase the size of the truncation error.  invalid results can happen when
+   the programmer expects exact answers or when numbers of vastly different 
+   magnitude are used together.
+
+
+
+12. see pages 118-19.
+
+
+ a. the largest 32-bit integer: 0111 1111 1111 1111 1111 1111 1111 1111
+ b. the largest positive floating-point number: 0 1111 1110 111 1111 1111
+      1111 1111 1111  the exponent is not 1111 1111 because that code is 
+      reserved for overflow error conditions.
+ c. negtive one-half, in floating-point: 1 0111 1110 000 0000 0000 0000 0000
+      0000
+ d. the smallest positive float (closest to zero): 0 0000 0001 000 0000 0000
+      0000 0000 0000  the exponent is not 0000 0000 because that code is 
+      reserved for zero and underflow conditions.
+ e. the negative floating-point number with the greatest magnitude: 1 1111
+      1110 111 1111 1111 1111 1111 1111
+
+
+
+23. see page 130.  simula pioneered the major idea now associated with
+object oriented programming:  that a type should be grouped together in a class
+   with the functions that operate on them.
+
+
+chapter 6 
+
+
+1. see page 135.  an external object is the real-world thing that is being
+   modelled.  the program object is the string of bits that represents the
+   external object within a program.  a storage object is a series of memory 
+   locations in which the program object can be stored.  
+
+   a pointer value is the address of a storage object.  a pointer variable is
+   a storage object that can store the address of a storage object.  both
+   pointer values and pointer variables are pointer objects.
+
+
+2. see page 137.  a pointer variable is a storage object that can store an
+   address.  the term "variable" is more general; it includes both pointer 
+   variables and storage objects that store ordinary data values.
+
+
+7. see page 143.  to "dereference" is to fetch the value from a storage object.
+
+8. see page 144.  in the following examples assume that:
+
+ kk is an integer.
+ ar is an array of 5 integers.
+ pk is a pointer to an integer.
+ pp is a pointer to a structure consisting of a string, name, and an in-
+      teger, age.
+ f1 is a function that takes one integer argument.
+
+
+ language | explicit  | implicit         |  no dereference
+----------|-----------|------------------|----------------------------
+  pascal  | pp^.age   | kk + 1           |
+          |           | f1(kk)           |if f1 has a var parameter.
+----------|-----------|------------------|----------------------------
+  c       | pp->age   | printf("%d", kk);|
+          | kk = *pk; | ar[kk]           |  pk = ar
+
+
+
+
+12. see pages 145-6.
+
+     type list = ^cell;
+         cell = record value:integer; link:list end;
+     var p1, p2, p3:  list;
+     p2:=p1^.link;
+     p3:=p1^.link^.link;
+
+
+
+     
+
+
+marina chen

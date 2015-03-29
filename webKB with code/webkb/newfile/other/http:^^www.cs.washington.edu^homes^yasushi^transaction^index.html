@@ -1,0 +1,98 @@
+transaction support in the spin operating system
+
+
+
+
+transaction support in the spin operating system
+
+last modified:sun nov 24 20:01:50 1996
+
+why am i doing this?
+
+supporting transaction service at the operating system level has been
+considered a bad idea, because operating systems haven't been
+traditionally flexible
+enough to accommodate various needs of database systems.
+
+
+   application can not take advantage of
+       specialized locking or logging. for example, there are many researches
+       on concurrent btree updates. since such techniques depend on precise
+       data placements, it is difficult to implement them inside os.
+   and more...
+
+
+ therefore, almost all of the commercial database systems are built
+on top of generic operating systems.  this approach is not without problems;
+they were pointed out 15 years ago by mike
+stonebraker and have never seen satisfactory solution till now.
+
+   double buffering; database engine usually maintains the buffer
+       on ordinary user memory, so the data is duplicated on user buffer
+       and kernel file buffer. also, user buffer leads to memory
+       underutilization.
+   and more...
+
+
+ i'm trying to solve this dilemma by using
+
+spin. spin allows an untrusted user code to be downloaded into
+the kernel space. i'm trying to write a high performance distributed
+transaction service which is both fast and flexible
+(and
+doesn't crash, hopefully...).
+as a first step, i will write a simple transactional memory like
+provided in camelot. 
+
+ yasushi saito
+is working on the project with brian bershad. i'm also getting a lot
+of help from
+people in spin and
+opal.
+
+
+status report
+performance study
+
+
+documentation(uw only)
+
+some papers i've read
+
+papers and other resources
+
+here's a random collection of papers and source codes that i culled
+from the world.
+
+
+   
+       collection of oodb links
+   
+       sigmod
+   
+       jim gray's home page
+  
+       
+       u mass database page(fabulous!)
+   
+       u arizona database bibliography
+   seltzer, transaction support in a log-structured file system
+   seltzer, olson, libtp 
+   rvm document, 
+       version 1.3 source, and
+       1.3 with alpha fix(courtesy dylan
+       mcnamee).
+   seth white, 
+       pointer swizzling techniques for object-oriented database systems
+   mike feeley's general exam paper
+   metalbase 5.0(simple&stupid database)
+   yooda(looks terrific, but i couldn't make it work)
+   crash recovery in client-server exodus
+  
+bib server
+
+
+
+
+
+ yasushi@cs.washington.edu

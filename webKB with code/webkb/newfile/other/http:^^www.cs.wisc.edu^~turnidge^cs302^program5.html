@@ -1,0 +1,246 @@
+program four
+
+
+ 
+
+assignment 5
+
+hangman
+
+	assigned: 10-30-96
+	due: 11-8-96
+
+
+
+you are to write a computer hangman game.  in hangman, one player
+picks a word or phrase.  she then writes out the phrase with the
+letters hidden.  for example,
+
+
+
+###'# ######
+
+
+
+is the hidden form of the kurt vonnegut book title
+
+
+
+cat's cradle
+
+
+
+the second player then repeatedly guesses letters in the word.
+suppose he guesses an a.  the puzzle would become:
+
+
+
+#a#'# ##a###
+
+
+
+but if the user guesses a letter which isnt in the word (for example,
+a q), then he is one step closer to the hangman's gallows.  the game
+continues until either (1) the user guesses all of the hidden letters
+in the puzzle correctly, or (2) the user makes 6 mistakes.  if the
+user makes 6 mistakes, he loses and the game is over.  if the user
+guesses all of the letters correctly, he wins and should be given a
+congratualatory message.
+
+some details
+
+at the beginning of the game the program should prompt the first
+player for the puzzle.  after she enters the phrase, you can
+optionally output a bunch of endl's to "clear" the screen.  the puzzle
+can contain spaces and punctuation characters, and these should be
+revealed immediately (as in the example above).  puzzles should be
+displayed in all upper case.  after this, game play begins.  the game
+consists of multiple rounds.  during each round, the second player
+should be shown the current state of the puzzle, and the current state
+of the "gallows".  the program should then get and process the user's
+guess for that round.  a couple of rounds of play might look like
+this:
+
+
+
+____
+|  |
+|  o
+| /|
+|
+|
+=====
+
+#a#'# ##a###
+your guess > c
+
+c is in the puzzle.
+
+____
+|  |
+|  o
+| /|
+|
+|
+=====
+
+ca#'# c#a###
+your guess > q
+
+q is not in the puzzle.
+
+____
+|  |
+|  o
+| /|\
+|
+|
+=====
+
+ca#'# c#a###
+...etc...
+
+
+
+the second player should be able to enter his guesses in upper or
+lower case.  if the player loses, your game should display the correct
+solution to the puzzle.  it is frustrating to play a game and not be
+told the correct answer when you lose.  you may handle the case in
+which the user enters a letter which has already been chosen in
+whatever manner you find appropriate.  that is, it may count as
+another wrong answer or not.  i am allowing you this latitude so that
+you can consider different problem-solving alternatives to do the
+problem.
+
+the gallows
+
+the gallows is a visual way of displaying how many wrong guess the
+player has made.  initially, with no wrong guesses, the player is
+shown an empty gallows:
+
+
+
+____
+|  |
+|
+|
+|
+|
+=====
+
+
+
+as the player makes more and more mistakes, more of their bodies is
+added to the gallows.  first the head:
+
+
+
+____
+|  |
+|  o
+|
+|
+|
+=====
+
+
+then the body:
+
+
+____
+|  |
+|  o
+|  | 
+|
+|
+=====
+
+
+one arm:
+
+
+____
+|  |
+|  o
+| /|
+|
+|
+=====
+
+
+another:
+
+
+____
+|  |
+|  o
+| /|\
+|
+|
+=====
+
+
+a leg:
+
+
+____
+|  |
+|  o
+| /|\
+| / \
+|
+=====
+
+
+and, when the body is complete, the player has been "hanged", they
+lose and the game is over.
+
+
+____
+|  |
+|  o
+| /|\
+|   \
+|
+=====
+
+
+
+note that the number of body parts above makes the game over when the
+player makes 6 wrong guesses.  you are free to add the arms and legs
+in whatever order you deem fit.  a bit of advice, if you make drawing
+the gallows the job of a function
+
+	void display_gallows(int wrong);
+
+then you can implement it as a stub function until you want to
+actually write it.  you don't have to draw the gallows in a
+complicated way; feel free to do it in an easy, natural way.
+
+hints
+
+you will somehow need to keep track of (1) the full text of the
+puzzle (so you can check to see if the user gives a correct answer)
+and (2) the letters/positions which are revealed (so when you display
+the puzzle, you can decide which characters to show and which
+characters to "blank out").  you will probably need two arrays to do
+this, the first a string to keep track of the "real" answer to the
+puzzle, the second some sort of array that somehow keeps
+track of how the displayed puzzle should look.  if you get really
+stuck i can give you more advice.
+
+what to hand in
+
+hand in output from at least two games of hangman.  the first game
+should be the puzzle "scuba" with the guesses 'a', 'e', 'c', 's', 'd',
+'b', and 'u'.  the second game can be of your choice.
+
+
+history
+mar 95 written by todd turnidge
+oct 96 modified by todd turnidge
+
+
+last modified: wed oct 30 12:40:07 1996 by todd turnidge
+
+  turnidge@cs.wisc.edu

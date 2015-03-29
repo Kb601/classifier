@@ -1,0 +1,193 @@
+guidelines for writing http server scripts
+
+
+
+
+guidelines for writing http server scripts
+
+
+
+this document is intended to be an evolving series of ideas, pointers
+and other information about writing programs that can be executed by
+following a www link, with particular emphasis on security issues.
+
+the rest of this document assumes that you already know how to write
+programs. it also doesn't attempt to cover the same ground as
+ncsa's introduction to
+forms, which should be be considered the starting point for
+explorations of forms. you should also be sure to read the common gateway interface
+documentation as well, which describes the interface that the http
+server defines between html messages and server-side executables.
+
+security
+
+the potential problems with security cannot be overemphasized. unlike
+existing network protocols, which generally allow either:
+
+
+ specified users to execute arbitrary code
+ arbitrary users to execute specified code
+
+
+the existence of server-side scripts effectively permits
+
+
+ arbitrary users to execute arbitrary code
+
+
+although clearly, the scope of "abitrary" in this case is at least
+somewhat reduced (specifically: arbitrary users can execute any
+program installed in a scriptalias location prior to the last http
+server restart).
+
+there are some basic features of server-side scripts that if used
+correctly will minimize the potential for security problems:
+
+
+never, ever treat data received from a remote source as
+    instructions to be executed.
+never, ever assume that necessary arguments are present,
+    and exit gracefully if this is the case. always check
+    that such arguments are in fact present.
+always have the program exit gracefully if it receives
+    arguments it does not understand.
+never assume the size of the arguments or the data received
+    by the program. always check the expected size of these objects
+    or know that the interpreter you are using (awk, sh, for example),
+    will make sane, secure decisions if an overflow occurs.
+never trust any claimed remote identity (http does not
+    currently support anything more secure than passwords, which are
+    not very secure at all).
+
+
+the basic idea
+
+when you follow a link using a url of the form:
+
+
+	http://foo.bar.baz/a/b/c
+
+
+the http server at foo.bar.baz will check each successively longer
+substring of /a/b/c (ie. /a,
+/a/b, etc.) against the list of "scriptaliases" defined
+in the server's configuration files. a scriptalias looks like this:
+
+
+scriptalias /a /some/other/place/in/the/filesystem/a
+
+
+which the server interprets to mean: if anyone ever references
+/a/something, then execute
+/some/other/place/in/the/filesystem/a and return its
+output. note that this implies two things about the executed program:
+it must send a mime content-type header as its first line of output,
+to tell the client (mosaic) what the output actually is (html ? gif ?
+jpeg ? etc), and then it should send some "useful" output, even if its
+only an "ok, message received" line. see the mail-request
+mentioned below for an example of how to do this.
+
+only programs located in places referenced by a scriptalias
+will ever be executed by the server. in addition, the server caches a
+directory listing of all the programs in each location referenced in a
+scriptalias whenever it is started (or restarted),
+and uses it to check possible server-side programs before executing
+them. this prevents random programs placed in the right place from
+being accessed without a server restart (which only a priviledged user
+can do). 
+
+what about arguments ? what about input ?
+
+once the http server has discovered that /a/b is actually
+an executable program in a scriptalias location, it executes the
+program, passing it data in two ways.
+
+first of all, any text left over from the url that has not been "used"
+to find the script will be used to set the value of an environment
+variable named path_info. in the example above, this would relatively
+simple: path_info would just be /c. however, near
+arbitrary text can be used here:
+
+
+http:/foo.bar.baz/a/b/long=4748.39?//limit:=$!!:h+aposto:*&%&^$$#{fhfh}
+
+
+this will result in path_info being set to:
+
+
+/long=4748.39?//limit:=$!!:h+aposto:*&%&^$$#{fhfh}
+
+
+(note the initial `/'). the main restriction is that spaces are not
+allowed, or rather, will terminate the component of the url used to
+set path_info.
+
+in addition, if you are using a forms interface, the values of all the
+&lt;input&gt; and &lt;select&gt tags in the
+form will be made available, as the standard input of the
+program. 
+
+encoding
+
+this will be 
+encoded to guarantee safe transmission. this encoding is an
+important issue, because to make reasonable use of the data sent to
+your program, you need to decode it. fortunately, you don't *have* to
+do this yourself. for the time being, a filter called
+urldecode can be used by your own programs (easily if
+they are an actual shell,awk or perl script) to do the decoding.
+invoke it as:
+
+
+/cse/www/htbin-post/urldecode
+
+
+and it will convert any encoded data read from its standard input into
+its original form on its standard output. at some point, i'll add a
+object module you can link with to do this from a compiled langauge
+like c (although you may get there before me, since the encoding is so
+simple).
+
+more details are available about writing server scripts in the common gateway interface
+documentation, where a number of other environment variables that
+are available to the program are described.
+
+how to do this locally
+
+currently, only two areas have been named using scriptaliases. one of
+them is not currently publically accessible (the filesystem it
+resides on is not exported to the rest of the department's machines).
+the other is intended for use by participants in the 590i seminar
+taking place this quarter:
+
+
+	/projects/ai/590i/post-bin
+
+
+an example program, called mail-request, is already there
+(its a shell/awk script). this is the program i use for the interface
+to my music collection, so take a look
+at the html source for that stuff to see how this is used. i intended
+it to be usable by anyone else, and a for a variety of
+purposes. suggestions are welcome.
+
+the http daemon will be restarted about 4 times a day, and on the next
+restart after you have placed a program there, you will able to have a
+link to it result in its execution. after that, you can keep changing
+the program in any way you see fit, and the daemon won't care - it
+merely notes prescence or absence.
+
+i want to reiterate that this is potentially a big security issue.
+please take care in how you handle arguments, how to handle input and
+what your program does or might do.
+
+for the time being, all instances of these programs will run as the
+uid "nobody". also access to both areas (the private one and the 590i
+area) is currently limited to machines in the .cs.washington.edu
+domain. this restriction is inconvenient, and intended to create a
+temporary breathing space so that we can get more experience with
+potential security issues.
+
+
+
+webmaster@cs.washington.edu

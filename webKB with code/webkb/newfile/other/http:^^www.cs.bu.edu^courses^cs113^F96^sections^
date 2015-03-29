@@ -1,0 +1,221 @@
+bu cas cs 113 - discussion sections
+
+
+
+
+cs113
+- discussion sections
+
+
+last updated on thursday, december 12, 1996.
+
+midterm coding solutions
+
+here you'll find example solutions to problems 8-10 from the
+midterm.
+
+
+problems 8-10
+
+
+lecture notes
+
+here you will find stuff that relates to what was covered in a
+specific week's discussion or online lectures relating to the
+homeworks.  it is not meant as a substitute for coming to the
+discussions, but contains a subset of the same material.
+
+
+lab 1: week of sept. 9
+
+  
+  example program: average program
+  
+lab 2: week of sept. 16
+
+  
+  how to make emacs color-code c programs
+  counting program:
+    
+    program files
+    dealing with file dependencies
+    debugging - only started this,
+        continued as lab 3.
+    
+  
+lab 3: week of sept. 23
+
+  
+  counting program:
+    
+    program files
+    more debugging
+    
+  lab homework
+  
+discussion 4: week of sept. 30
+
+  
+  example pointer/array programs
+  
+lab 5: week of oct. 7
+
+  
+  example matrix programs
+  
+discussion 6: week of oct. 14
+
+  
+  this was an optional question and answer session.
+  
+discussion 7: week of oct. 21
+
+  
+  data structure: queue
+      (implemented as fixed-sized array)
+    
+    program files
+        (includes a program to test the queue).
+    photocopies of transparencies from the
+        lecture are available outside rob's office.
+    
+  
+discussion 8: week of oct. 28
+
+  
+  data structure: queue
+      (implemented as linked list)
+    
+    program files
+        (includes a program to test the queue).
+    photocopies of transparencies from the
+        lecture are available outside rob's office.
+    lab homework
+    solutions:
+        
+        queuedelete
+        freequeue
+        
+    
+  
+discussion 9: week of nov. 4
+
+  
+  mergesort (recursive version):
+      sorting using the merge operation.
+    
+    merge and mergesort code
+        (in a test program).
+    photocopies of transparencies from the
+        lecture are available outside rob's office.
+    
+  
+discussion 10: week of nov. 11
+
+  
+  tree to store hierarchical information and traversing
+      breadth-first
+    
+    tree interface: what we need
+        to know to use a tree.
+    queue interface: what we need
+        to know to use a queue.
+    breadth-first traversal function.
+    photocopies of transparencies from the
+        lecture are available outside rob's office.
+    
+  
+discussion 11: week of nov. 18
+
+  
+  expression trees: used to store arithmetic expressions
+         using a recursive model of an expression.
+    
+    tree interface: what we need
+        to know to use a tree.
+    depth-first traversal function that
+        evaluates an expression.
+    photocopies of transparencies from the
+        lecture are available outside rob's office.
+    
+  
+discussion 12: week of nov. 25
+
+  
+  thanksgiving break.
+  
+lab 13: week of dec. 2
+
+  
+  makefiles and debugging (revisited).
+  files for which we generated a makefile
+  lab homework
+  
+
+
+
+
+
+unix references
+
+
+emacs - text editor - quick reference
+
+unix files and file hierarchy
+unix pathnames and emacs
+
+
+
+
+
+meeting times
+
+
+
+
+
+daytimeroom
+tue5-6pmmcs-b23 or unix lab (b24)
+wed9-10ammcs-b31 or unix lab (b24)
+
+
+often discussions will be in the unix lab (b24).  when i plan to have
+discussions in the computer labs, i put a sign outside the assigned
+classroom.
+
+
+
+each of the 2 discussions will cover roughly the same material
+as the other.  if you cannot make the discussion that
+you are assigned to, feel free to come to the other one;
+however, the number of computers in the lab are limited.
+
+
+
+
+rob's hours
+
+
+
+
+
+daytimeroom
+mon1-2pmunix lab (b24)
+mon2-4pmmcs-223
+tue6-7pmunix lab (b24)
+wed10-11amunix lab (b24)
+
+
+
+when i am in the unix lab, i am there to assist all 100-level computer
+science course students and help will be available on a first-come-first-serve
+basis.
+
+
+
+
+
+
+bu cas cs 113 - discussion sections /
+robert i. pitts /
+rip@cs.bu.edu

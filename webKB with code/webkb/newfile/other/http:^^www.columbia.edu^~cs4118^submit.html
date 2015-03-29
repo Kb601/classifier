@@ -1,0 +1,70 @@
+submit man page
+
+submit man page
+name
+ submit - electronic submission of homework files
+synopsis
+ ~cs4118/bin/submit -h
+ ~cs4118/bin/submit [-a assignment_number] [forced_files ...]
+description
+submit looks for submittable files in the current working
+directory and recursively searches thorugh all directories within that
+directory, ignoring all binary and potential backup files.  upon
+confirmation from the user, submit copies, archives and
+compresses files, and stores them privately in the class account (~cs4118).
+mail confirming the files submitted is sent to the user.      
+ if you resubmit an assignment, your old assignment is moved to a backup
+location.  if you resubmit more than once, only your last two submissions
+will be kept.  you will be asked whether you really want to resubmit your
+assignment.
+ a number (1-9) can be used with the -a option to specify a
+particular homework which is being submitted.
+ forced_files are forced into submission even if they would
+ordinarily be ignored.
+ usually the user will not need to specify forced_files or
+assignment_number.  the submit program will submit the current
+due assignment if the -a is not specified.
+options
+
+ -h
+ help option.  shows options for the program.  does not perform
+a submission. 
+ -a
+ submit a certain assignment, other than the one currently due.
+
+
+notes
+ it is generally a good idea to create a separate subdirectory for each
+of your homeworks.  in these homework directories will be any makefiles,
+readmes, c sources files header files and sample executions.  to submit
+these files just run submit from within the corresponding
+homework directory.
+return values
+ upon successful submission, the user is notified, via email, of the
+successfully submitted files.  upon failure, the user is instructed to
+notify the submit administrator of the error codes.  
+
+files
+ ~cs4118/bin/submit
+ ~cs4118/bin/.submit
+ ~cs4118/public_html/submit.html
+ ~cs4118/lib/submission.log.? 
+example
+
+warnings
+ be sure to be on a machine on the cunix cluster.
+ because of incredible loads on the cunix cluster close to
+submission times, you should leave yourself ample (+30 minutes) time to submit
+your assignments.  the running time of the program should be less than 1 minute
+for normal-sized submissions.
+ deadlines are enforced by the submission program, and timing is
+enforced by the cunix cluster machines' clock.  not by your
+watch, or cs cluster machines.
+ all submissions are logged.
+credits
+ coded by min-yen kan(min@columbia.edu) in
+perl.  credits to reggie delbrune and sam fenster for the
+original c version of the program from cs3139.
+min@columbia.edu | version 1.0
+| created on: sun sep  1 22:38:38 edt 1996
+| last modified: sun sep  1 22:38:38 edt 1996

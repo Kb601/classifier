@@ -1,0 +1,109 @@
+the predator project
+
+
+
+
+the predator dbms project
+
+
+
+contents
+
+
+   what is predator?
+   paper describing the enhanced abstract data type (e-adt) paradigm
+   code design of predator
+   how to install predator
+   tips on system development
+   coding conventions
+   testing
+   acknowledgements
+
+
+
+what is predator?
+
+the predator database system (predator enhanced data type object-relational dbms) is an object-relational dbms built as a research
+prototype to study how complex data types should be supported.
+existing technology is based on the notion of abstract data types (adts): each data type is encapsulated through a well known interface,
+and the database system maintains an extensible table of adts. 
+each adt provides a bunch of user-level methods that can be
+applied from within an sql query to operate on adt values.
+the predator system recognizes that the cost of adt operations
+can dominate database performance. consequently,
+the adt notion is "enhanced" so that each data type can
+maintain meta-information, use that meta-information for
+optimizing operations on the adt, and apply optimizations
+on expressions involving concatenations of adt operations.
+further, each data type can provide a "query language" in which
+complex operations on that type can be expressed. this
+enhanced abstract data type (e-adt) paradigm is the 
+basic technology in predator. providing the support for
+this paradigm requires a fundamental redesign of many
+components of a traditional object-relational dbms.
+the purpose of predator is to fully explore the e-adt
+idea, and to see how queries involving complex object
+expressions can be further optimized by exploiting
+interactions between e-adts. the current focus of work
+is to build support for several different data types,
+each of which can co-exist independent of the others.
+
+
+the e-adt paradigm
+
+the e-adt paradigm is explained in detail in 
+a technical report, 
+also being submitted as a paper to acm sigmod 97. this document
+also describes the high-level architecture of predator,
+the interesting design issues, possible extensions of the current
+technology, and open problems for future research.
+
+
+system code structure
+
+the detailed code design is described
+here. this may not always be
+upto date, because the code base is constantly being
+updated. for most students in cs537, you will only
+need to concentrate on the portion of the design document 
+dealing with the sql engine, and/or the portion dealing with new
+data types.
+
+
+installation instructions
+
+these instructions are only for cornell cs537 students.
+for others, predator is not yet a publicly available piece
+of software, but it will be in a few months. 
+here are the installation instructions and
+some  quick tests  you can run.
+
+
+system development
+
+look here for some tips on system
+development in predator.
+
+coding conventions
+
+when adding to predator, it is crucial that you follow 
+the same coding conventions that have been used 
+relatively uniformly throughout the code. 
+click here to get to a list
+of dos and don'ts. the document also tells you how to use rcs,
+a simple source code control mechanism used to manage
+the distribution of predator code.
+
+
+testing
+
+initially, after installing your code, you should
+try some  quick tests . on a more regular
+basis, as you add code, you should run a test suite that is being
+developed for predator. details of this test suite and how to
+run it are  here .
+
+acknowledgements
+
+predator is built using the shore storage manager as the
+data repository.

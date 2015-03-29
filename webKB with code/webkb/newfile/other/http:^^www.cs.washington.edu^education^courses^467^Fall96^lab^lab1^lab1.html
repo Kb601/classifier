@@ -1,0 +1,97 @@
+cse467 laboratory assignment #1
+
+
+
+cse467: advanced logic design
+ted kehl, fall 1996 
+
+
+
+lab 1
+
+introduction to synario: schematic capture and simulation
+
+distributed:  oct 4 - due: oct 15
+
+
+
+objectives
+when you have completed this lab, you should know how to:
+
+login to windowsnt and start programs like netscape and synario
+create a new project or open an old project in synario
+draw schematics for a simple circuit
+simulate a combinational circuit in synario by writing a verilog
+    driver program
+print schematics and programs from synario
+  
+                              
+for this lab, and this lab only, you can choose a lab partner to work
+with.  make sure though that you both learn how to use synario - you
+should each spend half the time "at the controls".
+
+part 1: logging in
+
+you must have an account on the nt workstations before you can login.
+we will let you know what your initial password is.  you must change
+this to something only you know the first time you login.  please use
+the usual password rules when choosing your password.  also, make sure
+you logout out before you leave the lab.
+
+after you login, take a few minutes to look around.  if you have used
+windows before, everything should be pretty familiar.  you will be
+able to do everything from program manager.  look in the "accessories"
+folder for common applications like netscape.  look in the "main"
+folder others.  the synario tools we use will be in the "hardware design lab
+tools" folder.
+
+the file manager allows you to poke around through the nt directory
+structure.  you don't really have to know where everything is, but it
+doesn't hurt to get a feel for the lay of the land.  your home
+directory will be in the toplevel [z] directory.
+
+part 2: the synario tutorials
+
+the "getting started" tutorials provide an excellent introduction to
+synario.  for this lab assignment, you will do tutorials #1 and #2.
+ (please read these  noteson the tutorials first.) the
+first tutorial walks you around an existing project so you can see how
+projects are organized.  (make sure you copy the example project
+(prep2) to your own directory before starting this tutorial.)  your
+first project will not be this complicated, so don't worry if it
+doesn't all make sense.
+
+tutorial #2 leads you through all the steps you will have to follow to
+complete the first assignment:  project creation, schematic capture
+and simulation.  pay particular attention to how the verilog program
+is used to perform the simulation - you will have to write a simple
+verilog program to test the circuit you design.
+
+part 3: design a simple circuit
+
+in this part you will design and simulate the following simple
+combinational circuit which implements a simple median
+filter.  the inputs to this filter are the values (0=black/1=white) of
+one pixel and its 4 news neighbors.  the output of the filter circuit
+is white if 3 or more of these 5 pixels are white, and black
+otherwise.
+
+design a circuit for this filter using a schematic.  you may use any
+of the symbols in the generic library.  
+
+hint: this circuit is not that
+complicated if you can find a structured way to solve it.
+
+turn in:
+
+schematic of your circuit.
+printout of your verilog driver function.
+a signed simulation log or waveform which shows that your
+circuit works.  you must demo your simulation to one of the tas who
+will sign the printout.
+
+
+
+
+
+ted@cs.washington.edu

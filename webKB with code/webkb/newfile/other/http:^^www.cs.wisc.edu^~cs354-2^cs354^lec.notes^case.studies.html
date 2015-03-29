@@ -1,0 +1,675 @@
+lecture notes - chapter 14 - architectures
+
+
+
+ chapter 14 -- architectures
+
+
+
+perspective on architecture design
+----------------------------------
+
+factors in computer design:
+   speed
+       as fast as possible, of course
+       dependent on technology and cost
+   cost/price
+       profit, non-profit, mass market, single use
+   useablility
+       shared/single user, size of machine, os/software issues,
+       power requirements
+       depends on intended use!
+   intended market
+       mass market, scientific research, home use, multiple users,
+       instructional, application specific
+   technology
+
+
+
+
+price/performance curve
+
+       ^  |
+ perf. |  |         x
+          |           x          want to be to the "left"  of these,
+          |      x               to have higher performance for the
+          |                      price.  "more bang for the buck."
+          |    x   x
+          _________________
+		    
+		    price ->
+
+
+
+
+technology -- a perspective
+----------
+
+    electromechanical (1930) -- used mechanical relays
+
+    vacuum tubes (1945)
+      space requirement:  room
+          manchester mark 1 (late 1940s)
+
+    transistors
+      discrete (late 1950s)
+         space requirement:  a large cabinet to a room
+	 examples:
+	    cdc 6600
+	    b 5000
+	    atlas (?)
+	    pdp 11/10
+
+      ssi,    msi (mid-late 1960s)
+      1-10   10-100 transistors
+         space requirement:  a cabinet
+	 examples:
+	   cray 1
+	   vax 11/780
+
+      lsi   (early 1970s)
+      100-10,000 transistors
+         space requirement:  a board
+	 examples:
+
+      vlsi  (late 1970s - today)
+      >10,000 transistors
+         space requirement:  a chip, or chip set, board
+	 examples:
+	    mips r2000
+	    intel 386 (~275,000 transistors)
+	    sparc
+
+
+
+
+risc vs. cisc
+-------------
+
+ risc - reduced instruction set computer
+   the term was first used to name a research architecture at
+   berkeley:  the risc microprocessor.  it has come to (loosely) mean a
+   single chip processor that has the following qualities:
+     1. load/store architecture
+     2. very few addressing modes
+     3. simple instructions
+     4. pipelined implementation
+     5. small instruction set -- easily decoded instructions
+     6. fixed-size instructions
+
+ cisc - complex instruction set computer
+   this term was coined to distinguish computers that were not risc.
+   it generally is applied to computers that have the following
+   qualities:
+     1. complex instructions
+     2. large instruction set
+     3. many addressing modes
+
+difficulties with these terms
+
+ - not precisely defined
+
+ - term introduced/applied to earlier machines
+
+ - "risc" has become a marketing tool
+
+
+single chip constraint
+----------------------
+
+as technologies advanced, it became possible to put a processor
+ on a single vlsi chip.  designs became driven by how much
+ (how many transistors) could go on the 1 chip.
+
+ why?  1.  the time it takes for an electrical signal to cross a
+  chip are significantly less than the time for the signal to
+  get driven off the chip to somewhere else.
+       2.  the number of pins available was limited.
+
+  so, the desire is to have as little interaction of the chip
+   with the outside world as possible.  it cannot be eliminated,
+   but it can be minimized.
+
+
+the earliest of single processors on a chip had to carefully
+pick and choose what went on the chip.  cutting-edge designs
+today can fit everything but main memory on the chip.
+
+
+
+
+how the world has changed
+-------------------------
+  earliest computers had their greatest difficulties in getting
+  the hardware to work --
+    technology difficulties 
+       space requirements
+       cooling requirements
+
+  given a working computer, scientists would jump through whatever
+    hoops necessary to use it.
+
+
+  as hardware has gotten (much) faster and cheaper, attention has been
+    diverted to software.
+      os
+      compilers
+      optimizers
+      ipc (inter-process communication)
+
+
+
+
+
+
+
+
+1 instruction at a time isn't enough.  the technology
+isn't "keeping up."  so, do more than one instruction
+at a time:
+
+parallelism
+-----------
+  instruction level (ilp) -- pipelining
+  superscalar -- more than one instruction at a time
+
+  multis
+  vliw
+  supercomputer
+
+  which of these is "best" and "fastest" depends on what program
+  is being run -- the intended useage.
+
+
+
+
+on the 68000 family
+--------------------
+
+- released in the late 1970's
+- an early "processor on a chip"
+- a lot of its limitations have to do with what could fit on a vlsi
+  chip in the late 1970's
+
+instructions
+ - a relatively simple set (like the mips) but not a load/store arch.
+ - a two-address architecture
+ - most instructions are specified in 16 bits -- fixed size.
+ - tight encoding, it is difficult to distinguish opcode from operands,
+   but the m.s. 4 bits are always part of the opcode.
+
+ integer arithmetic
+   different opcode for varying size data
+   (add.b    add.w      add.l)
+ logical
+   different opcode for varying size data
+ control instructions
+   conditional branches, jumps
+   (condition code mechanism used --  where most instructions
+    had the effect of setting the condition codes)
+ procedure mechanisms
+   call and return instructions
+ floating point ??
+   (i guess not!)
+ decimal string
+   arithmetic presuming representation of binary coded decimal
+
+
+
+registers
+  16 32-bit general purpose registers,
+  only one is not general purpose (it is a stack pointer)
+  the pc is not part of the general purpose registers
+
+  the registers are divided up into two register files of 8,
+    one is called the d (data) registers, and the other
+    is called the a (address) registers.  this is a distinction
+    similar to the cray 1.
+
+  a7 is the stack pointer.
+
+
+
+
+data types
+ byte
+ word (16 bits)
+ longword (32 bits)
+
+ addresses are really their own data type.
+   arithmetic on a registers is 32 bit arithmetic.  however,
+   pin limitations on the vlsi chip required a reduced
+   size of address.  addresses that travel on/off chip are
+   24 bits -- and the memory is byte-addressable.  so
+   a 24-bit address specifies one of 16mbyte memory locations.
+
+each instruction operates on a fixed data type
+
+
+operand access
+
+ the number of operands for each individual instructions
+ is fixed
+
+ like the vax, the addressing mode of an operand does not
+ depend on the instruction.  to simplify things, one of the
+ operands (of a 2 operand instruction) must usually come from
+ the registers.
+
+ the number/type of addressing modes is much larger than
+ the mips, but fewer than the vax.
+
+
+ the text has a detailed discussion of the 68000 addressing modes.
+ read it!
+
+
+performance
+  ?, they got faster as new technologies got faster.
+
+size
+  1 64-pin vlsi chip (a huge number of pins at that time)
+
+
+
+
+the intel iapx 86
+-----------------
+
+the 8086
+ - late 1970's release
+ - a one- or two- address architecture (depending on how you look
+   at it)
+ - part of a chip set
+   pin limitations on the chips made for some unusual architectural
+   design decisions.
+ - compatible with earlier 8085 chip set
+
+ a memory-to-memory architecture, sort of
+ 3 16-bit registers, plus an accumulator, a stack pointer, and a pc
+   (plus 4 more that deal with segments)
+ condition codes are set by most instructions,and are used
+   in branching
+
+ an unusual addressing scheme:
+ (due to a 16-bit limitation for pins used for addresses)
+   divide all of memory into fixed-size, 64k byte pieces
+   call each piece a segment.
+
+   addresses are 16 bits, and specify an offset within one of
+   the segments
+
+   4 extra registers hold segment base addresses, and an
+   effective address is computed (sort of) by
+    1. specifying which segment register
+    2. adding the 16-bit address to the contents of the
+       segment register
+
+  this addressing scheme "cramps a programmer's style".
+  code has to fit into a segment -- so does data, and
+  so does a stack.
+
+
+
+all about the cray 1
+--------------------
+
+
+
+  there has always been a drive to design the best, fastest computer in
+  the world.  whatever computer is the fastest has generally been called
+  a supercomputer.
+
+  the cray 1 earned this honor, and was the fastest for a relatively long
+  period of time.
+
+  the man who designed the machine,  semour cray, is a bit of an eccentric,
+  but he can get away with it because he's so good.  the cray 1 has an
+  exceptionally "clean" design, and that makes it fast.  (this is probably
+  a bit exaggerated due to my bias -- the cray 1 is probably my favorite
+  computer.)
+
+  mostly my opinion:
+  to make the circuitry as fast as possible, the cray 1 took 2 paths
+    1.  physical -- a relatively "time-tested" technology was used, but
+	much attention was paid to making circuits physically close
+	(semour was aware of the limits imposed by the speed of light.)
+	and the technology was pushed to its limits.
+    2.  include only what was necessary, but on that, a "don't spare the
+	horses" philosophy was used.
+	this means that extra hardware was used (not paying attention to
+	the cost) wherever it could to make the machine faster.  and, at
+	the same time, any functionality that wasn't necessary (in semour's
+	opinion) was left out.  we'll see soon what that really means.
+  just remember:
+    if something seems out of place to you, or some functionality of a
+    computer that you think is essential and was not included in the cray 1,
+    it wasn't necessary!  and, leaving something out made the machine
+    faster.
+
+  what the cray 1 is good for:
+    it was designed to be used for scientific applications that required
+    lots and lots of floating point manipulations.  it wouldn't make
+    a good instructional machine (don't want to hook lotsa terminals up
+    to it!), and it wouldn't be much fun to try to implement a modern
+    operating system on.
+
+  how it is used:
+    most often, a separate (not as fast/powerful) computer was hooked up
+    as what is commonly called a host computer.  the host is where you do
+    all you editing and debugging of programs.  the host also maintains a
+    queue of jobs to be run on the cray.  one by one the jobs are run, so
+    the only thing that the cray is doing is running the final jobs -- often
+    with lots of data.  although its operating system would allow it,
+    the "multi-tasking" (had more than 1 program running simultaneously)
+    ability was not often used.
+
+
+
+
+ instruction set
+   fixed length instructions
+     either 16 or 32 bit (no variablility that depends on
+      the number of operands)
+   number of operands possible for an instruction
+     0-3
+   number and kind of instructions
+	     op codes are 7 bits long -- giving 128 instrucitons
+	      this includes complete integer and floating point
+	      instructions.
+
+	      notice that missing from the instruction set are:
+		  character (byte) manipulation, duplicates
+		  of anything (!), integer divide, etc.
+
+   data representation is vastly simpified from what we've
+      seen so far!  there are only 2's complement integers,
+      and floating point numbers!
+
+      all accesses to memory are done in word chunks.  a word
+      on the cray 1 is 64 bits.  all instructions operate on
+      a single size of data -- either a 64 bit word, or on an
+      address (24 bits).
+
+   addressing modes (strikingly similar to mips)
+     register mode.  an instruction (op code) specifies exactly where
+           the data is.
+     base displacement mode.  used only for load and store instructions.
+
+
+
+   registers:
+     there are an enormous number of registers.
+     there are 5 types of registers.
+
+	      s registers --  's' stands for scalar.  these are 64
+	      bit regs.  they are used for all sorts of data, but
+	      not addresses.  there's 8 of them.
+
+	      t registers -- 
+	      these are 64 64bit backup registers for the s registers.
+	      if you were to do some heavy programming on the cray 1,
+	      you'd find these registers very useful.  this is partially
+	      because you run out of s registers quickly, so you
+	      need temporary storage, but don't want your program
+	      to store to main memory (slow!).  there's also an
+	      instruction that allows you to load a block of memory
+	      to the t registers.  that's 1 instruction to do a bunch
+	      of loads.
+
+	      a registers --  'a' stands for address.  these are
+	      24 bit regs.  they are used for addresses, and to a
+	      rather limited extent, integer counters.
+
+	      b registers --
+	      these are backups to the a regs and are used in the
+	      same manner as the t regs.
+
+	      v registers -- 'v' stands for vector. 
+	      there are 8 sets of v regs.  each set has 64 64-bit
+	      registers!  that is a lot!  they are used mainly for
+	      processing large quantities of "array" data.  their use
+	      makes the cray 1 very fast.  a single instruction that uses
+	      a vector register (1 set) will cause something to happen
+	      to each of the 64 registers within that set.
+	      (simd)
+
+   hardware stack
+	      no support for stack accesses at all!  there is no
+	      special stack pointer register.
+   cache
+	      none.  there's so many registers that there isn't
+	      really a need for one.
+
+   size of machine
+	     a bit bigger than 2 refridgerators.
+   speed of machine
+	     significantly faster than the vax and 68000.
+	      for a while, it was the fastest machine around.
+
+
+   price of machine
+	     as an analogy to some very pricey restaurants:
+	      if you need to see the prices on the menu, you can't
+	      afford to eat there.
+
+	      probably about $3 million for the basic machine when
+	      they first came out.
+
+	      a cray 1 came with a full time hardware engineer,
+	      (a field service person).  why?  down time on a cray
+	      is very expensive due to the way they are expected to
+	      be used.  waiting for field service to come was
+	      considered too expensive.
+   how many instructions get executed at one time
+	 its debatable.  there can be more than 1 instruction
+	  at some point in its execution at 1 time.  it is a
+	  pipelined machine. this can only go so far (only
+	  1 new instruction can be started each clock cycle).
+  complexity of alu
+	  there are actually quite a few alu's in the machine.
+	  cray calls them functional units.  each one is a specialized
+	  piece of hardware that does its own job as fast as can
+	  be done.  each of them could conceivably be working at
+	  the same time.
+
+
+
+
+on the vax
+----------
+
+the vax was a popular and commercially successful computer
+put out in the early 1970's by dec (digital equipment corp).
+
+it might be characterized by the term cisc.
+    risc (reduced instruction set computer)
+    cisc (complex instruction set computer)
+
+a cisc computer is often characterized by
+  1.  many instructions
+  2.  lots of addressing modes
+  3.  (this one is debatable) variable length instructions
+  4.  memory-to-memory architecture
+
+some details:
+
+lots of instructions
+ integer arithmetic
+   different opcode for varying size data
+ logical
+   different opcode for varying size data
+ address manipulations
+ bit manipulations
+ control instructions
+   conditional branches, jumps, looping instructions
+ procedure mechanisms
+   call and return instructions (there were more than 1!)
+ floating point
+ character string manipulations
+ crc (cyclic redundancy check)
+ decimal string
+   arithmetic presuming representation of binary coded decimal
+ string edit
+
+ overall:  more than 200 instructions
+
+ opcodes were of variable length, but always a multiple
+ of 8 -- most opcodes were specified in the first 8 bits
+ of an instruction.
+
+
+
+
+registers
+  16 32-bit general purpose registers,
+  except that they really weren't all general purpose
+    r15 is the pc -- note that the user can change the
+		     pc at will!
+    r14 is a stack pointer
+    r13 is a frame pointer
+    r12 is an argument pointer (address of where a procedure's
+	  parameters are stored -- sometimes on the stack,
+	  and sometimes in main memory)
+
+data types
+ byte
+ word (16 bits)
+ longword (32 bits)
+ quadword (64 bits)
+ octaword (128 bits)
+
+ f floating point (32 bits -- 7 bits of exponent)
+ d floating point (64 bits -- 7 bits of exponent)
+ g floating point (64 bits -- 10 bits of exponent)
+ h floating point (128 bits -- 15 bits of exponent)
+
+ character string (consecutive bytes in memory, specified always
+		   by a starting address and the length in bytes)
+ numeric string  (the ascii codes that represent an integer)
+ packed decimal string (consecutive sequence of bytes in memory
+     that represent a bcd integer.  bcd digits are each in
+     4-bit quantities (a "nibble")
+
+       example:  the integer +123 is represented by
+	       0001     0010   0011       1100
+	       (1)      (2)    (3)        (+)
+   numbering   a a  a+1  a+1
+
+
+each instruction operates on a fixed data type
+
+
+
+operand access
+
+ the number of operands for each individual instructions
+ is fixed
+
+ the location of operands is definitely not fixed,
+   they can be in memory, or registers, and the variety
+   of addressing modes that specify the location of an
+   operand is large!
+
+ equivalent of  mips     add $2, $3, $4
+
+    addl3  r3, r4, r2
+       ^^
+       ||-- 3 operands
+       |
+       |--- operate on a 32 bit quantity
+ ( there is also  addb3, addw3,  addb2, addw2, addl2)
+
+ (and this is just for 2's complement addition!)
+
+
+ this is a very simple use of addressing modes.
+ the syntax of operand specification allows many possible
+   addressing modes -- every one discussed in chapter 8,
+   plus more!
+
+   for example
+       addl3 (r3), r4, r2
+	 uses register direct addressing mode for the first
+	 operand --
+	 operation
+	   the address of the first operand is in r3,
+	   load the operand at the address, add to the
+	   contents of r4, and place the result into r2
+
+  the addressing mode for each operand can (an often is)
+  be different!
+
+
+
+one type addressing mode (not discussed in the text) sticks out --
+auto-increment and auto-decrement
+  they have the side effect of changing the address used to get
+  an operand, as well as specifying an address.
+
+    addl3 (r3)+, r4, r2
+    operation
+      the address of the first operand is in r3,  load
+      the operand at the address, then increment the contents
+      of r3 (the address), then add data loaded from memory
+      to the contents of r4 and place the result into r2
+
+      the amount added to the contents of r3 depends on the
+      size of the data being operated on.  in this case, it
+      will be 4 (longwords are 4 bytes)
+
+
+
+machine code
+
+together with each operand is an addressing mode specification.
+each operand specification requires (at least) 1 byte.
+
+format for the simple  addl3 r3, r4, r2
+
+   8-bit opcode   0101 0011    0101 0100   0101 0010
+		   ^    ^       ^    ^      ^    ^
+		   |    |       |    |      |    |
+		   ---- | ---------- | --------- | -- mode (register = 5)
+		        |            |           |
+		        |------------|-----------|--- which register
+
+
+format for the     addl3 (r3), r4, r2
+
+      same
+   8-bit opcode   0110 0011    0101 0100   0101 0010
+		   ^    ^       ^    ^      ^    ^
+		   |    |       |    |      |    |
+		   ---- | ---------- | --------- | -- mode
+		        |            |           |
+		        |------------|-----------|--- which register
+
+
+each instruction has an 8-bit opcode.
+there will be 1 8-bit operand specifier for each operand that
+  the instruction specifies.
+
+because of the large number and variety of addressing modes,
+an operand specification can be much more than 1 byte.
+example:  immediates are placed directly after their specification
+within the code.
+
+
+
+performance
+
+  the term mips (millions of instructions per second) really came
+  from the vax -- 
+    the vax 11 780 ran at just about 1 mips
+  note that this term is misleading --
+    instructions take variable times to fetch and execute,
+    so the performance depends on the program
+
+
+
+size
+  one version:  the vax11 750 was about the size of a large-capacity
+		washing machine
+  another version:  the vax11 780 was about the size of 2 refridgerators,
+		standing side by side

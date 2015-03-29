@@ -1,0 +1,158 @@
+cse513 numerical methods and computations 
+
+
+
+
+
+
+
+
+/* copyright (c)1996 web integration systems, inc. dba websys, inc.
+   modified by kevin s. klenk (8 february 1996)
+*/
+
+function scrollit_r2l(seed)
+{
+        var m1  = "welcome to cse513 homepage! and good luck! ";
+
+        var msg=m1;
+        var out = " ";
+        var c   = 1;
+
+        if (seed > 100) {
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                timertwo=window.settimeout(cmd,100);
+        }
+        else if (seed  0) {
+                for (c=0 ; c 
+
+
+
+
+cse 513: numerical methods and computations
+
+
+
+instructor:
+
+deyun wu
+351 fitzpatrick hall
+phone: 631-8811
+email: dwu@lsc.nd.edu
+office hours: friday 3:00pm-5:00pm, or by appointment
+
+
+text:
+
+d. kincaid and w. cheney, numerical analysis, 
+second edition, brooks/cole, 1996.
+
+
+
+
+handouts:
+
+ 
+ 
+     course policies
+
+ 
+     course syllabus
+ 
+ 
+     course objectives
+
+
+
+
+
+
+homeworks: 
+
+ 
+
+     homework 1
+     
+     
+     homework 2
+
+ 
+     homework 3
+
+     
+     homework 4
+
+ 
+     homework 5
+
+     
+     homework 6
+
+ 
+     homework 7
+
+     
+     homework 8
+
+ 
+     homework 9
+
+     
+     homework 10
+
+
+
+
+
+
+programs:
+
+ 
+ 
+     assignment 1 
+ 
+     assignment 2 
+ 
+     assignment 3 
+ 
+     assignment 4 
+ 
+     assignment 5 
+
+
+
+
+
+
+useful links
+
+
+ 
+    
+       java  
+
+ 
+    
+       matlab 
+
+ 
+    
+       maple 
+
+ 
+    
+       mathematica 
+
+ 
+    
+       cmlib 
+
+ 
+    
+       nag 
+
+
+ 
+    
+       slatec

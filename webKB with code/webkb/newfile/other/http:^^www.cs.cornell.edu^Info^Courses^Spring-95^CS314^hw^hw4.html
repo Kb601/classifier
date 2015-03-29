@@ -1,0 +1,93 @@
+cs 314: homework number 4  
+
+
+
+
+ homework number 4 
+
+date assigned:   february 21, 1995
+date due:   february 28, 1995
+
+ to submit your answer 
+drop by the consulting office (305 upson) during consulting hours to
+get your homework graded and recorded.
+
+
+in the problems below, you are asked to write several 68000 assembly
+language routines. while it is not required, we strongly suggest that
+you use basepak to solve this problem set. in grading this problem set,
+we will forgive minor syntactic errors, but many occurrences of the
+same error will be penalized. all programs should be well commented,
+listing any assumptions you made about the problem and how the
+registers are used. unless otherwise specified, assume callee-save
+conventions are being used. all problems count equally in the final
+grade.
+
+ problem 1: bit counting
+write a 68000 code fragment that counts the number of bits that
+are set (i.e., equal one) in the number stored in register d0. the
+result should be placed in register d1. for example, if
+ d0 = 1101 0100 1000 0011  on entry to the code fragment,
+then d1 should contain 7 on exit. the contents of d1 may be destroyed
+by the fragment.
+
+problem 2: machine code 
+
+
+ give the machine code representation (in hexadecimal) of the
+following instructions in 68000 assembler.
+
+
+  move.l    d0,-(a6)
+
+ what 68000 assembly language instruction is encoded in the
+following machine code?
+
+  5c5f
+
+
+
+problem 3: control structures
+for each of the following pascal control structures, give the 68000
+assembler equivalent. assume the variable i is stored in register d0
+and x is stored in register d1.
+
+
+ the for-loop
+
+  for i := 1 to n do begin
+    x := x + 1;
+  end;
+
+
+ the while loop
+
+  while (i &lt;&gt; 0) do begin
+    i := i-1;
+    x := x+1;
+  end;
+
+
+ the repeat-until loop
+
+  repeat
+    i := i-1;
+  until (i = 0);
+
+
+ the if-then-else structure
+
+  if (i &lt; 0) then begin
+    x := i;
+  end else begin
+    x := -i;
+  end
+
+
+ the case statement
+
+  case i of
+    1:  x := -x;
+    2:  x := 0;
+    3:  x := x + 1;
+  end;

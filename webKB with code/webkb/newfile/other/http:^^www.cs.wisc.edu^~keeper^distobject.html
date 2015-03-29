@@ -1,0 +1,432 @@
+computing with distributed objects
+
+
+
+computing with distributed objects
+steven fought
+
+talk sources
+
+
+ the essential distributed objects survival guide (r. orfali, d. harkey, j. edwards, wiley)
+ usenet news
+
+
+object oriented programming review
+
+objects are individual sets of data coupled with related procedures 
+used to access and alter those data.  
+
+important features:
+
+
+encapsulation data are hidden behind methods
+polymorphism objects can be interchangeable, but different
+inheritance objects can be extended and altered, but remain
+interchangeable with the older models
+
+
+related features:
+
+ early and late binding
+ frameworks 
+
+
+opendoc
+
+opendoc is a compound document programming model:
+
+
+ documents are divided into parts
+ parts consist of typed data in persistent store, and an associated
+part editor
+ part editors are subclassed from a 60 method superclass that is 
+standard over all implementations (not all methods need to be overloaded)
+ many parts can nest within other parts
+
+
+opendoc frameworks
+
+two competing drawing frameworks:
+
+
+opendoc development framework from apple.  no rendering facilities.
+instead, prebuilt editor parts are subclassed
+opendoc framework from ibm.  built on openclass, a cross-platform
+rendering library.  currently available for os/2 and windows, mac and aix
+later.
+
+
+clearly, rendering is currently an opendoc weak-point.
+
+opendoc compound documents
+
+document shells are used to interact with documents.  they:
+
+
+ create a session object (which provide parts with information
+and manage geometries)
+ retrieve documents from storage
+ dynamically bind and load part editors
+ dispatch events and manage global document data
+
+
+bento: opendoc persistent storage
+
+bento is used to store compound documents.
+
+
+ a system of structured files and references between files.
+ no concurrent multiuser access (currently)
+ internal versioning system (drafts)
+ persistent references (32 bit ids) used to identify individual parts
+
+
+opendoc data transfers
+
+
+ drag and drop
+ clipboard (cut/copy/paste)
+ copy links
+
+
+persistent references are recursively located within parts to determine what
+to copy.  
+
+copy links push new data to other documents when they are updated.  
+
+scripting and extensions
+
+part editor superclasses are designed so that part operations can be 
+scripted
+
+a semantic-level event system extends the os event model
+
+standardized and registered extra interfaces to parts called extensions 
+are also possible.  
+
+ole/com
+
+ole is not based strictly on the object model:
+
+
+ interfaces are not individually instantiated, and therefore have no
+unique associated state
+ inheritance is not supported.  instead, aggregation is available
+ object location is not transparent.  communications mechanisms 
+differ depending on the environment of the object (in-process, local servers,
+remote servers)
+ remote servers are currently unimplemented (might be in nt 4 beta)
+
+
+ole interfaces
+
+interfaces are called through vtables laid out in ms visual c++ format.  
+
+programmers using compilers with different vtables must currently lay out 
+ole tables by hand.
+
+in-process servers are implemented as dlls loaded into the process' 
+address space
+
+local servers are contacted using ms lightweight rpc
+
+more on interfaces
+
+all client/server communication starts with the iunknown interface
+
+new interfaces are discovered with the queryinterface method of
+iunknown
+
+this allows multiple interfaces to be supported via aggregation
+
+ole features
+
+ole has features similar to opendoc
+
+
+ scripting and automation support
+ data transfer via drag-and-drop, clipboard and linking (through change
+advisories)
+ compound documents
+
+
+in addition the storage architecture supports locked regions, and commit/revert
+transactions (the product currently does not).
+
+monikers
+
+monikers are aliases for other objects, including:
+
+
+ files
+ items (within files)
+ anti monikers (which negate previous monikers)
+ pointers (to volatile storage)
+ composite (groups of monikers)
+
+
+in ole, nested data are handled with monikers
+
+ole compound documents
+
+
+container an application with some main purpose (e.g. word) that
+can contain servers
+server a smaller program that is either loaded into the address space
+or through lrpc that allows editing of some sub-document
+
+
+pixelmaps of sub-documents are cached to allow document display without 
+full server activation.
+
+ocxs
+
+ocxs or ``ole custom controls'' are microsoft's replacement for visual basic 
+controls, and are more generally applicable to ole.  
+
+their purpose is to provide a standard architecture for most servers.
+
+each consists of an in-process server aggregated with an automation server
+(which allows scripting).  
+
+biggest weakness: ocxs cannot be containers.
+
+corba overview: the common object request broker architecture
+
+distributed objects:  distributed computing with object-oriented principles
+
+corba objects can exist anywhere on a network
+
+their location is transparent to other objects
+
+the object request broker (orb) marshals communication between objects
+
+object interfaces are defined in a pl-independent interface definition language
+(idl)
+
+corba history
+
+corba spec is controlled by the object management group (omg), a consortium
+of over 500 companies
+
+corba 1.0 was published in 1990 and specified the compliant behaviors of
+individual orbs
+
+corba 2.0 was published in 1996 and specified interoperability between orbs,
+as well as updating other aspects of the spec
+
+five sub-specifications on different standardized services orbs must 
+implement have been issued.  three exist in rfc form.
+
+interface definition language
+
+the idl completely specifies communication between a client and server
+
+the client/server relationship is arbitrary, and is generally linked to 
+the initiating object
+
+the idl defines:
+
+
+modules: sets of class descriptions grouped into one namespace
+interfaces: sets of method invocations.  like a class definition with
+no implementation
+operations: the corba term for methods
+data types: include simple types short, long, unsigned short, unsigned long, 
+float, double, char, boolean, and octet, and constructed types enum, string,
+struct, array, union, sequence and ``any.''  aggregate types can be 
+constructed with typedefs
+
+
+idl example
+
+module myanimals
+{
+  interface dog: pet, animal
+  {
+    attribute integer age;
+    exception notinterested (string explanation);
+
+    void bark(in short how_long)
+      raises (notinterested);
+
+    void sit(in string where)
+      raises (notinterested);
+  }
+}
+
+attributes provide automatic get/set operations.
+
+object request brokers
+
+orbs are also called ``object buses''  
+
+all requests to other objects go through the orb
+
+an orb is not a single process or a set of processes, it is a set of services
+and protocols
+
+orbs can be compared with plumbing
+
+orbs: client side
+
+
+client idl stubs which pack up information and transport it to the
+server, and are created by the idl compiler
+dynamic invocation interface (dii) which allows run-time binding of 
+object interfaces
+interface repository apis are stored in a run-time database, allowing
+the dii to discover object methods
+orb interface which provides a few commonly needed services, such as
+converting object reference objects to strings
+
+
+orbs: server side
+
+
+server idl stubs  created by the idl compiler
+dynamic skeleton interface (dsi) is the server-equivalent of the dii,
+allowing it to receive non idl-marshaled requests
+object adapter provides a runtime environment for corba objects, 
+including assigning ids (object references), instantiation, and message 
+passing
+implementation repository provides a place to store administrative
+data, including the location of executable servers
+orb interface provides a few commonly needed services (same as 
+client side)
+
+
+steps in creating a corba service
+
+
+ create your idl definitions
+ precompile to create interface skeletons
+ add server implementation code
+ compile 
+
+
+the compile will add apis to the interface repository, create client idl
+stubs and executable server objects, and register the executable with the
+implementation repository
+
+when a client opens a connection to the server, the object adapter will 
+check the implementation repository for a compatible executable, and 
+instantiate it
+
+dynamic invocations
+
+to allow interface discovery, a client can dynamically invoke object methods
+with the dii
+
+the steps are:
+
+
+ obtain the method description
+ create argument list
+ create the request
+ invoke the method using rpc, send/receive, or datagram, depending on
+the method description
+
+
+library routines are provided to aid in this process
+
+more on object adapters
+
+object adapters
+
+ registers server classes with the ir
+ instantiates new objects
+ manages object references
+ broadcasts the presence of object servers
+ handles incoming client calls
+
+
+the oa is effectively an inherited interface, although it can be implemented
+in procedural languages
+
+standardized basic object adapters (boas) are provided for the common
+cases:  shared server, unshared server, server-per-method, and persistent
+server
+
+common object service specifications
+
+a number of standardized services have been established, and more are being 
+worked on.  these are grouped together in common object service specifications
+(cosss)
+
+
+coss1: life cycle, naming, persistence, event notification (1993)
+coss2: transactions, concurrency relationships, externalization (1994)
+coss3: security, time (1995)
+coss4: query, licensing, properties (1995)
+coss5: trader, collections change management (1996)
+
+
+i will discuss some of these in the following slides
+
+naming, events, life cycle and trader
+
+
+naming: a standardized hierarchical name service designed to 
+encapsulate other services such as dce cds, iso x.500, and sun nis+
+trader: provides a way of finding the object most suited to a
+task based on some set of criteria
+life cycle: allows the creation, copying, deleting, and moving of
+objects.  also allows relationships between objects to be defined in terms
+of graphs
+events: allows semantic level events to be defined and distributed
+
+
+transactions and concurrency
+
+the transaction object allows nested commit/abort style transaction to be
+defined. the object interface is inherited by objects that support transactions
+
+the concurrency service includes locking facilities to allow mutual exclusion
+and synchronization
+
+persistence and object databases
+
+the persistence object allows seamless access to one or two level stores
+
+the implementation is complex, but three basic interfaces are provided:
+
+
+ the direct access (da) protocol provides direct access to 
+persistent data using a data definition language
+ the odmg-93 protocol provides access to object from c++ using
+odmg's ddl
+ the dynamic data object protocol is used to define a structure
+that contains all the data for an object
+
+
+the latter can be used for two-level stores such as relational databases
+and filesystems
+
+notes on corba
+
+orbs from different vendors are only compatible if they implement half-bridges
+to a reference protocol that runs on top of tcp/ip (corba 2.0)
+
+orb vendors have great flexibility in determining transport, packaging, and
+server calling mechanisms
+
+the flexibility is intended to encourage high performance systems
+
+performance varies widely by implementation and relative object location
+
+interesting issues
+
+
+ parallelism
+
+ breaking applications into smaller objects that cooperate increases
+potential parallelism
+ objects designed to work across networks will be forced to exploit
+concurrency to avoid excessive blocking
+
+ programming languages
+
+ the smaller size of objects encourages inter-procedural analysis
+ all new languages can use existing object components

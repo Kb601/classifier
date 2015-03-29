@@ -1,0 +1,375 @@
+cs 560 syllabus - winter '95
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cs 560 - computer networks 
+
+winter 96  - mwf 1:00-1:50pm, 120 tmcb
+ 
+
+professor:  
+
+mark clement ,  3372 tmcb,  x7608  
+office hours: mwf 11:00-12:00 or by appointment 
+ta: linus kwong  m-f 11:00-1:00pm
+
+
+
+goals:
+this class will examine high bit-rate networks and their applications.  we will be focusing
+on fiber optic asynchronous transfer mode (atm) 
+networks and the protocols which enable their use
+for telephony and lan traffic.  a large part of the grade in the class
+will be based on lab projects associated with building a protocol stack 
+on top of atm.  we will also 
+attempt to predict usage models for networks
+in the year 2010 and analyze technology for this new era of networked computing. 
+
+ 
+
+text: 
+david mcdysan, "atm theory and application"
+augmented by papers given out during the semester.
+ 
+
+prerequisites: 
+ cs460, unix network programming experience.
+ 
+
+ newsgroup: 
+the newsgroup byu.class.cs560 contains questions and answers to 
+many common questions.  the ta would like to have you post
+questions there first.
+
+
+
+grade breakdown 
+
+homework 10%
+7 labs   40%
+         lab 1            socket switch
+         lab 2            cells
+         lab 3            signalling
+	 lab 4            congestion
+	 lab 5            apis
+	 lab 6            nist simulator
+project  10%
+midterm  20%
+final    20%
+
+
+
+you can get a 
+
+cid
+
+number and check your 
+
+scores
+
+online.
+
+
+grading
+
+
+a      93.3-100%      b-      80.0-83.3%     d+     66.7-70.0% 
+a-     90.0-93.3%     c+      76.7-80.0%     d      63.3-66.7%
+b+     86.7-90.0%     c       73.3-76.7%     d-     60.0-63.3%
+b      83.3-86.7%     c-      70.0-73.3%     e      00.0-60.0%
+
+late policy
+ all labs must be fully functional in order to get any credit.  late labs
+will have 30% of the points deducted plus 20% for each week they are overdue.
+a lab that is 7 days late will receive 50% credit, 14 days = 30% credit, 21 days = 10%
+credit.  since the labs build on each other it is to your advantage to turn them in
+on time.
+
+projects
+ the last four weeks of class will be spent on a moderate sized research 
+ 
+project .  you may work in groups or seperately on the class project.
+ 
+expectations
+
+ 
+ i expect you to become conversant with the basics of atm research.  this 
+research area should motivate you to independent reading and thinking.
+ you will spend at least 6 hours per week in laboratory work or reading.
+ you will need to 
+check the mosaic page at http://nebo.cs.byu.edu/~clement/cs560/cs560.html
+often in order to get changes to assignments and updates to the schedule.
+ all laboratory work and homework should be done independently.
+you may work in a group to understand the material and questions, but
+everything you turn in or pass off should be your work.  take steps to 
+protect your work from being copied by read protecting your directory.
+
+
+class adminstration
+
+
+ 
+homework questions
+ schedule:
+laboratories:
+sample
+ 
+exams 
+
+  
+projects: 
+
+ 
+
+available documents:
+
+the following papers are included as background material to the topics we will discuss 
+in the class.
+
+
+
+ 
+multimedia data bases.
+
+ the
+ 
+ self similar
+
+nature of ethernet traffic.
+ this page describes many of the issues involved in 
+
+video transmission
+over ip and atm networks.
+  gunnar karlsson, research report r95-14 http://www.sics.se/libindex.html
+from sics sweden.
+
+ 
+video on demand architectures
+
+from ftp://athos.rutgers.edu/pub/technical-reports/dcs-tr-311.ps.z.
+
+ 
+a proposed flow specification (rfc1363)
+
+for atm networks.
+
+  
+  introductory atm paper 
+  describing ip over atm.  the focus of this paper is running ip over
+  atm, but there is an extensive tutorial on atm.
+  john david cavanaugh and timothy j. salo,
+  "internetworking with atm wans", 1992.
+
+this page was created by robert walthall and containes a good 
+summary of the state of research into 
+  flow control 
+  in atm networks.
+
+ this description of
+ 
+non-blocking i/o 
+should be helpful in the labs.
+ sample ccitt 
+specification.  additional specifications can be found through 
+anonymous ftp at 
+src.doc.ic.ac.uk in
+the computing/ccitt/ccitt-standards/ccitt/1992 or 1988 directories.
+a good source of  atm references 
+sample socket code is available through anonymous ftp from
+timp.cs.byu.edu in the pub/sockets directory or is available 
+ here  as a 
+shar file.
+information on  unix 
+the computer for the 21st century  scientific american paper 
+atm faq 
+the atm  
+blue book  has extensive information about protocols, standards and
+products used with atm.
+ 
+  parallel computing  on atm networks. c. c. huang and p. k.
+  mckinley, "communication issues in parallel computing across atm
+  networks," ieee parallel and distributed technology,
+  accepted to appear, 1994.
+
+ 
+  a pipelined, multi-processor architecture for a connectionless
+  server for broadband isdn  is a masters thesis by daniel omundsen.
+  i think the thesis is a good prototype for research in this field
+  and has a fairly good bibliography and intro to atm.
+
+ 
+  performance analysis  of parallel library interfaces to atm networks.
+  "mengjou lin and jenwei hsieh and david h.c. du
+          and joseph p. thomas, "distributed network computing over
+local atm networks", to appear in ieee journal on selected areas in 
+communications
+          special issue of atm lans: implementations and experiences
+          with an emerging technology early 1995.
+
+ there is also information on 
+the 
+atm testbed  and  nero  setup and
+ heavy-weights 
+in the atm industry.
+
+ also the 
+atm with pvm  paper and  atm communication  results and
+ atm  pointers.
+
+ a new paper on 
+pvm atm networks, "faster (atm) message
+passing in pvm" is also available.
+
+ the 
+
+batman 
+
+boulder co. us west atm trial is described here.
+
+ a paper on 
+
+atm switch architectures is also available.
+
+ a
+ 
+mpeg background paper 
+along with slides from three talks on 
+ 
+multimedia/vod  testbeds and
+ 
+vod at berkeley and a
+ 
+ software architecture  for vod and
+ 
+ network protocols  for vod all came from 
+s2k-ftp.cs.berkeley.edu pub/multimedia/papers.
+
+ the fore api including
+ 
+atm_accept ,
+ 
+atm_bind ,
+ 
+atm_client_aal4 ,
+ 
+atm_client_null ,
+ 
+atm_close ,
+ 
+atm_connect ,
+ 
+atm_error ,
+ 
+atm_gethostbyname ,
+ 
+atm_intro ,
+ 
+atm_listen ,
+ 
+atm_open ,
+ 
+atm_pvc ,
+ 
+atm_recv ,
+ 
+atm_send ,
+ 
+atm_server_aal4 ,
+ 
+atm_server_null ,
+ 
+atm_setbatchsize ,
+ 
+atmio  
+are here.  we also have sample fore
+
+client  and
+
+server  code.
+
+ a description of the 
+ 
+vince  vendor independent network control entity is here.
+
+ the
+ 
+ccitt  standards documents are here.
+
+ 
+ 
+pointers  to snmp and other atm standards and papers are here.
+
+ 
+ 
+prioritization  of mpeg frames over tcp/ip.
+
+descriptions of 
+ 
+high performance networking testbeds.
+
+
+ 
+world wide web.
+
+
+ 
+mbone.
+
+
+ 
+mpeg traffic analysis by garrett.
+
+
+ 
+congestion.
+
+
+ 
+uni toc
+,
+uni pages 
+ 
+1-10
+,
+ 
+11-47
+,
+ 
+049_103
+,
+ 
+105_149
+,
+ 
+151_222
+,
+ 
+223_278
+,
+ 
+279_296
+,
+ 
+297_366
+,
+ 
+367_396
+.
+
+
+
+
+please send suggestions and questions to mark clement
+(clement@cs.byu.edu)

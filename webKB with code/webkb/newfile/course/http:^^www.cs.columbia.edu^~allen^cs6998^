@@ -1,0 +1,129 @@
+bme/cs e6998-001: topics in 3-d computer modeling
+
+ 
+
+
+
+cs e6998-001, spring
+1997: topics in 3-d computer modeling
+
+
+
+barrett robotic hand, 3-d model
+
+
+
+
+
+ 
+
+
+
+ 
+
+3-d mesh model and
+cad model of strut acquired from
+multiple laser range scans
+
+
+
+
+
+
+
+
+
+
+ when:
+wed. 4:10-6:00 pm
+
+ faculty:
+
+peter allen,  associate professor of computer
+science (allen@cs.columbia.edu)
+
+ overview: 
+
+the ability to acquire, view, animate, and analyze 3-d objects in a
+computer is becoming increasingly important.  when we see 3-d objects
+in a computer, we need to ask the question "how did they get in
+there??". there are many different methods and approaches to
+answering this question.  the methods differ depending on size (how do
+you acquire and model a molecular structure, an anatomical part of the
+body, a person, a machine, a building...?) and upon function of the
+model (model's that need to be viewed only do not have to be
+geometrically or topologically correct; models that are used for
+physical analysis or simulation may need to be).  this course will
+explore 3-d modeling in detail and from a variety of viewpoints:
+robotics, medicine, graphics, virtual reality etc. we will discuss 3-d data
+ac quisition devices, 3-d modeling systems, 3-d file formats, and
+algorithms to acquire, create, augment, manipulate render and
+physically build such models.   
+
+
+
+ prerequisite: 
+experience with at least 1 of the following topics:  computer
+graphics, computer vision, or computer aided design.  in addition, there will
+be programming in c and c++ so students need a proficiency in at least
+one of these languages. any student who is unsure of his/her
+background should contact professor allen at allen@cs.columbia.edu
+
+
+ text: 
+papers and handouts to be provided in class.  a small charge for
+xeroxing will be involved.
+
+
+ course format: 
+
+there will be a weekly class, with lectures by professor allen and
+assigned papers to be presented by class members.  the grade will be
+based upon each student's paper presentation and a group project.
+
+
+ project: 
+
+one potential project will be to actually acquire a 3-d object using
+sensors, and from this create a model that can be manipulated by the
+computer, as well as physically building the 3-d model on the rapid prototyping machine in our
+lab.. another project may be recovering a 3-d model of a building
+on campus using photography. other projects of the student's choosing
+are also possible. projects may be individual or group oriented.
+
+
+ topics: 
+
+
+1.	overview of 3-d modeling
+
+2.	acquisition devices: range scanners, stereovision, robotic
+digitizers etc.
+
+3.	data formats for 3-d data
+
+4.	boundary representations
+
+5.      volumetric representations
+
+6.      manipulation of 3-d models
+
+ cool related sites: 
+
+cyberware inc.
+
+3d scanners inc.
+
+real time geometry inc.
+
+stratasys inc.
+
+
+
+
+
+
+
+
+
+peter allen (allen@cs.columbia.edu)

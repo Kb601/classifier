@@ -1,0 +1,49 @@
+chinook specification 
+
+ chinook, version roe 
+june 1994.
+
+click here for the block diagram.
+
+tools
+
+
+vp
+    vp is the verilog parser.  it takes a verilog
+	    file and splits it into two parts.
+     the structural description is extracted and passed
+	    to the port allocator.
+     the behavioral description,
+	    which contains concurrent, time-driven and event-driven
+	    code, is translated into c and output to a compiler.
+ap
+    ap is the i/o port allocator.  the structural output
+	 of vp (.env and .bun files)
+	 specifies which microcontroller
+	 to use and the devices that need to be connected to it. 
+     it reads the definition of the devices from the device
+	 library and the controller library.
+	 (in the diagram they are shown as .dev and
+	 .proc files, but we actually use .lib for both).
+     after i/o port allocation, it generates two things:
+	
+	 device driver routines in the .h file
+	 schematic file in the .sch file.
+	
+     we have post-processing tools to convert the schematic
+       file to other formats.
+dd
+    dd is the pre-allocation device-driver synthesizer.
+     it is an optional phase, which converts a timing diagram
+       file (.td, in timingdesigner format) into a seq
+       that we normally expect in the device library.
+
+
+
+
+the input to the chinook co-synthesis system consists of the following:
+
+
+ user specification of the system in verilog.
+ device library
+ controller library

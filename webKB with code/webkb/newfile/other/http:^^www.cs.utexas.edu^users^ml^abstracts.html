@@ -1,0 +1,2058 @@
+machine learning papers and abstracts
+
+machine learning papers and abstracts
+
+to view a paper, click on the open book image.  
+
+
+
+
+
+
+
+
+
+
+
+inductive logic programming for natural language processing
+raymond j. mooney
+
+proceedings of the 6th international inductive logic programming workshop, pp. 205-224, stockholm, sweden, august 1996. 
+
+
+this paper reviews our recent work on applying inductive logic
+programming to the construction of natural language processing
+systems. we have developed a system, chill, that learns a parser from
+a training corpus of parsed sentences by inducing heuristics that
+control an initial overly-general shift-reduce parser.  chill learns
+syntactic parsers as well as ones that translate english database
+queries directly into executable logical form.  the atis corpus of
+airline information queries was used to test the acquisition of
+syntactic parsers, and chill performed competitively with recent
+statistical methods.  english queries to a small database on
+u.s. geography were used to test the acquisition of a complete natural
+language interface, and the parser that chill acquired was more
+accurate than an existing hand-coded system.  the paper also includes
+a discussion of several issues this work has raised regarding the
+capabilities and testing of ilp systems as well as a summary of our
+current research directions.
+
+
+
+
+
+
+
+
+
+combining symbolic and connectionist learning methods to refine
+certainty-factor rule-bases
+j. jeffrey mahoney
+
+ph.d. thesis, department of computer sciences, university of texas at austin, may, 1996.
+
+
+this research describes the system rapture, which is designed to
+revise rule bases expressed in certainty-factor format.  recent
+studies have shown that learning is facilitated when biased with
+domain-specific expertise, and have also shown that many real-world
+domains require some form of probabilistic or uncertain reasoning in
+order to successfully represent target concepts. rapture was designed
+to take advantage of both of these results. 
+
+beginning with a set of certainty-factor rules, along with
+accurately-labelled training examples, rapture makes use of both
+symbolic and connectionist learning techniques for revising the rules,
+in order that they correctly classify all of the training examples. a
+modified version of backpropagation is used to adjust the certainty
+factors of the rules, id3's information-gain heuristic is used to add
+new rules, and the upstart algorithm is used to create new hidden
+terms in the rule base. 
+
+results on refining four real-world rule bases are presented that
+demonstrate the effectiveness of this combined approach.  two of these
+rule bases were designed to identify particular areas in strands of
+dna, one is for identifying infectious diseases, and the fourth
+attempts to diagnose soybean diseases.  the results of rapture are
+compared with those of backpropagation, c4.5, kbann, and other
+learning systems.  rapture generally produces sets of rules that are
+more accurate that these other systems, often creating smaller sets of
+rules and using less training time. 
+
+
+
+
+
+
+
+
+
+
+ integrating ebl and ilp to acquire control rules for planning
+tara a. estlin and raymond j. mooney
+
+proceedings of the third international workshop on
+multi-strategy learning, pp. 271-279, harpers ferry, wv, may
+1996. (msl-96).
+
+
+most approaches to learning control information in planning systems
+use explanation-based learning to generate control rules.
+unfortunately, ebl alone often produces overly complex rules that
+actually decrease planning efficiency.  this paper presents a novel
+learning approach for control knowledge acquisition that integrates
+explanation-based learning with techniques from inductive logic
+programming. ebl is used to constrain an inductive search for
+selection heuristics that help a planner choose between competing plan
+refinements. scope is one of the few systems to address learning
+control information in the newer partial-order planners.
+specifically, scope learns domain-specific control rules for a version
+of the ucpop planning algorithm. the resulting system is shown to
+produce significant speedup in two different planning domains.
+
+
+
+
+
+
+
+
+
+comparative experiments on disambiguating word senses:
+an illustration of the role of bias in machine learning
+
+raymond j. mooney
+
+proceedings of the 1996 conference on empirical methods in
+natural language processing, pp. 82-91, philadelphia, pa, may
+1996.. 
+
+
+this paper describes an experimental comparison of seven different learning
+algorithms on the problem of learning to disambiguate the meaning of a word
+from context.  the algorithms tested include statistical, neural-network,
+decision-tree, rule-based, and case-based classification techniques.  the
+specific problem tested involves disambiguating six senses of the word ``line''
+using the words in the current and proceeding sentence as context.  the
+statistical and neural-network methods perform the best on this particular
+problem and we discuss a potential reason for this observed difference.  we
+also discuss the role of bias in machine learning and its importance in
+explaining performance differences observed on specific problems.
+
+
+
+
+
+
+
+
+
+learning to parse database queries using inductive logic programming
+john m. zelle and raymond j. mooney
+
+proceedings of the thirteenth national conference on aritificial intelligence,
+pp. 1050-1055, portland, or, august, 1996. (aaai-96)
+
+
+this paper presents recent work using the chill parser acquisition
+system to automate the construction of a natural-language interface
+for database queries.  chill treats parser acquisition as the learning
+of search-control rules within a logic program representing a
+shift-reduce parser and uses techniques from inductive logic
+programming to learn relational control knowledge.  starting with a
+general framework for constructing a suitable logical form, chill is
+able to train on a corpus comprising sentences paired with database
+queries and induce parsers that map subsequent sentences directly into
+executable queries.  experimental results with a complete
+database-query application for u.s. geography show that chill is able
+to learn parsers that outperform a pre-existing, hand-crafted
+counterpart.  these results demonstrate the ability of a corpus-based
+system to produce more than purely syntactic representations.  they
+also provide direct evidence of the utility of an empirical approach
+at the level of a complete natural language application.
+
+
+
+
+
+
+
+
+
+
+
+a novel application of theory refinement to student modeling
+paul baffes and raymond j. mooney
+
+proceedings of the thirteenth national conference on aritificial intelligence,
+pp. 403-408, portland, or, august, 1996. (aaai-96)
+
+
+theory refinement systems developed in machine learning automatically
+modify a knowledge base to render it consistent with a set of
+classified training examples. we illustrate a novel application of
+these techniques to the problem of constructing a student model for an
+intelligent tutoring system (its). our approach is implemented in an
+its authoring system called assert which uses theory refinement to
+introduce errors into an initially correct knowledge base so that it
+models incorrect student behavior. the efficacy of the approach has
+been demonstrated by evaluating a tutor developed with assert with 75
+students tested on a classification task covering concepts from an
+introductory course on the c++ programming language. the system
+produced reasonably accurate models and students who received feedback
+based on these models performed significantly better on a post test
+than students who received simple reteaching.
+
+
+
+
+
+
+
+
+
+ qualitative multiple-fault diagnosis of continuous dynamic systems using
+behavioral modes
+siddarth subramanian and raymond j. mooney
+
+proceedings of the thirteenth national conference on aritificial intelligence,
+pp. 965-970, portland, or, august, 1996. (aaai-96)
+
+
+most model-based diagnosis systems, such as gde and sherlock, have
+concerned discrete, static systems such as logic circuits and use
+simple constraint propagation to detect inconsistencies. however,
+sophisticated systems such as qsim and qpe have been developed for
+qualitative modeling and simulation of continuous dynamic systems.  we
+present an integration of these two lines of research as implemented
+in a system called qdocs for multiple-fault diagnosis of continuous
+dynamic systems using qsim models. the main contributions of the
+algorithm include a method for propagating dependencies while solving
+a general constraint satisfaction problem and a method for verifying
+the consistency of a behavior with a model across time. through
+systematic experiments on two realistic engineering systems, we
+demonstrate that qdocs demonstrates the best balance of generality,
+accuracy, and efficiency among competing methods.
+
+
+
+
+
+
+
+
+
+ multi-strategy learning of search control for partial-order
+planning
+tara a. estlin and raymond j. mooney
+
+proceedings of the thirteenth national conference on aritificial intelligence,
+pp. 843-848, portland, or, august, 1996. (aaai-96)
+
+
+
+most research in planning and learning has involved linear,
+state-based planners. this paper presents scope, a system for learning
+search-control rules that improve the performance of a partial-order
+planner.  scope integrates explanation-based and inductive learning
+techniques to acquire control rules for a partial-order planner.
+learned rules are in the form of selection heuristics that help the
+planner choose between competing plan refinements.  specifically,
+scope learns domain-specific control rules for a version of the ucpop
+planning algorithm. the resulting system is shown to produce
+significant speedup in two different planning domains.
+
+
+
+
+
+
+
+
+
+ integrating explanation-based and inductive learning techniques
+to acquire search-control for planning
+tara a. estlin
+
+ph.d. proposal, department of computer sciences, university of texas
+at austin, 1996. 
+
+ 
+planning systems have become an important tool for automating a wide
+variety of tasks. control knowledge guides a planner to find solutions
+quickly and is crucial for efficient planning in most domains.
+machine learning techniques enable a planning system to automatically
+acquire domain-specific search-control knowledge for different
+applications.  past approaches to learning control information have
+usually employed explanation-based learning (ebl) to generate control
+rules.  unfortunately, ebl alone often produces overly complex rules
+that actually decrease rather than improve overall planning
+efficiency.  this paper presents a novel learning approach for control
+knowledge acquisition that integrates explanation-based learning with
+techniques from inductive logic programming. in our learning system
+scope, ebl is used to constrain an inductive search for control
+heuristics that help a planner choose between competing plan
+refinements. scope is one of the few systems to address learning
+control information for newer, partial-order planners.  specifically,
+this proposal describes how scope learns domain-specific control rules
+for the ucpop planning algorithm. the resulting system is shown to
+produce significant speedup in two different planning domains, and to
+be more effective than a pure ebl approach.
+
+future research will be performed in three main areas.  first, scope's
+learning algorithm will be extended to include additional techniques
+such as constructive induction and rule utility analysis.  second,
+scope will be more thoroughly tested; several real-world planning
+domains have been identified as possible testbeds, and more in-depth
+comparisons will be drawn between scope and other competing
+approaches.  third, scope will be implemented in a different planning
+system in order to test its portability to other planning algorithms.
+this work should demonstrate that machine-learning techniques can be a
+powerful tool in the quest for tractable real-world planning.
+
+
+
+
+
+
+
+
+
+lexical acquisition: a novel machine learning problem
+cynthia a. thompson and raymond j. mooney
+
+technical report, artificial intelligence lab, 
+university of texas at austin, 1996. 
+
+
+this paper defines a new machine learning problem to which standard
+machine learning algorithms cannot easily be applied.  the problem
+occurs in the domain of lexical acquisition. the ambiguous and
+synonymous nature of words causes the difficulty of using standard
+induction techniques to learn a lexicon.  additionally, negative
+examples are typically unavailable or difficult to construct in this
+domain.  one approach to solve the lexical acquisition problem is
+presented, along with preliminary experimental results on an
+artificial corpus.  future work includes extending the algorithm and
+performing tests on a more realistic corpus.
+
+
+
+
+
+
+
+
+
+advantages of decision lists and implicit negative in inductive logic
+programming
+mary elaine califf and raymond j. mooney
+
+technical report, artificial intelligence lab, 
+university of texas at austin, 1996. 
+
+
+this paper demonstrates the capabilities of foidl, an inductive logic
+programming (ilp) system whose distinguishing characteristics are the
+ability to produce first-order decision lists, the use of an output
+completeness assumption to provide implicit negative examples, and the
+use of intensional background knowledge.  the development of foidl was
+originally motivated by the problem of learning to generate the past
+tense of english verbs; however, this paper demonstrates its superior
+performance on two different sets of benchmark ilp problems.  tests on
+the finite element mesh design problem show that foidl's decision
+lists enable it to produce better results than all other ilp systems
+whose results on this problem have been reported.  tests with a selection
+of list-processing problems from bratko's introductory prolog text demonstrate that the combination of implicit negatives and intensionality allow
+foidl to learn correct programs from far fewer examples than foil.
+
+
+
+
+
+
+
+
+
+learning parse decisions from examples with rich context
+ulf hermjakob and raymond j. mooney
+
+submitted to the 34th annual meeting of the association for computational linguistics (acl-96).
+
+
+we present a knowledge and context-based system for parsing natural language
+and evaluate it on sentences from the wall street journal.
+applying machine learning techniques, the system uses parse action examples
+acquired under supervision to generate a deterministic shift-reduce parser
+in the form of a decision structure. it relies heavily on context, as encoded 
+in features which describe the morpholgical, syntactical, semantical and
+other aspects of a given parse state.
+
+
+
+
+
+
+
+
+
+ corpus-based lexical acquisition for semantic parsing 
+cynthia thompson
+
+ph.d. proposal, department of computer sciences, university of texas
+at austin, 1995. 
+
+
+building accurate and efficient natural language processing (nlp)
+systems is an important and difficult problem.  there has been
+increasing interest in automating this process.  the lexicon, or the
+mapping from words to meanings, is one component that is typically
+difficult to update and that changes from one domain to the next.
+therefore, automating the acquisition of the lexicon is an important
+task in automating the acquisition of nlp systems.  this proposal
+describes a system, wolfie (word learning from interpreted examples),
+that learns a lexicon from input consisting of sentences paired with
+representations of their meanings.  preliminary experimental results
+show that this system can learn correct and useful mappings.  the
+correctness is evaluated by comparing a known lexicon to one learned
+from the training input.  the usefulness is evaluated by examining the
+effect of using the lexicon learned by wolfie to assist a parser
+acquisition system, where previously this lexicon had to be
+hand-built.  future work in the form of extensions to the algorithm,
+further evaluation, and possible applications is discussed.
+
+
+
+
+
+
+
+
+
+ refinement of bayesian networks by combining connectionist and
+symbolic techniques 
+sowmya ramanchandran
+
+ph.d. proposal, department of computer sciences, university of texas
+at austin, 1995. 
+
+
+bayesian networks provide a mathematically sound formalism for
+representing and reasoning with uncertain knowledge and are as such
+widely used. however, acquiring and capturing knowledge in this
+framework is difficult. there is a growing interest in formulating
+techniques for learning bayesian networks inductively. while the
+problem of learning a bayesian network, given complete data, has been
+explored in some depth, the problem of learning networks with
+unobserved causes is still open. in this proposal, we view this
+problem from the perspective of theory revision and present a novel
+approach which adapts techniques developed for revising theories in
+symbolic and connectionist representations.  thus, we assume that the
+learner is given an initial approximate network (usually obtained from
+a expert). our technique inductively revises the network to fit the
+data better.  our proposed system has two components: one component
+revises the parameters of a bayesian network of known structure, and
+the other component revises the structure of the network. the
+component for parameter revision maps the given bayesian network into
+a multi-layer feedforward neural network, with the parameters mapped
+to weights in the neural network, and uses standard backpropagation
+techniques to learn the weights. the structure revision component uses
+qualitative analysis to suggest revisions to the network when it fails
+to predict the data accurately. the first component has been
+implemented and we will present results from experiments on real world
+classification problems which show our technique to be effective.  we
+will also discuss our proposed structure revision algorithm, our plans
+for experiments to evaluate the system, as well as some extensions to
+the system.
+
+
+
+
+
+
+
+
+
+ refinement-based student modeling and automated bug library 
+construction
+paul baffes and raymond mooney
+
+journal of artificial intelligence in education, 7, 1
+(1996), pp. 75-116.
+
+
+
+a critical component of model-based intelligent tutoring sytems is a
+mechanism for capturing the conceptual state of the student, which
+enables the system to tailor its feedback to suit individual strengths
+and weaknesses.  to be useful such a modeling technique must be
+practical, in the sense that models are easy to construct, and
+effective, in the sense that using the model actually impacts student
+learning.  this research presents a new student modeling technique
+which can automatically capture novel student errors using only
+correct domain knowledge, and can automatically compile trends across
+multiple student models.  this approach has been implemented as a
+computer program, assert, using a machine learning technique called
+theory refinement, which is a method for automatically revising a
+knowledge base to be consistent with a set of examples.  using a
+knowledge base that correctly defines a domain and examples of a
+student's behavior in that domain, assert models student errors by
+collecting any refinements to the correct knowledege base which are
+necessary to account for the student's behavior.  the efficacy of the
+approach has been demonstrated by evaluating assert using 100 students
+tested on a classification task covering concepts from an introductory
+course on the c++ programming language.  students who received
+feedback based on the models automatically generated by assert
+performed significantly better on a post test than students who
+received simple teaching.
+
+
+
+
+
+
+
+
+
+comparative results on using inductive logic programming
+for corpus-based parser construction
+john m. zelle and raymond j. mooney
+
+symbolic, connectionist, and statistical approaches to learning for natural
+language processing, s. wermter, e. riloff and g. scheler, eds,
+spring verlag, 1996.  
+
+
+this paper presents results from recent experiments with chill, a
+corpus-based parser acquisition system.  chill treats language
+acquisition as the learning of search-control rules within a logic
+program.  unlike many current corpus-based approaches that use
+statistical learning algorithms, chill uses techniques from inductive
+logic programming (ilp) to learn relational representations.  chill is
+a very flexible system and has been used to learn parsers that produce
+syntactic parse trees, case-role analyses, and executable database
+queries.  the reported experiments compare chill's performance to that
+of a more naive application of ilp to parser acquisition.  the results
+show that ilp techniques, as employed in chill, are a viable
+alternative to statistical methods and that the control-rule framework
+is fundamental to chill's success.
+
+
+
+
+
+
+
+
+
+learning the past tense of english verbs using inductive logic 
+programming
+raymond j. mooney and mary elaine califf
+
+symbolic, connectionist, and statistical approaches to learning for natural
+language processing, s. wermter, e. riloff and g. scheler, eds,
+spring verlag, 1996.  
+
+ 
+
+this paper presents results on using a new inductive logic programming
+method called foidl to learn the past tense of english verbs. the past
+tense task has been widely studied in the context of the
+symbolic/connectionist debate.  previous papers have presented results
+using various neural-network and decision-tree learning methods.  we
+have developed a technique for learning a special type of prolog
+program called a first-order decision list, defined as an
+ordered list of clauses each ending in a cut.  foidl is based on foil
+(quinlan, 1990) but employs intensional background knowledge and
+avoids the need for explicit negative examples.  it is particularly
+useful for problems that involve rules with specific exceptions, such
+as the past-tense task.  we present results showing that foidl learns
+a more accurate past-tense generator from significantly fewer examples
+than all other previous methods.
+
+
+
+
+
+
+
+
+
+  hybrid learning of search control for partial-order planning  
+
+tara a. estlin and raymond j. mooney 
+
+new directions in ai planning, m. ghallab and a. milani, eds,
+ios press, 1996, pp. 129-140.   
+
+
+
+this paper presents results on applying a version of the dolphin
+search-control learning system to speed up a partial-order planner.
+dolphin integrates explanation-based and inductive learning techniques
+to acquire effective clause-selection rules for prolog programs.  a
+version of the ucpop partial-order planning algorithm has been
+implemented as a prolog program and dolphin used to automatically
+learn domain-specific search control rules that help eliminate
+backtracking. the resulting system is shown to produce significant
+speedup in several planning domains.
+
+
+
+
+
+
+
+
+
+
+
+revising bayesian network parameters using connectionist methods
+sowmya ramachandran and raymond j. mooney
+
+proceedings of the international conference on neural
+networks (icnn-96), special session on knowledge-based artificial
+neural networks, washington dc, june 1996. 
+
+
+the problem of learning bayesian networks with hidden variables is known to
+be a hard problem. even the simpler task of learning just the conditional
+probabilities on a bayesian network with hidden variables is hard. in this
+paper, we present an approach that learns the conditional probabilities on
+a bayesian network with hidden variables by transforming it into a
+multi-layer feedforward neural network (ann). the conditional probabilities
+are mapped onto weights in the ann, which are then learned using standard
+backpropagation techniques. to avoid the problem of exponentially large
+anns, we focus on bayesian networks with noisy-or and noisy-and
+nodes. experiments on real world classification problems demonstrate the
+effectiveness of our technique.
+
+
+
+
+
+
+
+
+
+
+qualitative multiple-fault diagnosis of continuous dynamic systems using
+behavioral modes
+
+siddarth subramanian
+
+ph.d. thesis, department of computer sciences, university of texas at austin, august, 1995.
+
+
+
+as systems like chemical plants, power plants, and automobiles get
+more complex, online diagnostic systems are becomingly increasingly
+important.  one of the ways to rein in the complexity of describing
+and reasoning about large systems such as these is to describe them
+using qualitative rather than quantitative models.
+
+model-based diagnosis is a class of diagnostic techniques that use
+direct knowledge about how a system functions instead of expert rules
+detailing causes for every possible set of symptons of a broken
+system.  our research builds on standard methods for model-based
+diagnosis and extends them to the domain of complex dynamic systems
+described using qualitative models.
+
+we motivate and describe out algorithm for diagnosing faults in a
+dynamic system given a qualitative model and a sequence of qualitative
+states.  the main contributions in this algorithm include a method for
+propagating dependencies while solving a general constraint
+satisfaction problem, and a method for verfying the compatibility of a
+behavior with a model across time.  the algorithm can diagnose
+multiple faults and uses models of faulty behavior, or behavioral
+modes.
+
+we then demonstrate these techniques using an implemented program
+called qdocs and test it on some realistic problems.  through our
+experiments with a model of the reaction control system (rcs) of the
+space shuttle and with a level-controller for a reaction tank, we show
+that qdocs demonstrates the best balance of generality, accuracy and
+efficiency among known systems.
+
+
+
+
+
+
+
+
+
+using inductive logic programming to automate the construction of 
+natural language parsers
+
+john m. zelle
+
+ph.d. thesis, department of computer sciences, university of texas at austin, august, 1995.
+
+
+designing computer systems to understand natural language input is a
+difficult task.  in recent years there has been considerable interest
+in corpus-based methods for constructing natural language parsers.
+these empirical approaches replace hand-crafted grammars with
+linguistic models acquired through automated training over language
+corpora.  a common thread among such methods to date is the use of
+propositional or probablistic representations for the learned
+knowledge.  this dissertation presents an alternative approach based
+on techniques from a subfield of machine learning known as inductive
+logic programming (ilp).  ilp, which investigates the learning of
+relational (first-order) rules, provides an empirical method for
+acquiring knowledge within traditional, symbolic parsing frameworks.
+
+this dissertation details the architecture, implementation and
+evaluation of chill a computer system for acquiring natural
+language parsers by training over corpora of parsed text.  chill
+treats language acquisition as the learning of search-control rules
+within a logic program that implements a shift-reduce parser.  control
+rules are induced using a novel ilp algorithm which handles difficult
+issues arising in the induction of search-control heuristics.  both
+the control-rule framework and the induction algorithm are crucial to
+chill's success.
+
+the main advantage of chill over propositional counterparts is
+its flexibility in handling varied representations.  chill has
+produced parsers for various analyses including case-role mapping,
+detailed syntactic parse trees, and a logical form suitable for
+expressing first-order database queries.  all of these tasks are
+accomplished within the same framework, using a single, general
+learning method that can acquire new syntactic and semantic categories
+for resolving ambiguities.
+
+experimental evidence from both aritificial and real-world corpora
+demonstrate that chill learns parsers as well or better than
+previous artificial neural network or probablistic approaches on
+comparable tasks.  in the database query domain, which goes beyond the
+scope of previous empirical approaches, the learned parser outperforms
+an existing hand-crafted system.  these results support the claim that
+ilp techniques as implemented in chill represent a viable
+alternative with significant potential advantages over neural-network,
+propositional, and probablistic approaches to empirical parser
+construction.
+
+
+
+
+
+
+
+
+
+
+an inductive logic programming method for corpus-based parser
+construction
+
+john m. zelle and raymond j. mooney
+
+submitted to computational linguistics
+
+
+in recent years there has been considerable research into corpus-based
+methods for parser construction.  a common thread in this research has
+been the use of propositional representations for learned knowledge.
+this paper presents an alternative approach based on techniques from a
+subfield of machine learning known as inductive logic programming
+(ilp).  ilp, which investigates the learning of relational
+(first-order) rules, provides a way of using empricial methods to
+acquire knowledge within traditional, symbolic parsing frameworks.  we
+describe a novel method for constructing deterministic prolog parsers
+from corpora of parsed sentences.  we also discuss several advantages
+of this approach compared to propositional alternatives and present
+experimental results on learning complete parsers using several
+corpora including the atis corpus from the penn treebank.
+
+
+
+
+
+
+
+
+
+a comparison of two methods employing inductive logic programming for
+corpus-based parser constuction
+
+john m. zelle and raymond j. mooney
+
+working notes of the ijcai-95 workshop on new approaches to
+learning for natural language processing, pp.79-86, montreal,
+quebec, august, 1995.
+
+ 
+this paper presents results from recent experiments with chill,
+a corpus-based parser acquisition system.  chill treats grammar
+acquisition as the learning of search-control rules within a logic
+program.  unlike many current corpus-based approaches that use
+propositional or probabilistic learning algorithms, chill uses
+techniques from inductive logic programming (ilp) to learn relational
+representations.  the reported experiments compare chill's
+performance to that of a more naive application of ilp to parser
+acquisition.  the results show that ilp techniques, as employed in
+chill, are a viable alternative to propositional methods and
+that the control-rule framework is fundamental to chill's
+success.
+
+
+
+
+
+
+
+
+
+
+
+inducing logic programs without explicit negative examples
+
+john m. zelle, cynthia a. thompson, mary elaine califf, and raymond j. mooney
+
+proceedings of the fifth international workshop on inductive logic
+programming, leuven, belguim, sepetember 1995.
+
+
+ this paper presents a method for learning logic programs
+without explicit negative examples by exploiting an assumption of
+output completeness. a mode declaration is supplied for the
+target predicate and each training input is assumed to be accompanied
+by all of its legal outputs.  any other outputs generated by an
+incomplete program implicitly represent negative examples; however,
+large numbers of ground negative examples never need to be generated.
+this method has been incorporated into two ilp systems, chillin and
+ifoil, both of which use intensional background knowledge.  tests on
+two natural language acquisition tasks, case-role mapping and
+past-tense learning, illustrate the advantages of the approach.
+
+
+
+
+
+
+
+
+
+acquisition of a lexicon from semantic representations of sentences
+
+cynthia a. thompson
+
+33rd annual meeting of the association of computational linguistics, pp. 335-337, boston, ma july 1995 (acl-95). 
+
+
+a system, wolfie, that acquires a mapping of words to their semantic
+representation is presented and a preliminary evaluation is performed.
+tree least general generalizations (tlggs) of the representations of input 
+sentences are performed to assist in determining the representations
+of individual words in the sentences.  the best guess for a meaning
+of a word is the tlgg which overlaps with the highest percentage of 
+sentence representations in which that word appears. 
+some promising experimental results on a non-artificial data
+set are presented.
+
+
+
+
+
+
+
+
+
+induction of first-order decision lists: results on learning the past tense of english verbs
+
+raymond j. mooney and mary elaine califf 
+
+journal of artificial intelligence research, 3 (1995) pp. 1-24.
+
+
+
+this paper presents a method for inducing logic programs from examples that
+learns a new class of concepts called first-order decision lists, defined
+as ordered lists of clauses each ending in a cut.  the method, called foidl, 
+is based on foil but employs intensional background knowledge and avoids 
+the need for explicit negative examples.  it is particularly useful for 
+problems that involve rules with specific exceptions, such as learning the 
+past-tense of english verbs, a task widely studied in the context of the 
+symbolic/connectionist debate.  foidl is able to learn concise, accurate 
+programs for this problem from significantly fewer examples than previous 
+methods (both connectionist and symbolic).
+
+
+
+
+
+
+
+
+
+
+  multiple-fault diagnosis using general qualitative models with fault modes    
+
+siddarth subramanian and raymond j. mooney 
+
+working notes of the ijcai-95 workshop on engneering problems for qualitative reasoning, monreal, quebec, august 1995.
+
+ 
+
+this paper describes an approach to diagnosis of systems described by
+qualitative differential equations represented as qsim models.  an
+implemented system qdocs is described that performs multiple-fault,
+fault-model based diagnosis, using constraint satisfaction techniques,
+of qualitative behaviors of systems described by such models. we
+demonstrate the utility of this system by accurately diagnosing
+randomly generated faults using simulated behaviors of a portion of
+the reaction control system of the space shuttle.
+
+
+
+
+
+
+
+
+
+
+
+ learning qualitative models for systems with multiple operating regions
+
+sowmya ramachandran, raymond j. mooney and benjamin j. kuipers 
+
+proceedings of the eight international workshop of qualitative
+reasoning about physical systems, pp. 212-223, nara, japan,
+june 1994. (qr-94)
+
+
+the problem of learning qualitative models of physical systems from
+observations of its behaviour has been addressed by several
+researchers in recent years. most current techniques limit themselves
+to learning a single qualitative differential equation to model the
+entire system.  however, many systems have several qualitative
+differential equations underlying them.  in this paper, we present an
+approach to learning the models for such systems.  our technique
+divides the behaviours into segments, each of which can be explained
+by a single qualitative differential equation.  the qualitative model
+for each segment can be generated using any of the existing techniques
+for learning a single model.  we show that results of applying our
+technique to several examples and demonstrate that it is effective.
+
+
+
+
+
+
+
+
+
+  multiple-fault diagnosis using general qualitative models with fault modes    
+
+siddarth subramanian and raymond j. mooney 
+
+ working papers of the fifth international workshop on
+principles of diagnosis, pp. 321-325, new paltz, ny, 1994. 
+
+
+this paper describes an approach to diagnosis of systems described by
+qualitative differential equations represented as qsim models.  an
+implemented system qdocs is described that performs multiple-fault,
+fault-model based diagnosis, using constraint satisfaction techniques,
+of qualitative behaviors of systems described by such models. we
+demonstrate the utility of this system by accurately diagnosing
+randomly generated faults using simulated behaviors of a portion of
+the reaction control system of the space shuttle.
+
+
+
+
+
+
+
+
+
+  automatic student modeling and bug library construction using theory 
+refinement    
+
+paul t. baffes 
+
+ph.d. thesis, department of computer sciences, university of texas at
+austin, december, 1994.
+
+
+the history of computers in education can be characterized by a
+continuing effort to construct intelligent tutorial programs
+which can adapt to the individual needs of a student in a
+one-on-one setting. a critical component of these intelligent
+tutorials is a mechanism for modeling the conceptual state of the
+student so that the system is able to tailor its feedback to suit
+individual strengths and weaknesses. the primary contribution of
+this research is a new student modeling technique which can
+automatically capture novel student errors using only correct
+domain knowledge, and can automatically compile trends across
+multiple student models into bug libraries. this approach has
+been implemented as a computer program, assert, using a machine
+learning technique called theory refinement which is a method for
+automatically revising a knowledge base to be consistent with a
+set of examples. using a knowledge base that correctly defines a
+domain and examples of a student's behavior in that domain,
+assert models student errors by collecting any refinements to the
+correct knowledge base which are necessary to account for the
+student's behavior. the efficacy of the approach has been
+demonstrated by evaluating assert using 100 students tested on a
+classification task using concepts from an introductory course on
+the c++ programming language. students who received feedback
+based on the models automatically generated by assert performed
+significantly better on a post test than students who received
+simple reteaching.
+
+
+
+
+
+
+
+
+
+
+  inductive learning for abductive diagnosis    
+
+cynthia a. thompson and raymond j. mooney 
+
+ proceedings of the twelfth national conference on
+ai, pp. 664-669, seattle, wa, july 1994. (aaai-94) 
+
+ a new inductive learning system, lab (learning for
+abduction), is presented which acquires abductive rules from a set of
+training examples.  the goal is to find a small knowledge base which,
+when used abductively, diagnoses the training examples correctly and
+generalizes well to unseen examples.  this contrasts with past systems
+that inductively learn rules that are used deductively.  each training
+example is associated with potentially multiple categories
+(disorders), instead of one as with typical learning systems.  lab
+uses a simple hill-climbing algorithm to efficiently build a rule base
+for a set-covering abductive system.  lab has been experimentally
+evaluated and compared to other learning systems and an expert
+knowledge base in the domain of diagnosing brain damage due to stroke.
+
+
+
+
+
+
+
+
+
+
+  comparing methods for refining certainty factor rule-bases   
+
+j. jeffrey mahoney and raymond j. mooney  
+
+ proceedings of the eleventh international workshop
+on machine learning, pp. 173-180, rutgers, nj, july 1994. (ml-94) 
+
+
+this paper compares two methods for refining uncertain knowledge bases using
+propositional certainty-factor rules.  the first method, implemented in the
+rapture system, employs neural-network training to refine the certainties
+of existing rules but uses a symbolic technique to add new rules.  the second
+method, based on the one used in the kbann system, initially adds a
+complete set of potential new rules with very low certainty and allows
+neural-network training to filter and adjust these rules.  experimental results
+indicate that the former method results in significantly faster training and
+produces much simpler refined rule bases with slightly greater accuracy.
+
+
+
+
+
+
+
+
+
+  modifying network architectures for certainty-factor rule-base revision
+   
+j. jeffrey mahoney and raymond j. mooney  
+
+ proceedings of the international symposium on integrating
+knowledge and neural heuristics 1994, pp. 75-84, pensacola, fl,
+may 1994. (isiknh-94) 
+
+ 
+this paper describes rapture --- a system for revising
+probabilistic rule bases that converts symbolic rules into a
+connectionist network, which is then trained via connectionist
+techniques.  it uses a modified version of backpropagation to refine
+the certainty factors of the rule base, and uses id3's
+information-gain heuristic (quinlan) to add new rules.  work is
+currently under way for finding improved techniques for modifying
+network architectures that include adding hidden units using the
+upstart algorithm (frean).  a case is made via comparison with fully
+connected connectionist techniques for keeping the rule base as close
+to the original as possible, adding new input units only as needed.
+
+
+
+
+
+
+
+
+
+  combining top-down and bottom-up techniques in inductive logic programming
+ 
+john m. zelle, raymond j. mooney and joshua b. konvisser 
+
+ proceedings of the eleventh international workshop
+on machine learning, pp. 343-351, rutgers, nj, july 1994. (ml-94) 
+
+
+this paper describes a new method for inducing logic programs from
+examples which attempts to integrate the best aspects of existing ilp
+methods into a single coherent framework.  in particular, it combines
+a bottom-up method similar to golem with a top-down method similar to
+foil.  it also includes a method for predicate invention similar to
+champ and an elegant solution to the ``noisy oracle'' problem which
+allows the system to learn recursive programs without requiring a
+complete set of positive examples.  systematic experimental
+comparisons to both golem and foil on a range of problems are used to
+clearly demonstrate the advantages of the approach.
+
+
+
+
+
+
+
+
+
+  inducing deterministic prolog parsers from treebanks:
+a machine learning approach    
+
+john m. zelle and raymond j. mooney  
+
+ proceedings of the twelfth national conference on
+ai, pp. 748-753, seattle, wa, july 1994. (aaai-94) 
+ 
+
+this paper presents a method for constructing deterministic, context-sensitive,
+prolog parsers from corpora of parsed sentences. our approach uses recent
+machine learning methods for inducing prolog rules from examples (inductive
+logic programming).  we discuss several advantages of this method compared to
+recent statistical methods and present results on learning complete parsers
+from portions of the atis corpus.
+
+
+
+
+
+
+
+
+
+  integrating ilp and ebl    
+
+raymond j. mooney and john m. zelle  
+
+ sigart bulletin, volume 5, number 1, jan. 1994, pp 12-21. 
+
+
+this paper presents a review of recent work that integrates methods from
+inductive logic programming (ilp) and explanation-based learning (ebl).  ilp
+and ebl methods have complementary strengths and weaknesses and a number of
+recent projects have effectively combined them into systems with better
+performance than either of the individual approaches. in particular, integrated
+systems have been developed for guiding induction with prior knowledge
+(ml-smart, focl, grendel) refining imperfect domain theories
+(forte, audrey, rx), and learning effective search-control
+knowledge (axa-ebl, dolphin).
+
+
+
+
+
+
+
+
+
+  extending theory refinement to m-of-n rules   
+
+paul t. baffes and raymond j. mooney  
+
+ informatica, 17 (1993), pp. 387-397. 
+
+
+in recent years, machine learning research has started addressing a problem
+known as  theory refinement. the goal of a theory refinement learner is
+to modify an incomplete or incorrect rule base, representing a domain theory,
+to make it consistent with a set of input training examples. this paper
+presents a major revision of the either propositional theory refinement
+system. two issues are discussed. first, we show how run time efficiency can
+be greatly improved by changing from a exhaustive scheme for computing
+repairs to an iterative greedy method. second, we show how to extend
+either to refine mofn rules. the resulting algorithm, neither (new 
+either), is more than an order of magnitude faster and produces
+significantly more accurate results with theories that fit the mofn
+format. to demonstrate the advantages of neither, we present experimental
+results from two real-world domains.
+
+
+
+
+
+
+
+
+
+  inductive learning for abductive diagnosis   
+
+cynthia thompson  
+
+m.a. thesis, department of computer sciences, university of texas at austin, 1993. 
+
+
+a new system for learning by induction, called lab, is presented.  lab
+(learning for abduction) learns abductive rules based on a set of training
+examples.  our goal is to find a small knowledge base which, when used
+abductively, diagnoses the training examples correctly, in addition to
+generalizing well to unseen examples.  this is in contrast to past systems,
+which inductively learn rules which are used deductively.  abduction is
+particularly well suited to diagnosis, in which we are given a set of symptoms
+(manifestations) and we want our output to be a set of disorders which explain
+why the manifestations are present.  each training example is associated with
+potentially multiple categories, instead of one, which is the case with typical
+learning systems.  building the knowledge base requires a choice between
+multiple possibilities, and the number of possibilities grows exponentially
+with the number of training examples.  one method of choosing the best
+knowledge base is described and implemented.  the final system is
+experimentally evaluated, using data from the domain of diagnosing brain damage
+due to stroke.  it is compared to other learning systems and a knowledge base
+produced by an expert.  the results are promising: the rule base learned is
+simpler than the expert knowledge base and rules learned by one of the other
+systems, and the accuracy of the learned rule base in predicting which areas
+are damaged is better than all the other systems as well as the expert
+knowledge base.
+
+
+
+
+
+
+
+
+
+  learning to model students: using theory refinement to detect
+misconceptions  
+
+paul t. baffes  
+
+ph.d. proposal, department of computer sciences, university of texas
+at austin, 1993. 
+
+
+
+a new student modeling system called assert is described which uses domain
+independent learning algorithms to model unique student errors and to
+automatically construct bug libraries. assert consists of two learning phases.
+the first is an application of theory refinement techniques for constructing
+student models from a correct theory of the domain being tutored. the second
+learning cycle automatically constructs the bug library by extracting common
+refinements from multiple student models which are then used to bias future
+modeling efforts. initial experimental data will be presented which suggests
+that assert is a more effective modeling system than other induction techniques
+previously explored for student modeling, and that the automatic bug library
+construction significantly enhances subsequent modeling efforts.
+
+
+
+
+
+
+
+
+
+  learning search-control heuristics for logic programs:
+applications to speedup learning and language acquisition  
+
+john m. zelle  
+
+ph.d. proposal, department of computer sciences, university of texas
+at austin, 1993. 
+
+
+this paper presents a general framework, learning search-control heuristics for
+logic programs, which can be used to improve both the efficiency and accuracy
+of knowledge-based systems expressed as definite-clause logic programs.  the
+approach combines techniques of explanation-based learning and recent advances
+in inductive logic programming to learn clause-selection heuristics that guide
+program execution.  two specific applications of this framework are detailed:
+dynamic optimization of prolog programs (improving efficiency) and natural
+language acquisition (improving accuracy).  in the area of program
+optimization, a prototype system, dolphin, is able to transform some
+intractable specifications into polynomial-time algorithms, and outperforms
+competing approaches in several benchmark speedup domains.  a prototype
+language acquisition system, chill, is also described.  it is capable of
+automatically acquiring semantic grammars, which uniformly incorprate syntactic
+and semantic constraints to parse sentences into case-role representations.
+initial experiments show that this approach is able to construct accurate
+parsers which generalize well to novel sentences and significantly outperform
+previous approaches to learning case-role mapping based on connectionist
+techniques.  planned extensions of the general framework and the specific
+applications as well as plans for further evaluation are also discussed.
+
+
+
+
+
+
+
+
+
+
+  combining foil and ebg to speed-up logic programs   
+
+john m. zelle and raymond j. mooney  
+
+ proceedings of the thirteenth international joint conference on artificial
+intelligence, pp. 1106-1111, chambery, france, 1993. (ijcai-93) 
+
+
+this paper presents an algorithm that combines traditional ebl
+techniques and recent developments in inductive logic programming to
+learn effective clause selection rules for prolog programs.  when
+these control rules are incorporated into the original program,
+significant speed-up may be achieved.  the algorithm is shown to be an
+improvement over competing ebl approaches in several domains.
+additionally, the algorithm is capable of automatically transforming
+some intractable algorithms into ones that run in polynomial time.
+
+
+
+
+
+
+
+
+
+  symbolic revision of theories with m-of-n rules   
+
+paul t. baffes and raymond j. mooney  
+
+ proceedings of the thirteenth international joint conference on artificial
+intelligence, pp. 1135-1140, chambery, france, 1993. (ijcai-93) 
+
+
+this paper presents a major revision of the either propositional theory
+refinement system. two issues are discussed. first, we show how run time
+efficiency can be greatly improved by changing from a exhaustive scheme for
+computing repairs to an iterative greedy method. second, we show how to extend
+either to refine m-of-n rules. the resulting algorithm, neither (new either),
+is more than an order of magnitude faster and produces significantly more
+accurate results with theories that fit the m-of-n format. to demonstrate the
+advantages of neither, we present preliminary experimental results comparing it
+to either and various other systems on refining the dna promoter domain theory.
+
+
+
+
+
+
+
+
+
+
+  learning semantic grammars with constructive inductive logic programming   
+
+john m. zelle  and raymond j. mooney  
+
+ proceedings of the eleventh national conference of the american
+association for artificial intelligence, pp. 817-822,
+washington, d.c. july 1993 (aaai-93). 
+
+
+automating the construction of semantic grammars is a difficult and
+interesting problem for machine learning.  this paper shows how the
+semantic-grammar acquisition problem can be viewed as the learning of
+search-control heuristics in a logic program.  appropriate control
+rules are learned using a new first-order induction algorithm that
+automatically invents useful syntactic and semantic categories.
+empirical results show that the learned parsers generalize well to
+novel sentences and out-perform previous approaches based on
+connectionist techniques.
+
+
+
+
+
+
+
+
+
+
+  combining connectionist and symbolic learning to refine certainty-factor 
+rule-bases   
+
+j. jeffrey mahoney and raymond j. mooney  
+
+ connection science, 5 (1993), pp. 339-364. (special issue on
+architectures for integrating neural and symbolic processing) 
+
+
+this paper describes rapture --- a system for revising probabilistic knowledge
+bases that combines connectionist and symbolic learning methods. rapture uses
+a modified version of backpropagation to refine the certainty factors of a
+mycin-style rule base and it uses id3's information gain heuristic to add
+new rules.  results on refining three actual expert knowledge bases demonstrate
+that this combined approach generally performs better than previous methods.
+
+
+
+
+
+
+
+
+
+
+  refinement of first-order horn-clause domain theories  
+
+bradley l. richards and raymond j. mooney 
+
+ machine learning 19,2 (1995), pp. 95-131. 
+
+ knowledge acquisition is a difficult and time-consuming
+task, and as error-prone as any human activity.  the task of
+automatically improving an existing knowledge base using learning
+methods is addressed by a new class of systems performing  theory
+refinement.  until recently, such systems were limited to
+propositional theories.  this paper presents a system, forte
+(first-order revision of theories from examples), for refining
+first-order horn-clause theories.  moving to a first-order
+representation opens many new problem areas, such as logic program
+debugging and qualitative modelling, that are beyond the reach of
+propositional systems.  forte uses a hill-climbing approach to revise
+theories.  it identifies possible errors in the theory and calls on a
+library of operators to develop possible revisions.  the best revision
+is implemented, and the process repeats until no further revisions are
+possible.  operators are drawn from a variety of sources, including
+propositional theory refinement, first-order induction, and inverse
+resolution.  forte has been tested in several domains including
+logic programming and qualitative modelling.  
+
+
+
+
+
+
+
+
+  encouraging experimental results on learning cnf   
+
+raymond j. mooney  
+
+ machine learning 19,1 (1995) pp. 79-92. 
+
+
+this paper presents results comparing three inductive learning systems using
+different representations for concepts, namely: cnf formulae, dnf formulae, and
+decision trees. the cnf learner performs surprisingly well.  results on five
+natural data sets show that it frequently trains faster and produces more
+accurate and simpler concepts.  the probable explanation for its superior
+performance is that the other systems are more susceptible to the replication
+problem.
+
+
+
+
+
+
+
+
+
+  belief revision in the context of abductive explanation   
+
+siddarth subramanian  
+
+technical report ai92-179, artificial intelligence lab, 
+university of texas at austin, march 1991. 
+
+ this proposal presents an approach to explanation that
+incorporates the paradigms of belief revision and abduction.  we
+present an algorithm that combines these techniques and a system
+called brace that is a preliminary implementation of this
+algorithm. we show the applicability of the brace approach to a wide
+range of domains including scientific discovery, device diagnosis and
+plan recognition. finally, we describe our proposals for a new
+implementation, new application domains for our system and extensions
+to this approach.  
+
+
+
+
+
+
+
+
+
+  a first-order horn-clause abductive system and its use in plan recognition 
+and diagnosis   
+
+hwee tou ng and raymond j. mooney  
+
+submitted for journal publication.
+
+
+a diverse set of intelligent activities, including natural language
+understanding and diagnosis, requires the ability to construct
+explanations for observed phenomena.  in this paper, we view
+explanation as  abduction, where an abductive explanation is a
+consistent set of assumptions which, together with background
+knowledge, logically entails a set of observations.  we have
+successfully built a domain-independent system, accel, in which
+knowledge about a variety of domains is uniformly encoded in
+first-order horn-clause axioms.  a general-purpose abduction
+algorithm, aaa, efficiently constructs explanations in the
+various domains by caching partial explanations to avoid redundant
+work.  empirical results show that caching of partial explanations can
+achieve more than an order of magnitude speedup in run time.  we have
+applied our abductive system to two general tasks: plan recognition in
+text understanding, and diagnosis of medical diseases, logic circuits,
+and dynamic systems.  the results indicate that accel is a
+general-purpose system capable of plan recognition and diagnosis, yet
+efficient enough to be of practical utility.
+
+
+
+
+
+
+
+
+
+  abductive plan recognition and diagnosis: a comprehensive empirical evaluation   
+ 
+hwee tou ng and raymond j. mooney  
+
+ proceedings of the third international conference on principles
+of knowledge representation and reasoning, pp. 499-508,
+cambridge, ma, october 1992.
+ 
+
+while it has been realized for quite some time within ai that abduction
+is a general model of explanation for a variety of tasks, there have
+been no empirical investigations into the practical feasibility of a
+general, logic-based abductive approach to explanation.  in this paper
+we present extensive empirical results on applying a general abductive
+system, accel, to moderately complex problems in plan recognition
+and diagnosis.  in plan recognition, accel has been tested on 50
+short narrative texts, inferring characters' plans from actions
+described in a text.  in medical diagnosis, accel has diagnosed 50
+real-world patient cases involving brain damage due to stroke
+(previously addressed by set-covering methods).  accel also uses
+abduction to accomplish model-based diagnosis of logic circuits (a full
+adder) and continuous dynamic systems (a temperature controller and the
+water balance system of the human kidney).  the results indicate that
+general purpose abduction is an effective and efficient mechanism for
+solving problems in plan recognition and diagnosis.
+
+
+
+
+
+
+
+
+
+
+  automatic abduction of qualitative models   
+
+bradley l. richards, ina kraan, and benjamin j. kuipers  
+
+ proceedings of the tenth national conference on artificial
+intelligence, pp. 723-728, san jose, ca, july 1992. 
+
+
+we describe a method of automatically abducing qualitative models from
+descriptions of behaviors.  we generate, from either quantitative or
+qualitative data, models in the form of qualitative differential equations
+suitable for use by qsim.  constraints are generated and filtered both by
+comparison with the input behaviors and by dimensional analysis.  if the
+user provides complete information on the input behaviors and the
+dimensions of the input variables, the resulting model is unique,
+maximally constrainted, and guaranteed to reproduce the input behaviors.
+if the user provides incomplete information, our method will still
+generate a model which reproduces the input behaviors, but the model
+may no longer be unique.  incompleteness can take several forms:  missing
+dimensions, values of variables, or entire variables.
+
+
+
+
+
+
+
+
+
+  learning relations by pathfinding   
+
+bradley l. richards and raymond j. mooney  
+
+ proceedings of the tenth national conference on artificial
+intelligence, pp. 50-55, san jose, ca, july 1992. 
+
+
+first-order learning systems (e.g., foil, focl, forte) generally rely on
+hill-climbing heuristics in order to avoid the combinatorial explosion
+inherent in learning first-order concepts.  however, hill-climbing leaves
+these systems vulnerable to local maxima and local plateaus.  we present
+a method, called relational pathfinding, which has proven highly effective
+in escaping local maxima and crossing local plateaus.  we present our
+algorithm and provide learning results in two domains:  family relationships
+and qualitative model building.
+
+
+
+
+
+
+
+
+ 
+  speeding-up logic programs by combining ebg and foil   
+ 
+john m. zelle and raymond j. mooney  
+
+ proceedings of the 1992 machine learning workshop on knowledge
+compilation and speedup learning, aberdeen scotland, july 1992. 
+
+
+this paper presents an algorithm that combines traditional ebl
+techniques and recent developments in inductive logic programming to
+learn effective clause selection rules for prolog programs.  when these
+control rules are incorporated into the original program, significant
+speed-up may be achieved.  the algorithm produces not only ebl-like
+speed up of problem solvers, but is capable of automatically
+transforming some intractable algorithms into ones that run in
+polynomial time.
+
+
+
+
+
+
+
+
+
+
+  combining symbolic and neural learning to revise probabilistic theories   
+
+j. jeffrey mahoney & raymond j. mooney  
+
+ proceedings of the 1992 machine learning workshop on integrated
+learning in real domains, aberdeen scotland, july 1992. 
+
+
+this paper describes rapture --- a system for revising probabilistic
+theories that combines symbolic and neural-network learning methods. 
+rapture uses a modified version of backpropagation to refine the certainty
+factors of a mycin-style rule-base and it uses id3's information gain heuristic
+to add new rules.  results on two real-world domains demonstrate that this
+combined approach performs as well or better than previous methods.
+
+
+
+
+
+
+
+
+
+
+  growing layers of perceptrons: introducing the extentron algorithm   
+
+paul t. baffes and john m. zelle  
+
+ proceedings of the 1992 international joint conference on neural
+networks, pp. 392-397, baltimore, maryland, june 1992 
+
+
+the ideas presented here are based on two observations of perceptrons: (1) when
+the perceptron learning algorithm cycles among hyperplanes, the hyperplanes may
+be compared to select one that gives a best  split  of the examples, and
+(2) it is always possible for the perceptron to build a hyperplane that
+separates  at least one  example from all the rest. we describe the
+extentron, which grows multi-layer networks capable of distinguishing
+non-linearly-separable data using the simple perceptron rule for linear
+threshold units. the resulting algorithm is simple, very fast, scales well to
+large problems, retains the convergence properties of the perceptron, and can
+be completely specified using only two parameters.  results are presented
+comparing the extentron to other neural network paradigms and to symbolic
+learning systems.
+
+
+
+
+
+
+
+
+
+  using theory revision to model students and acquire stereotypical errors   
+
+paul t. baffes and raymond j. mooney  
+
+ proceedings of the fourteenth annual conference of the cognitive
+science society, pp. 617-622, bloomington, in, july 1992. 
+
+
+student modeling has been identified as an important component to the long
+term development of intelligent computer-aided instruction (icai) systems. two
+basic approaches have evolved to model student misconceptions. one uses a
+static, predefined library of user bugs which contains the misconceptions
+modeled by the system. the other uses induction to learn student
+misconceptions from scratch. here, we present a third approach that uses a
+machine learning technique called theory revision. using theory revision
+allows the system to automatically construct a bug library for use in modeling
+while retaining the flexibility to address novel errors.
+
+
+
+
+
+
+
+
+
+  a preliminary pac analysis of theory revision   
+
+raymond j. mooney  
+
+ computational learning theory and natural learning systems, 
+vol.  3, t. petsche, s. judd, and s. hanson, eds., mit press, 1995, pp. 43-53. 
+
+
+this paper presents a preliminary analysis of the sample complexity of theory
+revision within the framework of pac (probably approximately correct)
+learnability theory.  by formalizing the notion that the initial theory is
+``close'' to the correct theory we show that the sample complexity of an
+optimal propositional horn-clause theory revision algorithm is $o( ( \ln 1 /
+\delta + d \ln (s_0 + d + n) ) / \epsilon)$, where $d$ is the {\em syntactic
+distance} between the initial and correct theories, $s_0$ is the size of
+initial theory, $n$ is the number of observable features, and $\epsilon$ and
+$\delta$ are the standard pac error and probability bounds. the paper also
+discusses the problems raised by the computational complexity of theory
+revision.
+
+
+
+
+
+
+
+
+
+  automated debugging of logic programs via theory revision   
+
+raymond j. mooney & bradley l. richards  
+
+ proceedings of the second international workshop on inductive
+logic programming, tokyo, japan, june 1992. 
+
+
+this paper presents results on using a theory revision system to automatically
+debug logic programs. forte is a recently developed system for revising
+function-free horn-clause theories.  given a theory and a set of training
+examples, it performs a hill-climbing search in an attempt to minimally modify
+the theory to correctly classify all of the examples.  forte makes use of
+methods from propositional theory revision, horn-clause induction (foil),
+and inverse resolution.  the system has has been successfully used to debug
+logic programs written by undergraduate students for a programming languages
+course.
+
+
+
+
+
+
+
+
+
+
+  batch versus incremental theory refinement   
+
+raymond j. mooney  
+
+ proceedings of aaai spring symposium on knowledge
+assimilation, standford, ca, march, 1992. 
+
+
+most existing theory refinement systems are not incremental. however, any
+theory refinement system whose input and output theories are compatible can be
+used to incrementally assimilate data into an evolving theory.  this is done by
+continually feeding its revised theory back in as its input theory.  an
+incremental batch approach, in which the system assimilates a batch of examples
+at each step, seems most appropriate for existing theory revision systems.
+experimental results with the either theory refinement system demonstrate
+that this approach frequently increases efficiency without significantly
+decreasing the accuracy or the simplicity of the resulting theory.  however, if
+the system produces bad initial changes to the theory based on only small
+amount of data, these bad revisions can ``snowball'' and result in an overall
+decrease in performance.
+
+
+
+
+
+
+
+
+
+
+  a multistrategy approach to theory refinement   
+
+raymond j. mooney & dirk ourston  
+
+ machine learning: a multistrategy approach, vol. iv, r.s. michalski
+& g. teccuci (eds.), pp.141-164, morgan kaufman, san mateo, ca, 1994. 
+
+
+this chapter describes a multistrategy system that employs independent modules
+for deductive, abductive, and inductive reasoning to revise an arbitrarily
+incorrect propositional horn-clause domain theory to fit a set of preclassified
+training instances.  by combining such diverse methods, either is able
+to handle a wider range of imperfect theories than other theory revision
+systems while guaranteeing that the revised theory will be consistent with the
+training data.  either has successfully revised two actual expert
+theories, one in molecular biology and one in plant pathology. the results
+confirm the hypothesis that using a multistrategy system to learn from both
+theory and data gives better results than using either theory or data alone.
+
+
+
+
+
+
+
+
+
+  integrating theory and data in category learning   
+
+raymond j. mooney  
+
+ categorization by humans and machines: the psychology of learning
+and motivation, vol. 29, g. nakamura, r. taraban, & d.l. medin (eds.),
+pp. 189-218, academic press, orlando, fl, 1993. 
+
+
+recent results in both machine learning and cognitive psychology demonstrate
+that effective category learning involves an integration of theory and data.
+first, theories can bias induction, affecting what category definitions are
+extracted from a set of examples. second, conflicting data can cause theories
+to be revised.  third, theories can alter the representation of data through
+feature formation.  this chapter reviews two machine learning systems
+that attempt to integrate theory and data in one or more of these ways.  iou
+uses a domain theory to acquire part of a concept definition and to focus
+induction on the unexplained aspects of the data.  either uses data to
+revise an imperfect theory and uses theory to add abstract features to the
+data.  recent psychological experiments reveal that these machine learning
+systems exhibit several important aspects of human category learning.
+specifically, iou has been used to successfully model some recent experimental
+results on the effect of functional knowledge on category learning.
+
+
+
+
+
+
+
+
+
+  theory refinement combining analytical and empirical methods   
+
+dirk ourston and raymond j. mooney  
+
+ artificial intelligence, 66 (1994), pp. 311--344. 
+
+
+this article describes a comprehensive approach to automatic theory revision.
+given an imperfect theory, the approach combines explanation attempts for
+incorrectly classified examples in order to identify the failing portions of
+the theory. for each theory fault, correlated subsets of the examples are used
+to inductively generate a correction. because the corrections are 
+focused, they tend to preserve the structure of the original theory.  because
+the system starts with an approximate domain theory, in general fewer training
+examples are required to attain a given level of performance (classification
+accuracy) compared to a purely empirical system. the approach applies to
+classification systems employing a propositional horn-clause theory. the system
+has been tested in a variety of application domains, and results are presented
+for problems in the domains of molecular biology and plant disease diagnosis.
+
+
+
+
+
+
+
+
+
+  induction over the unexplained: using overly-general domain theories to aid
+concept learning   
+
+raymond j. mooney  
+
+machine learning, 10, 1 (1993), pp. 79-110. 
+
+
+this paper describes and evaluates an approach to combining empirical and
+explanation-based learning called induction over the unexplained (iou).
+iou is intended for learning concepts that can be partially explained by an
+overly-general domain theory. an eclectic evaluation of the method is presented
+which includes results from all three major approaches: empirical, theoretical,
+and psychological.  empirical results shows that iou is effective at refining
+overly-general domain theories and that it learns more accurate concepts from
+fewer examples than a purely empirical approach.  the application of
+theoretical results from pac learnability theory explains why iou requires
+fewer examples.  iou is also shown to be able to model psychological data
+demonstrating the effect of background knowledge on human learning.
+
+
+
+
+
+
+
+
+
+  an efficient first-order horn-clause abduction system based on the atms   
+
+hwee tou ng and raymond j. mooney  
+
+proceedings of the ninth national conference on
+artificial intelligence, pages 494-499, anaheim, ca, july 1991. 
+
+
+this paper presents an algorithm for first-order horn-clause abduction
+that uses an atms to avoid redundant computation.  this algorithm is
+either more efficient or more general than any other previous
+abduction algorithm.  since computing all minimal abductive
+explanations is intractable, we also present a heuristic version of
+the algorithm that uses beam search to compute a subset of the
+simplest explanations.  we present empirical results on a broad range
+of abduction problems from text understanding, plan recognition, and
+device diagnosis which demonstrate that our algorithm is at least an
+order of magnitude faster than an alternative abduction algorithm that
+does not use an atms.
+
+
+
+
+
+
+
+
+
+  improving shared rules in multiple category domain theories   
+
+dirk ourston and raymond j. mooney  
+
+ proceedings of the eighth international machine learning
+workshop, pp. 534-538, evanston, il, june 1991. 
+
+
+this paper presents an approach to improving the classification performance of
+a multiple category theory by correcting intermediate rules which are shared
+among the categories.  using this technique, the performance of a theory in one
+category can be improved through training in an entirely different category.
+examples of the technique are presented and experimental results are given.
+
+
+
+
+
+
+
+
+
+  constructive induction in theory refinement   
+
+raymond j. mooney and dirk ourston  
+
+ proceedings of the eighth international machine learning
+workshop, pp. 178-182, evanston, il. june 1991. 
+
+
+this paper presents constructive induction techniques recently added to the
+either theory refinement system.  these additions allow either to handle
+arbitrary gaps at the ``top,'' ``middle,'' and/or ``bottom'' of an incomplete
+domain theory.   intermediate concept utilization employs existing rules
+in the theory to derive higher-level features for use in induction.  
+intermediate concept creation employs inverse resolution to introduce new
+intermediate concepts in order to fill gaps in a theory that span multiple
+levels.  these revisions allow either to make use of imperfect domain theories
+in the ways typical of previous work in both constructive induction and theory
+refinement.  as a result, either is able to handle a wider range of theory
+imperfections than does any other existing theory refinement system.
+
+
+
+
+
+
+
+
+
+  theory refinement with noisy data   
+
+raymond j. mooney and dirk ourston  
+
+technical report ai 91-153, artificial intelligence lab, university of
+texas at austin, march 1991. 
+
+
+this paper presents a method for revising an approximate domain theory based on
+noisy data. the basic idea is to avoid making changes to the theory that
+account for only a small amount of data. this method is implemented in the
+either propositional horn-clause theory revision system.  the paper
+presents empirical results on artificially corrupted data to show that this
+method successfully prevents over-fitting.  in other words, when the data is
+noisy, performance on novel test data is considerably better than revising the
+theory to completely fit the data. when the data is not noisy, noise processing
+causes no significant degradation in performance.  finally, noise processing
+increases efficiency and decreases the complexity of the resulting theory.
+
+
+
+
+
+
+
+
+
+  on the role of coherence in abductive explanation   
+
+hwee tou ng and raymond j. mooney  
+
+proceedings of the eighth national conference on 
+artificial intelligence, pages 337-342, boston, ma, 1990. 
+
+
+abduction is an important inference process underlying much of human
+intelligent activities, including text understanding, plan
+recognition, disease diagnosis, and physical device diagnosis.  in
+this paper, we describe some problems encountered using abduction to
+understand text, and present some solutions to overcome these
+problems. the solutions we propose center around the use of a
+different criterion, called  explanatory coherence, as the
+primary measure to evaluate the quality of an explanation.  in
+addition, explanatory coherence plays an important role in the
+construction of explanations, both in determining the appropriate
+level of specificity of a preferred explanation, and in guiding the
+heuristic search to efficiently compute explanations of sufficiently
+high quality.
+
+
+
+
+
+
+
+
+
+estlin@cs.utexas.edu

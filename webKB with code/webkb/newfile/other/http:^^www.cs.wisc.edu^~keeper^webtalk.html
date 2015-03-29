@@ -1,0 +1,335 @@
+world wide web specification issues
+
+
+
+world wide web specification issues
+steven fought - 5 may 1995
+
+ sources
+
+   w3o official specifications
+   internet rfcs and drafts
+   www newsgroups
+   experience
+
+
+ personal experience
+ 
+   i have been working with web related programs for 2 years
+   webmaster at caltech from inception in november 1993 until august 1994
+   implemented database search and entry tools using forms
+   installed most web software packages available for unix
+   followed web newsgroups from the beginning
+   currently the ``webmaster'' at uw cs
+
+
+ the origins of the world wide web
+
+   conceived by tim berners-lee and others at cern
+   designed to foster communication between high energy physicists
+   first specification called for a hypertextual system
+
+
+ tim berners-lee (now with w3o) was asked to design a system that would allow
+physicists in different parts of the world to collaborate on projects and
+share information using the internet after it was decided that existing
+tools weren't adequate.  
+
+ berners-lee decided to use a hypertextual model, and then set out to solve
+a number of problems posed by that model.
+
+first problem:
+
+ in any hypertext system you need a way to point to information
+objects so you can ``carry'' the pointer instead of the object.
+
+solution:
+
+ the uniform resource identifier (uri) specification, a general 
+specification that makes it possible to point to any document, anywhere.
+
+uniform resource locators (uris)
+
+ the uri specification ``defines a way to encapsulate a name in any 
+registered namespace, and label it with the namespace, producing
+a member of the universal set.''
+
+ in other words, the uri specification defines a superset to all 
+existing and possible namespaces.  any namespace can be given a 
+label and incorporated into the uri space.
+
+properties of uris
+
+
+ extensible
+ new naming schemes can be easily added.
+ complete
+  it is possible to encode any naming scheme
+ printable
+  uris are encoded in 7-bit ascii and are designed to 
+be at least partially human-understandable and communicable.
+
+
+parts of the uri specification
+
+ uris consist of two parts:  
+
+
+ a prefix that indicates what namespace is being referenced, 
+followed by a colon
+ a string with format defined as a function of the prefix
+
+
+ the extensibility requirement is met by the ability to register new unique
+prefixes.  the completeness requirement is met by the ability to encode
+any binary information in the string following the prefix (in base64, 
+for instance).  the printability requirement is left to the implementation
+of specific namespace encodings.
+
+special considerations and reserved characters in uris
+
+
+ \ 
+ is reserved as an escape character, so non-7-bit ascii characters
+and reserved characters can be used in uris easily
+ / 
+ is reserved as a delimiter of a hierarchical set of substrings
+ . and ..
+ are reserved if they are used between / characters, to 
+indicate the current and previous level in a hierarchy respectively
+ \# 
+ is reserved to separate a uri from a ``fragment identifier''
+ ? 
+ is reserved to delimit the boundary between a uri and a 
+queryable object
+ + 
+ is reserved as a shorthand notation for a space, so real + 
+signs must be encoded.
+ * and !
+ are reserved for use with special significance within
+specific namespaces.
+
+
+relative uris
+
+ reserving /, . and .. allowed the specification of relative uris, which 
+work much like relative paths in a filesystem.  when a relative uri is 
+found the uri of the containing document is used as a reference to construct 
+a new full uri following these semantics:
+
+
+ if a partial uri starts with some number of slashes, the parent uri
+is searched for the first occurrence of the same number of slashes, and the
+relative uri is substituted for the remaining part of the parent, provided
+that no greater number of consecutive slashes are in the remaining part of
+the parent.
+ within the result all occurrences of ``xxx/../'' or ``/.'' are
+recursively removed, where ``xxx'', ``..'', and ``.'' are complete 
+path elements.
+
+
+examples of relative uri substitutions
+
+if the parent uri is http://www/b/c//d/e/f the following partial uris 
+result in the listed full uris:
+
+
+ g 
+ http://www/b/c//d/e/g
+ /g 
+ http://www/g
+ //g 
+ http://g
+ ../g 
+ http://www/b/c//d/g
+ g:h 
+ g:h
+
+
+ note that using the parent uri http://www/b/c//d/e/ would 
+yield the
+same results.
+
+
+second problem:  pointing to the documents we have now.
+
+ now that a we have the uri specification, we need to be able to point to 
+existing documents available on the web.
+
+solution:  the uniform resource locator (url) specifications, one for 
+each supported internet protocol.
+
+some examples:
+
+   ftp:  
+   ftp://ftp.cs.wisc.edu/condor/
+   telnet:  
+   telnet://keeper:notquite@spacely.cs.wisc.edu
+   http:  
+   http://spacely.cs.wisc.edu:8000/home.html
+
+
+side note:  work on the urn specification
+
+ there is a working group of the ietf attempting to define a uniform resource
+name specification.  urns are meant to be persistent objects regardless of
+how machine and server configurations are changed.  urns solve the same problem
+for urls as dns solves for ip numbers.
+
+third problem:  
+
+ now that we have pointers to document objects, we need a
+place to put them.
+
+solution:  html, the hypertext markup language. 
+
+ design features of html:
+
+   defined as an sgml document type definition, allowing easy 
+  processing of html by sgml parsers
+   structural markup
+   simple and quick to render (no lookahead)
+   human readable and editable (no special tools are needed to create 
+  html documents)
+
+
+ html is beyond the scope of the talk.
+
+side note:  multimedia and mime
+
+ the original web browsers used the extension of a file to determine its type.
+this method had several disadvantages:
+
+   a single extension may be used for more than one kind of file.
+   file extensions do not generally carry enough information to allow
+  identification of a file format by a human.
+   not everyone will agree on what file extensions map to what types of
+  files.
+
+
+ to fix this problem parts of the existing mime (multipurpose internet mail 
+extensions) system was integrated into web clients and servers.
+
+how mime works
+
+ before a document is transmitted it is assigned a mime type by the server or
+mailer.  this assignment is often made based on file extension, but because
+the assignment is made locally the user can make sure the appropriate type is
+defined.  the mime type is a description of the contents of the file.
+
+ when the file is received, the browser uses the mime type to find an 
+appropriate viewer for the file.
+
+ mime features:
+
+   new mime types can be added at any time
+   an official organization exists to register and distribute 
+  mime types
+   several implementations of either end of the mime system exist for
+  many different architectures
+
+
+fourth problem:  
+ how to transfer documents from the author to the user.
+
+solution:  
+ the hypertext transfer protocol (http).
+
+ any simple summary of the features of http would ignore the serious
+changes its role precipitated by other changes in other www tools.
+a chronological summary of the changes in http features is more interesting.
+
+
+http 0.9:  the original features and purpose
+
+ the first version of http to be distributed widely was 0.9.  the only 
+request that could be made was ``get (url)'', where ``url'' is an http url
+with the prefix stripped.  the document pointed to by the url would be 
+returned to the browser.
+
+ http 0.9 was designed to deliver documents with the lowest amount of 
+overhead as possible.  ftp can perform the same function, but it requires
+a costly login process.  http is a stateless protocol.  berners-lee saw
+that a document would be transferred and read, and then a link would be 
+followed to another document, possibly not on the same server.  there was
+no advantage to keeping a socket open.
+
+http 1.0:  document typing and cgi
+
+ the next version of http was designed to fix a number of problems with the
+previous versions and add new features.  the major change was the addition
+of document typing using mime-related headers.  in addition other 
+methods were included in addition to the get method.  some of 
+these were:
+
+
+ head
+ is the same as get, but only returns the headers
+ put 
+ allows data sent to the server to be stored under the supplied
+url (not widely used)
+ post 
+ creates a new object based on the data sent that is linked
+to the object specified in the supplied url
+ link 
+ links an object to the specified object (not widely used)
+ unlink 
+ removes a link or other information from an object
+
+
+ the most important of these methods is put, which is used in conjunction
+with the common gateway interface.
+
+the common gateway interface (cgi) and forms
+
+ forms:  a specification for creating a fill-out form within an html document.
+each browser that implements forms is responsible for packing the information
+into a special format when a form is submitted and sending it to a specified
+url.
+
+ cgi:  a specification for a script on an http server that has its own url.  
+when the url is accessed, the script is run and its output is sent to the
+client.  used in conjunction with forms, a set of scripts can carry on a
+"dialogue" with a client.
+
+interesting note:  because http is stateless, cgi scripts often have to 
+play tricks to ensure that the state of a conversation is stored in the 
+document returned to a client.
+
+
+problems caused by inlined documents
+
+ during the development of mosaic, one of the programmers (marc andreesen)
+decided he wanted to add support for displaying pictures inside of
+documents.  as with every decision made by andreesen and the new netscape
+communications company since, he designed a quick-and-dirty solution
+that served his needs and caused significant problems he could blame on other 
+people.  
+
+ rather than find a way of encapsulating a picture with a document he decided
+on the most general model, which was to have the browser perform an
+additional request for each picture.  this changed the model that berners-lee
+had originally envisioned and created performance problems caused by the
+overhead of forming a tcp socket.
+
+proposed solutions to the inlining problem
+
+ there are two proposed solutions to the problem of inlined documents:  
+
+
+ include a multiple get method in http 1.1, which will require
+at most two sockets to be created (one for the original document, and the
+other for the supporting documents).  
+ http-ng, which is based
+on top of the session protocol architecture and allows multiple 
+low-level
+virtual connections to be encoded on top of one socket.  the socket could
+be kept open until the browser was finished with the server.
+
+
+http 1.1:  proposed additions to the protocol
+
+ other additions include support for more advanced applications, and 
+for encryption of sensitive data.  
+
+ care is being taken to ensure that the protocol will be extensible.

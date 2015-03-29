@@ -1,0 +1,191 @@
+using the gnu emacs/common lisp interface
+
+
+
+
+
+using the gnu emacs/common lisp interface
+
+
+
+executive summary: this document is designed to help you get
+started using lisp with emacs on the mscc accounts.  it isn't a
+complete set of what's available to you, but rather is designed to get
+you started using a minimal set of useful functions.
+
+
+
+introduction
+
+for the first part of the course you will be programming in lisp.
+although historically there have been more versions of this language 
+than you would even want to know about,  in recent years there 
+has been convergence on one language definition:  commonlisp, 
+and there is even a book "common lisp: the language" that is 
+considered the bible of lisp now.   
+ 
+we will be using an implementation called  allegro commonlisp (or 
+allegrocl for short), 
+which is one of the more heavy-duty industrial implementations 
+out there.  allegro cl is sold by franz incorporated.  (historical
+note:  the origin of the name franz was because the product was 
+originally called franz lisp, which people thought was pretty
+darned funny at the time.)
+
+one of the nice things about allegrocl is that it comes with a nice
+package for integrating the process of writing and debugging code 
+within a single emacs session.  the basic idea is that you have 
+one "process buffer" open in which lisp is constantly running, 
+then one or more "editor buffers" each one of which shows a file 
+with some lisp code in it.   the interface allows you to do things 
+like point to a function definition in an editor buffer and send 
+it automatically to the lisp process, get online entries from the 
+commonlisp manual, find out where a particular function is defined 
+and automatically pop up an editor window for it, and so on.
+
+it's worth experimenting with this package a bit:  it really 
+will make your life a lot easier!  i'll try to show you some 
+of the cool features in class too.
+
+
+
+ getting started
+
+to use this environment, you must do the following:
+
+create a file called .emacs in your home directory (if it doesn't already
+exist) and put the following line in it:
+
+    (load "~c341/.emacs")
+
+create a file called .clinit.cl in your home directory and put 
+the following line in it:
+
+    (load "~c341/.clinit.cl")
+
+
+now, when you start up emacs to edit a lisp file (the lisp file must have
+an extension of  .cl or .lisp) you will automatically be put into 
+an emacs mode called "commonlisp" mode.   this mode will do things 
+like balance parentheses and indent your code automatically, and 
+will also allow you to send function definitions directly to the 
+lisp process.
+
+for example, typing
+
+    emacs foo.cl 
+
+will open the file foo.cl for editing in a special common lisp mode 
+buffer that allows you to do things like skip forward and backward
+by s-expressions, look up the definition of a symbol in the 
+online common lisp manual, get a list of what functions call a particular 
+function, and so on.
+
+
+
+ important emacs commands to know
+
+note- for the following commands, "c-" means hitting the control key
+
+the following commands work regardless of the mode of your
+current emacs buffer:
+
+ type c-x c-c to exit emacs. if you have not saved your file, it will
+ask you if you want to save it.
+
+ type c-x c-s to save changes to the current file
+
+ type c-x c-w to save the current file to a new file - you will be prompted
+  for a file name
+
+ type c-x b to switch to another buffer (that you had already worked
+with in this session.
+
+ type c-x c-f to open another file.
+
+ type c-x 2 to split the emacs window into two panes.
+
+ type c-x o to go back and forth between the 2 window.
+
+ type c-x 1 to go revert the display to a single window.
+
+
+these commands are special to buffers in "common lisp mode," which 
+is the mode assigned to any buffer open to a file with an 
+extension of .cl:
+
+ type c-c l to go from your lisp file to the lisp interpreter.  this 
+will also start up the lisp interpreter if it is not already running.
+
+ type c-c e to go from the lisp interpreter to the lisp file most
+  recently edited
+
+ type c-c b to send the currrent buffer to the lisp interpreter to be 
+  evaluated.
+
+ type c-c c-b to do the same thing as c-c b and switch to the lisp buffer
+
+ type c-c d to evaluate the current defun in the lisp interpreter
+
+ type c-c c to compile the current defun in the lisp interpreter
+
+ type c-c c-a to go to the beginning of the current defun
+
+ type c-c c-e to go the end of the current defun.
+ type c-c .  (control c followed by a period) to find out where a 
+function is defined
+ type esc-x fi:clman to get the common lisp manual entry 
+for some symbol.
+
+
+when you are in the lisp interpreter buffer, c-c c-p recalls the previous
+expression typed to lisp, and c-c c-n recalls the next expression (if
+you are at an earlier one).
+
+
+
+
+ example
+
+begin the session by typing "emacs foo.cl". emacs will start a lisp
+session and display a buffer for editing foo.cl.
+
+now you can type c-c l to start a lisp session and put you in it. you
+can switch back and forth between the editing buffer and the inferior
+lisp buffer using c-c l as well.
+
+emacs will prompt you for several things when you first start a lisp
+session: buffer, host, process directory, image name, image arguments.
+most of the time, you should just hit return to take the default values
+on all of these questions.
+
+go back to edit buffer by c-c l. type the following code, which simply
+counts the number of items in a list:
+
+(defun foo(x)
+   (cond ((null x) 0)
+         ((atom x) 1)
+         (t (+ (foo (car x)) (foo (cdr x))))))
+
+
+passing this function definition to lisp either by typing (c-c c-b)
+(evaluate the entire buffer) or by putting the cursor somewhere within
+foo's function definiton and typing (esc c-x) (evaluate a single defun).
+either command will send the defun to lisp interpreter.
+
+now switch to the lisp process buffer with: c-c l
+
+
+test the function by typing: (foo '(a b c))
+
+when you are done, exit lisp and emacs by typing: (exit) and then c-x c-c
+
+ for more information 
+more information about the interface appears in 
+in 
+
+         uw cse lab note 162.
+
+
+
+steve hanks (hanks@cs.washington.edu), 3/19/96

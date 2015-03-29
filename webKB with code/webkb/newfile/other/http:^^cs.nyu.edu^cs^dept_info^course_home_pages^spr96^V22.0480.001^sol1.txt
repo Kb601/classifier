@@ -1,0 +1,108 @@
+date: tue, 14 jan 1997 20:10:03 gmt
+server: ncsa/1.4.1
+content-type: text/plain
+last-modified: thu, 15 feb 1996 20:48:37 gmt
+content-length: 3082
+
+%  problem 1
+
+% part a
+married(philip, elizabeth).
+married(elizabeth, philip).
+married(charles, diana). % (still true, though not for long.)
+married(diana, charles).
+married(andrew, sarah).  % (no longer true, but was once.)
+married(sarah, andrew).
+
+% part b
+grandparent(x,y) :- parent(x,z), parent(z,y).
+   % a grandparent is a parent of a parent
+
+mother(x,y) :- parent(x,y), female(x).
+   % x is a mother of y if x is a female parent of y
+
+mother-in-law(x,y) :- married(z,y), mother(x,z).
+   % a mother-in-law is the mother of a spouse.
+
+sibling(x,y) :- parent(z,x), parent(z,y), \+(x=y).
+   % a sibling is a different person with the same parent 
+
+sister-in-law(x,y) :- married(z,y), sibling(x,z), female(x).
+sister-in-law(x,y) :- sibling(z,y), married(x,z), female(x).
+sister-in-law(x,y) :- married(x,z), married(w,y), sibling(z,w), female(x).
+  % a sister in law is either the sister of a spouse; or the wife of a sibling;
+  % or the wife of a sibling of a spouse.
+
+% part c
+% the problem is that this often go into infinite loops:
+% -- if you ask a query whose answer should be "no" 
+%             e.g. ?-married(philip, diana).
+% -- if you ask it to find the spouse of an unmarried person 
+%             e.g. ?- married(william,x).
+% -- if you ask it to find the spouse of a person who is married, it will
+%        return the same person infinitely many times on backtracking.
+%             e.g. ?- married(charles,x).
+%                  x = diana  ;  % requesting another answer
+%                  x = diana  ;  % requesting another answer
+%                  x = diana  ;  % ...
+
+% part d. use an auxiliary predicate "married1(x,y)" to state the fact
+% once for each couple, then define "married" in terms of "married1"
+
+married1(philip, elizabeth).
+married1(charles, diana). 
+married1(andrew, sarah). 
+
+married(x,y) :- married1(x,y).
+married(x,y) :- married1(y,x).
+
+
+% problem 2
+
+double-list([],[]).
+double-list([x|r],[x,x|d]) :- double-list(r,d).
+
+% 
+% problem 3.
+
+% part a.
+% run "append" backwards to split the last element from the rest of l,
+% then return them connected the other way.
+
+rotate(l,[x|r]) :- append(r,[x],l).
+
+% a more straightforward solution: take off the last element, take off
+% all but the last, and reconnect
+
+% last(l,x) binds x to the last element of l.
+last([x],x).
+last([_|l],x) :- last(l,x).
+
+% rem_last(l,r) binds r to be all but the last element of l.
+rem_last([_],[]).
+rem_last([y|l],[y|r]) :- rem_last(l,r).
+
+rotate(l,[x|r]) :- rem_last(l,r), last(l,x).
+
+% part b, 
+% it rotates in the other direction.
+% e.g. rotate(l,[a,b,c,d,e]) succeeds with l=[b,c,d,e,a].
+
+% part c.
+% rotate_n(l,k,m) applies k rotations to l, returning m.
+
+rotate_n(l,0,l).
+rotate_n(l,k,m) :- k > 0, rotate(l,l1), k1 is k-1, rotate_n(l1,k1,m).
+
+% part d.
+% all_rotations(l,m) binds m to each rotation of l in turn.
+% it keeps rotating indefinitely, as more backtrackings are 
+% requested.
+
+all_rotations(l,l).
+all_rotations(l,m) :- rotate(l,l1), all_rotations(l1,m).
+
+
+% problem 4
+exponent(b,0,1).
+exponent(b,n,e) :- n > 0, n1 is n-1, exponent(b,n1,e1), e is e1*b.

@@ -1,0 +1,94 @@
+getting started in cs367
+
+
+
+
+
+getting started in cs367
+
+
+i highly recommended that you immediately start learning the applications
+that you will be using to develop your cs367 programs.  the environment in
+which you programmed in cs302 has differences than the one you'll use in cs367.
+besides changing from the macintosh or dos/windows operating system to unix,
+you'll also be working outside an integrated development environment.  many
+of the tools you've used before are still present, but as independent
+applications.
+
+since you are reading this page i am assuming that you have successfully
+created your computer science account using  newuser  and are now
+logged in.  the following exercise takes you through the steps to get your first
+c++ program compiled and running under unix.  i have provided a sample program
+that plays the game tic-tac-toe for your use and experimentation.
+
+while working on this exercise, you will be reading pages that indicate
+unix commands to enter.  these commands are preceded by a  % ,
+which it represents the unix prompt. you should not enter the  % .
+
+first, in your private sub-directory create a directory named p0
+(i.e. pzero). if you are unfamiliar with how to do this see the page on
+how to create a directory.  next get a copy of
+the sample tic-tac-toe program. this sample program can be obtained from
+the samples page that is linked to the cs367 home page.  during the semester
+i will be providing sample code for data structures that we discuss in lecture.
+find this link by going back to the cs367 home page and looking for the sample
+page link.  if you are having difficulties, click
+here to go directly to that page.  further instructions are provided in
+the samples page for getting a copy of sample code files such as for this case
+tictactoe.cc.
+
+now that you have a copy of the source file for the tic-tac-toe game
+you should look at it with and editor.  see edit your
+program for more information on how to edit your program.  you do not
+need to make any changes to compile the program, which will be the next
+step.  before compiling the program i suggest that you open another terminal
+window.  this can be done by clicking the left mouse button anywhere on the
+background and selecting xterm from the pop-up menu.  more information about
+the x-window system is available here.
+this new xterm window will be used for compiling your program.  change
+directories to the location where you have copied the source code by entering:
+
+	% cd private/p0
+
+
+you may compile your program by entering the g++ compiler command below.
+this command assumes that the source file is named tictactoe.cc.
+
+       % g++ -wall -g -o tictactoe tictactoe.cc
+
+for more information about the compiler flags see the page on compiler flags.
+
+when you are developing your own programs you usually encounter compilation
+errors.  these are typically syntax errors that prevent the compiler from
+creating an executable version of your program.  in this case you would need
+to go to your editor window and make corrections to your source code.  for this
+program you should not experience any compiler errors, unless you accidentally
+changed the source with the editor.  in that case you can simply get a new
+copy of this sample code.
+
+the next step after your program compiles would be to run your program.
+this is doen by entering the following at the unix shell prompt:
+
+       % tictactoe
+
+more information about running programs is located
+here. while developing programs it is prefered to run
+your program in a debugging environment.  in unix this requires you to execute
+another application as shown below.
+
+       % gdb tictactoe
+
+this start the debugger and allows you to control the execution of your
+program with breakpoints and by stepping through the program's instructions,
+and to examine the contents of variables and other memory locations.  two
+important commands for the debugger are run, which begins execution of
+you program, and quit to end the debugger.  the are many other commands and
+some of the most useful are described here.
+
+what you have completed above is called program development cycle: edit,
+compile, debug, repeat until it works.  however i have made a working program
+for you, which simplifies the process a great deal.  more information about
+the program development cycle can be obtained from the
+working with c++ in unix page.  real practice is
+obtained by writing and debugging your own c++ program.  see
+program 0 for more information.

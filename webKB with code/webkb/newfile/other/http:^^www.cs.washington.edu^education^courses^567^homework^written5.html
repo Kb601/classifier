@@ -1,0 +1,141 @@
+cse567 homework assignment #5
+   
+
+
+
+cse 567: principles of digital systems design 
+
+carl ebeling, fall 1996 
+
+
+homework 5
+
+distributed: wednesday. nov. 6 due friday nov. 15, in class 
+
+
+you are to work together as teams on this homework. please look at the
+problems individually first and sketch possible solutions and questions.
+then meet together and formulate solutions to each if you can, and assign
+the writeup to one or more team members. then meet again to collate and
+review your solutions before you hand them in. the whole team is responsible
+for understanding the solution to all problems. 
+
+ for problems involving verilog code, hand in your code and your simulation
+log (or at least part of it if it's really long). 
+
+
+ 
+
+design two modules, one to do run-length encoding on an input stream
+of bytes and another to do the corresponding run-length decoding. by plugging
+your two modules back-to-back, you should reconstruct the original byte-stream.
+you must design your own protocol for this - there are optimizations you
+can try based on the image compression context. one of the things you must
+worry about is the fact that the compressed stream is not the same length
+as as the original stream. although it's generally shorter, it might be
+longer depending on your run-length coding. your circuits must handle any
+possibility of course.
+
+design your circuits using verilog and use the simulator to show that it
+works.
+
+
+design a circuit that performs a one-level 2d wavelet transform on
+a 16x16 image. the image and the resulting transform are stored in two
+different memory modules. you should store the sub-images you produce as four
+8x8 images in the 16x16 output image.
+
+the memories you should use are simple static rams with an 8-bit address,
+an 8-bit data input for writes, an 8-bit data output for reads and a single
+r/w control signal which is asserted high when reading and asserted low
+for writing. you should write a verilog model for this memory. note that
+it has no clock input. if r/w is asserted (read) then the data output should
+be what the address selects. (if the address changes, so does the data
+out.) if r/w is unasserted (write), then nothing happens until r/w changes
+to high again, at which time the data on the input is written into the
+memory.
+
+
+
+ in this problem, you will design and test a simple cache controller
+using verilog simulation. this cache is a direct-mapped, read-allocate,
+write-through cache. the controller sits between the processor and the
+cache memory and generates the control signals needed by the processor
+and the memory. the cache controller has the following i/o signals:
+
+inputs: 
+
+
+ 
+
+ read - processor asserts to request a read. 
+
+ write - processor asserts to request a write. (only one of read/write
+can be asserted at once) 
+
+ address - processor provides the memory address of word being read
+or written.
+
+hit - the cache tag memory asserts hit if the memory address is in
+the cache.
+
+reset - resets the cache controller into an initial state. 
+
+
+outputs: 
+
+
+ready - signal to the processor indicating data is present and processor
+can continue. 
+
+memread - asserted to tell memory to perform a read operation
+
+memwrite - asserted to tell memory to perform a write operation. only
+one of memread and memwrite can be asserted at a time. 
+
+memaddress - address to main memory of word being read/written. 
+
+
+addresses are word addresses with 4 words per cache line. on each cycle,
+the processor asserts a read or write request (or neither) to the cache controller
+along with the memory address of a word. it then waits for the ready signal
+to be asserted. a cache tag module checks to see if the address is in the
+cache. if so, it asserts hit in the next cycle after the read/write request
+is asserted. (you do not have to design the cache tag module - assume it's
+there and the hit signal is asserted appropriately.) different things happen
+depending on whether a read or write has been asserted:
+
+
+read - if hit is asserted, then ready should be asserted immediately
+(same clock cycle as hit). if hit is not asserted, the controller must
+read the cache line from memory, starting with the requested word. from
+the time memread is asserted, it takes 4 cycles before the first word from
+memory is available. after that, it takes only one cycle per word read
+from the same cache line. that is, the controller issues memread with the
+address of the first word to be accessed, waits 4 cycles and then issues
+3 more reads, one per cycle with the addresses of the remaining words in
+the cache line. the controller can assert the ready signal as soon as the
+data from the requested address is available.
+
+
+write - writes are easier since cache lines are not allocated on a
+write miss. whether or not hit is asserted, the controller issues a write
+to memory for one word. ready can be asserted immediately, however, without
+waiting for the write to complete, which takes 4 cycles.
+
+
+read/write overlap - reads and writes that go to memory cannot overlap.
+that is, if there are two read misses in a row, the second set of reads
+to memory must wait until the previous reads have completed. this can happen
+because the controller asserts ready before completing all the reads from
+the first miss. if a read miss or a write is followed by a read hit, however,
+ready can be asserted right away since no memory access is required. 
+
+
+write a verilog description for this cache controller and use verilog-xl
+to test your design. we will provide a driver for your design in a couple
+days.  
+
+
+
+ebeling@cs.washington.edu

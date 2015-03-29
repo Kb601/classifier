@@ -1,0 +1,323 @@
+cs 537 - programming assignment iii
+   
+   
+
+
+
+cs 537 
+programming assignment iii 
+cpu scheduling 
+
+due: 
+
+october 22 at the start of class. 
+
+
+contents
+
+
+introduction 
+
+running the simulator 
+
+system overview
+
+program modification
+
+files
+
+coding
+
+experiments 
+
+report 
+
+grading 
+
+handing in 
+
+
+
+
+
+introduction 
+
+a program has been written that simulates a short-term scheduler and
+allows you to experiment with various scheduling policies. your assignment
+is to measure and analyze the performance of several policies, modifying
+the simulation program as necessary. 
+
+running the simulator 
+
+the current version of the program simulates round-robin (rr)
+scheduling, but it is constructed to allow easy modification for other
+scheduling policies. the program expects the following command line: 
+
+java proj3 [-v...] [-t] data-file quantum 
+
+
+
+proj3: name of the main class. 
+
+-v, -vv, etc.: starts verbose mode for debugging. verbose
+mode causes the simulator to print debugging output to the screen. the
+more v's in the command line, the greater the verbosity. 
+
+-t: starts trace mode. trace mode causes the simulator to maintain
+a record of all significant events. 
+
+data-file: name of the file containing the trace data used in
+the simulation. 
+
+quantum: length of the time-slice used in round-robin scheduling.
+
+
+system overview
+
+
+the simulator essentially consists of jobs, devices, and schedulers -- all
+coordinated by a single loop of code.
+a job is a customer of services: it is a process that needs to use
+system resources during its execution. a device represents a resource
+in the system. in this simulation, the devices available to a job are the cpu 
+and the disk.
+there is also a clock device and a pseudo-device that interrupts whenever
+a new job arrives in the system.
+a scheduler coordinates access to a device. it queues jobs
+that are waiting to use a device and will choose which job is the next
+to access.
+
+the overall execution of the simulator occurs like this:  jobs arrive at
+the jobarrival device and are entered into the system.  a job's lifetime
+consists of alternating periods of using the cpu (called a 
+burst) and performing i/o. the main loop is responsible for 
+moving jobs around the system.  it sends them to a scheduler, takes
+the next job from a scheduler, and starts and stops jobs running on a device.
+the disk scheduler and the cpu scheduler decide which job should
+be the next to run on their respective devices.  they also buffer jobs that
+are waiting to run but have not yet been given access.  the clock device is
+used to enable preemption (more on this later).
+
+for those who would like a more detailed description of the system 
+(more than is necessary to do this assignment), you can either read the
+comments in the code itself, or click 
+here.
+
+
+program modification
+
+for this project, you are going to be focusing almost exclusively on
+the cpu scheduler object shown above.  the provided simulator performs 
+round-robin (rr) scheduling.  you are to create separate versions 
+of the simulator to implement each of the cpu scheduling algorithms described 
+below. 
+
+
+modify one copy of the program to simulate the shortest-job-first
+(sjf) algorithm described in section 2.4.4 of the text. the next process
+to be run is the one with the smallest burst. use fcfs to break ties.
+because this is a simulation, you can ``cheat''
+by looking at the burst length of a process when deciding which process
+to run next. in a real system, that information is not available to the
+scheduler.
+
+this policy is non-preemptive: newly arriving processes do not affect
+the currently-running process.
+
+
+modify another copy of the program to implement a preemptive
+version of sjf, which is called shortest-remaining-time-first (srtf).
+in this algorithm, the currently-running process is the one with the least
+time left in its current burst.
+
+for your final version of the program, modify the sjf algorithm
+to use a predicted burst length. we will call this policy predicted-shortest-job-first
+(psjf). you can predict the burst length by using an exponential average
+of the measured lengths of previous cpu bursts. the formula is as follows:
+
+
+
+        
+                        tn+1 = atn + (1 - a)tn
+
+
+t = predicted burst length 
+
+t = past measurement of actual burst length 
+
+0 &lt;= a &lt;= 1 
+
+
+
+what the formula says is that the predicted value of the next burst
+length (tn+1) will be dependent upon both the last measured
+burst length (tn) and the last predicted burst length
+(tn). the weight the previous two measurements have in
+calculating the new prediction is contained in a. if a = 1/2,
+then they will both contribute equally; if a = 1, then only the
+last measured burst time is used to predict the next burst time. experiment
+with different values of a for this section. 
+to implement psjf you will have to modify the job class to
+record a little more information.
+
+
+you should have four versions of the simulation program when finished,
+
+
+
+the original (rr) 
+
+one for sjf 
+
+one for srtf
+
+and one for psjf. 
+
+
+files
+the files you will need can be found in 
+ 
+    ~cs537-1/public/src
+
+they include all of the files for the simulator, the data file, and a makefile.
+copy all of these files into one of your directories and type
+make to run the round-robin version of the 
+simulator.
+
+coding
+
+the easiest way to attack this assignment is to modify a copy of the provided
+round-robin scheduler.
+
+ 
+    cp rrscheduler.java sjfscheduler.java
+
+don't forget to change all occurrences of rrscheduler
+to sjfscheduler in the copy and in the makefile.
+
+you should also change the following line in the file sim.java
+so your scheduler is used by the simulator instead of the default:
+
+ 
+    sim.java: 
+        cpuscheduler = new rrscheduler();
+
+    becomes 
+        cpuscheduler = new sjfscheduler(); 
+
+
+the methods in rrscheduler which you will have to modify for your assignment
+include:
+
+boolean add(job,timeleft)
+adds a new job wanting service.
+the second parameter is the amount of cpu time remaining until the job
+currently using the cpu will next do i/o or finish.
+it is -1 if the cpu is currently idle.
+this method should return true if the scheduler would like to
+preempt the current job.
+
+job remove() returns the job that
+the scheduler would like to run next
+(and removes it from the queue) 
+
+boolean reschedule(int timeleft) returns
+true if
+there is a reason to stop the current process and start another.  it is
+called by mainloop on a clock interrupt and is essential to implementing
+preemption.  if
+it returns true, the mainloop will take the current running process off
+the cpu and return it to the cpu queue (by calling add) and then
+ask for another job to run by calling remove.
+as in add, the timeleft parameter is the amount of cpu
+time remaining in the current burst of the currently running job (-1 if
+no job is running).
+
+
+you may also need to look at the job class.  one useful
+job method is:
+
+int nextburst() which returns the burst time
+remaining
+
+
+experiments
+
+compare the performance of the four scheduling algorithms.
+also compare the performance for various values of the parameters:
+quantum for rr and a for psjf). note that if quantum
+is very large, rr becomes first-come-first-served (fcfs) and if
+quantum==1 , rr approximates processor-sharing (ps).
+
+
+compare the behavior and performance of each of the policies. discover
+the strengths and weaknesses of each of them. compare the performance results
+you observe with the predictions discussed in class and in the book. you
+must supply quantitative data to support your conclusions. 
+
+you should approach this portion of the assignment as you would approach
+a laboratory assignment in a physics course. use the ``scientific method.''
+you should have some hypotheses that you confirm or reject based on behaviors
+observed during well-planned, organized experimentation. give careful thought
+to the correct choice of parameters for the programs. try a few trial runs
+with various parameters, print out the results, and go home and think about
+the results. these preliminary results should help you decide on better
+parameters for a second round of trials. remember: it's not the quantity
+but the quality of data that dictates the quality of the experiments. 
+
+if the program is not printing out all the statistics you would like
+to see, feel free to modify it to produce better output. you may find additional
+statistics-reporting code can help explain some of the behavior you observe.
+
+
+report
+
+you are to prepare a report describing the results of your experiments.
+again, approach this report as you would approach a physics laboratory
+experiment report. you should carefully describe what experiments you did
+and what the results showed you about the different scheduling policies.
+we want to see a correlation between the experiments you run and the conclusions
+you draw. you must supply quantitative data to support your conclusions.
+the report should be not more than three typewritten pages, excluding
+tables, graphs, etc. 
+
+grading
+
+you grade will be determined as follows: 
+
+
+60% - report (experiments, conclusions, presentation) 
+
+40% - implementation (correctness, style, documentation) 
+
+
+you must work in two-person groups for this project. 
+
+
+handing in 
+
+you should bring your report
+and all of the .java
+files you modified (with your additions clearly detailed in your
+code or in a separate file) to class on the day the project is due. you should
+also create four directories in your hand-in folder -- one for each of your
+scheduler versions.  into each directory you should place a 
+copy 
+of the files needed to run that particular scheduler
+(.java files, trace
+file) as well as a redirected copy of the output from one execution.
+a short readme file containing the names of you and your partner
+can just be placed in your hand-in folder. 
+the hand-in directories
+for project 3 can be found at: 
+
+
+~cs537-1/public/handin/project3
+
+
+
+as always, points will be deducted for code that fails to satisfy the
+minimal criteria for comments and structure specified in the hand-in directions
+for project 2. 
+
+copyright &#169; 1996 by marvin solomon.  all rights reserved.

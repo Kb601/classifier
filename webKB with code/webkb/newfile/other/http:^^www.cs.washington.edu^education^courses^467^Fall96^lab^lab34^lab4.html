@@ -1,0 +1,223 @@
+cse467 laboratory assignment #4
+
+
+
+
+cse467: advanced logic design
+ted kehl, fall 1996 
+
+
+
+lab 4
+
+programming pals and plds
+
+distributed: oct 24
+  due: ta option
+
+
+objectives
+after completing this lab you will know how to:
+
+program pals and plds
+construct and debug sequential circuits
+
+
+i.  pld programming
+below is an abel file describing a simple 3-bit up-counter
+(upcount3.abl in the class directory).  program a pld
+(instructions furnished at beginning of class) to implement
+this function and use your clock generator to
+provide a clock input.  use switches to provide the other
+inputs to the pld and leds to observe the outputs.
+
+
+"intel 5c032 pld pin configuration
+"input/clk: 	1
+"input/vpp:	11
+"inputs: 	2,   3,  4,  5,  6,  7,  8,  9
+"input/output:	12, 13, 14, 15, 16, 17, 18, 19 
+
+module	upcount3
+
+title 'simple 3-bit up-counter with enable and reset'
+
+"the following line is not needed in synario
+"upcount3		device	'e0320';
+
+clk		pin 1;				"clock"
+q0,q1,q2	pin 12,13,14 istype 'reg';	"counter outputs"
+en		pin 2;				"counter enable signal"
+reset		pin 3;				"counter reset signal"
+	
+output = [q2,q1,q0];	"3-bit number"
+	
+equations
+	
+        output.clk = clk;
+
+	when (reset) then
+		output := 0;
+	else when (!en) then
+		output := output;
+	else 
+		output := output + [0,0,1];
+				
+@const n=8;
+
+test_vectors ([clk,reset,en] -> output)
+	[.c., 1 ,.x.] -> 0;	"reset"
+	[.c., 0 , 1 ] -> 1;	"increment"
+	[.c., 0 , 0 ] -> 1;	"hold"
+	[.c., 0 , 1 ] -> 2;	"increment"
+	[.c., 0 , 1 ] -> 3;	"increment"
+	[.c., 0 , 1 ] -> 4;	"increment"
+	[.c., 0 , 1 ] -> 5;	"increment"
+	[.c., 0 , 0 ] -> 5;	"hold"
+	[.c., 0 , 1 ] -> 6;	"increment"
+	[.c., 0 , 1 ] -> 7;	"increment"
+	[.c., 0 , 1 ] -> 0;	"increment"
+@const i=1; @repeat n-1 {
+	[.c., 0 , 1 ] -> i;	"increment"
+@const i=i+1;}
+	[.c., 0 , 1 ] -> 0;	"increment"
+	[.c., 0 , 1 ] -> 1;	"increment"
+	[.c., 0 , 1 ] -> 2;	"increment"
+	[.c., 0 , 1 ] -> 3;	"increment"
+	[.c., 1 ,.x.] -> 0;	"reset"
+
+end upcount3
+
+
+after you have completed the testing of this counter, modify
+the abel program to make the counter count down as well by
+adding another input that specifies whether the counter should
+count up or down on the next clock edge.  remember to modify
+the test vectors appropriately.
+
+programming pld
+
+
+ create a new project.
+
+ double click on virtual device.  this will bring up a dialog box
+asking what kind of device you want to switch too.  choose 'standard plds'
+and then 'eo320'.  this tells synario to create a jed file for the pld
+programmer that programs the 20 pin pld provided in your lab kit. 
+
+ create a new source from within the main synario program.  when
+asked what type of source it is, specify an abel-hdl file.  now enter a
+module name and file name for your new abel file.  
+
+ copy from netscape (or mosaic) the source code provided above.  now
+paste the copied text into the synario editor containing your new abel file.
+synario might stick some abel code into the editor automatically for you.  
+for this project, simply delete that code before you paste. 
+
+ now you should be able to save your new abel file and return to the
+main synario environment.  now click on 'eo320' and then double click
+on 'jedec file'.
+
+ if it compiles successfully, then you should get a jedec- format file
+with .jed suffix. copy this .jed file to an msdos floppy disk.
+
+ to blow the fuses follow the directions given in lab by stephen lee
+
+tasks
+
+program the pld to implement the up-counter.
+modify the abel program and implement an up-down-counter.
+use switches and leds for the inputs and outputs and your
+debounced push-button switch to provide a clock signal (that you can
+single-step by pushing on the switch).
+
+
+ii. constructing your circuit
+
+you will need some plds, a keypad, an lcd screen, and a potentiometer
+for its constrast control, schmidt triggers ('14) and resistors and
+capacitors for switch debouncing.  the clock will be provided by your
+pulse generator (remember that your pulser output is open-collector,
+so you will need a pull-up resistor, 1kohm should work fine).  and, of
+course you'll need your trusty logic probe.
+
+debouncing switches
+
+the keypad has nine wires: one for each column (5 through 8), one for
+each row (1 through 4), and a common wire (9) to be connected to
+ground (this is the common connection for all the switches).  (if you
+have a 3-column keypad, then there are only 3 column wires and 8 wires
+total.)  when a key is pressed the corresponding column and row wires
+are connected to the common signal (see the figure below).  therefore,
+the keypad is called a 2-of-8, 2 of the 8 wires will be active low
+when a key is pressed, the others are pulled high through resistor
+connections to 5v.
+
+to debounce the type of switch in the keypad (single-pole single-throw
+or spst) will require a special analog circuit consisting of a
+resistor, capacitor, and a schmitt trigger (`ls14).  connect pull-up
+resistors and capacitors to the eight outputs of the keypad as shown
+in the figure on the top of the next page.  the sizes of these devices
+should be chosen so that the rc time constant is approximately 50ms,
+this should be enough to eliminate the bounce of even these
+inexpensive keypad switches.  test your keypad with your logic probe.
+
+
+when a key is pressed, two switches are closed thereby shorting the
+two capacitors to ground and very quickly discharging them.  this
+makes the output of the schmitt trigger inverters immediately go high.
+if the switches momentarily disconnect, the capacitor will start
+recharging but only slowly due to the large rc time constant.  if the
+time constant is longer than the bounce time then there won't be
+enough time to charge the capacitor enough to trip the schmitt trigger
+and the output will stay high.  the internal hysteresis of the schmitt
+trigger will prevent it from switching again until the input gets very
+high.  once the switch is let go, there will be enough time and the
+capacitor will eventually charge to 5v and the output of the schmitt
+triggers will be low.  also, note that the row and column wires
+corresponding to the depressed key may not change value at the same
+time.
+
+lcd details
+documentation for the lcd display was distributed in lab.
+there is also an excellent faq
+describing your lcd module.
+there is an accompanying figure
+(character set.)
+also, an article on the physics of lcd displays
+(text file.)
+this collection is likely more complete
+and lucid than the data sheet.
+details of other parts
+are available from the ttl data book or online
+from motorola's data book server.
+
+
+
+
+you should construct your circuit in phases.  first, build the keypad
+decoder and synchronizer, then the transmitter.  on the receiving end,
+first build that portion of the fsm that will reset the display and
+print some character (possibly hard-wired, initially), and finally the
+transmitter.  make sure the transmitter is working before plugging them
+together.  (you can see the values being transmitted if you run the
+clock at 1hz.)
+
+you should be able to make some progress this week and perhaps even
+complete the circuit.  we will cover how to use the logic analyzer to
+debug sequential circuits in the next lab.  if you are having real
+problems, you might want to wait until then.
+
+
+
+hand in: (dueta option)
+
+demonstrate your up-down counter using switches and leds and have
+your ta sign your abel listing.
+abel program listing, test results, equations and pld pinout.
+
+
+
+
+
+ted@cs.washington.edu

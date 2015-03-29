@@ -1,0 +1,122 @@
+answer sheet
+
+   
+
+
+
+answers and hints to review sheet
+
+
+
+
+1. the trend is that r+m machine tends to have more percentage of
+branch instructions while l/s machines tend to have the lowest percentage
+of branch instructions. the reason is that for every computation task there
+exists a fixed number of branches but the encoding for different kinds of
+machines differs. because r+m has the most compact encoding, it has the
+highest percentage of branches. 
+
+2. l/s machine:
+
+
+ld.w r1, b
+
+ld.w r2, c
+
+add.2 r3, r2, r1
+
+st.w a, r3
+
+(4 words)
+
+
+r/m machine:
+
+
+ld.w r1, b
+
+add.2 r1, c
+
+st.w a, r1
+
+(3 words)
+
+
+r+m machin:
+
+
+add.w a, b, c
+
+( 2 words)
+
+
+3. page 151, we get 6.9 instructions gain using the perfect register
+window. so in all, the total execution speed up is 110.9/104 - 1 = 6.6%
+
+4. system call/return: 84*1.5/12 = 10.5
+
+trap/interrupt: 103*1.5 / 14 = 11.0
+
+page table entry change: 36*1.5 / 11 = 4.0
+
+context switch: 135 * 1.5 / 9 = 22.5
+
+5. basically, instruction run-length is the number of instructions
+between branches. 
+
+one would expect l/s machines to have a larger run-length simply it
+has the lowest percentage of branch intructions. (refer to question 1)
+
+6. bc, br, bcr, brr 0.524 * (0.2 + 0.432)
+
++ loop control 0.071&nbsp;* 0.91
+
++ procedure call 0.405
+
+-----------------------
+
+total = 0.8
+
+7. the centered branch table contains 
+both prefetched instructions and retained preciously
+executed instructions. 
+
+64 words&nbsp;(256 bytes) would be needed for an l/s architecture
+to be at least 50% effective. (refer to figure 3.12)
+
+8. 58.557% of instructions in a program depends for their execution
+on data values computed in the previous three instructions. 
+
+0.586 * 0. 53 = 0.31 cycles.
+
+9. if/if/d/ex/mem/mem/wb
+
+10. add: if/if/d/ex /mem/mem/wb
+
+bc: blank/if/if/d/ex/mem/mem/wb
+
+target: blank/blank/if/if/blank/tif/tif/d
+
+inline: blank/blank/if/if/blank/d
+
+11. add: if/if/d/ex/mem/mem/wb
+
+add: blank/if/if/d/blank/blank/ex/mem/mem/wb
+
+12. for question 10, we have 1.5 cycles delay( 1 or 2) and for question
+11, we have 2 cycles delay.
+
+13. the previous ag instruction is waiting for the result of the
+former instruction.
+the ag is controlled by the output of the decocde, so a new decode can't
+be stored until ag is finished. 
+
+14. because compilers could make use of it to reorganize the instructions
+so that decoding pipeline delay can be reduced and free instructinons could be 
+executed. 
+
+15.  a run-on instruction is basically an instruction that occupies 
+the execution unit for many cycles than for basic instructions.
+ 
+
+e.g., multiply   or divide  unit.

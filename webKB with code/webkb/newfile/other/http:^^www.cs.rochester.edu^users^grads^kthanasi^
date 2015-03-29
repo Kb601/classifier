@@ -1,0 +1,114 @@
+leonidas kontothanassis's urcs home page
+
+ 
+leonidas kontothanassis
+ 
+for a more recent version of my home page click  here. 
+
+in order to learn about the cashmere project click  here. 
+
+these are my notes from when i taught  computer organization. 
+
+
+ book chapters and journals 
+ 
+ l. i. kontothanassis and m. l. scott
+         ``memory models.'' 
+        in the parallel and distributed computing handbook, editor
+        albert zomaya, chapter 24, pp. 699-722, mcgraw-hill, new york, december 1995.
+ l. i. kontothanassis and m. l. scott
+         ``software cache coherence for current and future architectures.''    journal of parallel and distributed
+computing 29(2):179-195, november 1995. special issue on distributed
+shared memory systems.
+
+
+
+
+other refereed publications 
+ 
+ l. i. kontothanassis and m. l. scott.  ``distributed shared memory for new generation networks.''  in proc., 2nd hpca, san jose, ca, february 1996.
+ l. i. kontothanassis, m. l. scott, and r. bianchini.  ``lazy release consistency for hardware-coherent multiprocessors''.   in proc., supercomputing '95, san diego, ca, december 1995.
+ r. w. wisniewski, l. i. kontothanassis, m. l. scott.  ``high performance synchronization algorithms for multiprogrammed systems.''  
+in proc., 5th ppopp, santa barbara, ca, july 1995.
+ l. i. kontothanassis and m. l. scott
+         ``software cache coherence for large scale multiprocessors.'' 
+        in proc., 1st hpca, raleigh, nc, january 1995.
+ m. marchetti, l. i. kontothanassis, r. bianchini, and
+m. l. scott.   ``using simple page placement policies to reduce the
+cost of cache fills in coherent shared-memory systems.'' 
+in proc., ipps '95, santa barbara, ca, april 1995. also available as tr 535.
+ l. i. kontothanassis, r. a. sugumar, g. j. faanes, j. e. smith, and m. l. scott
+         ``cache performance in vector supercomputers.'' 
+        in proc., supercomputing '94, washington dc, november 1994.
+ l. i. kontothanassis and m. l. scott
+         ``issues in software cache coherence.'' 
+        in proc., 4th workshop on scalable shared memory multiprocessors, chicago, il, april 1994.
+
+ r. bianchini and l. i. kontothanassis.  
+         ``algorithms for
+  categorizing multiprocessor communication under invalidate and
+  update-based coherence protocols''.   
+        in proc. 28th annual simulation
+    symposium, phoenix, az, april 1995.  also available as tr 533,
+  computer science department, university of rochester, september
+  1994.
+
+ r. bianchini, m. e. crovella, l. i. kontothanassis, and t. j. leblanc.
+         ``software interleaving.'' 
+        in proc., 6th spdp, dallas, tx, ocober 1994.
+ r. j. fowler and l. i. kontothanassis.
+         ``mercury: object-affinity scheduling and continuation passing on multiprocessors'' 
+        in proc., parle '94, athens, greece, june 1994.
+ r. w. wisniewski, l. i. kontothanassis, and m. l. scott.
+         ``scalable spin locks for multiprogrammed systems''  
+        in proc., 8th ipps, cancun mexico, april 1994.
+ l. kontothanassis and r. wisniewski
+         ``using scheduler information to achieve optimal barrier synchronization performance.''    
+        in proc., 4th ppopp, san diego, ca, may 1993.
+ w. e. garrett, m. l. scott, r. bianchini, l. i. kontothanassis, 
+r. a. mccallum, j. a. thomas, r. wisniewski, s. luk
+         ``linking shared segments.''  
+        in proc. of the usenix winter '93 technical conference,
+        san diego, ca, january 1993.
+ r. j. fowler and l. i. kontothanassis
+         ``supporting user-level exception handling on a multiprocessor micro-kernel: experiences with platinum'' 
+        in proc., 3rd sedms, newport beach, ca, march 1992
+
+
+
+ technical reports and submitted for publication 
+
+contact me for a copy of the following papers:
+
+ l. i. kontothanassis, r. w. wisniewski, and m. l. scott.
+``scheduler-conscious synchronization''.  tr 550, computer science dept.,
+university of rochester, december 1994.  (submitted for publication).
+
+ l. i. kontothanassis.
+``the mercury user's manual.''
+ tr 465, computer science department, university of rochester,
+september 1993.
+
+ r. bianchini, m. crovella, l. kontothanassis, t. leblanc. 
+``hot spot removal in scalable cache-coherent multiprocessors''
+tr 448, computer science department, university of rochester,
+april 1993.
+
+ w. e. garrett, r. bianchini, l. kontothanassis, r. a. mccallum,
+j. thomas, r. wisniewski, m. l. scott. ``dynamic sharing and backward
+compatibility on 64-bit machines'' tr 418, computer science
+department, university of rochester, april 1992.
+
+      
+
+
+finger:
+
+kthanasi@cs.rochester.edu
+
+ pointers for navigating the web
+
+
+ back to urcs grads directory
+
+back to urcs home page

@@ -1,0 +1,49 @@
+ustat intrusion detection system
+
+
+ustat
+
+state transition analysis tool for unix
+
+
+
+ustat is a real-time rule-based intrusion detection system for sunos4.1.x and
+solaris 2.x.
+
+background and history
+
+phillip porras introduced the concept of stat as his master's thesis; stat 
+is an expert system which detects intrusions using a state transition table.
+you can retrieve an abstract of this thesis, or the full text (2.7m, postscript).
+
+koral ilgun implemented stat as a real-time intrusion detection system for
+unix; hence u_stat.  click here for an abstract of his master's  thesis, and here for the full text (1.2m, postscript).  this implementation runs under sunos 4 and makes use of the sunos bsm
+audit trail.
+
+this project has been and is under the supervision of dr. richard kemmerer.
+
+current work
+
+jonathan wood has ported ustat to solaris 2.x, and is currently investigating
+approaches to a distributed intrusion detection system using ustat.  this 
+system will collect data from multiple hosts on a network and process the
+data as a unified audit trail.  other research directions include 
+incorporating ustat with other ids which complement its capabilities (i.e.
+anomaly detection systems), and expanding its auditing capabilities to take
+advantage of the extra information gleaned from gathering audit data from
+networked machines.
+
+
+for more information, contact jonwood@cs.ucsb.edu or kemm@cs.ucsb.edu.
+
+
+
+
+[ hotlist ]
+[ search ]
+[ back to cs ]
+
+
+
+
+last modified: tue nov  7 14:08:12 pst 1995 by  jonathan wood.

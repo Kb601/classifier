@@ -1,0 +1,315 @@
+salvatore j. stolfo
+
+
+
+
+ 
+  
+
+
+
+
+
+
+prof. salvatore j. stolfo
+department of computer science, columbia university, new york, ny 10027
+sal@cs.columbia.edu
+
+member of the polytechnic 
+university center for advanced technology
+
+
+a puzzle to ponder
+
+
+
+
+
+can you guess what the image means?  (keep browsing for the answer.) 
+by the way, the topic of this page is constantly under development until 
+that ultimate day......
+
+
+past research interests and activities:
+
+
+
+    learning problem-solving heuristics
+
+my thesis research (1976-1979, see ijcai 1979)
+
+the massively parallel dado machine(~1979-~1989)
+
+hardware
+
+software
+
+patents
+
+current status: 
+dado was licensed to a company and abruptly left academia
+for its obvious commercialization.  see 
+the san francisco examiner
+article on page a-1 of the feb. 5, 1996 issue (click on previous
+examiners button) for some
+information about its current status. the final chapter on dado
+has not yet been written! stay tuned!
+
+deductive and expert databases
+
+ace - the first deductive (expert) database system (1980 - ~1982)
+
+
+active/deductive database
+system reorganization and "predictive" load balancing (1990 - ~1994)
+
+the paradiser system (1990-~1994)
+
+parallel rule-based systems (then and now) (1980 - ~1994)
+
+incremental rule processing in parallel environments (1990 - ~1994)
+
+"real-world" application 
+studies 
+alexsys - mortgage-backed security trading in parallel. (1988 - ~1990)
+
+sponsors:
+
+ 
+  
+      (d)arpa
+  
+      office of naval research
+  
+      new york state science and technology foundation cat program
+  
+      citicorp
+  
+      intel
+  
+      ibm
+ 
+
+
+
+
+
+current interests: parallel/distributed intelligent systems (1990's - )
+
+
+knowledge discovery in 
+database and data mining (kdd/dm)
+
+my former days of expert systems research, and parallel hardware design
+and implementation were great fun. 
+but now i am specializing in parallel/distributed processing for 
+machine
+learning
+(or 
+alternatively click here),
+intelligent information systems, 
+knowledge discovery in databases and data 
+mining, financial systems computing, and active databases.   
+check out upcoming events like 
+kdd96, or aaai96 (i'm on the pc of
+both) and journal sources like 
+kluwer's journals in this area. 
+i am a member of  the editorial board of the 
+journal on 
+data mining and knowledge discovery. please take a look at 
+our call for papers.
+
+see also the page on the 
+parallel and distributed
+intelligent systems lab  for a more thorough treatment of my 
+current research activities and relationship to industrial users. 
+
+
+
+merge-purge: intelligently integrating heterogenous databases
+
+although  the term merge/purge is
+used by our citicorp collaborators and other commercial organizations, 
+it is probably better termed
+the data scrubbing, or data cleaning problem.
+(that's a term mike stonebraker used to describe
+this problem--and stonebraker-terminology is almost always colorful 
+and illuminating.) our most recent success on data supplied by the
+child welfare department of the state of washington is memoralized in
+the letter viewable by clicking here.
+
+
+meta-learning for scalable data mining
+meta-learning
+is a term we coined for an approach gaining in popularity in the dm/kdd
+community these days. 
+the essential idea is to combine a number of separately learned
+classifiers or models in such a fashion that machine learning can be scaled
+to large (and inherently distributed) databases, and 
+(ideally) accuracy can be boosted. but how does one combine separately 
+learned classifiers? we consider that question as a learning problem and apply
+machine learning algorithms to "meta-learn" how underlying classifiers
+behave or correlate with eachother. hmmmmm...
+
+
+electronic commerce and
+financial information systems: 
+widely distributed data mining and fraud detection
+
+my current interest lies in the future of large scale network-based
+information systems, especially fraud and
+intrusion detection.
+we are studying methods to apply learning agents, and meta-learning agents
+in wan financial information systems to learn how to detect fraudlent
+transactions. this work is directly relevant to information warfare
+problems that will undoubtedly occur in the future. (these problems
+probably occur today but no one has yet learned how to detect it globally! 
+stay tuned!)
+  
+this research is being conducted in collaboration with our friends
+at the financial services technology consortium.,
+
+
+integrating multiple models: aaai96 workshop
+
+many researchers are working on similar techniques for integrating 
+multiple learned models.  so phil chan, david wolpert and myself
+are organizing a workshop at aaai-96 called
+integrating multiple models
+for improving and scaling machine learning.
+see the workshop agenda and call for papers. please participate
+directly if you are interested in pursuing these ideas or if you have
+new results to share with the community.
+
+
+speeding up monte carlo 
+simulations
+
+i've also studied parallelization strategies for monte carlo simulations.
+check out dynamic neighborhood bounding, a simple heuristic strategy
+to save on expensive function computations that is also amenable to
+fast parallel execution. (follow the link to "papers".)
+
+
+collaborators
+
+
+
+financial services technology consortium (fstc)
+
+i've been working with the 
+financial services technology consortium 
+(fstc) having played some small role in its early formation. 
+the fstc's "fraud project" is the focus of our joint effort. 
+see the description on 
+
+fraud and intrusion detection in financial information systems using 
+meta-learning agents 
+for details about our approach.
+
+citicorp
+
+my relationship with citicorp
+was established through my consultancies and research relationships
+with the citicorp technology office. working with companies like
+citicorp is  a wonderful opportunity to learn about
+real-world problems and datasets for use in establishing benchmarks and
+controlled studies of fundamental technologies. 
+
+my collaboration with citicorp and other organizations 
+lead to the development of a number of 
+fundamental technologies that were demonstrated in "real-life" financial 
+applications.  some of these are described  in this web page. seek them
+out.
+
+
+system management arts
+
+smarts is a spinoff from the research lab of 
+professor yechiam yemini.
+their sos agent infrastructure is being used in our work on meta-learning
+agents for fraud and intrusion detection.
+
+
+
+
+some recent publications
+better have a postscript viewer configured before downloading!
+
+
+sponsors:
+
+ 
+  
+      (d)arpa (baa99603 survivability of information systems program: intrusion detection)
+  
+
+nsf cise database and expert system program
+  
+
+nsf cise knowledge models and cognitive systems program
+  new york state science and technology foundation cat program
+  citicorp
+ 
+
+
+
+
+contact points and my phd students
+
+i'm always looking for good people to work with me.  how would you like 
+to help me build an agent-based learning
+system  operating over the internet for detecting fraud in electronic 
+commerce? send a note of interest and we might talk about it...
+
+send email to sal@cs.columbia.edu.
+
+you can find out much more about these topics by contacting me
+directly or my phd students, former and current.
+(maybe that includes you sometime in the future?)
+
+
+the answer
+
+did you guess what the image means?   
+
+
+my greatest achievement in life
+
+one last thought (for now). of all my accomplishments, 
+absolutely none come close to 
+my true achievement in life.
+
+
+fun at my home town
+and i especially enjoy doing all sorts of things for my community
+mostly through my kids' schools. some of you may even have heard 
+of a special event in ridgewood, new jersey where we live. its called
+
+
+dads night.
+
+
+ridgewood has all sorts of interesting events going on. another one that
+i am happy to be involved with is 
+
+
+super science saturday. 
+
+
+visit the homepages of both for a peek at what's up in ridgewood!
+
+
+and if you haven't figured out what i might look like 
+well check this out too.
+
+
+
+links
+
+parallel and distributed intelligent systems laboratory      
+department of computer science
+
+columbia university
+
+polytechnic university center for advanced technology

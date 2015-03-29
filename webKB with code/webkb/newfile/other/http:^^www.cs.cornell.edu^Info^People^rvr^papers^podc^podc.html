@@ -1,0 +1,68 @@
+a framework for protocol composition in horus
+
+
+
+
+
+
+       
+ next:  introduction
+  
+
+10000
+10000
+
+a framework for protocol composition in horus
+
+robbert van renesse, kenneth p. birman, roy friedman, mark hayden, and david a. karr
+dept. of computer science cornell university
+
+
+abstract:
+the horus system supports a communication architecture that treats
+protocols as instances of an abstract data type.
+this approach encourages developers to
+partition complex protocols into simple microprotocols, each of which
+is implemented by a protocol layer.
+protocol layers can be stacked on top of each
+other in a variety of ways, at run-time.
+first, we describe the classes of protocols that can be supported this way.
+next, we present the horus object model that we designed for
+this technology, and the interface between the layers that makes it all
+work.  we then present an example layer that implements a group
+membership protocol.  next, we show how, given a set of required properties,
+an appropriate stack can be constructed.  we look at an example stack of
+protocols, which provides fault-tolerant, totally ordered communication
+between a group of processes.
+the work contributes a standard framework for protocol development and
+experimentation, provides a high performance implementation of the
+virtual synchrony model, and introduces a methodology for increasing the
+robustness of the protocol development process.
+
+
+
+ 
+ 
+  introduction
+  classes of protocols
+  horus objects
+  common protocol interface
+  example: a membership protocol
+  protocol properties and inheritance
+  example: a typical protocol stack
+  reference implementation effort
+  the end-to-end argument
+  performance and overhead
+  status and challenges
+  related work
+  conclusion
+ 
+  acknowledgements
+ 
+ references
+   about this document ... 
+
+ 
+
+ robbert vanrenesse 
+mon may 15 12:16:43 edt 1995

@@ -1,0 +1,52 @@
+cecil paper: "whole-program optimization of object-oriented languages"
+
+
+
+whole-program optimization of object-oriented languages
+
+
+
+craig chambers, 
+
+jeffrey dean, and
+
+david grove 
+
+
+we describe vortex, an optimizing compiler intended to produce
+high-quality code for programs written in a heavily-object-oriented
+style.  to achieve this end, vortex includes a number of intra- and
+interprocedural static analyses that can exploit knowledge about the
+whole program being compiled, including intraprocedural class
+analysis, class hierarchy analysis, and exhaustive class testing, and
+profile-guided optimizations such as receiver class prediction and
+selective specialization.  to make whole-program optimization
+practical, vortex automatically tracks cross-file optimization
+dependencies at a fine granularity, triggering selective
+recompilation of affected compiled files whenever the source
+program changes.  empirical measurements of five purely
+object-oriented benchmark programs written in cecil, ranging in size
+from several hundred to 75,000 lines of source code, indicate that
+these optimization techniques improve performance of large programs
+by more than a factor of three over a system with only intraprocedural
+static optimizations.  vortex is written in cecil, and it has been
+used as its own compiler and optimizer during its development for the
+past two years.  vortex's optimizations and implementation
+techniques should be useful for any language or program where
+optimizations to reduce the cost of polymorphism are important,
+including object-oriented languages (we are currently adding
+front-ends for c++, modula-3, and java to vortex to study its effectiveness
+on these other language styles) and other high-level
+symbolic, functional, and logic languages.
+ 
+note:  this document is 70 pages long.
+
+
+
+university of washington department of computer science and engineering technical report uw-cse-96-06-02. 
+ 
+to get the postscript file, click
+here.
+
+
+return to cecil/vortex papers page

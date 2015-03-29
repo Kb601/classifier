@@ -1,0 +1,291 @@
+cs 537 - programming assignment #3
+
+
+
+
+
+
+university of wisconsin-madison
+
+computer sciences department
+
+
+
+
+cs 537
+
+spring 1996 
+bart miller
+
+
+programming assignment #3
+
+(due wednesday, may 1, at 5pm)
+
+
+
+simulating cpu scheduling algorithms
+the goal of this assignment is to evaluate several cpu scheduling algorithms.
+we will use trace data from our local unix systems to test these algorithms.
+
+your assignment is to write a program that reads in the trace data and
+simulates the cpu scheduling.
+you will keep track of various performance statistics and print these out at
+the completion of the trace file.
+the trace files
+the trace files look similar to the ones you used for program #1.
+each line of the trace file will be of the form:
+
+commandname starttime cputime iocount
+
+each of these three pieces will be separated by some number of blank characters
+(spaces or tabs).
+
+
+commandname
+is a character string (maximum length of 10 characters) that contains
+the name of the program;
+
+starttime
+is the time in 10 millisecond increments (100ths of a second) since midnight -
+this is the time that the program arrived in the system;
+
+cputime
+is the total cpu time, in seconds, used by this
+program;
+
+iocount
+records the total number of bytes of disk i/o done by this program.
+disk i/o always occurs in full blocks; blocks are
+8k (8192 bytes).
+we will ignore all other types of i/o (such as network or keyboard/display).
+
+
+the lines in the trace files are sorted by program starting time.
+
+program information
+your program will be structured as a continuous loop that reads trace records
+and advances time.
+
+important events
+your program will maintain a notion of current time.
+the "clock" in your simulator will be a variable that holds the value of
+the current time.
+the clock tick will be 1 ms.
+the clock will start at time 0 and advances each time a program runs or
+while the simulated cpu is idle and waiting.
+
+several things can happen while a simulator is running:
+
+
+the process that is currently running could complete:
+in this case, you need to update the various performance statistics (see
+below) and remove the process from any run/ready queues.
+
+the process will start a disk i/o:
+in this case, you need to block the process until the i/o is completed.
+
+a disk i/o will complete:
+the process that completed its i/o will be placed back in the appropriate
+run/ready queue.
+
+a new process will arrive (be ready to start):
+in this case, the current time of the simulator matches that the arrival time
+of one or more jobs in the trace file.
+these jobs need to be placed the appropriate ready queues.
+
+
+scheduling algorithms
+
+the details of the particular scheduling algorithm (you will implement several)
+should be isolated in a single class.
+all your program, except for the scheduling algorithm, should be the
+same for the different versions.
+
+
+the first version of your program will implement round robin scheduling.
+each process runs until it completes its time slice, blocks for disk i/o, terminates,
+a disk i/o completes, or another job arrives
+(i.e., if a new process
+arrives or a disk i/o completes
+during the running process's time slice, the running process
+is interrupted).
+you will test this with time slices of 10 ms, 100 ms, and 1000 ms.
+
+the second version of your program will implement exponential queues.
+as with rr,
+each process runs until it completes its time slice, blocks for disk i/o, terminates,
+a disk i/o completes, or another job arrives.
+any time a process is interrupted (by a new process or by i/o completion), it is
+placed back in the queues,
+at the end of the queue,
+for the correct priority.
+you will have 8 priority levels and the base (smallest time slice) will be
+10ms.
+when a process uses its full time slice, you descrease its priority and double
+its slice.
+when a process uses less than half of its time
+slice, you increase its priority
+and half its slice.
+
+the third version of your program will implement stcp scheduling.
+for this version, you will be sorting the ready queue according to how much
+total cpu time remains for each process.
+a newly arrived process or a disk i/o completing will
+preempt the running process
+(so the currently running is interrupted
+and placed back in the queue,
+according to how much cpu time it has remaining).
+
+
+simulator details
+here are some important details:
+
+
+
+
+for all three versions, a context switch takes 1 ms:
+taking a process out of execution takes 1 ms and
+starting a process to execute also takes 1 ms.
+
+
+when a process does an i/o operation, it blocks until the operation is
+completed.
+
+
+each process will perform a certain number i/o operations based on the
+iocount
+field of it's trace record.
+since, i/o is always done in blocks on 8k, you round up iocount to
+the next multiple of 8k:
+
+iooperations = trunc ((iocount + 8191) / 8192)
+
+
+
+you will use the
+iooperations count and the
+cputime
+field to calculate how often the process will block for i/o.
+divide the value
+cputime
+field by the number of i/o operations (round to the near millisecond).
+note that we are assuming that i/o operations are evenly distributed
+throughout the execution of a program.
+the i/o operation always occurs at the
+end
+of a cpu burst.
+
+
+if the
+cputime
+does not divide evenly by the number of i/o operations,
+then the last cpu burst will be smaller than the other ones and not
+be followed by a disk i/o.
+
+
+if the number of i/o operations is greater than the number of milliseconds of
+cputime,
+than the excess i/o operations will all be done at the end of the process (with
+no extra context switches between each operation).
+
+
+some examples:
+
+
+
+if the cputime is 20 and the number of i/o operations
+is 4, then the process will need to start an i/o operation after each 5 ms of
+execution.
+so, the process will execute 5 ms, then do an i/o, execute another 5 ms,
+then do an i/o, and so on.
+
+
+if the cputime is 23 and the number of i/o operations
+is 4, then the process will execute exactly as the above case, with an
+additional 3 ms cpu burst after the last disk i/o.
+
+
+if the cputime is 5 and the number of i/o operations is 10, then
+the process will start one i/o operation after each 1 ms of exectution,
+with 6 i/o operations being done together at the end of the last cpu
+burst.
+
+
+
+disk i/o operations take exactly the same amount of time: 20 ms each.
+your computer has one disk and can do only one disk operation at a time.
+as soon as one operation is completed, the next can start (with no time
+in between).
+
+
+
+performance data
+your simulator will keep trace of several performance statistics and print out
+these results when the simulator completes.
+these statistics are:
+
+
+
+average completion time (act):
+for each job, you will calculate how it it took to run.
+the time is the difference between its completion time and arrival time.
+the act is the average of this value for all jobs in the trace file.
+
+
+minimum and maximum completion time:
+you will also compute the minimum and maximum completion times over all
+the jobs.
+
+
+throughput:
+this is the number of jobs per second.
+divide the
+number of jobs that were executed
+by
+total running time of the simulator.
+
+
+utilization:
+this is the amount time spent doing useful computation.
+it does not include idle time or time spent doing context switches.
+print out the total and as a percentage of the running time of the simulator.
+
+
+
+
+software design issues
+good design on this assignment will save you, literally thousands of lines
+of code.
+a crucial class in each version of your program will be the class that does
+the queuing.
+in one version of the program, it does simple fifo queuing.  in another
+version, it is a priority queue sorted by one of 8 priority levels.
+in the last version, it is a priority queue sorted by remaining cpu time.
+
+all other parts of your program should be the same, so you can re-use them
+for the different versions.
+
+you have plenty of time for this assignment, but don't delay in getting
+started!
+work on a design and and initial structure for your classes, then come talk
+with me or the ta's.
+
+deliverables
+
+you should hand in a print-out of your program and makefile.
+your program listing should include a copy of the code for
+each
+scheduling algorithm, and one copy
+of the code for the rest of the program.
+these should be clearly labeled.
+
+your simulator should print out the statistics described above for each
+simulator run.
+
+
+
+last modified:
+fri apr 26 10:22:03 cdt 1996
+by
+bart

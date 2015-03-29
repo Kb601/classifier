@@ -1,0 +1,448 @@
+tt3
+
+
+
+
+
+cs100
+
+lecture 2
+
+
+review &oacute; previous lecture
+
+problem, algorithm, program, language, computer,
+program/data distinction, input/output, execution, trace
+
+
+program structure, output statement, conditional
+expression, operators, input function
+
+
+
+concepts &oacute; this lecture
+
+expressions: arithmetic, relational, logical, conditional;
+operator precedence and parenthesization; function application;
+convergence &amp; divergence, strict &amp; non-strict evaluation,
+programs; output; libraries
+
+
+reading
+
+teitelbaum, sections 2.1&ntilde;2.7
+
+roberts, section 2.1, section 3.5
+expressions
+
+
+&iuml; familiar from grade school arithmetic.
+
+
+(2 &#165;
+3) + (20
+_ 5)
+
+
+&iuml; consist of operators, e.g. +,
+&#165;, _,
+and operands, e.g., constants. an operator applied
+to its operands is an application. sub-expressions are
+parenthesized to indicate structure.
+
+
+&iuml; reduce to a single value by process
+of evaluation.
+
+
+(2 &#165;
+3) + (20 _
+5) &#222;
+10
+
+
+&iuml; evaluation of an expression can be traced.
+
+
+
+(2 &#165;
+3) + (20 _
+5)
+
+6 + (20 _
+5)
+
+6 + 4
+
+10
+
+
+
+
+the process used in evaluation and tracing is expression
+simplification.
+
+
+
+inside-out simplification:
+to evaluate expression e, repeatedly replace an innermost
+application e' within e by its value using the appropriate
+rule of arithmetic. stop when e has been reduced to a single
+value.
+
+
+note: left-to-right evaluation not required.
+expressions in c &oacute; operations
+
+
+
+binary operators
+
+
+operator+
+-*
+/%
+
+meaning+-
+&#165;
+_remainder
+
+
+
+
+examples:
+6 + 1  &#222;
+77 - 2  &#222;
+57 * 2  &#222;
+1414 / 3  &#222;
+414 % 3  &#222;
+2
+
+
+unary operators
+
+
+operator+
+-
+meaningidentitynegation
+
+
+
+
+examples:
+-(2 + 3)  &#222;
+-5+(2 * 3)  &#222;
+6
+
+
+
+relational operators
+
+
+operator&lt;
+&lt;=
+&gt;&gt;=
+==!=
+
+meaning&lt;
+&#163;
+&gt;&#179;
+=&#185;
+
+
+
+
+&iuml; in c, relational operations are just arithmetic operations:
+they yield integer values.
+
+&iuml; c interprets 0 as logical &quot;false&quot;. all other
+integers are treated as logical &quot;true&quot;. in particular,
+relational operators use 1 to mean &quot;true&quot;.
+
+&iuml; remember that the equality relation is ==.
+using =
+means something else in c; never use =
+in an expression.
+
+
+examples:
+5 == 5  &#222;
+15 &lt; 5  &#222;
+04 &lt; 5  &#222;
+15 &lt;= 5  &#222;
+1
+expressions in c &oacute; precedence
+
+
+
+&iuml; parentheses can be used to group operators
+explicitly.
+
+
+&iuml; in the absence of parentheses, operator groupings
+are determined by operator precedence.
+
+
+high...
+......low
+
++ - (unary)
+* / %
++ - (binary)
+&lt; &lt;= 
+
+&gt; &gt;=
+== !=
+
+
+
+
+&iuml; an operator with higher precedence groups &quot;more tightly&quot;
+than an operator of lower precedence.
+
+&iuml; operators of same precedence group to the left. 
+
+example:
+1 + 2 * 3 + 4 &lt; - 5 - 6 - 7
+
+
+groups as
+((1 + (2 * 3)) + 4) &lt; (((-5)
+- 6) - 7)
+the two uses of programs 
+
+
+&iuml; you can always add parentheses to make the
+intended meaning clear.
+
+
+example: 1+2*3 is the same as 1+(2*3) as far as 
+  the computer is concerned.
+
+
+&iuml;  but, to realize that the value of this expression
+is 7 (and not 9) a human needs to remember precedence order.
+
+
+&iuml; programs are written to be executed by computers
+and to be read by humans.  in many respects, the latter is the
+most important part.
+
+
+&iuml; my personal rule is to always use parentheses
+if the meaning of the expression is at all ambiguous.  (extra
+parentheses (never) hurt.)
+expressions in c &oacute; function applications
+
+
+
+
+name(arguments)
+
+
+&iuml; arguments is a list of expressions
+separated by commas.
+
+
+&iuml; the value of this expression is obtained by
+applying function name to the arguments.
+
+
+&iuml; the number of arguments in the argument list
+must match the arity of the defined function name.
+
+
+
+there are no functions built into c. functions are
+defined externally by libraries.
+
+
+examples:
+abs(-3)sqr(3 + 4)getinteger()hypotenuse(3,
+4)
+
+
+expressions in c &oacute; conditional
+expressions
+
+
+
+condition
+? true-exp : false-exp
+
+
+&iuml; the value of a conditional expression is the
+value of false-exp if condition evaluates to 0,
+or the value of true-exp otherwise.
+
+
+&iuml; since c relational operators use values 1
+and 0 for true and false, this allows a choice of value based
+on the outcome of a relational test. (but condition is
+not limited to relations.)
+
+
+examples:
+(1 &lt; 2) ? 1 : 2  &#222;
+1(2 &lt; 1) ? 1 : 2  &#222;
+21 + 1 ? 15 : 14  &#222;
+15
+
+
+&iuml; first the condition is evaluated, and
+then either the true-exp or the false-exp is evaluated,
+but not both.
+
+
+
+convergence and divergence
+
+
+&iuml; evaluation of an expression diverges
+if the result of an application is undefined. evaluation converges
+if it doesn't diverge.
+
+
+example:
+10 / 0  &#222;
+diverges
+
+
+&iuml; an operator is strict if it evaluates
+all of its operands. it is non-strict if it doesn't necessarily
+evaluate all of its operands.
+
+
+example:
+
+
++, -, *, / are
+ strict:
+
+
+ e.g.,  0
+* (1 / 0)    &#222;
+diverges
+
+
+conditional expressions are
+non-strict:
+
+
+ e.g.,  1
+? 2 : (3 / 0)   &#222;
+2
+expressions in c &oacute; logical expressions
+
+
+
+&iuml; logical operators are used to combine the
+logical values, true and false, in various ways.
+
+
+andf
+t
+or
+ft
+not
+
+ff
+f
+ff
+t
+ft
+
+tf
+t
+tt
+t
+tf
+
+
+
+
+&iuml; in c, logical values are represented by 0 and 1, so the
+logical operators are also arithmetic operators.
+
+
+operator&amp;&amp;
+||!
+
+meaningandor
+not
+
+
+
+examples:
+
+
+0 &amp;&amp; 0 &#222; 0
+0 || 0 &#222; 0
+! 0 &#222; 1
+
+0 &amp;&amp; 1 &#222; 0
+0 || 1 &#222; 1
+! 1 &#222; 0
+
+1 &amp;&amp; 0 &#222; 0
+1 || 0 &#222; 1
+! 2 &#222; 0
+
+1 &amp;&amp; 1 &#222; 1
+1 || 1 &#222; 1
+
+
+logical expressions are non-strict, e.g.,
+
+
+
+0 &amp;&amp; 1/0 &#222; 0
+1 || 1/0 &#222; 1
+
+
+programs
+
+
+
+void main(void) { statements }
+
+
+&iuml; all programs have this general form.
+
+
+&iuml; statements are commands that direct
+the computer to do something.
+
+
+&iuml; the statements are executed from left to right
+in order.
+
+
+&iuml; the program stops after executing the last
+statement.
+
+output
+
+
+
+printf( format, expressions );
+
+
+&iuml; this is the only statement you need for now.
+
+
+
+&iuml; prints output to a destination, usually a
+window on the screen.
+
+
+&iuml; format is a quoted string giving the
+desired form of the output.
+
+
+&iuml; expressions are the things to be printed.
+
+
+
+&iuml; if there are no expressions, format
+is just a constant string to be output.

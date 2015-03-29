@@ -1,0 +1,50 @@
+program 1 - interactive lines and curves 
+
+
+
+ program 1 - interactive lines and curves 
+
+
+
+ due - october 1 
+
+
+
+you are to create an interactive program for drawing and erasing line
+segments, circles, and quadratic curves using bresenham's line and
+circle drawing algorithms and the recursive bezier/b-spline curve
+algorithm given in class.  line segments should be specified by giving
+two endpoints on the screen using a mouse.  circles can be specified
+with a center and a point on the circle, or by two points defining a
+diameter (or by another means if you prefer).  quadratic curves should
+be specified as a polyline, that is, as a sequence of control points
+given by the mouse.  there must be at least three control points
+provided.  if there are more than three, then new implicit control
+points must be generated to provide the correct number.  for instance,
+for four control points input, a new point midway between the second
+and third control point must be created as the shared control point
+for two consecutive parabolic segments.  for more than four, generate
+this new control point midway between the second and third control
+points, then generate another one midway between the third and fourth
+control points, etc. until you have split every original line segment
+between input control points except the first and last in half with
+the new, generated control points.  you will then have a set of
+control points which can be used to draw a smooth quadratic curve
+fitting the entire sequence of control points.
+
+
+
+do not use floating point arithmetic for drawing any of these primitives.
+
+
+
+you should be able to erase any primitive by selecting one of its control
+points in addition to doing the drawing specified above.
+
+
+
+your program should be implemented as a tcl/tk widget or equivalent.
+it should be able to handle window expose and resize events and to
+redraw all the primitives at a user's command.  you should not try to
+eliminate holes created in the drawing by any means other than allowing
+the user to redraw.

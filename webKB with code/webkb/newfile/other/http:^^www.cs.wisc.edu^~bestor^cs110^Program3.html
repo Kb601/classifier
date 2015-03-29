@@ -1,0 +1,156 @@
+cs 110 section 2 - program #3
+
+
+
+
+ program #3 - grading program
+
+
+
+
+   due date:
+   wednesday 5/1/96, 8:50 am
+
+   grade:
+   25% of your final grade.
+
+   text covered:
+   chp. 1, 2, 3, 4 and 5
+
+   problem description:
+   suppose you are a ta for cs 123 - introductory problem solving, a one-credit pass/fail course that is graded off four programming assignments.  to save time in computing the final grades for your class you decide write a computer program to help you.  the data for each student in the class is stored in two files.  the first file contains the name and id number of each student.  the second file contains the id number and assignment scores for each student.  your program will read in these two files and write a table to a third results file showing each student's name, id number, average and final grade.
+
+
+
+
+
+
+this is a typical file processing problem.  it is non-interactive because the user does not type in anything at the keyboard - all the necessary input comes from files that are already on disk.  the user also does not see any results on the screen because the results file is also written directly to disk.  file processing programs can be difficult to debug because they are non-interactive and its hard to determine exactly where the error(s) occurr.
+
+this assignment is non-trivial so i would strongly suggest starting it as soon as possible.
+
+   student data file format:
+   the name and id number of each student is stored on a single line in the student data file in the following format:
+   
+column    data                variable type
+------    ----                -------------
+1-20      name                character *20
+21-30     id number           character *10
+   
+   
+   for example,
+   
+clark kent          1679689152
+gareth bestor       3912232504
+   
+   
+
+   i have created an example student data file which you should use to test your program, called "r:\public\bestor\cs110\students.txt".  you may want to print off this file to check that your program is producing the correct results.
+
+   assignment scores file format:
+   the programming assignment scores for each student are stored on a single line in the scores data file.  the first item on each line is the student's id number followed by four real numbers, one for each assignment, in the following format:
+   
+column    data                variable type
+------    ----                -------------
+1-10      id number           character *10
+11-15     assignment #1       real
+16-20     assignment #2       real
+21-25     assignment #3       real
+26-30     assignment #4       real
+   
+   
+   for example,
+   
+391223250479.2592.3383.7595.00
+167968915296.5925.8255.9192.90
+   
+   
+   i have created an example assignment scores file which you should use, called "r:\public\bestor\cs110\scores.txt".  you may want to print off this file also.
+
+   results file:
+   the purpose of your program is to write a table to the results file summarizing all the assignment scores and final grades for each student (note: this table is not printed on the screen).  the table must show the name, id number, assignment scores, average and final grade for every student.  all averages should be displayed rounded to two decimal places.
+
+   you may display this information in any format you like but the resulting table must be neat with all the columns lining up and everything appropriately labelled.  for example,
+   
+name                 id number  prog1 prog2 prog3 prog4  avg  grade
+--------------------+----------+-----+-----+-----+-----+-----+-----
+clark kent           1679689152 96.59 25.82 55.91 92.90 67.81  pass
+gareth bestor        3912232504 79.25 92.33 83.75 95.00 87.58  pass
+   
+   
+
+   program design:
+   your program should first open the results file and write any preliminary table headings to it.  then open the student data file and read in the first student.  you must then open up and read through the assignment scores file one line at a time until you find the scores for that student.  after finding their assignment scores compute their average and final pass/fail grade. the final grade is given by:
+   
+fail:  avg = 65.0
+   
+   
+   finally write everything about this student to the results file in the appropriate columns.  after you have finished processing the first student, read in the next student from the student data file and process him or her the same way.  continue processing all the students in this way until you reach the end of the student data file.
+
+   notes:
+   
+      to search through the assignment scores file to find the scores for a particular student you must first open the file and read in the first line.  if the id number of this line matches the id number of the student you are looking for then you have found it.  if the id number does not match then ignore the line and read in the next one until you find one that matches.  after you find a match close the scores file so that you can re-open it again later when you search through it for the next student.
+      all the students listed in the student data file will have one corresponding line in the assignment scores file (i.e. you will always find a match eventually).
+      you do not know ahead of time how many students are in the class (i.e. you do not know the length of either file).
+   
+   
+
+   debugging:
+   to help debug your program you should print messages on the screen whenever anything significant happens. for example, when you read in a student from the student data file print their name and id number. also, when you read in each line from the scores file print that student's id number and whether or not it matches the one you are looking for.  this is a very useful debugging technique and will help you track down bugs if your program crashes. for example,
+   
+read in student clark kent          1679689152
+read in scores for student 3912232504
+read in scores for student 1679689152
+found student! computing average and grade
+writing to results file
+read in student gareth bestor       3912232504
+read in scores for student 3912232504
+found student! computing average and grade
+writing to results file
+   
+   
+
+   demo program:
+   there is a compiled version of my solution available for reference, called "r:\public\bestor\cs110\program3.exe".  you may copy my solution to your own directory and run it to see what sort of debugging messages should be displayed and what the results file should look like.  i encourage you to use my solution to check the output of your program, but obviously do not use it to generate the output that you hand in (i will run your program myself to confirm this).
+
+   skeleton program:
+   there is a skeleton file my solution available to get you started, called "r:\public\bestor\cs110\program3.for".  you should copy my skeleton to your own directory and use it as the basis for writing your program.  the skeleton contains the overall structure of the program and has lots of comments indicating what the different sections of the program do.  add the appropriate statements in the spaces provided and complete the documentation.  this skeleton is intended to give you a head-start on the program and to show you the sort of programming style you should be aiming for.
+
+   what to hand in:
+   hand in this assignment online by copying your fortran source code file (e.g. "program3.for") and the compiled executable file (e.g. "program3.exe") to your handin directory.  you also have to hand in a printed copy of your fortran source code file, your results file and the screen output when your program is run with my two example files.
+
+   gradesheet:
+   the following gradesheet will be used to grade this assignment.  please take a close look at it to make sure you do everything that is required.  note that you will be graded on correct output for the two files i have provided, so before handing it in you must run your program with these files and check that your program gives the same results as my solution.
+
+   
+correct output                                        [20]
+   correctly display student name, id number,   [15]
+     assignment scores, average and final grade
+   correct debugging messages                   [5]
+
+implementation                                        [22]
+   correctly read from student data file        [4]
+   correctly read from scores data file         [4]
+   correctly write to results file              [4]
+   correct use of if/then/else/end if statement [2]
+   correct use of do while/end do loop          [2]
+   correct use of format statement              [2]
+   meaningful variable names                    [2]
+   indenting and neatness                       [2]
+
+documentation                                        [8]
+   program description                          [4]
+   variable definitions                         [4]
+_________________________________________________________
+
+total (25%)                                          [50]
+   
+   
+
+
+
+
+
+
+
+copyright &copy 1996 gareth s. bestor (bestor@cs.wisc.edu).  last modified april 18, 1996.

@@ -1,0 +1,120 @@
+general gofer and lal information
+
+
+
+
+ general gofer and lal information 
+
+ welcome 
+welcome to cs532, semantics of programming languages.  i'm the ta for
+the class, and i also maintain the computers you'll be using for this
+course.  my email address is jones@cs.byu.edu and i promise to
+answer email questions as rapidly as i can.  email is the best way to
+get ahold of me, but if you want to meet with me in person, i'm
+usually in tmcb 3325.
+
+
+this general information page was written by kelly hall who was the last ta
+fro this class and is updated for use this semester.
+
+
+ gofer background 
+
+for this course we'll be using the lazy functional programming
+language gofer.  much of what's in the course materials talks about a
+language called haskell.  gofer is a nice subset of haskell, and
+chances are you won't notice any difference between the book and what
+we've got here.
+
+
+if you hate unix machines, gofer is available for almost any kind of
+computer around.  send me mail for details.  you can easily run this
+on pcs, macs, amigas, sts, whatever.  it will probably even run on the
+y-vax.  the rest of this page will cover running gofer on the lal
+machines; if you run gofer elsewhere, check
+this out
+first.  
+
+ lal machine background  lal machines: if you're reading this
+email, you've probably already logged in to some machine in the lal group.
+there are several lal workstations, and you can log into any of them and
+all of your files will be there.  the machine names are: leopard, panther,
+cheetah, puma, jaguar, lynx, bobcat.  there is also 'lal', but that's just
+a different name for leopard.  use whichever machine you want if all you'll
+be doing is email, gofer, and editing.  for bigger tasks, stay off leopard
+and jaguar.  one is the server, and the other is dr. windley's machine.
+
+
+there are no facist disk quotas on the lal machines.  all i ask is
+that you keep your usage to reasonable levels.  follow this vague
+request and they'll be plenty of resources for everyone.
+
+
+ getting ready for gofer 
+once you log in, make sure you enter the correct terminal type.  the
+standard login script will assume hp, but you will want to type in
+xterm if you're using a standard lal login window.  if you're
+calling in from home, use vt100.  if you're telneting from
+elsewhere, vt100 is a good choice as well.
+
+
+if you forget to set the terminal type when you log in, you can do it
+later by isssuing the command:  export term=xterm  at the
+unix prompt.  of course, if you don't want xterm you can specify
+whatever you want.
+
+
+now that the terminal type is set, make sure you set your default
+editor.  we have emacs, vi, and the vuepad editors available on the
+lal machines.  pick whichever one you want to use with gofer and issue
+the appropriate command below:
+
+  emacs:  export editor=/usr/local/bin/emacs 
+  vi:     export editor=/usr/bin/vi 
+  vuepad:  export editor=/usr/vue/bin/vuepad 
+
+
+
+(clever users will stick these commands into the file
+.profile and forget about this.  note: this is
+.profile and not .login for any of you archaic
+c-shell users.) 
+
+
+ starting and interacting with gofer 
+now you can start up gofer reliably: type the word gofer and
+gofer will start up, print out some information, and prompt you with a
+? character.  at this point, you can enter expressions for
+gofer to evaulate.  or you can issue commands to the gofer program.
+for a list of commands, enter :? whenever you get tired of
+gofer, you can leave it by issuing the command :quit at the
+? prompt.  
+
+the commands you'll probably use most often are :edit and
+:load start up an editor from within gofer by typing
+:edit &lt;filename&gt; where you can replace
+&lt;filename&gt; with the name of a text file (try foo.g).
+this should start up the editor you specified earlier.  add a couple
+of the example expressions from the gofer/haskell tutorial and save
+the file.  
+
+exit your editor and gofer should resume.  load the file you just
+edited by issuing the command :load &lt;filename&gt;
+hopefully there were no errors and gofer will print out the results of
+evaluating the stuff in your file.  in any case, you can go back and
+edit that file again by issuing another :edit
+&lt;filename&gt; command.  this process repeats until you get
+tired of gofer an exit with the :quit command.  
+
+you could just type those expressions straight into gofer to evaluate,
+but then you'd have to type them over and over again whenever you
+started up gofer.  using a editor and a text file lets you save your
+work.
+
+
+ wrap up 
+that's all i have for now.  feel free to send me email, or you can ask
+questions to everyone in the class by using our class mailing list.  
+
+
+ modified by mike jones 9/5/96

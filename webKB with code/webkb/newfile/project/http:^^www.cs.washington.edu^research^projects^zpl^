@@ -1,0 +1,100 @@
+the zpl project
+
+
+
+
+
+
+ 
+ 
+
+
+the zpl project
+
+
+ department of computer science &
+engineering
+ university of 
+washington
+ box 352350
+ seattle, 
+wa
+ 98195-2350 usa
+ zpl-info@cs.washington.edu
+
+
+
+
+
+
+
+
+zpl is a new array-based programming language suitable for most 
+computations that would previously have been written in fortran 77:
+
+
+ zpl programs run fast on sequential and parallel computers, 
+     without modifications, and without special directives. 
+ zpl is machine-independent, so recompilation is all that is 
+     necessary to run a zpl program on a new machine. 
+ zpl's higher level concepts like arrays, borders, etc. eliminate most 
+     of the error-prone indexing and tedious looping typical of f77, c, 
+     etc.
+ zpl programs are shorter, more easily written, and more easily 
+     understood and modified.
+ computer scientists will find new concepts in zpl: regions, 
+    directions, borders, shattered control-flow, etc.
+
+conclusion:  zpl is ideal for new engineering and scientific programs.
+
+walk-through a small zpl program, or write-compile-run a program from your
+machine!
+
+scientific programmers in the area should
+consider enrolling in cse 590zp
+this autumn. 
+
+if you have programmed in zpl before, check out the recent changes in the language.
+
+
+
+
+
+	  
+ project overview
+      a high-level overview of zpl. 
+
+ program walk-through
+      a 10 minute introduction to the language. 
+
+ web-based zpl compiler
+      compile zpl programs via your web browser right now!
+
+ papers
+      papers and manuals about or related to zpl.
+
+ zpl details
+      on-line information and sample programs.
+
+ people
+      project members.
+
+ on the horizon
+      a description of the group's direction and future projects.
+
+ acknowledgments
+      a list of those who have helped support our work.
+
+
+
+ 
+
+ 
+
+[
+zpl | 
+uw cse |
+uw
+]
+
+zpl-info@cs.washington.edu

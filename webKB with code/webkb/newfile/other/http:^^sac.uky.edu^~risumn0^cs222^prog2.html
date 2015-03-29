@@ -1,0 +1,114 @@
+program 2 assignment  page 
+        
+        
+         program 2 assignment   page
+
+
+11/1/96
+
+program 2a:  due fri.  noon  - part-a only
+
+this program will consist of several  parts, with part 2a due fri.
+
+part-a:  due 10/25 at noon
+      you will write three fortran subroutines:
+     1   cmpxmp:  this procedure accepts four real parameters
+and returns two real parameters:
+
+            1) r1in
+            2) i1in
+            3) r2in
+            4) i2in
+            5) r3out
+            6) i3out
+r1in and i1in are the real and imaginary components of a complex 
+number we 
+will call z1.  r2in and i2in are likewise component of z2, r3out and i3out 
+is the 
+output complex number z3.  cmpxmp will calculate z3=z1 * z2.  this is 
+performed as follows:
+
+let z1 be represented as r1+i(i1)or (r1,i1) 
+then z1*z2 = r1*r2-i1*i2 + i(r1*i2+r2*i1) or (  r1*r2-i1*i2, 
+r1*i2+r2*i1 )
+ 
+
+
+
+      2  cmpxad:
+this subprogram also accepts 4 real and returns two real parameters.  it 
+will interpret the first two ( as did cmpxmp) parameters as the real and 
+imaginary components of a complex number z1, and the next two as z2 and 
+the 
+last two as z3.  the procedure will do a complex add of z1 to z2 and 
+return their complex sum in z3.  complex add is defined as follows:
+let z= r+ii
+z1+z2 =(r1+r2) +i(i1+i2)
+
+           
+      3  cmpxmd:  this will accept two real input 
+parameters and 
+return one real output parameter.
+the first two will be the real and imaginary components of a complex 
+number 
+z and the last one will be the return value (a real scalar) which will 
+contain the modulus of z.  modulus is a way of describing the "size" of a 
+complex number.  it is the distance of the point (r, i) from the the 
+origin of the complex plane (the real, imaginary axes).  it is calculated 
+as:
+let z=r+ii be a complex number
+|z|=modulus(z)= sqrt(r^2 + i^2) 
+                
+                 
+
+you should carefully document the program source, using the break 
+subroutine one page 301 of your text as a model.  your external 
+documentation should consist of three sets, one for each subprogram.  you 
+will have1) a description of the subprogram
+                     2) the input parameters and their types
+                     3) the output parameters and their types
+                     4) and a test plan!! 
+
+you will be responsible for writing a driver program to test the 
+subprograms.  this may be done in one program for all the subprograms or 
+you may write separate drivers if you wish.
+
+
+part-b:  due 11/06/96 at midnight
+      you will write three fortran functions and change one of 
+the above subroutines to a function:
+
+1)  modify cmpxmd to be a real function taking two parameters 
+(r1in,i1in).
+2)  write a real function rvalid(min,max, prompt) that prompts 
+the user with "prompt"  (which is a string parameter), then reads a real 
+input, checks that it is greater than min and less than max, if so,returns the 
+real value read, otherwise produces a helpfull error message and repeats the 
+above steps.  min, max are real parameters, prompt is a string.
+3)   write an integer fuction ivalid(min,max, prompt).  this 
+function is exactly the same as 2) above,but min, max and the function are 
+integer.
+4)  write an integer function arrgtr(a,n, value) where 
+:
+real a(*)    ///an array of reals  
+integer n     /// the array size
+real value    /// a real number to be used as a search 
+argument
+this function returns the index (subscript) of the first array member that is 
+> value.  if there is no such element, it returns n+1.  that is, arrgtr 
+returns the subscript i for the first a(i) > value. 
+
+
+only internal documentation is required.  you do need to produce a clear 
+statement of what each function does and provide a clear description of the 
+return value and the input parameters.  you are to provide a driver program to 
+test (i heartily recommend that you produce a test plan, not to be handed in, 
+but to guide you to a complete test of the functions) .  please hand in as a 
+single script file, sent as message text (^r in compose message).
+
+
+
+
+program 2c assignment--almost finished with fortran!
+
+no  more parts to follow.  we are doing some fun stuff now!.

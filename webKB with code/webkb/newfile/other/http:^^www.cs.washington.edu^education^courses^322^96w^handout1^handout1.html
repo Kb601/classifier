@@ -1,0 +1,69 @@
+construction of regular grammars from regular expressions
+
+
+
+
+
+
+
+                 
+ next:    about this document 
+  
+
+construction of regular grammars from regular expressions
+
+
+
+for the purposes of this construction we use regular grammars
+which have productions of the form  and 
+.
+to generate the the empty language no productions are needed.
+to generate the singleton language  just use the two
+productions  and .
+
+for the recursive part of the construction,
+let  and
+ be regular
+grammars which generate the languages defined by the regular
+expression  and , respectively.  we will assume
+that .  given the regular 
+expression  which is built from the regular expressions
+ and  we define a new regular grammar 
+ which
+generates the language defined by .
+there are three cases to consider:
+
+case 1.  .  let  be a new
+non-terminal. 
+  is the start symbol of .
+
+.
+
+.
+
+
+case 2.  . 
+ .
+
+.
+
+ and
+.
+
+
+case 3.  . let  be a new
+non-terminal. 
+  is the start symbol for .
+
+.
+
+
+and .
+ 
+ 
+    about this document ... 
+
+ 
+
+james fix 
+mon jan 22 13:09:21 pst 1996

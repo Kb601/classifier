@@ -1,0 +1,87 @@
+198:205 course information
+
+198:205 course information
+discrete structures i, sections 6 & 7
+professor srinivasan
+
+office: core 324
+phone: 445-2019
+office hours: tuesday 10am - noon
+e-mail: srinivas@cs.rutgers.edu
+
+
+
+ta: john iacono
+
+
+office: hill center, room 371
+phone: 445-4634 ext 23
+office hours: tuesday and thursday 2:00 - 3:30 and by appointment.
+e-mail: iacono@john.rutgers.edu
+
+ grading 
+
+note: there is no curve. a 59 is an f.
+
+
+if (final>90)
+  grade = a;
+else
+  if (final>midterm)
+    grade = 0.8*final + 0.2*homework;
+  else
+    grade = 0.4*final + 0.4*midterm + 0.2*homework;
+
+
+ homework 
+
+homework is due every week at the begining of recitiation. graded homework is given back every week at the end of recitation. to pick up unclaimed homework and midterms please see john iacono during office hours. 
+
+ homework solutions 
+
+note: the following are postscript files. the suggested method of viewing
+and printing
+these files is to run netscape from a unix based system with ghostscript
+installed. for most of you this means running netscape on eden, romulus or
+remus while you are on an x-term in a computer lab. you will not be able
+to view these files from a pc or via aol. if you need help, please see me
+during office hours or after recitation and i can show you in a lab how to 
+view these solutions.
+
+to print the solutions, do not use the print command from ghostscript
+as it is broken and does not work. 
+from netscape, use shift-leftmousebutton to save the homework solution to
+a file. then from a prompt run
+
+lpr -pprinter filename
+
+
+where printer is the printer you wish to print to and filename is the
+file you saved the marked pages as. to see a list of valid printer
+names type printers.
+
+
+homework 1
+homework 2
+homework 3
+homework 4
+homework 5
+homework 6
+homework 7
+homework 8
+homework 9
+homework 10
+
+ grades 
+
+last updated 11/19/96
+
+again, this is in postscript format. look for the last four digits of
+your id number. the roster is two pages long. the number in the
+grade column is 80% midterm and 20% homework.
+view grades.
+
+ final 
+
+the final is on thursday december 19, 8:00 pm - 11:00 pm in cambell
+hall, room a-3, college avenue campus. the test is open book & notes.

@@ -1,0 +1,76 @@
+cs 733: instructions to set up matlab 
+
+
+
+
+cs 733: instructions to set up matlab
+
+ introduction 
+
+most of the assignments for this course will be carried out with the
+aid of matlab, an interactive package for high performance scientific
+computing.  to set up your ``sol'' account to use matlab, the
+following should be carried out.
+
+if logged in directly to a sol (e.g. sol10) then:
+
+at the unix prompt, immediately after you login, carry out the following:
+  
+
+sol10> mkdir matlab
+sol10> cp /u/c/s/cs733-1/public/startup.m  ~/matlab/startup.m
+sol10> xterm -g 80x40 -e matlab &
+
+
+the last command should set up a separate window from in which matlab
+is running.  you can then use your favourite editor in the login
+window to create any `m' files that you might need for your work.  all
+the `m' files that are created by the instructor as well as the
+homework and project data files in the public directory:
+
+
+  /u/c/s/cs733-1/public  
+
+  
+are now available to you for use in matlab. 
+
+for all homework assignments you should hand in your results produced 
+as follows:
+ 
+
+sol10> matlab
+>> diary hwk1.lst
+>> load hwk1 
+>> .....whatever homework 1 requires 
+>> diary off
+>> exit
+sol10> print hwk1.lst
+
+
+remote unix machine users
+
+suppose that the machine you are logged on is not a sol, but is called
+cheddar.  on a cheddar window you do the following:
+
+
+cheddar> xhost +sol10
+
+
+
+in the sol10 window on cheddar:
+
+
+sol10> setenv display cheddar:0
+sol10> matlab
+
+
+ other relevant links 
+
+   
+	introduction to unix at uw
+   matlab primer (cs 412, handout #1, available at macc).
+   
+	matlab home page
+
+
+ this page was updated january 23, 1996.

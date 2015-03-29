@@ -1,0 +1,175 @@
+tara estlin's papers
+
+tara estlin's papers
+
+to view a paper, click on the open book image.  
+
+
+
+
+
+
+
+
+
+
+multi-strategy learning of search control for partial-order
+planning
+tara a. estlin and raymond j. mooney
+
+proceedings of the thirteenth national conference on aritificial intelligence,
+pp. 843-848, portland, or, august, 1996. (aaai-96)
+
+
+most research in planning and learning has involved linear,
+state-based planners. this paper presents scope, a system for learning
+search-control rules that improve the performance of a partial-order
+planner.  scope integrates explanation-based and inductive learning
+techniques to acquire control rules for a partial-order planner.
+learned rules are in the form of selection heuristics that help the
+planner choose between competing plan refinements.  specifically,
+scope learns domain-specific control rules for a version of the ucpop
+planning algorithm. the resulting system is shown to produce
+significant speedup in two different planning domains.
+
+
+
+
+
+
+
+
+
+ integrating ebl and ilp to acquire control rules for planning
+tara a. estlin and raymond j. mooney
+
+proceedings of the third international workshop on
+multi-strategy learning, pp. 271-279, harpers ferry, wv, may
+1996. (msl-96).
+
+
+most approaches to learning control information in planning systems
+use explanation-based learning to generate control rules.
+unfortunately, ebl alone often produces overly complex rules that
+actually decrease planning efficiency.  this paper presents a novel
+learning approach for control knowledge acquisition that integrates
+explanation-based learning with techniques from inductive logic
+programming. ebl is used to constrain an inductive search for
+selection heuristics that help a planner choose between competing plan
+refinements. scope is one of the few systems to address learning
+control information in the newer partial-order planners.
+specifically, scope learns domain-specific control rules for a version
+of the ucpop planning algorithm. the resulting system is shown to
+produce significant speedup in two different planning domains.
+
+
+
+
+
+
+
+
+
+ integrating explanation-based and inductive learning techniques
+to acquire search-control for planning
+tara a. estlin
+
+ph.d. proposal, department of computer sciences, university of texas
+at austin, 1996. 
+
+ 
+planning systems have become an important tool for automating a wide
+variety of tasks. control knowledge guides a planner to find solutions
+quickly and is crucial for efficient planning in most domains.
+machine learning techniques enable a planning system to automatically
+acquire domain-specific search-control knowledge for different
+applications.  past approaches to learning control information have
+usually employed explanation-based learning (ebl) to generate control
+rules.  unfortunately, ebl alone often produces overly complex rules
+that actually decrease rather than improve overall planning
+efficiency.  this paper presents a novel learning approach for control
+knowledge acquisition that integrates explanation-based learning with
+techniques from inductive logic programming. in our learning system
+scope, ebl is used to constrain an inductive search for control
+heuristics that help a planner choose between competing plan
+refinements. scope is one of the few systems to address learning
+control information for newer, partial-order planners.  specifically,
+this proposal describes how scope learns domain-specific control rules
+for the ucpop planning algorithm. the resulting system is shown to
+produce significant speedup in two different planning domains, and to
+be more effective than a pure ebl approach.
+
+future research will be performed in three main areas.  first, scope's
+learning algorithm will be extended to include additional techniques
+such as constructive induction and rule utility analysis.  second,
+scope will be more thoroughly tested; several real-world planning
+domains have been identified as possible testbeds, and more in-depth
+comparisons will be drawn between scope and other competing
+approaches.  third, scope will be implemented in a different planning
+system in order to test its portability to other planning algorithms.
+this work should demonstrate that machine-learning techniques can be a
+powerful tool in the quest for tractable real-world planning.
+
+
+
+
+
+
+
+
+
+  hybrid learning of search control for partial-order planning  
+
+tara a. estlin and raymond j. mooney 
+
+new directions in ai planning, m. ghallab and a. milani, eds,
+ios press, 1996, pp. 129-140.   
+
+
+this paper presents results on applying a version of the dolphin
+search-control learning system to speed up a partial-order planner.
+dolphin integrates explanation-based and inductive learning techniques
+to acquire effective clause-selection rules for prolog programs.  a
+version of the ucpop partial-order planning algorithm has been
+implemented as a prolog program and dolphin used to automatically
+learn domain-specific search control rules that help eliminate
+backtracking. the resulting system is shown to produce significant
+speedup in several planning domains.
+
+
+
+
+
+
+
+
+
+
+  why real-world planning is difficult: a tale of two applications 
+
+steve chien, randall hill, jr., xuemei wang, tara estlin, kristina fayyad, and helen mortenson 
+
+new directions in ai planning, m. ghallab and a. milani, eds,
+ios press, 1996, pp. 287-298.   
+
+
+in this paper we describe a number of obstacles hampering the
+application of planning technology to real-world problems, as
+encountered in two real-world planning projects at jpl: mvp - a
+planning system for automated generation of image processing
+procedures; and lmcoa - an intelligent system for assistance in
+antenna operations.  first, we describe how existing planning
+representation must be enhanced to represent and reason about aspects
+of plans besides goal achievement - resource usage, quality, execution
+time, flexibility, and generality.  second, planning systems must be
+able to fit into a wide range of operational contexts - most planning
+tasks cannot be completely automated, therefore at a minimum the plans
+produced must be easily understandable and modifiable by the users.
+in some cases the user must be intimately involved in the plan
+construction process itself.  third, planning systems must be able to
+compare favorably in terms of software lifecycle costs to other means
+of automation such as scripts or rule-based expert systems.  this
+means that development of intelligent tools and environments to
+facilitate knowledge acquisition, validation, and maintenance are of
+prime importance.  we hope that our description and elucidation of
+these issues will lead to increased work in these areas.

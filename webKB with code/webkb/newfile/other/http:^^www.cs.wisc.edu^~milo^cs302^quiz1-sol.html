@@ -1,0 +1,112 @@
+quiz 1 soultions - cs 302 fall 1996 - section 4
+
+
+
+
+  cs 302
+  fall 1996 - section 4
+ 
+quiz 1 solutions
+
+
+
+   (2 points) briefly define the term "algorithm".
+
+ 
+  i accepted many answers for this question.  the book's definition
+is ``an algorithm is a sequence of precise instructions that leads to a solution.''
+
+ 
+
+   (2 points) state one reason that you might want to use
+       functions in a c++ program.
+
+  
+
+there are many possible answers, some examples are: procedural
+abstraction, breaking a program into simpler parts, code readablity,
+reuseable code, using code that someone else wrote for you, etc.
+
+ 
+       
+   (2 points) state one of the three types of programming errors we
+talked about and describe an example of that type.
+
+ 
+
+the three types are errors are: compile time error, run time error
+and logical error, i also accepted syntax error.  a compile time
+errors is when the compiler can't understand your code, so fails why
+attempting to compile your program.  a run time error is when your
+program fails and crashes when it is executed.  a logical error
+occurs when the program does not report any errors and compile or run
+time, but does not produce the correct results.
+
+ 
+
+   (2 points) declare a variable named "number" of type integer
+and initialize it to be 17.
+
+  
+int number = 17;
+ 
+
+   (2 points) declare a constant named "cm_per_inch" to be 2.54.
+          
+
+const double cm_per_inch = 2.54;
+
+ 
+
+   (5 points) what is the output of the following program?
+
+
+#include&ltiostream.h&gt
+
+int main() 
+{
+  int counter = 3, value = 2;
+  while (counter 
+
+answer:
+
+value is 4
+value is 8
+counter is 4
+value is 16
+value is 32
+counter is 6
+
+
+   (5 points) write a function "calculate_score" which calculates
+and returns one team's score of a football game given the number of
+touchdowns, field goals, and extra points that team scored (in that
+order).  in football touchdowns are worth 6 points, field goals are 3
+points, and each extra points is 1 point.  the score can be calculated
+by summing the number of each type of score multiplied by the value of
+that score.
+
+so for example, using your function, i could write the following code
+segment:
+
+
+int viking_score, packer_score;
+
+// 3 touchdowns, 3 field goals, 3 extra points
+viking_score = calculate_score(3, 3, 3); 
+
+// 3 touchdowns, 0 field goals, 3 extra points
+packer_score = calculate_score(3, 0, 3);
+
+if (viking_score > packer_score) {
+  cout 
+
+write your code for the function below:
+
+
+
+
+int calculate_score(int td, int fg, int ep) 
+{
+  return ((td * 6) + (fg * 3) + ep);
+}

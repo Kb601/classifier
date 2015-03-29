@@ -1,0 +1,150 @@
+eel: an executable editing library 
+
+
+
+
+ 
+
+ eel: an executable editing library 
+eel (executable editing library) is a new c++ library that hides much of
+the complexity and system-specific detail of editing executables.  eel
+provides abstractions that allow a tool to analyze and modify executable
+programs without being concerned with particular instruction sets,
+executable file formats, or consequences of deleting existing code and
+adding foreign code.  eel greatly simplifies the construction of program
+measurement, protection, translation, and debugging tools.  eel differs
+from other systems in two major ways: it can edit fully-linked
+executables, not just object files, and it emphasizes portability across
+a wide range of systems.
+
+ why edit executables? 
+executable editing is widely used for three purposes: emulation,
+observation, and optimization.  an edited executable can emulate features
+that hardware does not provide.  for example, the wisconsin wind tunnel
+architecture simulator drives a distributed, discrete-event simulation of
+a parallel computer from the logical cycle times of processors directly
+executing a parallel program.  the underlying hardware (a sparc processor
+in a thinking machines cm-5) does not provide a cycle counter or an
+efficient mechanism for interleaving computation and simulation.  the
+wind tunnel system edits programs so that they update a cycle timer and
+return control at timer expirations.  similarly, one version of the
+blizzard distributed shared-memory system edits programs to insert
+fine-grain access tests before shared loads and stores. these tests
+permit data sharing at cache-block granularity, which reduces the false
+sharing incurred by page-granularity distributed shared-memory
+systems. in the limit, editing can replace an entire program with
+instructions for a different architecture. translation is used both to
+migrate legacy code to new architectures and to run binaries on other
+systems.
+
+
+another use of executable editing is program observation. profiling and
+tracing tools, such as mips's pixie or qpt, edit executables to record
+execution frequencies or trace memory references. these tools are widely
+used to study program or system behavior and computer architecture . more
+recently, a tool based on eel, active memory, dramatically lowered the
+cost of cache simulation-to a 2-7x slowdown-by inserting cache-miss tests
+before a program's memory references rather than post-processing an
+address trace.
+
+
+finally, executable editing has also been used for global register
+allocation and program optimization.  unlike most compilers, which
+operate on a single file, editing can manipulate an entire program, which
+permits it to perform interprocedural analysis rather than stopping at
+procedure boundaries.
+
+ how eel helps 
+eel provides five major abstractions (c++ class hierarchies) that allow a
+tool to examine and modify an executable: executable, routine, cfg,
+instruction, and snippet.  an executable contains code and data from
+either an object, library, or executable file.  a tool opens an
+executable, examines and modifies its contents, and writes an edited
+version.  an executable primarily contains routines, the second
+abstraction, but also contains non-executable data.  a tool can examine
+and modify routines in any order and place them, and new routines, in the
+edited executable in any order.  eel represents a routine's body with two
+further abstractions: control-flow graphs (cfgs) and instructions.  a cfg
+is a directed graph whose nodes are basic blocks (single-entry,
+single-exit straight-line code sequences) and whose edges represent
+control flow between blocks.  eel provides extensive control-flow and
+data-flow analysis for cfgs.  blocks contain a sequence of instructions,
+each of which is a machine-independent description of a machine
+instruction.  a tool edits a cfg by deleting instructions or adding code
+snippets to blocks and edges.  a snippet encapsulates machine-specific
+foreign code and provides context-dependent register allocation.  eel
+modifies calls, branch, and jumps to ensure that control flows correctly
+in the edited program.
+
+ details 
+eel currently works for sparc processors (running sunos or solaris).
+ports to other systems are in progress.
+
+
+eel is distributed as part of the wisconsin architectural research
+toolset (warts).  warts is available without
+charge for university researchers and is available to other
+researchers for a modest research donation.
+
+
+ tools built with eel
+
+
+
+
+qpt2: a quick profiling and tracing system
+
+
+
+
+instrumenting the solaris kernel.
+
+
+
+
+darrin west and kiran panesar, 
+automatic incremental state saving,
+pads 10.
+
+
+
+ for more information
+
+click here for slides of a talk on eel.
+
+
+an overview paper
+for eel (appeared in the acm sigplan pldi conference, june 1995).
+
+
+another paper
+demonstrating that simple instruction scheduling can hide 20-65% of the cost
+of program instrumentation and that rescheduling legacy code for superscalar
+processors can significantly improve performance.
+
+ related work
+
+
+
+om and atom project at dec wrl (now digital products).
+
+
+
+
+etch tool for editing win32 x86 executables.
+
+
+
+james larus
+computer sciences department
+university of wisconsin
+1210 west dayton street
+madison, wi 53706
+larus@cs.wisc.edu
+608-262-9519
+
+
+
+last modified: sat jun  1 08:09:20 1996 by james larus
+
+  larus@cs.wisc.edu

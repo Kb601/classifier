@@ -1,0 +1,205 @@
+cse 322  
+assignment 4 solution set  
+monday, january 29, 1996
+
+
+
+
+
+
+
+                 
+ next:    about this document 
+  
+
+cse 322  
+assignment 4 solution set  
+monday, january 29, 1996
+
+
+
+ number 36 on page 69.  better yet construct the derivation tree for
+.
+
+
+for the derivations, i'll use the following abbreviations:
+
+&lt;e&gt; means &lt;expression&gt; 
+&lt;se&gt; means &lt;simple expression&gt; 
+&lt;t&gt; means &lt;term&gt; 
+&lt;f&gt; means &lt;factor&gt; 
+&lt;ao&gt; means &lt;adding operator&gt; 
+&lt;mo&gt; means &lt;multiplying operator&gt; 
+&lt;v&gt; means &lt;variable&gt; 
+&lt;ev&gt; means &lt;entire variable&gt; 
+&lt;vi&gt; means &lt;variable identifier&gt; 
+&lt;i&gt; means &lt;identifier&gt; 
+&lt;it&gt; means &lt;identifier tail&gt; 
+&lt;l&gt; means &lt;letter&gt; 
+&lt;uc&gt; means &lt;unsigned constant&gt; 
+&lt;un&gt; means &lt;unsigned number&gt; 
+&lt;ui&gt; means &lt;unsigned integer&gt; 
+&lt;d&gt; means &lt;digit&gt; 
+&lt;ds&gt; means &lt;digits&gt;
+
+also, i'm using the following cfg productions in place of their bnf 
+equivalents:
+
+&lt;unsigned integer&gt;  &lt;digit&gt; | &lt;digit&gt; &lt;digits&gt;  
+&lt;digits&gt;  &lt;digit&gt; &lt;digits&gt;  |    
+&lt;identifier&gt;  &lt;letter&gt; &lt;identifier tail&gt;  
+&lt;identifier tail&gt;  &lt;letter or digit&gt; &lt;identifier tail&gt;   |   
+
+
+
+
+
+
+ the given grammar is unambiguous because there are two leftmost
+derivations for the string ababab:
+
+
+there are two derivation trees for ababab, as well:
+
+
+
+
+-0.75
+
+
+
+
+
+-0.75
+
+
+
+ the ambiguity in the grammar is due to the 
+production.  
+the grammar allows multiple derivation trees of any terminal string that
+can be derived from .
+the following grammar corrects this problem:
+
+intuitively, what this does is force immediate parsing on the left
+side of the string, by forcing the parse to the a productions.  
+a formal argument
+for why this grammar is ambiguous might come
+from the following observation: if we consider any 
+string made up of balanced parenthesis, it can be described uniquely as
+a set of nested parenthesis surrounding some empty or non-empty string
+of balanced parenthesis, concatenated with some empty or
+non-empty string of balanced parenthesis.  this description corresponds 
+exactly to the grammar: the a productions generate the ``nested'' part 
+and the s productions generate the ``concatenated'' part.
+
+
+ use the construction given in class for producing a regular grammar
+from a regular expression to construct a regular grammar which generates
+the language defined by the regular expression .
+
+since we eventually need to generate a unique set of non-terminals for 
+each a and b in the regular expression, we annotate the expression
+with indices: .  these indices aren't
+intended to mean anything, but we'll use them for bookeeping as we develop the grammar.  for each set of productions, we denote any starting symbol
+s as .  if any nonterminal and its productions can be 
+eliminated because it is unreachable from the starting symbol, it is 
+marked with .
+
+
+
+
+
+
+
+
+
+
+
+one grammar for the language described by  is then
+
+where p is given by the productions below:
+
+
+
+ suppose  where  in the given grammar.
+properties i) and ii) can be shown to hold for any such x 
+by (strong) induction on the length of the leftmost derivation of x.
+
+basis: (n=1) suppose  and .  there
+is only one such terminal string x, namely x=ab.  
+ (property i) ,a, and ab are the only prefixes of 
+ab.  for all of these prefixes, the number of a's is at least 
+equal to the number of b's.  
+ (property ii) 
+
+(strong) inductive hypothesis: 
+assume that properties i) and ii) are true for any 
+ where  for all .
+inductive step: from this we need to show i) and ii) for any
+ where .  there are two 
+possibilities for the derivation of x:
+ 
+
+since this is a leftmost derivation, we know that
+that there exist some y and z where 
+.
+this means that  and  where
+k+j=n.  thus y and z have leftmost derivations from s of
+less than n+1 steps, so properties i) and ii) hold for y and z by 
+the induction hypothesis.
+
+(property i) consider any prefix  of x=yz.  there are two 
+possibilities:
+  is a prefix of y.  then 
+ 
+by property i) for y.
+  for some prefix of z, .  
+then  by property i) for z and property ii) for y.
+
+in each case of , the number of a's in  is at least
+the number of b's in .
+
+(property ii) since property ii) holds for y and z we have 
+.
+so the number of a's in x is equal to the number of b's in x.
+
+ 
+we know that there exists some w where
+.
+this means that .
+thus w has a leftmost derivation from s of
+less than n+1 steps, so properties i) and ii) hold for w by the induction
+hypothesis.
+
+(property i) consider any prefix  of x=awb.  there are three 
+possibilities:
+ .  
+in this case, .
+  for some prefix of w, .
+then  
+by property i) for w.
+ .  since property ii) holds for w, we have
+.
+
+in each case of , the number of a's in  is at least
+the number of b's in .
+
+(property ii) since property ii) holds for w we have 
+.
+so the number of a's in x is equal to the number of b's in x.
+
+
+therefore, for any  where , properties
+i) and ii) hold by the principle of strong induction.
+
+ 
+ 
+    about this document ... 
+
+                
+ next:    about this document 
+  
+ 
+
+james fix 
+mon jan 29 17:24:25 pst 1996

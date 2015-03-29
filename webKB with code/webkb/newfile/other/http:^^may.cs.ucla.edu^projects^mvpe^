@@ -1,0 +1,78 @@
+mvpe
+
+
+
+ 
+ 
+
+ 
+ 
+mvpe
+
+
+
+
+
+mvpe
+
+
+
+the maisie visual programming environment (mvpe)
+is an x-windows based graphical front-end for designing parallel
+simulations in maisie, a parallel
+(message-passing) extension of c.  it is written in c++ using motif.
+it is similar in intent to opnet (which simulates networks), and
+sesworkbench.  the primary advantage of mvpe over
+these commercial systems is its direct use of a parallel simulation
+language.
+
+
+
+
+
+features
+
+ entities (entity types) are specified using an extended flow
+chart notation (sample)
+ simulations can be designed hierarchically with arbitrary depth
+ static communication topology is specified graphically
+ automatic code generation, compilation, and execution
+
+among the extensions planned for future releases are:
+
+ automatic partitioning
+ runtime animation
+ metrics collection
+ libraries of predefined entities
+
+the following information is also available.
+
+early prototypes
+1996 csd research review poster abstract
+user's guide
+october '95 arpa/ito site visit -- travler (cs.ucla and arpa only)
+november '96 arpa/ito site visit -- travler (cs.ucla and arpa only)
+
+
+papers
+mvpe: visual design of parallel simulation models
+
+proceedings of the fourth international workshop on modeling, analysis,
+and simulation of computer and telecommunication systems, feb. 1-3, 1996,
+san jose, ca, pp. 227-230.
+
+(gzipped postscript)
+
+abstract: simulation is an increasingly important aspect of network development, and parallelization of these simulations can result in tremendous time/performance improvements.  however, tools for developing and parallelizaing simulations are sadly lacking.  this paper describes mvpe, a visual programming environment for parallel simulation design.
+
+
+
+
+
+this research has been funded as part of the
+wamis and 
+travler projects.
+(contract info)
+
+
+written by richard a. meyer

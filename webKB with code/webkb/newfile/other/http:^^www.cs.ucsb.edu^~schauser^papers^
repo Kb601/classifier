@@ -1,0 +1,242 @@
+publications of klaus e. schauser
+
+
+ publications of klaus e. schauser
+
+
+
+
+    © copyright notice:
+       the documents distributed by this server have been provided by the
+       contributing authors as a means to ensure timely dissemination of scholarly
+       and technical work on a noncommercial basis. copyright and all rights
+       therein are maintained by the authors or by other copyright holders,
+       notwithstanding that they have offered their works here electronically. it is
+       understood that all persons copying this information will adhere to the
+       terms and constraints invoked by each author's copyright. these works
+       may not be reposted without the explicit permission of the copyright
+       holder. 
+
+
+
+
+
+bibliographic entries in bibtex format.
+ 
+
+
+
+
+
+extending the operating system at the user level: the ufo global file system
+a. d. alexandrov, m. ibel, k. e. schauser, and c. j. scheiman
+1997 annual technical conference on unix and advanced computing systems (usenix'97),
+anaheim, january 1997
+
+
+
+
+implementing active messages and split-c for sci clusters
+and some architectural implications
+m. ibel, k. e. schauser, c. j. scheiman, and m. weis
+sixth international workshop on
+sci-based low-cost/high-performance computing (scizzl-6),
+santa clara, ca, september 1996
+
+
+
+
+evaluation of architectural support for global 
+address-based communication in large-scale parallel machines
+a. krishnamurthy, k. e. schauser, c. j. scheiman, r. y. wang, d. e. culler, and k. yelick
+7th international conference on architectural support for programming languages 
+and operating systems (asplos'96),
+cambridge, ma, october 1996
+
+
+
+
+exploiting the capabilities of communications co-processors
+k. e. schauser, c. j. scheiman, j. m. ferguson, and p. z. kolano
+10th international parallel processing symposium (ipps'96),
+honolulu, hi, april 1996
+
+
+
+
+loggp: incorporating long messages into the logp model -
+one step closer towards a realistic model for
+parallel computation
+albert alexandrov, mihai ionescu, klaus e. schauser, and chris scheiman
+7th annual symposium on parallel algorithms and architectures (spaa'95), july 1995
+extended version also appears as technical report
+trcs95-09
+
+
+
+
+how much non-strictness do lenient programs require?
+klaus e. schauser and seth c. goldstein
+to appear in 8th annual conference on functional programming languages
+and computer architecture (fpca'95), june 1995
+
+
+
+
+enabling primitives for compiling parallel languages
+seth c. goldstein, klaus e. schauser, and david e. culler
+third workshop on languages, compilers, and run-time systems for 
+scalable computers (lcr'95), may 1995
+
+
+
+
+experience with active messages on the meiko cs-2
+k. e. schauser and c. j. scheiman
+9th international parallel processing symposium (ipps'95),
+santa barbara, ca, april 1995
+
+
+
+
+separation constraint partitioning - a new algorithm for
+partitioning non-strict programs into sequential threads
+k. e. schauser, d. e. culler and s. c. goldstein
+in proc. principles of programming languages (popl'95),
+san francisco, ca, january 1995
+
+
+
+
+active messages implementations for the meiko cs-2
+k. e. schauser and c. j. scheiman
+technical report trcs-94-25
+university of california, santa barbara, december 1994
+
+
+
+
+compiling lenient languages for parallel asynchronous execution
+k. e. schauser
+phd thesis, computer science division, university of california, berkeley, 
+may 1994
+
+
+
+
+fast parallel sorting under logp: from theory to practice
+d. e. culler, a. dusseau, r. martin, and k. e. schauser
+proceedings of the workshop on portability and 
+performance for parallel processing, (wiley),
+southampton, england, july 1993.
+
+
+
+
+tam - a compiler controlled threaded abstract machine
+d. e. culler, s. c. goldstein, k. e. schauser, and t. von eicken
+journal of parallel and distributed computing,
+july 1993.
+
+
+
+
+optimal broadcast and summation in the logp model
+r. m. karp, a. sahay, e. santos, k. e. schauser
+5th symp. on parallel algorithms and architectures,
+june 1993.
+
+
+
+
+logp: towards a realistic model of parallel computation
+d. e. culler, r. m. karp, d. a. patterson, a. sahay, k. e. schauser, 
+e. santos, r. subramonian, and t. von eicken
+fourth acm sigplan symposium on principles and practice 
+of parallel programming,
+san diego, ca, may 1993.
+
+
+
+
+evaluation of mechanisms for fine-grained parallel programs in the 
+j-machine and the cm-5
+e. spertus, s. c. goldstein, k. e. schauser, t. von eicken, 
+d. e. culler, and w. j. dally
+proc. of the 20th int'l symposium on computer architecture,
+san diego, ca, may 1993.
+
+
+
+
+two fundamental limits on dataflow multiprocessing
+d. e. culler, k. e. schauser, and t. von eicken,
+proceedings of the ifip wg 10.3 working conference 
+on architectures and compilation techniques for fine 
+and medium grain parallelism, 
+orlando, fl, jan. 1993.
+
+
+
+
+global analysis for partitioning non-strict programs 
+into sequential threads
+k. r. traub, d. e. culler, and k. e. schauser
+proc. of the acm conf. on lisp and functional programming,
+june 1992.
+
+
+
+
+active messages: a mechanism for integrated communication
+  and computation
+t. von eicken, d. e. culler, s. c. goldstein, and k. e. schauser
+proc. of the 19th int'l symposium on computer architecture,
+gold coast, australia, may, 1992.
+
+
+
+
+empirical study of dataflow languages on  the cm-5
+d. e. culler, s. c. goldstein, k. e. schauser, and t. von eicken
+proc. of the dataflow workshop, 19th int'l symposium on computer architecture,
+gold coast, australia, may, 1992.
+
+
+
+
+evaluation of a stall cache: 
+an efficient restricted on-chip instruction cache
+k. asanovi\'c, 
+k. e. schauser, david a. patterson, edward h. frank
+proceedings 25th hawaii international conference on system sciences
+january, 1992.
+
+
+
+
+compiler-controlled multithreading for
+lenient parallel languages
+k. e. schauser, d. e. culler, and t. von eicken
+proceedings of the 1991 conference on
+functional programming languages and computer architecture,
+cambridge, ma, august, 1991.
+
+
+
+
+compiling dataflow into threads
+k. e. schauser
+master's thesis, computer science division,
+university of california, berkeley,
+july 1991.
+
+
+
+
+fine-grain parallelism with minimal hardware support:
+  a compiler-controlled threaded abstract machine
+d. culler, a. sah, k. e. schauser, t. von eicken, and j. wawrzynek
+proc. of 4th int. conf. on architectural support for
+programming languages and operating systems,
+santa-clara, ca, april, 1991.

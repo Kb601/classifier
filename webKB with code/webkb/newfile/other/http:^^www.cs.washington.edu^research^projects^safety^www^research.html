@@ -1,0 +1,165 @@
+software safety (uw) -- research
+
+
+
+
+
+
+
+
+
+  
+
+      our research is currently centered on building a cad environment for
+      safety-critical software.  the development environment contains a set
+      of support and analysis tools that work on system and software 
+      specifications written in a language that we believe will support 
+      communication among the various development groups, including system
+      engineers, software engineers, application experts, and human factors
+      (cognitive) engineers. 
+
+      the specification language, rsml (requirements state machine language),
+      has a formal foundation and is suitable for automated analysis, but 
+      we have also found it to be readable by application experts with little 
+      training and minimal mathematical background.  one unique aspect of 
+      our approach is that the analysis is performed directly on the system 
+      specification.  most approaches to formally evaluating systems
+      require the extra and often difficult step of translating the system 
+      design into a mathematical modeling language.  our executable 
+      model/specification  is  the system specification, and the 
+      identified hazards and their control requirements are traceable (in 
+      both directions) from the early preliminary hazard identification 
+      through to design and implementation.  as the system development 
+      proceeds, analyses and evaluations can be performed that are 
+      appropriate to the particular development stage.  for more information, 
+      see the original rsml paper, requirements
+      specification for process-control systems.  a paper on the updates
+      to rsml is in preparation. 
+
+      rsml was originally developed to specify the system requirements for
+      tcas ii (an aircraft collision avoidance system).  since that
+      first demonstration of our approach to a real system, we have been
+      extending the modeling language to include intent and design rationale,
+      improving the readability and usability of the models, and developing
+      a suite of automated tools to assist in evaluating the 
+      model/specification for safety.  the major changes to rsml are being
+      made to assist in dealing with the complexity of real systems. 
+      because understanding the specification is crucial for human detection
+      of errors, we are also experimenting with various types of 
+      visualization techniques to assist the analyst in understanding the 
+      model and the analysis results.  
+
+      our approach to safety evaluation is based on system safety engineering
+      concepts.  we use standard safety engineering approaches and extend 
+      them to deal with software and human error, and we use automation
+      to enhance our ability to cope with complex systems. identification, 
+      classification, and evaluation of hazards is done using modeling and 
+      analysis.  to be effective, these models and analysis tools must 
+      consider hardware, software, and human components.  they also need 
+      to include a variety of analysis techniques and orthogonal 
+      approaches: there exists no single safety analysis or evaluation
+      technique that can handle all the aspects of complex systems.
+
+      the safety analysis tools we currently are prototyping and evaluating 
+      include:
+
+      
+	simulator. rsml specifications can be executed using
+            analyst-supplied scenarios or test cases.  the simulator is 
+            operational but we
+            have a few limitations on the language that we need to relax.
+	    
+	    
+	backward simulation and fault tree generation. backward
+	    simulation starts at a particular system configuration and
+	    identifies the paths that could have led to
+            that configuration.  starting with a particular hazard, the
+            analyst can use backward simulation to determine whether this 
+            hazard could occur and how.  information about the states
+            preceding a hazard can be used to eliminate the hazard from the
+            design.  the results of this backward analysis can be presented 
+            in the form of a fault tree.
+	    
+
+	consistency and completeness checking. this tool
+	    checks rsml specifications for two properties: (1)
+            completeness with respect to a set of criteria related to 
+            robustness (a response is specified for every possible input and
+            input sequence) and (2) consistency (the specification is free
+            from conflicting requirements and undesired nondeterminism). 
+            the method scales up to large systems by decomposing the 
+            specification into smaller, analyzable parts and then using
+            functional composition rules to ensure that verified properties
+            hold for the entire specification.  the tool has been used on
+            the tcas specification and others.  for more information, see
+	    our paper titled completeness and consistency
+	    analysis of state-based requirements.  
+
+	deviation analysis.
+	    deviation analysis is a new safety analysis technique to aid in
+            identifying specified behavior that may lead to hazardous system
+            states.  the procedure is based on the underlying systems theory
+            that accidents are caused by deviations in system paramenters.
+            using a formal software or system requirements specification,
+            the analyst provides assumptions about particular deviations in
+            software inputs and the procedure automatically generates the 
+            scenarios in which the analyst's assumptions lead to deviations 
+            in identified safety-critical outputs.  software deviation 
+            analysis incorporates many of the beneficial features of hazop 
+            but automates this manual hazard analysis technique and extends 
+            it to handle the complexity and logical nature of computer software.
+	    
+
+	deviation analysis interface
+            a gui to aid in the use of software deviation anlaysis.
+	     
+		
+
+	human-computer interface safety analysis.
+            these tools are still under development, but our goal is to
+            extend rsml to include the human-computer interface and to
+            apply hazard analysis techniques to this augmented model.
+	    
+
+        timing analysis.  with professor alan shaw, we are
+            exmining how to add timing analysis tools to our toolset.
+	    
+      
+
+      
+      
+      
+      a screen snapshot of the requirements engineering environment.
+      
+
+      the requirements engineering environment supports or will support:
+
+      
+	a graphical user interface for creating,
+	    editing, and browsing specifications.  
+	    
+	graphical and textual interfaces to each of the
+	    analysis methods listed above.  this affords interactive
+	    exploration as well as automated batch processing.
+	    
+	both graphical and textual
+	    specification representations.  
+	    
+	a pretty printer that produces printed specifications.
+	    
+      
+
+      in addition to tcas ii, we have several other realistic test beds
+      for our analyses and toolkit.  these include an model of an
+      automated highway system from the ucb path project, an aircraft
+      flight guidance system from nasa ames, and a nasa robot. 
+
+      planned:
+      
+	human-computer interface analysis.
+	improved and new hazard analysis techniques.
+	testing tools.
+	more completeness analyses.
+	timing analysis.
+	improved modeling language.
+	demonstration on part of the u.s. air traffic control system.

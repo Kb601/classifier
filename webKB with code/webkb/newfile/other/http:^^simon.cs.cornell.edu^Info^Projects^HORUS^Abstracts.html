@@ -1,0 +1,505 @@
+abstracts of the horus papers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+abstracts
+
+
+
+
+software for reliable networks
+kenneth p. birman and robbert van renesse
+scientific american, may, 1996
+
+the failure of a single program on a single computer can sometimes crash a 
+network of intercommunicating machines, causing havoc for stock exchanges, 
+telephone systems, air-traffic control and other operations. two software
+designers explain what can be done to make networks more robust. 
+
+
+
+
+horus, a flexible group communication system
+robbert van renesse, kenneth p. birman and silvano maffeis
+communications of the acm, april 1996.
+
+the emergence of process-group environments for distributed computing
+represents a promising step towards 
+robustness for mission-critical distributed applications.
+process groups have a ``natural'' correspondence with data or services 
+that have been replicated
+for availability, or as part of a coherent cache.
+they can been used to support highly available security
+domains. and, group mechanisms fit well with an emerging generation of
+intelligent network and collaborative work applications.
+
+
+
+
+masking the overhead of protocol layering
+robbert van renesse
+proceedings of the 1996 acm sigcomm conference
+stanford, september 1996
+
+layering of protocols has been advocated as a way of dealing with the
+complexity of computer communication.
+it has also been criticized for its performance overhead.
+in this paper, we present some insights in the design of protocols, and
+how these insights can be used to mask the overhead of layering, in a
+way similar to client caching in a file system.
+with our techniques, we achieve an order of magnitude improvement in
+end-to-end message latency in the horus communication framework.
+over an atm network, we are able to send and deliver messages of varying
+levels of semantics in about 85 microseconds, using a protocol stack of
+four layers that were written in ml, a high-level functional language.
+
+
+
+
+using group communication technology to implement a reliable and
+scalable distributed in coprocessor
+roy friedman and ken birman
+september 1996
+
+in this paper we explore the use of group communication technology,
+developed in the horus project, to implement a reliable and scalable
+distributed in coprocessor.
+the proposed implementation can handle up to 20,000 calls per second
+with 12 computing nodes, can tolerate a single node failure or recovery,
+and can recover from periods of overload.
+
+-->
+
+
+
+world wide failures
+werner vogels
+proceedings of the acm sigops european workshop, connamoran, ireland,
+september 1996 
+
+the one issue that unites almost all approaches to distributed computing
+is the need to know whether certain components in the system have failed or
+are otherwise unavailable. when designing and building systems that
+will need to function at a global scale, failure management will need to
+be considered a fundamental building block. this paper describes the 
+development of a system-independent failure management servcies, which allows
+systems and applications to incorporate accurate detection of failed
+processes, nodes and networks without the need for making compromises in their
+particular design.
+
+
+
+
+a framework for protocol composition in horus
+
+robbert van renesse, kenneth p. birman, roy friedman, 
+mark hayden, and david a. karr
+august 1995
+
+the horus system supports a communication architecture that treats
+protocols as instances of an abstract data type.
+this approach encourages developers to
+partition complex protocols into simple microprotocols, each of which
+is implemented by a protocol layer.
+protocol layers can be stacked on top of each
+other in a variety of ways, at run-time.
+first, we describe the classes of protocols that can be supported this way.
+next, we present the horus object model that we designed for
+this technology, and the interface between the layers that makes it all
+work.  we then present an example layer that implements a group
+membership protocol.  next, we show how, given a set of required properties,
+an appropriate stack can be constructed.  we look at an example stack of
+protocols, which provides fault-tolerant, totally ordered communication
+between a group of processes.
+the work contributes a standard framework for protocol development and
+experimentation, provides a high performance implementation of the
+virtual synchrony model, and introduces a methodology for increasing the
+robustness of the protocol development process.
+
+
+trading consistency for availability in distributed systems
+roy friedman and  ken birman
+tr96-1579
+april 8, 1996
+
+this paper shows that two important classes of actions, non left commuting 
+and strongly non commuting, cannot be executed by concurrent partitions in 
+a system that provides serializable services. this result indicates that 
+there is an inherent limitation to the ability of systems to provide services 
+in a consistent manner during network partitions.
+
+
+deciding in partitionable networks
+roy friedman,  idit keidar,  dalia malki,  ken birman and  danny dolev
+tr95-1554
+november 27, 1995
+
+motivated by chandra and toueg's work, we study decision protocols in a 
+model that closely approximates ``real'' distributed systems. our results 
+show how the weakest failure detector and associated consensus algorithm 
+can be adapted to a network in which omission failures can occur during 
+periods when processes suspect one-another as faulty. for protocols in 
+which a majority subset of the participants can reach decisions on behalf 
+of the system as a whole, we also characterize a series of stages that 
+necessarily arise during execution. jointly, these findings establish a 
+direct relationship between an extended version of the three-phase commit 
+protocol, which makes progress even when a traditional three-phase commit 
+would block, and the consensus protocol of chandra and toueg. although we 
+do not explore the linkage here, our results should also be applicable to 
+other agreement protocols for systems of this sort, such as leader election 
+and dynamic group membership.
+
+
+
+
+strong and weak virtual synchrony in horus
+ roy friedman and  robbert van renesse
+ august 24, 1995
+ 
+  a formal definition of {\em strong virtual synchrony}, capturing the
+  semantics of virtual synchrony as implemented in horus, is
+  presented. this definition has the nice property that every message
+  is delivered within the view in which it was sent. however, it is
+  shown that in order to implement strong virtual synchrony, the
+  application program has to block messages during view changes. an
+  alternative definition, called {\em weak virtual synchrony}, which
+  can be implemented without blocking messages, is then presented.
+  this definition still guarantees that messages will be delivered
+  within the view in which they were sent, only that it uses a
+  slightly weaker notion of what the view in which a message was sent
+  is. an implementation of weak virtual synchrony that does not block
+  messages during view changes is developed, and it is shown how to
+  use a system that provides weak virtual synchrony even when strong
+  virtual synchrony is actually needed. to capture additional ordering
+  requirements, the definition of {\em ordered virtual synchrony} is
+  presented. finally, it is discussed how to extend the definitions in
+  order to cope with the fact that a process can become a member of
+  more than one group.
+
+
+
+packing messages as a tool for boosting the 
+performance of total ordering protocols 
+ roy friedman and  robbert van renesse
+ july 07, 1995
+ 
+  this paper compares the throughput and latency of four protocols
+  that provide total ordering. two of these protocols are measured
+  with and without message packing. we used a technique that buffers
+  application messages for a short period of time before sending them,
+  so more messages are packed together. the main conclusion of this
+  comparison is that message packing influences the performance of
+  total ordering protocols under high load overwhelmingly more than
+  any other optimization that was checked in this paper, both in terms
+  of throughput and latency. this improved performance is attributed
+  to the fact that packing messages reduces the header overhead for
+  messages, the contention on the network, and the load on the
+  receiving cpus.
+
+
+using virtual synchrony to develop efficient fault tolerant
+distributed shared memories 
+ roy friedman
+ march 31, 1995
+ 
+  this paper shows how to define consistency conditions for
+  distributed shared memories in virtually synchronous environments.
+  such definitions allow to develop fault tolerant implementations of
+  distributed shared memories, in which during normal execution,
+  operations can be performed very efficiently, and only those
+  operations which take place during a configuration change must be
+  delayed. three well known consistency conditions, namely,
+  linearizability, sequential consistency, and causal memory, are
+  redefined for virtually synchronous environments. it is then shown
+  how to provide efficient fault tolerant implementations for these
+  definitions.
+
+
+protocol composition in horus
+ robbert van renesse and  kenneth p. birman
+march 29, 1995
+
+ horus is a communication architecture that treats a protocol as an
+ abstract data type. protocol layers can be stacked on top of each
+ other in a variety of ways, at run-time. this paper starts out with
+ describing the many classes of protocols that can be supported this
+ way. next, we describe the horus object model that we designed for
+ this technology, and the interface between the layers that makes it
+ all work. we then present an example layer which implements a group
+ membership protocol. then, we look at a example stack of protocols,
+ which provides fault-tolerant, totally ordered communication between a
+ group of processes. we conclude with presenting some remaining
+ challenges in our project.
+
+
+horus: a flexible group communications system
+robbert van renesse,  kenneth p. birman,  bradford b. glade,  katie
+guo,  mark hayden,  takako hickey,  dalia malki,  alex vaysburd and
+werner vogels
+march 23, 1995
+
+the horus system offers flexible group communication support for
+distributed applications. it is extensively layered and highly
+reconfigurable, allowing applications to only pay for services they
+use, and for groups with different communication needs to coexist in a
+single system. the approach encourages experimentation with new
+communication properties and incremental extension of the system, and
+enables us to support a variety of application-oriented interfaces.
+
+
+achieving critical reliability with unreliable components and
+unreliable glue
+ mark hayden and  kenneth p. birman
+ march 14, 1995
+ 
+  even the most aggressive quality assurance procedures yield at best
+  probabilistic confidence in the reliability of complex systems.
+  distributed systems, because of their large numbers of components,
+  are enormously complex engineering artifacts, and hence may appear
+  to be inherently unreliable -- despite the best efforts of
+  researchers and developers. a cellular distributed systems
+  architecture offers the hope of drastically improving the
+  reliability of current technologies in settings where reliability is
+  critical. the approach combines a stateful style of distributed
+  computing within cells with a loosely coupled probabilistic
+  inter-cell computing model based on a probabilistic broadcast
+  primitive. we give an implementation of this primitive, called
+  pbcast, and demonstrate how to use it to implement this methodology.
+  our approach is compatible with the use of popular distributed
+  computing and reliability technologies, while offering considerable
+  isolation against the spread of failures among cells.
+
+preserving privacy in a network of mobile computers
+ david a. cooper and  kenneth p. birman
+ march 03, 1995
+ 
+  even as wireless networks create the potential for access to information 
+  from mobile platforms, they pose a problem for privacy. in order to 
+  retrieve messages, users must periodically poll the network. the 
+  information that the user must give to the network could potentially be 
+  used to track that user. however, the movements of the user can also be 
+  used to hide the user's location if the protocols for sending and 
+  retrieving messages are carefully designed. we have developed a 
+  replicated memory service which allows users to read from memory without 
+  revealing which memory locations they are reading. unlike previous 
+  protocols, our protocol is efficient in its use of computation and 
+  bandwidth. in this paper, we will show how this protocol can be used 
+  in conjunction with existing privacy preserving protocols to allow a 
+  user of a mobile computer to maintain privacy despite active attacks.
+
+
+incorporating system resource information into flow control
+ takako m. hickey and  robbert van renesse
+february 27, 1995
+
+ upcall-based distributed systems have become widespread in recent
+ years. while upcall-based systems provide some obvious advantages,
+ experiences with these systems have exposed unanticipated problems of
+ unpredictability and inefficiency. incorporating system resources
+ information into flow control is essential in solving these problems.
+ variants of window-based flow control suitable for distributed systems
+ are investigated. next, message packing, which improves network
+ bandwidth usage efficiency, and, consequently, message throughput, is
+ presented. finally, a back pressure mechanism which controls admission
+ of messages into the system by blocking applications at high load is
+ presented. the combination of the window mechanism and the back
+ pressure mechanism provides end-to-end management of system resources.
+ the former manages network resources, while the latter manages
+ operating system resources. the combination maintains good throughput
+ even under high load.
+
+design and performance of horus:
+a lightweight group communications system
+robbert van renesse, takako m. hickey, and kenneth p. birman
+december 1994
+
+the horus project seeks to develop a communication system addressing
+the requirements of a wide variety of distributed applications.
+horus implements the group communications model providing
+(among others)
+unreliable or reliable fifo, causal, or total group multicasts.
+it is extensively layered and highly reconfigurable allowing
+applications to only pay for services they use.
+this architecture enables groups with different
+communication needs to coexist in a single system.
+the approach permits experimentation with new communication
+properties and incremental extension of the system, and enables
+us to support a variety of application-oriented interfaces.
+our initial experiments show good performance.
+
+
+support for complex multi-media applications using the horus system.
+
+werner vogels and robbert van renesse 
+
+december 1994.
+
+
+a distributed multi-media application involves more than just protocols
+for the dissemination of video and audio data. as in any other
+distributed application, protocols are necessary that guarantee the
+ consistency, fault-tolerance, and security of shared data objects. the
+horus system offers a framework for buildin g complex distributed
+systems that involve any number of protocols, as well as a variety of
+protocols for the diffe rent aspects of a distributed application
+(including some protocols specific to multi-media applications). we
+believe that
+ this integrated approach is superior to combining different toolkits,
+and illustrate this with a detailed example of an existing
+video-on-demand application.
+
+
+
+
+a security architecture for fault-tolerant systems
+ michael k. reiter,  kenneth p. birman and  robbert van renesse
+june 1993
+
+ process groups are a common abstraction for fault-tolerant computing
+ in distributed systems. we present a security architecture that
+ extends the process group into a security abstraction. integral parts
+ of this architecture are services that securely and fault-tolerantly
+ support cryptographic key distribution using novel techniques. we
+ detail the design and implementation of these services and the secure
+ process group abstraction they support. we also give performance
+ figures for some common group operations.
+
+
+
+
+preserving privacy in a network of mobile computers
+ david a. cooper and  kenneth p. birman
+ october 26, 1994
+ 
+  even as wireless networks create the potential for access to
+  information from mobile platforms, they pose a problem for privacy.
+  in order to retrieve messages, users must periodically poll the
+  network. the information that the user must give to the network
+  could potentially be used to track that user. however, the movements
+  of the user can also be used to hide the user's location if the
+  protocols for sending and retrieving messages are carefully
+  designed. in this paper we will describe a set of protocols that we
+  have developed to allow a user with a mobile computer to communicate
+  without compromising privacy.
+
+
+uniform actions in asynchronous distributed systems
+ dalia malki,  kenneth p. birman,  aleta m. ricciardi and  andre
+ schiper
+ september 08, 1994
+ 
+  we develop necessary conditions for the development of asynchronous
+  distributed software that will perform {\em uniform} actions (events
+  that if performed by any process, must be performed at all
+  processes). the paper focuses on {\em dynamic uniformity}, which
+  differs from the classical problems in that processes continually
+  leave and join the ongoing computation. here, we first treat a
+  static version of the problem (lacking joins), and then extend the
+  results so obtained to also include joins. our results demonstrate
+  that in contrast to consensus, which cannot be solved in
+  asynchronous systems with even a single faulty process, dynamic
+  uniformity can be solved using a failure detection mechanism that
+  makes bounded numbers of mistakes. because dynamic uniformity arises
+  in systems that maintain safety within a ``primary partition'' of a
+  network, our paper provides a rigorous characterization of the
+  framework upon which several existing distributed programming
+  environments are based.
+  
+
+
+understanding partitions and the ``no partition'' assumption
+ aleta m. ricciardi,  andre schiper and  kenneth p. birman
+ june 1993
+ 
+  the paper discusses partitions in asynchronous message-passing
+  systems. in such systems slow processes and slow links can lead to
+  virtual partitions that are indistinguishable from real ones. this
+  raises the following question: what is a ``partition'' in an
+  asynchronous system? to overcome the impossibility of detecting
+  crashed processes in an asynchronous system, our system model
+  incorporates a failure suspector to detect (possibly erroneously)
+  process failures. based on failure suspicions we give a definition
+  of partitions that acccounts for real partitions as well as virtual
+  ones. we show that under certain assumptions about the process
+  behavior, any incorrect failure suspicion inevitably partitions the
+  system. we then show how to interpret the ``absence of partition''
+  assumption.
+
+
+virtually-synchronous communication based on a weak failure
+suspector
+ andre schiper and  aleta m. ricciardi
+ april 1993
+ 
+  failure detectors (or, more accurately, failure suspectors - fs)
+  appear to be a fundamental service upon which to build
+  fault-tolerant, distributed applications. this paper shows that a fs
+  with very weak semantics (i.e. that delivers failure and recovery
+  information in no specific order) suffices to implement
+  virtually-synchronous communication (vsc) in an asynchronous system
+  subject to process crash failures and network partitions. the vsc
+  paradigm is particularly useful in asynchronous systems and greatly
+  simplifies building fault-tolerant applications that mask failures
+  by replicating processes. we suggest a three-component architecture
+  to implement virtually-synchronous communication : 1) at the lowest
+  level, the fs component; on top of it, 2a) a component that defines
+  new views, and 2b) a component that reliably multicasts messages
+  within a view. the issues covered in this paper also lead to a
+  better understanding of the various membership service semantics
+  proposed in recent literature.
+ 
+
+process membership in asynchronous environments
+ aleta m. ricciardi and  kenneth p. birman
+ february 1993
+ 
+  the development of reliable distributed software is simplified by
+  the ability to assume a fail-stop failure model. we discuss the
+  emulation of such a model in an asynchronous distributed
+  environment. the solution we propose, called strong-gmp, can be
+  supported through a highly efficient protocol, and has been
+  implemented as part of a distributed systems software project at
+  cornell university. here, we focus on the precise definition of the
+  problem, the protocol, correctness proofs and an analysis of costs.
+  keywords: asynchronous computation; fault detection; process
+  membership; fault tolerance; process group.
+
+
+comments to
+werner vogels

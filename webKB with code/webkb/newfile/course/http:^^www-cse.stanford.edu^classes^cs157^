@@ -1,0 +1,35 @@
+date: wednesday, 20-nov-96 22:57:02 gmt
+last-modified: tuesday, 09-apr-96 13:17:35 gmt
+content-type: text/html
+content-length: 1222
+
+cs157
+ cs157
+logic and automated reasoning
+description
+
+introduction to logic for computer scientists. an elementary exposition, from a computational point of view, of propositional logic, predicate logic, axiomatic theories, and theories with equality and induction. interpretations, models, validity, proof. automated deduction: polarity, skolemization, unification, resolution, equality. strategies. applications. prerequisite: 109b.
+
+instructor
+	genesereth
+	
+
+other information
+
+	quarters offered (1995/96)
+		
+		autumn (manna) tth 11-12:15
+		
+		spring (genesereth) tth 1:15-2:30
+		summer mw 2:15-3:45
+		
+	units
+		4*
+
+* may be taken for 3 units by graduate students.
+
+	
+last modified: tuesday, april 9, 1996 5:07:33 am
+copyright &#169; 1996, stanford university
+www-cs-education webmaster
+www-cs-education@cs.stanford.edu

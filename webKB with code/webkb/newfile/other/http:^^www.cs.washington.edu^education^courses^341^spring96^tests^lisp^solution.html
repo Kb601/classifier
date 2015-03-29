@@ -1,0 +1,98 @@
+lisp quiz sample solution
+
+
+
+
+
+ postscript picture  
+
+ 
+
+
+ (a)
+ y is 1 
+      y is 8 
+      y is 4 
+
+ (b)
+ 26
+
+ (c)
+ 
+    x = 3 
+    y = 8 
+    z = unbound variable 
+
+  
+
+
+ 
+
+(defun print-negative-numbers (l)
+  (cond ((null l) nil)
+	(t (let ((tmp (car l)))
+	     (when (and (numberp tmp) (> 0 tmp))
+	       (format t "~a~%" tmp))
+	     (print-negative-numbers (cdr l))))))  
+
+
+
+ 
+
+(defun ascending-order-p (l)
+  (cond ((null l) t)
+	(t (ascending-order-p-helper (car l) (cdr l)))))
+
+(defun ascending-order-p-helper (prev l)
+  (cond ((null l) t)
+	(t (let ((new-val (car l)))
+	     (and ( 
+
+
+ 
+
+ (a)
+ 
+
+(defun account-numbers (a-bank)
+  (mapcar #'(lambda (an-acct) (account-number an-acct))
+	  (bank-accounts a-bank)))
+  
+
+ (b)
+ 
+
+(defun find-account (a-bank account-number)
+  (find-if #'(lambda (an-acct) 
+	       (= (account-number an-acct) account-number))
+	   (bank-accounts a-bank)))
+  
+ (c)
+ 
+
+(defun make-interest-payer (a-bank account-number)
+  (let ((the-acct (find-account a-bank account-number)))
+    (cond ((eq nil the-acct) #'(lambda (x) ))
+	  (t #'(lambda (interest)
+		 (setf (account-balance the-acct)
+	  	   (* (+ 1 interest) (account-balance the-acct))))))))
+  
+
+ (d)
+ 
+
+(defun pay-interest (a-bank amount)
+  (mapc #'(lambda (acct-number)
+	    (funcall (make-interest-payer a-bank acct-number)
+		     amount))
+	(account-numbers a-bank)))
+  
+
+
+
+
+
+
+
+
+cse341-webmaster@cs.washington.edu

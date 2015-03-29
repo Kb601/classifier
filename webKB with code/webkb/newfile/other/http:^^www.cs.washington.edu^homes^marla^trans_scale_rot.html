@@ -1,0 +1,153 @@
+:
+
+	image transformations
+
+
+
+
+ image transformations
+translation, scaling, and rotation 
+
+
+these transformations can be applied to an image using the xform programming language and the xlisp-stat and metip programming environment. 
+
+important note: in this programming environment, the lower-lefthand corner of an image corresponds to pixel coordinates (0,0), and the upper-righthand corner of an image corresponds to pixel coordinates (n-1,m-1) where n is the width and m is the height of the image.
+ 
+
+
+translation
+
+
+we translate an image by taking each pixels original coordinates and adding to them a translation amount.  translation can occur in each dimension.  since an image has only 2 dimensions, we can translate in the x and y dimensions.  to translate an image by dx and dy, we compute the pixel value p(x,y) in the destination image by finding the pixel value p'(x', y') in the source image where x' and y' are defined as follows.
+(note: these are mathematical formulas, not lisp expressions).
+
+x' = x + dx 
+y' = y + dy 
+
+the line of code used in xlisp-stat to perform this transformation on a source image source1 is 
+
+(xform '(source1 (+ x  dx) (+ y  dy))) 
+
+where dx and dy are the translation amounts in the x and y dimensions, respectively.  also, notice that dx and dy can be negative values.  the following example translation moves the image 20 units to the right on the x axis and 30 units down the y axis. 
+
+(xform '(source1 (+ x -20) (+ y 30))) 
+
+
+
+ 
+ 
+
+
+
+ 
+
+
+
+scaling
+
+
+we scale an image by taking each pixels original coordinates and multiplying them by a scaling factor.  scaling can also occur in each dimension.  to scale an image by sx and sy, we compute the pixel value p(x,y) in the destination image by finding the pixel value p'(x', y') in the source image where x' and y' are defined as follows.
+(note: these are mathematical formulas, not lisp expressions).
+
+x' = x * sx 
+y' = y * sy 
+
+the line of code used in xlisp-stat to perform this transformation on a source image source1 is 
+
+(xform '(source1 (* x  sx) (* y  sy))) 
+
+where sx and sy are the scaling factors in the x and y dimensions, respectively.  note again that sx and sy can be negative values.  the following illustrates a scaling transformation that stretches the image along the x axis (by a factor of 2) and shrinks the image along the y axis (by a factor of .5).
+
+(xform '(source1 (* x .5) (* y 2))) 
+
+
+
+ 
+ 
+
+
+
+
+ 
+
+
+
+rotation
+
+
+to rotate an image by some angle theta (in radians), we compute the pixel value p(x,y) in the destination image by finding the pixel value p'(x', y') in the source image where x' and y' are defined as follows.
+(note: these are mathematical formulas, not lisp expressions).
+
+x' = (x * cos theta) - (y * sin theta) 
+y' = (x * sin theta) + (y * cos theta) 
+
+the line of code used in xlisp-stat to perform this transformation on a source image source1 is 
+
+(xform '(source1 (- (* x costheta) (* y sintheta)) (+ (* x sintheta) (* y costheta)))) 
+
+before entering this line of code, it is necessary to define sintheta and costheta.  this can be accomplished with the following 2 lines of code. 
+
+(setq costheta (cos theta)) 
+(setq sintheta (sin theta)) 
+
+if instead of radians, you prefer to use degrees, the following 2 lines of code can replace the above 2 lines. 
+
+(setq costheta (cos (/ (* (* theta 2) 3.14) 360))) 
+(setq sintheta (sin (/ (* (* theta 2) 3.14) 360))) 
+
+the following illustrates a rotation transformation that rotates the image 30 degrees from the y axis (clockwise). 
+
+(setq costheta (cos (/ (* (* 30 2) 3.14) 360))) 
+(setq sintheta (sin (/ (* (* 30 2) 3.14) 360))) 
+(xform '(source1 (- (* x costheta) (* y sintheta)) (+ (* x sintheta) (* y costheta)))) 
+
+
+
+
+ 
+ 
+
+
+
+ 
+
+
+
+activities
+
+
+
+multiple transformations
+
+function trans_scale_rot allows you to perform multiple transformations on one source image.  more specifically, it allows you to perform a translation, a scaling, and a rotation on a single image in the specified order.  the function takes five parameters:  the first two parameters, transx and transy, specify the translation amounts; the next two parameters, scalex and scaley, specify the scaling factors; and the last parameter, rottheta specifies the rotation angle in degrees.  the function template follows.  
+
+(trans_scale_rot transx transy scalex scaley rottheta)
+
+the following line of code illustrates the application of this function to an image.  the image is first translated 50 units right on the x axis and 50 units up on the y axis.  it is then scaled by a factor of .5 in the x and y direction (shrinking the image to 1/4 its original size).  finally, the image is rotated 30 degrees clockwise from the y axis.
+
+(trans_scale_rot -50 -50 2 2 30)
+
+in order to use this function, you must first open three windows by selecting "child" from the windows menu.  then tile the windows by selecting "tile" from the windows menu.  the function trans_scale_rot will now put the translated image in window 1, the translated and scaled image in window 2, and the translated, scaled, and rotated image in window 3.  try using different parameters to the function, and see how they change the resulting images.
+
+
+guessing game
+
+find a partner, and have one person be the coder and the other person be the guesser.  while the guesser is looking away from the computer screen, the coder enters either a single transformation or multiple transformations (as defined above).  after the transformed image is computed, the guesser must try to determine what transformation(s) were used to create the resulting image.  you may wish to switch roles as the game progresses, and find some way of scoring how close the guesser gets to the actual transformations the coder entered.
+
+
+ 
+
+
+
+applications
+
+
+many electronic games require you to visualize a shape after it has undergone a given transformation.  for example, the following might be a mental scenario of someone playing tetris:  "well, if i move this to the left 3 units, and rotate it once, it will fit in that spot."  the first operation performed was a translation along the x axis by 3 units, and the second operation was a rotation by 90 degrees.  and you thought you were just playing a game! 
+
+geometric transformations also have important real world applications.  for example, an architect may visually apply transformations to some object, say a beam, to figure out its best position in some design.  if the beam isn't quite long enough to fill a gap, it may need to be scaled to increase its length (of course, this can only be done during the design process on a computer or paper, since we are all aware that you can't stretch a real beam.).  
+
+what other applications can you think of for geometric transformations?
+
+ 
+
+this tutorial was created by marla baker (marla@cs.washington.edu)

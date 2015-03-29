@@ -1,0 +1,77 @@
+professor randy y. c. chow home page
+
+
+
+
+ 100) {
+                seed--;
+                var cmd="scroll_welcome(" + seed + ")";
+                timertwo=window.settimeout(cmd,100);
+        }
+        else if (seed  0) {
+                for (c=0 ; c 
+
+
+
+
+ click here for a personal message
+randy y. c. chow
+professor ,
+department of computer & information science & engineering
+university of florida, gainesville
+
+
+
+
+e-mail : chow@cis.ufl.edu
+phone : (352) 392-1487
+
+
+room 301, cse building
+university of florida
+gainesville, fl 32611
+
+
+
+ this page is still under construction. if you can not find information you need in here, please send  me an e-mail.
+
+
+
+
+ current teaching
+
+   cop 5615 : operating system principles 
+
+
+ current research
+
+  computer and communication network security 
+
+
+ my resume
+
+my new book
+
+  distributed operating systems and algorithms
+
+
+ members of the computer security research group
+
+  richard newman-wolfe &lt nemo@cis.ufl.edu &gt , assistant professor
+  hyun park &lt hp0@cis.ufl.edu &gt , graduate student
+  jing jong &lt jz0@cis.ufl.edu &gt , graduate student
+  hsiao-yang cheng &lt sycheng@cis.ufl.edu &gt , graduate student
+  john robert selbie &lt jselbie@cis.ufl.edu &gt , graduate student
+  ozzie r. sabina &lt ors@cis.ufl.edu &gt , graduate student
+
+
+ points of interests
+
+  chinese (taiwanese) student association
+  gemini computer inc.
+
+
+
+
+last revised : 3/15/96
+please e-mail to chow@cis.ufl.edu if you have any questions.

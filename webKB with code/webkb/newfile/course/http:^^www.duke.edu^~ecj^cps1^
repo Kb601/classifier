@@ -1,0 +1,347 @@
+cps 1 home page
+
+
+
+
+duke university
+computer science 1
+ [ general info |
+	announcements |
+	grading policies |
+	schedule/handouts |
+	labs |
+	grades ]
+
+
+
+general information
+instructor
+alan biermann
+awb@cs.duke.edu
+d213 levine science research center
+
+lectures
+levine science research auditorium
+1:10-2:00, mwf
+lab sessions as scheduled in north building 130
+
+office hours
+click here for a schedule.
+
+teaching assistants
+graduate ta:
+steve myers
+myers@cs.duke.edu
+
+head undergraduate ta:
+eric jewart
+309-2709
+ecj@acpub.duke.edu
+
+lab tas: click here.
+
+textbooks
+great ideas in computer science by a.biermann, mit press(note: instructor's manual with answers is on reserve in perkins)
+    turbo pascal version 7.0, borland international, inc.
+    recommended for students who have difficulties in the course: study guide by wes ulm
+    operating systems and networking notes
+
+
+central theme
+what computers are, how they work, what they can do, and what they cannot do, now and in the future.
+
+
+course outline
+computer programming in the language pascal
+    decision trees
+	text manipulation
+	numerical computation
+	top down programming and subroutines
+	software engineering
+    
+    understanding what a computer is and how it works
+    electric circuits
+	machine architecture
+	language translation
+	operating systems
+	computer networking (setting up your own home page)
+    
+    advanced topics
+    complexity theory
+	artificial intelligence
+    
+
+topics not covered
+commercial word processing, operation of commercial software packages, history of computing, sociology of computing, impacts of computers on society.
+
+who should take this course
+this course is designed for students who have little or no experience in computer science and who want a general overview of the field.  little or no mathematical background is required.  
+however, students should be prepared for a rigorous coverage of computing including extensive programming, detailed studies of the internals of the computer, and various advanced topics.  
+students should be prepared to learn several mathematial notations in the course and to use them extensively.
+
+
+
+announcements
+
+this is kind of an informal section on the web page where i (eric) will 
+try to post class gossip and info about what's going on.
+
+
+click for old news
+
+
+
+anyone who scored 80 or higher on the midterm is exempt from the lab
+final.  however, you can still take it if you wish to use it to raise your
+grade.  the lab final will probably be the week after thanksgiving but
+that's just my best guess--i haven't discussed it with dr. biermann
+yet. 
+
+
+
+the final exam for this class is on wednesday, 18 december from 7 to 10 
+pm.  here's the whole schedule.
+
+
+
+we've decided that the t-f question on the quiz about right-clicking to 
+download an image was poorly worded. if you lost half a point on this 
+question, bring your quiz by my office in d328 (or slip it under the door) 
+and i'll fix your grade.  -steve
+
+
+
+it's about time to be registering for classes for spring... if anyone is 
+interested in taking more cps classes or in becoming a cps major and 
+would like to talk to a fellow undergrad who has taken all the classes 
+and is a major... send me mail or 
+talk to me in lab or after class.
+
+
+
+grading
+approximate weights
+
+programs, problems
+    20%
+
+programming test (aka lab final, in labs)
+    10%
+
+quizzes (every week after wednesday lecture)
+    25%
+
+midterm exam (wednesday, 16 october)
+    20%
+
+final exam (as indicated on official schedule)
+    25%
+
+
+
+policies
+each student must write his or her own programs without help from other persons.  after a program is typed into a machine, students may help each other to find bugs but not to write new code.  
+homework problems must be done without help from others.
+    no make-up exams will be given.  if an exam is missed for reasons beyond the student's control, a written excuse should be handed in.  the final grade will be based on the other scores earned.
+    the lowest two quizzes will not be counted.  no make-up quizzes will be given.  if a quiz is missed for an excusable reason, be sure to hand in a written excuse.  the quiz average will be based on the quizzes actually taken.
+    late homeworks, programs, or labs will receive 80% of full credit if they are handed in within seven days o the regular due date.  after seven days, no credit will be given except in unusual circumstances.
+    the grade of i (incomplete) will be administered as specified by university rules.  thus it will be not given to those students who simply did not complete the course on time.
+    unethical practices by any student (such as copying on an exam or homework) will be dealt with strictly, usually by turning the case over to the judicial board. 
+(special caution: often two or more versions of the quizzes or exams are given on a given day.  thus your neighbor may be taking a different test from you.)
+    the final exam is not optional and every student will be required to take it at the scheduled time unless a written excuse from the dean is presented.
+    students who receive 85% or higher on the midterm exam may skip the lab final programming test.  their final grades will be based upon their average in other parts of the course.
+    final grades will be assigned approximately on the basis of 90%-100% a, 80%-89% b, and so forth.
+
+
+
+schedule
+this schedule will be projected to the end of the term soon.  if you click on the topic for a day you will see a handout for that day.  note that the handout for 9/4 is this document; clicking on it will take you back to the top.
+
+date
+    topic
+    notes, assignments, etc.
+
+wed 9/4
+    course overview
+    read pages 1 to 51
+
+fri 9/6
+    reading and printing
+    
+
+mon 9/9
+    programming decision trees
+    read pages 51 to 83
+
+wed 9/11
+    text manipulation
+
+fri 9/13
+    editing functions
+
+mon 9/16
+    building an editor
+    read pages 83 to 102
+
+wed 9/18
+    algorithm design
+    quiz solutions
+
+fri 9/20
+    numerical computation
+
+mon 9/23
+    arrays and looping
+
+wed 9/25
+    types
+    quiz solutions
+
+fri 9/27
+    procedures
+
+mon 9/30
+    more on procedures
+    read pages 109 to 139
+
+wed 10/2
+    communication between procedures
+    quiz solutions 
+fri 10/4
+    top-down programming
+    problem set
+
+mon 10/7
+    simulation
+    read pages 139-146, 159-160
+
+wed 10/9
+    building a database program
+    quiz solutions
+
+fri 10/11
+    introduction to networking
+
+mon 10/14
+    review
+
+wed 10/16
+    exam
+    exam solutions
+
+fri 10/18
+    world wide web and html
+
+mon 10/21
+    fall break
+
+wed 10/23
+    html editing
+    read package from bookstore, quiz friday
+
+fri 10/25
+    cgi scripts
+    quiz solutions
+
+mon 10/28
+    java
+    read chapters 6 and 9
+
+wed 10/30
+    intro to switching
+    no quiz
+
+fri 11/1
+    building an adder
+
+mon 11/4
+    assembly language
+
+wed 11/6
+    more assembly
+    quiz solutions
+
+fri 11/8
+    pascal graphics
+    read ch 10 except 281-289
+
+mon 11/11
+    language syntax
+
+wed 11/13
+    semantics
+    quiz solutions
+    read ch 11 and 336-348
+
+fri 11/15
+    language translation
+
+mon 11/18
+    limits of computation
+    rd ch 14, first half
+
+wed 11/20
+    neural net computing
+
+fri 11/22
+    learning
+
+mon 11/25
+    intro to artificial intelligence
+    read ch 14, last half
+
+wed 11/27
+    no class
+
+fri 11/29
+    no class
+
+mon 12/2
+    natural language processing
+
+wed 12/4
+    search
+
+fri 12/6
+    expert systems
+
+mon 12/9
+    dialog programming
+
+
+wed 12/11
+    course summary, fill out evaluations
+
+
+wed 12/18
+    final exam 7-10 pm lsrc b101
+
+
+
+
+
+
+labs
+lab sections begin on monday, september 9th and continue after that as scheduled.  bring at least two ibm personal computer floppy disks (3 1/2 inch).  you may need more during the semester.
+
+lab 1 (9/9-9/13): getting started with pascal
+    lab 2 (9/16-9/20): decision trees, using email/www
+    lab 3 (9/23-9/27): building an editor
+    lab 4 (9/30-10/4): expanding the editor
+    lab 5 (10/7-10/11) economic forecast program
+    lab 6 (10/14-10/18) database program
+    lab 7 (10/23-10/29) html basics
+    lab 8 (10/30-11/5) advanced html
+    lab 9 (11/6-11/12) html forms and cgi
+    lab 10 (11/13-11/19) pascal graphics
+    lab 11 (11/20-11/26) how a computer works
+    lab 12 (11/22, 12/2-12/5) make your own lab
+    lab final (12/6-12/12)
+
+
+
+grades
+check your grades (requires ssn and pin)  
+
+ [ top of this page |
+		    send mail about problems with this page to eric ]

@@ -1,0 +1,319 @@
+dynamics
+
+
+
+
+
+using forces to animate objects
+
+
+ introduction  
+there are several good reasons why you may want to compute motion of objects
+based on forces, rather than attempt a kinematic description of object motion.
+
+ it is often easier to write an expression for the forces on an object
+(a differential equation) than it is to directly describe the motion.
+ dynamic systems based on forces evolve "automatically" so than the motion
+is physically correct (given the correct equations). this automatic behavior
+relieves the animator of attention to lots of boring detail.
+ for chaotic systems it is impossible to write a kinematic description.
+
+
+
+ background  
+the basis of many particle systems is a description of the acceleration
+of the particles.  if the accelerations are given, then the
+system is called second order because two integrations must be done to 
+get the positions. 
+
+as an example, consider a mass on the end of a spring sliding on a 
+frictionless horizontal table. the force
+on the mass is given by:  
+f =  -k*x  
+where f is the force, k is the spring constant and x is the 
+length of the spring.
+the negative sign appears because the force from a spring pulls in the
+opposite direction to the spring extension.
+
+since  f = m*a  where  a  is the acceleration, 
+ 
+a =  -(k/m)*x  
+now given the acceleration, and if we know an initial velocity and position, 
+we can find the position of the mass at any later time. in the case of
+this linear spring, we can integrate the acceleration directly to find
+that the position is a sinusoidal function of time. the constant  (k/m)
+ will determine the frequency of the sinusoidal function, while
+the initial position, x0, and velocity, v0, will determine the amplitude and
+phase [5]. the position is given by: 
+
+
+in this simple case, the solution is available, so one could code a
+kinematic solution (that is, just plug time into the sin function), but
+notice that the description of the system in differential form is more
+compact and straightforward. also if we changed the force to a more
+realistic "stiff spring" model such as:
+ 
+f =  -k*x - c*x^3  
+
+we could not directly integrate it, but
+would be forced to use numerical methods. the next section will consider
+how to perform the integration.
+
+
+ numerical integration  
+solving a dynamic system means figuring out how to move the system forward in
+time from some set of initial conditions to compute the positions as a 
+function of time.  for instance you might want of 
+trace the trajectory of a ball after it is fired from a cannon. in general,
+direct analytical solutions of the differential equations governing a 
+system are hard or impossible. we will outline some techniques for
+solving a system by simple (but perhaps not optimal) numerical methods.
+
+as a disclaimer, it is difficult  to construct general
+numerical schemes that work for various physical systems. what follows is
+a specific approach which works for some systems. consider it the barest
+introduction to the topic of numerical introduction. much more detail
+may be obtained in [1] or [3] or many other books.
+
+we will consider three specific second order systems.
+
+    three-body gravitation 
+    water waves 
+    billards impact system 
+
+for each system we will first introduce the physics (the force law) then
+the scheme to integrate the force law to produce the time-dependent
+positions. we will start with a integration scheme which will be used
+ only  for intrducing the notion of numerical integration. while
+useful to look at, it should almost never be used for actual work.
+
+
+ the euler integration algorithm
+let me state again that this algorithm, while easy to understand, is so
+inefficient that it should only be used whem programming effort
+dominates throughput. we want to start with a differential equation and
+show how to integrate in numerically. start with the differential
+equation
+
+ 
+we want to solve this equation by stepping time discretely forward in
+small steps ("small" still needs to be defined).
+one discrete approximation of this equation is: 
+ 
+
+where the n and n-1 refer to two time steps sufficiently close together
+that the differences approximate the derivitive.
+rearranging this equation yields: 
+ 
+which gives a explicit form for stepping the system from time n-1 to
+time n. this form is thus a way to step a dynamic system forward in time
+given an initial state x0. the inefficiency of this method occurs
+because of the assumption of constant f(x) across the entire time step.
+to be accurate the time step has to be very short compared to the
+natural time constants of the system. 
+
+
+ the verlet integration algorithm  
+a much better alogrithm can be derived by averaging slopes across the
+small time interval of integration. one such formulation is called the velocity
+form of the verlet algorithm [1]. this algorithm is most useful for second
+order systems where the force on an object is specified and the position
+is desired as a function of time. since the accelerations are specified,
+one integration must be done to calculate the velocity and a second done
+to calculate the position.
+
+the verlet scheme is  first updates the position, then use the old and new
+position information to update the velocity.
+
+
+ 
+where 
+ are the accelerations calculated from a force law
+describing the system and which are usually a function of position.
+note that an is calculated from the just-completed calculation for xn.
+ evaluating both of these equations advances the system  one
+time step. to start the solution, a velocity and position have to be
+known at t=0. choosing delta t requires some care. generally, you can
+start with a time step which is around .2 of the fastest time-constant
+in the system.
+
+the two verlet equations can be vector equations if the
+motion is 2 or 3 dimensional.
+
+now we are ready to consider some specific physical systems.
+
+
+ gravitation and the three-body problem 
+the accleration due to a gravitating mass is 
+  
+where g is a strength contant, m is the mass of the object pulling on
+you, and r is the distance between you and m. since a and r are actually
+vectors we must derive a form of this equation which is useful in 2 or 3
+dimensions. we will use 2d here so we need equations for the x and y
+components of the acceleration. assuming body one is located at
+r1 and body two is located at r2, and that we want the acceleration of body one:
+
+ 
+ 
+where theta is the angle measured from the x-axis of the vector r pointing
+toward body one from body two. 
+converting to  a cartesian form the acceleration of body one is:
+ 
+ 
+where the vectors
+ 
+
+the calculation procedure for each time step is to compute:
+
+  the acceleration, a, based on the positions at time n-1
+  a new set of positions using the verlet method
+  the acceleration at time n based on the newly computed positions 
+  a new velocity from the verlet method
+using the acclerations at times n-1 and n.
+
+for the gravitational animation given at the beginning of this page,
+three masses were simulated. the accleration of each mass was determined
+as the vector sum of the accelerations caused by each of the other two
+bodies.
+
+
+ water waves  
+the water wave solver presented here is based on the derivation in kass and 
+miller [2] for the case of shallow water, low amplitude, non-breaking
+waves. the form of the resulting equation of motion for the waves looks
+like the classical linear wave equation with a propagation velocity
+proportional to the depth of the water.
+
+
+
+where h is the height of the water surface and d is the depth, that is,
+d(x,y) = h(x,y)-b(x,y)
+where b is the vertical position of the containing vessel (or ocean
+bottom) at (x,y). the costant g is poroportional to the force of
+gravity. this partial differential equation can be discretized
+in many ways. we will use a method which is stable enough to be
+acceptable for computer graphics. 
+
+first note that the partial with respect to time is the acceleration
+of a small surface element of water, so
+that if the right side of the equation can be put in a discrete form we
+can apply the verlet method to a 2d grid of "bodies", each representing
+a small chunk of water.
+
+to solve this equation numerically we need to discretize it both in
+space, on a two dimensional grid, and in time. the discrete spatial
+approximation is that the second derivitives (at time n) are 
+
+
+were i and j are the grid indices in the x and y directions and n is the
+time index. note that at the edges of the array the discrete partial
+derivitives depend on values outside the array. these boundary
+conditions need to be specified for a solution. one easy boundary condition,
+corresponding to no transport across the coundary, is to copy the value
+at the edge of the array whenever a value outside the array is needed.
+it seems that the solution is more stable if the minimum depth of the
+water is limited to about .001 of the average value, rather than letting
+it go to zero. so
+the depth at time n is given by 
+
+
+to get the surface motion, first assign an initial height and vertical
+velocity to each grid point (i,j) then at each time step compute :
+
+  the acceleration, a, based on the water heights at time n-1 
+
+  
+  a new set of positions using the verlet method for each (i,j)
+  the acceleration at time n based on the newly computed heights 
+
+
+  a new velocity from the verlet method for each (i,j)
+ ensure conservation of volume of the total volume by adjusting the
+average water height to a constant. that is, sum all the heights over the
+whole grid, then correct the sum to equal the initial sum
+by adding a small increment to each grid location (i,j).
+
+these steps are repeated to generate moving waves. 
+ disclaimer: while this
+integration method seems to give visually reasonable results, it should not
+be used for analytical simulations without careful validation. the wave
+equation is notoriously hard to integrate using explicit techniques, like
+the one described here.
+
+
+
+
+ billards  
+a billards, hard ball, system is different than the other two systems
+just described because the forces between balls are zero until they
+touch and become very large if the balls try to pass through each other.
+this means that there is a large, impulsive force just when the balls
+meet and at no other times. the verlet integration scheme will fail
+badly on this system because the accelerations are large for a short
+time and thus not smooth enough to average. what we will do to step the
+billards system forward in time is to calculate the total change 
+in velocity from
+a collision, without worrying exactly how forces change the velocity.
+
+the method described here is a less exact version of that described in
+[4]. the method described in the paper steps time at uneven intervals,
+and is thus unsuitable for animation. my modification steps time
+uniformly, at the expense of exact collision dynamics.
+
+the change in velocity during impact can be derived for frictionless
+balls of  equal mass by noting that the the impact force must act in a
+direction parallel to the line connecting the centers of the
+two impacting balls. the change in velocity must be parallel to 
+the connecting line also, with the velocity component parallel to the 
+line having its sign reversed by the collision and the velocity
+component perpendicular to the line unchanged. projecting the initial
+velocity onto the line connecting the centers, negating the result, and
+resolving it back into x and y velocity components gives the velocity
+change. if i and j are the indices of the colliding balls define:
+
+ 
+then delta v for ball i is given by the following where the right-most term
+represents the projection of the velocity onto the line and the other
+term converts the projection back to x,y coordinates. 
+  
+the calculation procedure for each time step is to compute:
+
+  the delta v based on the positions of the balls
+  a new set of positions using 
+
+
+ if walls are present detect collisions and modify velocities.
+
+the time step needs to be small enough so that the balls do not
+penetrate each other too much during one time step.
+
+
+
+
+ references  
+
+  an introduction to computer simulation methods, part 1,
+ by harvey
+gould and jan tobochnik, addison-wesley, 1988 
+  rapid, stable fluid dynamics for computer graphics, 
+by micheal kass and gavin miller, computer graphics, vol 24 #4, aug 1990,
+pp 49-55 
+  numerical recipes, by william press, saul teukolsky,
+william vetterling and brian flannery, cambrige, 2nd edition, 1992 
+studies in molecular dynamics. i. general method, by b. alder
+and t. wainwright, journal of chemical physics, vol 31 #2, aug 1959,
+pp 459-466 
+  physics for students of science and engineering, part 1, by
+robert resnick and david halliday, wiley, 1963. 
+
+
+comments about theory center online documents are welcome and may be sent to
+doc-comments@tc.cornell.edu.
+ 
+
+last modified, 10/12/95 b. land. 
+
+
+
+ 
+copyright statement

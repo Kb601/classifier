@@ -1,0 +1,58 @@
+presentation of simulation results 
+
+
+
+ 
+
+ presentation of simulation results
+
+
+
+ 
+
+because the format of presentation of simulation (or experimental) results in
+network routing studies varies greatly, we present these pages as a
+suggestion of standard presentation formats.  the formats were inspired by 
+discussion at  pcrcw '94 .
+
+there were two main issues discussed:
+
+ units used to label the x-axis 
+ general form of the presented graph(s)
+
+
+
+ graph format 
+two formats were suggested for graphing results.  paired throughput vs. applied load and latency
+vs. applied load comprise  chaos normal form.  a single latency vs. 
+achieved throughput graph makes  burton normal form.
+
+use of only latency (including source queueing) vs. applied load is discouraged because 
+it is impossible to gain any data about performance above saturation using such graphs.
+
+
+ units for bandwidth/load 
+
+the literature describing results typically includes graphs of latency or throughput
+vs. applied load.  many units have been used to express this, including flits injected/cycle,
+flits/ns, bits/cycle, normalized bandwidth, and many others.  because the many forms
+require conversions to compare with other results, we propose using a single form:   normalized
+bandwidth. 
+
+normalized bandwidth simply expresses the load/throughput as a fraction of the bisection-bandwidth
+limited maximum bandwidth of the network for uniform random traffic.  essentially, this constraint,
+corresponding to normalized throughput = 1.0, is derived by considering that 50% of uniform random
+traffic crosses the bisection of the network.  thus, if a network has bisection bandwidth b bits/sec, each 
+node in an n-node network can inject 2b/n bits/sec at the maximum load.  an optimal routing 
+algorithm could handle such a load without before saturating.
+
+non-uniform or non-random traffic patterns may saturate at different loads than uniform random traffic.
+however, please normalize to the uniform random traffic limit.
+
+
+
+ back to the chaotic routing home page 
+
+
+
+kwb@cs.washington.edu

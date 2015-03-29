@@ -1,0 +1,222 @@
+cs110: program #4
+
+
+
+
+program #4 -- the hailstone series
+
+
+due date
+
+this final assignment is due on thursday, october 24. it will be accepted on friday, october 25 until 5pm but no later. this 
+assignment is tricky and so you may want to get started on it as soon as possible.
+
+
+introduction
+
+the january 1984 issue of scientific american contains an article
+describing an interesting sequence of numbers known as the hailstone
+series.  the series is formed like this:
+
+
+  pick a positive integer.
+  if it's odd, triple the number and add one.
+  if it's even, divide the number by two.
+
+ 
+although the numbers bob up and down, eventually they reach a repeating
+"ground" state: 4 2 1 4 2 1 ... this has been proven for every
+number up to about 1.2e12.
+
+problem statement
+
+you will write a program to generate the hailstone series for a
+number between 1 and 150 (chosen by the user).  your program will answer the 
+following questions for each number entered by the user.
+
+
+  how long is the series?
+  what is the largest number in the series?
+  what is the mean (average) of the series?
+
+
+
+more information
+
+for the first question you should stop counting once the number
+1 is reached.  so, for example, if 8 is entered as the starting
+place, then the answer to question #1 is 4 (i.e., including the initial
+input, the fourth number in the sequence 8 4 2 1 is 1).
+if 2 is entered then the answer is 2, since the sequence is simply 2
+1.  question #2 simply asks you to keep track of the maximum value in
+the sequence.  for question #3, using 8 as the start number, the average
+is (8+4+2+1)/4 = 15/4 = 3.75.  note that this is not an integer.
+
+
+
+program design hints
+
+your main program should work as follows: it should prompt the user
+to enter a number ( 0 to quit) between  1 and 150. if the user enters 
+a number outside this range, the program must indicate an error and prompt the user
+again for another value in the correct range. if the user enters a valid number
+your program must display the hailstone series, the length of the series, the
+maximum value attained within the series and the mean value of all elements 
+in the series. then it must prompt the user for the next number. this process
+must go on until the user enters a '0' indicating that s/he would like to quit. 	
+
+for the first part of the program, you will need two nested loops.
+the outer loop will repeatedly ask the user for new initial values.  the
+inner loop will control the generation of the hailstone series
+itself.  you need to devise a way to terminate the outer loop ( having the user input a 0 will indicate they wish to quit).  as
+long as the user enters numbers in the valid range (1 to 150), the program
+must print the the hailstones series, the length of series, the maximum value
+attained in the series and the mean value of all elements in the series. you will probably find it useful to define
+a function that computes the series, the length of the series and the mean value 
+of the elements in the series. 
+
+
+you must use arrays to store the elements of the hailstone series.
+your program must contain  several functions to solve this problem. you will receive almost no credit if you do not 
+use functions. you might find it helpful to  write
+a function that actually takes in a number as input  and returns and the hailstone series in an array along with the length of the series (hint : look at the
+function prototype for the function generatehailstoneseries(...) in
+the skeleton below). 
+
+you have a good opportunity to write several small functions to do 
+simple tasks like computing the maximum value in the hailstone series array,
+computing the mean ...... your final program will probably contain at least 3 to
+4 functions.
+
+finally, i have included a bare skeleton of my program to get you started on the
+job. a sample run of the program is included below.
+
+
+#include &lt;iostream.h&gt;
+
+
+
+const int true = 1;
+const int false = 0;
+const int max_len  = 200;
+
+
+
+//function prototypes of some functions you might want to write!
+void generatehailstoneseries(int number, int series[], int& length);
+int even(int x); //prototype of already written function
+int getmaxvalue(const int x[], int length);
+double computeaverage(const int x[], int length);
+
+void main()
+{
+
+
+}
+
+
+
+
+// function that determines if number is even
+int even(int x)
+{
+  if (x % 2 == 1)
+    return false;
+  else
+    return true;
+}
+
+//skeleton definitions of additional functions to be written by you! 
+
+
+
+
+your test cases
+
+you will be required to turn in the screen output generated from a program
+run in which the user looks at the hailstone series of at least
+three numbers (from 1 to 150). you must include the cases where the user incorrectly
+type in a number beyond the specified range.
+
+handing in the assignment
+
+
+   please turn in both an electronic copy of your source code (.cpp)
+and your executable program (.exe). i will be testing each program
+with my test cases.  if i do not receive an electronic copy of your source
+code and executable, you will lose numerous points.  in case your program
+does not compile or run correctly, you should turn in what you have to get
+some credit.  if your program fails on my test cases you will receive a
+low score.
+
+   a printed copy of source code. 
+
+   a printed copy of your program run
+
+
+
+items 2 and 3 must be stapled together.
+
+sample run
+
+
+
+ enter number between 1 and 150(0 to quit) :151
+error! re-enter a number between 1 and 150(0 to quit): -34
+error! re-enter a number between 1 and 150(0 to quit): 149
+ the series is : 149 448 224 112 56 28 14 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1 
+ the length of the series is :24
+ the maximum value attained in the series is :448
+ the mean value is : 54.9583
+
+ enter number between 1 and 150(0 to quit) :25
+ the series is : 25 76 38 19 58 29 88 44 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1 
+ the length of the series is :24
+ the maximum value attained in the series is :88
+ the mean value is : 27.4167
+
+ enter number between 1 and 150(0 to quit) :12
+ the series is : 12 6 3 10 5 16 8 4 2 1 
+ the length of the series is :10
+ the maximum value attained in the series is :16
+ the mean value is : 6.7
+
+ enter number between 1 and 150(0 to quit) :540
+error! re-enter a number between 1 and 150(0 to quit): 8
+ the series is : 8 4 2 1 
+ the length of the series is :4
+ the maximum value attained in the series is :8
+ the mean value is : 3.75
+
+ enter number between 1 and 150(0 to quit) :0
+
+
+
+
+
+grading
+
+note that this program, like program #3, is worth 25% of your grade.
+
+
+    correct output:
+    
+      
+   correctly turned in output : 3
+  
+   correctly handles my test cases : 5 
+     
+    user interface:
+    
+             aesthetic display of program output: 1
+    
+    implementation:
+    
+       correct use of loops and arrays: 6
+       correct use of functions--parameter passing, return, calling: 6
+       smart use of functions (avoiding redundancy of your code) : 2
+    
+    documentation:
+    
+       program description: 1
+       meaningful variable names and useful section comments: 1

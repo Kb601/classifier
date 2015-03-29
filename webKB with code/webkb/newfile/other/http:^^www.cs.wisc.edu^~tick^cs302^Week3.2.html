@@ -1,0 +1,334 @@
+cs 302 section 70 lecture notes - week 3,part 2
+
+
+
+
+ lecture notes - week 3,part 2
+
+
+
+
+   topic:
+   repetition and loops. do/end do, do while/end do and do/continue statement.
+
+   text:
+   chp. 4.1 - 4.4, 4.6, 4.7, 4.9, 4.10
+
+   notes:
+   
+
+   
+
+   
+   repetition and loops
+   
+   
+      conditional execution allows you to optionally execute different sections of code.
+      repetition or looping allows you to re-execute the same section of code several times.
+      example: add up 50 numbers entered one per line.
+      
+	sum = 0
+	read *, num
+	sum = sum + num
+	read *, num
+	sum = sum + num
+	. . .
+	read *, num
+	sum = sum + num
+	print *, 'the total sum is', sum
+      
+      or more simply
+      
+	sum = 0
+
+	[re-execute the following 50 times:]
+	   read *, num
+	   sum = sum + num
+
+	print *, 'the total sum is', sum
+      
+      repetition is more efficient and flexible.
+   
+
+   do/continue statement (fortran-77)
+   
+      to re-execute one or more statements use the do/continue statement.
+      
+	        do label count = start, end, inc
+	           statements to re-execute
+	 label  continue
+
+	12345678901234567890123456780
+	-----------------------------
+	      do 10 ctr = 1, 50, 1
+	         read *, num
+	         sum = sum + num
+	 10   continue
+      
+
+      inc defaults to 1 if not specified.
+      
+	do 10 ctr = 1, 50
+      
+      use a negative value for inc to count down.
+      
+	do 10 ctr = 50, 1, -1
+      
+      count must be an integer or real variable.
+  
+
+   how a do loops work
+   
+      count is initialized to start before the first iteration.  after each iteration count is incremented by inc.  the loop terminates when count >  end (note: not  >=).
+      the start, end and inc may be literals, variables or expressions.
+      
+	max = 50
+	do 10 ctr = 1, max, sqrt(9)-2
+      
+      normally use integer values for start, end and inc.
+      
+	                       end - start + inc
+	number of iterations = -----------------
+	                              inc
+      
+      if start > end the loop isn't executed at all!
+      
+	min = 55
+	do 10 ctr = min, 50, 1
+      
+      what if start, end or inc are changed inside the loop?
+      
+	     min = 1
+	     max = 50
+
+	     do 10 ctr = min, max
+	        max = ctr + 5
+	        print *, 'spam'
+	10   continue
+      
+      the start, end or inc are evaluated only once at the beginning.  only their initial values are important.
+   
+
+   labels
+   
+     the label is the line number of the continue statement to indicate the end of the loop.  every statement up to the continue is re-executed.
+      
+	     do 10 ctr = 1, 50
+	        ...
+	10   continue
+      
+      the label is written in columns 2 though 5.  the do and continue statements start in column 7.
+      if you have multiple do loops then keep the labels in ascending order and use multiples of 10 for the different numbers.
+      
+	     do 10 foo = 1, 50
+	        ...
+	10   continue
+		
+	     do 20 bar = 1, 10
+	        ...
+	20   continue
+      
+   
+
+   
+
+   
+   conditional loops
+   
+   
+      do statement re-executes the same statements a pre-determined number of times.
+      what if don't know the number of iterations ahead of time?
+      
+	sum = 0
+	read *, num
+	[do the following until num equals 99]
+	   sum = sum + num
+	read *, num
+	print *, 'the total sum is', sum
+      
+   
+
+   do while statement (fortran-90)
+   
+      tests a condition on each iteration.  if the condition is .true. then re-execute the loop.
+      
+	do while (condition)
+	   statements to re-execute
+	end do
+
+
+	do while (num .ne. 99)
+	   sum = sum + num
+	   read *, num
+	end do
+      
+      the condition is a logical expression, just like an if statement.
+      can re-write a do/continue loop as a do while loop.
+      
+	     do 10 count = min, max, 2
+	        print *, count
+	10   continue
+      
+      is the functionally the same as
+      
+	     count = min
+	     do while (count .le. max)
+	        print *, count
+	        count = count + 2
+	     end do
+      
+      the condition must contain a variable who's value is changed inside the loop.  otherwise the condition always remains .true. (i.e. an infinite loop)
+      right:
+      
+	do while (num .ne. 0)
+	   print *, num
+	   read *, num
+	end do
+      
+      wrong:
+      
+	do while (num .ne. 0)
+	   print *, num
+	   sum = sum + num
+	end do
+      
+   
+
+   fortran-77 "do while" loop
+   
+      the do while statement is not standard fortran-77 and may not be available on all compilers. but sometimes we cannot use the fortran-77 do/continue loop.
+      to implement the equivalent of a do while loop in fortran-77 we can use an if statement and a goto statement.
+      
+	     do while (num .ne. 0)
+	        ...
+	     end do
+      
+      can be written as
+      
+	10   if (num .ne. 0) then
+	        ...
+	        goto 100
+	     end if
+      
+      the goto statement "jumps" to resume executing the statement at the specified label.
+      warning: never use goto statements anywhere in your program except if you have a strict fortran-77 compiler and then only to implement do while loops.
+      second warning: anyone caught using goto statements in this class will automatically receive a mark of zero for that assignment.  just say no to gotos!
+   
+
+   nested loops
+   
+      just as if statements can be nested inside each other, so can do/continue and do while loops.
+      
+	     do 20 x = 1, 10
+	        fact = 1
+
+	        do 10 count = 1, x
+	           fact = fact * count
+	10      continue
+
+	        print *, x, '! =', fact
+	20   continue
+      
+      the outer loop is executed 10 times (x=1..10).  inner loop is executed x number of times, depending on the current value of x.
+      nested loops must use different counter variables.
+      inner loop's continue statement comes before the outer loop's continue statement.
+   
+
+   indenting
+   
+      as with if statement, indent all re-executed statements 3 additional spaces.
+   
+
+   
+
+   
+   fortran-90 loops
+   
+   
+      repitition and loops are vital for any programming languages to be useful.
+      standard fortran-77 only has the do/continue loop.
+      fortran-90 provides more powerful looping mechanisms (aside: the do while loop is also supported by many "non-standard" fortran-77 compilers, such as microsoft fortran).
+   
+
+   do/end do loop (fortran-90)
+   
+      same as the fortran-77 do/continue loop but without the continue statement and no label.
+      the end of the loop is indicated by the end do statement.
+      
+	      do 10 add = 1, 10
+	         read *, num
+	         sum = sum + num
+	 10   continue
+      
+      is the same as
+      
+	      do add = 1, 10
+	         read *, num
+	         sum = sum + num
+	      end do
+      
+      the do/end do can be nested like other loops.
+      the counter must be an integer variable.
+      important: always use the do/end do loop instead of the do/continue loop in this class.  it is also supported by microsoft fortran.
+   
+
+   exit and cycle statement (fortran-90)
+   
+      the exit statement aborts the loop prematurely, jumping to the next statement after the end of the loop.
+      
+	     do add = 1, 10
+	        read *, num
+
+	c    abort if a negative number is entered
+	        if (num .lt. 0) exit
+
+	        sum = sum + num
+	     end do
+	     print *, sum
+      
+      the cycle statement skips the rest of the loop and resumes the loop at the next iteration.
+      
+	     do add = 1, 10
+                read *, num
+
+	c       ignore negative numbers
+	        if (num .lt. 0) cycle
+
+	        sum = sum + num
+	     end do
+	     print *, sum
+      
+   
+
+   do/end do loop without parameters (fortran-90)
+   
+      the counter, start, end and inc in the do/end do loop are actually all optional.
+      the loop is terminated instead by using the exit statement.
+      
+	     do
+	        read *, num
+	        sum = sum + num
+
+	c       stop when the user enters 0
+	        if (num .eq. 0) exit
+	     end do
+	     print *, sum
+      
+      warning: the exit statement must be executed eventually, otherwise you have an infinite loop.
+   
+
+   which loop do i use?
+   
+      use the do/end do (fortran-90) instead of the do/continue (fortran-77) if possible.
+      use the do while/end do (fortran-90) instead of the if/then/goto (fortran-77) unless you have a strict fortran-77 compiler.
+      use the do while/end do instead of the do/exit/end do whenever possible.
+      don't use exit or cycle unless you have to. you do not not need to either for any assignment in this class.
+   
+
+
+
+
+
+
+
+copyright &copy 1996 modified fromgareth s. bestor (bestor@cs.wisc.edu).  last modified september 19, 1996.

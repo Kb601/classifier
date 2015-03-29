@@ -1,0 +1,80 @@
+program 2 - interactive hierarchical modeling using mesa 
+
+
+
+ program 2 - interactive hierarchical modeling using mesa 
+
+
+
+ due - november 14 
+
+
+
+
+
+you are to create an industrial-style robot arm similar to that in the
+picture above and a user interface which can be used to interactively
+control the arm.  you should also create a cube that can be picked up
+by the arm when both fingers of the arm are touching opposite faces of
+the cube.  you will create the robot arm as a hierarchical model based
+on only a few simple base primitives (perhaps only a cylinder).  you
+will use mesa to control the viewing (camera) parameters and the
+lighting and material properties of the robot.  the robot should be
+rendered as a set of opaque closed objects, so your primitives will
+consist of filled surfaces and you will use back face culling and
+z-buffer based hidden surface removal for display.  your lighting
+should be designed carefully to make the three dimensional shape of
+the robot clear.  you must use at least lambertian flat shading for
+the surfaces, you may choose to add smooth shading and specular
+lighting as well, but do not overdo the lighting at the expense of
+interaction speed.  the number of light sources used is also your
+choice.
+
+
+
+your model should be structured along the lines of the picture and should
+have the degrees of freedom indicated. cylinder b should rotate about
+the common axis it shares with the base a.  the rest of the arm
+should rotate with b.  c should be fixed with respect to b except that it
+too can rotate about its axis.  d should be fixed with respect to
+c.  e should be able to translate along the common axis it shares with
+d and also rotate about its axis.  f should be fixed with respect to
+e and g and h should pivot about the ends of f so they can be used to
+grasp things.
+
+
+
+both the base of the robot and the movable cube will initially sit
+on a common table plane.  the cube should be positioned randomly within
+the reach of the arm.
+
+
+
+the user interface of your program should have a mode in which the
+mouse can be used to move the viewing position with respect to the
+world containing the robot arm and cube.  you should also have a mode
+for controlling the arm.  in arm control mode, when the left mouse
+button is pressed, sideways motion of the mouse should rotate b and
+forward and back rotation of the mouse should rotate c.  when the
+middle button is held, sideways mouse motion should rotate e and back
+and forth motion should translate e.  the left and right arrow keys
+should always open and close the fingers.  the right mouse button
+should exit the mode or bring up a menu.  in viewing mode, when the
+left mouse button is held down, sidways mouse motion should move the
+observer longitudinally about an imaginary sphere centered on the
+robot arm and back and forth motion should move the view
+latitudinally.  with the middle mouse button down, mouse motions
+should lengthen and shorten the radius of the imaginary sphere.  the
+right button should behave as in arm control mode.
+you should also be able to reset the robot arm to its initial
+configuration.
+
+
+
+your user interface should be implemented using glut, the toolkit
+included for this purpose with our mesa installation.  you can get
+a head start on this project by looking at pages 113-116 in the
+opengl programmer's guide and at the glut walker demo in
+/p/src/mesa-1.2.6/glut/progs/demos/walker
+(this is /p/src/mesa-1.2.8/progs/demos/walker in the lab).
+good luck and have fun!

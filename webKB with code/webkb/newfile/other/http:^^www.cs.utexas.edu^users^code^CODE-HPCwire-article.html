@@ -1,0 +1,273 @@
+code: "visual parallel programming may come of age with code" (hpcwire)
+  
+
+  
+
+  
+
+
+from hpcwire, 8/23/96:
+(reprinted with permission)
+
+
+      visual parallel programming may come of age with code
+      by alan beck, editor-in-chief
+
+
+
+
+
+
+
+austin, texas -- although visual parallel programming environments are not
+new, the unusually simple and direct techniques employed by the university of
+texas' code (computationally oriented display environment), an abstract
+declarative graphical environment for parallel programming, promises not only
+a different but also a much more effective approach to the entire task.
+within the code environment, a parallel program is a directed graph, where
+data flows on arcs connecting nodes representing sequential programs.
+
+
+  the sequential programs may be written in any language, and code itself is architecture-independent. thus, the code system can produce parallel programs
+for pvm-based and mpi-based networks as well as for the sequent symmetry,
+cray and sun sparc mp. currently, the code graphical interface itself runs
+on suns.
+
+  in order to learn more about the operation of code, hpcwire interviewed its
+"godfather", james c. browne, regents chair in computer sciences and
+professor of physics and electrical & computer engineering at the university
+of texas. following are selected excerpts from that discussion.
+
+
+
+
+
+
+
+
+
+
+hpcwire: what level of skill must a programmer bring to code?
+
+
+
+
+   browne: "no special programming skills are needed. traditionally, one
+works at the procedural level, stipulating how a computation is done. with
+code, you make a transition from how something is done to what you're trying
+to do, at a very high level."
+
+  "i've used code in undergraduate parallel programming classes, given
+students about an hour of instruction, then turned them loose in the
+graphical environment, and they work their way through it. it's forgiving. of
+course, they already know how to program in traditional languages. and
+clearly, they must understand parallelism at the conceptual level."
+
+
+
+
+hpcwire: is it fair to say that the better the programmer, the better (s)he
+will be able to utilize code?
+
+
+
+
+  browne: "let's take another tack and say the better people understand their
+applications, the better they'll be able to use code. when you write a
+program in a language like hpf, you have to do a lot of nonintuitive things
+like partitioning matrices, handling distributions, etc. but with code, what
+you must understand is that a parallel computation structure is basically a
+directed graph with many paths through it. it's a different level of
+conceptual understanding."
+
+
+
+
+
+
+
+"i've used code in undergraduate parallel programming classes, given
+students about an hour of instruction, then turned them loose in the
+graphical environment, and they work their way through it."
+
+
+
+
+
+
+  hpcwire: given a certain level of skill, how much more efficiently can a
+parallel programmer function with code?
+
+
+
+
+  browne: "an order of magnitude more effectively. and we need to do even
+better than that. what we've done is change the level of abstraction at
+which programs are described. it's like writing a book by simply writing an
+outline, and then having a smart word processor consult encyclopedias and
+dictionaries to fill in the rest."
+
+
+
+
+
+
+
+
+  "code uses an abstract general model of parallel computation, which is a
+hierarchical dependence graph. those are a lot of buzzwords, but the
+graphical environment speaks for itself. let's say you have an old fortran
+program with a bunch of subroutines for which you want to invoke many
+parallel copies. we associate one subroutine with a node on the graph. if you
+want to run n copies of it in parallel and connect them up with the rest of
+the program, you simply draw arcs among the routines you want connected. code
+takes care of all the parallel programming book-keeping -- like where the
+copy is, how to get in touch with it for input or output, how to synchronize
+it with other routines."
+
+
+
+
+hpcwire: doesn't this favor a coarse-grained approach?
+
+
+
+
+  browne: "definitely. but about three years ago, we asked ourselves how
+data parallelism could be most simply represented in the dependence graph
+model. you can construct a graph where each node represents part of a
+computation on a matrix, but that's awkward. so we thought: why not
+introduce additional annotation on the arcs that says, 'any data flowing
+down this arc will be split into pieces, with each piece sent to a copy of
+the routine at the arc's end.' if you do this, you then have fine-grained
+data parallelism embedded in the graphical model. a paper on this approach
+to integration of data parallelism into the graphical model was presented
+at the last international parallel processing symposium."
+
+
+
+
+hpcwire: what are the limitations of this approach?
+
+
+
+
+  browne: "lack of familiarity. the need to change the way you think. see,
+we're messing with people's minds. there are no intrinsic limitations. the
+nodes are nothing more or less than fortran or c subroutines. there are no
+conceptual limitations on back-ends. we compile to shared-memory, pvm or
+mpi back-ends. give us that one graph, click on the icon for the back-end
+you want, and we compile it with some optimization for each different
+environment."
+
+  "the reason this approach to program development isn't particularly
+well-accepted is because the scientific and engineering community is
+accustomed to doing business in a certain way -- and working at a certain
+level of abstraction. with this method you require people to change the way
+they think. and people change the way they think very slowly."
+
+
+
+
+
+
+
+"we compile to shared-memory, pvm or
+mpi back-ends. give us that one graph, click on the icon for the back-end
+you want, and we compile it with some optimization for each different
+environment."
+
+
+
+
+
+
+hpcwire: but how about your competitors?
+
+
+
+
+  browne: "many people have worked on graphical models of parallel
+programming for a long time. they have some very good systems. ted lewis did
+the ppse system at oregon state, and there was a group that used to work
+with jack dongarra at the university of tennessee which produced a system
+called hence similar to ours. and there are several other interesting
+graphical programming systems. we have all encountered similar results --
+that this was really neat technology, and once you get people trained in it
+they like it. but it's like any other major paradigm change -- it's hard
+for people to make paradigm shifts."
+
+
+
+
+
+
+  "a great part of the benefit is not from the graphical interface --
+although it makes programming easier -- but from the fact that we're using a
+more general, more abstract model of parallel computation."
+
+
+
+
+hpcwire: are you still refining the system?
+
+
+
+
+  browne: "yes. we're still trying to better integrate data parallelism with
+the dependence-graph model. also, we're developing a debugger. normally,
+debugging parallel programs is very difficult, particularly distributed ones
+-- because you have race conditions, and you can't wrap your hands around the
+problems."
+
+  "there are really no good debuggers for parallel systems, although some
+strong academic work has been done, for example, by bart miller at the
+university of wisconsin. to debug in code we play back the execution by
+animating the graph. we can do this because we've cleanly separated the
+notion of computation from notions of communication and interaction."
+
+
+
+
+hpcwire: do you feel this type of model will have a fundamental impact on
+parallel programming?
+
+
+
+
+  browne: "i think that over the next 10 years, as people learn to change, as
+everybody has a graphical workstation in front of them, the whole idea of
+raising the level of abstraction at which people program will take effect. i
+truly believe there will be a change in the practice of programming. and by
+going to higher levels of abstraction, there will be more change in the next
+5 or 10 years than there has been in the 40 years since i wrote my first
+program."
+
+
+
+
+
+
+
+
+
+
+
+a free alpha release of code is now available. for more information see web
+site http://www.cs.utexas.edu/users/code/.
+
+
+
+copyright 1996 hpcwire. redistribution of this article is forbidden by 
+law without the expressed written consent of the publisher. for a free trial 
+subscription to hpcwire, send e-mail to trial@hpcwire.tgc.com.
+
+      
+
+
+
+
+emery@cs.utexas.edu / 
+
+
+last modified: tue oct  8 18:25:25 cdt

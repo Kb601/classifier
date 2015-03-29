@@ -1,0 +1,27 @@
+the path solver:  a non-monotone stabilization scheme for mixed complementarity problems 
+the path solver:  a non-monotone stabilization scheme for mixed complementarity problems 
+ steven p. dirkse and  michael c. ferris
+cs-tr-93-1179
+september 1993
+
+ the path solver is an implementation of a stabilized newton method for the solution of the mixed complementarity problem. the stabilization scheme employs a path-generation procedure which is used to construct a piecewise-linear path from the current point to the newton point; a step length acceptance criterion and a non-monotone pathsearch are then used to choose the next iterate. the algorithm is shown to be globally convergent under assumptions which generalize those required to obtain similar results in the smooth case. several implementation issues are discussed, and extensive computational results obtained from problems commonly found in the literature are given.
+
+how to view this document
+
+
+display the whole document in one of the following formats.
+
+postscript
+ 139873 bytes. (compressed on disk, will be sent uncompressed)
+
+
+
+print or download all or selected pages.
+
+
+
+ you are granted permission for the non-commercial reproduction, distribution,display, and performance of this technical report in any format, but thispermission is only for a period of 45 (forty-five) days from the most recenttime that you verified that this technical report is still available fromthe computer science department of the university of wisconsin - madison underterms that include this permission.  all other rights are reserved by theauthor(s). 
+[ search
+ ]
+
+ncstrlthis server operates at uw madison computer sciences technical reports . send email to www@cs.wisc.edu

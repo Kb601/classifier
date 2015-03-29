@@ -1,0 +1,124 @@
+dataman laboratory - mobile wireless computing at rutgers 
+
+
+
+ 100) {
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                timertwo=window.settimeout(cmd,100);
+        }
+        else if (seed  0) {
+                for (c=0 ; c 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ -->
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+last modified: august 1, 1996 
+julio cesar navas 
+(navas@cs.rutgers.edu)

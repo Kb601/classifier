@@ -1,0 +1,114 @@
+cs418 lab 4
+
+
+
+
+ 
+cs 418: laboratory 4 
+ using a virtual camera 
+ introduction. 
+
+this exercise introduces the concept of a "virtual camera". the virtual camera
+is a set of transforms which takes a 3d representation of a set of objects
+and arranges for them to be shown in a 2d window.
+by analogy, a 35mm film camera transforms the 3d world into a fixed size (35mm)   
+image, viewed from a certain point, with a certain focal length of lens. for
+a virtual camera we will need to specify where the camera is, where it is
+pointed, the width of the field of the camera, and perhaps other parameters
+which a real camera cannot have (e.g. clip planes, or variable aspect ratio).
+
+procedure:
+
+first you need to download several example files. to do this, click on
+each of the filenames shown below.  when the text window opens, use the
+"save as" option to put the file in your own directory. name each file with
+the same name as shown below. 
+
+  cameraintro.net 
+  cameraintro.cfg 
+
+  camerainscene.net 
+  camerainscene.cfg 
+
+
+
+open the program cameraintro.net and its control panel. when you execute it you
+will see that two image windows are opened. one is controlled by the familiar
+image module. the other is controlled by a camera and display module. the
+camera module gives you explicit control of the viewing parameters. whereas the
+image module always points at the scene (by default), an explicit camera
+can point anywhere you want and can be controlled by the program itself. on the
+control panel, switch the selectors to the animate position and run the
+sequencer. the position of the camera (the "from" parameter) and the up direction
+are now a function  of time. 
+the contents of the two compute modules which control the camera are shown
+ here. 
+
+
+
+ bugs found as of 2/23/96 
+
+
+ in the "program fragment" hyperlink replace "approxup" with
+"norm(approxup)" in the second compute module expression.
+
+
+  assignment:
+model a tv sitting on a table next to a simple still life. model a tv camera
+floating in space (chassis, lens tube, lens). define 
+ interactors 
+to control
+the position, look-to point, up direction, and zoom angle  of the tv camera.
+use these interactors to orient the tv camera in space and to control a 
+camera module to produce the image the tv camera would see. put the image
+on the front of the modeled tv as shown in the image below.
+(the camerainscene program "mirror" is very similar to the tv set.)
+you will need to convert the control interactors into rotations and translations
+of the tv camera. the transform module allows you to rotate by an arbitrary
+set of basis vectors.
+a  program fragment 
+helps to explain how to take the three input vectors (to, from, up) and 
+convert them to a camera rotation matrix.
+your program does not need to show the recursive image if the camera happens
+to be looking at the tv screen. (see image below, right.)
+it is more important to be able to control the camera in space and show
+the resulting image than to make a fancy tv set or camera model.
+
+
+
+
+ some results from 1995. 
+
+ some results from 1996. 
+
+be prepared to demo your tv program  during section for a maximum of 15
+minutes. you will be graded on the correctness of the camera control and the
+readability of the program.
+
+you must document your code!  layout small groups of modules which fit on
+one screen and connect them to other groups with transmitters.  you should
+use transmitters/receivers, macros, and comments in the "notation" field of
+each module so that you and the grader can understand the program.  control
+panels, if any, should be well organized, labeled, and with the appropriate
+numeric ranges.
+
+
+the
+ lab 4 grading guide 
+will be filled out by a consultant during section to evaluate your work.
+
+
+
+back to main page
+
+
+go to lab 5
+
+ 
+
+last modified, 2/23/96, b. land.
+
+
+
+ 
+copyright statement

@@ -1,0 +1,63 @@
+coding conventions
+
+
+
+
+coding conventions
+
+
+the following conventions are recommended.  thanks due to prof. fischer
+and ranjani ramamurthy.  (admittedly, they are not followed in minibase to
+the extent they should be.) 
+
+ classes are named with a mixture of capitals and small letters.. start
+   with a capital and do not contain any '_' or '-'.
+   if class name is a concatenation of 2 words, the second word begins with
+   a capital letter as well.
+
+   for example:
+
+        class recoverymanager{
+
+        };
+
+
+ first declare public methods, then public variables.
+   later, private methods and then private variables.
+ 
+   public methods and variables :: same rules as naming classes ::
+
+   for example:
+
+   status addentry(lsn_t lsn, int xid);
+
+   lsn_t  reclsn;
+
+   private variables/methods ::
+   no capitals at all. all variables and methods start with an underscore.
+
+   for example :
+
+   int   _pgid_array[100];
+   status _restart_undo(recxacttbl* xact_tbl);
+
+
+ all global variables to begin with minibase_  ( basically the system name).
+   the variable itself can begin with small letters.
+
+   minibase_bufmgr ==> global buffer manager variable.
+
+
+ all global functions begin with minibase_
+
+   let the function name ( after minibase_) begin with capitals
+   and break multi words with underscores.
+
+
+   example :: minibase_print_routine();
+
+
+
+ all macro definitions begin with minibase_ whatever..
+
+ all filenames in  lower case..

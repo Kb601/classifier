@@ -1,0 +1,92 @@
+date: tue, 14 jan 1997 23:42:34 gmt
+server: ncsa/1.4.1
+content-type: text/plain
+last-modified: fri, 09 dec 1994 19:10:01 gmt
+content-length: 2709
+
+arthur(1)                  user commands                    arthur(1)
+
+name
+     arthur - intelligence (artificial) language designed to
+              process visual, tactile and audible input, with the
+              express purpose of interacting with meira. 
+
+synopsis
+     arthur [ eat, sleep, work, play ]
+
+system v synopsis
+     /usr/etc/5bin/arthur [ -eat, -sleep, -work, -play ]
+
+availability
+     the system v version of this command is available with the sys-
+     tem  v  software  installation  option.  refer to installing
+     sunos 4.1.1 for information on how to install and invoke arthur.
+
+description
+     arthur is invoked in one of the four major modes, eat,
+     sleep, work, and play. arthur involves the particular, non-reproducible,
+     output which depends in a complicated way on the sensory input.
+
+          example% arthur -sleep 10
+
+options
+        
+        -sleep
+          option allows dormant period of n hours.
+
+	-eat
+	  option temporarily suspends all concurrent processes
+	  for food intake. specify p calories in l color and q flavor.
+
+	-work
+	  option can take many forms, operating at any hour, with
+	  a wide ranging field of interest. examples include
+	  early morning programming sessions on the porch with portable
+          computer, and late night doodling in unreadable mix of
+	  print and script in ubiquitous spiral bound college
+          notebooks.
+
+	-play
+	  not a recently installed option, but significantly
+	  upgraded in system v (meira) version. option play now
+	  and forevermore includes either the concurrent process
+	  meira(1) or a connected pipe to the process meira.
+
+
+result
+     successful execution of the arthur(1) results in happiness
+     for both arthur and meira.
+
+bugs
+     once initiated in a given mode, there is
+     no easy way to transfer operations to another mode. this is
+     especially true for sleeping, but also for reading and talking,
+     both considered sub_modes of work and play.
+    
+     unusual propensity to think things through. believes logical
+     thought process can be utilized in most instances. quite
+     frustrating when correct, blind to the truth when wrong. tends
+     to ignore input not specifically designed for current
+     process, which yields a high level of absentmindedness.
+
+see also
+        meira(1) love(5) marriage(3)
+
+other implementations
+        
+           to the best of our knowledge, no other implementations
+ 	   exist.
+
+sun release 4.1.1    last change: just before the vows.
+
+
+			sincerely,
+
+			bennett
+
+			professor bennett b goldberg
+			boston university physics department
+			590 commonwealth avenue
+			boston, ma 02215
+			(617) 353-5789 (x9393 tfx)
+			goldberg@buphy.bu.edu

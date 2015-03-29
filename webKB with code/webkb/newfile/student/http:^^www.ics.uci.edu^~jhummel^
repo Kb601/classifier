@@ -1,0 +1,199 @@
+joe hummel
+
+
+ information last modified november 14, 1996  
+  joe hummel 
+
+
+ area: computer systems design
+ advisor: alex nicolau
+ electronic mail: jhummel@ics.uci.edu
+ office: cse 205
+ office phone: (714) 824-2248
+
+ research project: 
+
+ brief description: 
+
+  compilers, program optimization, and data dependence testing in the presence 
+of dynamic, pointer-based data structures.  
+
+
+ long description: 
+
+  data structures are important solution components in many programs, since
+the proper choice of data structure can greatly impact the efficiency of
+the resulting application.  this is well-known to fortran programmers, where
+arrays serve as the primary data structure.  recently however, given the
+increasing use of languages such as ada, c, c++, and fortran 90, data
+structures built using pointers and dynamic memory allocation are more
+prevalent.  these types of structures --- linked-lists, trees, dags --- present
+new and difficult analysis and optimization problems for the compiler
+writer.  the objective of our work is to solve these problems, thereby
+enabling the parallelization of such codes.
+
+  our approach is to create a data dependence testing framework targeted
+towards program code involving dynamic, pointer-based data structures.  our
+framework has three components: (1) property collection, (2) path collection,
+and (3) dependence testing.  to enable accurate dependence testing, the
+compiler must collect both information about the properties of the data
+structure (e.g. tree vs. dag) and information about the memory locations
+being manipulated in the data structure.  the former are represented as
+axioms about the structure, the latter as paths through the structure.
+given this information, the dependence testing component applies 
+theorem proving, in a general and decidable way, to determine dependences
+in the code.  
+
+  to date we have implemented a prototype of our data dependence testing
+framework, and successfully parallelized a number of important codes
+involving complex data structures.  these codes include the n-body problem,
+sparse matrices, and a 3d electromagnetic simulation based on bipartite
+graphs.  speedups were linear to near-linear on a shared-memory
+multiprocessor.
+
+  our work is crucial to optimizing and parallelizing compilers, since
+dependence information directly impacts the application of numerous
+performance-enhancing transformations.  the more accurate the dependence
+information, the more chances for optimization and parallelization
+at all levels (from low-level instruction scheduling to source-level
+loop transformations).  our work represents the first accurate and 
+general mechanism for data dependence testing in the presense of 
+dynamic, pointer-based data structures.  
+
+
+ publications: 
+
+ refereed journal articles and book chapters 
+
+
+
+   chapter 2: path collection and dependence testing in the presence 
+   of dynamic, pointer-based data structures,
+   
+   
+   (full text in postscript)
+   
+   languages, compilers and run-time systems for scalable computers 
+   (proceedings of the 3rd workshop),
+   editors b. szymanski and b. sinharoy, kluwer academic publishers,
+   pp. 15--27, may 1995,
+   by j. hummel and l. hendren and a. nicolau.
+
+
+
+   a simple mechanism for improving the accuracy and efficiency of 
+   instruction-level disambiguation,
+   
+   
+   (full text in postscript)
+   
+   languages and compilers for parallel computing (august 1995),
+   lecture notes in computer science,
+   volume 1033, pp. 289-303,
+   springer-verlag, 1996, 
+   by s. novack and j. hummel and a. nicolau.
+
+
+
+   abstract description of pointer data structures:  an approach
+   for improving the analysis and optimization of imperative programs,
+   
+   
+   (full text in postscript)
+   
+   acm letters on programming languages and systems,
+   1(3), pp. 243-260, september 1992, 
+   by j. hummel and l. hendren and a. nicolau.
+
+
+ refereed conference papers 
+
+
+
+ 
+   a framework for data dependence testing in the presence of pointers,
+   
+   
+   (full text in postscript)
+   
+   proceedings of the 23rd annual international conference on parallel 
+   processing,
+   pp. 216--224, august 1994,
+   by j. hummel and l. hendren and a. nicolau.
+
+
+ 
+   a general data dependence test for dynamic, pointer-based data structures,
+   
+   
+   (full text in postscript)
+   
+   proceedings of the acm sigplan conference on programming language 
+   design and implementation,
+   pp. 218--229, june 1994,
+   by j. hummel and l. hendren and a. nicolau.
+
+
+ 
+   a language for conveying the aliasing properties of dynamic, 
+   pointer-based data structures,
+   
+   
+   (full text in postscript)
+   
+   proceedings of the 8th international parallel processing symposium,
+   pp. 208--216, april 1994,
+   by j. hummel and l. hendren and a. nicolau.
+
+
+ 
+   applying an abstract data structure description approach to parallelizing
+   scientific pointer programs,
+   
+   
+   (full text in postscript)
+   
+   proceedings of the 21st annual international conference on parallel 
+   processing, 
+   pp. 100--104, august 1992, 
+   by j. hummel and l. hendren and a. nicolau.
+
+
+  
+   abstractions for recursive pointer data structures: improving
+   the analysis and transformation of imperative programs,
+   
+   
+   (full text in postscript)
+   
+   proceedings of the acm sigplan '92 conference on programming language 
+   design and implementation,
+   pp. 249--260, june 1992,
+   by l. hendren and j. hummel and a. nicolau.
+
+
+
+ other interests: 
+
+
+   sailing, teaching, and teaching sailing.  visits to washington, d.c. to
+see beth.  in fact, here's a recent
+ picture  of us in new zealand...
+
+if you like sailing...  we sailed from fiji to new zealand 
+aboard a 65' racing sloop owned and operated by orange coast college;
+the boat is called alaska eagle, and is an old whitbread winner (flyer).
+pictures?  here's a goofy
+ picture  of me driving; a
+ picture  of "a watch" (brad, 
+scott [the skipper], myself, and ray [not pictured since he's driving]);
+a  picture  of myself atop
+roberts island (bay of islands, nz); and finally a
+ picture  of a bunch of us
+atop roberts island (facing the other way -- you can just make out
+the mighty eagle anchored in the background, lower right).  what a trip!
+
+
+
+ department of information and computer science ,
+university of california, irvine ca 92717-3425

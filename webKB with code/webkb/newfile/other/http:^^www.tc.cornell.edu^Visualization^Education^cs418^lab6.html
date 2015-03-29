@@ -1,0 +1,160 @@
+cs418 lab 6
+
+
+
+
+  
+cs 418: laboratory 6 
+ phong lighting
+
+ introduction. 
+in this exercise you will code the lighting equation as a
+series of compute statements.
+you will bypass the default illumination model which is built into
+the image module. by doing this, you will be able to control lighting
+effects directly. for example, you will be able to define a spotlight
+or make the intensity of an object drop off with distance.
+procedure:
+
+
+first you need to download several example files. to do 
+this, click on each of the filenames shown
+below. when the text window opens, use the "save as" 
+option to put the file in your own directory. name
+each file with the same name as shown below. 
+
+  lighttemplate.net 
+  lighttemplate.cfg 
+
+
+
+the program lighttemplate.net implements a spotlight entirely within
+dx using compute modules. ambient, diffuse and specular terms are
+each computed and added together to obtain the intensity of each point. 
+follow the flow of the program to see how the intensities are computed.
+for the initial program it is assumed that the light is at a finite
+distance from the objects, but the viewer is very far away in a direction
+v.
+
+some examples of the program's output are shown below. the first shows
+a spotlight oriented along the y-axis with a "width" of 3.0. 
+(a width of 3.0 means (d dot l)^3.0.)
+the
+small white dot is an icon showing where the light is. the arrow is
+an icon showing the direction of the spotlight.
+
+
+
+the next image is the same light position, but with the spotlight
+width=0.0 so that the light is omnidirectional.
+the bright spots on the surfaces near the light are due to a large
+(l dot n)  in the diffuse term.        
+notice that the diffuse reflection has the color of the surface,
+while the specular reflection has the color of the light (white).
+
+
+
+you can turn off the default shading in dx by collecting a single
+ambientlight with the object you are rendering. an ambientlight ingores
+normal information. all you see is the color defined for the object as if
+it were lighted from all directions uniformly. the example program
+ constructs a surface, calculates the surface normals,
+then throws away the lighting information to produce an unshaded surface
+(because there is an ambientlight module). 
+the colors you calculate become the color of the objects in the image module.
+note that you must use the camera/display module to show the image because
+the view-vector, v, must be available to the program. do not use an image
+module.throughout this exercise, leave the viewing distance at infinity,
+that is, leave the camera module perspective flag at 0.
+
+
+modify the program to use the (n dot h) 
+formulation of specular lighting
+rather than (r dot v). make an interactor to choose which model you
+are using.
+
+ all surfaces get more shiny at high angle of incidence.
+modify the specular term to simulate this effect.
+below is an example of what the modified program might generate.
+the specular reflection on the vertical plane is releatively diffuse
+because the angle of incidence is near zero.
+the specular reflection from the horizontal plane is narrow because
+the angle of incidence is high (the light is grazing the surface).
+clarification:
+you need to make some part of the specular term dependent on 
+the angle of incidence, arccos(l dot n). the light shown is a
+omnidirectional light.
+the definition of the reflection vector, r, is given on page 19
+of watt.
+
+
+
+the spotlight as given to you has a "soft" cutoff with angle. modify
+the program so that instead of dropping off as a power of a cosine, the
+intensity is uniform for angles less than a certain value and zero for
+angles more than that value. (angle is measured here from the d vector.)
+include an interactor to choose between the cutoff methods.
+the two images below show a "soft" cutoff spotlight and a "hard" cutoff
+spotlight. note the jagginess at the edge of the hard cutoff light
+which results from a very abrupt cutoff function.
+try to minimize the jagginess in your program.
+
+
+
+
+ modify the program to fly the light through a scene consisting of
+a few objects.
+the light should be a spotlight which flys a curved path, with the
+direction of the spotlight tangent to the path for about half the
+flight, then the spotlight should suddenly lock onto one object
+and remain locked for the second half of the flight.
+one frame of a possible animation is shown below.
+
+
+
+
+ bugs as of 4/11/95
+
+
+the term "ip" in the calculation of the specular term should be moved to
+the final calculation so that ks*ip*(r dot v)^n is calculated.
+ the compute module does not understand transform objects, so don't use
+rotate, scale, translate, or transform modules when you are building
+your scene.
+
+  questions/writeup:
+
+be prepared to demo all of the functions 
+specified in the first three bullets above:
+ambient lighting, diffuse
+lighting, light position, light directionality, and specular reflections of
+two kinds in one program. all interactors should
+be labeled, have appropriate ranges and step sizes and be in no more than
+two control panels. the code should be well documented and organized.
+
+be prepared to demo the flying light in a separate program.
+
+
+ what seem to be the differences between the (r dot v) and (n dot h)
+specular lighting models in terms of the appearance of objects.
+
+ write the formula you used to make a surface more shiny at high angles.
+
+ write the formula you used to impelment a sharp cutoff spotlight.
+
+
+
+
+
+back to main page
+
+
+go to lab 7
+ 
+
+last modified, 1/25/95, b.land.
+
+
+
+ 
+copyright statement

@@ -1,0 +1,108 @@
+cse 590k, compiler seminar
+
+
+cse 590k - compiler seminar
+
+
+
+
+
+
+
+
+
+course organizers:
+
+
+susan eggers
+and craig
+chambers
+
+
+meeting time:
+
+
+wednesdays 4:00pm to 4:50pm.  officially, we're in loew 220, but
+really we meet on the second floor of the hub atrium.
+
+
+
+
+
+
+schedule
+
+
+
+week 1 (1/10): 
+
+"memspy: analyzing memory system bottlenecks in programs," by margaret
+martonosi, anoop gupta, and thomas anderson.  (anderson) 
+
+week 2 (1/17): 
+
+
+"a general approach for run-time specialization and its application to
+c," by charles consel and francois noel.  (lee) 
+
+week 3 (1/24): 
+
+
+"a practical data flow framework for array reference analysis and its
+use in optimizations," by evelyn duesterwald, rajiv gupta, and mary
+lou soffa.  (lo) 
+
+week 4 (1/31): 
+
+
+"value dependence graphs:  representation without taxation," by daniel
+weise,roger crew, michael ernst, and bjarne steensgaard.
+(litvinov) 
+
+week 5 (2/7): 
+
+
+"iterated register coalescing," by lal george and andrew appel.
+(garrett) 
+
+week 6 (2/14): 
+
+
+"generating machine specific optimizing compilers," by roger hoover
+and kenneth zadeck.  (dean and grant) 
+
+week 7 (2/21): 
+
+
+"the paradigm compiler for distributed-memory multicomputers," by
+privthviraj banerjee, et al.  (lewis) 
+
+week 8 (2/28): 
+
+
+"minimum cost interprocedural register allocation," by steven
+kurlander and charles fischer.  (secosky) 
+
+week 9 (3/6): 
+
+
+"data specialization," by todd knoblock and erik ruf.  (grove) 
+
+week 10 (3/13): 
+
+
+"lazy strength reduction," by jens knoop, oliver ruthing, and
+bernhard steffen.  (mock and tullsen) 
+
+
+
+to subscribe to the cse 590k mailing list, send email to
+"majordomo@cs"; the mail's contents should include the line "subscribe
+cse590k".  leave the "subject:" line blank.  you should shortly
+receive a message back saying "welcome."
+
+
+
+
+
+melody@cs.washington.edu

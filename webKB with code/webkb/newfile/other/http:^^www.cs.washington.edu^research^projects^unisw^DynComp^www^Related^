@@ -1,0 +1,128 @@
+phased compilation page
+
+
+
+related work
+
+this page lists sites describing other dynamic-compilation efforts,
+systems that use dynamic compilation, partial evaluation, and other
+related research.  a list of relevant papers on the web is also included.
+
+phased compilation
+
+   
+uw dynamic compilation group
+   david
+keppel's rtcg page
+   charles consel's home page
+   dawson engler's home page
+   mark leone's home page
+   erik ruf's home page
+   sel-hpc rtcg index
+
+
+extensible systems
+
+   spin
+   exokernel
+   scout
+   synthetix
+   others
+
+
+partial evaluation
+
+   short bibliography
+   long bibliography
+   charles consel's home page
+   olivier danvy's home page
+   fuse
+   irisa
+pe group
+   sel-hpc
+partial evaluation index
+   peter sestoft's home page
+   daniel
+weise's home page
+
+
+compilers and programming languages
+
+   
+cecil/vortex
+   compiler resources
+   impact
+   leone's
+compiler/language research group index
+   mark
+leone's
+programming language research index
+   microsoft research program analysis group
+   self
+   sel-hpc
+compilers & interpreters archive
+
+
+binary transformation
+
+   binary translation
+   eel
+   etch
+   om
+
+
+related papers
+
+   fast,
+effective dynamic compilation by auslander et
+al.
+   automatic
+dynamic compilation support for event dispatching in extensible
+systems by chambers
+et
+al.
+   a
+case for runtime code generation by david keppel
+   a
+portable interface for on-the-fly instruction space modification
+by david keppel
+   evaluating
+runtime-compiled value-specific optimizations by david keppel
+   a
+general approach for run-time specialization and its application to
+c by consel and noel
+   optimizing
+ml with run-time code generation by lee and leone
+   a
+declarative approach to run-time code generation by leone and lee
+   lightweight
+run-time code generation by leone and lee
+   deferred
+compilation: the automation of run-time code generation by leone and lee
+   `c:
+a language for high-level, efficient, and machine-independent dynamic
+code generation by engler et al.
+   `c: a
+language for efficient, machine-independent dynamic code
+generation by engler et al.
+   tcc: a
+template-based compiler for `c by poletto et al.
+   vcode: a
+retargetable, extensible, very fast dynamic code generation system
+by dawson
+engler
+   dcg: an
+efficient, retargetable dynamic code generator by engler and
+proebsting
+   data
+specialization by knoblock
+and ruf
+   specializing
+shaders by guenter et al. 
+
+
+
+
+
+last updated november 25, 1996.
+brian grant (grant@cs.washington.edu)

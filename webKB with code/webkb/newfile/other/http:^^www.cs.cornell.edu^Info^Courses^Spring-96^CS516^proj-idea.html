@@ -1,0 +1,284 @@
+cs516 project proposals
+
+
+cs 516 project proposals 
+thorsten von eicken
+wednesday, mar. 13th, 1996
+       
+
+
+proposals
+sp-2 related projects:
+
+
+splash benchmarks in cc++ on the sp-2
+
+splash is a benchmark suite consisting of parallel applications for
+shared memory machines developed at stanford.  splash-2 is the latest
+version of splash containing several new applications as well as the
+original ones.  the suite is divided into two categories: kernels and
+applications.  kernels are routines commonly used by applications.
+here is a sample of them:
+
+kernels: 
+complex 1d fft;
+blocked lu decomposition;
+blocked sparse cholesky factorization;
+integer radix sort;
+
+applications:
+barnes-hut;
+ocean simulation;
+water simulation with spatial data structure;
+water simulation without spatial data structure;
+and others.
+
+implement the kernels listed above and one or two applications
+(depending on the level of difficulty) in cc++ or split-c.  your
+implementation will be judged on correctness and performance.  a
+careful explanation of the results is expected along with detailed
+timing breakdowns.
+
+the source code of the benchmarks for shared memory machines is
+available on the web.  you can choose to port the existing code to
+cc++ or split-c, or write your own from scratch once you understand
+the problem.  you should also read the paper entitled "splash-2
+programs: characterization and methodological considerations"
+published in isca'95.  all these can be obtained from the web.
+
+this project will expose you to parallel programming using
+state-of-the-art languages in both shared and distributed memory
+machines.  the splash benchmarks are widely accepted in the research
+community.  besides, cc++ is a parallel extension of c++ that has
+become very popular over the years.  you can do your project on any
+available platform, but we suggest the sp-2 because these languages
+are currently well supported by us.
+
+
+pvm over active messages on the sp-2
+
+pvm (parallel virtual machine) is a very popular software package that supports
+parallel computing on networked of workstations.  it provides a user
+library with routines (e.g. pvm_send, pvm_recv) for communication between 
+processes.  pvm communication is baed on tcp/udp protocols, hence only
+coarse-grained parallel applications can get reasonable performance.
+
+try improve the performace of pvm by implementing its major communication 
+routines over active messages on the sp-2 and benchmark them against
+split-c as well as mpi.
+
+parallel vmrl renderer on the sp-2, in split-c or cc++
+
+implement a parallel renderer for the vrml (virtual reality modelling
+language). this would allow very complex vrml documents to be downloaded
+and scenes rendered, hopefully in near-real-time, on a system such as 
+the sp-2. you would also need a way to send the rendered image quickly
+to some desktop workstation ... a simple x connection works for prototype,
+but what about sending the rendered image back over atm? 
+
+
+a parallel povray or other raytracer in split-c or cc++ 
+
+implement a parallel povray or other raytracer. this is similar to the
+above, but probably has a less "real-time" feel (unless you manage to do
+it very quickly). povray is a freely available raytracing package which
+runs on a wide range of unix systems; try parallelizing aspects of it
+(say, by dividing the rendering space between cpus) and implementing on
+a system such as the sp-2.
+
+
+a parallel file system on sp-2
+
+implement a parallel file system on top of the regular filesystem on each
+node.  this is most easily done as a user-level library within split-c.
+
+split-c benchmark comparison and survey
+
+all of the high-end parallel
+systems in the department can run programs written in the split-c parallel
+language: the sp-2, atm cluster, fast ethernet cluster, and multiprocessor
+sparcs. the berkeley and ucsb groups have a number of nice split-c 
+benchmarks; we would like to get an understanding for their relative
+performance on all of the above systems, as well as how they scale (say,
+when running with 8 as opposed to 4 cpus).
+
+linda over active messages on the sp-2
+
+linda is a simple (only six operations!) yet powerful extension to existing 
+sequential languages that allows parallel execution of programs. the computing
+model is slightly different from what you've been shown so far in the course.
+messages and new tasks to be executed are put into a tuple space
+and they can be retrieved from there by any process. one does not have
+to specify the address of a sender of receiver -- the tuple space is shared
+between all processes. reception of messages is based on pattern matching. 
+based on the simple concept of tuple space, one can program
+all kinds of synchronization, blocking and non-blocking communication, 
+point-to-point or multicast message passing etc.
+
+the project will be to implement linda run-time system over active messages
+on the sp-2, as an extension to c. the work will include understanding
+of linda model and using fast communication subsystem and threads in order
+to get very efficient run-time system. 
+
+
+
+
+u_net related projects:
+
+these projects specifically deal with u-net, our system for low-latency
+user-level networking. four implementations of u-net exist (three for
+atm cards, one for fast ethernet). in these projects you will augment the
+existing u-net system, either on one of these implementations, or
+combining several of them.
+
+
+cusee-me over the atm network or over fast ethernet
+
+implement and demo a high-speed version of cuseeme over the atm network
+or over fast ethernet. requires independence, since nobody in our group 
+knows how cuseeme works. the idea here is to explore methods of 
+long-range video teleconferencing using the u-net approach. as opposed to
+sending video between two workstations side-by-side with an atm fiber
+between them, how can protocols be designed for robust, multicast 
+video conferencing? 
+
+an alternative to cuseeme would be a system such as the mbone using 'vat',
+or some other 'free' video conferencing package such as ivs.
+
+gateway between fast ethernet and atm using u-net
+
+design and build a gateway between fast ethernet and atm using u-net.
+this can either be at the raw u-net level or at the ip level.
+
+kernel endpoint for u-net
+
+one 'problem' with u-net is that it doesn't
+allow existing applications and kernel facilities to easily share the
+network device with u-net. the idea is to implement a kernel-level
+u-net endpoint where data generated from ip sockets (in the kernel) is
+sent and received through the endpoint. in this way you are treating the
+kernel endpoint as a kind of ethernet driver (say). 
+
+while any communication using the kernel endpoint will no doubt be
+slower than user-level endpoints, the idea is to allow many applications
+to multiplex on one kernel endpoint and for existing socket-based apps
+to at least run. you would not need to implement ip or other high-level
+protocols; essentially you would replace the low-level kernel functions
+for sending data to an atm or ethernet card with routines which read/write
+to the kernel endpoint.
+
+the best platform for this is the atm or fast ethernet implementation 
+of u-net on linux. 
+
+this is an "expert" project best undertaken by someone with linux kernel
+hacking experience.
+
+ip packet filter on sba-200 atm adapter
+
+u-net over fast ethernet and atm currently use a simple "protocol" 
+which is not compatible with ip. implement a simple ipv4 packet filter
+for either u-net for fast ethernet or atm, so that packets are in the
+correct ipv4 format. you may not wish to implement all aspects of the
+ip protocol, but that would be a plus.
+
+flow control for active messages on fast ethernet
+
+fast ethernet poses interesting flow control problems because acks compete
+with regular packets for bandwidth. design a good flow control algorithm
+for active messages that works well on a shared medium fast ethernet.
+
+fast rpc
+
+pick up last year's fast rpc project and actually make it work.
+
+distributed shared memory
+
+pick up last year's dsm project, make it work and run the splash benchmarks
+over it.
+
+network performance tool netperf for u-net
+
+implement the standard network performance tool netperf for u-net
+
+gang scheduling for the u-net cluster
+
+in gang scheduling,
+all processors working on a single parallel application schedule 
+themselves synchronously, so that communication and computation phases
+can be coordinated and reduce latency for data exchange. this might
+require some kind of interesting modifications to the kernel scheduler,
+and some sort of "clock synchronization" so that all processes in, say,
+a split-c application run at the same time across the network of machines.
+
+this is an "expert" project best undertaken by someone with linux kernel
+hacking experience.
+
+
+
+usit related projects:
+usit is a toolkit we developed to help build parallel and distributed
+programming environment on the atm cluster.  currently, there are utility
+programs to set up daemons on a set of machines within the cluster, and
+to start running split-c programs and forwarding i/o between your local
+machine and the cluster.  those who will be using the cluster to run
+split-c programs and other application programs may also find the
+toolkit useful.
+
+at a lower level, usit provides both c and tcl/tk interfaces for job
+control, i/o forwarding, job scheduling, u-net channel allocation etc. within
+the cluster.  these interfaces can be used to customize a particular
+execution environment your application requires.
+
+
+pvm over u-net using usit
+
+pvm is a popular software package that allows a heterogeneous network
+of parallel and serial computers to appear as a single concurrent computational
+resource.  pvm consists of two parts: daemon processes that users install
+on machines that use pvm, and a user library mainly for communication between
+processes.
+in this project, you are to explore the possibility of implementing
+ basic pvm daemon functionalities on u-net
+ using the interfaces usit provides, and if necessary implement additional
+interfaces for usit.
+
+
+
+other:
+
+
+benchmark the liedtke microkernel system
+
+jochen liedtke published the paper "on microkernel construction"
+in last sosp. the abstract is included below. the project will be
+to read the paper thoroughly, understand the problems and proposed
+solutions, download the described code and benchmark it.
+
+abstract:
+from a software-technology point of view, the microkernel concept is 
+superior to large integrated kernels. on the other hand, it is widely 
+believed that (a) microkernel based systems are inherently inefficient 
+and (b) they are not sufficiently flexible. contradictory to this belief,
+we show and support by documentary evidence that inefficiency and 
+inflexibility of current microkernels is not inherited from the basic idea 
+but mostly from overloading the kernel and/or from improper implementation.
+based on functional reasons, we describe some concepts which must be 
+implemented by a microkernel and illustrate their flexibility. then, we 
+analyze the performance critical points. we show what performance
+is achievable, that the efficiency is sufficient with respect to macro-kernels
+ and why some published contradictory measurements are not evident. 
+furthermore, we describe some implementation techniques and illustrate why 
+microkernels are inherently not portable, although they improve portability 
+of the whole system.
+
+
+
+
+
+
+
+
+
+
+return to 
+cs 516 home page

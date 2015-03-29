@@ -1,0 +1,736 @@
+dissertation abstracts
+
+
+
+dissertation abstracts
+
+
+
+
+
+
+  daniel berleant.  1991.
+  yung-tai byun.  1990.
+  james crawford.  1990.
+  daniel dvorak.  1992.
+  adam farquhar.  1993.
+  david franke.  1993.
+  richard froom.  1995.
+  john hartman.  1991.
+  akira hayashi.  1991.
+  herbert kay.  1996.  new!
+  wan yik lee.  1996.  new!
+  wood wai lee.  1993.
+  david pierce.  1995.
+  raman rajagopalan.  1995.
+  david throop.  1991.
+
+
+
+
+
+the use of partial quantitative information with qualitative reasoning
+
+
+
+daniel berleant.  1991.
+
+the use of partial quantitative information with qualitative reasoning
+doctoral dissertation, department of computer sciences, 
+the university of texas at austin. 
+
+abstract
+
+there is a need for combining qualitative and quantitative
+simulations, to do simulation tasks that would be difficult using
+either alone.  this task is made more difficult by the fact that
+available quantitative information may be incomplete, bounding values
+with intervals or describing them with probability distribution
+functions.  this research demonstrates the combination of qualitative
+and quantitative simulation in an implemented system, q3.  q3 utilizes
+partial or complete quantitative information, to gradually refine a
+qualitative simulation into a simulation that has properties and
+advantages of both qualitative simulations and quantitative ones.
+
+
+the technique exemplified by q3 is shown to possess properties often
+used in analyzing both qualitative and quantitative simulators.
+qualitative and quantitative inferences are correct.  theoretical
+convergence to the true solution and stability in the presence of
+partial model inputs are also shown.  
+
+q3 has been applied to the problem of finding probabilities of
+qualitative behaviors, an important problem.  partial quantitative
+characterization of model inputs, in the form of intervals and
+probability distributions, may be used to bound the probabilities of
+different behaviors.  this is demonstrated for simple models including
+one in the dependability analysis application domain.  
+
+
+
+
+
+spatial learning mobile robots with a spatial semantic hierarchical model
+
+yung-tai byun.  1990.
+spatial learning mobile robots with a spatial semantic hierarchical model
+doctoral dissertation, department of computer sciences,
+the university of texas at austin.  
+
+abstract
+
+the goal of this dissertation is to develop a spatial exploration and
+map-learning strategy for a mobile robot to use in unknown,
+large-scale environments.  traditional approaches aim at building
+purely metrically accurate maps.  because of sensorimotor errors, it
+is hard to construct accurately such maps.  however, in spite of
+sensory and computation limitation, humans explore environments, build
+cognitive maps from exploration, and successfully path-plan, navigate,
+and place-find.  based on the study of human cognitive maps, we
+develop a spatial semantic hierarchical model to replace the global
+absolute coordinate frame used in traditional approaches.  the
+semantic hierarchical model consists of three levels: control level,
+topological level, and geometrical level.  the topological level
+provides the basic structure of the hierarchy.  
+
+at the control level, a robot finds places or follows travel edges
+which can be described by qualitatively definable features.  the
+distinctive features allow development of distinctiveness measures.
+the robot uses these measures to find, with negative feedback control,
+the distinctive places by hill-climbing search algorithms, and the
+travel edges by edge-following algorithms.  distinctive places and
+travel edges are connected to build a topological model.  this model
+is created prior to the construction of a global geometrical map.
+cumulative location error is essentially eliminated while traveling
+among distinctive places and travel edges by alternating between the
+hill-climbing search control algorithms and the edge-following control
+algorithms.  on top of the topological model, metrical information is
+accumulated first locally and then globally.  
+
+using a simulation package with a robot instance, nx, we demonstrate
+the robustness of our method against sensorimotor errors.  the control
+knowledge for distinctive places and travel edges, the topological
+matching process, and the metrical matching process with local
+geometry make our approach robust in the face of metrical errors.  in
+addition to robust navigation at the control and topological levels,
+our framework can incorporate certain metrically-based methods and
+thus provide the best of both approaches.  
+
+
+
+access-limited logic -- a language for knowledge representation
+
+
+james crawford.  1990.
+
+access-limited logic -- a language for knowledge representation
+doctoral dissertation, department of computer sciences,
+the university of texas at austin.  
+
+abstract
+
+ access-limited logic (all) is a language for knowledge representation
+which formalizes the access limitations inherent in a network
+structured knowledge-base.  where a deductive method such as
+resolution would retrieve all assertions that satisfy a given pattern,
+an access-limited logic retrieves all assertions reachable by
+following an available access path.  the time complexity of inference
+is thus a polynomial function of the size of the accessible portion of
+the knowledge-base, rather than the size of the entire knowledge-base.
+access-limited logic, though incomplete, still has a well defined
+semantics and a weakened form of completeness, socratic completeness,
+which guarantees that for any query which is a logical consequence of
+the knowledge-base, there exists a series of queries after which the
+original query will succeed.  we have implemented all in lisp and it
+has been used to build several non-trivial systems, including versions
+of qualitative process theory and pearl's probability networks.  all
+is a step toward providing the properties - clean semantics, efficient
+inference, expressive power - which will be necessary to build large,
+effective knowledge bases.  
+
+
+
+
+monitoring and diagnosis of continuous dynamic systems using semiquantitative simulation
+
+daniel louis dvorak.  1992.
+
+monitoring and diagnosis of continuous dynamic systems using semiquantitative simulation
+doctoral dissertation, department of computer sciences,
+the university of texas at austin.  
+
+abstract
+
+ operative diagnosis or diagnosis of a physical system in operation,
+is essential for systems that cannot be stopped every time an anomaly
+is detected, such as in the process industries, space missions, and
+medicine.  compared to maintenance diagnosis where the system is
+offline and arbitrary points can be probed, operative diagnosis is
+limited mainly to sensor readings, and diagnosis begins while the
+effects of a fault are still propagating.  symptoms change as the
+system's dynamic behavior unfolds.  
+
+this paper presents a design for monitoring and diagnosis of
+deterministic continuous dynamic systems based on the paradigms of
+"monitoring as model corroboration" and "diagnosis as model
+modification" in which a semiquantitative model of aphysical system is
+simulated in synchrony with incoming sensor readings.  when sensor
+readings disagree with predictions, variant models are created
+representing different fault hypotheses.  these models are then
+simulated and either corroborated or refuted as new readings arrive.
+the set of models changes as new hypotheses are generated and as old
+hypotheses are exonerated.  in contrast to methods that base diagnosis
+on a snapshot of behavior, this simulation-based approach exploits the
+system's time-varying behavior for diagnostic clues and exploits the
+predictive power of the model to forewarn of imminent hazards.  
+
+the design holds several other advantages over existing methods: 1)
+semiquantitative models provide greater expressive power for states of
+incomplete knowledge than differential equations, thus eliminating
+certain modeling compromises; 2) semiquantitative simulation generates
+guaranteed bounds on variables, thus providing dynamic alarm
+thresholds and thus fewer fault detection errors than with
+fixed-threshold alarms; 3) the guaranteed prediction of all valid
+behaviors eliminates the "missing prediction bug" in diagnosis; 4) the
+branching-time descruption of behavior permits recognition of all
+valid manifestations of a fault (and of interacting faults); 5)
+hypotheses based on predictive semiquantitative models are more
+informative because they show the values of unseen variables and can
+predict future consequences; and 6) fault detection degrades
+gracefully as multiple faults are diagnosed over time.  
+
+
+
+automated modeling of physical systems in the presence of incomplete knowledge
+
+
+  adam farquhar.  1993.
+
+automated modeling of physical systems in the presence of incomplete knowledge
+doctoral dissertation, department of computer sciences,
+the university of texas at austin. 
+
+abstract
+
+
+this dissertation presents an approach to automated reasoning about
+physical systems in the presence of {\em incomplete knowledge} which
+supports formal analysis, proof of guarantees, has been fully
+implemented, and applied to substantial domain modeling problems.
+predicting and reasoning about the behavior of physical systems is a
+difficult and important task that is essential to everyday commonsense
+reasoning and to complex engineering tasks such as design, monitoring,
+control, or diagnosis.  
+
+a capability for automated modeling and simulation requires
+ 
+   expressiveness to represent incomplete knowledge,
+   algorithms to draw useful inferences about non-trivial systems,
+and 
+   precise semantics to support meaningful guarantees of
+correctness. 
+ 
+
+in order to clarify the structure of the knowledge required for
+reasoning about the behavior of physical systems, we distinguish
+between the model building task which builds a model to describe
+the system, and the simulation task which uses the model to
+generate a description of the possible behaviors of the system.  
+
+this dissertation describes qpc, an implemented approach to reasoning
+about physical systems that builds on the expressiveness of
+qualitative process theory [forbus, 1984] and the mathematical
+rigor of the qsim qualitative simulation algorithm [kuipers, 1986].  
+
+the semantics of qpc's modeling language are grounded in the
+mathematics of ordinary differential equations and their solutions.
+this formalization enables the statement and proof of qpc's
+correctness.  if the domain theory is adequate and the initial
+description of the system is correct, then the actual behavior of the
+system must be in the set of possible behaviors qpc predicts.  
+
+qpc has been successfully applied to problems in botany and complex
+examples drawn from chemical engineering, as well as numerous smaller
+problems.  experience has shown that the modeling language is
+expressive enough to describe complex domains and that the inference
+mechanism is powerful enough to predict the behavior of substantial
+systems.  
+
+
+
+
+a theory of teleology
+
+
+david wayne franke.  1993.
+
+a theory of teleology
+doctoral dissertation, department of computer sciences,
+the university of texas at austin. 
+
+abstract
+
+ a representation language for teleological descriptions, or
+descriptions of purpose, is defined.  the teleological language, ted,
+expresses the descriptions of purpose in terms of design modifications
+that guarantee the satisfaction of design specifications.  these
+specifications express potential behaviors the designed artifact
+should or should not exhibit.  we define an abstraction relation on
+behavior and implement model checking and classification algorithms
+that computethis abstraction relation. the model checking algorithm
+determines whether or not a behavior satisfies a specification.  the
+classification algorithm provides effective indexing of behaviors and
+teleological descriptions.  we implement an acquistion technique for
+teleological descriptions and demonstrate how teleological
+descriptions can subsequently be used in diagnosis, explanation,
+case-based reasoning, design by analogy, and design reuse.  
+
+we demonstrate the behavior language, teleology language, acquisition
+of teleological descriptions, and application of teleological
+descriptions in explanation, diagnosis, and design reuse via examples
+in the thermal, hydraulic, electrical, and mechanical domains.  we
+define additional teleological operators that express purposes like
+prevent, order, synchronize, maintain, and regulate, demonstrating the
+ability to represent common human-generated descriptions of purpose in
+ted.  expressing the purpose of preventing an undesirable behavior is
+unique to ted, and is an example of ted's ability to express purposes
+regarding missing behaviors and components removed from a design.  
+
+the teleology language developed in this work represents a significant
+advance over previous work by providing a formal language that 1) is
+independent of any particular domain of mechanisms or behavior
+language, 2) can be effectively acquired during the design process,
+and 3) provides an effective means of classifying and indexing
+teleological descriptions.  
+
+
+
+
+high-speed navigation with approximate maps
+
+
+richard allan froom.  1995.  
+
+high-speed navigation with approximate maps.
+ph.d. dissertation, the university of texas at austin.   
+
+
+abstract
+
+a global map of a mobile robot's environment is essential for high-performance
+navigation in large-scale space.  when portions of the environment are not
+visible, a map is needed for route planning and enables high performance by
+allowing the robot to anticipate regions that are occluded or beyond sensor
+range.  yet, autonomously acquired global map information is inevitably
+uncertain due to the low positioning accuracy of mobile robots and the
+possibility of changes to the environment. 
+
+previous work in high-speed navigation falls into two categories.  global
+optimization approaches assume that an accurate model of environment geometry
+and robot dynamics are available, and address the problem of efficiently
+approximating the minimum-time control between a start and goal state.  reactive
+navigation methods use only immediately sensed environment geometry to avoid
+obstacles while moving to a specified goal position.  the global optimization
+approach has the theoretical advantage of high performance, but it does not
+address the significant uncertainty typical of mobile robots.  the reactive
+navigation approach can respond to unanticipated geometry, but its overall
+performance is limited. 
+
+this dissertation describes a method for high-speed map-guided navigation in
+realistic conditions of uncertainty.  a previously-developed method is used to
+acquire a topologically correct, metrically approximate map of the environment
+despite positioning errors.  information in the approximate map guides the
+operation of a novel, high-performance reactive navigator.  performance does not
+critically depend on the availability of expensive, accurate metrical
+information.  nonetheless, the map may be elaborated with more detailed
+information, and, as its level of detail and accuracy is improved, performance
+smoothly improves. 
+
+
+
+
+automatic control understanding for natural programs
+
+
+john hartman.  1991.
+
+automatic control understanding for natural programs
+doctoral dissertation, department of computer sciences,
+the university of texas at austin.  
+
+abstract
+
+ program understanding involves recognizing abstract concepts like
+"read-process loop" in existing programs.  programmers spend much of
+their time understanding programs, so studying and automating the
+process has many benefits.  
+
+programming plans are units of programming knowledge connecting
+abstract concepts and their implementations.  existing research
+assumes that plan instances can be recognized to recover the
+programmer's abstract concepts and intentions, but this approach has
+not been confirmed empirically.  
+
+we present a practical method for bottom-up control concept
+recognition in large, unstructured imperative programs.  control
+concepts are abstract notions about interactions between control flow,
+data flow and computation, such as "do loop", "read process loop", and
+"bounded linear search".  they are recognized by comparing an abstract
+program representation against a library of standard implementation
+plans.  the program representation is a hierarchical control flow/data
+flow graph decomposed into a tree of sub-models using propers (single
+entry/exit control flow sub-graphs).  plans are represented by similar
+graphs with added qualifications.  recognition is based on simple
+matching between sub-models and plans.  the method was implemented in
+the unprog program understander and tested with cobol and lisp source
+programs.  
+
+this method is robust, efficient, and scalable.  the program
+representation can be formed for all language constructs which permit
+static determination of control and data flow.  comparing sub-models
+and comparisons increases linearly with program size.  
+
+unprog has been applied to automatic cobol restructuring.  knowledge
+associated with plans and concepts permits more specific and
+insightful transformation, code generation, and documentation than is
+possible with syntactic methods.  control understanding can similarly
+raise the level of other reverse engineering and re-engineering tools
+for applications like analysis, documentation, and translation.  
+
+we also showed how our method and unprog can be used for empirical
+study of programs at the conceptual level.  results can be used to
+improve recognizer performance, acquire plans, catalog natural plans
+and concepts, test the hypothesis that programs are planful, and
+characterize program populations.  
+
+
+
+geometrical motion planning for highly redundant manipulators using a continuous model
+
+
+akira hayashi.  1991.
+
+geometrical motion planning for highly redundant manipulators using a continuous model
+doctoral dissertation, department of computer sciences,
+the university of texas at austin.  
+
+abstract
+
+ there is a need for highly redundant manipulators to work in complex,
+cluttered environments.  our goal is to plan paths for such
+manipulators efficiently.  
+
+the path planning problem has been shown to be pspace-complete in
+terms of the number of degrees of freedom (dof) of the manipulator.
+we present a method which overcomes the complexity with a strong
+heuristic: utilizing redundancy by means of a continuous manipulator
+model.  the continuous model allows us to change the complexity of the
+problem from a function of both the dof of the manipulator (believed
+to be exponential) and the complexity of the environment (polynomial),
+to a polynomial function of the complexity of the environment only.  
+
+the power of the continuous model comes from the ability to decompose
+the manipulator into segments, with the number, size, and boundaries
+of the segments, varying smoothly and dynamically.  first, we develop
+motion schemas for the individual segments to achieve a basic set of
+goals in open and cluttered space.  second, we plan a smooth
+trajectory through free space for a point robot with a maximum
+curvature constraint.  third, the path generates a set of position
+subgoals for the continuous manipulator which are achieved by the
+basic motion schemas.  fourth, the mapping from the continuous model
+to an available jointed arm provides the curvature bound and obstacle
+envelopes required (in step 2) to guarantee a collision-free path.  
+
+the validity of the continuous model approach is also supported by an
+extensive simulation which we performed.  while the simulation has
+been performed in 2-d, we show a natural extension to 3-d for each
+technique we have implemented for the 2-d simulation.  
+
+
+
+refining imprecise models and their behaviors
+
+
+herbert kay.  1996.  
+
+refining imprecise models and their behaviors.
+doctoral dissertation, department of computer sciences, the university of texas
+at austin, december 1996.
+
+abstract
+
+this dissertation describes methods for simulating and refining
+imprecisely-defined ordinary differential equation (ode) systems.
+when constructing a model of a physical process, a modeler must cope
+with uncertainty due to incomplete knowledge of the process.  for
+tasks such as design and diagnosis, the effects of this uncertainty
+must be considered.  however, predicting the behavior of an
+imprecisely-defined model is not easy since the model covers a space
+of many precise instances, each of which behaves differently.  
+
+while model uncertainty cannot be completely eliminated, it is
+possible to reduce it.  model refinement uses observations
+of a physical process to rule out portions of the model space that
+could not have produced the observations.  as more experience with the
+physical process is gained, the imprecision in the model is further
+reduced.  
+
+this dissertation describes three methods for reasoning with imprecise
+ode models.  sqsim is a simulator
+that produces a guaranteed bound on the behavior of an imprecise ode
+model.  by using a multiple-level representation and inference methods
+that span the qualitative-to-quantitative spectrum, sqsim produces
+predictions whose uncertainty is consistent with model
+imprecision.  we demonstrate sqsim on a complex, nonlinear chemical
+process and compare it to other methods for simulating imprecise
+ode models.  
+
+msquid is a function estimator for fitting (and bounding) noisy data
+that is known to be monotonic.  it uses a neural-network inspired
+model and nonlinear constrained optimization to search a
+space of monotonic functions.  we prove that msquid can estimate any
+monotonic function and show that it produces better estimates than
+does unconstrained optimization.  
+
+squid, which uses sqsim and msquid as components, is a system
+identification method that refines an imprecise model using a stream
+of observations from a physical process.  squid uses refutation to
+rule out portions of the model space that are inconsistent with the
+observations.  we show that this approach to refinement is
+significantly more efficient than parameter estimation for models with
+functional uncertainty and that it provides greater robustness in the
+face of uninformative observations.  
+
+
+
+spatial semantic hierarchy for a physical mobile robot
+
+
+wan yik lee.  1996.  
+
+spatial semantic hierarchy for a physical mobile robot.
+doctoral dissertation, department of computer sciences, the university of texas
+at austin, december 1996.
+
+abstract
+
+this dissertation describes research to extend and improve the
+spatial semantic hierarchy (ssh) approach to robot exploration
+and mapping, and to demonstrate and evaluate its effectiveness in
+controlling physical mobile robots.  
+
+the ssh approach for robot exploration and mapping was first developed
+in the context of a simulated robot, nx, and tested in simulated
+environments with very simple models of sensorimotor error.  physical
+implementations of aspects of the ssh approach have been built by
+other researchers but they do not provide adequate demonstration of
+its strengths or adequate analysis of its conditions of applicability.
+
+
+the dissertation work extended and improved the ssh mapping theory
+from its original prototype to a version capable of handling
+real sensorimotor interaction with a real (office)
+environment. the underlying goal of this research is to demonstrate
+how symbolic representations and symbol-based behaviors of an
+autonomous robot can be grounded in non-symbolic, continuous
+sensorimotor interaction with a real environment through the ssh
+approach.  the extended theory is implemented on a physical robot to
+explore a previously unknown environment, and to create an ssh spatial
+description of the environment. this dissertation describes the
+improved ssh mapping theory, the details of its implementation on a
+physical robot, and a demonstration and evaluation of several features
+of the implemention. 
+
+
+
+
+a qualitative simulation based method to construct phase portraits
+
+
+wood wai lee.  1993.
+a qualitative simulation based method to construct phase portraits
+doctoral dissertation, department of computer sciences,
+the university of texas at austin.  
+
+abstract
+
+ we have designed a qualitative simulation based method to construct
+phase portraits for a significant class of systems of two first order
+autonomous differential equations.  it is intended as a step toward
+automated understanding of continuous physical systems.  differential
+equation models are powerful tools for reasoning about physical
+systems, but they typically require precise information about systems.
+recently developed methods for qualitative simulation make it possible
+to predict all possible behaviors consistent with a state of
+incomplete, qualitative knowledge of the world, expressed as a
+qualitative differential equation (qde).  however, qualitative
+simulation can fail due to intractable branching, and spurious
+predictions.  the field of nonlinear dynamics has introduced the phase
+portrait representation as a powerful tool for the global analysis of
+nonlinear differential equations.  a state of the system is
+represented by a point in phase space; its behavior over time is
+represented by a trajectory.  when the phase portrait is
+two-dimensional, the solutions to a differential equation can be
+characterized by the system's fixed points, bundles of adjacent
+trajectories (called flows), and certain bounding trajectories.
+numeric methods for constructing phase portraits require numerically
+specific information about the system.  we demonstrate a method and an
+implemented program, qportrait, that constructs two-dimensional phase
+portraits from qde's.  starting with the total envisionment (a finite
+transition-graph representation of the possible behaviors of a
+system), qportrait progressively identifies, classifies, and combines
+features of the phase portrait, abstracting away uninteresting
+distinctions, and filtering out inconsistent combinations of features.
+because each step in the analysis is validity-preserving, the
+prediction is guaranteed to cover all real phase portraits consistent
+with qde.  in its current form qportrait phase applies to a restricted
+but nontrivial set of qde models.  it requires that all fixed-points
+be non degenerate, and be at landmark values for the phase variables.
+qportrait has produced tractable results when applied to qualitative
+generalizations of several well-known nonlinear systems.  guaranteed
+coverage of the behavior of a qualitatively described set of qde's
+complements the precision of numeric methods based approaches.  
+
+
+
+
+map learning with uninterpreted sensors and effectors
+
+
+
+ david m. pierce.  1995.  
+
+map learning with uninterpreted sensors and effectors.
+doctoral dissertation, department of computer sciences, the university of texas
+at austin.
+
+abstract
+
+
+this dissertation presents a set of methods by which a learning agent,
+called a ``critter,'' can learn a sequence of increasingly abstract and
+powerful interfaces to control a robot whose sensorimotor apparatus and
+environment are initially unknown.  the result of the learning is a rich,
+hierarchical model of the robot's world (its sensorimotor apparatus and
+environment).  the learning methods rely on generic properties of the
+robot's world such as almost-everywhere smooth effects of actions on
+sensory features. 
+
+at the lowest level of the hierarchy, the critter analyzes the effects of
+its actions in order to define control signals, one for each of the robot's
+degrees of freedom.  it uses a generate-and-test approach to define sensory
+features that capture important aspects of the environment.  it uses linear
+regression to learn action models that characterize context-dependent
+effects of the control signals on the learned features.  it uses these
+models to define high-level control laws for finding and following paths
+defined using constraints on the learned features.  the critter abstracts
+these control laws, which interact with the continuous environment, to a
+finite set of actions that implement discrete state transitions.  at this
+point, the critter has abstracted the robot's world to a finite-state
+machine and can use existing methods to learn its structure. 
+
+
+
+
+qualitative reasoning about dynamic change in the
+spatial properties of a physical system
+
+
+
+raman rajagopalan.  1995.  
+
+qualitative reasoning about
+dynamic change in the spatial properties of a physical system.
+doctoral dissertation, department of computer sciences, the university
+of texas at austin.  
+
+abstract
+
+spatial reasoning is an essential part of human interaction with the physical 
+world.  of the many models that have been developed to support automated
+spatial reasoning, most rely on numerical descriptions of a spatial scene.
+this dissertation addresses problems where only qualitative descriptions 
+of a spatial scene are available, such as natural language understanding,
+qualitative design, and physics problem-solving. 
+
+we provide the first set of solutions, given only a qualitative description 
+of a spatial scene, for reasoning about dynamic change in both the spatial 
+and non-spatial properties of a physical system.  we use diagrams to 
+compactly input the spatial scene for a problem, and text to describe 
+any non-spatial properties.  to match diagram and text objects so their
+descriptions can be integrated, we have developed a method for describing 
+the conceptual class of objects directly in diagrams.  then, diagram and 
+text objects can be matched based on their conceptual class. 
+
+the given problem is solved through qualitative simulation, and
+all spatial reasoning is done with respect to an extrinsic cartesian 
+coordinate system.  we model the relative positions of objects through 
+inequality constraints on the coordinates of the points of interest.  changes 
+due to translational motion are detected by noting changes in the truth
+values of inequality constraints.  we model the orientation of an object 
+through knowledge of its extremal points and its qualitative angle of 
+rotation with respect to each coordinate axis.  this model has been used to 
+reason qualitatively about the effects of rotational motion, 
+such as changes in the area projected by one object onto another. 
+
+we have implemented our spatial representation as production rules
+and as model fragments in the qpc qualitative modeling system.  the former
+has been used for solving static-world problems such as understanding 
+descriptions of an urban scene.  the latter has been used to reason 
+about situations where changes in spatial properties play a critical role, 
+such as the operation of transformers, oscillators, generators, and motors.
+to support dynamic spatial reasoning, we have expanded the modeling 
+capabilities of qpc to include methods for modeling piecewise-continuous 
+variables, non-permanent objects, and variables with circular quantity spaces. 
+
+
+
+
+model-based diagnosis of complex, continuous mechanisms
+
+
+david rutherford throop.  1991.
+
+model-based diagnosis of complex, continuous mechanisms
+doctoral dissertation, department of computer sciences,
+the university of texas at austin.  
+
+abstract
+
+ in diagnosis, when a hypothesis proposes a variable's value, several
+different lines of evidence may be considered; the different evidence
+must be arbitrated.  the result of this arbitration consists of a
+single best estimate of the variable value and of a measure of that
+estimate's plausibility.  the plausibility measure reflects the degree
+of agreement among the lines of evidence.  
+
+this report describes heatx, a program for model-based diagnosis of
+non-linear mechanisms with continuous variables.  previous work in
+model-based diagnosis has avoided arbitrating numeric evidence, often
+by representing continuous variables as discrete symbols (e.g., high,
+cold).  such restricted representation have had difficulty in
+diagnosing mechanisms with feedback or reconvergent fanout.  heatx
+represents numerical data explicitly in the hypotheses and in the
+inferencing procedures; it is thereby able to arbitrate evidence
+numerically.  
+
+heatx uses both nonlinear numerical simulations and approximate linear
+models to perform diagnosis in the domain of heat-exchanger networks.
+the response of these networks to changes in their inputs is
+nonlinear; the networks also have feedback and reconvergent fanout.
+this dissertation introduces several novel techniques for diagnosing
+such networks.  it interleaves the generation of complete fault
+hypotheses with several tests on partially formed hypotheses.  two of
+these tests are the qualitative filter and the clustering filter.  
+
+the qualitative filter analyzes the signs of gains between fault and
+symptom variables.  the clustering filter constructs linear
+approximations to individual components and assembles these into a
+linear model of the network.  it then uses the linear model to assess
+the consistency of a hypothesis.  it does so by determining whether
+there is a value for the candidate fault variable which is consistent
+with the quantitative values of the symptom variables; the degree of
+agreement between the symptoms and best value for the fault variable
+is used to score the hypothesis.  this filter is extended to
+multi-fault diagnosis, in which values for several fault variable may
+be estimated and judged simultaneously.

@@ -1,0 +1,137 @@
+fantasm page 
+
+
+
+
+
+
+
+ the truth is out there.
+
+ this page is constantly under construction:
+last update - 
+fri nov 15 00:08:43 cst 1996
+
+
+
+
+
+
+ what's new 
+
+
+
+
+bug fixed version: f96.io.v1.1 was installed: log out from your 
+current session and relogin and let the machine 'rebuild'. 
+after the rebuild, the new version will be visible in the 
+[system disk]->[fantasm] folder. use the new version by all means.
+
+..........................................
+
+bug in f96.io.v1.0 : if you are getting fatal errors when building,
+read this:  alignment problems . you do 
+not need to do this if you are using v1.1 (see above)
+
+..........................................
+
+
+
+
+ contents 
+this page contains stuff to do with writing assembly programs on the 
+m680x0 architecture - focusing on various issues on the assembler 
+fantasm by lightsoft.
+
+ 
+	 fantasm user's manual
+	  fantasm faq 
+	  macsbug quick overview 
+	  pitfalls in fantasm programming 
+	  io library specification 
+	 example programs:
+		string output, hex to base32
+	 resources: tips, programs, links, etc.
+
+		
+
+
+
+|back to contents|
+
+
+
+ example programs
+
+	here are some example programs that run under fantasm.
+	you have to obtain the [f96.io.v1.0] library files
+	from the [system disk]->[fantasm] folder in the new powermacs in the
+	macintosh lab in pai.
+	
+	this is the specification for the following programs:
+	 program spec.
+	 
+		 stroutln : subroutine for printing out 
+			pascal style string (length+string)
+			
+			global definition file 
+			    
+			   (p4_globals.s)
+			source file 
+			   
+			   (start.s)	
+			
+		 stroutln : shorter version
+			
+			global definition file  
+			    
+			   (p4_globals.s)
+			 source file
+			   
+			   (start.s)
+			
+		 hex to base32 conversion :
+			
+			global definition file  
+			    
+			   (p4_globals.s)
+			 source file
+			   
+			   (start.s)
+			
+	
+
+|back to contents|
+
+
+
+ resources 
+
+   	
+	  lightsoft :
+		the developer of fantasm 
+	 
+	
+	the programmer's dream page at lightsoft 
+	 
+	brynley's page:  project and libraries stuff 
+	 
+	 fantasm documents:
+		user's manual in stuffit format 
+	 
+		unregistered version of fantasm.
+	 
+	test bed v1.00" library : the current [f96.io.v1.0] is based on 
+	this library.
+	
+
+|back to contents|
+
+
+this page is maintained by 
+yoonsuck choe (yschoe@cs.utexas.edu)
+
+| ut austin 
+| utcs
+| cs310 fall 1996 page
+|

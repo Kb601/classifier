@@ -1,0 +1,245 @@
+circa
+
+
+
+
+
+circa...
+
+is an architecture for combining artificial intelligence and
+real-time systems to achieve intelligent real-time control,
+particularly of physical (robotic, manufacturing, aviation)
+systems.  the research is conducted jointly between the
+artificial intelligence 
+laboratory and the real
+time computing laboratory 
+
+personnel
+
+edmund
+h. durfee, associate professor of eecs 
+
+kang
+g. shin, professor of eecs 
+
+ella
+atkins, graduate student 
+
+chip
+mcvey, graduate student 
+
+alumni
+
+david
+j. musliner, phd, now at honeywell technology center 
+
+eric miller, ms, now at loral.
+
+some publications
+
+e. m. atkins, e. h. durfee, k. g. shin, plan development using local probabilistic models, proceedings of the twelfth conference on uncertainty in artificial intelligence, pp. 49-56, august 1996.
+
+
+e. m. atkins, e. h. durfee, k. g. shin, expecting the unexpected:  detecting and reacting to unplanned-for world states, proceedings of aaai-96, pp. ????, august 1996.   (student abstract)
+
+
+e. m. atkins, e. h. durfee, k. g. shin, detecting and reacting to unplanned-for world states, aaai-96 workshop on theories of action, planning, and robot control:  bridging the gap, pp. 7-14, august 1996.
+
+
+e. m. atkins, e. h. durfee, k. g. shin, building a plan with real-time execution guarantees, aaai-96 workshop on structural issues in planning and temporal reasoning, pp. 1-6, august 1996.
+
+
+e. m. atkins, e. h. durfee, k. g. shin, detecting and reacting to unplanned-for world states, to appear in aaai-96 fall symposium on plan execution:  problems and issues technical report, november 1996.
+
+
+e. m. atkins, e. h. durfee, k. g. shin, achieving fully-automated aircraft flight with limited resources, to appear in aaai-96 fall symposium on flexible computation in intelligent systems:  results, issues, and opportunities technical report, november 1996.
+
+
+d. j. musliner, j. a. hendler, a. k. agrawala, e. h. durfee,
+j. k. strosnider, and c. j. paul,
+
+the challenges of real-time ai,
+ieee computer, vol 28 #1, january 1995.
+also appears as university of maryland technical report cs-tr-3290
+(umiacs-tr-94-69).
+
+
+d. j. musliner,
+ 
+using abstraction and nondeterminism to plan reaction loops,
+proc. national conf. on ai, pp. 1036-1041, seattle wa, august 1994.
+
+
+
+d. j. musliner,
+ 
+predictive sufficiency and the use of stored internal state,
+in proc. conf. on intelligent robotics in field, factory, service, 
+and space, pp. 298-305, houston tx, march 1994.
+
+
+d. j. musliner, e. h. durfee, and k. g. shin,
+ 
+world modeling for the dynamic construction of real-time control plans,
+to appear in ai journal, 1994.
+
+
+d. j. musliner, k. g. shin, and e. h. durfee,
+ 
+automating the design of real-time reactive systems,
+in proc. symposium on ai in real-time control, 1994.
+
+
+d. j. musliner, e. h. durfee, and k. g. shin,
+
+circa: a cooperative intelligent real-time control architecture
+ieee transactions on systems, man, and cybernetics, vol 23 #6, 1993. 
+
+
+d. j. musliner, 
+
+circa: the cooperative intelligent real-time control architecture
+ph.d. thesis, the university of michigan, ann arbor, mi, 1993. 
+
+
+d. j. musliner, e. h. durfee, and k. g. shin,
+ 
+integrating intelligence and real-time control into manufacturing systems,
+working notes of the sigman workshop on intelligent
+manufacturing technology, july 1993.
+
+
+
+d. j. musliner, e. h. durfee, and k. g. shin,
+ 
+any-dimension algorithms
+,
+in proc. workshop on real-time operating systems and software, may 1992.
+
+
+d. j. musliner, e. h. durfee, and k. g. shin,
+ 
+reasoning about bounded reactivity to achieve real-time guarantees, in
+ proc. aaai spring symposium on selective perception, march 1992.
+
+
+d. j. musliner, e. h. durfee, and k. g. shin,
+ 
+execution monitoring and recovery planning with time, in
+ proc. conf. on artificial intelligence
+  applications, february 1991.
+
+
+edmund h. durfee and victor r. lesser. incremental planning to 
+control a time-constrained, blackboard-based problem solver. ieee 
+transactions on aerospace and electronic systems, special issue on 
+space telerobotics, 24(5):647-662, september 1988.
+
+victor r. lesser, jasmina pavlin, and edmund h. durfee. approximate 
+processing in real-time problem solving. ai magazine, vol. 9, no. 1, 
+pages 49--61, spring 1988.
+
+edmund h. durfee. towards intelligent real-time cooperative systems. 
+in   aaai spring symposium on planning in uncertain, unpredictable, or 
+changing environments , pages 29--33, stanford, ca, march 1990.
+
+
+
+short description
+
+as artificial intelligence (ai) techniques become mature, there has been
+growing interest in applying these techniques to controlling complex
+real-world systems which involve hard deadlines.  in such systems, the
+controller is required to respond to certain inputs within rigid
+deadlines, or the system may fail catastrophically.  for example, the
+mars rover project requires a partially- or fully-autonomous vehicle
+that can perform unsupervised navigation in hazardous conditions, where
+errors could mean the loss of multi-million dollar research and
+development efforts.  controlling the rover includes real-time tasks
+such as obstacle avoidance and emergency reactions to unexpected terrain
+hazards.  if the system ever fails to meet the deadlines associated with
+these control tasks, it may suffer damage tantamount to mission failure.
+since the number of possible domain situations is too large to be fully
+enumerated, and the consequences of failure are so severe, testing alone
+is insufficient to guarantee the required real-time performance.  these
+control problems require systems which can be proven to meet the
+hard deadlines which the environment imposes. 
+
+hard-wired control schemes using fixed algorithms are amenable to such
+performance analysis, but cannot address high-level problems such as
+reasoning about goals, resource restrictions, and recovery from
+unexpected failures.  unfortunately, many of the ai techniques and
+heuristics developed to solve these high-level problems are not suited
+to analyses that would provide guaranteed response times.  for example,
+systems that learn are able to form new chains of inferences, resulting
+in changing performance characteristics that may defy worst-case
+bounding.  even when ai techniques can be shown to have predictable
+response times, the variance in these response times is typically so
+large that providing timeliness guarantees based on the worst-case
+performance would result in severe underutilization of the computational
+resources during normal operations. 
+
+thus we perceive an apparent conflict between the nature of ai and the
+needs of real-world, real-time control systems.  while ai methods are
+characterized by unpredictable or high-variance performance, real-time
+control systems require constant, predictable performance.  most
+research on ``real-time ai'' (rtai) focuses either on restricted ai
+techniques that have predictable performance characteristics or on
+reactive systems that retain little of the power of traditional ai. 
+
+the ai lab and the real-time computing lab are cooperating on a
+new branch of rtai research here at the university of michigan.  to
+combine unrestricted ai techniques with the ability to make hard
+performance guarantees, we are investigating a cooperative intelligent
+real-time control architecture (circa).  in this architecture, an ai
+subsystem reasons about task-level problems that require its powerful
+but unpredictable reasoning methods, while a separate real-time
+subsystem uses its predictable performance characteristics to deal with
+control-level problems that require guaranteed response times.  the key
+difficulty with this approach is allowing the subsystems to interact
+without compromising their respective performance goals.  we have
+developed a scheduling module and a structured interface that allow the
+unconstrained ai subsystem to asynchronously direct the real-time
+subsystem without violating any response-time guarantees. 
+
+realistic intelligent control systems must recognize their resource
+limitations and make tradeoffs in the quality of their control outputs,
+or responses.  many systems recognize resource limitations and trade off
+the precision, confidence, or timeliness of their responses.  circa
+extends this mechanism by allowing the system to explicitly trade off
+the completeness of its responses.  circa's ai subsystem and scheduler
+cooperatively reason about the real-time subsystem's execution
+resources, and choose a subset of responses that the real-time
+subsystem will guarantee.  by manipulating the responses that the
+real-time subsystem is guaranteeing, the ai subsystem attempts to ensure
+that the real-time subsystem will meet hard deadlines and also achieve
+the overall system goals.  circa also provides mechanisms to utilize the
+time which becomes available when guaranteed mechanisms use less than
+their worst-case scheduled time allowance. 
+
+to achieve flexible control, circa requires that the ai methods reason
+about the expected real-time demands of the environment and build
+control plans to guarantee meeting those demands.  circa does this using
+a formal graph-based model of agent/environment interactions, exploring
+a space of states that the system could be in due to its own actions,
+due to external events, and due to the passage of time.  in constructing
+control plans, circa determines what actions it must guarantee to take
+and how often it will be able to take them to ensure that the system
+does not enter a state where it could transition into failure (due to
+the passage of time).  currently, circa is able to develop such control
+plans when possible, and when not possible circa provides well-defined
+transformations to the graph model (based predominantly on eliminating
+or extending various types of transitions) that allow it to
+systematically relax requirements until it can guarantee the performance
+of a control plan.  our ongoing work is investigating how to choose from
+among candidate transformations to yield the best possible control plan.
+we are also investigating improved scheduling techniques for efficiently
+generating guaranteed control plans, using internal state in the
+real-time subsystem to reduce costly sensory actions, and strategies for
+transitioning among control plans.  application domains for circa
+include manufacturing process control and mobile robotics. 
+
+
+
+
+last updated: 5/4/95

@@ -1,0 +1,100 @@
+basic operating systems projects.
+
+
+
+
+
+projects for basic operating systems research 
+
+
+
+to give students the opportunitycp: no match.
+hands dirty on
+some real operating systems research we are offering
+a number of projects based on the 
+ plan9 
+distributed operating system and on the 
+ vsta 
+public micro kernel. 
+
+
+the main goal of these projects is to get exposure to operating
+systems that are based on novel research principles in contrast
+to operating systems that are build using a more traditional 
+approach like the bsd derivates, linux or mach.
+plan9 and vsta were chosen for very specific research reasons which will
+become clear when your read their individual sections below. a major
+organizational reason was that these operating systems are available
+for your pc at home at, where they can peacefully co-exist with your other
+architectures. 
+
+except for some startup activities for the plan9 project, there
+are no other rules to these projects than that they should
+be systems projects. projects are being
+determined in cooperation between the faculty involved
+and the students who want to do this work. examples of projects
+are a distributed cd-rom file server for plan9, a process server
+for vsta, various device drivers for vsta, a kernel packet filter
+for either of the architectures, etc.
+
+the students who want to subscribe to these projects will need to have a
+solid background in programming in the c language, know how to use
+development tools like make, and have had some exposure to the fundamentals
+of operating systems, networks and distributed systems. affinity with
+real system work is mandatory.
+
+faculty in charge: werner vogels, robbert van renesse and thorsten
+von eicken
+
+plan9
+
+plan 9 is a distributed system. in the most general configuration, 
+it uses three kinds of components:
+terminals that sit on users' desks, file servers that store 
+permanent data, and cpu servers that provide
+faster cpus, user authentication, and network gateways. 
+these components are connected by various
+kinds of networks, including ethernet, datakit, 
+specially-built fiber networks, ordinary modem
+connections, and isdn. in typical use, users interact with 
+applications that run either on their terminals
+or on cpu servers, and the applications get their data 
+from the file servers, but it's also small enough to
+run by itself on a laptop. it is highly configurable; it 
+escapes from specific models of networked
+workstations and central machine service. 
+
+this project will start up with the installation of plan9
+on a file server and to make a number of machines (pc's and sparc stations)
+in the department capable of booting plan9 (over the network).
+
+follow-up activities can be in many areas of plan9, but will involve
+building new servers to support remote devices (running under unix),
+connecting your home pc running plan9 to the departmental plan9 
+fileserver through dial-in services, and adding a new communication
+mechanism to the plan9 kernel. other projects can be determined in cooperations
+with the researchers at at&t bell labs.
+vsta
+
+vsta is an experimental kernel which attempts to blend the design of a 
+microkernel with the system organization of plan 9. the result is a 
+small privileged kernel running user-mode tasks to provide system 
+services such as device drivers, filesystems, and name registry. like 
+plan 9, each service provides a filesystem-like interface.
+vsta was originally developed by andrew valencia and is now placed
+under gnu copyleft.
+
+there are many, many things still to be developed for vsta, its network
+servers are very new and could be evaluated and improved, device drivers
+need to be written, there is no windowing system, and many more. also
+existing mechanisms could be replaced or improved, examples are the now
+kernel based process management could be split into a kernel dispatcher and
+a process server. developing an remote ipc mechanism is another 
+possibility.
+
+anything is possible in this os as it is small (fits on 3 floppies, binaries
+and source code), easy to understand and very flexible.
+
+
+for information about this www page contact 
+werner vogels

@@ -1,0 +1,95 @@
+quiz 2 solutions - cs 302 fall 1996 - section 4
+
+
+
+
+  cs 302
+  fall 1996 - section 4
+ 
+quiz 2 solutions
+
+
+this quiz is 20 total points.  please write legibly.  if i can't read
+it, i can't grade it.  you have until 5 minutes after the class period
+ends to finish.
+
+good luck.
+
+
+   (2 points) what does the ``magic'' type ``const char *''
+allow us to do?
+
+ 
+ 
+it allows us to pass a constant character string to a function.
+ 
+
+   (2 points)
+
+state one difference between a local variable and a call-by-value
+parameter?
+
+          
+
+call-by-value parameters have an initial value obtained from
+an actual parameter from the call to the funciton.  local variables
+start with an unspecified initial value and thus they need to be
+assigned or explicity initialized before used.
+ 
+  
+
+   (2 points) what does a void keyword at the beginning of a
+function header or prototype mean?
+
+
+that function returns no value.
+
+
+   (2 points) based on what was said in class, when are ``global''
+variables acceptible to use?
+
+
+i accepted two answers:  never or only when they are global constants.
+
+
+
+   (2 points) give one reason to use a call-by-reference(&) parameter.
+ 
+
+
+a function needs to give back more information than a single variable.
+
+
+   (5 points) what is the output of the following program?
+
+
+#include&ltiostream.h&gt
+
+void height(int total_inches, int& inches, int& feet);
+
+int main() 
+{
+  int my_height = 78;
+  int height_inches, height_feet;
+
+  height(my_height, height_inches, height_feet);
+  cout 
+
+
+i am 6 feet, 6 inches tall.
+ 
+
+
+   (5 points) exercise 7, page 184: write a void function
+definition for a function called add_tax.  the function
+add_tax has two formal parameters: tax_rate which is the
+amount of sales tax expressed as a percentage and cost which is
+the cost of an item before tax.  the function changes the value of
+cost so that it includes sales tax.
+
+
+
+void add_tax(int tax_rate, int& cost)
+{
+  cost = (1.0 + tax_rate) * cost;
+}

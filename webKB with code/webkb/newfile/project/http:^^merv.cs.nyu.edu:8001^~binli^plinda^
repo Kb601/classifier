@@ -1,0 +1,138 @@
+persistent linda home page 
+
+
+
+
+
+
+
+
+
+abstract
+
+
+
+source
+
+
+
+people
+
+
+
+cs department
+
+
+
+courant
+
+
+
+nyu
+
+
+
+
+
+
+persistent linda 
+a software system for robust distributed/parallel computing.
+want to write to us?
+
+
+
+
+objectives
+the objectives of the plinda project are two-fold:
+
+fault tolerant parallel computing
+	    - provide language
+   	   constructs that facilitate
+   	   the design of high performance fault-tolerant parallel programs.
+
+harness the aggregate power of idle cycles on networks 
+	   of workstations in a manner that is fault-tolerant and does 
+	   not disturb the owners of the workstations at all.
+	   our system models non-idleness (e.g. user returns
+  	   to workstation) as failure.
+	   the work being done at the idle workstation is then moved.
+
+
+applications
+the major class of plinda applications are long-running coarse grain parallel applications.
+
+example applications:
+
+nile project
+data mining (eg. biological pattern discovery)
+
+
+
+distribution
+
+source code is available!
+and here is how to install it.
+please refer to the plinda user manual for 
+additional information.
+
+
+
+faq
+
+
+future work
+
+debuggers and run-time visualization tools.
+software tools for writing parallel/distributed programs.
+performance improvements for scientific applications.
+programming tools for data mining.
+a distributed run-time kernel for plinda.
+suggestions -- please feel free to send mail to plinda@cs.nyu.edu.
+
+
+	
+people
+
+dennis shasha (professor) 
+brian anderson (former student)
+tom brown (student)
+karp joo jeong (former student)  
+bin li (student)
+jihai qiu (student)
+suren talla (student)
+peter wyckoff (student)
+
+
+publications
+
+plinda user manual (postscript). 
+
+karpjoo jeong. fault-tolerant parallel processing combining linda, chec
+kpointing, and transactions. 
+ph.d. thesis, department of computer science, new york university, 1996.
+(click here for a postscript version.)
+
+karpjoo jeong and dennis shasha. persistent linda 2: a transaction/checkpointing approach to fault-tolerant
+linda. 
+proceedings of the 13th symposium on fault-tolerant
+distributed systems, october 1994. 
+(click here for a postscript version.)
+
+brian anderson and dennis shasha. persistent linda: linda + transactions + query processing.
+workshop on
+research directions in high-level parallel programming
+languages, mont saint-michel, france june 1991.
+published as springer-verlag lecture notes in computer
+science 574.
+(click here for a postscript version.)
+
+
+	
+other fault tolerant systems
+
+
+
+
+last modified by 
+bin li.
+october 23, 1996.

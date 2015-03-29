@@ -1,0 +1,119 @@
+cs418 lab 2
+
+
+
+
+
+
+cs 418: laboratory 2  
+ parametric surfaces 
+
+ introduction. 
+this exercise is concerned with building surfaces for computer graphics. it will
+introduce various types of parametric surfaces. 
+
+procedure:
+
+first you will need to download two files. to do this, click on
+each of the filenames shown below.  when the text window opens, use the
+"save as" option to put the file in your own directory. name each file with
+the same name as shown below.
+
+  parametric.net 
+  parametric.cfg 
+
+
+after downloading the files, start dx then
+open and execute parametric.net. each module (when opened) has a one-line
+
+explanation of its function.  one of the 
+ compute modules 
+performs the
+main
+operation of mapping a 2d grid to 3d coordinates to make the parametric
+surface.
+(the others just produce pi and produce the variables [v,w].)
+
+  assignment:
+
+quadric surfaces: modify the compute in parametric.net to produce a unit
+sphere.  use another compute module to convert the sphere to a
+"superquadric". that is, if the vector [x,y,z] is a quadric surface, then
+[x,y,z]^n is a superquadric surface, where the power of a vector just
+means the power of each term. try values of n from .2 to 10 or so. you
+will need to handle negative values of x, y, and z in the compute. make
+the value of n set by an interactor.
+the two images below show a sphere modified by n=.3 and n=3 respectively.
+
+
+
+
+figures of rotation: modify the program to produce a figure of rotation given by
+cylinder radius r=abs(w)+.1 where w is the axis of the rotation.  
+modify the program to  produce a figure of rotation
+which approximates the shape of a drink bottle. the bottle should have (at least)
+a neck, and a body with a bottom.
+
+two bottles modeled in spring 1995 are particularly elaborate.
+
+ 
+a juice bottle.
+ 
+a coke bottle. 
+
+
+bottles modeled in 1996.
+
+ 
+a beer bottle 
+ 
+a vase 
+ 
+a soda bottle 
+
+
+note that the form a?b:c used in a compute module is a conditional. if a is not equal
+to zero, then do b, else do c. this allows arbitrary functions to be constructed. for
+example, try r=0.2+(w>=0.4?(w-0.4):0.0) to make a funnel.
+
+
+
+modify the original parametric.net program to convert the torus into a
+spiral spring with four complete turns. animate the spring so that one
+end of the spring remains fixed and the other end undergoes simple
+harmonic motion. the spring should not pass through itself and the motion
+should repeat every 16 frames. model a sphere which moves sinusoidally
+(that is:  x(t) = a*sin(w*t+phi) )
+with the end of the spring and appears to be attached to the spring.
+one frame of an animation is shown below.
+
+
+
+bugs as of 3/7/95 
+
+ the comment in the construct module is incorrect. it should read
+"make a 21x21 grid spanning (0,0) to (1,1)".
+
+
+
+be prepared to demo and explain the superquadric function, your soda
+bottle and spring animation. 
+
+the
+ lab 2 grading guide 
+will be filled out by a consultant during section to evaluate your work.
+
+
+back to main page
+
+
+go to lab 3
+
+ 
+
+last modified, 1/17/96, b. land.
+
+
+
+ 
+copyright statement

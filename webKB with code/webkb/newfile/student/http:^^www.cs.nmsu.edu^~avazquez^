@@ -1,0 +1,75 @@
+alejandro vazquez
+alejandro vazquez
+ 
+
+
+
+ 
+
+ 
+currently working on a ph.d. in computer science at new
+mexico state university.
+previous education includes a master of arts and science in computer
+science from nmsu(1995), and a bachelor in science degree in science in computer
+science (1991)
+from the department of computer science at the university of texas at el
+paso.
+
+e-mail: avazquez@cs.nmsu.edu
+office ph: (505)646-1428
+office :   science hall 130
+home :311 zenith at el paso, tx 79912
+home ph: (915) 545-1546
+
+master project
+
+
+equa: a visual equation editor/formatter
+equa is an editor for the x system.  it includes an interface, and a
+window to display the abstract tree of the equation.   for the
+quadratic equation, here it is for those who where absent that day in
+algebra class d:-)
+            
+which produces the following abstract tree
+	
+an abstract tree is used because it make the structure of the equation
+explicit.  equa allows you to edit the equation directly on the
+screen, and allows tree manipulations (abstract calculi) across the
+branches of the subtrees.
+a report and user's manual is here:
+equa report.  introduction and user manual 
+ report
+
+
+acknowlegements
+equa was designed, implemented and presented in partial fulfilment of
+the requirements for the degree of master of science in computer
+science, at new mexico state university.  i want to thank dr. joe
+pfeiffer, for introducing me to this project, all his advice and his
+support.  financial support was provided through a grant [hrd-9353271] from the
+national science fundation, and dr. hector j. hernandez.
+
+
+cool web pages to go visit
+
+ 
+mathsoft
+ 
+frame maker
+ 
+at&t
+ 
+subway maps
+
+
+here is a list of places where you can look for a job:
+ 
+jobwell
+ 
+career center
+ 
+opportunities
+ 
+jobcenter
+ 
+monster board

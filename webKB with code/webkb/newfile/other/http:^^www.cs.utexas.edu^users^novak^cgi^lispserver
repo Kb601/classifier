@@ -1,0 +1,27 @@
+lisp server
+demonstration of interactive lisp
+
+this is a demo that runs gnu common lisp (gcl) interactively.
+
+when the demo is started, a window and a command menu are created.
+click in the input area and type an expression, such as
+ (+ 2 3) .
+
+
+
+instructions
+
+
+	you must be logged in to a host running x windows.
+	type   xhost + www.cs.utexas.edu   (exactly as shown
+        at left) in a window on that host
+	to allow this server to write to your display.
+	enter your x display name here if needed; you may need to change
+        what is shown in the box to your x display name.  for example,
+         myterminal.cs.utexas.edu:0.0  
+	
+	click  to start the demo.
+
+
+
+gordon s. novak jr.

@@ -1,0 +1,92 @@
+ride to heaven
+
+ride to heaven
+
+
+cs418 final project - spring 1996
+
+kartik kapadia
+ 
+
+amith yamasani
+
+
+
+
+storyline
+
+
+this is a simulation of a magnetic levitation train travelling over the sea
+ (ofcourse on tracks). this setting is some time in the future when ithaca gets
+ submerged under the sea and everyone lives under water, surfacing only to
+ catch the ithaca transit train. the journey is very exciting with a lot of
+ scenic sights along the way. so sit back, relax and enjoy the ride - you may
+ never come back......
+
+
+now for some technical stuff:
+
+
+we have used most of the concepts that we learned in cs 417/418 as well as
+ some tricks of our own. this includes parametric surfaces, hierarchical
+ modelling, texture mapping, physics based animation, fractals, etc.
+
+the dx program is structured in a modular way, with macros for almost all
+ objects in the scene. the program itself is hierarchical in nature. some of
+ the interesting modelling that we have done is :
+
+
+dolphin
+
+
+we modelled a realistic looking dolphin (well almost!) after hours of web
+ surfing for dolphins. the main body as well as the fins and beak were made
+ from parametric surfaces. we started with a kind of cylindrical surface,
+ flattened it a bit and then modified the radii at different points using a
+ manually entered list of numbers. a random colormap gave it a better
+ appearance. in order to warp the hierarchically modelled object, it was
+ necessary to write our own transforms which physically alter the vertices and
+ then warp them.
+
+
+
+fractal tree
+
+
+we built a recursive tree using loop structures in dx. the method used was
+ simple and does not support much randomness in the structure of the tree. but
+ the effect is good enough for a reasonably complex scene. the basic idea is to
+ make a simple branch, duplicate it around an axis and cache this structure for
+ the next generation branch (branch made up of smaller branches).
+
+
+train
+the train is parametrically modelled, with tinted glass windows and sliding
+ doors. it is a very good example of hierarchical modelling. it has volume
+ rendered flames for jets on the engine. the motion of the train is controlled
+ by the equation s=ut+1/2 a.t^2. it decelerates to stop at the station and then
+ accelerates off into space (courtesy, the booster jets). care was taken to
+ align the train carriages on the tracks at all times. 
+
+
+
+texture maps
+
+
+we used plenty of texture mapping to enhance the visual effects, though it was
+ expensive in terms of computing power.
+
+
+
+camera movement 
+
+
+this was simplified by specifying key positions and then in-betweening them to
+ get the actual to and from positions. 
+
+
+
+
+
+time: 13:42:42
+date: 04/24/96

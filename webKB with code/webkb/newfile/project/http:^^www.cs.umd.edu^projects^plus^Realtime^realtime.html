@@ -1,0 +1,94 @@
+real-time a.i.
+
+real-time a.i.
+
+parallel understanding systems group,
+computer science dept., university of maryland at college park
+
+intelligent real-time control:
+
+as artificial intelligence (ai) techniques become mature, there has
+been growing interest in applying these techniques to controlling
+complex real-world systems which involve hard deadlines.  
+unfortunately, many ai techniques are
+characterized by unpredictable or high-variance performance, making
+them unsuited to the performance guarantees required for real-time
+control systems.  most research on rtai focuses on restricting ai
+techniques to make them more predictable.
+
+our research to date has focused on a new approach, the cooperative
+intelligent real-time control architecture (circa).  in this
+architecture, an ai subsystem reasons about task-level problems that
+require its powerful but unpredictable reasoning methods, while a
+cooperating, parallel real-time subsystem uses its predictable performance
+characteristics to deal with control-level problems that require
+guaranteed response times.  we are investigating several aspects of
+this architecture, including planning for real-time control tasks,
+interfacing real-time and non-real-time subsystems, explicitly making
+performance tradeoffs when resources are overconstrained, and utilizing
+resources that become available dynamically.
+
+some of this work is being done in conjunction with the real-time
+intelligent control project in the 
+autonomous mobile robotics lab.
+
+
+
+reasoning about real-time competencies:
+
+in domains where the failure is to take appropriate and timely action is
+potentially catastrophic, behavioral adequacy for a control system
+cannot be established by testing alone. in addition
+to the requirement of logical correctness, which is desirable for any
+program, such mission-critical systems typically have strict temporal
+constraints as well. hard real-time systems have been developed to 
+address these requirements, but achieving intelligent 
+behavior in this context has proven probelmatic.
+the requirement for hard real-time response is
+clearly incompatible with the fundamentally time-bound, high-variance techniques
+of classical ai, and the inability to precisely characterize the performance 
+and resource requirements of current reactive systems makes them 
+equally unsuitable for 
+use in hard real-time systems. 
+
+we propose to develop a system for 
+representing the semantics of low-level competences and for reasoning
+about their use in isolation and in combination. such a representation
+will allow principled proofs of the correctness of reaction-based systems,
+as well as provide a formal basis for automated reasoning about the
+use of reactive competences. this will support the use of engineered
+reactive systems with guaranteed logical performance features
+in a hard real-time context, while at the same time 
+providing a link to classical ai methodologies. in short, this formal semantics
+for reaction will bridge the gap between mission-critical domains and
+deliberative ai techniques.
+
+
+
+status/availability:
+
+
+recent papers:
+ 
+d. musliner et al., circa:  a cooperative intelligent real-time control architecture
+ieee transactions on systems, man, and cybernetics, vol. 23 #6, 1993.
+
+
+r. c. kohout, j. a. hendler, d. j. musliner, and a. k. agrawala,
+ 
+supporting intelligent real-time control: 
+dynamic reaction on the maruti operating system,
+submitted to  real-time systems symposium , 1994.
+
+ 
+r. kohout,
+representing reactive competences for hard real-time systems (ph.d. dissertation
+proposal)
+
+
+people: 
+
+dr. james hendler, pi
+dr. david musliner, postdoc
+
+bob kohout, graduate student

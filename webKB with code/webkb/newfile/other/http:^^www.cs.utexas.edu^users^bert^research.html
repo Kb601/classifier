@@ -1,0 +1,52 @@
+dissertation research overview
+   
+
+
+
+dissertation research overview
+
+this page is currently under construction!!! 
+
+the overall theme of my research is reasoning with and refining imprecise
+models of physical processes. because we cannot know the world precisely,
+imprecision is implicit in any modeling task. however, it is often the
+case that imprecision is simply ignored since it has no place in many existing
+modeling and simulation methodologies. sometimes, this is of no consequence,
+but in other cases, the mismatch between prediction and true behavior may
+lead to erroneous conclusions. in fields where imprecision is addressed
+(for example, in robust control), the methods are often resticted in terms
+of the types of imprecision allowed or are not guaranteed to produce all
+the predictions inherent in the model or produce predictions that are too
+weak to provide useful guidance. what is needed is a general method for
+representing and reasoning with imprecison that can capture the typical
+types of imprecision inherent in modeling tasks and can produce predictions
+that maintain precision consistent with the model imprecision. in the next
+section, i describe sqsim, a representation and simulation method that
+meets these goals. 
+
+while imprecision is inherent in any modeling task, it is also true
+that a model's precision can be improved with experience with the underlying
+physical process. learning a model from a combination of prior knowledge
+and empirical data is the task of system identification. typically, identification
+methods work under the assumption that a parametric model of the process
+exists and searches the model space for the precise model that best matches
+the empirical data. confidence bounds on the parameters (and hence the
+prediction) can also be determined to represent the uncertainty inherent
+in using a finite amount of data. this method can be quite efficient in
+cases where the search space has good properties (such as an easily computable
+gradient). for cases where this does not hold, however, (for example, if
+we allow functional as well as parametric uncertainty), finding an optimal
+model may be very difficult. in addition, identification methods require
+that empirical data be informative enough to provide complete experience
+with the system over the desired operating range. if such conditions cannot
+be met, the resulting model may differ greatly from the true model. in
+the third section,
+i describe squid, a method for refining an existing model by using possibly
+uninformative data. 
+
+sqsim and squid provide two key technologies for automating the model-building
+task. by combining them with a method for postulating initial qualitative
+models from data, one could construct a system that can automatically construct
+models using a combination of empirical and prior knowledge.
+
+bkay
