@@ -10,6 +10,16 @@ import csv
 
 # reload(sys)  
 # sys.setdefaultencoding('utf8')
+def removeDsStore(path):
+    if (os.path.isdir(path) == False):
+        if (path.endswith(".DS_Store")):
+            print "removing:", path
+            os.remove(path)
+    else:
+        # recursive case: it's a folder
+        for filename in os.listdir(path):
+            removeDsStore(path + "/" + filename)
+
 
 def listFiles(path):
     if (os.path.isdir(path) == False):
@@ -79,7 +89,6 @@ def processbagofword2(files):
     # words = nltk.tokenize(content)
     allwords = tokenizer.tokenize(content)
 
-
     #stemming
     
     ps = nltk.stem.snowball.PortugueseStemmer()
@@ -92,7 +101,6 @@ def processbagofword2(files):
         wordlist.append(word1)
     wordlist.pop(0)
 '''
-
 
 
     wordDict = dict()
@@ -125,27 +133,118 @@ def create2000DictCsv(top2000words):
     with open('top2000csvfile.csv', 'wb') as f:  
         w = csv.DictWriter(f, top2000words.keys())
         w.writeheader()
-        w.writerow(top2000words)    
+        w.writerow(top2000words)
+
+
+# build matrix with two lable at the first one and second colume
+# def buildmatrix(wordDict, writer):
+#     global words
+#     result=[]
+#     for terms in words:
+#         if terms in wordDict:
+#             result.append('1')
+#         else:
+#             result.append('0')
+
+#     writer.writerow(result)
+
+def addLable(filesDict):
+    schools = ['cornell','misc','texas','washington','wisconsin']
+    kinds = ['course','department','faculty','other','project','staff','student']
+    universityLable = dict()
+    kindLable = dict()
+
+    for i in xrange(len(schools)):
+        universityLable[schools[i]] = i
+    for i in xrange(len(kinds)):
+        kindLable[kinds[i]] = i
+
+    for filename in filesDict:
+        for piece in filename.split('/'):
+            if piece in kindLable:
+                filesDict[filename]['kindLable'] = kindLable[piece]
+            if piece in universityLable:
+                filesDict[filename]['universityLable'] = universityLable[piece]
+
+
+def dictToList(featureLableList, top2000words, lable1, lable2):
+    for element in sorted(top2000words.items(), key=lambda x: -x[1]):
+        featureLableList.append(element[0])
+    featureLableList.append(lable1)
+    featureLableList.append(lable2)
+
+
+
+
+def createDataset(filesDict, featureLableList):
+    curFileData = [0]*len(featureLableList)
+    with open('webkbDataset.csv', 'wb') as f:
+        wr = csv.writer(f) 
+        wr.writerow(featureLableList)
+        for fileName in filesDict:
+            for i in xrange(len(featureLableList) - 2):
+                if featureLableList[i] in filesDict[fileName]:
+                    curFileData[i] = 1
+                else:
+                    curFileData[i] = 0
+
+            if featureLableList[len(featureLableList) - 2] in filesDict[fileName]:
+                curFileData[len(featureLableList) - 2] = filesDict[fileName][featureLableList[len(featureLableList) - 2]]
+            else:
+                curFileData[len(featureLableList) - 2] = -1
+            if featureLableList[len(featureLableList) - 1] in filesDict[fileName]:
+                curFileData[len(featureLableList) - 1] = filesDict[fileName][featureLableList[len(featureLableList) - 1]]
+            else:
+                curFileData[len(featureLableList) - 1] = -1
+
+            wr.writerow(curFileData)
+
+
+
+#     csvfile = file('webkbDataset.csv','wb')
+#     writer = csv.writer(csvfile)
+
+# writer.writerow(result)
+# csvfile.close()
+#     fileList = listFiles("newfile")
+#     getwordlist()
+#     
+#     
+#     # merge the main word dict with next one file dict
+#     count = len(fileList)
+#     i=1
+#     for fl in fileList:
+#         onefileDict = processbagofword2(fl)
+#         buildmatrix(onefileDict, writer)
+#         i=i+1
+#         print str(i) +'ok'+ str(count)
+#     
+
+
+
+#     for element in sorted(allwordsDict.items(), key=lambda x: -x[1]):
 
 
 if __name__ == '__main__':
+    removeDsStore("newWebkbFile")
     fileList = listFiles("newWebkbFile")
     print fileList
     allwordsDict = dict()
     onefileDict = dict()
     top2000words = dict()
-
+    filesDict = dict()
     # merge the main word dict with next one file dict
     for fl in fileList:
         onefileDict = processbagofword2(fl)
-        print 'onefileDict', onefileDict
+        filesDict[fl] = onefileDict
+        # print 'onefileDict', onefileDict
         for element in onefileDict:
             if element in allwordsDict:
                 allwordsDict[element] += onefileDict[element]
             else:
                 allwordsDict[element] = 1
 
-    print allwordsDict
+    # print allwordsDict
 
     getTop2000words(allwordsDict, top2000words)
     
@@ -155,6 +254,24 @@ if __name__ == '__main__':
     print "Top 2000 words:"
     print top2000words  
     create2000DictCsv(top2000words)
+    for i in xrange(10):
+        print ""
+    print "filesDict:"
+    print filesDict
+    addLable(filesDict)
+    print filesDict
+
+    featureLableList = []
+    dictToList(featureLableList, top2000words, 'kindLable', 'universityLable')
+    for i in xrange(10):
+        print ""
+
+    print "featureLableList", featureLableList
+    createDataset(filesDict, featureLableList)
+    # createDataset(filesDict, top2000words)
+
+
+
 
 
 

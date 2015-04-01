@@ -11,6 +11,6 @@ def removeDsStore(path):
             removeDsStore(path + "/" + filename)
 
 print "Removing .DS_Store files"
-removeDsStore("webkb")
+removeDsStore("newWebkbFile")
 print "Done"
    
