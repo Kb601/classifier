@@ -162,9 +162,9 @@ def addLable(filesDict):
     for filename in filesDict:
         for piece in filename.split('/'):
             if piece in kindLable:
-                filesDict[filename]['kindLable'] = kindLable[piece]
+                filesDict[filename]['kindLabel'] = kindLable[piece]
             if piece in universityLable:
-                filesDict[filename]['universityLable'] = universityLable[piece]
+                filesDict[filename]['universityLabel'] = universityLable[piece]
 
 
 def dictToList(featureLableList, top2000words, lable1, lable2):
@@ -262,7 +262,7 @@ if __name__ == '__main__':
     print filesDict
 
     featureLableList = []
-    dictToList(featureLableList, top2000words, 'kindLable', 'universityLable')
+    dictToList(featureLableList, top2000words, 'kindLabel', 'universityLabel')
     for i in xrange(10):
         print ""
 
