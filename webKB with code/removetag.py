@@ -9,12 +9,11 @@ savepath = ''
 
 #获取path目录下所有的文件名
 def getfiles(path):
-    fileList = []
-    files = os.listdir(path)
-    for f in files:
-        if(os.path.isfile(path + '/' + f)):
-            fileList.append(f)
-    return fileList
+    fileNameList = []
+
+    for fileName in os.listdir(path):
+        fileNameList.append(fileName)
+    return fileNameList
 
 #这个是用来分feild提取，现在不用了
 '''
@@ -55,17 +54,17 @@ def process(file):
         f.write('<head>'+head+'</head>'+'<body>'+body+'</body>'+'<tag>course</tag>')
 '''
 
-def processbagofword(file):
-    global filepath, rootpath, savepath
+def processbagofword(file, filepath, newFilePath):
+    # global filepath, rootpath, savepath
     content=''
-    with open(filepath+file, 'r') as f:
+    with open(filepath + '/' + file, 'r') as f:
         content = f.read().lower()
     if len(content.split('<',1))>1:
         content = '<'+content.split('<',1)[1]
     #print content
     content = removetag(content)
     
-    with open(savepath+file, 'w') as f:
+    with open(newFilePath + '/' + file, 'w') as f:
         #根据网页类别填写下面的tag
         f.write(content)
 
@@ -97,19 +96,24 @@ def check(file):
 #主函数
 if __name__ == '__main__':
     fileList = []
-    schools = ['cornell/','misc/','texas/','washington/','wisconsin/']
-    labels = ['course/','department/','faculty/','other/','project/','staff/','student/']
+    schools = ['cornell','misc','texas','washington','wisconsin']
+    labels = ['course','department','faculty','other','project','staff','student']
     #这里是网页文件的文件夹
+
     for label in labels:
-        rootpath = 'webkb/'+ label
-        savepath = 'webkb/newfile/' + label
+        oldRootPath = 'webkb' + '/'+ label
+        saveRootPath = 'newWebkbFile' + '/'+ label
         for univ in schools:
-            filepath = rootpath+univ
-            fileList = getfiles(filepath)
-            for fl in fileList:
+            filePath = oldRootPath + '/' + univ 
+            newFilePath = saveRootPath + '/' + univ
+            if not os.path.exists(newFilePath):
+                os.makedirs(newFilePath)
+            
+            fileNameList = getfiles(filePath)
+            for fl in fileNameList:
                 if fl != '.DS_Store':
                     #check(fl)
-                   processbagofword(fl)
+                   processbagofword(fl, filePath, newFilePath)
+            print univ
         print label
-        
-        
+
