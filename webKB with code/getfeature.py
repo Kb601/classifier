@@ -176,9 +176,9 @@ def dictToList(featureLableList, top2000words, lable1, lable2):
 
 
 
-def createDataset(filesDict, featureLableList):
+def createDataset(filesDict, featureLableList, filename):
     curFileData = [0]*len(featureLableList)
-    with open('webkbDataset.csv', 'wb') as f:
+    with open(filename, 'wb') as f:
         wr = csv.writer(f) 
         wr.writerow(featureLableList)
         for fileName in filesDict:
@@ -224,6 +224,20 @@ def createDataset(filesDict, featureLableList):
 
 #     for element in sorted(allwordsDict.items(), key=lambda x: -x[1]):
 
+def seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum):
+    index = 0
+    for element in filesDict:
+        if index > trainNum:
+            testFilesDict[element] = filesDict[element]
+        trainFilesDict[element] = filesDict[element]
+        index += 1
+
+
+
+
+
+
+
 
 if __name__ == '__main__':
     removeDsStore("newWebkbFile")
@@ -267,7 +281,16 @@ if __name__ == '__main__':
         print ""
 
     print "featureLableList", featureLableList
-    createDataset(filesDict, featureLableList)
+    filesNumber = len(filesDict)
+    trainNum = 0.9 * filesNumber
+    testFilesDict = dict()
+    trainFilesDict = dict()
+    seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum)
+
+    createDataset(testFilesDict, featureLableList, 'webkbTestDataset.csv')
+
+    createDataset(trainFilesDict, featureLableList, 'webkbTrainDataset.csv')
+
     # createDataset(filesDict, top2000words)
 
 
