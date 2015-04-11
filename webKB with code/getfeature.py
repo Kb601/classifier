@@ -6,6 +6,7 @@ import os
 import nltk
 from nltk.tokenize import RegexpTokenizer
 import csv
+from nltk.stem.lancaster import LancasterStemmer
 # import sys  
 
 # reload(sys)  
@@ -91,7 +92,8 @@ def processbagofword2(files):
 
     #stemming
     
-    ps = nltk.stem.snowball.PortugueseStemmer()
+    # ps = nltk.stem.snowball.PortugueseStemmer()
+    st = LancasterStemmer()
     
     '''
     wordlist=['']
@@ -137,7 +139,7 @@ def processbagofword2(files):
 
 
         if (element.isalpha() or element.isdigit()):
-            element = ps.stem(element)
+            element = st.stem(element)
             element = str(element)
             if element not in avoidWords:
                 if element in wordDict:
