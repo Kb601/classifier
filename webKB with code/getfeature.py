@@ -160,7 +160,7 @@ def processbagofword2(files):
                 (element != 'realZipCode'):
                 element = st.stem(element)
                 element = str(element)
-        if element:
+        if element != '':
             if element not in avoidWords:
                 if element in wordDict:
                     wordDict[element] += 1
@@ -219,12 +219,17 @@ def addLable(filesDict):
                 filesDict[filename]['universityLabel'] = universityLable[piece]
 
 
-def dictToList(featureLableList, top2000words, lable1, lable2):
-    for element in sorted(top2000words.items(), key=lambda x: -x[1]):
-        featureLableList.append(element[0])
+def dictToList(featureLableList, top2000words, lable1, lable2, sort = False):
+    if sort == True:
+        for element in sorted(top2000words.items(), key=lambda x: -x[1]):
+            featureLableList.append(element[0])
+    else:
+        keys = top2000words.keys()
+        random.shuffle(keys)
+        for key in keys:
+            featureLableList.append(key)
     featureLableList.append(lable1)
     featureLableList.append(lable2)
-
 
 
 
@@ -236,7 +241,7 @@ def createDataset(filesDict, featureLableList, filename, boolean = True):
         for fileName in filesDict:
             for i in xrange(len(featureLableList) - 2):
                 if featureLableList[i] in filesDict[fileName]:
-                    if boolean:
+                    if not boolean:
                         curFileData[i] += 1
                     else:
                         curFileData[i] = 1
@@ -290,20 +295,6 @@ def seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum):
         index += 1
 
 
-
-    # for element in filesDict:
-    #     if index > trainNum:
-    #         testFilesDict[element] = filesDict[element]
-    #     trainFilesDict[element] = filesDict[element]
-    #     index += 1
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
     removeDsStore("newWebkbFile")
     fileList = listFiles("newWebkbFile")
@@ -341,24 +332,46 @@ if __name__ == '__main__':
     print filesDict
 
     featureLableList = []
-    dictToList(featureLableList, top2000words, 'kindLabel', 'universityLabel')
-    for i in xrange(10):
-        print ""
+    sort = True
+    if sort == True:
+        dictToList(featureLableList, top2000words, 'kindLabel', 'universityLabel', sort)
+        for i in xrange(10):
+            print ""
 
-    print "featureLableList", featureLableList
-    filesNumber = len(filesDict)
-    trainNum = 0.9 * filesNumber
-    testFilesDict = dict()
-    trainFilesDict = dict()
-    seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum)
+        print "featureLableList at sorted list", featureLableList
+        filesNumber = len(filesDict)
+        trainNum = 0.9 * filesNumber
+        testFilesDict = dict()
+        trainFilesDict = dict()
+        seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum)
 
-    createDataset(testFilesDict, featureLableList, 'webkbTestDatasetNonBinarary.csv', False)
+        createDataset(testFilesDict, featureLableList, 'webkbTestDSNonBinararySortFeature.csv', False)
 
-    createDataset(trainFilesDict, featureLableList, 'webkbTrainDatasetNonBinarary.csv', False)
-    createDataset(testFilesDict, featureLableList, 'webkbTestDatasetBinarary.csv', True)
+        createDataset(trainFilesDict, featureLableList, 'webkbTrainDSNonBinararySortFeature.csv', False)
+        createDataset(testFilesDict, featureLableList, 'webkbTestDSBinararySortFeature.csv', True)
 
-    createDataset(trainFilesDict, featureLableList, 'webkbTrainDatasetBinarary.csv', True)
+        createDataset(trainFilesDict, featureLableList, 'webkbTrainDSBinararySortFeature.csv', True)
 
+    sort = False
+    featureLableList = []
+    if sort == False:
+        dictToList(featureLableList, top2000words, 'kindLabel', 'universityLabel', sort)
+        for i in xrange(10):
+            print ""
+
+        print "featureLableList at none sorted list", featureLableList
+        filesNumber = len(filesDict)
+        trainNum = 0.9 * filesNumber
+        testFilesDict = dict()
+        trainFilesDict = dict()
+        seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum)
+
+        createDataset(testFilesDict, featureLableList, 'webkbTestDSNonBinararyNonSortFeature.csv', False)
+
+        createDataset(trainFilesDict, featureLableList, 'webkbTrainDSNonBinararyNonSortFeature.csv', False)
+        createDataset(testFilesDict, featureLableList, 'webkbTestDSBinararyNonSortFeature.csv', True)
+
+        createDataset(trainFilesDict, featureLableList, 'webkbTrainDSBinararyNonSortFeature.csv', True)
     # createDataset(filesDict, top2000words)
 
 
