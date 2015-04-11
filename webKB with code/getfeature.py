@@ -7,6 +7,7 @@ import nltk
 from nltk.tokenize import RegexpTokenizer
 import csv
 from nltk.stem.lancaster import LancasterStemmer
+import random
 # import sys  
 
 # reload(sys)  
@@ -113,7 +114,7 @@ def processbagofword2(files):
     'up','about','into','over', 'after', 'beneath', 'under','above', 'the',
     'a', 'that', 'I','it', 'not', 'he', 'as','you','this','but','his','they', 'her',
     'she', 'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'be',
-    'have', 'do'
+    'have', 'do', 'is'
     }
 
     # for i in xrange(10):
@@ -209,7 +210,7 @@ def dictToList(featureLableList, top2000words, lable1, lable2):
 
 
 
-def createDataset(filesDict, featureLableList, filename):
+def createDataset(filesDict, featureLableList, filename, boolean = True):
     curFileData = [0]*len(featureLableList)
     with open(filename, 'wb') as f:
         wr = csv.writer(f) 
@@ -217,7 +218,10 @@ def createDataset(filesDict, featureLableList, filename):
         for fileName in filesDict:
             for i in xrange(len(featureLableList) - 2):
                 if featureLableList[i] in filesDict[fileName]:
-                    curFileData[i] += 1
+                    if boolean:
+                        curFileData[i] += 1
+                    else:
+                        curFileData[i] = 1
                 else:
                     curFileData[i] = 0
 
@@ -259,11 +263,21 @@ def createDataset(filesDict, featureLableList, filename):
 
 def seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum):
     index = 0
-    for element in filesDict:
+    keys = filesDict.keys()
+    random.shuffle(keys)
+    for key in keys:
         if index > trainNum:
-            testFilesDict[element] = filesDict[element]
-        trainFilesDict[element] = filesDict[element]
+            testFilesDict[key] = filesDict[key]
+        trainFilesDict[key] = filesDict[key]
         index += 1
+
+
+        
+    # for element in filesDict:
+    #     if index > trainNum:
+    #         testFilesDict[element] = filesDict[element]
+    #     trainFilesDict[element] = filesDict[element]
+    #     index += 1
 
 
 
@@ -320,9 +334,12 @@ if __name__ == '__main__':
     trainFilesDict = dict()
     seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum)
 
-    createDataset(testFilesDict, featureLableList, 'webkbTestDatasetNonBinarary.csv')
+    createDataset(testFilesDict, featureLableList, 'webkbTestDatasetNonBinarary.csv', False)
 
-    createDataset(trainFilesDict, featureLableList, 'webkbTrainDatasetNonBinarary.csv')
+    createDataset(trainFilesDict, featureLableList, 'webkbTrainDatasetNonBinarary.csv', False)
+    createDataset(testFilesDict, featureLableList, 'webkbTestDatasetBinarary.csv', True)
+
+    createDataset(trainFilesDict, featureLableList, 'webkbTrainDatasetBinarary.csv', True)
 
     # createDataset(filesDict, top2000words)
 
