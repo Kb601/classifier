@@ -59,16 +59,22 @@ def wordProcess(word):
     if word.isdigit(): 
         if len(word) == 4:
             word = 'DDDD'
+
+        if len(word) == 4:
+            word = 'DDDD'
         elif len(word) == 3:
             word = 'DDD'
         elif len(word) == 2:
             word = 'DD'
         elif len(word) == 1:
             word = 'D'
+        elif re.match("^\d{5}(-\d{4})?$", word)!= None:
+            word = 'realZipCode'
+        else:
+            word = 'Dnth'
 
     elif word.isalpha() and len(word) == 1:
         word = 'A'
-
     elif re.match("^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$", word)!=None:
         word = 'realPhoneNumber'
     # elif re.match("^([0-9]|0[0-9]|1?[0-9]|2[0-3]):[0-5]?[0-9]$", word)!=None:
@@ -147,15 +153,19 @@ def processbagofword2(files):
 
         element = wordProcess(element)
 
-        if (element.isalpha() or element.isdigit()):
-            element = st.stem(element)
-            element = str(element)
+        # if (element.isalpha() or element.isdigit()):
+        if element.isdigit():
+            if  (element != 'realPhoneNumber') and (element != 'realDate') and \
+                (element != 'realTime') and (element != 'realEmail') and \
+                (element != 'realZipCode'):
+                element = st.stem(element)
+                element = str(element)
+        if element:
             if element not in avoidWords:
                 if element in wordDict:
                     wordDict[element] += 1
                 else:
                     wordDict[element] = 1
-
     return wordDict
 
 
