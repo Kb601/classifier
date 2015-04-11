@@ -9,6 +9,7 @@ import csv
 from nltk.stem.lancaster import LancasterStemmer
 import random
 import re
+import string
 # import sys  
 
 # reload(sys)  
@@ -36,6 +37,19 @@ def listFiles(path):
         return files
 
 def wordProcess(word):
+    start, end = 0, len(word) - 1
+    tmpWord1 = word
+
+    for i in xrange(len(word)):
+        if word[i] in string.punctuation:
+            if (word[i] != '@') and (word[i]!='('):
+                tmpWord1 = word[(i+1):]
+    tmpword2 = tmpWord1
+    for i in xrange(len(tmpWord1) - 1, -1, -1):
+        if tmpWord1[i] in string.punctuation:
+            if (tmpWord1[i] != '@') and (tmpWord1[i]!=')'):
+                tmpword2 = tmpWord1[:i]
+    word = tmpword2
     
     if len(word) >= 3 and word[0] == '(' and word[-1] == ')':
         word = word[1:len(word) - 1]
@@ -51,11 +65,12 @@ def wordProcess(word):
             word = 'DD'
         elif len(word) == 1:
             word = 'D'
+
     elif word.isalpha() and len(word) == 1:
         word = 'A'
 
-    # elif re.match("^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$", word)!=None:
-    #     word = '(ddd)ddd-dddd'
+    elif re.match("^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$", word)!=None:
+        word = '(ddd)ddd-dddd'
     # elif re.match("^([0-9]|0[0-9]|1?[0-9]|2[0-3]):[0-5]?[0-9]$", word)!=None:
     #     word = 'dd:dd'
     # elif re.match("^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$", word) != None:
@@ -63,10 +78,16 @@ def wordProcess(word):
     # elif re.match("^[\_]*([a-z0-9]+(\.|\_*)?)*@([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6}$", word)!=None:
     #     word = 'xxx@xxx.xxx'
     elif re.match("^([a-z0-9_\.-]*)@([\da-z\.-]+)\.([a-z\.]{2,6})$", word)!=None:
-        word = 'realEmail'
+        word = 'xxx@xxx.xxx'
     elif re.match("^([0-9]|0[0-9]|1?[0-9]|2[0-3]):[0-5]?[0-9]$", word)!=None:
-        word = 'RealTime'
-
+        word = 'dd:dd'
+    else:
+        isDate = True
+        for element in word.split('/'):
+            if not element.isdigit():
+                isDate = False
+        if isDate == True:
+            word = 'dd/dd/dd'
     return word
 
 def processbagofword2(files):
@@ -87,7 +108,7 @@ def processbagofword2(files):
     # tokenizer = RegexpTokenizer('[([A-Z]?[a-z]+)?[\_]*([a-z0-9]+(\.|\_*)?)+](@([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6})?|\
     #     ([0-9]|0[0-9]|1?[0-9]|2[0-3]):[0-5]?[0-9]|\
     #     |\w+|\$[\d\.]+|\S+|')
-    tokenizer = RegexpTokenizer('^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$|\w+|\S+')
+    tokenizer = RegexpTokenizer('^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$|([A-Z]?[a-z]+)+|\S+')
     # Email | Phone | date | time | words
     allwords = tokenizer.tokenize(content)
 
