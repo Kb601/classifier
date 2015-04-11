@@ -105,14 +105,40 @@ def processbagofword2(files):
 
     wordDict = dict()
 
+
+    avoidWords = set()
+    avoidWords = {'and', 'to', 'of','in', 'for', 'on', 'with', 'at','by','from'
+    'up','about','into','over', 'after', 'beneath', 'under','above', 'the',
+    'a', 'that', 'I','it', 'not', 'he', 'as','you','this','but','his','they', 'her',
+    'she', 'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'be',
+    'have', 'do'
+    }
+    
+    # for i in xrange(10):
+    #     print ''
+    # print "allwords in ", files
+    # print allwords
+
     for element in allwords:
+        if len(element) >= 3 and element[0] == '(' and element[-1] == ')':
+            element = element[1:len(element) - 1]
+        if len(element) >= 3 and element[0] == '{' and element[-1] == '}':
+            element = element[1:len(element) - 1]
+        if element.isdigit() and len(element) == 4:
+            element = 'DDDD'
+        if element.isdigit() and len(element) == 3:
+            element = 'DDD'
+        if element.isdigit() and len(element) == 2:
+            element = 'DD'
+
         if (element.isalpha() or element.isdigit()):
             element = ps.stem(element)
             element = str(element)
-            if element in wordDict:
-                wordDict[element] += 1
-            else:
-                wordDict[element] = 1
+            if element not in avoidWords:
+                if element in wordDict:
+                    wordDict[element] += 1
+                else:
+                    wordDict[element] = 1
 
     return wordDict
 
