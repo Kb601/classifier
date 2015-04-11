@@ -345,12 +345,12 @@ if __name__ == '__main__':
         trainFilesDict = dict()
         seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum)
 
-        createDataset(testFilesDict, featureLableList, 'webkbTestDSNonBinararySortFeature.csv', False)
+        createDataset(testFilesDict, featureLableList, '1-1webkbTestDSNonBinararySortFeature.csv', False)
 
-        createDataset(trainFilesDict, featureLableList, 'webkbTrainDSNonBinararySortFeature.csv', False)
-        createDataset(testFilesDict, featureLableList, 'webkbTestDSBinararySortFeature.csv', True)
+        createDataset(trainFilesDict, featureLableList, '1-1webkbTrainDSNonBinararySortFeature.csv', False)
+        createDataset(testFilesDict, featureLableList, '1-2webkbTestDSBinararySortFeature.csv', True)
 
-        createDataset(trainFilesDict, featureLableList, 'webkbTrainDSBinararySortFeature.csv', True)
+        createDataset(trainFilesDict, featureLableList, '1-2webkbTrainDSBinararySortFeature.csv', True)
 
     sort = False
     featureLableList = []
@@ -366,12 +366,12 @@ if __name__ == '__main__':
         trainFilesDict = dict()
         seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum)
 
-        createDataset(testFilesDict, featureLableList, 'webkbTestDSNonBinararyNonSortFeature.csv', False)
+        createDataset(testFilesDict, featureLableList, '2-1webkbTestDSNonBinararyNonSortFeature.csv', False)
 
-        createDataset(trainFilesDict, featureLableList, 'webkbTrainDSNonBinararyNonSortFeature.csv', False)
-        createDataset(testFilesDict, featureLableList, 'webkbTestDSBinararyNonSortFeature.csv', True)
+        createDataset(trainFilesDict, featureLableList, '2-1webkbTrainDSNonBinararyNonSortFeature.csv', False)
+        createDataset(testFilesDict, featureLableList, '2-2webkbTestDSBinararyNonSortFeature.csv', True)
 
-        createDataset(trainFilesDict, featureLableList, 'webkbTrainDSBinararyNonSortFeature.csv', True)
+        createDataset(trainFilesDict, featureLableList, '2-2webkbTrainDSBinararyNonSortFeature.csv', True)
     # createDataset(filesDict, top2000words)
 
 
