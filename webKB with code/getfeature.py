@@ -130,6 +130,11 @@ def processbagofword2(files):
             element = 'DDD'
         if element.isdigit() and len(element) == 2:
             element = 'DD'
+        if element.isdigit() and len(element) == 1:
+            element = 'D'
+        if element.isalpha() and len(element) == 1:
+            element = 'A'
+
 
         if (element.isalpha() or element.isdigit()):
             element = ps.stem(element)
