@@ -70,7 +70,7 @@ def wordProcess(word):
         word = 'A'
 
     elif re.match("^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$", word)!=None:
-        word = '(ddd)ddd-dddd'
+        word = 'realPhoneNumber'
     # elif re.match("^([0-9]|0[0-9]|1?[0-9]|2[0-3]):[0-5]?[0-9]$", word)!=None:
     #     word = 'dd:dd'
     # elif re.match("^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$", word) != None:
@@ -78,16 +78,16 @@ def wordProcess(word):
     # elif re.match("^[\_]*([a-z0-9]+(\.|\_*)?)*@([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6}$", word)!=None:
     #     word = 'xxx@xxx.xxx'
     elif re.match("^([a-z0-9_\.-]*)@([\da-z\.-]+)\.([a-z\.]{2,6})$", word)!=None:
-        word = 'xxx@xxx.xxx'
+        word = 'realEmail'
     elif re.match("^([0-9]|0[0-9]|1?[0-9]|2[0-3]):[0-5]?[0-9]$", word)!=None:
-        word = 'dd:dd'
+        word = 'realTime'
     else:
         isDate = True
         for element in word.split('/'):
             if not element.isdigit():
                 isDate = False
         if isDate == True:
-            word = 'dd/dd/dd'
+            word = 'realDate'
     return word
 
 def processbagofword2(files):
