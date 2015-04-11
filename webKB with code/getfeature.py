@@ -8,6 +8,7 @@ from nltk.tokenize import RegexpTokenizer
 import csv
 from nltk.stem.lancaster import LancasterStemmer
 import random
+import re
 # import sys  
 
 # reload(sys)  
@@ -34,50 +35,39 @@ def listFiles(path):
             files += listFiles(path + "/" + filename)
         return files
 
-# def processbagofword(files):
-#         # rt = "read text"
-#     mode = "rt"
-#     content = ""
-#     with open(files, mode) as fin:
-#         content += fin.read()
+def wordProcess(word):
+    
+    if len(word) >= 3 and word[0] == '(' and word[-1] == ')':
+        word = word[1:len(word) - 1]
+    if len(word) >= 3 and word[0] == '{' and word[-1] == '}':
+        word = word[1:len(word) - 1]
 
-#         # the part that is not clear
-#     tokenizer = RegexpTokenizer('\w+|\$[\d\.]+|\S+')
-#     # words = nltk.tokenize(content)
-#     allwords = tokenizer.tokenize(content)
-#     wordDict = dict()
+    if word.isdigit(): 
+        if len(word) == 4:
+            word = 'DDDD'
+        elif len(word) == 3:
+            word = 'DDD'
+        elif len(word) == 2:
+            word = 'DD'
+        elif len(word) == 1:
+            word = 'D'
+    elif word.isalpha() and len(word) == 1:
+        word = 'A'
 
-#     for element in allwords:
-#         if (element.isalpha() or element.isdigit()):
-#             if element in wordDict:
-#                 wordDict[element] += 1
-#             else:
-#                 wordDict[element] = 1
+    # elif re.match("^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$", word)!=None:
+    #     word = '(ddd)ddd-dddd'
+    # elif re.match("^([0-9]|0[0-9]|1?[0-9]|2[0-3]):[0-5]?[0-9]$", word)!=None:
+    #     word = 'dd:dd'
+    # elif re.match("^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$", word) != None:
+    #     word = 'mm/dd/yyyy'
+    # elif re.match("^[\_]*([a-z0-9]+(\.|\_*)?)*@([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6}$", word)!=None:
+    #     word = 'xxx@xxx.xxx'
+    elif re.match("^([a-z0-9_\.-]*)@([\da-z\.-]+)\.([a-z\.]{2,6})$", word)!=None:
+        word = 'realEmail'
+    elif re.match("^([0-9]|0[0-9]|1?[0-9]|2[0-3]):[0-5]?[0-9]$", word)!=None:
+        word = 'RealTime'
 
-#     return wordDict
-
-
-    # global rootpath
-    # content=''
-    # with open(file, 'r') as f:
-    #     content = f.read()
-
-    # #tokenize
-    # 
-
-    # #stemming
-    # ps = nltk.stem.snowball.PortugueseStemmer()
-    # wordlist=['']
-    # for word in words:
-    #     word1 = ps.stem(word)
-    #     word1 = str(word1)
-    #     wordlist.append(word1)
-    # wordlist.pop(0)
-
-    # #termcount
-    # termcount = {}
-    # for word in wordlist:
-    #     termcount[word]=termcount.get(word,0)+1
+    return word
 
 def processbagofword2(files):
         # rt = "read text"
@@ -87,8 +77,18 @@ def processbagofword2(files):
         content += fin.read()
 
         # the part that is not clear
-    tokenizer = RegexpTokenizer('\w+|\$[\d\.]+|\S+')
+    # tokenizer = RegexpTokenizer('\w+|\$[\d\.]+|\S+|')
+    # tokenizer = RegexpTokenizer('^[\_]*([a-z0-9]+(\.|\_*)?)+@([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6}$|^(19|20)[\d]{2,2}$|^\+?[\d\s]{3,}$|^\+?[\d\s]+\(?[\d\s]{10,}$|^\d{5}$|^\d$|^\d{4}(\-\d{2}){2}$|\^([1-9]|0[1-9]|[12][0-9]|3[01])\D([1-9]|0[1-9]|1[012])\D(19[0-9][0-9]|20[0-9][0-9])$|^([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6}$\w+|^([0-1][0-9]|[2][0-3]):([0-5][0-9])$|^[2-9]\d{2}-\d{3}-\d{4}$|\$[\d\.]+|\S+|')
+    # email | 1900 - 2099 | Phone number | Phone with code | Zip |
+    # Date | Date (dd mm yyyy, d/m/yyyy, etc.)| domain | time |
+    # Phone
     # words = nltk.tokenize(content)
+
+    # tokenizer = RegexpTokenizer('[([A-Z]?[a-z]+)?[\_]*([a-z0-9]+(\.|\_*)?)+](@([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6})?|\
+    #     ([0-9]|0[0-9]|1?[0-9]|2[0-3]):[0-5]?[0-9]|\
+    #     |\w+|\$[\d\.]+|\S+|')
+    tokenizer = RegexpTokenizer('^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$|\w+|\S+')
+    # Email | Phone | date | time | words
     allwords = tokenizer.tokenize(content)
 
     #stemming
@@ -117,27 +117,14 @@ def processbagofword2(files):
     'have', 'do', 'is'
     }
 
-    # for i in xrange(10):
-    #     print ''
-    # print "allwords in ", files
-    # print allwords
+    for i in xrange(10):
+        print ''
+    print "allwords in ", files
+    print allwords
 
     for element in allwords:
-        if len(element) >= 3 and element[0] == '(' and element[-1] == ')':
-            element = element[1:len(element) - 1]
-        if len(element) >= 3 and element[0] == '{' and element[-1] == '}':
-            element = element[1:len(element) - 1]
-        if element.isdigit() and len(element) == 4:
-            element = 'DDDD'
-        if element.isdigit() and len(element) == 3:
-            element = 'DDD'
-        if element.isdigit() and len(element) == 2:
-            element = 'DD'
-        if element.isdigit() and len(element) == 1:
-            element = 'D'
-        if element.isalpha() and len(element) == 1:
-            element = 'A'
 
+        element = wordProcess(element)
 
         if (element.isalpha() or element.isdigit()):
             element = st.stem(element)
@@ -272,7 +259,7 @@ def seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum):
         index += 1
 
 
-        
+
     # for element in filesDict:
     #     if index > trainNum:
     #         testFilesDict[element] = filesDict[element]
@@ -289,7 +276,7 @@ def seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum):
 if __name__ == '__main__':
     removeDsStore("newWebkbFile")
     fileList = listFiles("newWebkbFile")
-    print fileList
+    # print fileList
     allwordsDict = dict()
     onefileDict = dict()
     top2000words = dict()
@@ -318,7 +305,7 @@ if __name__ == '__main__':
     for i in xrange(10):
         print ""
     print "filesDict:"
-    print filesDict
+    # print filesDict
     addLable(filesDict)
     print filesDict
 

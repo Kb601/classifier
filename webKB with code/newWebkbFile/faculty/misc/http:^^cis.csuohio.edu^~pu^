@@ -83,12 +83,3 @@ my e-mail address is
 
 
 
-
-
-
-
-you visited this page at ",rightnow,
-   "")
-  document.write("this page was last modified at ",
-    document.lastmodified," ")
-//-->
