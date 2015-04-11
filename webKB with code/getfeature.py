@@ -113,7 +113,7 @@ def processbagofword2(files):
     'she', 'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'be',
     'have', 'do'
     }
-    
+
     # for i in xrange(10):
     #     print ''
     # print "allwords in ", files
@@ -210,7 +210,7 @@ def createDataset(filesDict, featureLableList, filename):
         for fileName in filesDict:
             for i in xrange(len(featureLableList) - 2):
                 if featureLableList[i] in filesDict[fileName]:
-                    curFileData[i] = 1
+                    curFileData[i] += 1
                 else:
                     curFileData[i] = 0
 
@@ -313,9 +313,9 @@ if __name__ == '__main__':
     trainFilesDict = dict()
     seperateTrainTestData(testFilesDict, trainFilesDict, filesDict, trainNum)
 
-    createDataset(testFilesDict, featureLableList, 'webkbTestDataset.csv')
+    createDataset(testFilesDict, featureLableList, 'webkbTestDatasetNonBinarary.csv')
 
-    createDataset(trainFilesDict, featureLableList, 'webkbTrainDataset.csv')
+    createDataset(trainFilesDict, featureLableList, 'webkbTrainDatasetNonBinarary.csv')
 
     # createDataset(filesDict, top2000words)
 
