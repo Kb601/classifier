@@ -141,7 +141,19 @@ def processbagofword2(files):
     'up','about','into','over', 'after', 'beneath', 'under','above', 'the',
     'a', 'that', 'I','it', 'not', 'he', 'as','you','this','but','his','they', 'her',
     'she', 'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'be',
-    'have', 'do', 'is'
+    'have', 'do', 'is', 'new', 'work', 'lab', 'parallel', '3460', 'each', 'project'
+    'we','if', '3601', '2936', '5083', '4793', 'so', 'course', 'group', 'how', 'programming',
+    'language', 'first', 'any', 'performance', 'these', '3882', 'using', 'your', 'file',
+    'students', 'what', 'more', 'computer', 'are', 'page', 'university', 'science',
+     'from', 'research','systems', 'information', 'edu', 'home', 'we', 'can', 'cs',
+    'program', 'department', 'system', 'time', 'project', 'data', 'software', 'other',
+    'which', 'here', 'some', 'has', 'realZipCode', 'use', 'also', 'engineering',
+     'class', 'design', 'may', 'web', 'computing', 'was', 'office', 'last', 'no', 
+     'our', 'should', 'student', 'Dnth', 'based', 'list', 'out', 'me', 'problem', 
+     'distributed', 'two', 'available', 'code', 'when', 'email', 'number', 'algorithms', 'am', 'up'
+
+
+
     }
 
     for i in xrange(10):
@@ -322,14 +334,25 @@ if __name__ == '__main__':
     for i in xrange(10):
         print ""
     print "Top 2000 words:"
-    print top2000words  
+    # print top2000words  
     create2000DictCsv(top2000words)
+    # tmpTop200Word = top2000words
+    # sorted(tmpTop200Word.items(), key=lambda x: x[1])
+    printfeatureLableList = []
+    for element in sorted(top2000words.items(), key=lambda x: -x[1]):
+        printfeatureLableList.append(element[0])
+        printfeatureLableList.append(element[1])
+
+    print 'printfeatureLableList', printfeatureLableList
+
+
+
     for i in xrange(10):
         print ""
     print "filesDict:"
     # print filesDict
     addLable(filesDict)
-    print filesDict
+    # print filesDict
 
     featureLableList = []
     sort = True
