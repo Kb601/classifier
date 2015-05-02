@@ -1,0 +1,57 @@
+robot simulators
+select-a-demo
+
+submitting the following form will run a demo which will attempt to
+pop a window up on your screen.  if necessary, put your console host
+in the entry marked x display.
+
+you will also need to type  xhost +piglet.cs.umass.edu 
+in a shell to allow piglet to set up a window on your screen.  the
+demo will not work otherwise!
+
+
+there is a 10 minute timeout.
+
+
+note: piglet is a sparcstation 2 under variable load -- some demos
+may slow down or momentarily stop, depending on piglet's work load.
+
+
+
+x display: 
+
+
+
+
+
+harmonic function path planning for a 2-dof arm
+(connolly and grupen 1993).
+
+
+
+dynamic contact localization for shape recovery
+(huber and grupen 1994).
+
+
+
+a hamiltonian framework for kinodynamic planning and control
+(connolly, grupen, souccar 1995).
+
+
+other demos are pending - please stay tuned.
+
+
+
+
+
+
+robot simulators
+robot simulators
+robot simulators
+robot simulators
+robot simulators
+robot simulators
+robot simulators
+robot simulators
+robot simulators
+robot simulators

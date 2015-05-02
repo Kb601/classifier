@@ -1,0 +1,164 @@
+the dependable parallel computing and networks laboratory
+
+
+ dependable parallel computing and networks laboratory 
+
+
+
+
+  (dpcnl)
+
+ university of washington
+
+department of electrical engineering
+
+box 352500, seattle,  wa  98195-2500, usa
+
+(206)543-5918
+
+
+
+
+
+ the lab
+as our name implies, our research centers around dependable parallel computers and networks.  our research in fault tolerance and reliability result in the
+"dependable" part of our name.  our research also includes
+"parallel computers", computer architecture and "networks".  this lab is led by
+professor arun k.
+somani 
+ and
+professor james
+meditch.
+
+our research into dependability includes issues in reliability, dependability
+and fault tolerance in all aspects of computer systems
+and networks.  currently we have active work occurring in the 
+area of fault propagation in cache memory to
+determine effective protocols for detecting and correcting faults 
+in cache memories.
+
+we are building a comprehensive reliablity analysis tool ,himap, the hierarchical modeling and analysis package.
+
+
+our research into parallel computers and parallel algorithms
+ranges from interconnection networks and architecture to efficient partitioning 
+methods for parallel algorithms.  currently we have ongoing research
+in the proteus 
+parallel computer, a machine designed and implemented in this lab in
+conjunction with the
+applied physics lab
+here at the university of washington.    this machine is used for
+applications such as real time
+imaging, visualization, and rendering
+in both 2 and 3 dimensions.
+
+our research into networks is far ranging. 
+topics range from  video
+transmission in atm networks, in which we try to characterize
+traffic sources in atm networks and address the issues of bandwidth allocation,
+to high speed networks
+in which we address issues in multicasting, and other inter-networking issues. another
+topic of research is optical networking.
+currently, we are looking at certain issues in wavelength-routing networks.
+
+currently, 9 phd students and 3 ms students are working in the laboratory.
+the dpcnl computer resources consist of 9 sun sparcstations,
+a mac iici, a gateway pentium 60, and a configuration
+of proteus parallel machine (12 pe).  in addition we also have access
+to a  32 pe proteus, a 16 node intel paragon machine, and a 53 node ksr at the university of washington.
+
+we also have access to video digitizers and sources
+of video streams. the proteus (intel i860-based) parallel processor
+can also be used for processing of information at high speed and
+to generate realistic input data streams. our latest acquisition is
+a 4-port atm switch from fore systems. the switch is being used by the 
+atm group for research in the field of video image transfer and analysis.
+ the switch will also be used to demonstrate its role in an all-optical network backbone in the new ee/cs/cse 
+ building.
+
+
+
+our people 
+
+professor arun k. somani
+
+
+ maruthi bhaskar, master's student
+ yul chu  - phd student
+ anju
+gupta - master's student
+seongwoo
+kim - master's student
+ govindarajan
+krishnamurthi  - phd student 
+jari kristensen, phd student
+
+li ling, phd student
+himanshu nautiyal -  master's student
+  amitabh shrivastava  - master's student
+ suresh subramaniam - phd student
+
+
+professor james meditch
+
+ supavadee aramvith  - phd student
+ hamed alazemi  - phd student
+ kevin gao - phd student
+ yu xu  - phd student
+
+
+the graduates list will introduce you to
+some recent graduates from our lab and where they are today.
+
+
+
+
+
+our publications
+you can also take a look at selected bibliographies of
+journals,
+invited papers,
+conference papers, and
+posters.
+
+
+
+
+
+
+
+
+
+ webroot@shasta.ee.washington.edu 
+
+
+
+  
+department of electrical engineering home page. 
+
+
+
+
+ dpcnl, department of electrical engineering, university of washington, seattle, washington.
+
+
+
+ the dependable parallel computing and networks laboratory
+
+ the dependable parallel computing and networks laboratory
+
+ the dependable parallel computing and networks laboratory
+
+ the dependable parallel computing and networks laboratory
+
+ the dependable parallel computing and networks laboratory
+
+ the dependable parallel computing and networks laboratory
+
+ the dependable parallel computing and networks laboratory
+
+ the dependable parallel computing and networks laboratory
+
+ the dependable parallel computing and networks laboratory
+
+ the dependable parallel computing and networks laboratory

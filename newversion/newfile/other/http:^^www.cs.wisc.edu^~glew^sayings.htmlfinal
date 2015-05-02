@@ -1,0 +1,473 @@
+andy "krazy" glew's favorite quotes and sayings
+
+
+
+andy "krazy" glew's
+favorite quotes and sayings
+
+
+this collection started out as a set of ibm computer cards pasted
+to the wall of mcgill's mcconnell engineering computer facility,
+where i operated the rje site and provided programming advice,
+was pasted to the glass wall of my office at gould, 
+and has followed me around.
+
+
+
+
+
+summus non americae, eh?
+
+-- the canadian national motto
+
+
+
+bugs: it's the pipeline, stupid!!!
+
+-- andy glew
+
+
+
+expressing my observation that many bugs in p6 were caused by incorrect
+design of one dimensional pipelines, not the multi-pipeline decoupled nature
+of p6.
+
+the title of a talk i gave at the ieee asilomar conference in 1994.
+
+we need more formal methods for the straightforward design of pipelines.
+
+
+
+
+bypasses - just say no.
+
+-- andy glew
+
+
+
+
+an architect
+a micro-architect
+
+-- robert geva
+
+(you will not be able to see this without html 3, supporting
+the "big" and "small" html commands.)
+
+
+
+
+measure twice, cut once.
+
+-- "this old house"
+
+
+
+virtual - something that isn't there, but appears to be.
+
+transparent - something that is there, but doesn't appear to be.
+
+
+
+
+"in times of profound change, the learners inherit the earth, while the
+learned find themselves beautifully equipped to deal with a world that no
+longer exists."
+
+--- al rogers, global schoolhouse network, speaking at cue
+
+
+glew comment:
+    i wonder if there is some correlation between "liberal" 
+    and "ability to learn and adapt to new things",
+    so that liberalism is a trait that has a survival advantage
+    in times of rapid change, 
+    but which is of less advantage during the long intervals
+    of less change.
+    the computer industry may act as an example:
+    profoundly liberal when it started,
+    conservative now that the time of great innovations and new ideas has passed.
+
+
+
+
+
+
+the 3 most important facts in programming:
+
+there are n numbers in the set 0..n - not!.
+    ---paraphrased from stan kelly-bootle
+any programming problem can be solved by adding a level of indirection.
+    ---unknown
+any performance problem can be solved by removing a level of indirection.
+    ---mike haertel
+
+
+---compiled by mike haertel.
+
+
+
+q: what is the single most important fact in computer science?
+
+a: the fact that there are n+1 elements in the set {0..n}
+
+---stan kelly-bootle
+
+
+
+
+names are a scarce resource.
+---andy glew
+
+
+
+if it ain't broke, find something else to fix
+
+-- tim olson, amd
+
+
+
+the worst maxim around is 
+"don't fix it if it ain't broke".
+you'd better be improving it,
+because your competitor is.
+---wayne calloway, pepsico ceo
+---fortune april 10, 1989
+
+
+
+all great ideas eventually degenerate to hardware
+---peter drucker?
+
+(the poor ideas remain in software)
+
+
+
+computer memory requirements are growing by 1 address bit / 18 months
+---ibm, 1987
+
+
+
+if your users don't cost more than the appropriate computers,
+you should get better users
+(unless they are grad students)
+---andy@polya.stanford.edu
+
+(justification for running emacs on cray)
+
+
+
+always code to be reused.
+
+because then your code can be reused.
+saying that "this code will never be reused" 
+and coding that way is a self fulfilling prophecy.
+---andy glew
+
+
+
+there has never been a good product designed by a committee.
+
+
+
+keep a decade behind.
+
+
+
+i'm all for simplicity.
+if it's very complicated i can't understandit.
+
+
+
+parity is for farmers.
+
+
+---seymour cray
+
+
+
+now that i have taught you how to avoid division,
+the next time i will teach you how to avoid multiplication.
+
+---seymour cray, talking to numerical analysts.
+
+
+
+let's make smart machines to run slower software faster!
+---bob campbell, uw-beaver!tikal!bobc
+
+
+
+
+
+flon's axiom:
+
+there does not now, nor will there ever,
+exist a programming language in which it is the least bit hard
+to write bad programs.
+
+
+
+
+development is maintenance.
+---brian e. marick
+
+
+
+"do you really want to do this?"
+is a question that should never be asked
+unless there is a chance that the answer is "no".
+
+otherwise, if you are asked this question 9 times a day,
+answering "yes",
+the 10th time will have you answering out of habit.
+
+
+
+
+
+the 10th axiom of systemantics
+
+when a fail-safe system fails,
+it fails by failing to fail safe.
+
+
+---john gall, systemantics
+
+
+
+scientific applications grow a factor of 100 every 10 years
+---giles
+
+
+
+perfection is the enemy of the dissertation
+---ivan sutherland
+
+
+
+perfection is the enemy of completion.
+---andy glew
+
+
+
+if all else fails, follow the instructions.
+
+
+
+no! no! no! 
+read the instructions, bearing in mind 
+they're probably fucked up anyway!
+---andy glew
+
+
+
+
+
+indirection is the right direction.
+---andy glew
+
+
+
+never put off until run time what can be done at compile time.
+
+
+you wouldn't believe the shit i got from late binding advocates
+the first time i posted this to a gould newsgroup!
+---andy glew.
+
+
+
+
+never put off until execution time what can be done at decode time.
+---andy glew
+
+
+
+recurses! called again...
+
+recurse you, mad baron!
+
+
+
+it's easier to apologize than to ask permission.
+---grace hopper
+
+
+
+we need a coalition to stamp out smart i/o devices.
+---chris torek
+
+
+most "smart" i/o controllers are, in fact, "smart-ass" i/o controllers.
+---rob pike (paraphrased)
+
+
+
+an educated man knows of a synonym for every concept.
+
+
+
+
+
+the titanic effect
+
+the severity with which a system fails
+is proportional to the intensity of the designers'
+belief that it cannot.
+
+
+
+
+in the early 1970s 8k of rom was equal to 8 bits of register space.
+what a reason for microcode!
+---info from patterson, 1985
+
+
+
+instructions should not bind together operations
+which an optimizing compiler might otherwise choose to separate
+in order to produce a more efficient program.
+---brian case
+
+
+it's just a shift to the left
+and then a shift to the ri-i-i-i-ght
+get a load of those mips
+and the code's real ti-i-ight
+this lockstep pipeline
+really drives me insa-a-a-a-a-ane
+let's do the pre-charge again!
+---brian case
+
+
+
+measurement of repetition is not equivalent to repetition of measurement.
+---eugene miya
+
+
+
+the best is the enemy of the good.
+
+
+
+
+risc
+
+relegates important stuff to compilers
+
+
+
+
+the maxim
+
+nothing avails but perfection
+
+may be spelled
+
+p a r a l y s i s
+
+
+---winston churchill
+
+
+
+turning off the type and range checking after the program
+is debugged is like throwing away the lifeboats after the maiden
+voyage.
+
+(or like travelling without a convoy through a submarine war zone.)
+
+
+
+the biggest (and most common) mistake in computer design is not providing
+enough address bits.
+---bell and mudge,  "evolution of pdp-11"
+
+
+
+rules of thumb
+
+
+
+
+every 3 years transistor account on a chip increases 2x.
+
+
+every 3 years chip  speed increases by 2x.
+
+
+every 3 years drams increase in size by 4x.
+
+
+every 10 years drams get 30% faster.
+
+
+every 3 years disks increase in size by 2x.
+
+
+every 10 years disks get 30% faster.
+
+
+1mb of main memory is required for every mip.
+    
+    no way! disproved on microcomputers!
+    
+
+
+1mb/s of bandwidth is required to feed every mip.
+
+
+programmers increase the size of programs 2x every year.
+
+
+
+
+--- unix international, may 7, 1990
+
+
+
+
+rule for debugging:
+
+when in doubt, print it out!
+
+
+
+
+buying clothes more than once a decade is a waste of time
+--- andy glew
+
+
+
+$header: /u/g/l/glew/public/html/rcs/sayings.html,v 1.8 1996/09/12 23:34:44 glew exp $
+
+
+andy "krazy" glew's favorite quotes and sayings
+
+
+andy "krazy" glew's favorite quotes and sayings
+
+
+andy "krazy" glew's favorite quotes and sayings
+
+
+andy "krazy" glew's favorite quotes and sayings
+
+
+andy "krazy" glew's favorite quotes and sayings
+
+
+andy "krazy" glew's favorite quotes and sayings
+
+
+andy "krazy" glew's favorite quotes and sayings
+
+
+andy "krazy" glew's favorite quotes and sayings
+
+
+andy "krazy" glew's favorite quotes and sayings
+
+
+andy "krazy" glew's favorite quotes and sayings

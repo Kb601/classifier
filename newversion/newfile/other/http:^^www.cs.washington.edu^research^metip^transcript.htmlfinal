@@ -1,0 +1,72 @@
+transcript project
+
+
+
+
+
+  
+ transcript
+
+
+     
+     computer science & engineering department,  
+     university of washington, fr-35, 
+     seattle, wa 98195 usa
+
+
+ 
+
+the transcript project is an effort to create a framework in which
+a new generation of software for computer-assisted instruction
+can access and contribute to personal data repositories of
+information related to educational assessment and educational planning.
+goals include facilitation of effective distance learning
+and the enabling of computer-based educational planning
+in a context of diverse student needs, diverse student backgrounds,
+and a rich variety of educational opportunities provided over the network.
+
+
+the purpose of the transcript core record is to present an overview of the
+student's background in a fixed-size file.  this size is set small enough to
+fit on a pc style floppy diskette.
+
+
+additionally we are developing a network-based tutorial system using
+transcript.  this would allow students to complete a tutorial over the network
+and have the results of their studies stored in their personal transcript
+record.  
+
+
+some of the components of the transcript core record include:
+
+
+ personal information
+ academic acheivement in transcript subjects
+ preferred learning style
+ history of the transcript record
+ history and summary of education goals
+ directory of supplemental transcript records
+
+
+
+the transcript supports 
+ education through the internet.
+
+ 
+
+  bricker@cs.washington.edu or tanimoto@cs.washington.edu 
+  last modified: thurs mar 16 1995.
+
+
+
+
+transcript project
+transcript project
+transcript project
+transcript project
+transcript project
+transcript project
+transcript project
+transcript project
+transcript project
+transcript project

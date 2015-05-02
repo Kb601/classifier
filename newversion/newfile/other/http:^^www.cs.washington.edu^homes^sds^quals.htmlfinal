@@ -1,0 +1,54 @@
+experimental analysis of treecodes
+
+
+
+
+
+
+experimental analysis of treecodes for astronomical simulations
+
+
+
+ the introduction of hierarchical tree data-structures to solve the
+  n-body problem have led to a host of algorithms with asymptotic
+  complexities ranging from o(n log  n) to 
+ o(n). although the asymptotic complexity of different
+treecodes are
+  competitive, the constant factors between the algorithms
+  have a significant impact on the cpu time. in this paper
+  we examine the performance of a class of treecodes to compare the
+  effectiveness of different tree structures for n-body simulation.
+  we investigate the performance of these treecodes in both the serial
+  and parallel cases.
+ 
+
+this work is in 
+connection with a project on 
+
+data structures by prof. 
+richard anderson.  
+a draft
+paper is also available.
+
+i have also put together a simple applet that animates an 
+n-body simulation.
+
+
+
+sean david sandys &lt;sds@cs.washington.e
+du&gt; 
+last revised: april 4, 1995
+
+
+
+
+experimental analysis of treecodes
+experimental analysis of treecodes
+experimental analysis of treecodes
+experimental analysis of treecodes
+experimental analysis of treecodes
+experimental analysis of treecodes
+experimental analysis of treecodes
+experimental analysis of treecodes
+experimental analysis of treecodes
+experimental analysis of treecodes

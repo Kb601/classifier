@@ -1,0 +1,502 @@
+notes on programming in c
+
+
+notes on programming in c
+rob pike, at&t bell laboratories
+
+introduction
+
+kernighan and plauger's
+
+the elements of programming style
+ (prentice hall, 1978)
+was an important and rightly influential book.
+but sometimes i feel its concise rules were taken as a cookbook
+approach to good style instead of the succinct expression of a philosophy
+they were meant to be.
+if the book claims that variable names should be chosen
+meaningfully, doesn't it then follow that variables whose names are
+small essays on their use are even better?
+isn't
+maximumvalueuntiloverflow
+a better name than
+maxval?
+i don't think so.
+
+what follows is a set of short essays that collectively
+encourage a philosophy of clarity in programming rather than
+giving hard rules.
+i don't expect you to agree with all of them,
+because they are opinion and opinions change with the times.
+but they've been accumulating in my head, if not on paper
+until now, for a long time, and are based on a lot of experience,
+so i hope they help you understand
+how to plan the details of a program.
+(i've yet to see a good essay on how to plan the whole thing.)
+if you find them idiosyncratic, fine;
+if you disagree with them, fine;
+but if they make you think about why you disagree, that's better.
+under no circumstances should you program the way i say to
+because i say to; program the way you think expresses best
+what you're trying to accomplish in the program.
+and do so consistently and ruthlessly.
+
+your comments are welcome.
+
+issues of typography
+
+a program is a sort of publication.
+it's meant to be read by the programmer,
+another programmer (perhaps yourself a few days, weeks or years later),
+and lastly a machine.
+the machine doesn't care how pretty the program is -
+if the program compiles, the machine's happy -
+but people do, and they should.
+sometimes they care too much: pretty printers
+mechanically produce pretty output that accentuates irrelevant detail in
+the program, which is
+as
+sensible
+as
+putting all the prepositions
+in
+english text
+in
+bold font.
+although many people think programs should look like the algol-68 report
+(and some systems even require you to edit programs in that style),
+a clear program is not made any clearer by such presentation,
+and a bad program is only made laughable.
+
+typographic conventions consistently held
+are important to clear presentation, of course -
+indentation is probably the best known and most useful example -
+but when the ink obscures the intent, typography has taken over.
+so even if you stick with plain old typewriter-like output, be conscious
+of typographic silliness.
+avoid decoration; for instance,
+keep comments brief and banner-free.
+say what you want to say in the program, neatly and consistently.
+then move on.
+
+variable names
+
+ah, variable names.
+length is not a virtue in a name;
+clarity of expression
+is.
+a global variable rarely used may deserve a long name,
+maxphysaddr
+say. an array index used on every line of a loop needn't be named
+any more elaborately than
+i.
+saying
+index
+or
+elementnumber
+is more to type (or calls upon your text editor) and obscures
+the details of the computation.
+when the variable names are huge, it's harder to see what's going on.
+this is partly a typographic issue; consider
+for(i=0 to 100)
+	array[i]=0
+
+vs.
+for(elementnumber=0 to 100)
+	array[elementnumber]=0;
+
+the problem gets worse fast with real examples.
+indices are just notation, so treat them as such.
+
+pointers also require sensible notation.
+np
+is just as mnemonic as
+nodepointer
+if
+you consistently use a naming convention from which
+np
+means `node pointer' is easily derived.
+more on this in the next essay.
+
+as in all other aspects of readable programming, consistency is important
+in naming. if you call one variable
+maxphysaddr,
+don't call its cousin
+lowestaddress.
+
+finally, i prefer minimum-length but maximum-information names, and
+then let the context fill in the rest.
+globals, for instance, typically have little context when they are used,
+so their names need to be relatively evocative. thus i say
+maxphysaddr
+(not
+maximumphysicaladdress)
+for a global variable, but
+np
+not
+nodepointer
+for a pointer locally defined and used.
+this is largely a matter of taste, but taste is relevant to clarity.
+
+i eschew embedded capital letters in names; to my prose-oriented eyes,
+they are too awkward to read comfortably. they jangle like bad typography.
+
+the use of pointers
+
+c is unusual in that it allows pointers to point to anything.
+pointers are sharp tools, and like any such tool, used well
+they can be delightfully productive, but used badly they can
+do great damage (i sunk a wood chisel into my thumb
+a few days before writing this).
+pointers have a bad reputation in academia,
+because they are considered too dangerous, dirty somehow.
+but i think they are powerful
+notation,
+which means they can help us express ourselves clearly.
+
+consider: when you have a pointer to an object, it is a name for exactly
+that object and no other. that sounds trivial, but look at the following
+two expressions:
+np
+node[i]
+
+the first points to a node, the second evaluates to (say) the same node.
+but the second form is an expression; it is not so simple.
+to interpret it, we must know what
+node
+is, what
+i
+is, and that
+i
+and
+node
+are related by the (probably unspecified) rules
+of the surrounding program.
+nothing about the expression in isolation can show that
+i
+is a valid index of
+node,
+let alone the index of the element we want.
+if
+i
+and
+j
+and
+k
+are all indices into the node array, it's very easy to slip up,
+and the compiler cannot help.
+it's particularly easy to make mistakes when passing things to subroutines:
+a pointer is a single thing; an array and an index must be believed
+to belong together in the receiving subroutine.
+
+an expression that evaluates to an object is inherently more subtle
+and error-prone than the address of that object.
+correct use of pointers can simplify code:
+parent->link[i].type
+
+vs.
+lp->type.
+
+if we want the next element's type, it's
+parent->link[++i].type
+
+or
+(++lp)->type.
+
+i
+advances but the rest of the expression must stay constant;
+with pointers, there's only one thing to advance.
+
+typographic considerations enter here, too.
+stepping through structures using pointers can be much
+easier to read than with expressions: less ink is needed and
+less effort is expended by the compiler and computer.
+a related issue is that the type of the pointer affects how it
+can be used correctly, which allows some helpful compile-time error
+checking that array indices cannot share.
+also, if the objects are structures, their tag fields are
+reminders of their type, so
+np->left
+
+is sufficiently evocative; if an array is being indexed the array
+will have some well-chosen name and the expression will end up
+longer:
+node[i].left.
+
+again, the extra characters become more irritating as the examples
+become larger.
+
+as a rule, if you find code containing many similar, complex expressions
+that evaluate to elements of a data structure, judicious use of
+pointers can clear things up.
+consider what
+if(goleft)
+	p->left=p->right->left;
+else
+	p->right=p->left->right;
+
+would look like using a compound expression for
+p.
+sometimes it's worth a temporary variable (here
+p)
+or a macro to distill the calculation.
+
+procedure names
+
+procedure names should reflect what they do; function names should
+reflect what they
+return.
+functions are used in expressions, often in things like
+if's,
+so they need to read appropriately.
+if(checksize(x))
+
+is unhelpful because we can't deduce whether checksize returns true on
+error or non-error; instead
+if(validsize(x))
+
+makes the point clear and makes a future mistake in using the routine
+less likely.
+
+comments
+
+a delicate matter, requiring taste and judgement.
+i tend to err on the side of eliminating comments, for several reasons.
+first, if the code is clear, and uses good type names and variable names,
+it should explain itself.
+second, comments aren't checked by the compiler,
+so there is no guarantee they're right,
+especially after the code is modified.
+a misleading comment can be very confusing.
+third, the issue of typography: comments clutter code.
+
+but i do comment sometimes.
+almost exclusively, i use them as an introduction to what follows.
+examples: explaining the use of global variables and types
+(the one thing i always comment in large programs);
+as an introduction to an unusual or critical procedure;
+or to mark off sections of a large computation.
+
+there is a famously bad comment style:
+i=i+1;        /* add one to i */
+
+and there are worse ways to do it:
+/**********************************
+ *                                *
+ *          add one to i          *
+ *                                *
+ **********************************/
+
+               i=i+1;
+
+don't laugh now, wait until you see it in real life.
+
+avoid cute typography in comments,
+avoid big blocks of comments except perhaps before vital
+sections like the declaration of the central data structure
+(comments on data are usually much more helpful than
+on algorithms);
+basically, avoid comments.
+if your code needs a comment to be understood, it would be better
+to rewrite it so it's easier to understand.
+which brings us to
+
+complexity
+
+most programs are too complicated - that is,
+more complex than they need to be to solve their problems efficiently.
+why?
+mostly it's because of bad design,
+but i will skip that issue here because it's a big one.
+but programs are often complicated
+at the microscopic level,
+and that is something i can address here.
+
+
+rule 1.
+you can't tell where a program is going to spend its time.
+bottlenecks occur in surprising places, so don't
+try to second guess and put in a speed hack until you've
+proven that's where the bottleneck is.
+
+rule 2.
+measure.
+don't tune for speed until you've measured,
+and even then don't unless one part of the code
+overwhelms
+the rest.
+
+rule 3.
+fancy algorithms are slow when
+n
+is small, and
+n
+is usually small.
+fancy algorithms have big constants.
+until you know that
+n
+is frequently going to be big,
+don't get fancy.
+(even if
+n
+does get big, use rule 2 first.)
+for example, binary trees are always faster than splay trees for
+workaday problems.
+
+rule 4.
+fancy algorithms are buggier than simple ones,
+and they're much harder to implement.
+use simple algorithms as well as simple data structures.
+
+the following data structures are a complete list for almost
+all practical programs:
+
+array
+linked list
+hash table
+binary tree
+
+of course, you must also be prepared to collect these into compound
+data structures.
+for instance, a symbol table might be implemented as a hash table
+containing linked lists of arrays of characters.
+
+rule 5.
+data dominates.
+if you've chosen the right data structures and organized things well,
+the algorithms will almost always be self-evident.
+data structures, not algorithms, are central to programming.
+(see brooks p. 102.)
+
+rule 6.
+there is no rule 6.
+
+
+programming with data
+
+algorithms, or details of algorithms,
+can often be encoded compactly, efficiently and expressively as data
+rather than, say, as lots of
+if
+statements.
+the reason is that the
+complexity
+of the job at hand, if it is due to a combination of
+independent details,
+can be encoded.
+a classic example of this is parsing tables,
+which encode the grammar of a programming language
+in a form interpretable by a fixed, fairly simple
+piece of code.
+finite state machines are particularly amenable to this
+form of attack, but almost any program that involves
+the `parsing' of some abstract sort of input into a sequence
+of some independent `actions' can be constructed profitably
+as a data-driven algorithm.
+
+perhaps the most intriguing aspect of this kind of design
+is that the tables can sometimes be generated by another
+program - a parser generator, in the classical case.
+as a more earthy example, if an operating system is driven
+by a set of tables that connect i/o requests to the appropriate
+device drivers, the system may be `configured'
+by a program that reads a description of the particular
+devices connected to the machine in question and prints
+the corresponding tables.
+
+one of the reasons data-driven programs are not common, at least
+among beginners, is the tyranny of pascal.
+pascal, like its creator, believes firmly in the separation
+of code and data.
+it therefore (at least in its original form) has no ability to
+create initialized data.
+this flies in the face of the theories of turing and von neumann,
+which define the basic principles of the stored-program computer.
+code and data
+are
+the same, or at least they can be.
+how else can you explain how a compiler works?
+(functional languages have a similar problem with i/o.)
+
+function pointers
+
+another result of the tyranny of pascal is that beginners don't use
+function pointers.
+(you can't have function-valued variables in pascal.)
+using function pointers to encode complexity has some interesting
+properties.
+
+some of the complexity is passed to the routine pointed to.
+the routine must obey some standard protocol - it's one of a set
+of routines invoked identically - but beyond that, what it
+does is its business alone.
+the complexity is
+distributed.
+
+there is this idea of a protocol, in that all functions used similarly
+must behave similarly. this makes for easy documentation, testing,
+growth and even making the program run distributed over a network -
+the protocol can be encoded as remote procedure calls.
+
+i argue that clear use of function pointers is the heart of object-oriented
+programming. given a set of operations you want to perform on data,
+and a set of data types you want to respond to those operations,
+the easiest way to put the program together is with a group of function
+pointers for each type.
+this, in a nutshell, defines class and method.
+the o-o languages give you more of course - prettier syntax,
+derived types and so on - but conceptually they provide little extra.
+
+combining data-driven programs with function pointers leads to an
+astonishingly expressive way of working, a way that, in my experience,
+has often led to pleasant surprises. even without a special o-o
+language, you can get 90% of the benefit for no extra work and be
+more in control of the result.
+i cannot recommend an implementation style more highly.
+all the programs i have organized this way have survived comfortably
+after much development - far better than with less disciplined
+approaches.
+maybe that's it: the discipline it forces pays off handsomely in the long run.
+
+include files
+
+simple rule: include files should never include include files.
+if instead they state (in comments or implicitly) what files they need to have
+included first, the problem of deciding which files to include
+is pushed to the user (programmer) but in a way that's easy to handle
+and that, by construction, avoids multiple inclusions.
+multiple inclusions are a bane of systems programming.
+it's not rare to have files included five or more times to
+compile a single c source file.
+the unix
+/usr/include/sys
+stuff is terrible this way.
+
+there's a little dance involving
+#ifdef's
+that can prevent a file being read twice, but it's usually done
+wrong in practice - the
+#ifdef's
+are in the file itself, not the file that includes it.
+the result is often thousands of needless lines of code
+passing through the lexical analyzer, which is (in good compilers)
+the most expensive phase.
+
+just follow the simple rule.
+
+
+
+rob pike / rob@research.att.com / sep. 1987
+
+
+
+notes on programming in c
+notes on programming in c
+notes on programming in c
+notes on programming in c
+notes on programming in c
+notes on programming in c
+notes on programming in c
+notes on programming in c
+notes on programming in c
+notes on programming in c

@@ -1,0 +1,57 @@
+syllabus:
+
+
+
+
+cse 573 topics
+
+intelligent agentspercepts &amp; actions
+agent architectures
+environmental properties
+
+searchproblem spaces
+brute force: depth-first, breadth-first, iterative-deepening, bi-directional
+constraint satisfaction
+heuristic search: a*, ida*, sma*
+optimization &amp; techniques from operations research 
+
+knowledge representation &amp; reasoningpropositional logic: syntax, semantics, inference, expressiveness
+first order logic: syntax, semantics, inference, expressiveness
+the fundamental tradeoff in knowledge representation
+
+planning &amp; actingrepresenting actions: strips, adl, &amp; the situation calculus
+the classical planning problem
+planning as search: world-states &amp; plan-states
+the pop &amp; ucpop algorithms
+operator graph optimizations
+incomplete information &amp; sensing
+reactive approaches
+
+learning search through version space
+pac learning
+induction algorithms &amp; decision trees
+inductive logic programming
+explanation-based generalization
+
+reasoning about uncertainty bayesian belief networks
+decision analysis
+
+methodologythe form of ai theories
+experimental methodology
+benchmarks &amp; testbeds 
+
+
+
+
+
+
+syllabus:
+syllabus:
+syllabus:
+syllabus:
+syllabus:
+syllabus:
+syllabus:
+syllabus:
+syllabus:
+syllabus:

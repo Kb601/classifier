@@ -1,0 +1,66 @@
+mpi-fm: mpi for fast messages
+
+
+
+
+
+mpi-fm: mpi for fast messages
+
+description
+
+mpi-fm is a high-performance implementation of mpi based on a port of
+mpich
+to fast messages on the myrinet.
+mpi-fm a latency of 25 us and a peak bandwidth of 17.5 mb/s, lower
+latency than many commercial mpp's, and respectable bandwidth.  mpi-fm
+outperforms the sp2 version of mpich for messages smaller than 1kb 
+as shown below.
+
+the performance of mpi-fm shows that mpp-like communication latency
+and bandwidth can be achieved with a network of workstations at
+the user level with carefully tuned messaging layers.  our thanks
+to the mpich creators who produced an mpi implementation which is both
+efficient and portable.
+
+performance
+
+the graphs below compare mpi-fm on two
+sparcstation 20/71s with supercache to mpich and mpi-f on the ibm sp2.
+
+
+
+ 
+documentation
+
+
+ readme file for mpi-fm 2.0
+
+
+software distributions
+
+
+ mpi-fm, version 2.0 for sunos
+ mpi-fm, version 2.0 for solaris
+
+
+
+
+back to csag home page
+
+last updated 6 october 1996
+
+webmaster
+
+
+
+
+mpi-fm: mpi for fast messages
+mpi-fm: mpi for fast messages
+mpi-fm: mpi for fast messages
+mpi-fm: mpi for fast messages
+mpi-fm: mpi for fast messages
+mpi-fm: mpi for fast messages
+mpi-fm: mpi for fast messages
+mpi-fm: mpi for fast messages
+mpi-fm: mpi for fast messages
+mpi-fm: mpi for fast messages

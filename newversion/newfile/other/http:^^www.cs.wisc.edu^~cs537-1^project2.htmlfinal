@@ -1,0 +1,513 @@
+cs 537 - programming assignment ii
+
+
+
+
+
+cs 537programming assignment ii 
+process synchronization
+corrected: 9/19/96
+
+
+ due:   october 10 at the start of class
+
+
+contents
+
+             introduction
+     generalized dining philosophers
+         algorithm i
+     algorithm ii
+             specifying the graph
+         programming details
+             turn in
+         threadscheduler
+
+
+
+
+
+     introduction  
+
+discussion of synchronization in operating systems is often
+couched in metaphor.  we have
+the sleeping barber problem,
+the cigarette smoker's problem,
+the bakery problem,
+and perhaps the most venerable of all, the dining philosophers.  each 
+of these scenarios in essence models how multiple processes are able to 
+access shared resources without leading to deadlock.  the better solutions to
+the problem will even guarantee fairness: all processes will be 
+guaranteed some access to the resources, so they cannot be ``starved.''
+for this project, you will be required to implement two solutions
+to a generalization of the dining philosophers problem, using
+the multithreading
+and synchronization capabilities of java to simulate the action
+of multiple processes competing for shared resources.
+
+tanenbaum
+
+offers two solutions.
+the first one, outlined in figure 2-19 (p. 57) is subject to deadlock
+(there is
+an animated demonstration of this solution in the 
+java
+tutorial).
+the second one, spelled out in complete detail in c
+in figure 2-20, is the solution given by edsger dijkstra, the person
+who made up the problem in the first place.
+it avoids deadlock by putting the states of all the philosophers in
+a public place and using a global mutex semaphore to inspect it.
+you will be implementing two other solutions.
+
+       generalized dining philosophers  
+
+the original dining philosophers problem as posed by dijkstra involved five 
+philosophers sitting around a table with a fork between each pair of 
+philosophers.  the philosophers were eating spaghetti that was so tangled, it
+required two forks to eat it.  subsequent authors generally assume that the 
+number n of philosophers is a fixed constant, but not necessarily 
+five.  (some authors also realized that the story would be much more 
+believable if the forks were replaced with chopsticks).  
+
+chandy and misra
+1
+further generalized the problem to allow arbitrary pairs of philosophers
+to share forks.  for example, the following diagram shows ten philosophers 
+numbered 0 through 9.  each line represents a fork shared by a pair of 
+philosophers.
+the 15 forks are indicated by fork identifiers which are
+the numbers 0 through 14.
+thus each philosopher shares forks with three others.
+for example, philosopher 0 shares fork 0 with philosopher 1,
+fork 10 with philosopher 5, and
+fork 4 with philosopher 4.
+(this picture is known in graph theory as the peterson graph).
+ 
+
+       algorithm i  
+
+the simplest algorithm for the diners problem is for a hungry philosopher
+to grab all the forks she needs (i.e. all the forks surrounding her) in some 
+order and then start eating.
+if a fork is not available, she simply waits for it before asking for the next
+one.  this algorithm can lead to deadlock, but
+if each philosopher always picks up forks in increasing order by
+fork identifiers, deadlock cannot occur
+(you should be able to prove this statement).
+for example, philosopher 0 should grab forks in the order 0, 4, 10.
+it does not matter how the forks are numbered, so long as no two of
+them have the same number.
+
+       algorithm ii  
+
+chandy and misra call this algorithm a
+"hygienic"
+solution to the diners problem.
+
+``a fork is either
+clean
+or
+dirty.
+a fork being used to eat with is dirty and remains dirty until it is cleaned.
+a clean fork remains clean until it is used for eating.
+a philosopher cleans a fork when mailing it (he is hygienic).
+a fork is cleaned only when it is mailed.
+an eating philosopher does not satisfy requests for forks until he has 
+finished eating.
+the key issue is:
+which requests should a non-eating philosopher defer?
+in our algorithm, a non-eating philosopher defers requests for forks that
+are clean and satisfies requests for forks that are
+dirty.''2
+
+for example, suppose aristotle and berkeley are neighbors and berkeley is
+eating.
+when berkeley finishes eating, he continues to hold on to their shared fork
+unless aristotle asks for it.
+if berkeley gets hungry again, he can simply reuse the fork and start
+eating again (provided he can get the rest of his forks).
+but if aristotle wants the fork before berkeley starts eating again, he
+can take it
+even if berkeley is hungry 
+(but not yet eating).
+however, once aristotle grabs the fork he does not give it up again until
+he has eaten at least once.
+
+chandy and misra show that this algorithm is deadlock-free provided the
+initial placement of forks is
+acyclic
+in the following sense:
+draw an arrow head on each edge of the graph g so that it points 
+towards the process currently holding the fork.
+if it is possible to start at some process and follow edges around the
+graph returning to the starting point while always obeying the directions
+of the arrow heads, then deadlock is possible.
+otherwise it is not.
+because a philosopher can ask for all of his forks at once, he may not
+have to wait as long to eat as in algorithm i.
+for example, here is one possible placement of forks.
+ 
+philosopher 8 has all his forks (so he can eat right now if he is hungry),
+while poor philosopher 0 has none of hers.
+fork 11, which is shared by philosophers 6 and 1, is currently held by
+philosopher 1.
+this placement is not acyclic (and hence could lead to deadlock)
+because of the cycle from 3 to 4 to 9 to 7 to 2 and back to 3.
+
+ specifying the graph 
+
+the specification of the philosopher graph (that is,
+the number of philosophers and forks and an indication of which which
+forks are shared by which pairs of philosophers) is given in a file.
+the graph file also indicates an initial placement of forks.
+we will give you some graph files as well as a library class
+to parse them, so you don't have to worry about the their format.
+the library class which is to be supplied has the following
+interface.
+
+    class graph {
+        graph(string filename) throws filenotfoundexception;
+            // constructor:  reads the graph from a file
+        public int numberofphilosophers();
+        public int numberofforks();
+        public int numberofneighbors(int phil);
+            // how many neighbors does phil share forks with?
+        public int forkid(int phil, int n);
+            // what is the nth fork shared by phil?
+        public int neighborid(int phil, int n);
+            // who does phil share his nth fork with?
+        public boolean hasforkinitially(int phil, int n);
+            // does phil initially hold his nth fork?
+    }
+
+the first four methods should be self-explanatory.
+the last three each take two arguments, a philosopher id phil
+(a number in the range 0 ... numberofphilosophers() - 1),
+and a number n in the range 0 ... numberofneighbors(phil) - 1,
+and return, respectively, the fork id of phil's nth
+fork, the philosopher id of the philosopher he shares it with,
+and an indication of whether phil holds that fork initially.
+the forks are arranged around each philosopher in increasing order of
+fork id so that forkid(phil,0) is always the lowest-numbered
+fork shared by phil.
+for example, in the above figure,
+numberofneighbors(4) = 3 and
+
+
+
+    n    forkid(4,n)    neighborid(4,n)    hasforkinitially(4,n)
+
+    0    3    3    true
+
+    1    4    0    true
+
+    2    14    9    false
+
+
+
+ programming details 
+ general outline 
+
+your program will be invoked as
+
+    java project2 peterson 10000
+
+where ``peterson'' is the name of a graph file and 10000 indicates
+the number of iterations.
+in both solutions, each philosopher will be represented by a thread
+(an instance of a class that extends thread or implements
+runnable).
+the run method of this class will look something like this
+
+    public void run() {
+        for (int i = 0; i &lt; numberofiterations; i++) {
+            think();
+            takeforks();
+            eat();
+            putforks();
+        }
+    }
+
+where think() and eat() simply sleep() for a random
+amount of time, and numberofiterations is specified on the
+command line.
+use the 
+random
+class in java.util and
+thread.sleep()
+to implement think() and eat().
+algorithm i
+
+for the first solution, you should define a semaphore
+class and create an instance of this class to represent each fork.
+
+    class semaphore {
+        semaphore(int initialvalue);
+        public synchronized void down();
+        public synchronized void up();
+    }
+
+the method takeforks simply does a down operation on
+each of the forks (in the order returned by graph.forkid())
+and pubforks does an up operation on them (in any order).
+the method graph.hasforkinitially is not used for this solution.
+
+your main() function will look something like this:
+
+    public static void main (string[] args)                    
+    {    
+        // make sure we have the correct number of arguments     
+        if (args.length != 2) {                             
+            system.err.println (&quot;usage: command filename iterations&quot;);
+            return;                                            
+        }                                                     
+
+        // read in the file containing the graph information       
+        try {
+            graph graph = new graph(args[0]);                                 
+        }
+        catch (filenotfoundexception e) {
+            system.err.println(args[0] + &quot;: &quot; + e);
+            system.exit(1);
+        }
+
+        // get the number of iterations (cycles) from the second argument
+        int iterations = integer.parseint(args[1]);
+                                                               
+        // create an array of forks                       
+        semaphore[] forks = new semaphore[graph.numberofforks()]; 
+        for (int i = 0; i &lt; graph.numberofforks(); i++)      
+            forks[i] = new semaphore(1);
+                                                          
+        // create an array of philosophers                  
+        philosopher[] phil = new philosopher[graph.numberofphilosophers()];       
+        // for solaris, create a scheduler do keep us honest
+        threadscheduler sched = new threadscheduler();
+        sched.start();
+                 
+        // start the processes                             
+        for (int id = 0; id &lt; graph.numberofphilosophers(); id++) {   
+            phil[id] = new philosopher(iterations);
+            phil[id].start();                                  
+            sched.registerthread(phil[id]);
+        }                                       
+
+        // wait for the philosophers to die
+        for (int id = 0; id &lt; graph.numberofphilosophers(); id++)
+            phil[id].join();
+        sched.stop();
+    }
+
+
+algorithm 2
+
+the coding for the second algorithm is going considerably more
+complicated than the first.
+in this program forks are not represented by separate objects,
+but rather by variables in the philosopher objects.
+instead of grabbing each of the forks in order, a hungry philosopher
+will repeatedly cycle through all of his forks, politely requesting
+those he doesn't have, until he gets them all.
+he is always willing to respond to requests for forks, even while eating,
+but depending on his state (thinking, hungry, or eating) and the state of
+the requested fork (clean or dirty), he may respond by giving the requested
+fork, or he may respond negatively and remember the request.
+when a philosopher finishes eating, he goes through his records of requests
+he refused earlier and sends those forks to their requesters.
+
+each philosopher will need to remember (in a field of class philosopher)
+his own state, as well as several pieces of information about each fork he
+shares:
+whether he has it,
+whether it's clean or dirty,
+whether it has been requested by his neighbor,
+and perhaps more.
+
+    /** called by this philosopher when he gets hungry to get his forks.
+     ** doesn't return until he has them.
+     **/
+    private synchronized void takeforks() {
+        state = hungry;
+        while (i don't have all my forks) {
+            for (i = 0; i &lt; my number of neighbors; i++) {
+                if (i don't have my ith fork) {
+                    f = thegraph.forkid(myid, i);
+                    p = thegraph.forkneighborid(myid, i);
+                    if (p.requestfork(f))
+                        record that i have my ith fork, and it is clean
+                }
+            }
+            if (i still don't have all my forks)
+                wait();
+        }
+        state = eating;
+    }
+
+    /** called when this philosopher finishes eating. */
+    private synchronized void putforks() {
+        state = thinking;
+        for (i = 0; i &lt; my number of neighbors; i++) {
+            mark my ith fork as dirty
+            if (i previously rejected a request for my ith fork) {
+                // i previously refused a request for this fork
+                f = thegraph.forkid(myid, i);
+                p = thegraph.forkneighborid(myid, i);
+                p.givefork(f);
+                remember that i don't have that fork any more
+            }
+        }
+    }
+
+    /** called by another philosopher to request a fork.
+     ** returns true if the request is granted immediately, and false
+     ** if it has been deferred.
+     **/
+    public synchronized boolean requestfork(int f) {
+        find i such that thegraph.forkid(myid, i) == f;
+        if (it is ok to give up my ith fork right now) {
+            record that i no longer have my ith fork;
+            return true;
+        }
+        else {
+            remember that my ith fork has been requested
+            return false;
+        }
+    }
+
+    /** called by another philosopher to give me a fork i previously
+     ** requested (by calling his requestfork method).
+     **/
+    public synchronized void givefork(int forkid) {
+        find i such that thegraph.forkid(myid, i) == f;
+        record that &quot;this&quot; philosopher has his ith fork and that it is clean;
+        notify();
+    }
+
+
+you should give a lot of thought to the design of the data structures
+used to record the state of a philosopher and his forks.
+note that information about each fork is stored in two places:
+each philosopher that shares the fork has his idea of its state.
+there is no separate ``fork'' object.
+if your program is correct, this information should always be consistent.
+for example, exactly one of the two philosophers should think he has the
+fork at any given time.
+for debugging, it is useful to check for conditions that ``can't happen''
+(such as receiving a request for a fork you don't have) and print an
+error message (or throw an exception).
+
+ turn in 
+you are to turn in copies of all the .java files you used for
+this project as well as a script file showing your program in 
+action (both algorithms) on both of the supplied graph files (peterson and
+star).
+you must use our
+
+threadscheduler
+
+class for the runs you hand in.
+
+run each test for 20 iterations (each philosopher eats 20 times).
+the maximum thinking time should be one second and the maximum eating
+time should be 1/2 second.
+print a message each time a philosopher changes state (eating to thinking,
+thinking to hungry, or hungry to eating).
+use threadscheduler.elapsed() to timestamp each message:
+
+    private random rand = new random();
+    private static final int maxthink = 1000;
+    private static final int maxeat = 500;
+    private void think() {
+        try { thread.sleep((int)(rand.nextfloat() * maxthink)); }
+        catch (interruptedexception) {}
+
+        system.out.println(threadscheduler.elapsed()
+            + &quot;: philosopher &quot; + myid + &quot; becomes hungry&quot;);
+    }
+    private void eat() {
+        system.out.println(threadscheduler.elapsed()
+            + &quot;: philosopher &quot; + myid + &quot; starts eating&quot;);
+
+        try { thread.sleep((int)(rand.nextfloat() * maxeat)); }
+        catch (interruptedexception) {}
+
+        system.out.println(threadscheduler.elapsed()
+            + &quot;: philosopher &quot; + myid + &quot; finishes eating&quot;);
+    }
+
+as always,
+your code should be clearly written with good internal structure, meaningful
+variable names, helpful comments, etc.   code that is incomprehensible will
+not be given the benefit of the doubt.
+
+ the threadscheduler 
+
+the windows and solaris versions of java have different scheduling policies
+for threads.
+the windows version is preemptive--it periodically switches among
+all the read threads--while the solaris version runs one thread until
+it blocks for some reason.
+we have created for you a class that simulates preemptive scheduling
+so that you can see your ``concurrent'' threads really running
+concurrently under solaris.
+to use it, copy
+
+~cs537-1/public/src/threadscheduler.java
+
+to the directory containing the rest of your source files and compile it:
+
+    javac -g threadscheduler.java
+
+in your main method (or wherever you start your threads)
+create an instance of threadscheduler
+
+    threadscheduler scheduler = new threadscheduler();        
+    scheduler.start();                                     
+
+and after starting each new thread, ``register'' it with the scheduler
+
+    thread t = new thread();                                                
+    t.start();                                                              
+    scheduler.registerthread(t);
+
+
+here's how it works:
+threadscheduler extends thread, so it is itself a thread.
+it raises its own priority to a high level, so it is guaranteed to run
+whenever it is not blocked.
+it keeps a circular list of all the threads you register with it
+and blocks all but one of them from running by calling thread.suspend().
+in a cyclical fashion, it awakens an individual thread
+(using thread.resume())
+and sleeps itself for a short period (thereby giving the resumed thread a chance
+to run).  when the threadscheduler wakes, it regains control
+due to its high priority, suspends the previous thread, and resumes
+a new one.  it continues to cycle through all registered threads, giving each
+a slice of time in which to execute.
+
+
+copyright &#169; 1996 by marvin solomon.  all rights reserved.
+
+
+1
+k. m. chandy and j. misra, ``the drinking philosophers 
+problem,'' acm trans. on programming languages and systems, vol. 6, 
+no. 4, october 1984, pp. 632-646. 
+
+2
+k. m. chandy and j. misra, op. cit. page 637.
+
+
+
+
+cs 537 - programming assignment ii
+cs 537 - programming assignment ii
+cs 537 - programming assignment ii
+cs 537 - programming assignment ii
+cs 537 - programming assignment ii
+cs 537 - programming assignment ii
+cs 537 - programming assignment ii
+cs 537 - programming assignment ii
+cs 537 - programming assignment ii
+cs 537 - programming assignment ii

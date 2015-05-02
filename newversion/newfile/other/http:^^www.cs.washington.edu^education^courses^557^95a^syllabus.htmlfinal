@@ -1,0 +1,165 @@
+cse 557 syllabus
+
+
+cse 557: computer graphics
+autumn quarter 1995
+
+
+syllabus
+
+
+course personnel:
+
+ professor: tony derose.
+ ta: jim fix.
+ office hours, etc.
+
+
+administrivia:
+
+ time: mwf 12:30-1:20
+ place: sieg 231
+
+
+
+
+
+prerequisites:
+
+ a good working knowledge of c (preferrably c++) programming
+ linear algebra + some mathematical sophistication
+ no prior knowledge of graphics is assumed.
+
+
+
+
+
+ required text: 
+
+james foley, anries van dam, steven feiner, and john hugues,
+computer graphics: principles and practice,
+addison-wesley, 1990. 
+
+
+ optional texts: 
+
+ opengl reference manual. addison-wesley, 1992.
+ jackie neider, tom davis, and mason woo. opengl programming
+guide. addison-wesley, 1993. 
+ josie wernecke, the inventor mentor. addison-wesley, 1994.
+
+
+supplemental texts:
+ 
+ michael f. cohen and john r. wallace. radiosity and realistic
+image synthesis. academic press, cambridge, ma, 1993.
+ gerald farin. curves and surfaces for cagd: a practical guide.
+academic press, san diego, 1988.
+
+
+see me (derose) if you'd like to borrow these one or more of these
+texts for a short time.
+
+
+
+grading: 
+
+ project (same grade for all team members): 35%
+ project knowledge (individual): 15%
+ midterm: 15%  
+ final: 35%
+
+
+the tentative date for the midterm is november 8, 1995.
+
+
+
+lectures:
+
+the lectures will be partitioned into three more-or-less independent
+topic areas: rendering, geometric modeling, and animation.  these
+topics make use of various mathematical and numerical methods
+(including affine geometry, wavelets, finite element methods,
+numerical optimization), so i will occasionally provide tutorials on
+appropriate material.
+
+projects:
+
+the graphics courses are being taught using our new 
+graphics instructional lab
+consisting of 14 silicon graphics indy r4400s.  the lab is located in
+sieg 228.
+
+
+
+there will be three projects, one per topic area, plus a short
+exercise to get you up to speed on using the indys.  you'll work on
+each project in a team with one or two other students in the class.
+the first two projects will require you and your teammate(s) to make
+substantial extensions to an existing interactive graphical
+application. the last project will require you to create a short
+animation (30-60 seconds long).
+
+
+the projects we have in mind are:
+
+
+
+ project 0: sierpinski (not due):
+ a simple program to create a fractal called the sierpinski triangle.
+
+ project 1: trace (due 11/3):
+ a program to create relatively realistic images, complete with
+shadows, reflections, and transparent effects.
+
+ project 2: sweeper (due around 11/20):
+ a program to create complex surfaces by extruding (sweeping) a
+curve along a path in three dimensions.
+
+ project 3: animation (due around 12/8):
+ create a short animation of your own design (subject to my
+     approval).
+
+
+
+projects will be graded during in-person sessions with either me or
+jim. during the grading session, we will run the project to make
+sure that it meets or exceeds the goals of the project. we'll then
+quiz individual members of the team to determine how well they
+understand the structure of the code, the design trade-offs, and the
+implemented algorithms.
+
+
+one grade will be assigned for all members of the team for the
+project's implementation.  separate grades will be recorded for each
+team member's "knowledge of the project." 
+see the project grading document for
+further details.
+
+project turn-in & late policy:
+
+assignments are due at the beginning of lecture on the due date.
+this means that the modification stamp on the project executable
+must be earlier than the start of lecture on the due date. late
+assignments are marked down at a rate of 33% per day (not per
+lecture), meaning that if you fail to turn in an assignment on time
+it is worth 66% for the first 24 hours after the deadline, 33%
+for the next 24 hours, and it is worth nothing after that.  in
+addition, no extra credit for bells and whistles will be awarded
+for any late assignment.
+
+exceptions will be given only in extreme circumstances and only
+in advance.
+
+
+
+cse 557 syllabus
+cse 557 syllabus
+cse 557 syllabus
+cse 557 syllabus
+cse 557 syllabus
+cse 557 syllabus
+cse 557 syllabus
+cse 557 syllabus
+cse 557 syllabus
+cse 557 syllabus

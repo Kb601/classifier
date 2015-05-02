@@ -1,0 +1,145 @@
+interprocessor collective communications library (icc)
+ 
+
+
+interprocessor collective communications library (icc)
+
+d. payne, intel ssd l. shuler, sandia national laboratories 
+
+r. van de geijn ,
+university of texas at austin 
+
+j. watts ,
+california institute of technology
+
+
+current version:  release r2.1.0, march 1, 1995
+
+ please sign our  guestbook  
+
+what's new
+
+  mpi-like group interface
+  version of icc for osf r1.3 
+  version of icc for sunmos r1.6
+  new reference manual, that includes group interface
+  new summary, (not yet finished)
+ fortran example for using groups
+ 
+new paper comparing icc to nx, mpi and blacs 
+  tutorial
+on collective communication (powerpoint presentation) 
+  the first and only (so far) valid bug 
+report since spring 1994 
+ patch r2.1.0:  fixes above bug.
+
+
+
+introduction
+
+
+this page describes the second release of the interprocessor collective
+communications (intercom) library, icc release r2.1.0.  this library
+is the result of an ongoing collaboration between david payne (intel
+ssd), lance shuler (sandia national laboratories), robert van de
+geijn (university of texas at austin), and jerrell watts (california
+institute of technology), funded by the intel research council, and 
+intel ssd.  previous contributors to this effort include
+mike barnett (univ. of idaho), satya gupta (intel ssd),
+rik littlefield (pnl), and prasenjit mitra (now with oracle).
+
+the library implements a comprehensive approach to collective
+communication.  the results are best summarized by the following
+performance tables 
+
+ comparison of the various libraries 
+
+the following tables give the ratios of times required
+for completion on 
+a 16x32 mesh paragon using osf r1.3 
+
+
+
+               broadcast   
+     bytes   nx/icc   blacs/icc   mpi/icc     
+   -----------------------------------------  
+        16    1.4         1.0        1.6       
+      1024    1.5         1.0        2.5       
+     65536    5.5         2.9        2.8       
+   1048576   11.3         6.1        7.5        
+
+
+
+
+
+               sum-to-all   
+     bytes    nx/icc  blacs/icc    mpi/icc     
+   -----------------------------------------   
+        16     1.0        1.2        2.1       
+      1024     1.0        1.0        2.0       
+     65536    21.1        4.1        6.9       
+   1048576    34.6        5.9       11.8       
+
+
+
+attaining the improvement in performance is as easy as
+linking in a library that automatically translates nx collective
+communication calls to icc calls.  furthermore, the icc library gives
+additional functionality like scatter and gather operations, and more
+general "gopf" combine operations.  
+
+as had been planned, an mpi-like group interface to icc is now 
+available.  the interface lets the user create and free groups 
+and communicators, and it gives user-defined groups complete 
+access to the high performance routines in the icc library. 
+
+we would like to note that this library is not intended to compete 
+with mpi.  it was started as a research project into techniques 
+required to develop high performance implementations of the mpi
+collective communication calls.  we are making this library available
+as a service to the user community, with the hope that these techniques
+eventually are incorporated into efficient mpi implementations. 
+
+  using the library.  
+
+ manuals 
+
+
+
+ reference manual 
+
+ summary 
+
+
+ how to get icc 
+
+icc binaries and manuals are available from 
+ netlib  (directory intercom)
+and via anonymous 
+
+ftp (net.cs.utexas.edu, directory pub/rvdg/intercom/r2.1.0). 
+
+related publications
+
+ 
+related tutorials  
+
+ bug reports  
+
+
+
+
+
+
+
+
+interprocessor collective communications library (icc)
+interprocessor collective communications library (icc)
+interprocessor collective communications library (icc)
+interprocessor collective communications library (icc)
+interprocessor collective communications library (icc)
+interprocessor collective communications library (icc)
+interprocessor collective communications library (icc)
+interprocessor collective communications library (icc)
+interprocessor collective communications library (icc)
+interprocessor collective communications library (icc)

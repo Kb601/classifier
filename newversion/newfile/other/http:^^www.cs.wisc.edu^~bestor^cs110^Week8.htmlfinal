@@ -1,0 +1,280 @@
+cs 110 section 2 lecture notes - week 8
+
+
+
+
+ lecture notes - week 8
+
+
+
+
+   topic:
+   multi-dimensional arrays. multi-dimensional array arguments. parallel arrays.
+
+   text:
+   8.1 - 8.3
+
+   notes:
+   
+
+   
+
+   
+   two-dimensional arrays
+   
+
+   one-dimensional arrays
+   
+      1-d arrays have one subscript.  the subscript specifies which value in the array you want.
+      
+	integer scores(10)
+	...
+	print *, scores(3)
+      
+      view the array as a single row of boxes.
+      
+	                scores()
+	  1   2   3   4   5   6   7   8   9  10
+	+---+---+---+---+---+---+---+---+---+---+
+	|-15|83 |92 |132|73 | 9 |27 |-54|82 |294|
+	+---+---+---+---+---+---+---+---+---+---+
+      
+      only one subscript is needed to uniquely specify any particular position in the array.
+   
+
+   two-dimensional arrays
+   
+      2-d arrays have two subscripts.
+      
+	arrayname(sizex,sizey)
+
+	character tictac(3,3)
+      
+      the size of the array (i.e. number of values it can store) equals sizex*sizey
+      
+	tictac(1,1), tictac(1,2), tictac(1,3), tictac(2,1), tictac(2,2), tictac(2,3), tictac(3,1), tictac(3,2), tictac(3,3),
+      
+	3*3 = 9 different values!
+      to access a particular value specify both its subscripts; i.e. the column (x coordinate) and row (y coordinate).
+      
+	arrayname(column, row)
+
+	print *, tictac(3,2)
+	read *, tictac(x,y)
+      
+      important: the order of the subscripts is very important.
+      
+	tictac(3,2) .ne. tictac(2,3)
+      
+      view a 2-d array as a grid.
+      
+	       tictac(x,y)
+	
+	      +---+---+---+
+	    3 | o | x | x |
+	      +---+---+---+
+	y = 2 | o | x | o |
+	      +---+---+---+
+	    1 | x | o | o |
+	      +---+---+---+
+	    x = 1   2   3
+      
+      two subscripts are needed to uniquely specify a position in the grid; i.e. the column and row.
+      as with 1-d arrays, subscripts can be literals, variables or expressions, or any combination thereof.
+      
+	tictac(col, 2)
+	tictac(1,nint(-cos(180)*2))
+      
+      2-d arrays do not have to be square.  the number of rows and columns can differ.
+      
+	integer grades(10,4)
+	...
+	print *, 'grades for student',stu
+	do gra = 1,4
+	   print *, grades(stu,gra)
+	end do
+      
+   
+
+   
+
+   
+   2-d arrays and do loops
+   
+
+   
+      1-d arrays are processed with a single do loops whose counter is used as the array subscript.
+      
+	do count = 1, maxsiz
+	   print *, scores(count)
+	end do
+      
+      2-d arrays are processed with two do loops.  both counters are used as array subscripts.  important: do loops must be nested.
+      
+	do y = 3, 1, -1
+	   do x  1, 3
+	      print *, tictac(x,y)
+	   end do
+	end do
+      
+      use an implied do loop for the inner loop so that all the values for each row appear on the same line.
+      
+	c     print rows (y-axis)
+	      do 100 y = 3, 1, -1
+	c        print columns of each row (x-axis)
+	         print *, (tictac(x,y), x = 1, 3)
+	      end do
+      
+      important: outer loop for rows y, inner loop for columns x.
+   
+
+   
+
+   
+   2-d array arguments
+   
+   
+      to pass 1-d arrays as arguments to a user-defined function/subroutine, pass the array name and the array size.
+      
+	print *, getmax(scores, maxsiz)
+	...
+	integer function getmax (list, size)
+      
+      to pass 2-d arrays as arguments, pass the array name and both the array sizes sizex and sizey.
+      
+	      show(tictac, 3, 3)
+	      ...
+
+	      subroutine show(board, sizex, sizey)
+	c     prints the board on the screen
+
+	c     declare arguments
+	      integer sizex, sizey
+	      character board(sizex, sizey)
+
+	c     print rows (y-axis)
+	      do y = sizey, 1, -1
+	         print columns of each row (x-axis)
+	         print *, (board(x,y), x = 1, sizex)
+	      end do
+
+	      return
+	      end
+      
+   
+
+   
+   
+   data statement
+   
+   
+      the data statement provides a convenient way to initialize an array.
+      
+	data arrayname / value1, value2, ... /
+
+	integer maxsiz
+	parameter (maxsiz=8)
+
+	integer scores(maxsiz)
+	data scores /83,94,75,39,97,86,91,73/
+      
+      data statement should appear immediately after the array declaration.
+      can initialize an array to all the same values, e.g. zero.
+      
+	data arrayname / arraysize * value/
+
+	data scores /maxsiz * 0/
+      
+   
+
+   column-major order
+   
+      internally, 2-d arrays are stored as a list of values (e.g. like a long 1-d array) in column-major order where each "column" is stored next to each other.  in this case, the "column" is considered to be the first subscript; i.e. tictac(column, row) 
+      
+	character tictac(3,3)
+
+	tictac(1,1), tictac(2,1), tictac(3,1), tictac(1,2), ...
+      
+      if print, read or writethe whole array, or initialize it with a data statement, then array values will be listed in column-major order.
+      
+	      tictac(x,y)
+
+	     +---+---+---+
+	   3 | o | x | x |
+	     +---+---+---+
+	y= 2 | o | x | o |
+	     +---+---+---+
+	   1 | x | o | o |
+	     +---+---+---+
+	   x = 1   2   3
+
+      
+   for example,
+      
+	print *, tictac
+      
+   prints
+      
+	x o o o x o o x x
+      
+   
+
+   
+
+   
+   parallel arrays
+   
+   
+      often have several arrays of the same size storing related values. for example, a student's name, grades, year and gpa.
+      
+	integer numstu
+	parameter (numstu = 50)
+
+	character *20 name(numstu)
+	integer       grades(numstu,4)
+	character *2  year(numstu)
+	real          gpa(numstu)
+      
+      called parallel arrays because all the values for a particular student have the same subscript.
+
+	e.g. for student #7:
+      
+          name = name(7)
+          grades = grades(7,x) [x=1..4]
+          year = year(7)
+          gpa = gpa(7)
+      
+
+
+      
+	c     display every student's data
+	      do s = 1, numstu
+	         print *, 'name:', name(s)
+	         print *, 'grades:',(grades(s,x),x=1,4)
+	         print *, 'year:', year(s)
+	         print *, 'gpa:', gpa(s)
+	      end do
+      
+   
+
+
+
+
+
+
+
+
+copyright &copy 1996 gareth s. bestor (bestor@cs.wisc.edu).  last modified may 8, 1996.
+
+
+			
+cs 110 section 2 lecture notes - week 8
+cs 110 section 2 lecture notes - week 8
+cs 110 section 2 lecture notes - week 8
+cs 110 section 2 lecture notes - week 8
+cs 110 section 2 lecture notes - week 8
+cs 110 section 2 lecture notes - week 8
+cs 110 section 2 lecture notes - week 8
+cs 110 section 2 lecture notes - week 8
+cs 110 section 2 lecture notes - week 8
+cs 110 section 2 lecture notes - week 8

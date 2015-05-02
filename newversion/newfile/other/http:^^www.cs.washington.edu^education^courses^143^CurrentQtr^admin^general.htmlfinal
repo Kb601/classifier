@@ -1,0 +1,254 @@
+cse 143 general information
+
+
+
+
+
+
+
+
+cse 143 general information
+
+
+
+
+course goals
+
+this is a course about abstraction and programming.  specifically, the
+goals of cse 143 are to learn the concepts of modularity and
+encapsulation, focusing on abstract data types, and the basics of data
+structures.  other important topics include thinking and programming
+recursively and analyzing the complexity of simple algorithms. 
+
+after completing the course, students should be able to design and
+write medium-sized programs, to design interfaces to modules and
+abstract data types and provide one or more implementations of those
+interfaces, and to read, write, use, and document software components. 
+
+to make these concepts and abilities concrete, we will study and use
+the c++ programming language.  but 143 is not a class on c++!
+most concepts taught in 143 can be applied in many languages, and
+there are many c++ constructs and features that we will not be
+covering.
+
+staff
+
+
+instructor: 
+craig chambers.
+
+  please use the following address for all email to the instructor: 
+      
+         cse143-instructor@cs.washington.edu.
+  
+
+
+head ta: brad chamberlain,
+cse143-headta@cs.washington.edu
+
+
+ta's:
+  
+
+  
+	andy collins
+	(sections aa and ae),
+    
+	cse143-collins@cs.washington.edu 
+
+  
+	craig kaplan
+	(sections ab and af),
+    
+	cse143-kaplan@cs.washington.edu 
+
+  
+	michael noth
+	(sections ad and ah),
+    
+	cse143-noth@cs.washington.edu 
+
+  
+	jared saia
+	(sections ac and ag),
+    
+	cse143-saia@cs.washington.edu 
+
+  
+
+
+lab consultants:
+
+  
+
+  samuel
+adams, sca@cs.washington.edu
+
+  owen benneter-flatley, flato@cs.washington.edu
+
+  jason griffith, grit@u.washington.edu
+
+  tony tsai, ttsai@cs.washington.edu
+
+  
+
+
+
+
+where and when
+  
+   check the schedule for definitive
+information on lecture and section times and places, office hours,
+etc.
+
+ the tentative course topic outline is
+also available, but subject to change.
+
+  
+
+
+
+text
+  
+  headington and riley,
+        data abstractions and structures using c++, heath, 1994.
+  strongly recommended: lippman,
+	c++ primer (2nd edition), addison wesley, 1993.
+	
+	it really doesn't matter too much which c++ book you have, but
+	you almost certainly will want one, since the text is not a
+	reference manual in any sense of the word.
+  
+
+
+
+evaluation
+  
+  there will be one midterm and a comprehensive
+	final exam. any material covered in the lectures, the
+	sections, the homework assignments, and the assigned readings 
+	is a fair game in the exams. thus it is important to attend
+	the sections as well as the lectures.
+	
+
+  there will be 5 programming
+	assignments. be sure and read the grading and turn-in policies for these.
+
+  there will be about 6-7 quizzes. 
+
+  gradingthe following breakdown will be used for 
+	grading.
+	
+	 midterm, 15%
+	 final, 35%
+	 weekly quizzes, 10% total (about 1.5% for each quiz)
+	 assignments #1-#2, 5% each (10% total)
+	 assignments #3-#5, 10% each (30% total)
+	
+
+  extra credit
+	to earn extra credit, you must first fully complete and submit each
+	assignment as given.  if you are interested in extra credit,
+	we may suggest some extensions or other related programs to
+	write.  extra credit is limited to a maximum of 5% of the total
+	course grade.
+	
+
+  late policyexcept in truly exceptional
+	circumstances, late homework will not
+  	be accepted.  homeworks are due at the beginning
+	of section on the assigned days.
+	
+
+  policy on collaboration vs. cheating
+        you may not copy code from someone else; that is
+considered cheating.  if caught cheating in this or any other way,
+full disciplinary measures may be invoked, including a failing grade
+in the class and initiation of a cheating case in the university
+system. 
+        to avoid creating situations where copying can arise, you
+cannot email or post or otherwise make your code available
+electronically to anyone.  you can post general questions about
+programming problems and even pseudo-code snippets, but no actual c++
+code. 
+    	now for the good news.  it is educationally valuable to work
+with others on general ideas for how to go about solving some problem,
+helping others in general terms when they are getting stuck.  i will
+allow people to look at others' code on screens to give them help in
+debugging (because in this case only one or two people are seeing the
+code, and they are not getting an electronic copy).  if in doubt about
+collaboration vs. cheating, just don't.  or send the instructor email
+(cse143-instructor@cs.washington.edu)
+asking for clarification. 
+  
+
+computing
+
+this quarter we will be using the mscc's mac lab, located in
+the basement of thomson hall.  this lab will be staffed with
+consultants who will be able to provide you with reasonable levels of
+help.  the mac lab in sieg 324 can also be used, but at low priority;
+only when it is not being used by higher-priority classes can you use
+it.
+
+this course offers two levels of computing support: "full" and
+"partial."  we will accept turnins (floppy disks) with projects
+developed for either fully or partially supported platforms.
+additionally, full support means that we will build sample executables
+for that platform, as well as an easy-to-unpack distribution of the
+code necessary for getting started.
+
+ 
+
+partial support means that we will not provide sample executables or
+bundled code distributions.  we will make necessary sample/skeleton
+source code available via the web. this code should be reasonably
+portable, so you should be able to build projects on other platforms
+without too much trouble.  remember, if you choose to use a partially
+supported platform, it is your responsibility to configure your system
+and understand how to build projects there.  we will not be able to
+debug system configuration problems for you.
+
+
+
+here is a summary of the platforms we support.  we will assign a 
+ta or consultant to each platform to give help with reasonable problems.
+
+
+full: 
+macintosh with symantec c++
+partial: pc under windows 3.11 with borland c++ v4.5
+partial: pc under windows 3.11 with msvc++ v1.51
+partial: unix with g++ (for those already familiar with unix) 
+
+
+using a machine of your own has many advantages, and a few
+disadvantages.  many students have done so in the past; we encourage
+you to try it.  
+
+
+
+(note that we do not support win '95 or nt compilers.  we expect that
+source files developed under those systems for this class will compile
+and execute on our test machine, but ensuring that they do is
+your responsibility.)
+
+
+
+
+
+cse143-webmaster@cs.washington.edu
+
+
+
+
+cse 143 general information
+cse 143 general information
+cse 143 general information
+cse 143 general information
+cse 143 general information
+cse 143 general information
+cse 143 general information
+cse 143 general information
+cse 143 general information
+cse 143 general information

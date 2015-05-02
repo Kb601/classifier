@@ -1,0 +1,204 @@
+untitled
+
+
+
+curriculum vitae
+
+
+brendan marshall mumey
+
+
+
+i am currently a ph.d. candidate
+in the department of computer science at the university of washington.
+  i entered in the fall of 1992 and expect to graduate by the
+fall of 1996. i am 28 years old.  i have dual us and canadian
+citizenship.
+
+
+contact information
+
+
+department of computer science
+
+university of washington
+
+seattle, wa, 98195-2350 
+
+
+voice: (206) 685-4087 (day) or (206)
+322-2099 (evening)
+
+fax:  (206) 543-2969
+
+e-mail: brendan@cs.washington.edu
+
+www: http://www.cs.washington.edu/homes/brendan/
+
+
+
+research
+
+
+my general interests run to applying
+theoretical techniques to solve problems which have practical
+motivation. my current work is in computational biology.  specifically,
+i have worked on the problem of comparing dna clones based on
+their &quot;multiple complete digest&quot; fingerprint. this fingerprint
+is gathered by digesting each clone with several different restriction
+enzymes and measuring (using gel electrophoresis) the lengths
+into which each clone is divided. using a stochastic model of
+this process, i developed an estimator of the a posteriori probability
+that two clones overlap given their measured fingerprints. an
+overlap test based on this approach is provably powerful in the
+sense of achieving nearly the lowest rate of false negatives for
+a given rate of false positives. using this overlap test, i have
+implemented a clone ordering algorithm which is crucial to finishing
+the map.
+
+
+more recently, i have been working
+on a clustering problem which arises in the context of classifying
+prostate cancer cells. the raw data consists of quantized hybridization
+levels for several hundred cell lines against perhaps 25,000 cdna
+oligos. the problem is to discover the important features which
+determine the general type and lethality of a particular cell
+line.  this is joint with work with dick karp and leroy hood's
+lab in the molecular biotechnology department at the university
+of washington.
+
+
+i have also done some work in computational
+astrophysics; my contribution being a new parallel algorithm and
+implementation for detecting clusters in points sets. with maria
+klawe i developed new upper and lower bounds for computing the
+optimal alphabetic tree data structure.
+
+
+
+
+education
+
+
+ph.d. (expected fall 1996), computer
+science, university of washington. advisor: dr. larry ruzzo.
+
+
+m.sc., computer science, university
+of british columbia, august, 1992. advisor: dr. maria klawe. thesis
+title: some new results on constructing optimal alphabetic binary
+trees.
+
+
+b.sc. (honors first class), mathematics,
+university of alberta, may, 1990.
+
+
+academic experience
+
+
+university of washington. pre-doctoral
+fellowship in genomic sciences. awarded september, 1995.
+
+
+university of washington. teaching
+assistant for cse321, an introductory discrete mathematics course.
+september-december, 1994. received very good to excellent evaluations.
+
+
+
+university of washington. research
+assistant. september, 1992 until present.
+
+
+ucsd supercomputer center. participant
+in the 1993 metacenter computational science institute in parallel
+computing. august, 1993.
+
+
+university of british columbia. nserc
+postgraduate fellow. september, 1990 to august, 1992.
+
+
+other achievements
+
+
+several undergraduate prizes in mathematics.
+placed in the top 3% in 1990 putnam undergraduate mathematics
+competition. accepted to the doctoral program in computer science
+at mit.
+
+
+publications
+
+
+b. mumey, a powerful clone overlap
+test. submitted to the ismb'96 conference.
+
+
+m. klawe and b. mumey, upper and
+lower bounds on constructing
+
+optimal alphabetic trees. proceedings
+of the 1993 acm/siam symposium on
+
+discrete algorithms. january, 1993.
+the siam journal on discrete math. november, 1995.
+
+
+b. mumey, fast cluster detection
+in point sets. presented at the 1994 dimacs challenge.
+
+
+my papers are available on-line at:
+http://www.cs.washington.edu/homes/brendan/
+
+
+references
+
+
+dr. larry ruzzo 
+
+ department of computer science
+
+ university of washington
+
+ (206) 543-6298  
+
+ ruzzo@cs.washington.edu
+
+
+dr. richard karp 
+
+ department of computer science
+
+ university of washington
+
+ (206) 543-1695
+
+ karp@cs.washington.edu
+
+
+dr. maria klawe 
+
+ department of computer science
+
+ university of british columbia
+
+ (604) 822-3064
+
+ klawe@cs.ubc.ca
+
+
+
+
+untitled
+untitled
+untitled
+untitled
+untitled
+untitled
+untitled
+untitled
+untitled
+untitled

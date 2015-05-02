@@ -1,0 +1,95 @@
+the minibase home page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+the minibase home page
+
+
+minibase is a database management system intended for educational use, 
+and is distributed subject to conditions set forth in the
+terms of distribution.
+it has a parser, optimizer,
+buffer pool manager, storage mechanisms (heap files, secondary
+indexes based on b+ trees and linear
+hashing), and a disk space management system.
+the goal is not just to have a functional dbms,
+but to have a dbms where the individual components can be studied
+and implemented by students.
+
+a gui front-end (with support for a subset of qbe),
+visualization tools for the buffer manager, b+ trees, query optimizer
+and database design (specifically, creating er diagrams and doing normalization)
+are available.
+
+the multi-user version of minibase extends the single-user version 
+with logging, locking and recovery components.
+
+minibase has been developed in conjunction with the text
+database management systems
+by 
+ raghu ramakrishnan. 
+the html documentation for minibase provides an overview of the
+system architecture and component interfaces.  the text provides the 
+necessary background information on file and record organizations,
+buffer management, access methods, relational query languages and
+operator implementation techniques, 
+query optimization, database design, concurrency control and recovery.
+
+
+
+history of minibase
+terms of distribution
+roadmap of distribution
+overview of single-user minibase
+project components
+ 
+
+minibase is still under development!   
+if you have any questions, bug reports or comments, please 
+send me mail.
+
+
+
+
+july 12, 1996
+
+
+
+
+ raghu ramakrishnan 
+ [raghu@cs.wisc.edu]
+
+
+
+
+
+
+
+
+
+
+
+
+the minibase home page
+the minibase home page
+the minibase home page
+the minibase home page
+the minibase home page
+the minibase home page
+the minibase home page
+the minibase home page
+the minibase home page
+the minibase home page

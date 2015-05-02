@@ -1,0 +1,69 @@
+multi-way versus one-way constraints in user interfaces: 
+experience with the deltablue algorithm
+
+
+
+
+multi-way versus one-way constraints in user interfaces: experience
+with the deltablue algorithm
+
+
+
+authors: michael sannella, john maloney, bjorn freeman-benson, and alan
+borning
+
+
+
+software--practice and experience, vol. 23 no. 5, (may 1993),
+pages 529-566.  preprint published as uw tech report 92-07-05.
+
+
+
+
+abstract
+
+
+the efficient satisfaction of constraints is essential to the performance
+of constraint-based user interfaces.  in the past, most constraint-based
+user interfaces have used one-way rather than multi-way constraints
+because of a widespread belief that one-way constraints were more
+efficient.  in this paper we argue that many user interface construction
+problems are handled more naturally and elegantly by multi-way constraints
+than by one-way constraints.  we present pseudocode for an incremental
+multi-way constraint satisfaction algorithm, deltablue, and describe
+experience in using the algorithm in two user interface toolkits.  finally,
+we provide performance figures demonstrating that multi-way constraint
+solvers can be entirely competitive in performance with one-way constraint
+solvers.
+
+
+
+
+
+click 
+here to get the postscript file.
+
+
+
+return to constraints home page
+
+multi-way versus one-way constraints in user interfaces: 
+experience with the deltablue algorithm
+multi-way versus one-way constraints in user interfaces: 
+experience with the deltablue algorithm
+multi-way versus one-way constraints in user interfaces: 
+experience with the deltablue algorithm
+multi-way versus one-way constraints in user interfaces: 
+experience with the deltablue algorithm
+multi-way versus one-way constraints in user interfaces: 
+experience with the deltablue algorithm
+multi-way versus one-way constraints in user interfaces: 
+experience with the deltablue algorithm
+multi-way versus one-way constraints in user interfaces: 
+experience with the deltablue algorithm
+multi-way versus one-way constraints in user interfaces: 
+experience with the deltablue algorithm
+multi-way versus one-way constraints in user interfaces: 
+experience with the deltablue algorithm
+multi-way versus one-way constraints in user interfaces: 
+experience with the deltablue algorithm

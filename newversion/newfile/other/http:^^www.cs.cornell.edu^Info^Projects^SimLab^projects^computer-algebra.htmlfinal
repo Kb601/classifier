@@ -1,0 +1,77 @@
+computer algebra  
+computer algebra - richard zippel
+
+
+ research summary
+
+currently, my activities in computer algebra fall into three different
+areas.  we are continuing to develop a very flexible computer algebra
+substrate called weyl, which extends common lisp to have symbolic
+computing facilities.  this substrate has a functorial architecture
+that has been implemented using object oriented programming
+techniques.  the functorial organization allows one to define
+algebraic structures over arbitrary algebraic domains.  this approach
+permits algebraic structures like groups, rings and fields to be first
+class objects that can be manipulated by the user.
+
+we have been attempting to link together weyl with bob's constable's
+theorem proving system, nuprl.  this will allow us state and use
+theorem about algebraic structures when deciding which algorithms
+should be used weyl.
+
+in additon, i have been continuing my work on algorithms in computer
+algebra.  among the problems i have been studying include: algebraic
+function decomposition (with dexter kozen and susan landau) and
+primality testing of polynomials.
+
+
+
+ publications 
+
+  effective polynomial computation, kluwer academic publishers, 
+1993. 
+
+ "a new modular interpolation algorithm for factoring multivariate 
+polynomials", (with ronitt rubinfeld), 1993.
+cornell computer science technical report.
+
+ "rational function decomposition",
+ proceedings of the international symposium on symbolic
+and algebraic computation, bonn, germany, july 1991.
+(tech report)
+
+ "weyl computer algebra substrate", 
+design and implementation of symbolic computation systems '93,
+springer-verlag lecture notes in computer science 722, pp. 303-318.
+(tech report)
+
+ "interpolating polynomials from their values,"
+ journal of symbolic computation, vol. 9, 1990, 375-403.
+(tech report)
+
+ "an explicit separation of relativised random polynomial time and
+relativized deterministic polynomial time," 
+ information processing letters, vol. 33, 4, 1989, pp. 207-212.
+(tech report)
+
+ "polynomial decomposition algorithms," (with david barton),
+ journal of symbolic computation, vol. 1, 2, 1985, 159-168.
+
+ "simplification of expressions involving radicals,"
+ journal of symbolic computation, vol. 1, 2, 1985, 189-210.
+
+ "an extension of liouville's theorem," (with joel moses), 
+proceedings of eurosam 79, springer-verlag, lecture notes in computer
+science 72, 1979.
+
+
+computer algebra 
+computer algebra 
+computer algebra 
+computer algebra 
+computer algebra 
+computer algebra 
+computer algebra 
+computer algebra 
+computer algebra 
+computer algebra

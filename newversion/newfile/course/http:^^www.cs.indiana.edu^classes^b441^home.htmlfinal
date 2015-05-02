@@ -1,0 +1,131 @@
+b441/b541 digital hardware design, fall 1996
+b441/b541 digital hardware design, fall 1996
+
+instructor
+
+franklin prosser
+
+ t noon-12:45, w 10:30-11:30, and by arrangement and by
+drop-in. all in lh330e.
+
+
+associate instructors
+
+david wilson
+
+ t noon-1, w 10-11
+
+
+
+rutvik desai
+
+ tr 4.00-5.00 
+
+
+
+
+
+texts for fall 1996 
+
+** franklin prosser and david winkel, the art of
+digital design, printed by iu bookstore. 
+
+** additional documents for the laboratory will be distributed in class and
+lab, or are available online. 
+
+
+newsgroup
+
+the newsgroup for b441/b541 is ac.csci.b441 on the computer science
+departmental network. check this newsgroup regularly. it will be used for a
+variety of announcements, and may be used by everyone to make and respond to
+course-related inquiries and post interesting tidbits.
+
+
+   lecture schedule.
+
+
+lect.	topics and prosser/winkel sections
+
+
+1 1/2	boolean algebra, karnaugh maps (ch. 1)
+
+2 1/2	mixed logic (ch. 2)
+
+1	open-collector circuits (ch. 2)
+
+1 1/2	combinational building blocks: multiplexer, decoder, adder, etc. (ch. 3)
+
+1 1/2	speed-up of addition; busses (ch. 3)
+
+1 1/2	hazards, rs flip-flop (ch. 4)
+
+2	clocked storage elements: jk flip-flop, counters, shifters, etc. (ch. 4)
+
+1	building counters
+
+1	data sheets (ch. 12)
+
+2	asms and state generators (ch. 5)
+
+1	clock skew, races, and other headaches (ch. 5)
+
+2 1/2	design examples: single pulser, traffic controller, etc. (ch. 6)
+
+3 1/2	design examples: serial bit clock, serial-parallel conversion (ch. 6)
+
+2 1/2	additional topics, course administration, or extra review
+
+
+
+
+grading:
+
+3 in-class examinations @ 20%
+laboratory @ 35%
+class homework @ 5%
+
+
+note: assignments not ready by lecture time may be slipped into the
+departmental drop box by 5:00 pm on the date due. to be sure of proper
+delivery, place (ai's) name on the assignment. 
+
+
+laboratory
+
+click here
+to see the laboratory schedule and other useful lab information. 
+
+====================================================================== 
+
+
+prosser/27aug96
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b441/b541 digital hardware design, fall 1996
+b441/b541 digital hardware design, fall 1996
+b441/b541 digital hardware design, fall 1996
+b441/b541 digital hardware design, fall 1996
+b441/b541 digital hardware design, fall 1996
+b441/b541 digital hardware design, fall 1996
+b441/b541 digital hardware design, fall 1996
+b441/b541 digital hardware design, fall 1996
+b441/b541 digital hardware design, fall 1996
+b441/b541 digital hardware design, fall 1996

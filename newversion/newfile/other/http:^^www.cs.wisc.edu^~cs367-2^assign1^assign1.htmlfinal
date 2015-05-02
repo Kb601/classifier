@@ -1,0 +1,92 @@
+assignment 1: handout
+
+
+
+
+
+cs 367 assignment 1: introduction to c++
+(due date/time: thursday, october 3, 1996, 5:00pm)
+introduction
+the purpose of this first programming assignment is to provide experience with unix, using a editor (vi or emacs), doing simple c++ programming, and using
+the gnu c++ compiler (g++) and its debugger (gdb). we have provided a partially written (but fully specified!) c++ program. your job is to complete and
+thoroughly test the program. more specifically, the program implements an abstract data type (adt) for handling a bounded integer sequence
+(intsequence). 
+
+your job
+the intsequence adt will represent a sequence of integers by stroring the numbers in an array of integers. the internal representation consists of the current
+length of the sequence plus a statically-sized array of integers that hold the sequence's current contents. the intsequence type supports five operations, each
+of which takes the integer sequence as its first argument: 
+
+	void clear(intsequence&amp; seq);
+
+	void append(intsequence&amp; seq, int value);
+
+	int length(intsequence&amp; seq);
+
+	void printn(intsequence&amp; seq, int number);
+
+	void sort(intsequence&amp; seq);
+
+
+the clear operation initializes (or reinitializes) a sequence to be empty (contain zero elements). the append operation puts a new value at the end of a
+sequence. the length operation returns the number of elements currently in a sequence. the printn operation prints the first n values in a sequence,
+where n, the number of values, is an argument to the operation. . the sort operation sorts the integers in a sequence into ascending order.
+to make your job as simple and clear as possible, we have provided three files: intseq.h, intseq.c, and prog1.c. the file intseq.h contains a complete c++
+specification of the adt-- you should not edit this file. the file prog1.c contains a complete main routine that serves as a test driver for your adt
+implementation--you should not edit it either. your job is to make a copy of the file intseq.c, which contains stubbed-out functions for the adt operations,
+and add the actual implementation code. you can then debug and test your code using gdb and the driver routine in prog1.c. we have provided a small set
+of test data files, but you should add more test cases to find the important cases that our files fail to exercise.
+
+how to sort
+to write the sorting function, you should use a very simple sorting scheme known as insertion sort. this algorithm sorts an array of data by stepping through
+the array, an element at a time, and keeping everything to the left of the current element sorted. to understand how this approach works, think of the array as
+being laid out from left (element 0) to right (element n-1, assuming that the array contains n elements), so the algorithm steps through the array from left to
+right. at each step, the current element is copied out of the array and inserted into its appropriate place in the sorted subarray to the left of the position that it
+was copied from. inserting the element requires that all elements with greater values than the element be slide one position right to make space. 
+an efficiency hint: the tasks of finding the appropriate insertion point for the current element and sliding greater elements to the right can be combined. this
+can be done by scanning left from the position from which the current element was copied, sliding each element one space to the right if its value exceeds that
+of the current element. the insertion point will be known (and a spot will be open) when you either find a lesser value or bump into the left end of the array.
+
+what to turn in
+you must turn in:
+
+a copy of all source files, including intseq.c and the other files needed
+to compile your program.
+a file named readme that explains exactly what we should do to compile
+your files into an executable program that we can run.
+a listing of your test cases.
+
+everything must be turned in electronically (paper copies are
+not acceptable).
+we have created a directory for each student to turn in his or her assignment.
+the following command copies a file into a student's handin directory:
+cp filename ~cs367-2/public/handin/prog1/username
+you should replace filename with the name of the file you want to
+submit and replace username by your login name.
+
+remember: no late assignments will be accepted!!! thus, it is important that you start working soon and finish on time. however, partially finished
+programs are far better than no programs at all, so be sure to turn in whatever you've done -- even if you don't finish the assignment. (however, finishing
+should not be a problem for anyone in this first programming assignment. if you can't finish this assignment, which is a simple &quot;warm-up&quot; exercise, you should
+seriously re-think your decision to take this course. the remaining assignments will all be considerably more challenging.)
+
+finding/using our files
+files for cs 367 live in the directory /u/c/s/cs367-2/public/html. the three c++ files that we provide and the test data files, are in a subdirectory of this
+directory called assign1. you should make yourself a copy of the file that you will be modifying, intseq.c, in an assignment-1 subdirectory of your home
+directory. to make a subdirectory for this purpose, go to the private subdirectory of your home directory (cd ~/private), create a subdirectory there
+(mkdir assign1), and cd to it (cd assign1). you can then copy the code file (cp ~cs367-2/public/html/assign1/intseq.c). for the other two files, you should
+create links to our files (e.g., ln -s ~cs367-2/public/html/assign1/intseq.h .) so that you will always be using the same definitions and initial test data files as
+everyone else.
+
+
+
+
+assignment 1: handout
+assignment 1: handout
+assignment 1: handout
+assignment 1: handout
+assignment 1: handout
+assignment 1: handout
+assignment 1: handout
+assignment 1: handout
+assignment 1: handout
+assignment 1: handout

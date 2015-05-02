@@ -1,0 +1,424 @@
+program 3 
+
+
+  program 3  
+
+
+ cs302 section 12
+ ta: michael birk
+ assigned: tue 10/1/96
+ due: tue 10/8/96
+
+
+
+
+for program 3, you will write a simple version of the game hangman. 
+in this game, you try to guess a "secret" word or phrase one letter at a
+time.  if you guess all the letters to the word before making a certain
+number of mistakes, you win.
+
+ what to do 
+
+for this assignment, you will need to combine the c++ code that you write
+with some c++ code provided by your instructor.  this provided code consists
+of two parts:
+
+
+
+
+   the string class, which allows you to easily create and
+       manipulate string objects.
+   two functions, described below.
+
+
+
+
+in order to use these provided files, you will link them with your
+source code.  this means that several c++ source code files are combined
+into a single executable.  even in programs 1 and 2, your source code was
+linked with the standard library, enabling you to, for example, print to the
+screen.
+
+
+
+the exact steps involved in setting up this linking process depend on the
+compiler and environment you are using:
+
+
+
+
+   the vectra lab
+   borland c++ outside of the vectra lab
+   using gnu g++
+   any other environment
+
+
+
+ the vectra lab 
+
+
+if you are doing all of your work in the lab, then use the following steps. 
+remember to ask a consultant if you have trouble with these
+instructions.
+
+
+   run borland c++
+   create a "project file" by choosing "project/new" from the menu.
+       this brings up a window prompting you for the name of the project.
+       erase whatever is there and type prog3 (no "dot" or three-letter
+       extension).  also, make sure that "easywin" (and not "application") is
+       selected from the list below.  then, click on the "advanced" button,
+       which brings up yet another window.  here, remove the checkmark by
+       the ".rc file" and ".def file" lines.  then click "ok" twice (once 
+       for the "advanced" window, and again in the "new target" window).
+   add the files for the string class and the functions to
+       your project.  to do this, first click on the line "prog3 [.exe]"
+       in the "project window."  it should now be highlighted.  then hit
+       the "insert" key and type in the file name:
+       "r:\public\mbirk\string.obj".  (do not enter the quotation marks.)
+       now, click on the "prog3 [.exe]" line
+       again, hit the "insert" key, and type:
+       "r:\public\mbirk\prog3fun.obj".  make sure you type these exactly as
+       shown.  when you are done, the "prog3 [.exe]" line should have three
+       files "hanging" from it: "prog3func [.obj]", "string [.obj]", and
+       "prog3 [.cpp]".
+   double-click on the "prog3 [.cpp]" line to bring up a blank editor
+       window.  in this window, type in the following test program:
+
+
+
+
+
+#include &lt;iostream.h&gt;
+#include "r:\public\mbirk\string.h"
+
+string random_secret_phrase ();
+bool char_in_string (char ch, string string);
+
+int main ()
+{
+   cout &lt;&lt; random_secret_phrase() &lt;&lt; endl;
+   return 0; 
+}
+
+
+
+
+when you run this program, it should print a single, "random" phrase and
+quit.  you can now use this program as a "shell" or "template" for the
+hangman program.
+
+
+
+note: the next time you run borland c++ in order to work on program 3, you will need
+to a "project/open", not a "file/open."  then select "prog3.ide" from the file
+selection window.
+
+  borland c++ outside of the vectra lab 
+
+
+if you are using borland c++ at home or some other site than the vectra lab,
+then read the instructions above.  they are correct,
+except that you cannot access the files on the r: drive.  instead,
+you will have to download the ".cpp" and ".h" files
+(note that the "makefile" and "cvs" directory won't be used) and save them
+in your working directory.  (note that these files are source files
+ending in ".cpp" and ".h" instead of object files ending in ".obj" -
+that's ok.) then, when creating the project, eliminate the prefix
+"r:\public\mbirk" and replace all of the ".obj" suffixes with ".cpp".
+
+
+
+note: if you are using borland c++ 5.0, there is a minor incompatibilty. 
+edit the "defs.h" file, and remove (or "comment out") all lines with the
+word "bool".  this is because 5.0 has the bool type built-in, but
+4.5 does not.
+
+
+ using gnu g++ 
+
+
+the process for using g++ is very different.  first, you need to download the source files.  download all six files
+(ignore the "cvs" directory).  then, test these files by typing "make" in
+the directory which contains them.  it should compile the program to an
+executable "prog3". test it by typing "./prog3" - it will print a single
+"secret phrase" and exit.  now you can use "prog3.cpp" as a basis for the
+assignment; each time you want to compile it, type "make".
+
+
+ any other environment 
+
+
+if you are using any other environment, such as microsoft visual c++ or
+turbo c++, you may need to do some extra work.  this is because i don't have
+access to these environments, so i can't test them out.  you can try the
+following:  download the source files.  consult
+your instructions on how to set up a projectt, and add the three ".cpp"
+files to this project.  you may need to modify the "defs.h" file.  if you
+can't get it to work, ask me.  if you still can't get it to work, you will
+have to do it in the vectra lab.
+
+ using the string class 
+
+the string class allows you to treat strings (sequences of
+characters) like built-in types, even though they're not.  string literal
+constants are in quotes, and you can define string variables, assign one
+string to another, print strings to the screen, etc.  for example:
+
+
+
+
+      string first_name = "john";
+      string last_name  = "doe";
+      cout &lt;&lt; "hello, " &lt;&lt; first_name &lt;&lt; " " &lt;&lt; last_name &lt;&lt; "!\n";
+
+
+
+
+in addition, you can "add" two strings together with the +
+operator.  this is called concatenation:
+
+
+
+
+      string name = first_name + " " + last_name;
+      cout &lt;&lt; name &lt;&lt; endl;       // prints "john doe"
+      name += ", jr.";            // same as name = name + ", jr."
+      cout &lt;&lt; name &lt;&lt; endl;       // prints "john doe, jr."
+
+
+
+
+to find out how long a string is, use the length member function. 
+for example:
+
+
+
+
+       string name;
+       cout &lt;&lt; "what is your name? ";
+       cin &gt;&gt; name;
+       cout &lt;&lt; "your name is " &lt;&lt; name.length() &lt;&lt; " characters long!\n";
+
+
+
+
+you can also access individual characters of the string using the square
+brackets.  inside the brackets, put an integer expression that evaluates to
+the index of the character you are interested in.  these indices
+start at 0, not 1.  e.g.:
+
+
+
+
+      string test = "test";
+      cout &lt;&lt; test [0] &lt;&lt;    // prints "t"
+      char ch = test [2];    // ch = 's'
+
+
+
+
+to access all of the characters in a string, use the square brackets inside
+of a loop.  for this you need to know how long the string is; use the
+length member function for this.  also, note that you can modifiy
+the characters of a string using the brackets.  for example, to convert a
+string to all uppercase, you could do the following:
+
+
+
+
+      for (int i = 0; i &lt; some_string.length(); i++)
+         some_string [i] = toupper( some_string[i] );
+
+
+
+ using the provided functions 
+
+
+in order to hone your function-calling expertise, i am providing you with
+two functions that you must use for program 3.  these functions are the
+following:
+
+
+
+
+   string random_secret_phrase (); 
+       returns a string that is a"random" secret phrase to use in the
+       hangman game.  note that his function has no parameters (inputs),
+       just a return value (output).
+   bool char_in_string (char ch, string string); 
+       returns true if the character ch is in the
+       string, false otherwise.
+
+
+
+
+for example, char_in_string ('x', "xyz") returns true,
+which char_in_string ('h', "hello!") returns false.
+
+ what to hand in 
+
+as always, hand in a printed copy of both your source code and the output
+displayed when the program is run.  for the output, you should run the
+program three times and hand in the printed output for all three. 
+at least on run should show you correctly guessing the secret phrase, and
+another should show you running out of chances.
+
+note: don't forget to have your program print your name and section
+number, so that they show up on all of your printouts!
+
+ sample program output 
+
+here are some sample program outputs.  note a few things:
+
+
+
+
+   only letters are guessed; spaces and punctuation come "for free."
+   the program checks for errors on input; characters which aren't
+       letters aren't allowed.  also, you can't guess the same letter twice.
+   you only lose one of your five "chances" if you guess an incorrect
+       letter (that you haven't guessed before).
+   upper-case and lower-case letters are not distinguished; guessing
+       a capital 'a', for instance, matches all lower-case 'a' letters
+       in the secret phrase.
+   the program plays one game of hangman and then quits.
+   to print a double-quotation mark in your program,
+       precede the double-quote with a backslash inside of a string
+       literal constant.  e.g.: 
+          cout &lt;&lt; "my name is \"mud\"!\n";
+
+
+
+
+
+welcome to john q. doe's hangman program!
+you have five chances to guess the secret phrase.
+
+secret phrase: "____"
+
+5 chances left!  enter a letter: a
+good guess!
+
+secret phrase: "_a_a"
+
+5 chances left!  enter a letter: t
+sorry, that letter is not in the secret phrase.
+
+secret phrase: "_a_a"
+
+4 chances left!  enter a letter: r
+sorry, that letter is not in the secret phrase.
+
+secret phrase: "_a_a"
+
+3 chances left!  enter a letter: s
+sorry, that letter is not in the secret phrase.
+
+secret phrase: "_a_a"
+
+2 chances left!  enter a letter: p
+sorry, that letter is not in the secret phrase.
+
+secret phrase: "_a_a"
+
+1 chances left!  enter a letter: l
+sorry, that letter is not in the secret phrase.
+
+secret phrase: "_a_a"
+
+sorry, you ran out of chances.  the secret phrase was:
+"java"
+
+
+
+welcome to john q. doe's hangman program!
+you have five chances to guess the secret phrase.
+
+secret phrase: "_______ ________"
+
+5 chances left!  enter a letter: a
+good guess!
+
+secret phrase: "_a__a__ _a__a___"
+
+5 chances left!  enter a letter: e
+sorry, that letter is not in the secret phrase.
+
+secret phrase: "_a__a__ _a__a___"
+
+4 chances left!  enter a letter: #
+that is not a letter.  try again.
+
+4 chances left!  enter a letter: l
+sorry, that letter is not in the secret phrase.
+
+secret phrase: "_a__a__ _a__a___"
+
+3 chances left!  enter a letter: t
+good guess!
+
+secret phrase: "_a_ta__ _a__a___"
+
+3 chances left!  enter a letter: i
+good guess!
+
+secret phrase: "_a_tai_ _a__a___"
+
+3 chances left!  enter a letter: n
+good guess!
+
+secret phrase: "_a_tain _an_a___"
+
+3 chances left!  enter a letter: c
+good guess!
+
+secret phrase: "ca_tain _an_a___"
+
+3 chances left!  enter a letter: p
+good guess!
+
+secret phrase: "captain _an_a___"
+
+3 chances left!  enter a letter: l
+you already guessed that letter.  try again.
+
+3 chances left!  enter a letter: k
+good guess!
+
+secret phrase: "captain kan_a___"
+
+3 chances left!  enter a letter: g
+good guess!
+
+secret phrase: "captain kanga___"
+
+3 chances left!  enter a letter: r
+good guess!
+
+secret phrase: "captain kangar__"
+
+3 chances left!  enter a letter: o
+good guess!
+
+secret phrase: "captain kangaroo"
+
+congratulations!  you guessed the secret phrase!
+
+
+
+ mbirk@cs.wisc.edu 
+
+
+
+
+ program 3 
+ program 3 
+ program 3 
+ program 3 
+ program 3 
+ program 3 
+ program 3 
+ program 3 
+ program 3 
+ program 3

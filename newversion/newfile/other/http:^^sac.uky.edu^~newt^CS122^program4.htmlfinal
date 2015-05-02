@@ -1,0 +1,205 @@
+cs122 programming assignment #4
+
+
+
+
+cs122 - computer science ii
+fall, 1996
+programming assignment #4
+
+
+assigned: friday, november 22nd, 1996
+e-mail proposal due: wednesday, november 27th, 1996
+external documentation due: tuesday, december 3nd, 1996
+program listing due: tuesday, december 10th, 1996
+scheduled demonstrations: tuesday, december 13th, 1996, and following
+
+** note:  standard late penalties will apply after these dates;
+however, no work will be accepted after the last day of classes,
+friday, december 13th, 1996.  **
+
+
+
+your last programming assignment this semester is to design and
+implement a c++ program that visually demonstrates the ideas underlying
+one of the advanced sorting techniques we are studying in class.
+
+
+
+here are the requirements:
+
+
+
+your program must be written in c++.
+
+you are not required to use the sac computers, but rather
+can use any of the computer systems that are readily available on
+campus, including (but not limited to) the sac computers, the
+ibm pc's or macintoshes in the library microlabs, or the next
+computers.  (if you would like to use a computer system other than one
+of these 4, check with me first.)   whatever system you choose, it must
+have some way of proving to me that it was able to compile your c++
+program (for example, by creating a program listing), and must be
+available on-campus for you to demonstrate your program for me.
+
+you must choose one of the advanced sorts we are studying in class,
+namely quicksort, heapsort, or shellsort, to show in your program.
+
+you must design some method of visually demonstrating, through your
+c++ program, the ideas that underlie your chosen sort.  there are
+*many* possible different designs -- here are just three ideas:
+
+   
+
+   using an ibm pc with its graphics capabilities, along with microsoft
+   c++ or borland c++, you could demonstrate a heapsort.  first, you
+   could construct a list of 500 randomly chosen integers, graph them
+   as a "cloud of points" (with their list index positions plotted
+   along the horizontal axis and their values plotted along the
+   vertical axis), and then apply a heapsort to the list and show how
+   the cloud gradually changes shape, first to that of a triangular
+   heap, and from there to the (nearly straight) diagonal line that is
+   the signature of a sorted list.  at first, all points could be drawn
+   red (for unsorted); as you swap two points they could briefly blink
+   yellow, then back to red; and finally, when a point is known to have
+   reached its final position in the sorted list, it could permanently
+   become green.  you could show running statistics on how many total
+   comparisons and swaps were made, and how much time the the sort is
+   taking.
+
+   like the above, showing a cloud of points being sorted by, say, 
+   shellsort, but using sac, unix, gnu c++ (g++), and the curses
+   screen-control library.  (curses was the library i used to demonstrate
+   the interactive workings of the mazecrawler from program #3.)  you
+   won't be able to show as many points in the cloud, being limited
+   to a maximum of 80 by the standard monitor screen's 80 columns, but 
+   the effect would be similar.  instead of color, you could use 
+   the special hilighting features made available by curses.
+   
+   using sac, unix, gnu c++ (g++), and regular "cout" statements to 
+   demonstrate a quicksort.  first, you could ask the user to choose
+   between several possible pivot-picking strategies (we'll discuss what
+   these are in lecture soon, which include picking the
+   1st, middle, or last item on list, or an item chosen at random, or
+   the median value of three items chosen at random, etc.).  then you
+   could ask the user to enter an unsorted list of up to up to 20
+   numbers:  say the user entered the 20 numbers 21, 47, 16, ... , 32,
+   12.  you could then visually display the list on the screen as a
+   series of text bars:
+
+
+              1 (31) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+              2 (47) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+              3 (16) xxxxxxxxxxxxxxxx
+              .
+              .
+              .
+             19 (32) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+             20 (12) xxxxxxxxxxxx
+
+
+   where the far-left-hand number is the position of the item in the
+   list, and the next number is the value of the item.  your program
+   could pause, and once the user signals that he/she is ready to
+   continue by pressing the enter key, you would then inform the user
+   of the next step involved in performing your quicksort ("now we pick
+   a pivot, namely the item in position #1, which is 21, and use it to
+   partition the list."), and would then visually display your list
+   again.  you could display the entire list each time, but could have
+   some special way of marking that portion of the list that is
+   currently undergoing partitioning (say, by drawing it using capital
+   x's, and drawing the rest of the list using small x's).  this
+   process of drawing, pausing, explaining, and re-drawing would
+   continue until the entire list was sorted.  you could then provide
+   some statistics on how good the chosen pivot-picking strategy was
+   for this particular list (e.g.  "during partitioning, the average
+   size of the larger of the two partitions formed contained 58% of the
+   available list items, which is 8% above the optimal value of
+   50%.").
+
+   
+
+i encourage you to come up with your own design, or you may use one
+of the two listed above.  your goals should be to:
+
+   
+
+   be creative and innovative.
+
+   show off your knowledge of programming in c++ and of your chosen
+   sort.
+
+   produce an attractive and informative demonstration program.
+
+   
+
+your program must actually implement your chosen sort; that is to
+say, it must be capable of applying your chosen sort to *many*
+different lists of numbers, not just the same old list over and over.
+your program must have some means of acquiring diverse lists of
+numbers:  by allowing the user to enter the list, or by creating the
+list randomly and in a different fashion each time it is run, etc.  you
+can, however, place some reasonable constraints on the size of the list
+and on the range of the values in the list.
+
+your program must also teach the sort by indicating *both* the strategy
+used by the sort to order the entire list, and also the strategy used
+by the sort in a single sort pass.
+
+here is what you'll need to submit to complete the assignment:
+
+
+
+you must e-mail me a proposal which specifies:
+
+
+
+which computer system you have chosen to use
+
+which make/version of c++ compiler software you will be using
+
+which of the three sorts you have chosen to work with
+
+how you are going to visually demonstrate the way your chosen sort works  
+
+
+
+you must turn in standard external documentation, including
+specifications, algorithm, and justification.  in the place of proposed
+testcases, you *must* include some extensive visual samples (hand-drawn
+are ok here) of how your demonstration program will look when it is
+run.
+
+you must turn in listing for your program, and have some method of
+indicating that your program compiled with no errors.
+
+in the place of program executions, you must schedule a 15 minute
+demonstration of your program with me.  you must have submitted your
+proposal, external documentation, and program listing prior to your
+demonstration.  i'll talk more during class about how to go about
+scheduling a demonstration with me.
+
+
+
+for extra credit, you can add demonstrations of additional sorts to
+your program, so that the interesting aspects of more than one sort can
+be seen and studied.
+
+
+
+good luck!
+
+
+
+
+
+cs122 programming assignment #4
+cs122 programming assignment #4
+cs122 programming assignment #4
+cs122 programming assignment #4
+cs122 programming assignment #4
+cs122 programming assignment #4
+cs122 programming assignment #4
+cs122 programming assignment #4
+cs122 programming assignment #4
+cs122 programming assignment #4

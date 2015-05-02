@@ -1,0 +1,298 @@
+liddy shriver
+
+
+
+
+  
+liddy shriver
+
+
+
+
+
+
+
+
+
+  
+     contact info
+
+  
+      bio 
+
+  my cv
+
+  
+     
+     links 
+
+
+
+
+  
+     
+     research 
+
+  
+     published  papers
+
+ 
+     
+     papers in  progress 
+
+
+
+
+
+
+
+contact information
+
+
+
+department of computer science
+
+
+courant institute of mathematical sciences
+
+
+new york university 
+251 mercer street
+new york, ny 10012, u.s.a.
+
+
+when i'm at school: 
+office: 212 998 3481
+fax:    212 995 4123
+
+
+currently:  
+office: 415 857 3329 
+fax:    415 857 5548 
+
+
+mail address: 
+hewlett packard laboratories 
+building 1u 
+p.o. box 10490 
+palo alto, ca 94303-0969 
+
+
+street address: 
+hewlett packard laboratories 
+building 3u 
+1501 page mill road 
+palo alto, ca 94304 
+
+
+email: shriver@cs.nyu.edu 
+finger: shriver@slinky.cs.nyu.edu 
+
+
+
+brief biography
+
+i grew up in lafayette, la.  (it's a great place to raise 
+kids.)  i received my b.s. in computer science and in
+mathematics at 
+suny stony brook in 1987 and my
+masters in computer science at 
+brown university in 1990;
+my masters' advisor was 
+jeff vitter.  
+i am now pursuing a ph.d.
+in computer science at the courant institute of mathematical sciences
+at nyu.
+
+
+research
+
+research interests
+
+storage systems, 
+parallel i/o, parallel file systems, hierarchical memory models.
+
+
+my .bib files have many references for the above areas:
+
+
+parallel-disk-model.bib
+
+secondary-storage.bib
+
+memory-hierarcy.bib
+
+file-systems.bib
+
+parallel-machines.bib
+
+misc.bib
+
+if you find any errors, please send me corrections. 
+
+
+dissertation
+
+my advisors are
+alan siegel  
+and 
+john wilkes 
+(hp labs).  
+additional members of my committee are
+tom cormen 
+(dartmouth college) and
+larry carter (ucsd).
+ 
+
+i am working on my dissertation 
+on self-managing storage systems
+as a visiting scholar at hp labs with the 
+storage systems program,
+under the direction of john wilkes.  
+this past summer, i modeled
+devices and applications so that an assignment 
+of applications to devices can be done in a reasonable amount of
+time with minimum device cost.  this is an important part of
+attribute-managed storage.  (see our msio 
+paper
+for more information.)
+
+
+i am currently working on modeling realistic storage devices; one use
+of such a model for attribute-managed storage. 
+(my 
+current unoffical thesis proposal.)
+a more coherent view of my work is found in this one-page  
+paper.
+self-managing storage systems, which is one possible
+application of my work, is decided in an osdi work-in-progress
+paper.
+
+
+i have designed a application programmer interface for 
+multiprocessor multi-disk file systems.  (see the
+ published papers section.)
+
+
+
+published papers
+
+
+
+elizabeth borowsky, richard golding, arif merchant, elizabeth shriver,
+mirjana spasojevic, and john wilkes,
+``eliminating storage headaches through self-management.''
+work-in-progress paper for the second symposium on operating systems design
+and implementations (osdi '96), october 1996, seattle, washington.
+(postscript)
+
+
+elizabeth shriver and mark nodine,
+``an introduction to parallel i/o models and algorithms.''
+chapter 2 of  input/output in parallel and distributed computer 
+systems, kluwer academic publishers, pages 31-68, 1996.
+(the   input/output in parallel and distributed computer 
+systems book has a few invited papers that survey the 
+parallel i/o area and has the proceedings of 
+iopads 1994 and 1995.)
+(abstract)
+
+
+
+elizabeth a. m. shriver and leonard f. wisniewski, ``an
+api for choreographing data accesses.''
+nyu computer science technical report 708, november 1995.
+(see the  
+list of nyu cs trs for the on-line version.)
+
+
+
+richard golding, elizabeth shriver, tim sullivan, and john wilkes,
+``attribute-managed storage,''
+workshop on modeling and specification of i/o (msio),
+held in conjunction with the seventh ieee symposium on parallel
+and distributed computing,
+october 1995.
+(postscript)
+
+
+
+jeffrey s. vitter and elizabeth shriver, ``algorithms for parallel memory
+i: two-level memories,'' algorithmica, 12(2/3), 1994. 
+(you can get this paper from 
+
+jeff vitter's list of recent papers.)
+
+
+
+jeffrey s. vitter and elizabeth shriver, ``algorithms for parallel memory
+ii: hierarchical multi-level memories,'' algorithmica, 12(2/3), 1994. 
+(you can get this paper from 
+
+jeff vitter's list of recent papers.)
+
+
+
+jeffrey s. vitter and elizabeth shriver, ``optimal disk i/o with parallel
+block transfer,''  in proceedings of the 22nd annual acm symposium on
+theory of computing, pages 159-169, may 1990. 
+
+
+
+elizabeth shriver, ``optimal disk i/o with parallel block transfer,''
+master's thesis, brown university. 
+
+
+papers in progress
+
+
+
+elizabeth a. m. shriver, leonard f. wisniewski, 
+bruce g. calder, david greenberg, ryan moore, 
+and david womble, ``parallel disk access using
+the whiptail file system: design and implementation.'' 
+
+
+
+
+links
+
+
+  parallel i/o archive 
+at dartmouth college
+
+  nyu grad students
+
+  draft of women in courant's home page
+
+
+
+ 
+liddy shriver
+
+ 
+liddy shriver
+
+ 
+liddy shriver
+
+ 
+liddy shriver
+
+ 
+liddy shriver
+
+ 
+liddy shriver
+
+ 
+liddy shriver
+
+ 
+liddy shriver
+
+ 
+liddy shriver
+
+ 
+liddy shriver

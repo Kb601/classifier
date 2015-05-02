@@ -1,0 +1,71 @@
+my applet page
+
+
+
+
+ sample applets 
+
+the first example is from cse 521, our introductory algorithms course.
+the puzzle is to develop an algorithm for the following modification
+of the "travelling salesperson problem", known as the 
+"travelling tourist" problem:  given a list of cities, and a schedule
+of buses that leave each city, design a travel plan that visits each city at
+least once, ends up where you started, and takes a small amount of time.
+the 
+applet  illustrates some of
+the possible tours, on a sample  
+data set.
+
+see the 
+course projects page for more discussion 
+
+ 
+of the problem, and the specific 
+
+speedy tourist page.
+also see the
+  
+instructions  
+for specifics on the animation.
+
+the second example is from cse 523, our introductory computational
+geometry course. 
+the applet illustrates a plane sweep algorithm used to construct a
+voronoi diagram.
+
+the 
+applet  illustrates the operation of 
+this algorithm, on sample points input by you, the user.
+
+we've prepared a more 
+technical discussion 
+as well as
+  
+instructions  
+on the animation itself.
+
+  comments welcome.
+
+
+bullets created by
+jen
+kitchen.
+
+
+
+eric@cs.washington.edu 
+ 27 feb 1996
+
+
+
+
+my applet page
+my applet page
+my applet page
+my applet page
+my applet page
+my applet page
+my applet page
+my applet page
+my applet page
+my applet page

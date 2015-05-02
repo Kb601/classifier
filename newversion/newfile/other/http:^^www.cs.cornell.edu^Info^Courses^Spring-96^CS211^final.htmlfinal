@@ -1,0 +1,49 @@
+topics for the final exam 
+
+
+topics for the final exam.  everything on prelims 1 and 2 plus:
+
+i. powerplant
+        + any question about powerplant will be based on the assignment
+ii. linked lists
+        + data structures for linked lists
+        + inserting/deleting/searching
+        + inserting into a sorted list
+        + doubly linked lists
+        + lists with header nodes
+        + circular lists
+iii. analysis of algorithms
+        + definition of big-o
+        + what it means for an algorithm to be o(n), o(n^2), o(log n), etc.
+        + comparison of different implementations
+		- examples:
+		- linked lists vs. arrays vs. trees
+		- binary search vs. linear search
+iv. binary trees
+        + definition of a binary tree (root, children, parents, leaf, etc.)
+        + linear representation of trees
+        + preorder, inorder, and postorder traversals
+        + binary search tree
+v. putting linked data structures into classes (example)
+vi. inline, assert, exception handling, templates
+        + you should understand these at a high level, i.e. understand
+          the lecture notes
+vii. java
+        + you should understand how java differs from c++ at a high level
+
+the final is *comprehensive*.  although the most recent stuff will
+weigh a bit heavier, anything is fair game.
+
+
+
+
+ topics for the final exam 
+ topics for the final exam 
+ topics for the final exam 
+ topics for the final exam 
+ topics for the final exam 
+ topics for the final exam 
+ topics for the final exam 
+ topics for the final exam 
+ topics for the final exam 
+ topics for the final exam

@@ -1,0 +1,505 @@
+andrew g. barto
+
+
+
+andrew g. barto
+
+
+
+
+
+
+professor
+department of computer science
+university of massachusetts
+
+amherst, ma
+01003  usa
+
+co-director, adaptive network laboratory
+
+
+
+barto@cs.umass.edu
+office: lederle a265
+413-545-2109, fax:413-545-1249
+
+
+brief biography
+ph.d. students advised
+ publications
+	
+		 refereed publications
+		 book chapters
+		 other publications
+	
+ 
+
+my research interests center on machine and biological learning. i have been
+trying to develop learning algorithms that are useful for engineering
+applications while also making contact with learning as studied by experimental
+psychologists and neuroscientists. i am interested in artificial and real
+neural networks, and over the last several years i have focused on connections
+between reinforcement learning algorithms and dynamic programming solutions to
+markov decision problems. related research is being conducted in collaboration
+with colleagues specializing in animal motor control. we are working on a model
+of the cerebellum and other brain regions involved in motor control.
+  
+
+brief biography
+
+b.s. with distinction in mathematics, 1970, university of michigan; ph.d. in
+computer science, 1975, university of michigan. from 1975 to 1979 he was an
+assistant professor at the school of advanced technology, suny, binghamton, ny.
+taking a leave of absence in 1977, he became a postdoctoral research associate
+in the computer and information science department, 
+university of massachusetts, amherst, where he was appointed associate
+professor in 1982. in 1991 he was promoted to his current position,
+professor of computer science, university of massachusetts, amherst.
+in addition to co-directing the adaptive network laboratory, he is a core
+faculty of the neuroscience and behavior program,  university of massachusetts.
+member: society for neuroscience and inns; senior member of the ieee;
+member and fellow of the american association for the advancement of
+science. inns board of governors from 1991-95. member 
+editorial board and action editor, neural networks, 1987-95. action
+editor, machine learning; associate editor, neural
+computation; member editorial board, journal of artificial
+intelligence research; associate editor, mit press book series on neural
+network modeling and connectionism.   
+
+
+
+ph.d. students advised
+
+1984: 
+r. s. sutton, ``temporal credit assignment in reinforcement
+		learning.&quot;
+
+1986: c. w. anderson, ``learning and problem solving with multilayer
+		connectionist systems.&quot;
+
+1988: j. s. judd,
+``neural network design and the complexity of learning.&quot; 
+ 
+1990: r. a. jacobs,
+``task decomposition through competition in a modular connectionist
+architecture.&quot;
+ 
+1992: j. r. bachrach, ``connectionist modeling and
+control of finite state environments.&quot;
+
+1992: v. gullapalli,
+``reinforcement learning and its application to control.&quot;
+
+1993: s. p. singh,  ``learning
+to solve markovian decision processes.&quot;
+
+1994: s. j. bradtke,  ``incremental
+dynamic programming for on-line adaptive optimal control.&quot;
+
+
+publications
+
+refereed publications
+
+r. crites and a. barto.
+
+improving elevator performance using reinforcement learning
+. to appear in advances in neural information processing systems 8
+(nips8). (nips8.ps.z: 58525 bytes)
+
+r. crites and a. barto. 
+
+an actor/critic algorithm that is equivalent to q-learning
+. advances in neural information processing systems 7 (nips7),
+g. tesauro, d. s. touretzky, and t. k. leen (eds.), cambridge, ma: mit press,
+1995, pp. 401-408. (nips7.ps.z: 64695 bytes)
+
+ a. g. barto, s. j. bradtke and s. p. singh.  ``learning to act
+using real-time dynamic programming.&quot  artificial intelligence,
+special volume: computational research on interaction and agency, 72(1):
+81-138, 1995.
+
+s. p. singh, a. g. barto, r. grupen and c. connolly. ``robust reinforcement learning in motion
+planning.&quot neural information processing
+systems 6 (nips6),  j. d. cowan, g. tesauro, and j. alspector (eds.),
+san mateo: morgan kaufmann, 1994, pp. 655-662.
+
+v. gullapalli, a. g.  barto and r. a. grupen.  ``learning admittance
+mappings for force-guided assembly.&quot  proceedings of the 1994 
+international conference on robotics and automation,1994, pp. 2633-2638.
+
+v. gullapalli and a. g. barto. ``convergence of indirect adaptive
+value iteration.&quot neural information processing
+systems 6 (nips6), j. d. cowan, g. tesauro, and j. alspector (eds.), san
+mateo: morgan kaufmann, 1994, pp. 695-662.
+
+j. t. buckingham, j. c. houk, and a. g. barto. ``controlling a nonlinear spring-mass system with a
+cerebellar model.&quot proceedings of the 8th yale workshop on adaptive and
+learning systems. yale university, 1994, pp. 1-6.
+
+s. j. bradtke, a. g. barto and b. e. ydstie. ``a reinforcement learning method for direct 
+adaptive linear quadratic control.&quot proceedings of the 8th yale workshop
+on adaptive and learning systems. yale university, 1994, pp. 85-96.
+
+a. g. barto and m. duff. ``monte-carlo matrix inversion and
+reinforcement learning.&quot
+neural information processing
+systems 6 (nips6),  j. d. cowan, g. tesauro, and j. alspector (eds.),
+san mateo: morgan kaufmann, 1994, pp. 687-662.
+
+j. c. houk, j. kiefer, and a. g. barto.  ``distributed motor
+commands in the limb premotor network.&quot  trends in neuroscience,
+16 (1): 27-33, 1993.
+
+n.e. berthier, s.p. singh, a.g. barto, and j.c. houk. ``distributed representations of limb motor
+programs in arrays of adjustable pattern generators&quot journal of
+cognitive neuroscience, 5 (1): 56-78, 1993.
+
+v. gullapalli, r. a. grupen, and a. g. barto. 
+``learning reactive admittance control.&quot
+proceedings of the 1992 ieee international conference on robotics and
+ automation. nice, france, may 1992,
+pp. 1475-1480.
+
+v. gullapalli and a. g. barto. ``shaping as a method for
+ accelerating reinforcement learning.&quot
+proceedings of the 1992 ieee international symposium on intelligent
+control. glasgow, scotland, august 1992, pp. 554-559.
+
+n.e. berthier, s.p. singh, a.g. barto, and j.c. houk. ``a cortico-cerebellar model that learns to
+generate distributed motor commands to control a kinematic arm.&quot neural
+information processing systems 4 (nips4), j. e. moody, s. j. hanson, and r.
+p. lippmann (eds.). san mateo: morgan kaufmann, 1992, pp. 611-618.
+
+a. g. barto and s. j. bradtke. ``learning to solve stochastic shortest path problems using
+real-time dynamic programming.&quot proceedings of the seventh yale workshop
+on adaptive and learning systems. new haven ct, 1992, pp. 143-148.
+
+n. berthier, a. barto, and j. moore. ``linear systems analysis of the
+relationship between firing of deep cerebellar neurons and the classically
+conditioned nictitating membrane response in rabbits.&quot biological
+cybernetics, 65: 99-105, 1991.
+
+a.g. barto and s.p. singh, 
+ ``reinforcement learning and dynamic programming,&quot 
+proceedings of the sixth yale workshop on adaptive and learning systems.
+new haven, ct, 1990, pp. 83-88.
+
+r.a. jacobs, m.i. jordan and a.g. barto, 
+``task decomposition through competition in a modular connectionist 
+architecture: the what and where vision task,&quot   cognitive science,
+15:  219-250, 1991.
+
+r.c. yee, s. saxena, p.e. utgoff and a.g. barto, 
+``explaining temporal differences to create useful concepts for evaluating 
+states,&quot  proceedings of the 
+eighth national conference on artificial intelligence.
+cambridge, ma, august 1990, pp. 882-888.
+
+t. sinkj&#230;r, c.h. wu, a.g. barto,  and j.c. houk,
+``cerebellar control of endpoint position - a simulation model,&quot 
+ proceedings of the 1990 international
+joint conference on neural networks. san diego, ca, june 1990, pp.
+ii-705-ii-710. 
+
+a.g. barto,  r.s. sutton and c. watkins, 
+ ``sequential decision problems and neural networks,&quot  advances in neural
+information processing 2 (nips2),  d. touretzky (ed.). san mateo, ca:	morgan
+kaufmann, 1990, pp. 686-693.
+
+r.s. sutton and a.g. barto, ``a temporal-difference model of classical
+conditioning,&quot  proceedings of the ninth annual conference
+of the cognitive science society. hillsdale, nj: erlbaum, 1987. 
+
+a.g. barto and m.i. jordan, ``gradient following without back-propagation in
+layered networks,&quot  proceedings of the ieee first annual
+conference on neural networks. san diego, ca, june 1987, pp. ii-629-ii-636.
+
+a.g. barto, ``game-theoretic cooperativity in networks of self-interested units,&quot;
+in neural networks for computing. j.s. denker (ed.). new
+york: american institute of physics, 1986, pp. 41-46.
+
+a.g. barto, ``learning by statistical cooperation of self-interested
+neuron-like computing elements,&quot;
+human neurobiology, 4:  219-250, 1985.
+
+j.w. moore, j.e. desmond, n.e. berthier, d.e.j. blazis, r.s. sutton
+and a.g. barto,  
+``connectionistic learning in real time: sutton-barto adaptive
+element and classical conditioning of the nictitating membrane response,&quot
+proceedings of the seventh annual conference of the cognitive science
+society. irvine, ca, august 1985.
+
+o. selfridge, r.s. sutton and a.g. barto, ``training and tracking in
+robotics,&quot proceedings of the ninth international joint conference in
+artificial intelligence. 1985, san mateo, ca: morgan kaufmann, pp. 670-672.
+
+a.g. barto and c.w. anderson, ``structural learning in connectionist
+systems, &quot proceedings of the seventh annual conference of the cognitive
+science society. irvine, ca, august 1985, pp. 43-54.
+
+a.g. barto and p. anandan, ``pattern recognizing stochastic learning automata,&quot;
+ieee trans. on systems, man, and cybernetics, 15: 360-375, 1985.
+
+a.g. barto, r.s. sutton and c.w. anderson, ``neuron-like adaptive elements that
+can solve difficult learning control problems,&quot 
+ieee trans. on systems, man, and cybernetics, smc-13: 834-846,
+1983. (reprinted in neurocomputing: foundations of research,
+j.a. anderson and e. rosenfeld (eds.), cambridge, ma: the mit press, 1988,
+pp. 537-549.)
+
+a.g. barto, r.s. sutton and c.w. anderson, ``spatial learning 
+simulation systems,&quot
+ proceedings of the 10th imacs world
+congress on systems simulation and scientific computation, 1982, pp. 204-206.
+
+a.g. barto,  c.w. anderson and r.s. sutton, ``synthesis of nonlinear control surfaces by a layered
+associative network,&quot; biological cybernetics, 43:
+175-185, 1982.
+
+a.g. barto and r.s. sutton,  ``simulation of anticipatory responses in classical
+conditioning by a neuron-like adaptive element,&quot 
+behavioural brain research, 4: 221-235, 1982.
+
+a.g. barto and r.s. sutton, ``an adaptive network that constructs and uses an
+internal model of its environment,&quot  cognition and brain
+theory, 4:  217-246, 1981.
+
+a.g. barto and r.s. sutton, ``landmark learning: an illustration of associative
+search,&quot  biological cybernetics, 42: 1-8, 1981.
+
+a.g. barto,  r.s. sutton and p. brouwer, ``associative search network: a
+reinforcement learning associative memory,&quot  biological cybernetics,
+40: 201-211, 1981.
+
+r.s. sutton and a.g. barto, ``toward a modern theory of adaptive networks:
+expectation and prediction,&quot  psychological review, 88:
+135-170, 1981. 
+
+a.g. barto, ``invariant linear models of varying linear systems,&quot nato
+conference series, series ii, systems science, 5, g. klir (ed.),
+plenum, new york, 1978.
+
+a.g. barto, ``a note on pattern reproduction in tesselation structures,&quot; journal
+of computer and systems sciences, 16: 445-455, 1978.
+
+a.g. barto, ``discrete and continuous models,&quot international journal of
+general systems, 4: 163-177, 1978.
+
+a.g. barto, ``a neural network simulation method using the fast fourier
+ transform,&quot
+ieee transactions on systems, man, and cybernetics, smc-5:
+863-867, 1976.
+
+book chapters
+
+a. g. barto.  ``learning as hillclimbing in weight space.&quot  in handbook
+of brain theory and neural networks, m.a. arbib (ed.), cambridge: mit press,
+1995.
+
+a. g. barto.  ``reinforcement learning in motor control.&quot  in handbook 
+of brain theory and neural networks, m.a. arbib (ed.), cambridge: mit press,
+1995.
+
+a. g. barto.  ``reinforcement learning.&quot  in handbook of brain theory
+and neural networks, m.a. arbib (ed.), cambridge: mit press, 1995.
+
+j. c. houk, j. l. adams, and a. g. barto.  ``a model of how the basal ganglia
+generates and uses neural signals that predict reinforcement.&quot  models
+of information processing in the basal ganglia, j. c. houk, j. 
+davis and d. beiser (eds.), cambridge, ma: mit press, 1995, pp. 249-270.
+
+a. g. barto.  ``adaptive critics and the basal ganglia.&quot  in models of
+information processing in the basal ganglia, j. c. houk, j. 
+davis and d. beiser (eds.), cambridge, ma: mit press, 1995, pp. 215-232.
+
+a. g. barto and v. gullapalli.  ``neural networks and adaptive control.&quot
+in  p. rudomin, m.a. arbib and f. cervantes-perez, and r. romo, editors, neuroscience:  from neural networks to  artificial intelligence, research
+notes in neural computation, vol. 4, springer-verlag, 1993, pp. 471-493.
+
+a. g. barto, ``reinforcement learning and adaptive critic methods.&quot in
+handbook of
+intelligent control: neural, fuzzy, and adaptive approaches.
+d. a. white and d. a. sofge (eds.). new york: van nostrand reinhold
+1992, pp. 469-491.
+
+a.g. barto.  ``learning algorithms.&quot in encyclopedia of learning and
+memory.  l.r. squire (ed.).  new york: macmillan, 1992.
+
+a.g. barto.  ``reinforcement learning and adaptive critic methods.&quot in
+handbook of intelligent control. d.a. white and d.a. sofgee (eds.), new
+york: van nostrand reinhold, 1992, pp. 469-491.
+
+j.c. houk and a.g. barto. ``distributed sensorimotor learning.&quot in
+tutorials in motor behavior ii. g.e. stelmach and j. requin (eds.).
+amsterdam: elsevier science publishers,  1992, pp. 71-100. 
+
+a.g. barto, ``some learning problems from the perspective of control.&quot in
+1990 lectures in  complex systems.
+l. nadel and d.l. stein (eds.). redwood
+city: addison-wesley, 1991, pp. 195-223. 
+
+a.g. barto and s.p. singh, ``on the computational economics of reinforcement
+learning.&quot in proceedings of the 1990 connectionist models summer
+school. d.s. touretzky, j.l. elman, t.j. sejnowski, and g.e. hinton (eds.).
+san mateo, ca: morgan kaufmann, 1990, pp. 35-44.
+
+j.c. houk, s.p. singh,  c. fisher and a.g. barto, 
+``an adaptive network inspired by the anatomy and physiology of the 
+cerebellum.&quot in neural networks for
+control.  t. miller, r.s. sutton, and p.j. werbos (eds.), cambridge, ma: mit
+press, 1990, pp. 301-348.
+
+a.g. barto, ``connectionist learning for control: an overview.&quot in neural
+networks for control.  t. miller, r.s. sutton, and p.j. werbos (eds.),
+cambridge, ma: mit press, 1990, pp. 5-58.
+
+r.s. sutton and a.g. barto, ``a time-derivative theory of 
+pavlovian conditioning.&quot
+in learning and computational neuroscience.
+m. gabriel and j.w. moore (eds.), cambridge, ma: mit press, 1990, pp. 497-537.
+
+a.g. barto, r.s. sutton and c. watkins, ``learning and sequential decision 
+making.&quot  in learning and computational neuroscience.
+m. gabriel and j.w. moore (eds.), cambridge, ma: mit press, 1990, pp. 539-602.
+
+a.g. barto, ``from chemotaxis to cooperativity: abstract exercises in
+neuronal learning strategies.&quot in the computing neuron.
+r. durbin, r. maill, and g. mitchison (eds.), reading, ma: addison-wesley,
+1989, pp. 73-98.
+
+a.g. barto, ``an approach to learning control surfaces by connectionist
+systems.&quot in vision, brain and cooperative computation.
+m.a. arbib and a.r. hanson (eds.), cambridge, ma:
+mit press, 1987, pp. 665-701.
+
+a.g. barto and  r.s. sutton, ``neural problem solving.&quot in synaptic 
+modification, neuron selectivity, and nervous system organization.
+w. b. levi, j. a. anderson and s. lehmkuhle (eds.),
+hillsdale, nj: erlbaum, 1983, pp. 123-152.
+
+
+other publications
+
+j. t. buckingham, a. g. barto, and j. c. houk.  ``adaptive predictive
+control with a cerebellar model.&quot in proceedings of the 1995 world
+congress on neural networks, volume 1,  lawrence erlbaum
+associates, inc: mahwah, nj, 1995,  pp. 373-380.
+
+a. g. barto. `` reinforcement learning and dynamic programming.&quot
+proceedings of the 6th ifac/ifip/ifors/iea symposium on analysis, design,
+and evaluation of man-machine systems.
+cambridge, ma, june 1995. pp. 469-474.
+
+a. g. barto.  ``reinforcement learning control.&quot  current opinion in
+neurobiology, 4: 888-893, december 1994.
+
+a. g. barto. forward for adaptive, learning and pattern recogintion systems: theory and
+applications, second edition. j. m. mendel and k. s. fu (eds.). to appear.
+
+r.s. sutton, a.g. barto, and r.j. williams. ``reinforcement learning is direct
+adaptive optimal control.&quot proceedings of the 1991 american control
+conference. american automatic control council, 1991, pp. 2143-2146.
+
+a.g. barto, ``learning and incremental dynamic programming.&quot
+commentary on c. w. clark's ``modeling behavioral adaptations,&quot
+behavioral brain science, vol. 14, 1991, pp. 94-95.
+
+n.e. berthier, a.g. barto, and j.c. houk. ``a network model of the cerebellum
+that uses a trained set of pattern generators to control a single
+degree-of-freedom joint.&quot society for neuroscience abstracts. 
+vol. 17, p. 1382, 1991.
+
+a.g. barto, n.e. berthier, s.p. singh, and j.c. houk,
+``network model of the cerebellum and motor cortex that learns to control
+planar limb movements.&quot  abstract,
+society of neuroscience abstracts, vol. 16, part 2, p. 1223, 1990.
+
+v. srinivasan, a.g. barto and b.e. ydstie, 
+``pattern recognition and feedback via parallel distributed
+processing.&quot  abstract,
+annual meeting of the aiche, washington dc, november, 1988.
+
+a.g. barto (editor), ``multilayer networks of self-interested adaptive
+units.&quot  final technical report afwal-tr-87-1052, avionics
+laboratory (afwal/aaat), air force wright aeronautical laboratories,
+wright-patterson air force base, oh 45433, 1987.
+
+a.g. barto, ``adaptive neural networks for learning control: some
+computational experiments.&quot proceedings of the ieee workshop on
+intelligent control, rensselaer polytechnic institute, troy, ny, august 1985.
+
+a.g. barto,  p. anandan and c.w. anderson, ``cooperativity in networks of
+pattern recognizing stochastic learning automata.&quot proceedings
+of the fourth yale workshop on applications of adaptive systems theory,
+new haven, ct, may 1985 (an extended version appears in
+adaptive and learning systems, k.s. narendra (ed.),
+new york: plenum press, 1986, pp. 235-246).
+
+a.g. barto (editor), ``simulation experiments with goal-seeking adaptive
+elements.&quot  final technical report afwal-tr-84-1022, avionics
+laboratory (afwal/aaat), air force wright aeronautical laboratories,
+wright-patterson air force base, ohio 45433, 1984.
+
+a.g. barto, review of s. grossberg's studies of mind and brain, mathematical
+biosciences, 70, new york: d. reidel publishing company,
+1982, pp. 111-113.
+
+a.g. barto and s. epstein, ``adaptive networks and sensorimotor control.&quot 
+ proceedings of the second workshop on visuomotor
+coordination in frog and
+toad: theory and experiment, november 1982, mexico city, mexico.
+
+a.g. barto and r.s. sutton, ``goal seeking components for adaptive 
+intelligence: an initial assessment.&quot  final technical report
+afwal-tr-81-1070, avionics laboratory (afwal/aaat), air force wright
+aeronautical laboratories, wright-patterson air force base, ohio 45433, 1981.
+
+b.p. zeigler and a.g. barto, ``alternative formalisms for biosystem and 
+ecosystem modelling.&quot  in new directions in the analysis of ecological
+systems, part 2, g. innis (ed.), simulation councils proceedings series, 5, 
+1977, pp. 167-178.
+
+a.g. barto, ``cellular automata as models of natural systems.&quot ph.d. thesis,
+logic of computers group technical report, university of michigan, 1975.
+
+a.g. barto, ``simulation of networks using multidimensional fast fourier
+transforms.&quot acm simuletter, 5, july 1974.
+
+
+
+
+barto@envy.cs.umass.edu 
+fri sep  8 13:57:14 edt 1995
+
+
+
+andrew g. barto
+
+
+andrew g. barto
+
+
+andrew g. barto
+
+
+andrew g. barto
+
+
+andrew g. barto
+
+
+andrew g. barto
+
+
+andrew g. barto
+
+
+andrew g. barto
+
+
+andrew g. barto
+
+
+andrew g. barto

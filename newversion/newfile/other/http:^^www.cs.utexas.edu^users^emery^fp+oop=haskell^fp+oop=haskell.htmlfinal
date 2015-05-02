@@ -1,0 +1,75 @@
+fp + oop = haskell
+
+
+
+
+
+
+
+                 
+ next: contents
+  
+
+fp + oop = haskell
+  emery berger  
+           emery@cs.utexas.edu  
+	  department of computer science  
+          the university of texas at austin  
+          austin, texas 78712-1188  
+           
+          tr-92-30  
+december 12, 1991
+
+
+
+abstract:
+the programming language haskell adds object-oriented functionality (using
+a concept known as  type classes) to a pure functional programming
+framework. this paper describes these extensions and analyzes its
+accomplishments as well as some problems.
+
+
+
+ 
+ 
+ contents
+  introduction
+  haskell overview
+  type classes
+ 
+  motivation
+ 
+  arithmetic
+  equality
+ 
+  syntax and semantics
+  implementation
+  accomplishments
+  problems
+ 
+  ambiguity
+  restricting polymorphism
+  pattern matching
+ 
+ 
+  conclusion
+ references
+    about this document ... 
+
+ 
+
+emery berger 
+fri mar  3 23:54:43 cst 1995
+
+
+
+fp + oop = haskell
+fp + oop = haskell
+fp + oop = haskell
+fp + oop = haskell
+fp + oop = haskell
+fp + oop = haskell
+fp + oop = haskell
+fp + oop = haskell
+fp + oop = haskell
+fp + oop = haskell

@@ -1,0 +1,79 @@
+simulation library (sl) version 2.0
+
+
+
+simulation library (sl) version 2.0
+
+(c) 1993-5 by
+dan reznik&amp;
+susan hert
+
+
+uw-madison robotics lab
+
+
+
+what is sl 2.0 ? 
+
+the simulation library (sl) is a collection of c-language
+functions that provide a framework in which to develop computer
+simulations of 2d robotic systems. sl helps a programmer concentrate
+solely on implementation issues specific to his/her simulation, such as
+a particular motion planning algorithm or a new type of kinematic
+structure. the idea is to (1) simplify and standardize the low-level
+aspects of most simulation programs (e.g., graphics, user-interface
+construction, run time interactivity), and (2) factor out the
+repetitive steps specific to writing simulations in robotics.
+for example, many simulations involve constructing and drawing
+a robot in its environment. sl addresses that by providing a
+high-level c-language interface in which to define, draw, and animate
+a robot, its environment, and the interaction between these two.  
+
+the library supports:
+
+
+ user-interface construction and run-time interaction
+ drawing and manipulation of geometric primitives
+ color and animation
+ 2d modeling transformations
+ obstacle database management
+ sensor-based motion-planning algorithms
+ modeling and manipulation of 2d robots
+
+
+
+
+downloading and installing sl
+
+the library can be obtained via anonymous ftp from robios8.me.wisc.edu
+in directory /pub/sl. both
+irix 5 and
+sunos 4.1.4
+versions are available. 
+
+a compressed postsciprt version of the user's manual for the library
+is also avaliable via anonymous ftp from robios8.me.wisc.edu in the
+directory 
+/pub/techreports as tr.rl-95002.ps.gz.
+
+in case you need help...
+
+please contact one of the following people: 
+
+
+dan reznik (dreznik@cs.berkeley.edu) or susan hert (hert@cs.wisc.edu)
+
+
+
+
+
+simulation library (sl) version 2.0
+simulation library (sl) version 2.0
+simulation library (sl) version 2.0
+simulation library (sl) version 2.0
+simulation library (sl) version 2.0
+simulation library (sl) version 2.0
+simulation library (sl) version 2.0
+simulation library (sl) version 2.0
+simulation library (sl) version 2.0
+simulation library (sl) version 2.0

@@ -1,0 +1,1148 @@
+multimatlab
+
+multimatlab:
+		 matlab on multiple processors
+
+
+
+anne e. trefethen
+cornell theory center
+
+aet@tc.cornell.eduhttp://www.tc.cornell.edu/~anne
+
+vijay s. menon
+computer science department, cornell university
+
+vsm@cs.cornell.eduhttp://www.cs.cornell.edu/info/people/vsm
+
+chi-chao chang
+computer science department, cornell university
+
+chichao@cs.cornell.eduhttp://www.cs.cornell.edu/info/people/chichao/chichao.html
+
+grzegorz j. czajkowski
+computer science department, cornell university
+
+grzes@cs.cornell.eduhttp://www.cs.cornell.edu/info/people/grzes/grzes.html
+
+chris myerscornell theory center
+
+myers@tc.cornell.eduhttp://www.tc.cornell.edu/cserg/myers
+
+lloyd n. trefethen
+computer science department, cornell university
+
+lnt@cs.cornell.eduhttp://www.cs.cornell.edu/home/lnt
+
+
+abstract:
+matlab&#174, a commercial product of the mathworks, inc.,
+has become one of the principal languages of desktop scientific computing.
+a system is described that enables one to run matlab conveniently on
+multiple processors.  using short, matlab-style commands like
+eval, send, recv, bcast, min, and sum,
+the user operating within one matlab session can start matlab processes
+on other machines and then pass commands and data between between these
+various processes in a fashion that maintains matlab's traditional
+user-friendliness.   multi-processor graphics is also
+supported.  the system currently runs under mpich on an ibm sp2 or a
+network of unix workstations,
+and extensions are planned to networks of pcs.
+multimatlab is potentially useful for education in parallel programming,
+for prototyping parallel algorithms,
+and for fast and convenient execution of easily parallelizable
+numerical computations on multiple processors.
+
+
+
+keywords:
+matlab, multimatlab, sp2, message passing, mpi, mpich
+
+
+
+
+
+1. introduction
+
+1.1. the popularity of matlab
+
+matlab&#174 is a high-level language, and a problem-solving environment,
+for mathematical and scientific calculations.  it originated in the
+late 1970s with an attempt by cleve moler to provide interactive
+access to the fortran linear algebra software packages eispack and linpack.
+soon a programming language emerged (programs conventionally
+have the extension
+.m and are called "m-files") containing dozens of
+high-level commands such as
+svd (singular value decomposition),
+fft (fast fourier transform), and
+roots (polynomial zerofinding).
+graphical commands were built into the language, and a company
+called the mathworks, inc.
+was formed in 1984 by moler and john little,
+now based in natick, massachusetts.
+
+
+from the beginning, matlab proved greatly appealing to users.
+the numerical analysis and signal processing communities in the united states
+took to it quickly, followed by other groups of scientists and engineers
+in the u.s. and abroad.
+roughly speaking, the number of matlab users has doubled each year since 1978.
+according to the mathworks, there are currently about
+300,000 users in fifty countries, and this figure continues to increase rapidly.
+in many scientific and engineering communities,
+matlab has become the dominant language for
+desktop numerical computing.
+
+
+at least six reasons for matlab's success can be identified.
+the first is an exceptionally user-friendly, intuitive syntax, favoring
+brevity and simplicity at all turns without being so compressed as
+to interfere with intelligibility.  the second is the very high quality
+of the underlying numerical programs, a result of matlab's intimate
+ties from the beginning with the numerical analysis research community.  the third
+is powerful and user-friendly graphics.  the fourth is the high level
+of the language, which often makes it possible to carry out computations in a
+line or two of matlab that would require dozens or hundreds of lines
+in fortran or c.  (the ability to link with fortran or c programs
+is also provided.)  the fifth is matlab's easy extensibility via
+packages of m-files known as toolboxes.  many toolboxes have been produced
+over the years, both by the mathworks and
+by others, covering application areas
+such as optimization, signal processing, fuzzy logic, partial
+differential equations,
+and mathematical finance.  finally, perhaps the most
+interesting reason for matlab's success may be that from the beginning,
+the whole language has been built around real or complex vectors and
+matrices (including sparse matrices) as the fundamental data type.
+to computer scientists not involved with numerical computation, such
+a limitation may seem narrow and capricious,
+but it has proved extraordinarily fruitful.
+
+
+it is probably fair to say that one of the three or four most
+important developments in numerical computation in the past decade
+has been the emergence of matlab as the preferred language of tens of
+thousands of leading scientists and engineers.
+
+1.2. single vs multiple processors
+
+curiously, one of the other principal developments of the past
+decade has been orthogonal to that one.  this is the move
+from single to multiple processors.  a new generation of
+researchers and practitioners have
+grown up who are accustomed to the principle that high-performance computing
+means multi-processor computing -- a phenomenon attested to by
+the success of these supercomputing conferences.
+but this development and the emergence of matlab have been
+disjoint events, as matlab remains a language tied to
+a single processor.
+
+
+originally, matlab was conceived as an educational aid and as
+a tool for prototyping algorithms, which would then be translated into a
+"real" language.  the justifications for this point of view were
+presumably that matlab's capabilities were limited and
+that, being interpreted, it could not achieve the performance of a compiled
+language.  over the years, however, the force of these arguments
+has diminished.  so much matlab software is now available that matlab's
+capabilities can hardly be called narrow anymore; and as for performance,
+many users find that a degradation in speed by a factor between
+1 and 10 is more than made up for by an improvement
+of programming ease by a factor
+between 10 and 100.  in matlab, one effortlessly modifies the model,
+plots a new variable, or reformulates the problem in an interactive
+fashion.  such rapid real-time exploration is rarely feasible in fortran or c.
+
+
+thus, increasingly, matlab has become a language for
+"real" computing by scientists and engineers.
+but one sense has remained in which matlab is only a system for
+education and prototyping.  if one wants to take advantage of multiple processors,
+then one must switch to other languages.  experts, such as
+many of those participating in this conference, are in the habit
+of doing just this.
+others, less familiar with the rapidly-changing complexities of
+high-performance
+computing, remain tied to their matlab desktops, isolated from
+the trend towards multiprocessors.
+
+
+the vision of the multimatlab project has been to
+bridge this gap.  think of a user who finds him- or herself computing
+happily in matlab, but frustrated by the time it takes to rerun
+the program for six different boundary conditions, or a dozen
+different parameter choices, or a hundred different initial guesses.
+such a user's problems might be solved by a system that makes it convenient
+to spawn matlab processes on multiple processors of a parallel
+computer or a network of workstations or pcs.  in many cases the
+needs for communication between the processors are rather small.
+convenience of spreading the problem
+across machines and collecting the results numerically or
+graphically is paramount.
+
+
+the multimatlab project is exploring one approach
+for making this kind of computing possible.
+we do not at the outset aim for fine-grained parallelism or
+for peak performance of the kind
+needed for the grand challenge problems of computational science.
+instead, following the philosophy that has made matlab so successful,
+we require reasonable efficiency but
+put the premium on ease of use.  a key principle is that
+matlab itself -- not a home-grown facsimile, which would have little
+chance of keeping up with the ever-expanding
+features of the commercial product -- must be run on multiple processors.
+our vision is that a user must be able to learn enough in five
+minutes to become intrigued by the system and begin to use it.
+
+
+2. using multimatlab
+
+2.1. start, nproc, eval, id
+
+each multimatlab command begins with an initial upper-case letter.
+we illustrate how the system is used before describing its
+implementation.
+
+suppose the first author is sitting at her workstation in the
+theory center, connected
+to a node of the ibm sp2, running matlab.  after a time she decides
+to start matlab on five new processors.  she types
+
+
+start(5)
+
+
+matlab is then started on five additional processors taken from
+a predetermined list.
+or perhaps the second author is a sitting at a machine connected
+to cornell's computer science department network.  he
+types
+
+
+start(['gemini'; 'orion'; 'rigel'; 'castor'; 'pollux'])
+
+
+now matlab is started on the five processors with the names
+indicated.  (some names could be repeated, in which case multiple
+matlab processes would be started on a single processor.)
+in either case, when all the processes are started the message is returned,
+
+
+6 multimatlab processes running.
+
+
+this total number of processors can subsequently
+be accessed by the multimatlab command nproc.
+
+
+the standard multimatlab command for executing commands on
+one or more processors is eval.
+if the user now types
+
+
+eval( 'sqrt(2)' )
+
+then the matlab command sqrt(2) is executed
+on all six processors.
+the result is six repetitions of 1.4142,
+which is not very interesting.
+on the other hand the command
+
+
+eval( 'id' )
+
+calls the multimatlab command id
+on each of the processors running.  this command
+returns the number of the current process, an integer
+from 0 to nproc-1.  running it on all
+nodes might give the result
+
+
+ans = 0
+ans = 1
+ans = 5
+ans = 2
+ans = 3
+ans = 4
+
+the ordering of these numbers is arbitrary,
+since the processors are not synchronized and output
+is sent to the master process as soon as it is ready.
+(it is a good idea to
+type eval('format compact') at the beginning
+to keep the
+output from the various processes as condensed as possible.)
+the command
+
+
+eval( 'id^id' )
+
+might produce
+
+
+ans = 1
+ans = 1
+ans = 256
+ans = 3125
+ans = 27
+ans = 4
+
+
+in the above examples, in keeping with our orientation toward
+spmd programming, each command passed to eval was
+executed on all matlab processes.  alternatively, one can
+select a subset of the processes by passing two arguments to
+the eval command, the first being
+a vector of process ids.  thus
+
+
+eval( [4 5] , 'cond(hilb(id))' )
+
+might return
+
+ans = 1.5514e+04
+ans = 4.7661e+05
+,
+
+the condition numbers of the hilbert matrices of dimensions
+4 and 5, and
+
+
+eval( 0:2:4 , 'quad(''exp'',id,id+1)' )
+
+
+
+might return
+
+ans = 1.7183
+ans = 93.8151
+ans = 12.6965
+
+
+the integrals of ex from n to
+n+1 for n = 0, 2, and 4.
+note how the double quote is used to obtain a string
+within a string.  this calling of the matlab command
+quad gives a hint of the high-level power
+available that is so characteristic of matlab.  in this
+case, adaptive numerical quadrature has been carried out
+to compute the desired integral.  matlab users are
+accustomed to treating problems like integration, zerofinding,
+minimization, and computation of eigenvalues as routine
+matters to be handled silently by appropriate single-word commands.
+
+
+none of these examples were costly enough for the use of
+multiple processors to serve much purpose, but it is
+easy to devise such examples.  suppose we want to
+find the spectral radii (maximum of the absolute values of the
+eigenvalues) of six
+matrices of dimension 400.  the command
+
+
+eval( 'max(abs(eig(randn(400))))' )
+
+
+does not do the trick; we get six copies of the number
+20.8508, since the random number generators deliver
+identical results on all processors.  preceding the eigenvalue
+computation by
+
+
+eval( 'randn(''seed'',id)' ),
+
+
+however, leads to the result desired:
+
+
+ans = 20.9729
+ans = 20.8508
+ans = 21.0364
+ans = 21.0312
+ans = 21.6540
+ans = 20.4072
+
+(the spectral radius of an n by n
+random matrix is approximately the square root of n,
+for large n.)  in a typical experiment
+this example might run in 23 seconds on six thin
+nodes of our sp2; the elapsed time would be six times greater
+if one used a for loop on a single machine.
+of course, monte carlo experiments like this one are
+always the easiest examples of embarrassingly parallel computations.
+
+
+for simplicity, the examples above call eval
+with an explicit matlab command as an argument string.
+for most applications, however, a user will want to execute a program
+(an m-file) rather than a single line of text.  a command such as
+
+
+eval( 'filename' )
+
+achieves this effect.
+
+2.2. put, get
+
+so far, we have not communicated between processes except
+to send screen output to the master process.  of course, a nontrivial
+multimatlab system depends on such communication.
+
+
+one form of communication we have implemented is puts and gets,
+executable solely by the master matlab process.  for example,
+the command
+
+
+put(1:4,'a'),
+
+sends the matrix a from the master process 0
+to processes 1 through 4; an
+optional argument permits the name of a to
+be changed at the destination.  the command
+
+
+get(3,'b'),
+
+gets the matrix b back from process 3 to the master.
+
+
+2.3. send, recv, probe, barrier
+
+more general point-to-point communication is accomplished by send and receive
+commands, which can be executed on any of the matlab processes.
+for example, the sequence
+
+
+x = [pi pi^2];
+send(3,x)
+eval(3, 'recv' )
+
+
+passes a message containing a 2-vector from the master
+process to process 3, leading to the output
+
+
+3.1416   9.8696
+
+
+an optional argument can be added in recv
+to specify the source.  another optional argument may be added
+in both send and recv to
+specify a message tag so as to ensure that
+sends and receives are properly matched and to aid in error
+checking.
+the command
+
+
+probe,
+
+run on any process, again with optional source process
+number and message tag, returns 1 (true) if a message
+has arrived from the indicated source with the indicated tag,
+otherwise 0 (false).
+
+
+spmd programs can be built upon
+send and recv commands.  typically
+the program contains if and else commands
+that specify different actions for different processes.
+for example, suppose the m-file cycle.m consists of
+the following program:
+
+
+if id==0                % first process: send
+   a = 1
+   send(id+1,a)
+elseif id == nproc-1    % last process: receive and double
+   a = 2*recv
+else                    % middle processes: receive, double, and send
+   a = 2*recv
+   send(id+1,a)
+end;
+
+
+process 0 creates the variable a with value 1
+and sends it to process 1.  process 1 receives the message,
+doubles the value of a, and sends it along to process
+2; and so on.  if there are six processors the command
+eval( 'cycle' ) produces the output
+
+
+a = 1
+a = 2
+a = 4
+a = 8
+a = 16
+a = 32
+
+
+the processes run asynchronously, but since each
+send command is only executed after the corresponding
+recv has completed, the proper sequence of computations
+and final value 32 are guaranteed so long as all of the
+nodes are functioning.
+
+
+alternatively, a multimatlab command is
+available for explicit synchronization.  the command
+
+
+barrier
+
+
+returns only when called on each process.
+
+2.4. bcast, min, max, sum
+
+although send takes a vector of processor
+ids as its destination list, the underlying idea is
+that of point-to-point communication.  for more efficient
+communication between multiple processes, as well as greater
+convenience for the programmer, multimatlab also has various commands
+for collective communication.  these commands must be
+evaluated simultaneously on all processes.
+
+
+the bcast command is used to broadcast a matrix from
+one process to all other processes, using a tree-structured algorithm.
+for example,
+
+
+eval( 'bcast(1,id)' )
+
+
+returns the number 1 on all processes.  bcast is much more
+efficient than a corresponding send and recv.
+
+
+the same kind of a tree algorithm is used for various computations
+that reduce data from many processes to one.  for example, the commands 
+min, max, and sum
+compute vectors obtained by reducing data over the copies of a vector or
+matrix located on all processors.   thus the command
+
+
+eval( 'sum(1,[1 id nproc])' )
+
+
+executed on six processes will return the vector
+
+[6 15 36]
+
+to process 1.
+if the first argument is omitted, the result is returned (broadcast) to
+all processes.
+
+
+2.5. higher-level multimatlab commands
+
+the multimatlab commands described so far represent
+communication primitives as they are used in the
+message-passing paradigm of programming.  one of the aims of this
+project, however, is to provide also an interface at a higher level
+by building on these routines, hiding
+as much of the message passing as possible.
+
+
+we can do this
+by taking a data-parallel approach in a simplistic fashion.  we have
+developed a number of routines such as distribute and
+collect that
+allow a user to distribute a matrix or to collect a set of matrices
+into one large matrix.  these functions operate using a mask that
+indicates which processors hold which portions of the matrix.  this
+allows us also to develop routines such as shift
+and copy that are useful in data-parallel computing,
+keeping the communication to a more abstract level.
+
+
+additional geometry routines such as grid and coord
+have also been constructed that allow the user to create
+a grid of processors in 1,2 or 3 dimensions. these
+provide a powerful tool for more sophisticated parallel coding.  an optional
+argument on the communication routines allows communication within a
+given set of nodes, for example along a column or row of the grid.
+we do not give further details, as these facilities are under development.
+
+
+3. multiprocessor graphics
+
+one of the great strengths of matlab is graphics.  a primary
+goal of the multimatlab project has been to ensure that this
+strength carries over to multiprocessor computations.
+
+
+in many applications, the user will find it most convenient to
+compute on multiple processors but produce plots on the master 
+process, after sending data as necessary.  equally often, however,
+it may be desirable to produce plots in a distributed fashion that
+are then sent to the user's screen.  this can be particularly useful
+when one wishes to monitor the progress of computations on several
+processors graphically.
+
+
+we have found the following simple method of doing this to be very useful.
+as mentioned above, many calculations
+with a geometric flavor divide easily into, say, four or eight
+subdomains assigned to a corresponding set of processors.  we
+set up a matlab figure window in each process and arrange them in
+a grid on the screen.  this is easily done using standard matlab
+handle graphics commands, and we expect shortly to develop
+multimatlab commands for this purpose that are integrated with
+the grid operations mentioned earlier.
+
+
+the figure below shows an example of
+this kind of computing;
+in this case we have a 4 by 1 grid
+of windows.  in this particular example, what has been
+computed are the pseudospectra of a 64 by 64 matrix known as
+the "grcar matrix" [17]. 
+this is an easy application for multimatlab
+since the computation requires a very large number of floating point
+operations (1024
+singular value decompositions of dimension 64 by 64) but minimal communication
+(just the global minimum and maximum
+of the data with min and max,
+so that all panels can be on the same scale). 
+
+
+
+
+
+
+another kind of application that might benefit from this kind of graphics would be
+as follows.  suppose we wish to solve the wave equation by an explicit
+finite difference scheme and watch waves bounce around in the computational
+domain.   it is a straightforward matter to divide the computation into
+a grid of processors as in the figure above, communicating just one row
+or column of boundary data to adjacent processors at each step.  waves
+can then be seen to propagate from one window to another.  this kind
+of visualization can be very convenient for interactive experimentation, and
+higher-quality plots can be produced at selected time steps as necessary
+by sending data to a single processor.
+
+
+our second computed example illustrates the use of multiple
+figure windows for monitoring a process of numerical optimization.
+matlab contains powerful programs
+for minimization of functions of several variables; one of the original such
+programs is fminu.  unfortunately, such programs generally
+find local minima, not global ones.  if one requires the global minimum
+it is customary to run the search multiple times from distinct initial points,
+which in many cases might as well be taken to be random.  with sufficiently
+many trials leading to a single smallest minimum found over and over again,
+one acquires confidence that the global minimum has been found, but the
+cost of this confidence may be considerable computing time.
+
+
+such a problem is easily parallelizable, and the next figure
+shows a case
+in which it has been distributed to four processors.  a function
+f(x,y) of two variables has been constructed that has many local
+minima but just one global minimum, the value 0 taken at the origin.
+on each of four processors, the optimization is carried out from twenty
+random initial points, and the result is displayed in the corresponding figure
+window as a straight line from the initial guess to the converged value.
+the background curves are contours of the objective function 
+f(x,y).  note that in three of the windows, the smallest
+value obtained is f(x,y)=0.1935, whereas the fourth window
+has found the global minimum f(x,y)=0. 
+
+
+
+
+
+
+in these examples we have set up a grid of windows, one to each processor.
+as an alternative it might be desirable sometimes to have multiple matlab processes
+all draw to one common window.
+this arrangement is possible within xwindows, for example.  however,
+it is not possible within multimatlab at present, because a figure's window id
+is a read-only property in the current version of matlab, which cannot be
+set or reset by the user.
+
+
+
+4. implementation of multimatlab
+
+multimatlab is built upon 
+mpi
+(message passing interface), a
+highly functional and portable message passing standard
+[7,
+13].
+here is a brief description of how the system is put together.
+
+
+the system is written using 
+mpich,
+a popular and freely available implementation of
+mpi developed at argonne national laboratory and mississippi state university
+[6].
+in particular, multimatlab
+uses the p4 communication layer within mpich, allowing it to run over a
+heterogeneous network of workstations. in building upon mpich, we believe
+we have developed a portable and extensible system, in that anyone
+can freely get a copy of the software and it will run on many systems.
+versions of mpich are beginning to become available that run on pcs
+running windows, and we expect soon to experiment with
+multimatlab on those platforms.
+
+
+the multimatlab start command builds a p4 process group file
+of remote hosts, which are either explicitly specified
+by the user or taken from a default list, and then initializes mpich.
+matlab processes are then started on the remote
+hosts.  each process iterates over a simple loop, waiting for and
+executing commands received from the user's interactive
+matlab process.  the user may use a quit command to shut down the
+slaves and exit multimatlab.  additionally, if the user quits matlab
+during a multimatlab session, the slaves are automatically shut down.
+
+
+one limitation of mpi, which was not designed for this
+particular kind of interactive
+use, is that a running program cannot spawn additional processes.
+a consequence of this limitation is that once multimatlab is running
+on multiple processors, it is not possible to add further processors to the
+list except by quitting and starting again.
+it is expected that this limitation of mpi will be removed in
+the extension of mpi under development known as
+mpi 2.
+
+
+at the user level, multimatlab consists of a collection of
+commands such as send, for example.  such a command
+is written as a c file called send.c, which is interfaced
+to matlab via the standard
+matlab fortran/c/c++ interface system known as mex.
+within mpi, many variants on sends and receives are defined.
+multimatlab is currently built upon the standard send and receive variants,
+which employ buffered communication for most messages and synchronous
+communication for very large ones.  our underlying mpi sends and receives
+are both blocking operations, to ensure that no data is overwritten,
+but to the multimatlab programmer,
+the semantics is that recv is blocking
+while send is non-blocking.
+
+
+higher-level multimatlab commands are usually built on
+higher-level mpi commands.
+for example,
+bcast and
+min and
+max and
+sum are built on mpi collective communication routines,
+and grid
+and coord are built on mpi routines that support
+cartesian topologies.
+
+
+it should be stressed that multimatlab allows mpi
+routines direct access to matlab data.
+as a result, multimatlab does not incur any extra copying
+costs over mpich, so it is reasonable to expect that its
+efficiency should be comparable.  our experiments show
+that this is indeed approximately the case.  here are the
+results of a typical experiment:
+
+
+     size of matrix      round-trip latency
+     (# of doubles)        (milliseconds)
+                        mpich    multimatlab       
+       
+            25            2.5            4.7
+            50            2.1            6.7
+           100            2.8           12.6
+           200            4.4           15.1
+           400            9.3           20.0
+           800           18.2           21.1
+          1600           35.8           38.4
+          3200           80.8           81.9
+          6400          165.8          175.7
+         12800          339.6          360.8
+         25600          708.9          698.7
+         51200         1397.4         1406.0
+        102400         2744.7         2850.3
+
+     
+the table compares round-trip latencies for a multimatlab code with
+those for an equivalent c code using mpich, and reveals
+that multimatlab does add some overhead to that of mpich.
+the timings were obtained on the ibm sp2, not using the
+high-performance switch.
+this occurs because matlab performs memory allocation for
+received matrices.  it might be possible to alleviate
+this problem by maintaining a list of preallocated buffers, but
+we have not pursued this idea.
+
+
+5. related work
+
+many people must have thought about parallelizing matlab over the
+years.  according to moler's essay "why there isn't
+a parallel matlab," published in the mathworks newsletter
+in 1995 [14],
+he was involved with one of the earliest such
+attempts in the mid-1980s on an intel ipsc.  of course, a great
+deal has happened in distributed computing since then.
+
+
+our own first experiments were carried out in
+1993 (a. e. trefethen).  by making use of a fortran wrapper based
+on ibm's message passing environment (mpl), we ran matlab on
+multiple nodes of an ibm sp-1.  we were impressed
+with the power of this system for certain fluid mechanics
+calculations, and this experience ultimately led to our persuading
+the mathworks to support us in initiating the present project.
+
+
+we are aware of seven projects than have been undertaken elsewhere
+that share some of the goals and capabilities of multimatlab.
+we shall briefly describe them.
+
+
+the longest-standing related project, dating
+to before 1990, is the
+conlab (concurrent laboratory) system of k&aring;gstr&ouml;m
+and others at the university of ume&aring;, sweden
+[4,10].
+conlab is a fully-independent system with matlab-like
+notation that extends the matlab language with control
+structures and functions for explicit parallelism.
+conlab programs are compiled into c code with a
+message passing library, picl [5], and
+the node computations are done using lapack.
+
+
+
+a group at the center for supercomputing research and development
+at the university of illinois has developed
+falcon
+(fast array language computation), a programming
+environment that facilitates the translation of matlab code into
+fortran 90 [2,3].
+falcon employs compile time and run time inference
+mechanisms to determine variable properties such as type, structure,
+and size.  although falcon does not directly generate parallel code,
+the future aim of this project is to annotate the generated fortran 90
+code with directives for parallelization and data distribution.  a
+parallelizing fortran compiler such as
+polaris
+[1]
+may then use these directives to generate parallel code.
+
+another project, from the technion in israel,
+is matcom
+[12].
+matcom consists of a matlab-to-c++ translator and an
+associated c++ matrix class with overloaded operators.
+at present, matcom
+translates matlab only into serial c++, but one might hope to
+build a distributed c++ matrix class underneath it which would
+adhere to the same interface as the existing matrix class.
+
+
+a project known as the alpha bridge has been developed
+by alpha data parallel systems, ltd., in
+edinburgh, scotland [11].
+originally, in a system known as the matlab-transputer-bridge,
+this group ran a matlab-like language in parallel
+on each node of a transputer.
+the alpha bridge system is an enhancement of this idea in which
+high-performance risc processors are linked in a transputer network.
+a reduced, matlab-like interpreter runs on each node of the network
+under the control of a master matlab 4.0 process running on a pc.
+
+
+a fifth project has been undertaken not far from cornell
+at integrated sensors, inc. (isi) in utica, ny, a
+consulting company with close links to the us air force
+rome laboratories [9].  here matlab
+code is translated to c code with parallel library routines.
+this project (and product) aims at executing matlab-style programs
+in parallel for real-time control and related applications.
+
+
+the final two projects we shall mention, though not the most
+fully developed, are the closest to our own in concept.
+one is a system built by a group at the universities of rostock
+and wismar in germany
+[15,16].
+in this system matlab is run
+on various nodes of a network of unix workstations, with message
+passing communication via
+the authors' own system psi/ipc based on unix sockets.
+
+
+finally, the
+parallel toolbox
+is a system developed originally
+by graduate students pauca, liu,
+hollingsworth, and martinez at wake forest university in north
+carolina [8].
+this system is based upon the message passing system known as
+pvm.
+in the parallel toolbox, there is a level of indirection not present
+in multimatlab between
+the matlab master process and the slaves, a pvm
+process known as the pt engine daemon.  besides handling
+the spawning of new processes, the pt engine daemon also filters
+input and output, sending error codes to a pt error daemon that
+logs the error messages to a file.
+
+
+in summarizing these various projects, the main thing to be said
+is that most of them involve original implementations of a matlab-like
+language rather than the use of the existing matlab system itself.
+there are good reasons for this, if one's aim is high performance
+and an investigation of what the "ideal" parallel matlab-like
+system might look like.
+the disadvantage is that the existing matlab product is
+at present so widely used, and so extensive in its
+capabilities, that it may be unrealistic and inefficient
+to try to duplicate it.  instead, our decision has been to build upon
+matlab itself and produce a prototype that users can try as
+an extension to their current work rather than an alternative to it.
+as mentioned, this approach
+has also been followed by the rostock/wismar and wake forest
+university projects, using
+pvm or another message passing system rather than mpi.
+
+
+6. conclusions
+multimatlab can be summarized in a few words.
+we run matlab processes on multiple processors, with full
+access to all the usual capabilities such as toolboxes.
+these processes communicate via simple matlab-style commands built
+on mpi, with all message-passing details hidden as far as possible
+from the user.  both master/slave and spmd paradigms are implemented, and
+attention is paid to multiprocessor graphics.
+all of this happens without any changes in the matlab architecture;
+indeed, we have not had access to the matlab source code.
+
+
+it is a straightforward matter to install our current software
+on any network of unix workstations or
+sp2 system, provided that all the nodes are licensed to
+run matlab and there is a shared file system.
+we expect that extensions to networks of
+pcs running windows, based on appropriate implementations of mpi,
+are not far behind.  we hope to make our research code
+publicly available in the near future and will announce this
+event on the na-net electronic distribution list and elsewhere.
+based on reactions of users so far, we think that multimatlab
+will prove appealing to many people, both for enhancing the
+power of their computations and as an educational device for teaching
+message passing ideas and parallel algorithms.
+it gives matlab users easy access to message
+passing, here and now.  the parallel efficiency is not always
+as high as might be achieved, but for many applications it is
+surprisingly good.  we hope to address questions of performance
+in more detail in a forthcoming technical report.
+
+
+multimatlab is by no means in its final form.  this is an evolving
+project, and various improvements in functionality,
+for example in the areas of collective communications and
+higher-level abstractions, are under development.
+the current system also needs improvement in the area of robustness
+with respect to various kinds of errors,
+and in its documentation.
+we are guided in the development process by several
+projects underway in which multimatlab is being
+used by our colleagues for scientific computations.
+
+
+as we have mentioned in the text, several projects related to
+multimatlab are being pursued at other institutions,
+including conlab, falcon, the parallel
+toolbox, and others.  though the details of what will emerge
+in the next few years are of course not yet clear, we believe that the authors of
+all of these systems join us in expecting that it is inevitable
+that the matlab world will soon take the step from single
+to multiple processors.
+
+
+
+
+references
+
+&#160;[1]
+w. blume, et al.
+effective automatic parallelization with polaris.
+international journal of parallel programming. may 1995.
+
+
+&#160;[2] l. de rose, et al.
+falcon: an environment for the development of scientific libraries
+and applications.  proc. first intl. workshop on knowledge-based
+systems for the (re)use of program libraries, sophia antipolis,
+france, november 1995.
+
+
+&#160;[3] l. de rose, et al.
+falcon: a matlab interactive restructuring compiler.
+in languages and compilers for parallel computing, pp. 269-288.
+springer-verlag.  august, 1995.
+
+
+&#160;[4] p. drakenberg, p. jacobson, and
+b. k&aring;gstr&ouml;m.
+a conlab compiler for a distributed memory multicomputer.
+r. f. sincovec, et al., eds.,
+proc. sixth siam conf. parallel proc. for sci. comp., v. 2,
+pp. 814-821. 1993.
+
+
+&#160;[5] g. a geist, et al.
+picl: a portable instrumented communication library.
+tech. rep. ornl/tm-11130, oak ridge natl. lab., 1990.
+
+
+&#160;[6]
+w. gropp, e. lusk, n. doss, and a. skjellum.
+a high-performance, portable implementation of the mpi
+message passing interface standard.  parallel computing, to appear.
+
+
+&#160;[7]
+w. gropp, e. lusk,  and a. skjellum.
+using mpi.  mit press.  1994.
+
+
+&#160;[8] j. hollingsworth, k. liu, and paul pauca.
+parallel toolbox
+for matlab pt v. 1.00: manual and reference
+pages.
+wake forest university. 1996.
+
+
+&#160;[9] integrated sensors, inc. home
+page: http://www.sensors.com.
+
+
+&#160;[10] p. jacobson,
+b. k&aring;gstr&ouml;m, and m. r&auml;nnar. algorithm development for distributed memory
+multicomputers using conlab.
+scientific programming, v. 1, pp. 185-203.  1992.
+
+
+&#160;[11] j. kadlec and n. nakhaee.
+alpha bridge, parallel processing under matlab.
+second mathworks conference. 1995.
+
+
+&#160;[12] matcom, march 1996 release.
+http://techunix.technion.ac.il/~yak/matcom.html.
+
+
+&#160;[13] 
+message passing interface forum. mpi: a message-passing interface
+standard.  intl. j. supercomputer applics., v. 8. 1994.
+
+
+&#160;[14] c. moler.
+why there isn't a parallel
+matlab.
+mathworks newsletter. spring, 1995.
+
+
+&#160;[15] s. pawletta, t. pawletta, and w. drewelow.
+distributed and parallel simulation in an interactive environment.
+preprint, university of rostock, germany.  1995.
+
+
+&#160;[16] s. pawletta, t. pawletta, and w. drewelow.
+comparison of parallel simulation techniques -- matlab/psi.
+simulation news europe, v. 13, pp. 38-39. 1995.
+
+
+&#160;[17] 
+l. n. trefethen. pseudospectra of matrices.
+in d. f. griffiths and g. a. watson, numerical analysis 1991,
+longman, pp. 234--266. 1992.
+
+
+about the authors
+
+anne trefethen
+is associate director for scientific computational
+support at the cornell theory center.  from 1988 to 1992 she
+worked at thinking machines, inc., where she was one of the developers
+of the connection machine scientific software library.
+
+
+vijay menon,
+interested in parallelizing compilers, is a phd student of
+keshav
+pingali
+in the computer science department at cornell.
+
+
+chi-chao chang
+and greg czajkowski,
+interested in runtime systems, are phd students of
+thorsten von eicken
+in the computer science department at cornell.
+
+
+chris myers
+is a research scientist
+at the cornell theory center.  his research interests are in
+condensed matter physics and scientific computing.
+
+
+nick trefethen,
+a professor in the department of
+computer science at cornell, has been using matlab since 1980.
+his research interests are in
+numerical analysis and applied mathematics.
+
+
+acknowledgments
+
+for advice and comments concerning both the multimatlab project
+and this paper, we are grateful to 
+toby driscoll,
+bill gropp,
+xiaoming liu,
+cleve moler,
+barry smith,
+steve vavasis,
+and
+thorsten von eicken.
+
+
+this research was supported in part by the mathworks, inc.
+it was conducted in part using the resources of the cornell
+theory center, which receives major funding from the national
+science foundation (nsf) and new york state, with additional
+support from the defence advanced research projects agency (darpa),
+the national center for research resources at the national
+institutes of health (nih), ibm corporation, and other members
+of the center's corporate partnership program.  
+further support has been provided by
+nsf grant dms-9500975 and
+doe grant de-fgo2-94er25199 (l. n. trefethen),
+nsf grant ccr 9503199 (support of menon by pingali),
+arpa grant n00014-95-1-0977 (support of czajkowski by von eicken)
+and a doctoral fellowship (200812/94-7) from the brazilian research
+council (chang).
+
+
+
+multimatlab
+multimatlab
+multimatlab
+multimatlab
+multimatlab
+multimatlab
+multimatlab
+multimatlab
+multimatlab
+multimatlab

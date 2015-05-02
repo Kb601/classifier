@@ -1,0 +1,48 @@
+kristen summers -- document structure classification
+
+
+near-wordless document structure classification
+
+in proceedings of the international conference on document
+analysis and recognition (icdar '95), pp. 462 - 465, montr&eacute;al,
+august 1995.
+
+
+
+abstract
+automatic derivation of logical document structure from generic layout
+would enable a multiplicity of electronic document manipulation
+tools of a type that is becoming crucial to users who wish
+to browse the internet.
+this problem can be divided into segmentation (dividing the text
+into a hierarchy of pieces) and classification (categorizing
+these pieces as particular logical structures.)
+this paper proposes an approach to the classification of
+logical document structures, according to their
+distance from prototypes that are primarily geometric.  the
+prototypes consider linguistic information minimally,
+thus relying minimally on the accuracy of ocr and 
+decreasing language-dependence.  different classes of logical
+structures and the differences in the
+requisite information for classifying them are presented.
+a prototype format is proposed,
+existing prototypes and a distance measurement are described, and 
+performance results are provided.
+
+
+
+you can view the full postscript file
+or return to my home page.
+
+
+
+kristen summers -- document structure classification
+kristen summers -- document structure classification
+kristen summers -- document structure classification
+kristen summers -- document structure classification
+kristen summers -- document structure classification
+kristen summers -- document structure classification
+kristen summers -- document structure classification
+kristen summers -- document structure classification
+kristen summers -- document structure classification
+kristen summers -- document structure classification

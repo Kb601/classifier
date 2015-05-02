@@ -1,0 +1,270 @@
+princeton cs 333 advanced programming techniques, spring '96
+
+
+
+
+princeton cs 333 advanced programming techniques, spring '96
+
+
+
+ location
+ description
+ people
+ texts
+ syllabus
+ lecture notes and programs
+ programming assignments
+ programming project
+ resources
+ guest lecturers
+
+
+direct general questions to 
+cs333@phoenix.princeton.edu
+
+
+
+location
+
+computer science building, room 105, mw 1:30-2:50
+
+
+
+description
+
+cs 333 is a programming course that studies the construction of 
+real-world programs -- programs that robustly interact with their 
+users and with their computing environment.  
+the course is roughly organized into two sections: unix programming
+and 
+java
+programming.  the first section covers unix system calls,
+shells, and tools; the second section introduces and uses 
+the distributed programming language
+java.
+in the context of 
+java,
+we will study concurrency, graphics, user interfaces,
+and network programming. 
+
+
+
+the course emphasizes large-scale programming
+and program correctness.  throughout the term, guests will 
+augment the core material with lectures describing various software systems.
+
+
+
+the course catalog's description can be found in  
+here.
+
+
+
+people
+
+
+ instructor
+ lorenz huelsbergen
+(lorenz@cs.princeton.edu)
+(lorenz@research.att.com)
+ room: 407
+ phone: 258-4633 (908-582-4628)
+ office hours: mw 3:00-4:00, and by appointment
+
+ tas
+ drew dean
+(ddean@cs.princeton.edu)
+ room: 413
+ phone: 258-1797
+ office hours: tuth 2:00-3:00, and by appointment
+
+
+
+ jeff korn
+(jlk@cs.princeton.edu)
+ room: 217
+ phone: 258-0451
+ office hours: m 4:00-5:00, and by appointment
+
+ students
+
+
+
+
+
+recommended texts
+
+
+ the c programming language by kernighan and ritchie, prentice hall,
+isbn 0-13-110362-8.
+
+
+
+ writing solid code : microsoft's techniques for developing bug-free c programs by maguire, microsoft press, isbn 1-55615-551-4.
+
+
+
+
+tentative syllabus
+
+
+ week i:    introduction
+ feb. 5:   course organization, overview 
+(notes)
+ feb. 7:   processes, files, file systems, make.
+(notes,
+programs)
+ week ii:   shells
+ feb. 12:  shell programming.
+(notes,
+programs)
+ feb. 14:  programming a shell.
+(notes,programs)
+ week iii:  tools
+ feb. 19:  grep, sed; a ksh/sed/grep mailbot
+(notes)
+ feb. 21:  lex, yacc
+(notes)
+ week iv:   shell graphics
+ feb. 26:  tcl/tk
+(notes)
+ feb. 28:  visual basic
+(notes)
+ week v:    java
+ mar. 4:   java, top down (notes); 
+tksh
+ mar. 6:   java, bottom up; unix timers
+(notes)
+ week vi:   midterm week
+ mar. 11:  guest lecture, olin shivers
+ mar. 13:  in-class project proposals
+ week vii:  spring break
+ week viii:  advanced java
+ mar. 25:  java class libraries
+(notes)
+ mar. 27:  guest lecture, gene nelson
+ week ix: concurrency
+ apr. 1:   threads, synchronization
+(notes)
+ apr. 3:   guest lecture, john reppy
+ week x:  graphics
+ apr. 8:   java graphics
+(notes)
+ apr. 10:  guest lecture, dave macqueen
+ week xi: user interfaces
+
+ apr. 15:  java interaction
+(notes)
+ apr. 17:  guest lecture, guy jacobson
+(notes)
+ week xii:   network programming
+ apr. 22:  networked java (guest lecture, joann ordille)
+ apr. 24:  guest lecture, jim larus
+ week xiii:  whatever's left
+ apr. 29:  profiling, debugging, gc
+(notes); java security (drew dean)
+ may  1:   tba
+ week xiv:  reading period
+ week xv: project demos
+
+
+
+
+
+last lecture's notes and programs
+
+
+
+
+programming assignments
+
+send questions regarding assignments to 
+cs333@phoenix.princeton.edu
+
+
+
+there are four programming assignments; each constitutes 10% of the final
+grade.  the first three assignments address unix programming. the last
+assignment addresses java programming.  all assignments will be made and
+completed in the first half of the course, leaving the second half free
+for the programming project.
+
+assignment i
+
+
+
+assignment ii
+
+
+
+assignment iii
+
+
+
+assignment iv
+
+
+
+
+programming project
+
+a substantial programming project comprises 60% of the course's final
+grade. a project must be proposed, designed, implemented and documented
+in teams of three to five students.
+
+
+
+project timetable
+
+march 13, in-class proposals (15-20 minutes per team)
+april 8, written project specifications due (5 page maximum)
+week of april 22, code reviews (30-45 minutes per team) moved to the week of april 29
+week of may 20 (final's week), final project demos (30-45 minutes per team)
+
+
+
+project-demo signup
+
+project grading
+
+
+resources
+
+java links
+
+
+
+guest lecturers
+
+
+david dobkin
+guy jacobson
+jim larus
+dave macqueen
+gene nelson
+joann ordille
+john reppy
+olin shivers
+
+
+
+
+
+tue mar 14 12:27:13 est 1995
+
+lorenz@research.att.com
+
+
+
+
+
+princeton cs 333 advanced programming techniques, spring '96
+princeton cs 333 advanced programming techniques, spring '96
+princeton cs 333 advanced programming techniques, spring '96
+princeton cs 333 advanced programming techniques, spring '96
+princeton cs 333 advanced programming techniques, spring '96
+princeton cs 333 advanced programming techniques, spring '96
+princeton cs 333 advanced programming techniques, spring '96
+princeton cs 333 advanced programming techniques, spring '96
+princeton cs 333 advanced programming techniques, spring '96
+princeton cs 333 advanced programming techniques, spring '96

@@ -1,0 +1,381 @@
+ucla statistical series 
+
+cognitive systems laboratory: 
+publications 
+
+ (don't forget to sign our guestbook!)
+
+
+ 
+ ``a statistical semantics for causation''
+ technical report (r-155)
+j. pearl and t.s. verma
+in proceeding, 3rd international workshop on ai & statistics,
+fort lauderdale, fl, january 2-5, 1991. 
+also in statistics and computing, 2, chapman and hall, 91-95, 1992.
+
+ 
+ ``a theory of inferred causation''
+ technical report (r-156)
+j. pearl and t.s. verma
+in j.a allen, r. fikes, and e. sandewall (eds.), principles of
+knowledge representation and reasoning:  proceeding of the second international 
+conference, san mateo, ca:  morgan kaufmann, 441-452, april 1991.
+ a modified version was presented at the ninth international congress
+of logic, methodology, and philosophy of science, uppsala, sweden,
+august 7-14, 1991 and printed 
+in d. prawitz, b. skyrms, and d. westerstahl (eds.),
+logic, methodology and philosophy of science ix, elsevier
+science b.v., 789-811, 1994.
+
+ 
+ ``qualitative probabilities for default 
+reasoning, belief revision, and causal modeling''
+technical report (r-161-l)
+m. goldszmidt and j. pearl
+in artificial intelligence, vol. 84, no. 1-2, 57--112, 1996.
+
+ 
+ ``belief networks revisited'' 
+technical report (r-175)
+j. pearl
+in artificial intelligence, 59, 49-56, 1993.
+[invited submission -- special issue, ``ai in perspective'']
+
+ 
+ ``an algorithm for deciding if a set 
+  of observed independencies has a causal explanation''
+technical report (r-177)
+t.s. verma and j. pearl
+in proceedings of the  eighth conference on uncertainty in 
+artificial intelligence (uai-92), morgan kaufmann, san mateo, ca,
+323-330, july 1992.  
+ 
+ 
+ ``when can association graphs admit 
+   a causal explanation?''  
+technical report (r-183)
+j. pearl and n. wermuth
+in proceedings of the fourth international workshop on artificial
+intelligence and statistics, 141-150, january 1993.
+in p. cheeseman and w. oldford (eds.), selecting models and data, 
+artificial intelligence and statistics iv, springer-verlag, 205-214, 1994.
+
+ 
+ ``a calculus of pragmatic obligation'' 
+technical report (r-192)
+j. pearl
+presented at the aaai spring symposium on reasoning about mental 
+states, stanford, ca march 23-25, 1993.
+
+ 
+ ``graphical models, causality, and 
+intervention'' 
+[comments on: `linear dependencies represented by chain graphics' 
+   by d. cox and n. wermuth, and `bayesian analysis in expert systems' 
+   by d.j. spiegelhalter, a.p. dawid, s.l. lauritzen, and r.g. cowell], 
+technical report (r-195-ss)
+j. pearl
+in statistical science, vol. 8, 266-269, 1993.
+
+ 
+ ``aspects of graphical models 
+connected with causality,'' 
+technical report (r-195-ll)
+j. pearl
+in proceedings of the 49th session of the international statistical 
+institute, italy, tome lv, book 1, florence, 399-401, august 1993.
+
+ 
+ ``from bayesian networks to causal 
+networks''
+technical report (r-195-lll)
+j. pearl
+in a. gammerman (ed.) bayesian networks and probabilistic 
+reasoning, alfred walter ltd., london, 1994.
+
+ 
+ ``nonparametric bounds on causal effects 
+from partial compliance data'' 
+technical report (r-199)
+a. balke and j. pearl
+ucla cognitive systems laboratory, technical report r-199, september 1994.
+
+ 
+ ``universal formulas for treatment effects 
+from noncompliance data'' 
+technical report (r-199-a)
+a. balke and j. pearl
+in n.p. jewell, a.c. kimber, m.-l. lee, and g.a. whitmore (eds.),
+lifetime data:  models in reliability and survival analysis, kluwer
+academic publishers, dordrecht, 39-43, 1995.
+
+ 
+ ``on the statistical interpretation 
+of structural equations''
+technical report (r-200)
+j. pearl
+ucla cognitive systems laboratory, technical report r-200, july 1993. 
+
+ 
+ ``on the logic of iterated belief revision''
+technical report (r-202)
+a. darwiche and j. pearl
+in r. fagin (ed.), proceedings of the 1994 conference on theoretical 
+aspects of reasoning about knowledge (tark `94), pacific grove, ca, 
+5-23, march 13-16, 1994.  to appear in artificial intelligence.
+revised november 1996.
+
+ 
+ ``causal inference from indirect 
+experiments'' 
+technical report (r-203-l)
+j. pearl
+in symposium notes of the 1994 aaai spring symposium on artificial 
+intelligence in medicine, stanford, ca, march 1994.
+extended version in artificial intelligence in medicine journal,
+vol. 7, no. 6, 561-582, 1995.
+
+ 
+ ``symbolic causal networks for reasoning 
+about actions and plans''
+technical report (r-206)
+a. darwiche and j. pearl
+in symposium notes of the 1994 aaai spring
+symposium on decision-theoretic planning, 41-47, march 21-23, 1994.
+in proceedings of the twelfth national conference on artificial
+intelligence (aaai-94), seattle, wa, volume i, 238-244, 
+july 31 - august 4, 1994.
+
+ 
+ ``on the identification of nonparametric 
+structural models''
+technical report (r-207), revision iv
+j. pearl
+ucla cognitive systems laboratory, technical report r-207, november 1995.
+to appear in latent variable modelling with application to 
+causality, lecture notes series, springer verlag.
+
+ 
+ ``mediating instrumental variables'' 
+technical report (r-210)
+j. pearl
+ucla cognitive systems laboratory, technical report r-210, december 1993. 
+
+ 
+ ``a note on testing exogeneity of 
+instrumental variables'' 
+technical report (r-211-s), revision i
+j. pearl
+ucla cognitive systems laboratory, technical report r-211-s, december 1993. 
+
+ 
+ ``on the testability of causal models 
+with latent and instrumental variables'' 
+technical report (r-211-u)
+j. pearl
+in p. besnard and s. hanks (eds.), uncertainty in 
+artificial intelligence 11, morgan kaufmann, san francisco, ca, 
+435-443, 1995.
+
+ 
+ ``a probabilistic calculus of actions''
+technical report (r-212)
+j. pearl
+in r. lopez de mantaras and d. poole (eds.), proceedings of the tenth 
+conference on uncertainty in artificial intelligence (uai-94), 
+morgan kaufman, san mateo, ca, 454-462, 1994.
+
+ 
+ ``probabilistic evaluation of 
+counterfactual queries'' 
+technical report (r-213-a)
+a. balke and j. pearl
+in proceedings of the twelfth national conference on artificial 
+intelligence (aaai-94), seattle, wa, volume i, 230-237, 
+july 31 - august 4, 1994.
+
+ 
+ ``counterfactual probabilities: computational 
+methods, bounds, & applications''
+technical report (r-213-b)
+a. balke and j. pearl
+in r. lopez de mantaras and d. poole (eds.), proceedings of the 
+conference on uncertainty in artificial intelligence (uai-94), morgan 
+kaufmann, san mateo, ca, 46-54, july 29-31, 1994.
+
+ 
+ ``bayesian networks''
+technical report (r-216), revision i
+j. pearl
+in m. arbib (ed.), handbook of brain theory and 
+neural networks, mit press, 149-153, 1995.
+
+ 
+ ``three statistical puzzles'' 
+technical report (r-217), revision i
+j. pearl
+ucla cognitive systems laboratory, technical report r-217, may 1994.
+
+ 
+ ``causal diagrams for empirical research,'' 
+ technical report (r-218-b)
+j. pearl 
+in biometrika, vol. 82, no. 4, 669-709, december 1995.
+
+ 
+ ``causal diagrams for empirical research,'' 
+ technical report (r-218-b-l)
+j. pearl
+ucla cognitive systems laboratory, technical report r-218-b-l, january 1996.
+expanded version of a paper in biometrika, 1995 (r-218-b).
+
+ 
+ ``probabilistic evaluation of sequential 
+plans from causal models with hidden variables'' 
+technical report (r-219-u)
+j. pearl and james robins
+in p. besnard and s. hanks (eds.), uncertainty in artificial 
+intelligence 11, morgan kaufmann, san francisco, ca, 444-453, 1995.
+
+ 
+ ``causation, action, and counterfactuals,''
+ technical report (r-223-t)
+j. pearl
+in y. shoham (ed.), theoretical aspects of
+rationality and knowledge, proceedings of the sixth conference (tark 1996)
+the netherlands, 51--73, march 17-20, 1996.
+
+ 
+ ``causation, action, and counterfactuals,''
+ technical report (r-223-u)
+j. pearl
+presented at unicom seminar, london, april 3-5, 1995.
+in a. gammerman (ed.), computational learning and probabilistic 
+reasoning, john wiley and sons, new york, chapter, 15, 235-255, 1995.
+
+ 
+ ``testing identifiability of causal 
+effects,''
+technical report (r-226-u)
+d. galles and j. pearl
+in p. besnard and s. hanks (eds.), uncertainty in artificial 
+intelligence 11, morgan kaufmann, san francisco, ca, 185-195, 1995.
+
+ 
+ ``counterfactuals and policy analysis 
+in structural models''
+technical report (r-232-u)
+a. balke and j. pearl
+in p. besnard and s. hanks (eds.), uncertainty in artificial 
+intelligence 11, morgan kaufmann, san francisco, ca, 11-18, 1995.
+
+ 
+ ``graphical models for probabilistic and
+causal reasoning''
+technical report (r-236)
+j. pearl
+to appear in d. gabbay and p. smets (eds.), handbook on defeasible
+reasoning and uncertainty management systems, kluwer academic publishers,
+fall 1996.
+
+ 
+ ``structural and probabilistic causality''
+technical report (r-237)
+j. pearl
+in d.r. shanks, k.j. holyoak, and d.l. medin (eds.), 
+ the psychology of learning and motivation, vol. 34: causal learning 
+academic press, san diego, ca 393--435, 1996.
+
+ 
+ ``covariage selection:  a simple solution
+to a long-standing problem''
+technical report (r-238)
+j. pearl
+
+ 
+ ``axioms of causal relevance''
+technical report (r-240-s), january 1996
+d. galles and j. pearl
+preliminary version in  proceedings of the fourth international 
+conference on mathematics and ai, fort lauderdale, fl, 64--67, 
+january 1996.
+
+ 
+ ``axioms of causal relevance''
+technical report (r-240), january 1996
+d. galles and j. pearl
+revision i - submitted to artificial intelligence.
+
+ 
+ ``a clinician's apprentice for analyzing
+non-compliance,''
+technical report (r-241), january 1996
+d.m. chickering and j. pearl
+in proceedings of the national conference on artificial intelligence 
+(aaai-96), portland, or, 1269--1276, august 1996.
+
+``probabilistic counterfactuals: semantics, computation, 
+and applications,''
+technical report (r-242), november 1995.
+a. balke
+ph.d. thesis
+
+ 
+ ``identifying independencies in causal 
+graphs with feedback''
+technical report (r-243), march 1996
+j. pearl and  r. dechter
+submitted to uai-96.
+
+ 
+ ``on the foundation of structural
+equation models or when can we give causal interpretation to structural
+coefficients?''
+technical report (r-244-s), november 1996.
+j. pearl 
+
+``learning bayesian networks from data,''
+technical report (r-245), june 1996.
+d.m. chickering
+ph.d. thesis
+
+ 
+ ``bayesian networks''
+technical report (r-246), november 1996.
+j. pearl 
+to appear in mit encyclopedia of the cognitive sciences.
+
+
+return to
+ ucla cognitive 
+systems laboratory's homepage
+
+
+
+report requests are to be directed to:
+
+prof. judea pearl (judea@cs.ucla.edu)
+ucla computer science department
+4532 boelter hall
+los angeles, california 90024-1596
+(310) 825-3243
+
+
+
+
+
+
+
+
+
+ ucla statistical series 
+ ucla statistical series 
+ ucla statistical series 
+ ucla statistical series 
+ ucla statistical series 
+ ucla statistical series 
+ ucla statistical series 
+ ucla statistical series 
+ ucla statistical series 
+ ucla statistical series

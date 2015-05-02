@@ -1,0 +1,206 @@
+joseph m. hellerstein
+   
+
+
+
+ 
+
+joseph m. hellerstein
+
+assistant professor
+office: 685 soda hall
+phone: (510) 643-4011
+fax: (510) 642-5615
+email: jmh@cs.berkeley.edu
+address:
+
+university of california, berkeley
+eecs computer science division
+387 soda hall #1776
+berkeley ca 94720-1776
+
+
+
+
+
+research interests: database systems
+
+current projects
+
+
+the
+gist indexing project 
+
+
+
+
+generalized search trees (gists) for database systems and general use
+
+indexing for non-standard lookups and data domains
+
+indexability theory
+
+
+
+
+online
+aggregation 
+
+
+query processing techniques for online aggregation. 
+user interfaces for online display and control of long-running queries
+
+
+
+other research
+
+
+query processing 
+
+
+
+
+queries with expensive predicates
+
+cost-based optimization of nested queries
+
+job scheduling &amp; query optimization 
+
+
+active databases &amp; production rule systems 
+
+
+static analysis of production rule sets 
+
+programming tools for rule systems 
+
+
+
+
+
+
+recent papers 
+joseph m. hellerstein, peter j. haas and helen j. wang.  online
+aggregation.  submitted for publication.  
+postscript and  
+adobe pdf are available.
+andrea c. arpaci-dusseau, remzi h. arpaci-dusseau, david e. culler,
+joseph m. hellerstein and david a. patterson.  high-performance sorting on
+networks of workstations.  submitted for publication.
+postscript
+is available.
+marcel kornacker, c. mohan and joseph m. hellerstein.  concurrency
+and recovery in generalized search trees.  submitted for publication.
+postscript
+is available.
+joseph m. hellerstein, elias koutsoupias, and christos h. papadimitriou.  
+towards a theory of indexability.  submitted for publication.
+postscript, adobe pdf, and
+an html
+abstract are available.
+
+selected publications
+joseph m. hellerstein and jeffrey f. naughton. query execution
+techniques for caching expensive methods. proc. acm-sigmod international
+conference on management of data, montreal, june, 1996. postscript
+and an html
+abstract of the paper are available. 
+
+joseph m. hellerstein, jeffrey f. naughton and avi pfeffer. generalized
+search trees for database systems. proc. 21st international conference
+on very large data bases, zurich, september, 1995. postscript
+of the full tech report, postscript
+of the extended abstract appearing in vldb '95, and an html
+abstract are available. 
+
+joseph m. hellerstein. practical predicate placement. proc.
+acm-sigmod international conference on management of data, minneapolis,
+may, 1994. postscript
+and an html
+abstract of the paper are available. 
+
+alexander aiken, joseph m. hellerstein, and jennifer widom. static
+analysis techniques for predicting the behavior of active database rules.
+acm transactions on database systems (tods), july 1995. postscript
+of the full paper, and an html
+abstract are available. 
+
+a complete list of publications is also available.
+
+
+courses
+
+this semester i'm teaching cs186:
+introduction to database systems, an upper-level undergraduate course.
+
+
+
+seminars
+
+i have begun a database
+lunch seminar that meets weekly. 
+
+
+pithy quotes:
+
+&quot;laziness in doing stupid things can be a great virtue&quot; --
+james hilton, lost horizon
+
+&quot;sometimes we are confronted with more data than we can really
+use, and it may be wisest to forget and to destroy most of it&quot; --
+donald knuth, the art of computer programming
+
+&quot;concepts are delicious snacks with which we try to alleviate our
+amazement&quot; -- a. j. heschel, man is not alone
+
+
+
+
+points of interest:
+
+
+acm-sigmod home page
+
+
+sequoia 2000 home page
+
+
+berkeley
+dbms home page 
+
+wisconsin
+dbms home page 
+
+university of wisconsin computer
+sciences dept. 
+
+harvard university
+computer science 
+
+wnur-fm jazz information server
+
+
+hellerstein
+music page 
+
+eric dolphy
+page 
+
+
+
+last modified: $date: 1996/11/15 03:59:37 $ by joe hellerstein jmh@cs.berkeley.edu
+
+
+
+
+
+joseph m. hellerstein
+joseph m. hellerstein
+joseph m. hellerstein
+joseph m. hellerstein
+joseph m. hellerstein
+joseph m. hellerstein
+joseph m. hellerstein
+joseph m. hellerstein
+joseph m. hellerstein
+joseph m. hellerstein

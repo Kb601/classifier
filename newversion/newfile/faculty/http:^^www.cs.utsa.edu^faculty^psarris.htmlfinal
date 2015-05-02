@@ -1,0 +1,67 @@
+kleanthis psarris
+
+
+kleanthis psarris
+
+
+assistant professor 
+
+ph.d., stevens institute of technology, 1990 
+computer science 
+
+
+ professional service 
+associate editor, journal of computing and information
+program committee, 9th acm intl conf. on supercomputing 
+
+ areas of interest 
+compilers, programming languages, parallel computing
+
+ summary of research
+
+the major goal of our research is the development of fast restructuring 
+compilers for the automatic parallelization of sequential programs. our 
+objectives are the development of accurate data dependence analysis tests 
+in order to obtain exact data dependence information and to rule out 
+parallelism-restricting false dependences and the design of parallelism 
+detection and scheduling algorithms for the exploitation of the inherent 
+parallelism in sequential programs and their efficient execution on parallel architectures.  
+
+representative publications
+
+``on the accuracy of the banerjee test,''
+journal of parallel and distributed computing, 
+special issue on shared memory multiprocessors, (1991)  12(2):152-157,
+(with d. klappholz and x. kong).
+
+``the i test: an improved dependence test for automatic parallelization 
+and vectorization,''  ieee transactions on parallel 
+and distributed systems, 
+special issue on parallel languages and compilers, (1991)  2(3):342-349,
+(with x. kong, and d. klappholz). 
+
+``the direction vector i test,''  ieee transactions on parallel and 
+distributed systems, (1993)  4(11):1280-1290,
+(with x. kong, and d. klappholz). 
+
+``the banerjee-wolfe and gcd tests on exact data dependence 
+information,''  journal of parallel and distributed computing, 
+to appear.  
+
+``program repartitioning on varying communication cost parallel 
+architectures,''  journal of parallel and distributed computing, 
+to appear,
+(with s. pande). 
+
+
+
+ kleanthis psarris
+ kleanthis psarris
+ kleanthis psarris
+ kleanthis psarris
+ kleanthis psarris
+ kleanthis psarris
+ kleanthis psarris
+ kleanthis psarris
+ kleanthis psarris
+ kleanthis psarris

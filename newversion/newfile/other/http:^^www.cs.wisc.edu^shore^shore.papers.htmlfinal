@@ -1,0 +1,212 @@
+shore papers
+
+shore project related publications 
+
+all files are less than 300kb in size except as noted.
+
+
+
+
+
+ shoring up persistent applications 
+
+carey, m., dewitt, d., naughton, j., solomon, m., et. al,
+proc. of the 1994 acm sigmod conference,
+minneapolis, mn, may 1994.
+
+available as computer sciences technical report #1222.
+
+
+
+
+pointer swizzling techniques for object-oriented database systems
+
+
+seth john white, phd. thesis,
+september 1994.
+
+available as computer sciences technical report #1242 (500kb).
+
+
+
+the spiffi scalable video-on-demand system
+
+craig s. freedman and david j. dewitt
+
+proc. of the 1995 acm sigmod conference,
+
+available here (500kb)
+
+
+
+ spiffi -- a scalable parallel file system for the intel paragon
+
+freedman, c., burger, j., dewitt, d.
+
+to appear in transactions on parallel and distributed systems
+
+available here (500kb)
+
+
+
+an object-oriented implementation for database query optimization 
+
+navin kabra and david j. dewitt
+
+available here (800kb).
+
+
+
+ client-server pradise 
+
+dewitt, d., kabra, n., luo, j., patel, j. m., yu, j.,
+proc. of the 1994 vldb conference, santiago, chile, sept.  1994. 
+
+available here (1.5mb).
+
+
+
+oodb bulk loading revisited: the partitioned-list approach
+
+wiener, j. l., naughton, j. f.,
+
+submitted to vldb 1995.
+
+available here (650kb).  
+
+ bulk loading into an oodb: a performance study 
+
+wiener, j. l., naughton, j. f.,
+proc. of the 1994 vldb conference, santiago, chile, sept.  1994. 
+
+available as computer sciences technical report #1218a.
+
+
+
+ the gmap: a versatile tool for physical data independence 
+
+tsatalos, o., solomon, m. and ioannidis, y.
+
+proc. of the 1994 vldb conference, santiago, chile, sept.  1994.
+
+
+
+fine-grained sharing in a page server oodbms
+
+carey, m., franklin, m. and m. zaharioudakis,
+proc. of the 1994 acm sigmod conference,
+minneapolis, mn, may 1994.
+
+available as computer sciences technical report #1224.
+
+
+
+quickstore:  a high performance mapped object store
+
+white, s. and d. dewitt,
+proc. of the 1994 acm sigmod conference,
+minneapolis, mn, may 1994.
+
+available as computer sciences technical report #1241.
+
+
+
+storage reclamation and reorganization in client-server
+persistent object stores
+
+yong, voon-fee, naughton, j., and yu, j.,
+proc. of the 1994 ieee data engineering conference,
+houston, tx, february 1994.
+
+available here.
+
+
+
+parsets for parallelizing oodbms traversals:
+implementation and performance
+
+dewitt, d., naughton, j., shafer, j., venkataraman, s.,
+
+available here (500kb).
+
+
+
+the impact of declustering on memory management for parallel oodbms
+
+venkataraman, s., livny, m., and j. naughton,
+
+submitted to: data engineering 1995.
+
+
+the oo7 benchmark 
+
+carey, m., dewitt, d. and j. naughton,
+proc. of the 1993 acm sigmod conference,
+washington, d.c., may 1993.
+
+available as computer sciences technical report #1140 (700kb).
+
+
+
+client-server caching revisited
+
+franklin, m., and m. carey,
+proc. of the international workshop on distributed object
+management, edmonton, canada, august 1992.
+
+available as computer sciences technical report #1089.
+
+
+
+global memory management in client-server dbms architectures 
+
+franklin, m., carey, m., and m. livny,
+proc. of the 18th vldb conference,
+vancouver, canada, august 1992.
+
+available as computer sciences technical report #1094.
+
+
+
+a performance study of alternative object faulting and pointer
+swizzling strategies 
+
+white, s. and d. dewitt,
+proc. of the 18th vldb conference, vancouver, canada, august 1992.
+
+available as computer sciences technical report #1093.
+
+
+
+crash recovery in client-server exodus
+
+franklin, m., zwilling, m., tan, c., carey, m. and d. dewitt,
+proc. of the 1992 acm sigmod conference, san diego, ca, june 1992.
+
+available as computer sciences technical report #1081.
+
+
+
+
+
+see also:
+
+shore home page 
+
+documentation for the alpha release (version 0.1)
+
+ the uw-madison cs technical reports (on our ftp server)
+
+
+
+
+shore papers
+shore papers
+shore papers
+shore papers
+shore papers
+shore papers
+shore papers
+shore papers
+shore papers
+shore papers

@@ -1,0 +1,143 @@
+cs 302 section 70
+
+
+
+
+program 2
+your plastic pal who's fun to be with - sirius cybernetics corporation
+don't panic - hitchhiker's guide to the galaxy
+
+
+
+marvin the paranoid android is not a happy robot. he's been shot at, insulted, abandoned for billions of years, then grabbed to go back in time to where he started the whole wait from, now in a ship plunging straight into the heart of a sun...the only escape is a teleporter tube.
+
+the teleporter tube, however, is broken. fortunately, marvin (as he's fond of telling people) has the brains the size of a planet and can repair the teleporter if he can only get ahold of some spare parts. he'd better hurry, though, or he'll be melted like a smore in a campfire.
+over the next few assignments we'll be adding to this program to create a fully-playable game. for the moment, we'll only be designing the backbone for it, so some of the elements mentioned above won't be incorporated until a later assignment(for example, you'll note below there's no mention of spare parts...for this program, we'll have the tube working fine to begin with and no spare parts at all)
+
+
+due date:
+monday 10/1/96, 5:00 pm
+grade:
+3% of your final grade.
+text covered:
+chp. 2,3,4
+
+
+note: the program as i initially presented it was too complex for a single assignment. i've simplified the design here.
+
+
+
+this program has the following specifications:
+
+
+ the room is square, 5 space units by 5 space units.
+ marvin starts at the top left corner.
+ the teleporter tube is at the bottom right corner.
+ marvin can move n (north), w(west), s(south), and e(east).
+ also include an option q(quit), if you want to end the entire program.
+ each move is 1 time unit. if you enter an illegal move (either a bad command, or trying to move marvin through the wall), no time unit is charged.
+ if marvin fails to reach the teleporter in 25 moves, he's fried.
+
+
+display:
+
+no fancy grid here. here's a sample of my output:
+
+marvin is at 1    1
+marvin has made 0 moves out of 25
+what's marvin's next move?(n,s,e,w,q)
+'s'
+marvin is at 1    2
+marvin has made 1 moves out of 25
+what's marvin's next move?(n,s,e,w,q)
+'s'
+illegal command
+what's marvin's next move?(n,s,e,w,q)
+'w'
+marvin refused to go through the wall.
+what's marvin's next move?(n,s,e,w,q)
+'e'
+marvin is at 2    2
+marvin has made 2 moves out of 25
+what's marvin's next move?(n,s,e,w,q)
+
+feel free to spice up the output anyway you like, so long as the following are included:
+
+horizontal and verticlal coordinates of marvin.
+how many moves marvin's made out of how many possible (alternately, you can just print out how many moves he has *left*).
+a decent prompt.
+error messages for illegal commands and for illegal moves.note:remember that for characters, every command you give to marvin must be put in quotes, as shown in the output above.
+
+
+programming requirements:
+
+don't use literals in expressions. use constant parameters instead. for example, parameter(width=5) may represent the width of the room. we may be modifying the program for a future assignment, so it'll be easier to change these values here than having to go search for them several times within the program itself. what i want to see as parameters are:
+
+coordinates of the teleporter tube.
+coordinates of marvin's starting point.
+number of moves until the ship plunges into the sun.
+number of rows and columns on our plaing surface (the spaceship floor).
+number of time units that pass for each step marvin takes.
+
+in the future, we may be loading in from disk some mazes for marvin to move around, so he won't always start off at (1,1), nor will the tube always be at (5,5)...for that matter, our room can be a different size for each maze, and we can vary the time limit if we want. for now all these will be constants, hence we're making them parameters.
+do not use gotos! the good programming fairy takes a heavy dislike of any code written with gotos. don't mess with fairies; they turn code into frogs, and frogs begin with f.
+
+what to hand in:
+hand in your assignment online by copying your fortran source code file "program2.for" and the compiled executable file "program2.exe" to your handin directory.
+
+your files are timestamped with the current time when you copy them to your handin directory.  this will be used to check they were handed in on time or whether late day penalties apply. important - make sure you copy the correct versions of your program files because these are what will be graded.
+
+you also have to hand in a printed copy of your fortran source code file.
+gradesheet
+
+the following gradesheet will be used to grade this assignment.  please take a close look at it to make sure you do everything that is required.  note that you will be graded on correct output for the cases given below, so before handing it in you must run your program for the following cases  and manually check that your program gives the correct results in every case.in addition, 25 points (half of the total points for this assignment) will be taken off if you use gotos. you have been warned
+   
+correct cases                                                   [18]
+   marvin makes a legal move                             [3]
+   marvin is given an illegal command                    [3]
+   marvin is told to try to walk through a wall          [3]
+   marvin escapes                                        [3]
+   marvin fries                                          [3]
+   marvin quits the game early                           [3]
+
+user interface                                                  [6]
+   useful prompts for directions                         [3]
+   meaningful display of marvin's world (location, etc)  [3]
+
+implementation                                                  [20]
+   correct implementation of do and/or do/while          [4]
+   correct use of if/then or other conditionals          [4]
+   correct declarations of paramater constants           [4] 
+   meaningful variable names                             [2]
+   indenting and neatness                                [2]
+   correctness of overall program                        [4]
+
+documentation                                                   [6]
+   program description                                   [3]
+   variable definitions and section comments             [3]
+____________________________________________________________________
+
+total  (3%)                                                     [50]
+
+
+
+
+
+
+
+copyright &copy 1996 jeff lampert (tick@cs.wisc.edu).  last modified september 20, 1996.
+
+
+
+
+
+cs 302 section 70
+cs 302 section 70
+cs 302 section 70
+cs 302 section 70
+cs 302 section 70
+cs 302 section 70
+cs 302 section 70
+cs 302 section 70
+cs 302 section 70
+cs 302 section 70

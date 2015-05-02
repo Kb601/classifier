@@ -1,0 +1,123 @@
+first lisp assignment
+
+
+
+
+
+
+
+                 
+ next:  establishing your mscc 
+  
+  cs341, spring 1996 
+lisp assignment #0 
+assigned 3/25, (not to hand in).
+
+
+
+the assignment:
+ set up your mscc account 
+    (instructions here) and log on.
+ register yourself on the class mailing list
+    (instructions here).
+ find the course web.  hint:  
+http://www.cs.washington.edu/education/courses/341/
+
+ look at the tutorial on how to use the 
+      lisp/emacs interface
+      on the course web.   follow the instructions in the  getting
+      started section for setting up the initialization files.
+ start emacs.
+ open a buffer for a new lisp code file called 
+program.lisp
+ 
+to hold the code for the first asssignment.  you should notice on the 
+emacs status line at the bottom of the window that 
+a lot of ``fi'' code is getting loaded into emacs.
+(``fi'' stands for ``franz interface,'' and this is the emacs code 
+that manages the lisp editor buffers and the interaction between lisp 
+and the editor.)
+
+ type in the simple program here.   
+(you don't have to type in the comments if you don't want.)
+the main thing to notice while you're doing this is 
+that the emacs editor will help by indenting your code for you.  
+every time you hit a carriage return it will indent you on the next line.
+if you don't see the same indentation pattern as in the sample code, 
+you probably have too many or two few parentheses.
+
+ although you have now written a lisp program, you are not 
+yet running the lisp interpreter, so there's nobody around to 
+appreciate your great typing job.  start a lisp process now, as per 
+the instructions in the 
+lisp/emacs tutorial.
+
+ evaluate the program code. 
+instructions here; 
+also see the tutorial.  you have now 
+defined several functions, one for each  defun in the 
+program file, but you really only want to run one of them.
+
+ run the code by typing in 
+(play-one-round)
+
+(upper or lower case, it doesn't matter.)
+you will get an error message. try to figure out what is causing it.
+
+ fix the error in your editor buffer, re-load the buffer 
+and run the function again.  have fun playing this exciting 
+game!
+
+ the format function is a built-in lisp function that does
+formatted output.  try to figure out how it works.  (hint:  
+use the common lisp manual to get the manual page for  format. 
+the tutorial will tell you how.
+we'll discuss it in class.
+
+ if you're feeling bold, put all your new knowledge together and 
+write your first lisp program.  write
+a function that takes two numbers as arguments and prints their sum.
+it should behave something like this:
+    user(1): (print-sum 2 -7)
+    the sum of 2 and -7 is -5.
+    nil
+    user(2):
+
+(the user(1): is just a prompt from lisp telling you it's waiting 
+for input.)
+
+ discussion question for class:  what is this nil thing, 
+and why do we keep seeing it??!?
+
+
+
+
+ 
+ 
+  establishing your mscc account
+  putting yourself on the mailing list
+  the program
+  starting lisp
+  loading code into the lisp image
+    about this document ... 
+
+                
+ next:  establishing your mscc 
+  
+ 
+
+steve hanks 
+wed mar 27 11:22:38 pst 1996
+
+
+
+first lisp assignment
+first lisp assignment
+first lisp assignment
+first lisp assignment
+first lisp assignment
+first lisp assignment
+first lisp assignment
+first lisp assignment
+first lisp assignment
+first lisp assignment

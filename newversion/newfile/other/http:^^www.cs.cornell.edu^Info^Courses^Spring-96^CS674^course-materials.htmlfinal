@@ -1,0 +1,272 @@
+cs674 spring 1996 course materials
+
+
+
+
+
+cs674 spring 1996
+introduction to natural language understanding
+course materials
+
+
+
+
+
+handouts
+lecture slides
+homeworks
+project information
+
+
+
+
+handouts
+
+
+(tentative) course syllabus 
+
+course description and policies 
+
+
+
+lecture slides
+
+
+introduction to natural language understanding
+
+(jan 22)  introduction to the field of nlp (ch 1)
+
+(jan 24)  stages of processing
+
+
+syntactic analysis
+
+
+(jan 29) 
+	 grammars and sentence structure, top-down and bottom-up parsing (ch 3.1-3.3)
+(jan 31)  
+	 chart parsing (ch 3.4)
+(feb 5)   
+	 feature systems and augmented grammars  (ch 4.1-4.5)  
+(feb 7)  
+        human preferences in parsing, partial parsing  (ch 6.1, 6.5)
+
+
+semantic analysis
+
+(feb 12)  
+	word senses and ambiguity,representing verbs and states  
+	(ch 8.1-8.6)  
+(feb 14)  
+	thematic roles, semantic interpretation  (ch 9.1-9.4)
+(feb 19)  
+	selectional restrictions, handling intrasentential word sense ambiguity 
+	(ch 10.1--10.2) 
+
+
+conceptual sentence analysis
+(feb 21)  
+	the circus parser, preference semantics, data-driven semantics 
+
+
+context and world knowledge
+
+(feb 26) 
+   	the problem of inference, expectation-based text analysis (ch 15.1-15.7)
+(feb 28)  
+	using knowledge about action and causality, scripts 
+(mar 4)  
+ 	plan-based understanding of text  
+(mar 6) discourse context, history lists, centering (ch 14.1-14.3)
+	***guest lecture*** (scott mardis)
+
+
+current trends: evaluation, learning, statistics
+
+(mar 11)  
+        evaluating nlu systems  
+(mar 13)  
+        hmm's (ch 7.1-7.4)  
+ ***** spring break ***** 
+(mar 25) 
+        part-of-speech tagging  
+(mar 27) 
+        probabilistic context-free grammars, best-first parsing 
+        (ch 7.5-7.7)
+(apr 1) 
+        context-dependent best-first parsing, statistical word sense
+        disambiguation  (ch 10.4-10.6)  
+(apr 3) 
+        a localist connectionist approach to sentence analysis
+(apr 8) 
+	transformation-based error-driven learning and nlp
+(apr 10) corpus- and mrd-based methods for word-sense disambiguation
+	***guest lecture*** (julia komissarchik)
+(apr 15) information extraction as a basis for high-precision text categorization
+	no on-line slides for this lecture.
+(apr 17) a case-based approach to ambiguity resolution
+(apr 22) no class
+(apr 24) project presentations
+(apr 29) project presentations
+(may 1) project presentations
+
+
+homework assignments
+
+homework 1 (due wednesday, feb 7)
+homework 2 (due friday, feb 23)
+homework 3 (due friday, mar 15)
+	
+	example of thematic roles 
+	
+homework 4 (optional) 
+(due wednesday, mar 27) 
+
+
+
+project information
+
+
+what to turn in for the proposal
+
+project proposals are due on monday, march 11, 
+but i'd be happy to look at them before then.
+
+the project proposal should contain a short description of:
+
+
+ the topic/problem in which you're interested
+ the papers that you'll read (if you're doing a "reading" project)
+ a description of the general approach you plan to use to solve the problem
+ (if you're doing a "programming" project)
+ plan for evaluation of the theory/technique (for both types of project)
+
+
+
+
+
+
+what to turn in for the project
+
+official due date: friday 5/3.  we'll accept projects without penalty
+until 5:00, friday 5/10.
+
+programming projects:
+
+final writeup for programming projects (just a few pages):
+
+    problem description
+    description of general approach
+    description and results of evaluation
+    discussion. (what worked; what didn't work; options you'd
+	like to have tried; analysis of the results; etc.)
+    i'd also like to see any code that you wrote and a few short
+	traces of the system in action (if that makes sense for your project).
+
+
+
+
+in-class presentation: ~7 minutes in length. should include
+an overview of the problem; your solution; evaluation method and
+results. 
+
+
+
+non-programming projects:
+
+final writeup for non-programming projects. this will vary for
+each person, but in general, the final writeup for non-programming
+projects will probably contain a description of the problem that you
+looked at; a summary of the papers that you read; a critique of the
+existing approaches; your attempt at an evaluation of the the
+theory/algorithms presented in the papers on real text.
+
+
+
+in-class presentation: for non-programming projects, the
+in-class presentation should be a synopsis of what you'll include in
+the paper.  you'll have to leave a lot out of course...
+
+
+
+
+
+programming projects from last year's class
+
+grammar induction using genetic algorithms
+this project implements a grammar generator using genetic algorithms.
+
+autoslog and falcon:  automated lexicon construction
+this paper evaluates the performance of autoslog and falcon as lexicon
+constructors.
+
+a preposition attacher
+this project uses a matching algorithm for preposition attachment.
+
+statistical word sense disambiguation
+this project implements a number of related statistical methods for word-sense
+disambiguation and evaluates the method using examples from the brown corpus.
+
+automated english-esperanto translation
+this project implements a limited english-esperanto translator by extending
+james allen's bottom-up parser.
+
+an implementation of a method for word sense disambiguation
+this project implements a relaxation network approach (like circus's) for word-sense
+disambiguation. it is based on: large neural networks
+for the resolution of lexical ambiguity by j. veronis and n. ide.
+
+the viterbi algorithm and smoothing
+this project is an implementation of a part-of-speech tagger using a hidden
+markov model, a smoothed bigram language model, and the viterbi algorithm.
+
+
+reading projects from last year's class
+
+topics in intelligent multimedia/multimodal interface
+this paper examines two existing systems that incorporate intelligent
+multimedia/multinodal interfaces (wip and comet).
+using foil for wh-phrase disambiguation
+this paper examines ways to use foil for  wh-phrase disambiguation.  (foil is a
+supervised learning algorithm for acquiring concepts in first-order logic.)
+natural language understanding of the japanese language
+this paper summarizes issues for understanding japanese.
+approaches to automated question answering
+this paper addresses issues in understanding and replying to questions given
+in english.
+word boundary detection in continuous speech recognition: application of
+phonological constraints 
+this paper looks at three models that use broad class, phonemic sequence, and 
+allophonic constraints to facilitate word boundary detection.
+computer understanding of conventional metaphoric language
+this paper looks at midas (metaphor interpretation, denotation and acquisition system)
+for understanding conventional metaphor. 
+an analysis of transformation-based part of speech tagging
+this paper critiques the an article on transformation-based
+part of speech tagging.
+neural networks and nlu
+this paper looks at neural network applications for natural language understanding.
+pronominal anaphora resolution
+this paper describes four approaches to the computational task of resolving
+the pronoun referents.
+harmonic grammars and unaccusativity
+this paper looks at harmonic grammars developed by smolensky, legendre and
+miyata.
+
+
+
+
+
+return to cs674 home page
+
+
+cs674 spring 1996 course materials
+cs674 spring 1996 course materials
+cs674 spring 1996 course materials
+cs674 spring 1996 course materials
+cs674 spring 1996 course materials
+cs674 spring 1996 course materials
+cs674 spring 1996 course materials
+cs674 spring 1996 course materials
+cs674 spring 1996 course materials
+cs674 spring 1996 course materials

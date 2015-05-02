@@ -1,0 +1,684 @@
+robert cypher - publications
+
+robert cypher - publications
+
+
+
+papers in journals:
+
+
+
+
+
+ bounds on the efficiency of message-passing protocols for parallel
+computers. 
+r. cypher, s. konstantinidou, siam journal on computing (to appear).
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ fault-tolerant meshes with small degree. 
+j. bruck, r. cypher, c.t. ho, siam journal on computing (to appear).
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ a quantitative study of parallel scientific applications with
+explicit communication. 
+r. cypher, s. konstantinidou, a. ho, p. messina, the journal of supercomputing,
+vol. 10, no. 1, pp. 5-24 (1996).
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ on the construction of fault-tolerant cube-connected cycles 
+networks.
+j. bruck, r. cypher, c.t. ho, journal of parallel and distributed computing,
+vol. 25, pp. 98-106 (1995).
+
+
+
+ ccl: a portable and tunable collective communication library for 
+scalable parallel computers. 
+v. bala, j. bruck, r. cypher, p. elustando, a. ho, c.t. ho, s. kipnis, m. snir, 
+ieee transactions on parallel and distributed systems, vol. 6, no. 2, 
+pp. 154-164 (1995).
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ wildcard dimensions, coding theory and fault-tolerant meshes and 
+hypercubes. 
+j. bruck, r. cypher, c.t. ho, ieee transactions on computers, vol. 44, no. 1, 
+pp. 150-155 (1995).
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ the ibm external user interface for scalable parallel systems.
+v. bala, j. bruck, r. bryant, r. cypher, p. de jong, p. elustando, d. frye,
+a. ho, c.t. ho, g. irwin, s. kipnis, r. lawrence, m. snir,
+parallel computing, vol. 20, pp. 445-462 (1994).
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ storage-efficient, deadlock-free packet routing algorithms for 
+torus networks. 
+r. cypher, l. gravano, ieee transactions on computers, vol. 43, no. 12, 
+pp. 1376-1385 (1994).
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ requirements for deadlock-free, adaptive packet routing. 
+r. cypher, l. gravano, siam journal on computing, vol. 23, no. 6, 
+pp. 1266-1274 (1994).
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ embedding cube-connected cycles graphs into faulty hypercubes.
+j. bruck, r. cypher, d. soroker, ieee transactions on computers, vol. 43, 
+no. 10, pp. 1210-1220 (1994).
+
+
+
+ tolerating faults in a mesh with a row of spare nodes.
+j. bruck, r. cypher, c.t. ho, theoretical computer science, vol. 128, 
+pp. 241-252 (1994).
+
+
+
+ fault-tolerant de bruijn and shuffle-exchange networks. 
+j. bruck, r. cypher, c.t. ho, ieee transactions on parallel and distributed 
+systems, vol. 5, no. 5, pp. 548-553 (1994).
+
+
+
+ deterministic sorting in nearly logarithmic time on the hypercube and
+related computers. 
+r. cypher, g. plaxton, journal of computer and system sciences, special issue 
+for stoc 1990, vol. 47, pp. 501-548 (1993).
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ theoretical aspects of vlsi pin limitations.
+r. cypher, siam journal on computing, vol. 22, no. 2, pp. 356-378 (1993).
+
+
+
+ a lower bound on the size of shellsort sorting networks.
+r. cypher, siam journal on computing, vol. 22, no. 1, pp. 62-71 (1993).
+
+
+
+ fault-tolerant meshes and hypercubes with minimal numbers of 
+spares.
+j. bruck, r. cypher, c.t. ho, ieee transactions on computers, vol. 42,
+no. 9, pp. 1089-1104 (1993).
+
+
+
+ area-efficient architectures for the viterbi algorithm - part ii: 
+applications.
+b. shung, h. lin, r. cypher, p. siegel, h. thapar, ieee transactions on 
+communications, vol. 41, no. 5, pp. 802-807 (1993).
+
+
+
+ area-efficient architectures for the viterbi algorithm - part i: 
+theory. 
+b. shung, h. lin, r. cypher, p. siegel, h. thapar, ieee transactions on 
+communications, vol. 41, no. 4, pp. 636-644 (1993).
+
+
+
+ generalized trace-back techniques for survivor memory management in 
+the viterbi algorithm. 
+r. cypher, b. shung, journal of vlsi signal processing, vol. 5, no. 1, 
+pp. 85-94 (1993).
+
+
+
+ tolerating faults in hypercubes using subcube partitioning.
+j. bruck, r. cypher, d. soroker, ieee transactions on computers, special issue 
+on fault-tolerant computing, vol. 41, no. 5, pp. 599-605 (1992).
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ cubesort: a parallel algorithm for sorting n data items with 
+s-sorters.
+r. cypher, j. sanz, journal of algorithms, vol. 13, pp. 211-234 (1992).
+
+
+
+ data reduction and fast routing: a strategy for efficient algorithms 
+for message-passing parallel computers. 
+j. sanz, r. cypher, algorithmica, vol. 7, pp. 77-89 (1992).
+
+
+
+ the hough transform has o(n) complexity on n x n mesh connected 
+computers. 
+r. cypher, j. sanz, l. snyder, siam journal on computing, vol. 19, no. 5, 
+pp. 805-820 (1990).
+
+
+
+ algorithms for image component labeling on simd mesh connected 
+computers. 
+r. cypher, j. sanz, l. snyder, ieee transactions on computers, vol. 39,
+no. 2, pp. 276-281 (1990).
+
+
+
+ simd architectures and algorithms for image processing and computer 
+vision. 
+r. cypher, j. sanz, ieee transactions on acoustics, speech, and signal 
+processing, vol. 37, no. 12, pp. 2158-2174 (1989).
+
+
+
+ hypercube and shuffle-exchange algorithms for 
+image component labeling. 
+r. cypher, j. sanz, l. snyder, journal of algorithms, vol. 10, pp. 140-150 
+(1989).
+
+
+
+ an erew pram algorithm for image component labeling. 
+r. cypher, j. sanz, l. snyder, ieee transactions on pattern analysis and 
+machine intelligence, vol. 11, no. 3, pp. 258-261 (1989).
+
+
+
+ apex: two architectures for generating parametric curves and 
+surfaces. 
+t. derose, m. bailey, b. barnard, r. cypher, d. dobrikin, c. ebeling, 
+s. konstantinidou, l. mcmurchie, h. mizrahi, b. yost, 
+the visual computer, vol. 5, no. 5, pp. 264-276 (1989).
+
+
+
+
+
+
+
+papers in refereed conferences:
+
+
+
+
+
+ the communication requirements of mutual exclusion.
+r. cypher, proceedings 1995 acm symposium on parallel algorithms and 
+architectures, pp. 147-156.
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ minimal, deadlock-free routing in hypercubic and arbitrary 
+networks.
+r. cypher, proceedings 1995 ieee symposium on parallel and distributed
+processing, pp. 122-129.
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ efficient race detection for message-passing programs with nonblocking
+sends and receives. 
+r. cypher, e. leu, proceedings 1995 ieee symposium on parallel and distributed
+processing, pp. 534-541.
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ repeatable and portable message-passing programs. 
+r. cypher, e. leu, proceedings 1994 acm symposium on principles of distributed 
+computing, pp. 22-31.
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ ccl: a portable and tunable collective communication library for 
+scalable parallel computers. 
+j. bruck, r. cypher, p. elustando, a. ho, c.t. ho, v. bala, s. kipnis, m. snir, 
+proceedings 1994 international parallel processing symposium, pp. 835-844.
+
+
+
+ the semantics of blocking and nonblocking send and receive 
+primitives.
+r. cypher, e. leu, proceedings 1994 international parallel processing symposium,
+pp. 729-735.
+
+
+
+
+abstract
+
+
+postscript
+
+
+
+
+ bounds on the efficiency of message-passing protocols for parallel
+computers. 
+r. cypher, s. konstantinidou, proceedings 1993 acm symposium on parallel 
+algorithms and architectures, pp. 173-181.
+
+
+
+ fault-tolerant meshes with small degree. 
+j. bruck, r. cypher, c.t. ho, proceedings 1993 acm symposium on parallel 
+algorithms and architectures, pp. 1-10.
+
+
+
+ architectural requirements of parallel scientific applications with
+explicit communication. 
+r. cypher, s. konstantinidou, a. ho, p. messina, proceedings 1993 international 
+symposium on computer architecture, pp. 2-13.
+
+
+
+ wildcard dimensions, coding theory and fault-tolerant meshes and 
+hypercubes. 
+j. bruck, r. cypher, c.t. ho, proceedings 1993 international symposium on 
+fault-tolerant computing, pp. 260-267.
+
+
+
+ tolerating faults in a mesh with a row of spare nodes. 
+j. bruck, r. cypher, c.t. ho, proceedings 1992 ieee symposium on parallel and 
+distributed processing, pp. 12-19.
+
+
+
+ fault-tolerant embeddings of rings, meshes and tori in 
+hypercubes.
+a. wang, r. cypher, proceedings 1992 ieee symposium on parallel and distributed
+processing, pp. 20-29.
+
+
+
+ multiple message broadcasting with generalized fibonacci 
+trees. 
+j. bruck, r. cypher, c.t. ho, proceedings 1992 ieee symposium on parallel and 
+distributed processing, pp. 424-431.
+
+
+
+ hierarchical shuffle-exchange and de bruijn networks. 
+r. cypher, j. sanz, proceedings 1992 ieee symposium on parallel and distributed
+processing, pp. 491-496.
+
+
+
+ fault tolerant graphs, perfect hash functions and disjoint 
+paths.
+m. ajtai, n. alon, j. bruck, r. cypher, c.t. ho, m. naor, e. szemeredi,
+proceedings 33rd ieee symposium on foundations of computer science, 
+1992, pp. 693-702.
+
+
+
+ adaptive, deadlock-free packet routing in torus networks with minimal
+storage. 
+r. cypher, l. gravano, proceedings 1992 international conference on parallel 
+processing, vol. iii, pp. 204-211.
+
+
+
+ fault-tolerant de bruijn and shuffle-exchange networks. 
+j. bruck, r. cypher, c.t. ho, proceedings 1992 international conference on 
+parallel processing, vol. iii, pp. 46-50.
+
+
+
+ requirements for deadlock-free, adaptive packet routing. 
+r. cypher, l. gravano, proceedings 1992 acm symposium on principles of 
+distributed computing, pp. 25-33.
+
+
+
+ efficient fault-tolerant mesh and hypercube architectures. 
+j. bruck, r. cypher, c.t. ho, proceedings 1992 international symposium on 
+fault-tolerant computing, pp. 162-169.
+
+
+
+ embedding complete binary trees in faulty hypercubes.
+a. wang, r. cypher, e. mayr, proceedings 1991 ieee symposium on parallel and
+distributed processing, pp. 112-119.
+
+
+
+ fault-tolerant meshes with minimal numbers of spares.
+j. bruck, r. cypher, c.t. ho, proceedings 1991 ieee symposium on parallel and
+distributed processing, pp. 288-295.
+
+
+
+ a comparison of simd hypercube routing strategies. 
+m. fulgham, r. cypher, j. sanz, proceedings 1991 international conference on 
+parallel processing, vol. iii, pp. 236-243.
+
+
+
+ on the construction of fault-tolerant cube-connected cycles 
+networks.
+j. bruck, r. cypher, c.t. ho, proceedings 1991 international conference on 
+parallel processing, vol. i, pp. 692-693.
+
+
+
+ generalized trace-back techniques for survivor memory management in 
+the viterbi algorithm. 
+r. cypher, b. shung, proceedings 1990 ieee global telecommunications conference,
+pp. 1318-1322.
+
+
+
+ theoretical aspects of vlsi pin limitations.
+r. cypher, proceedings 6th mit conference on advanced research in vlsi, 
+pp. 314-327 (1990).
+
+
+
+ deterministic sorting in nearly logarithmic time on the hypercube and
+related computers. 
+r. cypher, g. plaxton, proceedings 22nd acm symposium on theory of computing, 
+pp. 193-203 (1990).
+
+
+
+ running algorithms efficiently on faulty hypercubes. 
+j. bruck, r. cypher, d. soroker, proceedings 1990 acm symposium on parallel 
+algorithms and architectures, pp. 37-44.
+
+
+
+ a lower bound on the size of shellsort sorting networks.
+r. cypher, proceedings 1989 acm symposium on parallel algorithms and 
+architectures, pp. 58-63.
+
+
+
+ algorithms for massively parallel image processing 
+architectures. 
+r. cypher, j. sanz, proceedings 9th international conference on pattern 
+recognition, pp. 412-419 (1988).
+
+
+
+ cubesort: an optimal sorting algorithm for 
+feasible parallel computers. 
+r. cypher, j. sanz, proceedings 1988 aegean workshop on computing, pp. 456-464.
+
+
+
+ optimal sorting on reduced architectures. 
+r. cypher, j. sanz, proceedings 1988 international conference on parallel 
+processing, vol. iii, pp. 308-311.
+
+
+
+ practical algorithms for image component labeling on simd mesh 
+connected computers. 
+r. cypher, j. sanz, l. snyder, proceedings 1987 international conference on 
+parallel processing, pp. 772-779.
+
+
+
+ the hough transform has o(n) complexity on simd n x n mesh array 
+architectures. 
+r. cypher, j. sanz, l. snyder, proceedings 1987 workshop on computer 
+architecture for pattern analysis and machine intelligence, pp. 115-121.
+
+
+
+ hypercube and shuffle-exchange algorithms for image component 
+labeling. 
+r. cypher, j. sanz, l. snyder, proceedings 1987 workshop on computer 
+architecture for pattern analysis and machine intelligence, pp. 5-10.
+
+
+
+ erew pram and mesh connected computer algorithms for image component 
+labeling. 
+r. cypher, j. sanz, l. snyder, proceedings 1987 workshop on computer 
+architecture for pattern analysis and machine intelligence, pp. 122-130.
+
+
+
+
+
+
+
+book:
+
+
+
+
+
+ the simd model of parallel computation. 
+r. cypher, j. sanz, springer-verlag, new york, ny, 1994.
+
+
+
+
+
+
+
+other publications:
+
+
+
+
+
+ survey of routing issues for the vulcan parallel computer.
+j. bruck, r. cypher, l. gravano, a. ho, c.t. ho, s. konstantinidou, e. upfal,
+ibm almaden, technical report, june 1992.
+
+
+
+ a proposal for the topology and wiring of the green vulcan.
+j. bruck, cypher, c.t. ho, e. upfal, ibm almaden, technical report, 
+february 1991.
+
+
+
+ techniques for shared key sorting. 
+r. cypher, g. plaxton, ibm almaden, technical report, march 1990.
+
+
+
+ efficient communication in massively parallel computers.
+r. cypher, ph.d. dissertation, dept. of computer science, u. of washington, 
+june 1989.
+
+
+
+ valiant's maximum algorithm with sequential memory accesses.
+r. cypher, dept. of computer science, u. of washington, technical report,
+april 1988.
+
+
+
+
+
+
+
+patents:
+
+
+
+
+
+ methods and apparatus for tolerating faults in mesh 
+architectures.
+j. bruck, r. cypher, c.t. ho, us patent no. 5,280,607, jan. 1994.
+
+
+
+ method and apparatus for a fault-tolerant mesh with spare 
+nodes.
+j. bruck, r. cypher, c.t. ho, us patent no. 5,271,014, dec. 1993.
+
+
+
+ a method of packet routing in torus networks with two buffers per 
+edge.
+r. cypher, l. gravano, us patent no. 5,444,701, aug. 1995.
+
+
+
+ a method for generating hierarchical fault-tolerant mesh 
+architectures.
+j. bruck, r. cypher, c.t. ho, us patent no. 5,513,313, apr. 1996.
+
+
+
+ new hierarchical interconnection networks for parallel 
+processing.
+r. cypher, j. sanz, us patent no. 5,513,371, apr. 1996.
+
+
+
+
+
+
+
+ return to home page
+
+
+
+last updated september 25, 1996.
+
+robert cypher - publications
+robert cypher - publications
+robert cypher - publications
+robert cypher - publications
+robert cypher - publications
+robert cypher - publications
+robert cypher - publications
+robert cypher - publications
+robert cypher - publications
+robert cypher - publications

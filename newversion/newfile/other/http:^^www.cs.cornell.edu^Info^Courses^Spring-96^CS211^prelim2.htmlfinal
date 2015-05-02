@@ -1,0 +1,71 @@
+topics for prelim 2 
+
+
+topics on prelim 2:
+
+i. object-oriented programming
+	+ base classes and derived classes
+	+ inheritence
+		- functions
+		- instance variables
+	+ protected keyword
+	+ constructors for derived classes
+	+ virtual functions
+	+ pure virtual functions
+
+ii. program correctness
+	+ induction
+	+ assertions
+	+ truth vs. validity
+	+ hoare triples
+	+ preconditions and postconditions
+	+ the assignment rule
+	+ loops
+		- loop invariants
+		- bound functions
+		- 5 steps to proving a loop correct
+		- developing a loop using an invariant
+			* you need to understand, but not memorize,
+			  the lists of step for these last two
+
+iii. gofer
+	+ types
+		- int, char, bool, float 
+		- tuples
+		- lists
+		- functions
+	+ function definitions
+		- basic pattern matching (integers)
+		- pattern matching with lists and tuples
+	+ where clauses
+	+ polymorphic types (a, [a], etc.)
+		- e.g. what is the type of map?
+	+ currying and partial application
+	+ the curry-howard isomorphism
+		- just kidding!
+		- did you know that currying was actually
+		  invented by schonfinkel?
+		- so it should be called schonfinkelization.
+	+ higher-order functions
+		- map
+		- filter
+	+ anonymous functions
+	+ lazy evaluation and infinite lists
+		- just the basic concept, nothing tricky
+	+ efficiency considerations
+		- e.g. fib recursively vs. tail recursively
+
+you do *not* need to know about list comprehensions.
+
+
+
+ topics for prelim 2 
+ topics for prelim 2 
+ topics for prelim 2 
+ topics for prelim 2 
+ topics for prelim 2 
+ topics for prelim 2 
+ topics for prelim 2 
+ topics for prelim 2 
+ topics for prelim 2 
+ topics for prelim 2

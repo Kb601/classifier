@@ -1,0 +1,114 @@
+cs 354 - quiz #1
+
+
+
+
+
+
+
+
+
+
+cs 354
+
+fall 1996 
+
+section 2 
+karen's solution
+
+
+quiz #1 for friday september 13
+
+3 questions, 25 points total
+
+
+
+
+1. (7 points)  your computer is running the following sal program.
+
+
+  .data
+msg1:     .asciiz "program started\n"
+msg2:     .asciiz "program ending\n"
+aa:       .word 0
+bb:       .word 6
+cc:       .word
+  .text
+__start:   puts msg1
+           bge  aa, bb, print_sum
+           add  cc, cc, aa
+           add  aa, aa, 1
+print_sum: put  cc
+           puts msg2
+           done
+
+
+just after the cpu fetches the instruction at label print_sum, the computer breaks. the circuitry in the pc update hardware fails such that the pc is never updated again.  what happens to the execution of the sal program?
+
+if the pc never changes (gets updated), then the cpu endlessly fetches and executes the instruction put cc.  in this case, cc has the value 0, so the program endlessly prints zeros.
+
+
+2. (8 points)  the following sal code contains a single error that causes it to execute incorrectly.
+
+
+  .data
+proc1_ra: .word
+msg:      .asciiz "program running. . ."
+int1:     .word
+int2:     .word
+int3:     .word
+  .text
+__start:  puts msg
+          move int1, 3
+          move int2, 20
+          la   proc1_ra, ra
+ra:       b    proc1
+          done
+
+proc1:    move int1, 3
+          move int2, 20
+          mul  int3, int2, int1
+          b    proc1_ra
+
+
+
+give an brief (1 sentence) explanation of what goes wrong with this code.
+
+the return from the procedure branches to proc1_ra (into the data section).
+
+
+show how to fix the code by adding to or modifying it.
+
+modify the instruction b proc1_ra to be
+
+ b (proc1_ra)
+
+
+3. (10 points)  write a sal code fragment that sums and then prints out the result of the integers in the range start . all variables are of type integer, and variables start and end are assumed to be assigned values before this code fragment is run.
+
+here is just one possible solution:
+
+
+
+          move sum, 0
+          move integer, start
+for:      bgt  integer, end, done_for
+          add  sum, sum, integer
+          add  integer, integer, 1
+          b for
+done_for: put sum
+
+
+
+
+
+cs 354 - quiz #1
+cs 354 - quiz #1
+cs 354 - quiz #1
+cs 354 - quiz #1
+cs 354 - quiz #1
+cs 354 - quiz #1
+cs 354 - quiz #1
+cs 354 - quiz #1
+cs 354 - quiz #1
+cs 354 - quiz #1

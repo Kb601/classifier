@@ -1,0 +1,87 @@
+cs514: homework 3
+
+
+cs514: homework 3
+collaboration.
+collaboration by up to three students is permitted on this assignment.
+when there is such a collaboration, a single solution should be submitted for grading and
+the solution should list the names of the collaborators.
+other collaborations will be considered violations of academic integrity.
+
+submission procedure.
+solutions must be submitted by email to:
+
+         cs514@cs.cornell.edu
+
+the solution may by formatted as ascii (i.e. plain text) or postscript.
+
+due date.
+we must receive your email by 8:00(am) on wed., april 3, 1996.
+late assignments will not be accepted.
+problem description 
+read rfc 821, the simple mail transfer protocol, and rfc 822, 
+standard for the format of arpa-internet text messages. rfcs can be
+retrieved from rs.internic.net using anonymous ftp. a selection
+of the rfcs is available at the departemental machines in the directory
+/vol/doc/internet.
+
+
+ 
+find out what a domain literal is from rfc 822. try sending a 
+mail message to yourself using one.
+include a copy of the message you received in your homework solution.
+click here for additional hints concerning this part of the
+assignment.
+ 
+excluding the connection establisment and termination, what is the
+minimum number of network round trips to send a small mail message?
+ 
+tcp is a full-duplex protocol, yet smtp uses tcp in a half-duplex 
+fashion. the client sends a command then stops and waits for the reply.
+why doesn't the client send multiple commands at once--for example, a single write
+that contains the helo, mail, rcpt, data and quit commands
+(assuming the body isn't too large)?
+ 
+consider an organization that is serviced by a collection of mail transfer agents.
+how can the dns mx records and preference values be used to implement
+a load balancing scheme for incoming electronic mail?
+
+
+this assignment requires using ftp to connect to machines outside the cs
+department firewall.
+there are two options for this:
+
+ use ncftp, a new interface to the ftp client. it automatically
+starts a connection in anonymous user mode, so that you do not have to
+type user names and mail addresses. it also requests that the peer machine
+use passive mode when transfering data, thereby allowing data to flow back 
+over the already established tcp connection (and avoiding problems
+with the firewall).
+
+ 
+if the remote ftp server does not support passive mode (something indicated
+if you do not get any response to a "dir" or "get" request) you will
+have to resort to the second option.
+use ftp to connect to the firewall machine (fw.cs.cornell.edu).
+when the program asks for a user name, respond with 
+"anonymous@remote.machine" but replacing remote.machine with the name of the 
+machine you want to reach. the firewall proxy server will then setup a 
+control connection and manage any future incoming data connections for your. 
+when a password is asked, do not type in your own password but instead type your 
+e-mail address.
+
+more information can be found in the tips-firewall manual page.
+
+
+
+
+cs514: homework 3
+cs514: homework 3
+cs514: homework 3
+cs514: homework 3
+cs514: homework 3
+cs514: homework 3
+cs514: homework 3
+cs514: homework 3
+cs514: homework 3
+cs514: homework 3

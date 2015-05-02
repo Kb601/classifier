@@ -1,0 +1,96 @@
+program 0 
+
+
+
+  program 0  
+
+ cs110 section 8
+ ta: michael birk
+  assigned:  tue 9/29/96
+  due:  tue 10/5/96
+
+ program 0 is designed to provide experience with the lab machines, the
+software we will be using, and the handin process.  you are not
+expected to write any c++ code on your own or understand the given code in
+any way.
+
+ this assignment does require, however, minimal working knowledge
+of microsoft windows.  if you are unfamiliar with windows and don't want
+to "jump right in," then check out the
+
+introduction to microsoft windows.
+
+ note: if you have difficulty at any point during
+this assignment, do not hesitate to ask the on-duty lab consultants for
+assistance.  that's what they're there for, and they need something to
+keep them busy during this first week. :-)
+
+ what to do 
+
+ first, you must go to the lab in 1350 comp sci & st and log in.  of
+course, since you're reading this now, you've probably gotten that far
+already!  after logging in, run borland c++ by double-clicking on its icon.
+since you will be starting a new program, choose "file" and then "new" from
+the menu.  this will bring up a blank editing window for you to enter your
+program.
+
+ now you are ready to type in the source code for program 0. the source code is
+found on page 21 of the savitch text book.  (in case you didn't bring your book, click here to see the source code.) type this program in exactly as it is
+written.  now, so that you know which program is yours when you print it out, add a
+comment (a line beginning with two slashes) at the top of your program with your name
+and other information.  for instance, the top few lines of your program might look something
+like this: 
+
+
+// john q. doe   cs110 section 7
+// program 0: sample c++ program
+
+
+ after you have entered the source code, give you program a name by
+choosing "file" and then "save as" from the menu.  (initially your program
+will have the rather mundane title of "noname00.cpp".)  in the window that
+pops up, type prog0.  this will save your source code in
+a file named "prog0.cpp" (borland c++ automatically adds the ".cpp" suffix,
+which stands for "c-plus-plus.")
+
+ now, compile and run the program by clicking on the small "lightning
+bolt" icon (or choose "debug" and then "run" from the menu).  this will bring up yet another
+window, which asks you to enter the number of "pods" and "peas in a pod," then calculates and
+prints the number of "peas in all."  afther this, the window becomes "inactive," meaning the
+program has finished and you should close the window by double-clicking on the box in the
+upper-left corner.
+
+ if, when trying to run your program, you get "errors" instead of a blank
+window, this means that you made a typo when entering the source code.  find
+the typo and fix it, and then try running the program again. the line
+number of the error message may give an indication of where the typo
+is.
+
+ try running the program a few times, entering different numbers. after
+you've tested the program and are certain it is working, print a
+hard copy by selecting "file" and then "print" from the menu.  click "ok" on
+the window which pops up.  this printout will show up on one of the laser
+printers in room 1359.  (unfortunately, there is no simple way to know which
+of the four printers it will be on.)
+
+ that's it!  hang on to the printout, and hand it in at the beginning of
+class on the due date.  you can now exit borland c++ by choosing "file" and
+then "exit" from the menu.  to log out of the system, choose "file" and then
+"exit windows" from the program manager window.
+
+
+ mbirk@cs.wisc.edu 
+
+
+
+
+ program 0 
+ program 0 
+ program 0 
+ program 0 
+ program 0 
+ program 0 
+ program 0 
+ program 0 
+ program 0 
+ program 0

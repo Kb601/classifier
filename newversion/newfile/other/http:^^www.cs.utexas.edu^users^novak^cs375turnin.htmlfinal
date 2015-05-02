@@ -1,0 +1,56 @@
+scanning the future
+
+
+
+
+
+cs375  assignment submission and grading policy
+ta: ms. evangeline fung yu young
+
+fyyoung@cs
+
+office hours:  mw 2:30 - 4:30, f 2:30 - 3:30,
+               ta station #2 (taylor hall basement)
+
+hand in a paper copy of your programs and test output in class.
+also use the program turnin to submit the homeworks.
+include a makefile or readme to show how to run your program.
+
+e.g. put the files into a subdirectory, cd to that directory,
+then enter:
+	turnin -submit fyyoung cs375 *
+(use /p/bin/turnin if /p/bin/ is not in your path.)
+
+for more information on turnin, enter
+        man turnin
+  or    /usr/local/bin/man turnin
+
+students will receive their grades and comments individually
+via email.  the paper copy may be marked by the ta.
+
+the grade will be determined by the following criteria:
+good:
+        correct results
+	good comments
+        clean, elegant, short, bomb-proof code
+	extra features (e.g. optimization, good code generation)
+	...
+bad:
+	incorrect/unfinished
+	no comments
+	poor program structure/design
+	inefficient code
+	...
+
+  
+
+scanning the future
+scanning the future
+scanning the future
+scanning the future
+scanning the future
+scanning the future
+scanning the future
+scanning the future
+scanning the future
+scanning the future

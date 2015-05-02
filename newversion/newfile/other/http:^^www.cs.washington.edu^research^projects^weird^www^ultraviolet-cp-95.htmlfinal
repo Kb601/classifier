@@ -1,0 +1,63 @@
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces
+
+
+
+
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces
+
+
+
+authors: alan borning and bjorn n. freeman-benson
+
+
+
+in  proceedings of the first international conference on principles and
+practice of constraint programming, september 1995, ugo montanari and
+francesca rossi (eds), springer lncs 976, pages 624-628.
+
+
+
+
+abstract
+
+envy/constraints is an ibm/smalltalk library that provides a constraint
+satisfier and a collection of useful constraints, targeted at developing
+interactive graphical user interfaces.  the solver supports multi-way
+constraints and constraint hierarchies.  it uses a hybrid algorithm,
+combining local propagation with pluggable cycle solvers, allowing
+constraints to range over arbitrary objects, while at the same time
+satisfying constraints representing simultaneous equations over the reals.
+
+
+
+
+
+click 
+here to get the postscript file.
+
+
+
+return to constraints home page
+
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces
+the oti constraint solver: a constraint library for constructing
+  interactive graphical user interfaces

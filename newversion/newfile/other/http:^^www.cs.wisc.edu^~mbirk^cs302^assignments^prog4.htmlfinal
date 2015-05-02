@@ -1,0 +1,185 @@
+program 4 
+  program 4  
+
+
+
+
+ cs302 section 12
+ ta: michael birk
+  assigned:  tue 10/15/96
+  due:  tue 10/22/96
+
+
+ for this assignment, you will write a program that is capable
+of drawing a variety of shapes.  the shapes supported by your program
+include a square, a rectable, an isoscoles triangle, and a diamond.
+each shape can be printed "solid" or "hollow" using any desired
+character.
+
+ your program should be menu-driven, so that the user is repeatedly
+presented with a menu of their options - the various shapes to print,
+and the current settings of the options (solid or hollow and printing
+character).
+
+ you should also check for invalid input.  if the user enters 
+invalid input, you should display an error message and promt the user
+to re-enter the information.
+
+ note: in general, code "duplication" is bad - you don't want to
+have identical or very similar code repeated throughout your program
+if it isn't necessary.  instead, you should try writing one function
+which does the job.  often it is necessary to generalize that function
+by adding more parameters.  for this program, you don't
+need separate hollow and solid printing functions for each of the
+different shapes!  in addition, it is possible to put the
+valid-input-checking code in one function and avoid duplicating it all
+over the place.
+
+ what to hand in 
+
+ you should hand in your source code, and the program's output showing
+all four shapes being printed in both solid and hollow mode.
+the overall format of the output should be very similar to the sample output
+below.
+
+ notes and hints 
+
+
+   your menu should display the current printing character
+       and whether you are in hollow or solid mode.
+   you must document all of the functions in your program with
+       comments; this documentation should explain what the function does,
+       what the meanings of the inputs and outputs are, and what side
+       effects the function has.
+   do not use any global variables in your program; all variables
+       should be local to a function.  use function parameters to pass
+       information into a function.
+   for each shape, choose minimum and maximum values for the number
+       of rows, width, etc.  use a loop to check that the value given by
+       the user is in the correct range.
+   the square is just a special case of the rectangle with the same
+       width and height.
+
+
+ sample output 
+
+
+welcome to john q. doe's shape-printing program!  here are your
+options:
+
+d - print a diamond shape   c - change character (currently *)
+q - print a square          h - switch between hollow/solid
+r - print a rectangle           (currently solid)
+t - print a triangle        x - exit program
+
+what is your selection? q
+how many rows? 3
+
+   ***
+   ***
+   ***
+
+
+d - print a diamond shape   c - change character (currently *)
+q - print a square          h - switch between hollow/solid
+r - print a rectangle           (currently solid)
+t - print a triangle        x - exit program
+
+what is your selection? r
+how many rows? 2
+how many columns? 12
+
+   ************
+   ************
+
+
+d - print a diamond shape   c - change character (currently *)
+q - print a square          h - switch between hollow/solid
+r - print a rectangle           (currently solid)
+t - print a triangle        x - exit program
+
+what is your selection? c
+what character to print with? &
+
+what is your selection? d
+what size diamond? 3
+
+     &
+    &&&
+   &&&&&
+    &&&
+     &
+
+
+d - print a diamond shape   c - change character (currently &)
+q - print a square          h - switch between hollow/solid
+r - print a rectangle           (currently solid)
+t - print a triangle        x - exit program
+
+what is your selection? h
+now in hollow mode.
+
+
+d - print a diamond shape   c - change character (currently &)
+q - print a square          h - switch between hollow/solid
+r - print a rectangle           (currently hollow)
+t - print a triangle        x - exit program
+
+what is your selection? t
+how many rows? -1
+
+-1 is not a valid size.  please try again.
+
+how many rows? 5
+
+       &
+      & &
+     &   &
+    &     &
+   &&&&&&&&&
+
+
+d - print a diamond shape   c - change character (currently &)
+q - print a square          h - switch between hollow/solid
+r - print a rectangle           (currently solid)
+t - print a triangle        x - exit program
+
+what is your selection? z
+
+z is not a valid menu choice!
+
+what is your selection? c
+what character to print with? %
+
+what is your selection? r
+how many rows? 4
+how many columns? 8
+
+   %%%%%%%%
+   %      %
+   %      %
+   %%%%%%%%
+
+
+d - print a diamond shape   c - change character (currently %)
+q - print a square          h - switch between hollow/solid
+r - print a rectangle           (currently solid)
+t - print a triangle        x - exit program
+
+what is your selection? x
+goodbye!
+
+
+
+
+
+ program 4 
+ program 4 
+ program 4 
+ program 4 
+ program 4 
+ program 4 
+ program 4 
+ program 4 
+ program 4 
+ program 4

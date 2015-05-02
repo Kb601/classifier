@@ -1,0 +1,87 @@
+cse 322: assignment 9 solution set
+
+
+
+
+
+
+
+                 
+ next:    about this document 
+  
+ cse 322 winter 1996: assignment 9 solution set
+
+
+let  and
+ be nfas.
+construct a new nfa m that accepts the language
+
+
+let  where
+for all , , 
+
+
+ behavioral lemma: 
+for all , ,
+, , and
+, 
+
+if and only if
+
+and
+.
+
+
+suppose  is regular.
+if we intersect l with any regular language, the resulting
+language is also regular.
+for instance,  is regular.
+but , and we know that
+this language is not regular from class.  this is a contradiction
+so l must not be regular.
+
+
+show that the language  is not regular.
+
+assume l is regular, and let  
+be a dfa that accepts l.  suppose q contains n states.
+consider the computation of m on any string of length n or more.
+because there are only n total states, some state will be visited more
+than once during the computation.  for example, when m processes the
+string , the computation looks like this:
+
+for some , , and .  
+because we visit the same state twice, we can remove 
+ from the string and still end in the same state:
+
+this means that .  however,
+.  also, note that
+since  and , 
+2n+1 must be greater than j-i.  this means that
+.  so  falls strictly between
+ and , two consecutive perfect squares.
+therefore,  is not a perfect square and
+.  this is a contradiction, 
+so l must not be regular.
+
+ 
+ 
+    about this document ... 
+
+ 
+
+james fix 
+wed mar  6 11:11:44 pst 1996
+
+
+
+cse 322: assignment 9 solution set
+cse 322: assignment 9 solution set
+cse 322: assignment 9 solution set
+cse 322: assignment 9 solution set
+cse 322: assignment 9 solution set
+cse 322: assignment 9 solution set
+cse 322: assignment 9 solution set
+cse 322: assignment 9 solution set
+cse 322: assignment 9 solution set
+cse 322: assignment 9 solution set

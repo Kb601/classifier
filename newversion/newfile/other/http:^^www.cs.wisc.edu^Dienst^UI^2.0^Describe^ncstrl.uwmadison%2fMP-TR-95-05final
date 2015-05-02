@@ -1,0 +1,37 @@
+hybrid misclassification minimization 
+hybrid misclassification minimization 
+ chunhui chen and  o. l. mangasarian
+mp-tr-95-05
+february 1995
+
+ given two finite point sets \sa and \sb in the n-dimensional real space r^n, we consider the np-complete problem of minimizing the number of misclassified points by a plane attempting to divide r^n into two halfspaces such that each open halfspace contains points mostly of \sa or \sb. this problem is equivalent to determining a plane \{ x \mid x^t w= \gamma \} that maximizes the number of points x \in  \sa satisfying x^t w > \gamma, plus the number of points x \in \sb satisfying x^t w . a simple but fast algorithm is proposed that alternates between (i) minimizing the number of misclassified points by translation of the separating plane, and (ii) a rotation of the plane so that it minimizes a weighted average sum of the distances of the misclassified points to the separating plane. existence of a global solution to an underlying hybrid minimization problem is established. computational comparison with a parametric approach to solve the np-complete problem indicates that our approach is considerably faster and appears to generalize better as determined by tenfold cross-validation.
+
+how to view this document
+
+
+display the whole document in one of the following formats.
+
+postscript
+ 55123 bytes. (compressed on disk, will be sent uncompressed)
+
+
+
+print or download all or selected pages.
+
+
+
+ you are granted permission for the non-commercial reproduction, distribution,display, and performance of this technical report in any format, but thispermission is only for a period of 45 (forty-five) days from the most recenttime that you verified that this technical report is still available fromthe computer science department of the university of wisconsin - madison underterms that include this permission.  all other rights are reserved by theauthor(s). 
+[ search
+ ]
+
+ncstrlthis server operates at uw madison computer sciences technical reports . send email to www@cs.wisc.edu 
+hybrid misclassification minimization 
+hybrid misclassification minimization 
+hybrid misclassification minimization 
+hybrid misclassification minimization 
+hybrid misclassification minimization 
+hybrid misclassification minimization 
+hybrid misclassification minimization 
+hybrid misclassification minimization 
+hybrid misclassification minimization 
+hybrid misclassification minimization

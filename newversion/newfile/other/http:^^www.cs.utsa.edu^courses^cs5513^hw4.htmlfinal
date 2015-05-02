@@ -1,0 +1,72 @@
+homework 4
+
+
+
+
+
+
+
+homework 4 
+
+due nov 5, 1996
+
+
+ (10 points) assume that in dlx (figure 3.44) all
+arithmetic functional units (such as
+the integer alu, fp adder, int/fp multiplier and the int/fp divider)
+are fully pipelined. all functional units are completely independent,
+i.e., they do not share any of the stages. all functional units
+consume their operands at the very first ex stage. argue that
+if there are n stages in a functional unit, the latency
+for that unit producing a value and any unit (same or different)
+consuming the same value is n-1; however, the latency for
+that unit producing a value and a store instruction consuming
+the same value as  memory data  is n-2. (hint: the
+answer is in the book.) 
+
+will the same latencies be true if operands
+are not consumed at the very first ex stage? explain.
+
+ (10 points) solve problem 4.1.
+
+ (15 points) solve problem 4.10.
+
+ (10+15+20+20 points) solve problems 4.14 (a), (b), (c) and (g). 
+
+ hints:  for parts (a) and (b) assume the classic pipeline as in
+figure 3.44 with latencies as suggested. assume all possible 
+forwarding. 
+
+for part (c), notice that in
+scoreboarding as described in the text, the mem stage is conspicuously
+absent. since we need to follow the text, assume that memory accesses
+are made in the ex cycle for load/store in addition to the effective
+address calculation. so any integer operation including loads take only
+4 cycles (id1,id2,ex,wb) in the absence of any stalls. do not track the
+branch as suggested. assume that it is taken and issue instructions 
+from the next iteration if possible. for scoreboarding the only 
+forwarding you can assume is via the register file, i.e., you can write/read
+the value in the same cycle. thus to be consistent with given latencies
+assume that the number of ex stages for multd and addd is 3 (convince
+yourself on this point). you will need this information to figure out
+the instruction execution status when sgti reaches wb stage.
+
+for part (g), just concentrate on the maximum rate you can issue
+instructions and try to get 2 issues per cycle.
+
+
+
+
+
+
+
+homework 4
+homework 4
+homework 4
+homework 4
+homework 4
+homework 4
+homework 4
+homework 4
+homework 4
+homework 4

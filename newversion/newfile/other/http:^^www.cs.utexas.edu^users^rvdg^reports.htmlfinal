@@ -1,0 +1,177 @@
+reports by robert a. van de geijn
+
+number of times this page has been accessed since july 21, 1995:
+
+
+ 
+reports by robert a. van de geijn
+
+
+
+almadena chtchelkanova, carter edwards, john gunnels, greg morrow,
+james overfelt,
+robert a. van de geijn,
+
+"towards usable and lean 
+parallel linear algebra libraries," 
+tr-96-09, department of computer sciences, university of
+texas, may 1996.
+
+
+almadena chtchelkanova, john gunnels, greg morrow,
+james overfelt,
+robert a. van de geijn,
+
+"parallel implementation of  blas:
+general techniques for level 3 blas," 
+tr-95-40, department of computer sciences, university of
+texas, oct. 1995. 
+
+ c. edwards, p. geng, a. patra, and r. van de geijn,
+
+"parallel matrix decompositions: have we been doing it all wrong?" 
+tr-95-39, department of computer sciences, university of
+texas, oct. 1995. 
+
+
+brian grayson, ajay shah and robert van de geijn
+
+"a high performance parallel strassen implementation," 
+department of computer sciences, the unversity of texas,
+tr-95-24, june 1995.
+
+
+prasenjit mitra, david payne, lance shuler, robert van de geijn, and jerrell watts, 
+
+"fast collective communication libraries, please,"
+
+department of computer sciences, the unversity of texas,
+tr-95-22, june 1995.
+
+
+robert van de geijn and jerrell watts,
+"summa: scalable universal matrix multiplication algorithm,"
+
+tr-95-13,  department of computer sciences, university of
+texas, april 1995. 
+also:  
+lapack working note #96, may 1995.
+
+
+p. geng, j. t. oden, and r. a. van de geijn,
+
+``massively parallel computation for acoustical scattering 
+problems using boundary element methods,'' 
+texas institute fo computational and applied mathematics,
+ticam report 94-10, aug. 1994.
+
+
+greg henry and robert van de geijn,
+
+``parallelizing the qr algorithm for the unsymmetric 
+algebraic eigenvalue problem: myths and reality,'' 
+lapack working note 79, university of tennessee,
+aug. 1994.
+
+
+m. barnett, d.g. payne, r. van de geijn and j. watts.
+
+``broadcasting on meshes with worm-hole routing,'' 
+university of texas, department of computer sciences, tr-93-24 (1993).
+
+
+m. barnett, r. littlefield, d. payne, and r. van de geijn,
+
+`on the efficiency of global combine algorithms for 2-d meshes
+     with wormhole routing,'' 
+tr-93-05, department of computer sciences, university of
+texas, march 1993. 
+
+
+e. barragy, g. f. carey, and r. van de geijn,
+``performance and scalability of finite element analysis
+for parallel computation,''
+university of texas, cna report 254, may 1992.
+
+
+jack dongarra, robert van de geijn, and david walker,
+``a look at scalable dense linear algebra libraries,''
+
+lapack working note 43 , university of tennessee,
+technical report cs-92-155, april 1992. 
+
+
+m. barnett, d. payne, and r. van de geijn,
+``optimal broadcasting in mesh-connected architectures,''
+
+tr-91-38,  department of computer sciences, university of
+texas, dec. 1991. 
+
+
+jack dongarra and robert van de geijn,
+``two dimensional basic linear algebra subprograms,''
+
+lapack working note 37, university of tennessee,
+technical report cs-91-138, oct., 1991. 
+
+
+robert van de geijn,
+``massively parallel
+linpack benchmark on the intel touchstone delta 
+and ipsc/860 systems:
+preliminary report,''
+
+tr-91-28,  department of computer sciences, university of
+texas, aug. 1991.
+
+
+jack dongarra and robert van de geijn,
+
+``reduction to condensed form on distributed memory
+architectures,'' 
+lapack working note 30, university of tennessee, april, 1991,
+revised oct. 1991, technical report cs-91-130, 1991. 
+also: ornl/tm-12006.
+
+
+robert van de geijn,
+
+``on global combine operations,'' 
+lapack working note 29, university of tennessee, 
+technical report cs-91-129, april, 1991.
+
+
+robert van de geijn,
+``a novel storage scheme for parallel jacobi methods,''
+department of computer sciences, 
+the university of texas, austin, tr-88-26, july 1988.
+
+
+robert van de geijn,
+``implementing the qr-algorithm on an array of processors,'' 
+ph.d. dissertation,
+department of computer science,
+university of maryland,
+tr-1897 (1987).
+
+
+d. p. o'leary, g. w. stewart, and r. a. van de geijn,
+``domino, a message passing 
+environment for parallel computation,'' 
+department of computer science,
+university of maryland,
+tr-1648, 1986.
+
+
+
+
+reports by robert a. van de geijn
+reports by robert a. van de geijn
+reports by robert a. van de geijn
+reports by robert a. van de geijn
+reports by robert a. van de geijn
+reports by robert a. van de geijn
+reports by robert a. van de geijn
+reports by robert a. van de geijn
+reports by robert a. van de geijn
+reports by robert a. van de geijn

@@ -1,0 +1,76 @@
+cs100 program 2 
+
+
+
+
+ cs100 program 2 
+
+ due:  thursday, february 8, 1996. 
+
+important:
+please note the following modifications to the program 2 handout.
+
+
+
+ the project file "choose.mu" and source file "choose.c" were not
+present in the initial program 2 folder.  these can be found in the
+folder "program 2 choose", which should be downloaded in the usual
+way. 
+
+ after you get your choose function working properly, as explained in
+step 1 of part 2, copy the body of this function over to the
+template for "choose" in the file "pascal.c" (you'll find a comment
+where this body should go).  if you added extra code for tracing
+purposes while developing the function "choose", make sure you
+delete this code before copying. 
+
+ it is no longer necessary to turn in a listing of "choose.c", since
+the file "pascal.c" now contains your choose function.  thus, in the
+checklist of "what to hand in", delete the item beginning "a listing
+of the file choose.c ...", and, in the following item, note that
+"pascal.c" will now also contain your definition of "choose". 
+
+
+
+note: when you try to run program 2, codewarrior may
+give you a warning about a "link" error or warning.  you may safely
+ignore this.  the warning occurs because we are defining our own
+function exp which is already defined in one of the
+libraries.  codewarrior will use our new definition instead of the old
+one. 
+
+note: you may only use constructs that have been
+taught in class to write program 2, i.e. expressions, functions, and
+recursion.  (even if you know about loops, don't use them.)
+
+
+
+click these links to retrieve the program 2 folders: 
+
+
+program 2 folder  
+
+
+program 2 choose folder  
+
+
+
+
+
+
+cs100 spring 1996 
+pierce@cs.cornell.edu
+
+
+
+
+ cs100 program 2 
+ cs100 program 2 
+ cs100 program 2 
+ cs100 program 2 
+ cs100 program 2 
+ cs100 program 2 
+ cs100 program 2 
+ cs100 program 2 
+ cs100 program 2 
+ cs100 program 2

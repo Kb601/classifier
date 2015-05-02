@@ -1,0 +1,196 @@
+dr. pradhan
+name:	dhiraj k. pradhan 
+title:	coe endowed chair in computer science
+
+education:
+ph.d.	electrical engineering, university of iowa, 1972
+m.s.	electrical engineering, brown university, 1970
+b.s.	electrical engineering, annamalai university, 1969
+
+experience:
+educational:   coe endowed chair professor, computer science,
+texas a&amp;m university, january 1992-present; professor, department of
+electrical and computer engineering, university of massachusetts, january
+1983-january 1992; associate professor, school of engineering, oakland
+university, september 1978-december 1982; research associate professor,
+stanford university, june 1979-august 1979; associate professor,
+department of computer science, university of regina, september 1973-july
+1978.
+industrial:  staff engineer, ibm, systems development laboratory,
+october 1972-august 1983.
+consulting:  consultant to mitre, cdc, ibm, at&amp;t, dec and data
+general, 1982-present.
+
+honors &amp; professional activities:
+professional activities: program chair, 1st and 2nd ieee
+international on-line testing workshop, 1995-96; program committee member, fault-tolerant
+computing symposium and computer architecture conference and vlsi test design,
+1995; editor, ieee transactions on computers, 1991-present;
+editor, ieee computer society press, 1990-present;  associate
+editor, journal of circuits, 1989-present; 
+editor, journal of electronic testing, 1988-present; workshop
+chair, ieee workshop on fault-tolerant parallel and distributed systems,
+1994; general chair, ieee workshop on fault-tolerant parallel and
+distributed systems, 1994; program chair, 10th and 11th ieee vlsi test
+symposium, 1992 and 1993; ieee distinguished visitor, computer society,
+1990-93;  acm lecturer, 1990-92;  advisory committee, ieee
+technical committee on parallel processing, 1992; conference chair, 22nd
+international symposium on fault-tolerant computing, 1992; 
+awards:  ieee meritorious computer society service award, 1994;
+best paper award, vlsi design conference, 1994; 
+humboldt distinguished senior scientist award, germany, 1990, fellow
+of ieee, l987.
+
+research interests/areas of expertise:
+fault-tolerant computing, vlsi testing, computer architecture,
+computer aided design 
+
+research support: nrc 1973-79,  afosr, 1985-95 , multiple grants; nsf, 1982-92 , multiple grants'
+nsf, 1992-95;  onr, 1991-96;
+nsf, 1994-95; nsf, 1994-97;
+texas 1994-96; texas , 1994-95.
+
+text books:
+fault-tolerant systems design, prentice-hall, inc. april 1996.
+ic manufacturability:  the art of process and design integration, (with
+j. de gyvez), ieee press, 1996.
+fault-tolerant computing: theory and techniques , (editor and
+co-author), vol. i and ii, prentice-hall, inc., may l986 (second edition to
+appear 1991).
+
+selected publications:
+journals:
+"issues in fault tolerant memory management," (with n. bowen), ieee
+transactions on computers, to appear.
+"on-line detection circuit in built-in self-test for achieving zero
+aliasing," (with s. gupta), ieee transactions on computers, accepted.
+"can concurrent checkers help bist?", (with s. gupta), ieee  transactions on
+computers, to appear.
+"efficient logic verification in a synthesis environment," (with w. kunz, and
+s. reddy), ieee transactions on computer-aided design, accepted.
+"a scheme to reduce test application time in circuits with full scan," (with j.
+saxena), ieee transactions on computer-aided designs,, accepted.
+"the effect of program behavior on fault observability," (with n. bowen),
+ieee transactions on computers, accepted.
+"processor allocation in hypercube multicomputers: fast and efficient
+strategies for cubic and non-cubic allocation," (with d. das  sharma),
+ieee transactions on parallel and distributed systems, to
+appear.
+"the hierarchical full-map directory scheme: protocol and performance," (with
+y.c. maa and d. thiebault), ieee transactions on computers, to
+appear.
+"a fault tolerant hybrid memory structure &amp; memory management algorithm,"
+(with n. bowen), ieee transactions on computers, vol 44(3) pp. 408-418,
+march 1995.
+"static and dynamic location management in distributed mobile environments,"
+(with p. krishna, and n.h. vaidya), computer communication(special issue on mobile computing),  1995.
+"a survey of fault-injection experimentation for validating computer system
+dependability," (with j. clark), computer, june 1995, pp. 47-56.
+"degradable byzantine agreement," (with n.h. vaidya), ieee transactions
+on computers, vol. 44(1), pp. 146-150, january 1995.
+"safe system level diagnosis," (with n. vaidya), ieee transactions, vol.
+43(3) pp. 367-370, march l994.
+"recursive learning: a precise implication procedure and its' application to
+test verification and optimization," (with w. kunz ), ieee transactions
+on computer-aided design, september 1994.
+"roll forward checkpointing scheme: a novel fault-tolerant architecture," (with
+n. vaidya), ieee transactions on computers, vol. 43(10), pp.
+1163-1174, october 1994.
+"yield optimization of redundant multimegabit ram's using the center-satellite
+model," (with d. das sharma and f. meyer), ieee transactions on vlsi
+systems, december 1993.
+"communication structures in fault-tolerant distributed systems," (with f. j.
+meyer) networks, vol. 23, pp. 379-389, 1993.
+"the hyper-debruijn networks: scalable versatile architecture," (with e.
+ganesan), transactions on parallel and distributed systems, vol.
+4(9), pp. 962-978, september 1993.
+"the effect of memory-management policies on system reliability," (with n.
+bowen),  ieee transactions on reliability, vol. 42(3), pp.
+375-383, september 1993.
+"processor and memory based checkpoint and rollback recovery," (with n. bowen),
+computer, pp. 22-31, february 1993.
+"modeling live and dead lines in cache memory systems," (with d. thiebault and
+a. mendelson), ieee transactions on computers, vol. 2(1), pp.
+1-14, january 1993.
+"a new algorithm for rank-order filtering and sorting," (with b. kar),
+ieee transactions on assp, vol. 41(8), pp. 2688-2694, august
+1993.
+"survey of checkpoint and rollback recovery techniques," (with n. bowen)
+computer, vol. 26(2), pp. 22-31, february 1993.
+"accelerated dynamic learning for test pattern generation in  combinational
+circuits," (with w. kunz), ieee transactions on computer-aided
+design, " vol., 12(5), pp. 684-694, may 1993.
+"fault-tolerant design strategies for high reliability and safety," (with n.
+vaidya), ieee transactions on computers, vol. 42(10), pp.
+1195-1206, october l993.
+
+conferences:
+"lot: logic optimization with testability - new transformations using recursive
+learning," (with m. chatterjee and wolfgang kunz), iccad'95. san jose, ca,
+november 5-9, l995.
+ "performance and reliability assessment of i/0 subsystems,"  (with f. meyer
+and n. vaidya), 4th international workshop on evaluation techniques for
+dependable systems,  october 2-3, l995.
+enhanced tool for evaluating the dependability of fault-tolerant computing
+systems, 4th international workshop on evaluation techniques for dependable
+systems,  october 2-3, l995.
+"routing in mobile wireless networks," (with p. krishna, m. chatterjee and n.
+vaidya), usenix symposium on mobile and location-independent  computing, april
+l995.
+"on improving obdd-based verification in a synthesis environment," (with s.
+reddy and w. kunz), 32nd design automation conference, june l995.
+"a cluster-based approach for routing in ad-hoc networks, ," (with p. krishna,
+m. chatterjee and n.h. vaidya) usenix symposium on location independent and
+mobile computing,  pp. 1-10, april 1995.
+"modified tree structure for location management in mobile environments," (with
+s. dolev), ieee infocom'95 , special topics, april  2-6, 1995.
+"providing seamless communications in mobile wireless networks," (with p.
+krishna, b. bakshi and n. vaidya), 1st international conference on mobile
+computers and networking, berkeley, ca, november 14-15, 1995.
+"novel verification framework combining structural and obdd methods in a
+synthesis environment," (with s. reddy, and w. kunz), 32nd design automation
+conference, san francisco, ca, pp. 414-419, june 12-16, 1995. 
+"design methodology for test synthesis in bist," (with m. chatterjee), ieee
+bist/dft workshop, march 1995.
+"a novel pattern generator for nearperfect fault coverage," (with m.
+chatterjee), ieee vlsi test symposium, pp. 417-425, april 1995.
+"atpg-based transformations for random-pattern testable logic synthesis," (with
+m. chatterjee and w. kunz), ieee/acm intl. conference on cad, november l995.
+"functional learning: a new approach to learning in digital circuits," (with
+mukherjee and jain), l2th ieee vlsi test symposium, april l994.
+"location management in distributed mobile environment," (with p. krishna, and
+n.h. vaidya), proc. of 3rd intl. conf. on parallel and distributed
+information systems, pp. 81-88, september 1994.
+"new pseudo-random test pattern generators for stuck-at and transition faults,"
+(with m. chatterjee), 12th ieee vlsi test symposium, april 25-29,
+1994.
+"bit-serial generalized median filters," (with k. bar), ieee international
+symposium for computer-aided systems, 1994.
+"job scheduling in mesh multicomputers," (with d. das sharma), 1994
+international conference on parallel processing, vol. ii, pp. 251-258.
+"subcube level time-sharing in hypercube multicomputers," (with d. das sharma,
+and g. holland), 1994 international conference on parallel processing,
+vol. ii, pp. 134-142.
+"glfsr-a new test pattern generator for bist," (with m. chatterjee), 1994
+international test conference, pp. 481-490.
+"recovery in multicomputers with finite error detection latency," (with p.
+krishna, and n.h. vaidya), proc. of intl. conference on parallel
+processing, pp. 206-210, august 1994.
+
+patents
+"easily testable high speed architectures for large rams", u. s. patent no.
+4,833,677, may 23, 1989.
+"method of circuit verification and multi-level circuit optimization based on
+structural implications, "u.s. patent no. 08,263,721, june 21, 1994.
+
+
+dr. pradhan
+dr. pradhan
+dr. pradhan
+dr. pradhan
+dr. pradhan
+dr. pradhan
+dr. pradhan
+dr. pradhan
+dr. pradhan
+dr. pradhan

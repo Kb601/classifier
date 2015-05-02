@@ -1,0 +1,139 @@
+373 f 96 lab report format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+about eecs 373 lab reports
+
+
+
+lab reports are due 1 week after your section completes the lab,
+
+(i.e., at your next lab session.) at the beginning of the lab.
+
+you need to demonstrate your working program to a ta before the
+
+beginning of your next lab section. 
+
+
+
+here is what we expect to see on your reports.
+
+
+
+1. purpose/procedure: a brief description of the purpose
+
+of the lab and a summary of steps followed.
+
+
+
+2. hardware: for each new components, such as new chip
+
+or a new part of the 80186 (such as timer, interrupt controller
+
+or chip select unit).
+
+
+
+what does the component do? why do you use it?
+
+how is the chip connected to the microprocessor?
+
+how do you write to or read from the component? if the component
+
+has internal registers, how do you access them?
+
+how do you generate (a) chip select(s) for the chip? 
+
+
+
+
+
+
+
+3. software: through description of the software, including:
+
+
+
+a complete explanation of the new parts of your software.
+
+which should be documented with either a flowchart or a high-level
+
+programming language.
+
+if you write anything to the peripheral chips, an explanation
+
+of where (which address) and why you wrote it. 
+
+if you use any specific numbers, (e.g., address of the register
+
+in a chip,the numbers you used for the clock generators in lab
+
+3, etc.) show a derivation of how you find them. (please do not
+
+use such numbers in your code segment; equate the to variables
+
+at the beginning of the program and use variable names in the
+
+code segment.) 
+
+
+
+
+
+
+
+4. memory and i/o map: draw both memory and i/o space.
+
+
+
+show locations of all code and data segments.
+
+show all peripheral registers.
+
+show all the components that you use. 
+
+any other addresses that seem significant. 
+
+
+
+
+
+
+
+5. answer to questions in the lab manual.
+
+
+
+6. a signed copy of your working program: a ta will sign it when
+
+you demonstrate your working program to him or her. 
+
+
+
+
+
+
+
+
+373 f 96 lab report format
+373 f 96 lab report format
+373 f 96 lab report format
+373 f 96 lab report format
+373 f 96 lab report format
+373 f 96 lab report format
+373 f 96 lab report format
+373 f 96 lab report format
+373 f 96 lab report format
+373 f 96 lab report format

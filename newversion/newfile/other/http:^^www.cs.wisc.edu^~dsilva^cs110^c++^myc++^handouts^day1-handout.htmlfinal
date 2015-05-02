@@ -1,0 +1,136 @@
+day 1 handout (impt text)
+
+
+
+
+cs 110 (c++): introduction to computer programming
+lectures 3 (1263 comp. sci. &amp; stat.) & 11 (2104 chamberlin)
+
+
+instructor:    tony d'silva
+email:         dsilva@cs.wisc.edu
+www:           http://www.cs.wisc.edu/~dsilva/cs110.html
+office:        1349 cs &amp; st, 1210 w. dayton st.
+office hours:  monday, 12 - 1 pm
+               friday, 12 - 1 pm
+               or by appointment
+phone:         262-5340
+               
+
+
+
+welcome to cs110.  in this class, all documentation, including class
+information, assignments, and the syllabus, will be available
+``on-line'' only.  
+you will be responsible for reading the on-line information; i will
+announce when there is something new for you to read.  this document
+is prepared to get you started so that you can access the on-line
+information.  fortunately, it's not so difficult, so you shouldn't
+have any trouble.
+
+by ``on-line'' documents i mean information that is accessible using
+the computers in the cs110 lab.  this information is available via the
+world wide web, or www, which is a system for browsing on-line
+documents through a simple hypertext interface -- if you see a word or
+picture underlined or highlighted, you can click on it to get more
+information.  you may have already used the most common www browser:
+netscape.  if not, you will learn to use it very quickly!
+
+where to start
+
+first, go to the cs110 lab, which is located in room 1350 of the
+computer sciences and statistics building (1210 w. dayton street).  if
+you enter the building from dayton street, go straight ahead, all the
+way past the two elevators to the water fountain.  take a drink.  turn
+left, and the cs110 lab (``the vectra lab'') is the first room on your
+left.
+
+find a vacant seat.  the first step is to ``activate'' your cs110
+account.  there are instructions for this posted on the walls, but it
+really isn't too hard: simply type ``newuser'', followed by the
+enter key, at the ``wiley login:'' prompt.  when prompted for a password,
+simply hit the enter key.  now, follow the instructions, entering
+information such as your student id number (be sure not
+  to type in the dashes in your id number!).  check the information,
+and read the policies for your account.  finally, you will be prompted
+to choose a password.  you will need this password to login to the
+system in the future, so please choose one that you can
+remember!  it is not generally a good idea to write your password down
+in case you forget it --- but if necessary, write it down in a safe
+place.  you will probably want to write down your login name (e.g., my
+login name is ``dsilva'') in any case.  when you next login, you will
+use your assigned login name and your newly chosen password, not
+``newuser''.
+
+once you have logged in, the computer will (annoyingly?) ask you if
+you plan on using any floppy disks during this session.  hit ``n'' to
+indicate you aren't.  now microsoft windows will start up; you will
+see lots of little pictures, or ``icons'', all over the screen.  each
+icon represents a program you can run.
+
+in this class, we will be primarily using the programs associated with
+the following three icons: borland c++ 4.5, netscape (a big n), and
+file manager.
+
+if you are totally clueless when it comes to microsoft windows,
+ this would be an excellent time to go through the ``windows tutorial''
+ that exists on-line. you will have to view this using the netscape
+ browser program.  in order to accomplish this follow these steps:
+
+
+   to run netscape (as with any other applications program), double-click
+on the netscape icon in the networking menu. 
+   you will be looking at the cs department home page.
+a home page is basically a place on the world wide web which has links to 
+other places or actual documents with information. 
+   click on fall 1996 classes. any underlined words denote a link on the www. you will now be on the course listing home page.   
+   click on tony d'silva and that gets you to my home 
+page. now, choose "bookmarks" and then "add bookmarks" from the menu. this will
+add my cs110 home page, to your "hotlist", so that it can easily be accessed
+from any point in your "internet surfing" by going to the "bookmarks menu".
+ 
+
+
+the hardest part is now over. you have all the course information 
+at your fingertips. look at my home page carefully. it  has my office hours,
+syllabus and schedule, grading policy, late policy, class handout, tutorials
+ on important software like microsoft windows.... it even has your
+first program assignment.
+
+
+before you begin this assignment, it would be to your benifit to browse
+through the  introduction to microsoft windows  and introduction to borland c++turorials.
+netscape has another neat feature built into it--the back button. this is situated on the upper left corner of the netscape window (just below the file menu).  clicking on this button returns you to previous documents
+you had been viewing.
+
+
+
+important to note is that program 0 is due next tuesday. so be sure
+to take a look at it while still in netscape. i recommend that you get started on the tutorials
+and familiarize yourselves on the borland c++ environment right away.
+this is what the first week is all about --- the more time you spend
+now, the more you will learn about the system, so that later on in the
+semester you can concentrate entirely on the harder programming
+assignments.
+
+if you have any questions or problems, feel absolutely free to ask one
+of the on-duty consultants for help.  these are people (probably sitting
+at a computer) wearing yellow name badges.  there should always be 2 or 3
+consultants in the lab.  consultants are on duty monday-friday 8am-10pm,
+saturday 12pm-8pm, and sunday 12pm-10pm
+
+good luck, and have a great semester!
+
+
+
+
+day 1 handout (impt text)
+day 1 handout (impt text)
+day 1 handout (impt text)
+day 1 handout (impt text)
+day 1 handout (impt text)
+day 1 handout (impt text)
+day 1 handout (impt text)
+day 1 handout (impt text)
+day 1 handout (impt text)
+day 1 handout (impt text)

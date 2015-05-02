@@ -1,0 +1,61 @@
+upper and lower bounds on constructing alphabetic binary trees
+
+
+
+
+
+
+
+                 
+ next:  overview
+  
+ upper and lower bounds on constructing alphabetic binary trees
+
+maria klawe and
+brendan mumey
+
+
+
+abstract:
+this paper studies the long-standing open question of whether
+optimal alphabetic binary trees can be constructed in  
+time.  we show that a class of techniques for 
+finding optimal alphabetic trees which includes all current 
+methods yielding  time algorithms are at least
+as hard as sorting in whatever model of computation is used.
+we also give  time algorithms for the case where all the input
+weights are within a constant factor of one another and when
+they are exponentially separated.
+
+ 
+ 
+  overview
+  current methods
+  region-based methods
+  the constant factor case
+  hardness results
+ 
+  finding the lmcp tree
+  region-based methods
+ 
+  conclusions
+ references
+    about this document ... 
+
+ 
+
+brendan mumey 
+mon sep  4 11:52:47 pdt 1995
+
+
+
+upper and lower bounds on constructing alphabetic binary trees
+upper and lower bounds on constructing alphabetic binary trees
+upper and lower bounds on constructing alphabetic binary trees
+upper and lower bounds on constructing alphabetic binary trees
+upper and lower bounds on constructing alphabetic binary trees
+upper and lower bounds on constructing alphabetic binary trees
+upper and lower bounds on constructing alphabetic binary trees
+upper and lower bounds on constructing alphabetic binary trees
+upper and lower bounds on constructing alphabetic binary trees
+upper and lower bounds on constructing alphabetic binary trees

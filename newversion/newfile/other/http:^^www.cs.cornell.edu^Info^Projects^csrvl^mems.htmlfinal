@@ -1,0 +1,264 @@
+distributed manipulation and micro-electro mechanical systems (mems)
+
+distributed manipulation and micro-electro mechanical systems (mems)
+
+
+
+
+
+description  
+
+recently, graduate student jim jennings, research associate  daniela
+rus, graduate student 
+russell brown,							
+
+ 
+professor bruce donald, 
+
+ and lab alumnus  jonathan rees
+(now at mit), developed a  team of autonomous
+mobile robots that can perform sophisticated  distributed manipulation tasks
+(such as  moving furniture).  the robots run
+robust spmd protocols that are completely asynchronous and require no
+communication. grad student  karl
+b&ouml;hringer,  
+professor bruce donald, 
+ and ee professor noel macdonald, are building a 
+massively parallel array of microactuators in the cornell national
+nanofabrication laboratory.  the array
+is a scream chip containing over 11,000 actuators in 1 square
+centemeter, and can orient small parts without sensory
+feedback. our microfabricated actuator arrays could be used to
+construct programmable parts-feeders (at any scale), or to build
+self-propelled ic's (walking vlsi chips.)
+
+ demos 
+
+
+massively parallel micro-fabricated actuator arrays.
+
+recent publications
+
+
+ new papers: 
+
+
+k.-f. b&ouml;hringer, b. r. donald, and n. c. macdonald, 
+
+
+single-crystal silicon actuator arrays for micro manipulation tasks,
+ieee workshop on micro electro mechanical systems (mems),
+san diego, california (february 1996).  (accepted; to appear).
+
+ 
+
+k.-f. b&ouml;hringer, b. r. donald, and n. c. macdonald, 
+
+
+classification and lower bounds for mems arrays and vibratory parts
+feeders : what programmable vector fields can (and cannot) do - part
+i, ieee international conference on robotics and automation
+(icra), minneapolis, minnesota (april 1996). (accepted; to
+appear).
+
+
+ 
+
+ k.-f. b&ouml;hringer, b. r. donald, and n. c. macdonald, 
+
+ new and
+improved manipulation algorithms for mems arrays and vibratory parts
+feeders: what programmable vector fields can (and cannot) do - part
+ii, ieee international conference on robotics and automation
+(icra), minneapolis, minnesota (april 1996). (accepted, to
+appear). 
+
+ published papers: 
+
+
+
+
+
+
+distributed robotic manipulation: experiments in
+minimalism, in
+ international symposium on experimental robotics, (iser)
+stanford, ca (1995).
+
+
+
+
+
+moving furniture with teams of automonous mobile robots, (with j.
+jennings and  d.
+rus) in
+ proc.~ieee/robotics society of
+japan international workshop on intelligent robots and systems, (iros)
+pittsburgh, pa (1995).
+
+
+
+   sensorless
+manipulation using massively parallel micro-fabricated actuator
+arrays (with 
+k.-f. b&ouml;hringer, r.  mihailovich, and noel c.  macdonald),
+ proc. ieee international conference on robotics and
+automation, san diego, ca (may, 1994).  a 
+demo and more detailed explanation.
+
+
+
+ .
+
+ program mobile robots in scheme(with  j. rees) 
+
+proc. ieee international conference on robotics and automation
+nice, france (may, 1992), pp.  2681-2688.
+
+
+
+
+
+
+information invariants for distributed manipulation (with j.
+jennings and  d.
+rus) in
+ the first workshop on the algorithmic foundations of
+robotics, a. k. peters, boston, ma. ed. r. wilson and
+j.-c.latombe (1994). 
+
+ 
+
+
+ 
+automatic sensor configuration for  
+task-directed planning (with 
+
+amy briggs),  proceedings 1994
+ieee international conference on robotics and automation, san diego,
+ca (may 1994). 
+
+ .
+
+kinodynamic motion planning (with p. xavier, j.
+canny, and j. reif)  journal of the acm, vol. 40, no. 5, nov.,
+1993. pp. 1048-1066.
+
+
+  provably
+good approximation algorithms for optimal kinodynamic planning: robots
+with decoupled dynamics bounds  (with p. xavier)  algorithmica
+ (vol 14, no 6) (1995). pp. 443-479. 
+
+  provably
+good approximation algorithms for optimal kinodynamic planning for
+cartesian robots and open chain manipulators (with p. xavier) 
+algorithmica  (vol 14, no 6) (1995). pp. 480-530. 
+
+ . i am writing a book entitled
+ information invariants in robotics. a draft of the first
+quarter of this book appeared as a paper in artificial
+intelligence. here it is:  
+information invariants in robotics. revised ms based on the paper
+"on information invariants in robotics,"  artificial
+intelligence vol. 72 (jan, 1995) pp. 217-304.  
+
+
+
+
+recent theses and papers of phd students
+
+
+  patrick xavier, phd 1992. except for the thesis, these tr's are
+  mostly superseded by three, more recent journal papers listed starting here.
+
+ amy
+briggs, phd 1994.
+
+  (her papers and thesis).
+
+
+
+russell brown,  phd 1995.
+
+  (his papers and thesis).
+
+
+
+  jim jennings.
+
+
+karl-f. b&ouml;hringer. 
+  (his papers).
+
+
+
+
+
+
+more papers are avalable through the 
+
+cornell cs tr server. 
+
+
+pictures
+
+ we have developed a  team
+of small autonomous mobile robots that can  move
+furniture around in our lab. 
+
+
+
+ for a group portrait of our robots.
+
+
+ click here
+to see a picture of 
+tommy and lily mobot pushing a couch.  
+
+ click here
+to see a picture of 
+tommy and lily rotating a couch.  
+
+
+ click here to see a
+picture of  
+tommy the mobile robot, drawn by loretta pompilio.  
+
+
+
+ click here
+to see pictures of people and robots working in the lab.  
+
+
+
+
+ our lab was on  the discovery
+channel ("beyond 2000") and you can find out more about it here.
+
+
+
+
+
+
+other people and robots in the 
+cornell robotics and vision laboratory.
+
+
+
+cornell robotics and vision laboratory home page.
+
+
+
+
+
+distributed manipulation and micro-electro mechanical systems (mems)
+distributed manipulation and micro-electro mechanical systems (mems)
+distributed manipulation and micro-electro mechanical systems (mems)
+distributed manipulation and micro-electro mechanical systems (mems)
+distributed manipulation and micro-electro mechanical systems (mems)
+distributed manipulation and micro-electro mechanical systems (mems)
+distributed manipulation and micro-electro mechanical systems (mems)
+distributed manipulation and micro-electro mechanical systems (mems)
+distributed manipulation and micro-electro mechanical systems (mems)
+distributed manipulation and micro-electro mechanical systems (mems)

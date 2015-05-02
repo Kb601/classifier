@@ -1,0 +1,498 @@
+embedded hardware/software co-design links
+
+
+embedded hardware/software co-design links
+
+
+
+	 organization of this page
+	
+	 conferences/workshops
+	 codesign related groups
+	 internet embedded resources
+	 eda companies
+	 interesting embedded systems
+	 people in codesign
+	 real-time operating systems and languages
+	 real-time departments
+	 protocols
+	 technical journals/magazines
+	 hardware/databooks
+	
+
+        conferences/workshops
+        
+
+            9th international symposium on system synthesis
+	     november 6-8, 1996
+	    
+
+            european design & test conference 1997
+	     deadline: september 6, 1996
+	    
+
+        rsp '95: abstracts
+	
+
+        1995 nato asi: hardware/software co-design
+	
+
+        
+
+        codesign related groups
+        
+        asp (queensland)
+        fpga based, translate c to vhdl
+        
+
+        chinook (washington)
+	chinook is a hardware-software co-synthesis cad tool for embedded systems
+	the main topics include the interfacing problem between hardware and software components,
+	 scheduling under timing constraints, and partitioning of functionality.
+        
+
+        cinderella 2.0 www home page
+        
+
+        comet (case western)
+        
+
+        cosmos/solar
+	
+
+        cosyma
+        
+
+        dice (darmstadt)
+        
+
+        embeddable systems (arpa)
+        
+
+        esterel
+        
+
+        grape ii
+        
+
+        imec
+        
+
+        polis (berkeley)
+	
+
+        provably correct procos (hoare)
+	
+
+        ptolemy (berkeley)
+	
+
+        rassp (arpa)
+	
+
+	reactive c project
+	
+
+        rtems (army)
+	
+
+        the sir/castle system (gmd)
+	
+
+        set/embedded software design (gmd)
+	the group is concerned with specification, construction, and analysis techniques for 
+	    embedded systems, in particular embedded software.
+	
+
+        the spam project
+	
+
+        system-level design of application specific heterogeneous multiprocesssors
+	
+
+        web site of the vrp project
+	
+        
+	
+
+
+
+
+        internet embedded resources
+        
+        dsp resources
+	dsp related resources
+	
+
+        home page automation and process control
+	many resources related to uproc/ucontroller, process control, industrial 
+	    communication. and robotics.
+	
+
+        internetworking technology overview
+	
+
+        e. douglas jensen: real-time distributed operating systems
+	
+
+        linux kernel hacker's guide
+	
+
+        writing linux device drivers
+	
+
+        more real-time research
+	
+
+        randy's electronic engineering page
+	
+
+        design automation cafe
+	
+
+        the ieee-cs tc-rts home page
+	
+
+        embedded and real-time systems (swiss)
+	
+
+        embedded systems (ireland)
+	
+
+        softaid's home page
+	
+
+        realtime computing (usenet groups)
+	
+
+        dave's embedded directory
+	
+
+        embedded sys. devel. info (orion)
+	
+
+        faqroad - embedded systems (cera)
+	
+
+        the world wide web virtual library: safety-critical systems
+	
+
+        the world-wide web virtual library: electrical engineering
+	
+
+	networked computer science technical reports library
+	
+
+        resources of scholarly societies - electrical & computer engineering
+	
+
+        
+	
+
+
+
+        eda companies
+        
+        alta group
+	
+
+        cadence design systems
+	
+
+        chronology
+	
+
+        i-logix
+	
+
+         mentor graphics 
+	
+
+        synopsys home page
+	
+
+        the internet home of synthesia
+	
+
+        viewlogic
+	
+
+        
+	
+
+
+        interesting embedded systems
+        
+        intelligent dram (iram)
+	
+        damek
+	mmk home page  -- damek
+	
+
+        flash
+	the stanford flash project
+	
+
+        the infopad www server
+	
+        
+	
+
+
+        people in codesign/embedded systems
+        
+            codesign mailing list
+            gaetano borriello
+            pai chou
+            giovanni de micheli
+            daniel gajski
+
+            jie gong
+            rajesh gupta
+            asawaree kalavade
+            phil koopman
+
+            luciano lavagno
+            edward a. lee
+            yau-tsun steven li
+            stan yi-huang liao
+
+            sharad malik
+            ross ortega
+            prof. mariagiovanna sami
+            alberto sangiovanni-vincentelli
+            prof. donatella sciuto
+            ellen m. sentovich
+            carlos alberto valderrama sakuyama
+
+            don thomas
+
+            frank vahid
+            wayne wolf
+            ti-yen yen
+        
+
+
+
+
+        real-time operating systems/languages
+        
+        chimera
+	chimera home page, rtos for robotics system.
+	
+
+        harmony realtime os
+	
+
+        katix real time os
+	
+
+        the maruti project
+	
+
+        sdl: specification and description language
+	
+
+        scl: spacecraft command language
+	
+
+        sparta vxworks faq
+	
+
+        wind river home page
+	
+
+        
+
+
+        real-time departments
+        
+        the real-time systems research group at york
+	
+
+        dept. of real-time systems (uvienna)
+	
+
+        rtg home page (upenn)
+	
+
+        real time computing laboratory, univ. of michigan
+	
+
+        real-time systems (umass)
+	
+
+        real-time systems (umaryland)
+	
+
+        the real-time computing laboratory at njit
+	
+
+        unc dirt group
+	
+
+        
+
+
+
+
+        protocols
+
+        
+        protocol survey for 
+	embedded applications
+	
+
+        tdma without a bus master
+	
+
+        echelon (control networks)
+	
+
+        can:	controller area network (uk)
+	
+
+        can: controller area network (uk)
+	
+
+        infrared data association
+	
+
+        i2c and others
+	
+
+        message passing interface
+	
+
+        pc-card home page
+	
+
+        universal serial bus home page
+	
+
+        motoral data sheets for usb
+	
+
+        vita - the vmebus international trade association
+        
+
+
+
+
+        technical journals/magazines 
+        
+        microprocessor report
+	
+
+        san jose mercury news
+	
+
+        circuit cellar
+	
+
+        embedded systems progamming home page
+	
+
+        ieee communications survey
+	
+
+        ieee micro
+	
+
+        ieee parallel & distributed technology
+	
+
+        ieee design & test of computers
+	
+
+        ieee software
+	
+
+        ieee spectrum
+	
+
+        acm transactions on design automation of electronic systems
+	
+
+        acm transactions on computer systems
+	
+
+        integrated system design
+	
+
+        computer controlled systems on-line
+	
+
+        the computer journal home page
+	
+
+        synopsys research publications
+		
+
+        
+
+
+
+
+        hardware/databooks
+        
+
+        gray creager's url list
+	of semiconductor chip manufacturers.
+	
+
+        ibm microelectronics home page
+	
+
+        design automation for embedded systems
+	
+
+
+        dallas semiconductor corp: home page
+	
+
+        texas instruments welcomes you
+	
+
+        motorola microcontroller technology group.
+	
+
+        motorola embedded page
+	
+
+        motorola hpesd on-line doc. library
+	
+
+        motorola aesop home page
+	info on motorola processors
+	
+
+        68hc11.faq
+	
+
+        siemens can controller
+	
+
+        zorin hc11 kits
+	
+
+        the versatile 8031 microcontroller
+	
+
+        
+    
+    
+
+
+
+
+embedded hardware/software co-design links
+embedded hardware/software co-design links
+embedded hardware/software co-design links
+embedded hardware/software co-design links
+embedded hardware/software co-design links
+embedded hardware/software co-design links
+embedded hardware/software co-design links
+embedded hardware/software co-design links
+embedded hardware/software co-design links
+embedded hardware/software co-design links

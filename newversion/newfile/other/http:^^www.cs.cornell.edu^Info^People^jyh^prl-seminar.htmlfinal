@@ -1,0 +1,74 @@
+prl seminar talks
+
+
+
+prl seminars
+
+here are some of the slides for the talks i have given in the nuprl
+seminar.  these slides can be pretty technical, and assume knowledge
+of the nuprl system and type theory.  in some cases i
+present information at an intuitive level that is technically imprecise.
+
+all slides are in portable document format (pdf).  you can obtain a
+pdf reader from adobe for just about any machine you
+can imagine using.  i prepared these presentations using adobe
+persuasion and adobe illustrator.
+
+
+
+modules february, 1996.  this is
+my most recent version of formal modules and objects.
+
+modules october, 1995.  this
+is an earlier version of formal modules.
+
+horus november, 1995.  we
+are performing a verification of the horus group
+communication system.  these slides give an outline of the
+verification process.
+
+types october, 1994.  these
+slides cover some new type additions i was proposing for nuprl.  this
+includes very-dependent function types.
+
+square root verification
+may, 1994.  this talk is about the verification of a hardware square
+root algorithm by program transformation.  the slides don't contain
+much explanation.  the paper we wrote
+for tpcd 1994
+(theorem provers in circuit design) is a better resource.
+
+theories march, 1994.  this
+is a very early version of formal theories (modules) in nuprl.
+
+majority vote november,
+1993.  this is the first formalization i did in nuprl.  i gives some
+idea of the problems i first encountered using nuprl, and it provides
+motivation for my current work in nuprl.
+
+
+some other talks.
+
+horus talks
+
+
+
+horus verification january, 1996.  this
+is a very high-level overview of the horus verification effort.
+
+horus verification april, 1996.  here
+is a slightly more detailed, but still high-level, version of the horus verification.
+
+
+
+
+prl seminar talks
+prl seminar talks
+prl seminar talks
+prl seminar talks
+prl seminar talks
+prl seminar talks
+prl seminar talks
+prl seminar talks
+prl seminar talks
+prl seminar talks

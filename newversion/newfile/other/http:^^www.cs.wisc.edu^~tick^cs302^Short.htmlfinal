@@ -1,0 +1,52 @@
+cs 302 section 70 - description of commands
+
+
+
+
+ short description of things to do in dos/fortran
+
+
+
+
+log on. if you've logged on before, skip the next step.
+at the login prompt, type newuser. at the password prompt, just hit enter. the computer will prompt you for other info. when it's done, wait five or ten minutes, and then log in normally (it will tell you how when newuser is running).
+you're now in windows.click on the picture that says "ms-dos prompt". a new window will appear (in black). if this window disappears (is backgrounded), do *not* click on the dos prompt again (that creates a completely seperate window). instead, hold down the alt key...a new window will pop up. still holding down alt, keep pressing tab until the dos prompt appears in the new window. then let go of both keys.
+the black window should now say something like u:\>. this is your prompt. u is the name of the disk drive you're currently on. we're going to do all our work from r drive, so type r: and hit return. the prompt should now say r:\>.
+the \ tells us which directory we're in on r drive. what's a directory? think of a disk as a large box. rather than throwing every single program in the same box, we'd like to organize them somehow. so we can put smaller boxes inside the large box and label them. for example, we might have a box called "public" which will house all the programs that everyone can use. we might have another box called "handin", which is where to put all the programs to be handed in. so a directory is just a sort of "box" that holds programs and other directories.
+let's go into the handin directory. type cd \handin\tick\yourloginname, where yourloginname is whatever name you type at your login prompt. this is the directory where you'll hand everything in. in our box analogy, our disk r has a main box, /, inside which has a box handin. inside handin is a bunch of boxes, one of which is tick, and again once box inside tick is yourloginname. note that you are now *in* this directory. you can tell because your prompt now says r:\public\tickyourloginname/>.
+*if* my assignment tells you to copy something (for example, prog0.dat) from my public directory to use with your program then type copy \public\tick\dataname ., where dataname is the name of the data file you're supposed to copy (i.e. prog0.dat). note the following: there is a space between dat and the period (yes, the period *is* part of the line. *do not forget that second period*). copy is a command that copies a program from one place to another...the program in this case is prog0.dat, found in \public\tick\ (you have to use the full path name here...this will always be the directory for things i give you to use). the second argument tells which directory the program is to be copied into. the period is a shorthand which means "whatever directory you're in now." so typing copy \public\tick\prog0.dat \handin\tick\yourloginname would do the exact same thing.
+general note: type dir at any time, anywhere, will show you what's in the current directory. *important* all filenames and directories can have no more than 8 letters, no spaces...files also add a dot followed by three other letters (such as .dat in prog0.dat). when you type dir, the first 8 letters will show up in one column, followed by a second column which lists the last three.  directories will have dir listed to the right of the name (they don't have 3 letter extensions).insanely important note: one of the other columns shows the time your program was last modified. this is my indication of when you did your program. if you modify your program after 5 pm on the due date, i'll be able to tell.
+if you type dir | more , only one screen's worth will be printed at a time. once you hit the keyboard, it'll print the next screen's worth of listings. lastly, if you add a path name right after dir, it'll list that directory instead of the current one.
+now you're ready to type up your program (i.e. prog0.for). type edit programname, where programname is the name of the program you wish to write. note: your program *must* end with the .for extension.
+you can now type on the blue screen, the same as if you were using a typewriter, which is effectively what this is. remember fortran's spacing rules (for example, using tabs to make sure no code line starts before column 7). when done, click on file, then click on the ssave option under file. go up to file again, and select exit.
+you're back on the black screen (the command line). so now you've got a program written in fortran. you need to translate it into machine language so the computer can run it, so now you've got to to compile. type f programname to compile.
+if there are errors, (the screen will say some sort of errors or warnings), you must compile again. warning: there is one machine that is set up incorrectly, v70. it's located right next to the far dor in the lab. if you're using that machine, it will claim upon compiling that it can't find llibfore.lib so every time you compile on it, it will ask you where to find it...when it asks, type q:\fortran\lib\llibfore.lib and it should work fine.
+doing a dir should reveal two new files were created. they have the same name as your program but with a .obj and a .exe extension. the .obj isn't important...it's machine language with some info missing (see wk1 notes for explanation). the .exe, however, is the finished machine-language program. you can now run it by typing in the programname (you can leave out the .exe if you wish).
+errors may still occur, or the program may not be doing what you want. if so, you'll have to 1) edit the program again and 2) compile it again once you're done editing.
+if you wish to delete the .obj file (which you don't need), typedel prog0.obj in general, del file will delete a file. don't delete the .for or .exe...you may need them for later programs, plus if your hard
+copy gets lost we'll need the file. lastly, we test your programs once they're
+handed in, so they need to be there.     
+to print something out, type print file. it will prompt you for which printer to print to...use lpt1 (located in rm 1359, on the opposite side of the hall).
+type exit to get rid of the dos window. now exit windows to log out. don't forget to do this last step! if you do, you leave your account open to access by anyone, plus you're loading down the system.
+
+
+
+
+
+
+
+copyright &copy 1996 jeff lampert (tick@cs.wisc.edu).  last modified september 10, 1996.
+
+
+
+
+cs 302 section 70 - description of commands
+cs 302 section 70 - description of commands
+cs 302 section 70 - description of commands
+cs 302 section 70 - description of commands
+cs 302 section 70 - description of commands
+cs 302 section 70 - description of commands
+cs 302 section 70 - description of commands
+cs 302 section 70 - description of commands
+cs 302 section 70 - description of commands
+cs 302 section 70 - description of commands

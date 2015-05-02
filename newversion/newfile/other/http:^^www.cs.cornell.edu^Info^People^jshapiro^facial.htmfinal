@@ -1,0 +1,56 @@
+senior honors project at umass
+
+
+
+
+
+design and implementation of dynamically
+generated synchronized computer speech and facial animation 
+
+
+abstract:
+by integrating visual and audio information using computers,
+a new form of human-computer interface has been created. the current
+research is in the design and implementation of a user interface
+whereby a computer can produce speech (audio) and a moving image
+of a human face synchronized to the speech (video). the result
+is the appearance of a human talking to the user. the program
+is given text to speak (for proof-of-concept purposes, the numbers
+&quot;0&quot; - &quot;9&quot;); it then creates the speech, automatically
+determines the boundaries between phonemes (to synchronize the
+video), and uses morphing to smoothly transition between the images
+used for each phoneme. 
+
+
+
+a postscript copy of the paper
+
+sample output (in video for windows .avi format):
+&quot;zero&quot;
+&quot;one&quot;
+&quot;two&quot;
+&quot;three&quot;
+&quot;four&quot;
+&quot;five&quot;
+&quot;six&quot;
+&quot;seven&quot;
+&quot;eight&quot;
+&quot;nine&quot;
+&quot;hello professor hill&quot;
+ 
+
+
+
+
+
+
+senior honors project at umass
+senior honors project at umass
+senior honors project at umass
+senior honors project at umass
+senior honors project at umass
+senior honors project at umass
+senior honors project at umass
+senior honors project at umass
+senior honors project at umass
+senior honors project at umass

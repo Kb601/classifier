@@ -1,0 +1,56 @@
+oo c stuff
+
+
+
+object oriented programming in c
+
+ here is a small collection of possibly-interesting tidbits relating to
+object-oriented programming in c.  some of these are written by me,
+others i've pulled off the net.  
+
+the idea is to use function pointers to implement dynamic binding
+in order to write easily-extensible code as well as to effect data and
+code abstraction through well-defined interfaces (in this case, 
+function signatures).  (follow all that??) 
+this method is similar to using virtual
+functions and subtyping in c++, but it's more flexible: there's no
+difference between member functions and non-member functions, and the
+subtyping mechanism does not depend on the language's builtin dynamic
+memory allocation mechanism (i.e., operator new).  and, of course, it
+doesn't require c++, so you don't need to pay for what you don't want.
+
+
+here are some links.
+
+
+notes on 
+programming in c by rob pike 
+
+rgb.c: a simple example program
+
+some article: taken from sunworld online
+
+
+
+update: the last project i worked on that required creating new
+code from scratch (it was a simulator for an architecture class
+project) was done in c++, using its inheritance method.  apparently, i
+don't practice what i preach.  oh well.
+
+
+
+comments/flames welcome:
+ gid@cs.wisc.edu
+
+
+
+oo c stuff
+oo c stuff
+oo c stuff
+oo c stuff
+oo c stuff
+oo c stuff
+oo c stuff
+oo c stuff
+oo c stuff
+oo c stuff

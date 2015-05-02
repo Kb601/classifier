@@ -1,0 +1,405 @@
+cse 590d autumn 1996 list of papers)
+
+
+
+cse 590d (autumn 1996): technology for collaborative learning
+reading list
+
+these papers cover a variety of aspects of computer
+support for collaborative learning.
+
+
+background papers
+
+
+ 
+sigcue outlook on computer supported collaborative learning, spring
+1992 (volume 21, number 3).
+
+  
+included in this journal is an introduction: "computer support
+for collaborative learning: design, theory and research issues" by tim
+koschmann.
+
+
+ 
+cacm, volume 39 number 4.
+
+ 
+recent cacm issue on learner centered design.
+
+ 
+journal of the learning sciences, 1993/1994 - volume 3, number 3:
+special issue: computer support for collaborative learning.  
+
+
+  
+included in this journal are two articles by tim koschmann:
+"toward a theory of computer supported collaborative learning", and
+"using technology to assist in realizing effective learning and
+instruction: a principled approach to the use of computers in
+collaborative learning". (both are pretty thick papers, but may shed
+some light on "how to do" cscl.)
+
+
+ 
+clements, d. h and nastasi, b. k. the role of social interaction in
+  the development of higher-order thinking in logo environments, in
+  computer-based learning environments and problem solving. e. de-corte
+  and m. c. linn and h. mandl and l. verschaffel, ed. springer-verlag,
+  1992, pp. 229-247.
+
+ 
+clements and nastasi tested logo with children in a cooperative
+environment where two kids used one keyboard in order to determine how
+conflict and successful resolution helps or hinders learning.  their
+conclusion was that logo seems to help conflict resolution and
+development of higher order thinking.  co-present, synchronous.
+
+
+ 
+dockterman, d. a. cooperative learning and computers, in sigque
+  outlook.  21, 2 (1991), pp 39-43.  
+
+
+collaborative learning for social studies and history.  he states that
+cooperative learning has been overused.  the article also states that
+there are obstacles to cooperative learning, such as lack of teacher
+experience, too much material to cover, and that computers may help to
+overcome these obstacles by assisting in class management, information
+flow and record keeping.
+
+
+ 
+inkpen, k. booth, k. s.  klawe, m. and upitis, r. playing together
+  beats playing apart, especially for girls, in proc. cscl'95
+  (bloomington, october 17-20, 1995), acm press, n.y., pp 177-181.
+
+
+this study compared children using "the incredible machine" in various
+situations: two together on one machine (in same sex and mix sexed
+pairs), vs children working independently.  there are other papers
+that can be used for back up material, including the e-gems tech
+report 94-5.  co-present, synchronous.
+
+
+ 
+palmer, j. d. and fields, n. a. guest editor's introduction: computer
+  supported cooperative work.  ieee computer. 27, 5 (may 1994), pp   15-17.  
+
+
+a good introduction to computer supported cooperative work.
+categorizes cscw modes, and gives a glossary of terms.
+
+
+ 
+vockell, e. l. group size for computerized instruction, in educational
+  technology   29, 9 (1989), pp.  30-32.
+
+
+this paper begins by describing the three types of learning -
+individualistic, competitive, cooperative and the two phases of
+learning, learning phase where students receive feed back and
+clarifications, and the practice phase, where computers can be useful.
+the paper also discusses what group size is good for different phases
+and types of learning.
+
+
+systems and applications papers
+
+background papers on the different types of systems in cscw.  how can
+we classify these systems?
+
+
+
+ bier, e. and freeman, s.  mmm: a user interface architecture for
+  shared editors on a single screen,  in uist'91, (hilton head, november
+  11-13, 1991), acm press, n.y., pp 79-86.
+
+
+mmm stands for multi-device multi-user multi-editor.  this is the only
+other work i've found where they use multiple mice on a single
+machine.  it's a good paper and talks about some of the problems of
+sharing screen space, etc.  co-present, synchronous.
+
+
+ 
+bricker, l., tanimoto, s., rothenberg, a., hutama, d., wong, t.
+  multiplayer activities which develop mathematical coordination, in
+  proc. cscl'95 (bloomington, october 17-20, 1995), acm press, n.y., pp
+  32-39.
+
+ 
+our work from a couple of years ago. co-present, synchronous.
+
+
+ 
+bricker, l., baker, m., and tanimoto, s. support for cooperatively
+  controlled objects in multimedia applications.  work in progress.  
+
+ 
+this paper presents a
+methodology for designing objects that encourage close collaboration
+in multimedia environments. a definition is given for cooperatively
+controlled objects which distinguishes them from objects whose
+components are shared.  co-present, synchronous.
+
+
+ 
+cockburn, a. and greenberg, s. children's collaboration styles in a
+  newtonian microworld, in proc. proceedings of chi'96 human factors in
+  computing systems (april 13-18, vancouver, bc), acm/sigchi , n.y.,
+  1996, pp. 181-182.
+
+ 
+this paper describes turbo turble - a distributed animated multi-user
+microworld.  each user has a presence on the screen indicated by a
+colored cursor.  there's another paper on this in cscl'95.  distance,
+synchronous.
+
+
+ 
+gisi, m. a., and sacchi, c. co-cad: a collaborative mechanical cad
+  system, in presence. 3, 4 (1995), p 341-350.
+
+ 
+describes general features of cscw systems, including shared design
+data (semantic view), customizable views vs wysiwis (but also adds
+view synchronization), shared pointer vs individual pointers,
+ownership of objects like unix, joining/leaving sessions.
+
+
+ 
+gutwin, c, stark, g., and greenberg, s.  support for workspace
+  awareness in educational groupware, in proceedings of cscl'95
+  (bloomington, october 17-20, 1995), acm press, n.y., pp 147-156.
+
+ 
+groupkit is a set of controls designed to give distance cooperative
+users an awareness of their collaborators workspace. this paper
+describes "workspace awareness" and some of the controls.  there is
+also a suite of papers in chi'96 which describes more of the controls
+and how they can be used.  distance, synchronous.
+
+
+ 
+patterson, j. f., hill, r. d. and rohall, s. l. rendezvous: an
+  architecture for synchronous multi-user applications, in proceedings
+  of cscw'90, (los angeles, ca, october 7-10, 1990), acm press, n.y.,
+  pp. 317-328.
+
+ 
+actually there is also another paper from uist '91 which also
+describes this system. distance, synchronous.
+
+
+ 
+pozzi, s.,  peterc, d., concoliino, p., di nitto, e., and moninaro, a.
+  imageannotator: an image-based cooperative application, in ??? pp
+  192-197.
+
+ 
+a cooperative image processing application.
+
+
+ 
+shen, h. and dewan, p.  access control for collaborative environments,
+  in proceedings of cscw'92 (toronto, october 31-november 4, 1992), acm
+  press, n.y., pp 51-58.
+
+
+using access control methods to support sharing in a collaborative
+environment.  they discuss the rules and architecture used in a
+distributed collaborative environment.  they also talk some about user
+"roles."  distant, synchronous.
+
+
+ 
+smith, r. b.  what you see is what i think you see, in sigcue outlook.
+  21, 3 (spring 1992).
+
+
+defines wysiwitys (see title above), and sharedark, a collaborative
+microworld system.
+
+
+
+additional references
+
+
+
+  cohen, e. g. 1994a. designing groupwork:
+strategies for the heterogeneous classroom, 2d ed.
+new york: teachers college press. (actually a book, not a paper!)
+
+  cohen, e. g. 1994b.
+restructuring the classroom:  conditions for productive small groups,
+review of educational research, vol. 64, no. 1, pp.1-35.
+
+
+  disessa, a. 1993.
+toward an epistemology of physics.  cognition and instruction,
+vol. 10, nos. 2 & 3, pp.105-225.
+
+  duda, r. o. and hart, p. e. 1973.
+pattern classification and scene analysis.
+new york: wiley. (a book).
+
+
+  fayyad, u. m., piatetsky-shapiro, g., smyth, p., and uthurusamy, r. 1996.
+advances in knowledge discovery and data mining,
+cambridge, ma: mit press. (a book).
+
+
+  garfield, j. 1993.
+teaching statistics using small-group collaborative learning.
+j. statistics education, vol. 1, no. 1,
+online at
+
+http://www2.ncsu.edu/ncsu/pams/stat/info/jse/v1n1/garfield.html.
+
+
+
+  garfield, j. 1995.
+how students learn statistics. international statistics review,
+vol. 63, no. 1, pp.25-34.
+
+
+
+  garfield, j. and ahlgren, a. 1988.
+difficulties in learning basic concepts in probability and
+statistics: implications for research.
+j. res. in mathematics education, vol. 19, no. 1, pp.44-63.
+
+  gruber, t. r. 1993.
+toward principles for the design of ontologies used for
+knowledge sharing.
+technical report ksl 93-04, knowledge systems laboratory,
+stanford university.
+
+  hawkins, a., jolliffe, f., and glickman, l. 1992.
+teaching statistical concepts.
+new york: longman publishing. (a book).
+
+  hunt, e., and minstrell, j. 1994.
+a cognitive approach to the teaching of physics.
+in mcgilly, k. (ed.), classroom lessons.
+cambridge, ma: mit press, pp.51-74.
+
+  keeler, c. m. and steinhorst, r. k. 1995.
+using small groups to promote
+active learning in the introductory statistics course: a report from the
+field. j. statistics education, vol 3, no. 2,
+online at 
+
+http://www2.ncsu.edu/ncsu/pams/stat/info/jse/v3n2/keeler.html.
+
+  kolodner, j. l. 1993.
+case-based reasoning.
+san mateo, ca: morgan kaufman. (a book).
+
+
+  lajoie, s. p., lavigne, n. c., muncie, s., and wilkie, t. v. 1996.
+monitoring student progress in statistical comprehension and skill.
+in lajoie, s. (ed.), reflections on statistics:
+agendas for learning, teaching, and assessment in k-12.
+hillsdale, nj: erlbaum associates (forthcoming).
+
+  laughlin, p. 1978, ability and group problem solving
+j. research and development in education, vol. 12, no. 1, pp.114-120.
+
+  lesh, r. and lamon, s. (eds.) 1992.  assessment of
+authentic performance in school mathematics.  washington, dc:
+american association for the advancement of science. (a book).
+
+  levidow, b., hunt, e., and mckee, c. 1991.
+the diagnoser: a hypercard tool for building theoretically
+based tutorials.
+behavioral research methods, instrumentation and computers,
+vol. 23, pp.249-252.
+
+  mathematical sciences education board. 1993.
+measuring what counts: a conceptual guide for mathematics
+assessment. national research council.
+washington, dc: national academy press. (a book).
+
+  minstrell, j. 1992.
+facets of students' knowledge and relevant instruction.
+in duit, r., goldberg, f., and niedderer, h. (eds.),
+research in physics learning: theoretical issues
+and empirical studies. kiel, germany: kiel university, institute for
+science education.
+
+  minstrell, j., and stimpson, v. 1996.
+a classroom environment for learning: guding students' reconstruction
+of understanding and reasoning.
+in glaser, r., and schauble, l. (eds.),
+the contributions of instructional innovation to
+understanding learning, lawrence earlbaum associates, pp.171-198.
+
+
+  moore, d. 1991. uncertainty.
+in steen, l. (ed.), on the shoulders of giants.
+washington, dc: national academy press, pp.95-137.
+
+  moore, d. s.,  cobb, g. w.,  garfield, j., and meeker, w. q. 1995.
+statistics education fin de siecle.
+american statistician, vol. 49, no. 3, pp.250-60.
+
+  nctm 1995.
+assessment standards for school mathematics.
+reston, va: national council of teachers of mathematics. (a book).
+
+  scardamalia, m. and bereiter, c. 1993.
+technologies for knowledge-building discourse.
+communications of the acm, vol. 36, no. 5, pp.37-41. 
+
+  scardamalia, m. and bereiter, c. 1994. computer support for
+knowledge-building communities. j. of the learning sciences, vol. 3,
+pp.265-283.
+
+  scardamalia, m. and bereiter, c. 1996.
+student communities for the advancement of knowledge.
+communications of the acm, vol. 39, no. 4, pp.36-37. 
+
+  schaffner, a., graf, e. a., hunt, e., madigan, d.,
+minstrell, j., and mason, m. 1996.
+benchmark lessons and the world-wide web: tools for
+teaching statistics.  proc. int'l. conf. on the learning
+sciences '96. evanston, il (to appear).
+
+  weaver, c. a. and kintsch, w.
+enhancing students' comprehension of the conceptual structure
+of algebra word problems.
+j. educational psychology, vol. 84, no. 4,
+pp.419-428.
+
+
+
+
+
+
+copyright notice:  the material in this course web is subject
+to copyright.  while it may be viewed by the public,
+it should not be installed at any web site other
+than the one at the university of washington.
+
+
+this list was compiled by lauren bricker and steve tanimoto.
+
+(last update: 25 september 1996,  s. tanimoto)
+
+
+
+
+
+cse 590d autumn 1996 list of papers)
+cse 590d autumn 1996 list of papers)
+cse 590d autumn 1996 list of papers)
+cse 590d autumn 1996 list of papers)
+cse 590d autumn 1996 list of papers)
+cse 590d autumn 1996 list of papers)
+cse 590d autumn 1996 list of papers)
+cse 590d autumn 1996 list of papers)
+cse 590d autumn 1996 list of papers)
+cse 590d autumn 1996 list of papers)

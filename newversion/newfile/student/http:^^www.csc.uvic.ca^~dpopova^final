@@ -1,0 +1,100 @@
+diana popova's home page
+
+diana popova's home page
+
+
+
+
+welcome to diana popova's home page.
+
+if you got here by another route, then you may want to use 
+the university of victoria's
+information server
+ as starting point for local exploration.
+ 
+
+
+
+research interests
+
+
+
+systems engineering
+
+networks (protocols)
+
+architecture(verification of systems)
+systems software (software engineering)
+
+
+research topic
+building a translator from csp language to c++.
+
+
+
+description of research
+one of the useful formalisms for designing concurrent real-time systems is the process algebra called csp, or communicating sequential processes.  csp statements can be used to model a system's control and data flow in an intuitive  way.  these statements can be executed and debugged until it is clear that the desired behaviour has been accurately captured.  moreover, csp is an algebra with precise rules, so it is possible to prove certain properties (such as the absense of deadlocks) of the design.  the task of the translator is to automatically produce compilable code from csp statements.  if the csp statements have been properly verified, then such code can have the advantage of being  "correct by construction".  this goal can be accomplished by devising a technique for translating from csp to c++. more details can be seen in the thesis outline page.
+ 
+
+
+contact information
+name:           diana popova
+
+university:     university of victoria
+
+department:     computer science
+
+address:        104 -- 3861 finnerty road, victoria, bc v8n 6k8
+
+telephone:      604-472-2629
+
+fax:            604-472-2629
+
+e-mail:         dpopova@sanjuan.uvic.ca
+
+
+
+career interests and goals
+computer systems administration, software development
+
+
+skills
+computer programmer in c, c++; electronics engineer; technical translator from russian.
+
+
+
+work experience
+jan 92 - nov 93    electronics development engineer, sifs, moscow, russia
+
+jan 89 - dec 91    electronics adjustment engineer, lite, moscow, ussr
+
+nov 76 - dec 88   design engineer, zew, moscow region, ussr
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+diana popova's home page
+diana popova's home page
+diana popova's home page
+diana popova's home page
+diana popova's home page
+diana popova's home page
+diana popova's home page
+diana popova's home page
+diana popova's home page
+diana popova's home page

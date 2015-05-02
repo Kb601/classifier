@@ -1,0 +1,162 @@
+emin gun sirer
+
+
+
+ emin g&uuml;n sirer
+egs@cs.washington.edu
+
+
+     
+     department of computer science & engineering,  
+     university of washington, box 352350, 
+     seattle, wa 98195-2350 usa
+
+
+ 
+
+background
+
+
+i'm currently a third year graduate student at the  university of washington.
+i grew up in istanbul, turkey, received my b.s.e in computer science from 
+  princeton university 
+in 1993 and am currently working towards a ph.d. on the 
+spin
+project with 
+prof. brian bershad. 
+
+
+i spent the summer of '93 at 
+at&t bell labs
+working on the
+plan 9
+operating system. i helped build a prototype 3-d display during the
+summer of '91 at the nec research center 
+in princeton, new jersey.
+most recently, during the summer of '96, i worked at 
+dec src on the
+vesta 2 project.
+
+projects
+
+
+my goal is to develop safe, adaptable and extensible operating systems.
+i developed the threads, scheduling, synchronization, ipc, dynamic linking and
+protection domain subsystems in spin. i also wrote the machine specific
+aspects of the spin kernel, such as the system call and interrupt paths, and
+some miscellaneous interfaces, such as alarms and mach compatibility support.
+
+the novel 
+aspects of spin threads and scheduling are that they provide the means of
+extending a kernel with arbitrary thread implementations and scheduling
+policies. dynamically linking the extensions into the kernel allows
+us to achieve high-performance. the interface, called strands, is
+designed to be safe and provide fault-isolation.
+
+the novel aspect of the 
+
+spin protection domain interface is that it allows
+isolation and safe fine-grain sharing at the same time. extensions with
+conflicting symbols can be simultaneously active in our system. further, 
+extensions can hide some of their code and data such that they can be
+assured that no one can possibly access them. the clincher is that extensions
+that want to share code and data can do so with no dynamic protection
+enforcement overhead.
+
+i also implemented a high-performance
+web server on top of the spin networking
+stack. the main objectives in its design are reduced http latency and
+minimal load.
+
+i wrote a mips instruction set simulator a couple of years ago, called
+mipsi,
+that was robust enough to simulate all the spec benchmarks and standard ml of
+new jersey. it has been used both as an educational tool and as a research
+platform. this page describes mipsi's features
+and availability.
+
+papers
+
+
+    safe dynamic linking in an extensible operating system
+	wcsss 1996. describes the spin protection and namespace management mechanism.
+	
+writing an operating system using modula-3
+	wcsss 1996. describes our experience with using modula-3 to implement spin.
+	
+ extensibility, safety and
+     performance in the spin operating system
+     sosp 1995. a design, implementation and performance paper.
+     
+ protection is a software issue
+     hotos 1995. a position paper comparing software and
+	hardware protection mechanisms.
+     
+ 
+     spin - an extensible microkernel for application-specific
+	 operating system services
+     sigops european workshop 1994. operating systems review version.
+     
+
+ 
+  spin - an extensible microkernel for application-specific
+  operating system services
+  university of washington technical report uw-cse-94-03-03, march 1994.
+  
+
+ measuring limits of fine-grained parallelism
+   senior independent work, princeton university, june 1993.
+
+
+talks
+
+language support for extensible operating systems
+	slides from the presentation at the first workshop for compiler support for systems software.
+	wcsss 1996, in tucson, arizona.
+
+
+interests
+
+
+whenever i can find time and opportunity, i do some of the following:
+
+
+
+	
+    
+	
+sailing ~~~~~~     windsurfing
+
+	
+    
+	
+diving ~~~~~~~     skiing
+
+	
+biking
+making outdoor clothing and
+hiking.
+
+
+
+i'm a big bob dylan fan.
+	
+
+
+
+egs@cs.washington.edu
+
+
+
+
+
+emin gun sirer
+emin gun sirer
+emin gun sirer
+emin gun sirer
+emin gun sirer
+emin gun sirer
+emin gun sirer
+emin gun sirer
+emin gun sirer
+emin gun sirer

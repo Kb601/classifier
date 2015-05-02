@@ -1,0 +1,65 @@
+simplescalar architectural research tool set
+
+
+
+
+simplescalar architectural research tool set
+
+
+
+what is the simplescalar architectural research tool set?
+
+
+the simplescalar architectural research tool set comprises compiler,
+assembler, linker and simulation tools for the simplescalar architecture.
+the tool set is partly derived from the gnu software development tools.
+it provides researchers with an easily extensible, portable, high-performance
+test bed for systems design.
+
+
+here are 
+slides from the simulation workshop talk i (todd austin) gave at the
+last isca in santa margherita ligure, italy.  the talk detailed the tool
+set and insights we've gained from its use.
+
+
+
+how do i get the simplescalar architectural research tool set?
+
+
+the source release for version 1.0.0 should be available here in early
+1996.  please send me e-mail (at austin@cs.wisc.edu) for further
+details.
+
+
+
+who made the simplescalar architectural research tool set?
+
+
+much of the compiler tools are simply ports of the gnu software development
+tools to the simplescalar architecture.  the ports as well as the simulators
+were written by
+todd austin
+of the
+wisconsin multiscalar group
+at the
+university of wisconsin - madison.
+the development of this code was supported by grants from the national
+science foundation (grant ccr-9303030 plus software capitalization
+supplement) and the office of naval research (grant n00014-93-1-0465).
+
+
+ last updated: october 4, 1995 
+
+
+
+simplescalar architectural research tool set
+simplescalar architectural research tool set
+simplescalar architectural research tool set
+simplescalar architectural research tool set
+simplescalar architectural research tool set
+simplescalar architectural research tool set
+simplescalar architectural research tool set
+simplescalar architectural research tool set
+simplescalar architectural research tool set
+simplescalar architectural research tool set

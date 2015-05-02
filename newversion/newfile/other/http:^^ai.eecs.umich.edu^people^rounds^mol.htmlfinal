@@ -1,0 +1,63 @@
+bill rounds'  research statement 
+
+
+mathematics of language 
+
+  this subject goes back a long way, to early logicians who (like boole)
+were convinced that a calculus of reasoning was just around the corner;
+all that was required was to translate logical arguments in natural language
+into symbolic expressions. 
+
+this problem was a lot more difficult than imagined. it involved first
+understanding how meanings were associated with utterances; and to do this,
+the structure of utterances had to be understood. 
+
+the foundations  of today's mathematics of language were laid by
+(among others) noam  chomsky in the late 1950's and early 1960's. 
+people recognized then that simple syntactic systems, notably 
+context-free grammars, could be used to specify both programming and 
+natural language syntax. 
+
+since those days, it has been discovered that the syntax of natural language
+and programming languages is a bit more complicated, and people have worked
+on various ways to integrate syntax and semantics. the basic cognitive premise,
+however, is that humans do routinely use certain data structures to process
+language, and that (quite possibly) humans are genetically predisposed to
+be able to use these data structures for both language processing and learning.
+
+mathematics enters the picture when one wants to study the structural properties of
+such postulated data structures, and algorithms which use them. for example,
+context-free grammars make heavy use of tree data structures.
+
+most recently, i have been involved with a new class of data structures
+called  feature structures or attribute-value structures. these
+entities occur ubiquitously in computer science (a.k.a. records), and
+they have a lot of interesting properties, like tree structures do.
+
+one such property is that feature structures may represent incomplete
+information about a sentence. this leads to a natural ordering of
+these structures according to how much information they contain. i am
+now looking at ways to "fill up" feature structures; and a very interesting
+approach is to fill them up with  default  information, which may
+have to be retracted. this leads to using methods from artificial
+intelligence (non-monotonic logic and belief revision) together with
+the mathematics of partial orders. this latter theory
+has been well-developed for programming languages, where it is called
+ domain theory.
+more on feature systems and defaults can be found in the specific project descriptions
+
+feature logic
+default domain theory
+
+
+
+bill rounds'  research statement 
+bill rounds'  research statement 
+bill rounds'  research statement 
+bill rounds'  research statement 
+bill rounds'  research statement 
+bill rounds'  research statement 
+bill rounds'  research statement 
+bill rounds'  research statement 
+bill rounds'  research statement 
+bill rounds'  research statement

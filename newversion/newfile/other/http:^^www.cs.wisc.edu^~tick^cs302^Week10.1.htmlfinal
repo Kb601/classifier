@@ -1,0 +1,292 @@
+cs 302 section 70 lecture notes - week 10
+
+
+
+
+ lecture notes - week 10,part 1
+
+
+
+
+   topic:
+   heaps
+
+   text:
+   none.
+
+   notes:
+   
+
+   
+   heaps: 
+   remember that we've seen binary search represented as a tree, i.e.
+
+1 3 5 6 8 9 11
+
+becomes
+
+    6 
+   / \
+  3   9
+ / \ / \
+1  5 8  11
+
+where the middle of the search starts with 6. then if we need to search the
+left part of the list, the new middle is 3; if we need to search the right part,
+though, the middle is 9, and so on down the tree. this is one way that an
+array can represent a tree.
+
+however, there is another type of tree with an array can represent, called
+a heap. there are two things required in order for a tree to be a heap:
+
+it must be a complete tree...every node must have two children except
+for the last one, which can have one or two...so the unique complete binary
+trees of size 1 through 7 look like
+
+o     o    o        o        o        o        o
+     /    / \      / \      / \      / \      / \
+    o    o   o    o   o    o   o    o   o    o   o
+	         /        / \      / \ /    / \ / \
+                o        o   o    o  o o   o  o o  o 
+
+all nodes must satisfy the heap property [dramatic chord]: for each node
+in a heap, the value of that node must be >= the value of both children, so
+
+   8
+  / \  
+ 4   2
+
+is a heap, whereas
+
+   4
+  / \
+ 2   8
+
+is not.
+
+
+how are heaps represented by arrays? elements of a heap are read left-to-right,
+top-to-bottom. so
+
+      8
+     / \
+    6   4 
+   / \ / \
+  3  5 2  1
+
+is stored as
+
+8 6 4 3 5 2 1
+(i'll be referring to this array as list from now on)
+
+getting around a heap  
+eventually we'll need to talk about how to obtain a sorted list from a
+heap. first, though, we need to talk about a few important functions to
+help us move around a heap and change a few values inside.
+finding related nodes:note that list(1) = 8. its left child
+is found at list(2). list(3) is 4. it's left child is at list(6). in
+general, given an element n,
+
+the left child of list(n) is list(2*n).
+the right child of list(n) is list(2*n+1)
+the  parent of list(n) is list(n/2) (the inverse of finding a child)
+
+heapify: every once in a while, cs invents a word.
+the purpose of heapify ties in to the fact that not every complete binary 
+tree is a heap. we have to worry about whether the heap property is satisfied.
+heapify takes a node and moves it down the tree until that node satifies
+the heap property (if it was okay to begin with, it won't be moved at all).
+
+    2 
+   / \
+  6   4 
+ / \ / \
+3  5 8  1
+
+2 6 4 3 5 8 1
+
+suppose we wanted to heapify node 1 (list(1)=2).
+ 
+2 
+    6 
+   / \
+  2   4
+ / \ / \
+3  5 8  1
+
+6 2 4 3 5 8 1
+
+we chose 6 because 6 > 4 (if we chose 4, 4 would be at the top with 6 as
+one of its children, so the heap property would still fail at node 1.
+we continue to follow the 2, now located at list(2). the heap property still
+fails there, so we need to switch the 2 and the 5. we get
+
+     6
+    / \
+   5   4
+  / \ / \
+ 3  2 8  1 
+
+6 5 4 3 2 8 1
+
+note that this is still not a heap (the 8 is a problem), but all nodes on the
+path from where the 2 was to where the 2 is now satisfy the heap property.
+buildheap:we have a way of providing the heap property
+to a path in the tree; now we need to be able to do it to all paths (once it's
+true for all paths, then our tree will be a heap). 
+what we're essentially going to do is call heapify within a do loop. we
+won't need to call heapify on the bottom nodes (usually called leaf nodes);
+those nodes have no children, so they're as far down as they can go.
+
+start with the the last node that has children (list(3), in our example
+above). in general, if the heap has n elements, this node will be list(n/2).  
+heapify that node. then heapify the node before that in the list (list(2)).
+repeat until you reach the top of the tree (list(1)).  
+
+example:
+
+    2
+   / \
+  4   6
+ / \ / \
+1  7 3  8
+-----------------------------
+heapify node 3 (the 6)   
+
+    2
+   / \
+  4   8
+ / \ / \
+1  7 3  6
+
+6  3. so  / \   is a heap.
+          3   6
+-----------------------------
+heapify node 2 (the 4)
+
+    2
+   / \
+  7   8
+ / \ / \
+1  4 3  6
+
+     7
+so  / \   is a heap.
+   1   4 
+-----------------------------
+heapify node 1 (the 2)
+this ecompasses 2 moves...2 gets switched with
+the 8, then with the 6).
+
+     8 
+    / \
+   7   6 
+  / \ / \ 
+ 1  4 3  2
+-----------------------------
+
+why start with n/2 and work backwards? suppose we're given heaps h1,h2 and a
+and a node x; the tree
+
+        x
+       / \
+      h1  h2
+
+can only violate the heap property at one place...x. so if we switch
+x with the top of h1, then x is fine, h2 is fine, but h1 may not be
+fine. so, let's look at h1.....
+
+                x
+h1 now =       / \
+             h3  h4  
+(h3 and h4 are subheaps)
+
+we're back to the same argument we just had above...if x violates the
+heap property, move in down into h3 or h4. this is exactly what heapify
+does.
+so the only node to violate the heap property will always be x. once heapify
+finds the right spot for x, then even x isn't a problem, so all nodes are
+fine, and we have our heap.
+this is why we work back from n/2 to 1. we build heaps out of the lower
+parts of the tree, then use them to build a heap out of higher parts of
+the tree. in our example, we made a heap out of the tree starting with 
+list(3), then a heap out of the tree starting at list(2). we then used those
+two subheaps to build a heap out of the tree starting with list(1).
+heapsort: heaps by themselves don't give us a completely
+sorted array, but they give us a quick method for doing so. consider the 
+following heap:
+
+     8
+    / \
+   4   7
+  / \ / \
+ 3  1 2  5
+
+8 4 7 3 1 2 5
+
+
+take the last element in the array and switch it with the first element. we
+now have the largest element in the array at the end of list.
+decrease your heap size. so list(1) to list(7) is the heap; list(8)
+is ignored. since we've already found the largest number, we don't want to
+include it in our heap anymore.
+heapify list(1). we'll get a new heap based on the first 7 elements of
+list.
+
+     7
+    / \
+   4   5
+  / \ /
+ 3  1 2
+
+7 4 5 3 1 2 8
+
+repeat these steps until your heap is empty.
+
+so the next time thru, for example, switch 2 and
+7, decrease your heap size by 1, and heapify the top. 
+
+     5
+    / \
+   4   2
+  / \
+ 3   1
+
+5 4 2 3 1 7 8
+
+
+so now the 2 largest elements are in order, at the back of the list. so
+when you're done, you'll have the entire list is sorted order.     
+
+
+
+
+
+
+
+
+copyright &copy 1996jeff lampert (tick@cs.wisc.edu).  last modified november 8, 1996
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cs 302 section 70 lecture notes - week 10
+cs 302 section 70 lecture notes - week 10
+cs 302 section 70 lecture notes - week 10
+cs 302 section 70 lecture notes - week 10
+cs 302 section 70 lecture notes - week 10
+cs 302 section 70 lecture notes - week 10
+cs 302 section 70 lecture notes - week 10
+cs 302 section 70 lecture notes - week 10
+cs 302 section 70 lecture notes - week 10
+cs 302 section 70 lecture notes - week 10

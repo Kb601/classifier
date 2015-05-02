@@ -1,0 +1,891 @@
+cs 537 - processes
+
+
+
+
+
+cs 537lecture notesprocesses and synchronization
+
+
+
+
+contents
+
+ using processes 
+ what is a process? 
+ why use processes 
+ creating processes 
+ process states 
+ synchronization 
+
+ race conditions 
+ semaphores 
+ the bounded buffer problem 
+the dining philosophers 
+monitors 
+ messages 
+
+
+
+
+
+tanenbaum mixes a presentation of the features of processes of interest
+to programmers creating concurrent programs with discussion of techniques
+for implementing them.  the result is (at least to me) confusing.
+i will attempt to first present processes and associated features from the
+user's point of view with as little concern as possible for questions about
+how they are implemented, and then turn to the question of implementing
+processes.
+
+  using processes  
+  what is a process?  
+a process is a ``little bug'' that crawls around on the program executing
+the instructions it sees there.
+normally (in so-called sequential programs) there is exactly one
+process per program, but in concurrent programs, there may be
+several processes executing the same program.
+the details of what constitutes a ``process'' differ from system to system.
+the main difference is the amount of private state associated with
+each process.
+each process has its own program counter, the register
+that tells it where it is in the program.
+it also needs a place to store the return address when it calls a subroutine,
+so that two processes executing the same subroutine called from different
+places can return to the correct calling points.
+since subroutines can call other subroutines, each process needs its own
+stack of return addresses.
+
+processes with very little private memory are called threads
+or light-weight processes.
+at a minimum, each thread needs a program counter and a place to
+store a stack of return addreses; all other values could be stored in
+memory shared by all threads.
+at the other extreme, each process could have its own private memory
+space, sharing only the read-only program text with other processes.
+this essentially the way a unix process works.
+other points along the spectrum are possible.
+one common approach is to put the local variables of procedures on the
+same private stack as the return addresses, but let all global variables
+be shared between processes.
+a stack frame holds all the local variables of a procedure, together
+with an indication of where to return to when the procedure returns, and
+an indication of where the calling procedure's stack frame is stored.
+java follows this approach.
+it has no global variables, but threads all share the same heap.
+the heap is the region of memory used to allocate objects in response to
+new.
+in short, variables declared in procedures are local to threads,
+but objects are all shared.
+of course, a thread can only ``see'' an object if it can reach that object
+from its ``base'' object (the one containing its run method, or
+from one of its local variables.
+
+    class foo implements runnable {
+        object obj1, obj2;
+        foo(object a) { obj1 = a; }
+        public void run() {
+            object obj3 = new object();
+            obj2 = new object();
+            for(int i = 0; i &lt; 1000; i++) // do something
+        }
+    }
+    class bar {
+        static public void main(string args[]) {
+            object obj4 = new object();
+
+            runnable foo1 = new foo(obj4);
+            thread t1 = new thread(foo1);
+
+            runnable foo2 = new foo(obj4);
+            thread t2 = new thread(foo2);
+
+            t1.start(); t2.start();
+            // so something here
+        }
+    }
+
+there are three treads in this program, the main thread and two child
+threads created by it.
+each child thread has its own stack frame for foo.run(),
+with space for obj3 and i.
+thus there are two copies of the variable obj3, each of which
+points to a different instance of object.
+those objects are in the shared heap, but since one thread has no
+way of getting to the object created by the other thread, these objects
+are effectively private.
+similary, the objects pointed to by obj2 are effectively private.
+but both copies of obj1 and the copy of obj4 in the main
+thread all point to the same (shared) object.
+
+other names sometimes used for processes are job or task.
+
+it is possible to combine threads with processes in the same system.
+for example, when you run java under unix, each java program is run in
+a separate unix process.
+unix processes share very little with each other, but the java threads
+in one unix process share everything but their private stacks.
+
+  why use processes  
+
+processes are basically just a programming convenience, but in some settings
+they are such a great convenience, it would be nearly impossible to write
+the program without them.
+a process allows you to write a single thread of code to get some task
+done, without worrying about the possibilty that it may have to wait for
+something to happen along the way.
+examples:
+
+a server providing services to others.
+one thread for each client.
+a timesharing system.
+one thread for each logged-in user.
+a real-time control computer controlling a factory.
+one thread for each device that needs monitoring.
+networking.
+one thread for each connection.
+
+
+  creating processes  
+
+when a new process is created, it needs to know where to start executing.
+in java, a thread is given an object when it is created.
+when it is started, it starts execution at the beginning of the run
+method of that object.
+in unix, a new process is started with the fork() command.
+it starts execution at the statement immediately following the fork()
+call.
+after the call, both the parent (the process that called fork())
+and the child are both executing at the same point in the program.
+the child is given its own memory space, which is initialized with
+an exactly copy of the memory space (globals, stack, heap objects)
+of the parent.
+thus the child looks like an exact clone of the parent, and indeed, it's
+hard to tell them apart.
+the only difference is that fork() returns 0 in the child, but a
+non-zero value in the parent.
+
+    char *str;
+
+    main() {
+        int j;
+        str = &quot;the main program &quot;;
+        j = f();
+        cout &lt;&lt; str &lt;&lt; j &lt;&lt; endl;
+    }
+
+    void f() {
+        int k;
+
+        k = fork();
+        if (k == 0) {
+            str = &quot;the child has value &quot;;
+            return 10;
+        }
+        else {
+            str = &quot;the parent has value &quot;;
+            return 39;
+        }
+    }
+
+this program starts with one process executing main().
+this process calls f(), and inside f() it calls fork().
+two processes appear to return from fork(), a parent and
+a child process.
+each has its own copy of the global global variable str and its
+own copy of the stack, which contains a frame for main with
+variable j and a frame for f with variable k.
+after the return from fork the parent sets its copy of k to
+a non-zero value, while the child sets its copy of k to zero.
+each process then assigns a different string to its copy of the global str
+and returns a different value, which is assigned to the process' own copy of
+j.
+two lines are printed:
+
+    the parent has value 39
+    the child has value 10
+
+(actually, the lines might be intermingled).
+
+  process states  
+once a process is started, it is either runnable or blocked.
+it can become blocked by doing something that explicitly blocks itself (such as
+wait()) or by doing something that implicitly block it (such 
+as a read() request).
+in some systems, it is also possible for one process to block anther (e.g.,
+thread.suspend() in java).
+a runnable process is either ready or running.
+there can only be as many running processes as there are cpus.  one of the
+responsibilities of the operating system, called short-term scheduling
+is to switch processes between ready and running state.
+
+  synchronization  
+  race conditions  
+consider the following extremely simple procedure
+
+    void deposit(int amount) {
+        balance += amount;
+    }
+
+(where we assume that balance is a shared variable.
+if two processes try to call deposit concurrently, something very bad
+can happen.
+the single statment balance += amount is really implmented, on most
+computers, buy a sequence of instructions such as
+
+    load  reg, balance
+    add   reg, amount
+    store reg, balance
+
+suppose process p1 calls deposit(10) and process p2 calls deposit(20).
+if one completes before the other starts, the combined effect is to
+add 30 to the balance, as desired.
+however, suppose the calls happen at exactly the same time, and the
+executions are interleaved.  suppose the initial balance is 100, and
+the two processes run on different cpus.
+one possible result is
+
+    p1 loads 100 into its register
+    p2 loads 100 into its register
+    p1 adds 10 to its register, giving 110
+    p2 adds 20 to its register, giving 120
+    p1 stores 110 in balance
+    p2 stores 120 in balance
+
+and the net effect is to add only 20 tot he balance!
+
+this kind of bug, which only occurs under certain timing conditions, is
+called a race condition.
+it is an extremely difficult kind of bug to track down (since it
+may disappear when you try to debug it) and may be nearly
+impossible to detect from testing (since it may occur only extremely rarely).
+the only way to deal with race conditions is through very careful
+coding.
+to avoid these kinds of problems, systems that support processes always
+contain constructs called
+synchronization primatives.
+
+  semaphores  
+
+one of the earliest and simplest synchronization primitives is the
+semaphore.
+we will consider later how semaphores are implemented, but for now
+we can treat them like a java object that hides an integer value and
+only allows three operations:
+initialization to a specified value,
+increment,
+or
+decrement.1
+
+    class semaphore {
+        private int value;
+        public semaphore(int v) { value = v; }
+        public void up() { /* ... */ }
+        public void down() { /* ... */ };
+    }
+
+there is no operation to read the current value!
+there two bits of ``magic'' that make this seemingly useless class extremely
+useful:
+
+ the value is never permitted to be negative.  if the value is
+zero when a process calls down, that process is forced to wait
+(it goes into blocked state) until some other process calls up
+on the semaphore.
+ the up and down operations are atomic:
+a correct implementation must make it appear that they occur
+instantaneously.
+in other words, two operations on the same semaphore attempted at the
+same time must not be interleaved.
+(in the case of a down operation that blocks the caller, it is
+the actual decermenting that must be atomic; it is ok if other things happen
+while the calling process is blocked).
+
+our first example uses semaphores to fix the deposit function above.
+
+    shared semaphore mutex = new semaphore(1);
+    void deposit(int amount) {
+        mutex.down();
+        balance += amount;
+        mutex.up();
+    }
+
+we assume there is one semaphore, which we call mutex (for ``mutual
+exclusion'') shared by all processes.
+the keyword shared (which is not java) will be omitted if it
+is clear which variables are shared and which are private (have a separate
+copy for each process).
+semaphores are useless unless they are shared, so we will omit shared
+before semaphore.
+also we will abreviate the declaration and initialization as
+
+    semaphore mutex = 1;
+
+let's see how this works.
+if only one process wants to make a deposit, it does mutex.down(), decreasing
+the value of mutex to zero, adds its amount to the balance, and returns
+the value of mutex to one.
+if two processes try to call deposit at about the same time, one
+of them will get to do the down operation first (because down is atomic!).
+the other will find that mutex is already zero and be forced to wait.
+when the first process finishes adding to the balance, it does mutex.up(),
+returning the value to one and allowing the other process to complete
+its down operation.
+if there were three processes trying at the same time,
+one of them would do the down first, as before, and the other two
+would be forced to wait. when the first process did up, one of the other
+two would be allowed to complete its down operation, but then mutex
+would be zero again, and the third process would continue to wait.
+
+  the bounded buffer problem  
+suppose there are producer and consumer processes.
+there may be many of each.
+producers somehow produce objects, which consumers then use for something.
+there is one buffer object used to pass objects from producers to
+consumers.
+we will not show the implementation of buffer (it is an easy 367 exercise).
+a buffer can hold up to n objects.
+the problem is to allow concurrent access to the buffer by producers
+and consumers, while ensuring that
+
+the shared buffer data structure is not screwed up by race conditions
+in accessing it.
+consumers don't try to remove objects from buffer when it is empty.
+producers don't try to add objects to the buffer when it is full.
+
+when condition (3) is dropped (the buffer is assumed to have infinite
+capacity), the problem is called the producer-consumer problem
+(but tanenbaum calls the bounded-buffer problem ``the producer-consumer
+problem'').
+here is a solution.
+
+    shared buffer b;
+    semaphore
+        mutex = 1,
+        empty = n,
+        full = 0;
+    
+    class producer implements runnable {
+        public void run() {
+            object item;
+            for (;;) {
+                item = produce();
+                empty.down();
+                mutex.down();
+                b.enter_item(item);
+                mutex.up();
+                full.up();
+            }
+        }
+    }
+    class consumer implements runnable {
+        public void run() {
+            object item;
+            for (;;) {
+                full.down();
+                mutex.down();
+                item = b.remove_item();
+                mutex.up();
+                empty.up();
+            }
+        }
+    }
+
+as before, we surround operations on the shared buffer data structure
+with mutex.down() and mutex.up() to prevent interleaved changes by
+two processes (which may screw up the data structure).
+the semaphore full counts the number of objectx in the buffer,
+while the semphore empty counts the number of free slots.
+the operation full.down() in consumer atomically waits until there is
+something in the buffer and then ``lays claim'' to it by decrementing the
+semaphore.
+suppose it was replaced by
+
+    while (b.count == 0) { /* do nothing */ }
+    mutex.down();
+    /* as before */
+
+it would be possible for one process to see that the buffer was non-empty,
+and then have another process remove the last item before it got a chance
+to grab the mutex semapore.
+
+there is one more fine point to notice here:
+suppose we revesed the down operations in the consumer
+
+    mutex.down();
+    full.down();
+
+and a consumer tries to do these operation when the buffer is empty.
+it first grabs the mutex semaphore and then blocks on the full
+semaphore.
+it will be blocked forever because no other process can grab the mutex
+semaphore to add an item to the buffer (and thus call full.up()).
+this situation is called deadlock.
+we will study it in length later.
+
+ the dining philosophers 
+there are five philosopher processes numbered 0 through 4.
+between each pair of philosophers is a fork.
+the forks are also numbered 0 through 4, so that fork i is between
+philosophers i-1 and i (all arithmetic on fork numbers and philosopher
+numbers is modulo 5 so fork 0 is between philosophers 4 and 0).
+
+
+
+each philosopher alternates between thinking and eating.
+to eat, he needs exclusive access to the forks on both size of him.
+
+    class philosopher implements runnable {
+        int i;    // which philosopher
+        public void run() {
+            for (;;) {
+                think();
+                take_forks(i);
+                eat();
+                put_forks(i)
+            }
+        }
+    }
+
+a first attempt to solve this problem represents each fork as a semaphore:
+
+    semaphore fork[5] = 1;
+    void take_forks(int i) {
+        fork[i].down();
+        fork[i+1].down();
+    }
+    void put_forks(int i) {
+        fork[i].up();
+        fork[i+1].up();
+    }
+
+the problem with this solution is that it can lead to deadlock.
+each philosopher picks up his right fork before he tried to pick up his
+left fork.
+what happends if the timing works out such that all the philosophers
+get hungry at the same time, and they all pick up their right forks
+before any of them gets a chance to try for his left fork?
+then each philosopher i will be holding fork i and waiting
+for fork i+1, and they will all wait forever.
+
+
+
+
+there's a very simple solution:
+instead of trying for the right fork first, try for the lower
+numbered fork first.
+we will show later that this solution cannot lead to deadlock.
+you will be implementing a generalization of this technique in
+project 2.
+
+this solution, while deadlock-free, is still not as good as it could be.
+consider again the situation in which all philosophers get hungry at the
+same time and pick up their lower-numbered fork.  both philosopher
+0 and philosopher 4 try to grab fork 0 first.
+suppose philosopher 0 wins.
+since philosopher 4 is stuck waiting for fork 0, philosopher 3
+will be able to grab both is forks and start eating.
+
+
+
+philosopher 3 gets to eat, but philosophers 0 and 1 are waiting,
+even though neither of them shares a fork with philosopher 3, and
+hence one of them could eat right away.
+
+dijkstra suggests a better solution.
+he shows how to derive the solution by thinking about
+two goals of any synchronization problem:
+
+
+safety
+
+make sure nothing bad happens.
+
+liveness
+
+make sure as much good happens, consistent with the safety criterion.
+
+for each philosopher i let state[i] be the state of
+philosopher i--one of thinking, hungry, or eating.
+the safety requirement is that no to adjacent philosophers are simultaneously
+eating.
+the liveness criterion is that there is no philosopher is hungry unless
+one of his neighbors is eating (a hungry philosopher should start eating
+unless the saftey criterion prevents him).
+more formally,
+
+
+safety
+
+for all i, !(state[i]==eating && state[i+1]==eating)
+
+liveness
+
+for all i, !(state[i]==hungry && state[i-1]!=eating && state[i+1]!=eating)
+
+
+with this observation, the solution almost writes itself
+(see also figure 2-20 on page 59 of tanenbaum.)
+
+    semaphore mayeat[5] = { 0, 0, 0, 0, 0};
+    semaphore mutex = 1;
+    int state[5] = { thinking, thinking, thinking, thinking, thinking };
+    void take_forks(int i) {
+        mutex.down();
+        state[i] = hungry;
+        test(i);
+        mutex.up();
+        mayeat[i].down();
+    }
+    void put_forks(int i) {
+        mutex.down();
+        state[i] = thinking;
+        test(i-1);
+        test(i+1);
+        mutex.up();
+    }
+    void test() {
+        if (state[i]==hungry &amp;&amp; state[i-1]!=eating &amp;&amp; state[i+1] != eating) {
+            state[i] = eating;
+            mayeat[i].up();
+        }
+    }
+
+the method test() checks for a violation of liveness at position
+i.
+such a violation can only occur when philosopher i gets hungry
+or one of his neighbors finishes eating.
+
+ monitors 
+
+although semaphores are all you need to solve lots of synchronization
+problems, they are rather ``low level'' and error-prone.
+as we saw before, a slight error in placement of semaphores (such as
+switching the order of the two down operations in the bounded buffer
+problem) can lead to big problems.
+it is also easy to forget to protect shared variables (such as the bank
+balance or the buffer object) with a mutex semaphore.
+a better (higher-level) solution is provided by the monitor (also
+invented by dijkstra).
+
+if you look at the example uses of semaphores above, you see that
+they are used in two rather different ways:
+one is simple mutual exclusion.
+a semephore (always called mutex in our examples) is associated with
+a shared variable or variables.
+any piece of code that touches these variables is preceded by mutex.down()
+and followed by mutex.up().
+since it's hard for a programmer to remember to do this, but easy for
+a compiler, why not let the compiler do the work?
+2
+
+    monitor class bankaccount {
+        private int balance;
+        public void deposit(int amount) {
+            balance += amount;
+        }
+        // etc
+    }
+
+the keyword monitor tells the compiler to add a field
+
+        semaphore mutex = 1;
+
+to the class, add a call of mutex.down() to the beginning of each method,
+and put a call of mutex.up() at each return point in each method.
+
+the other way semaphores are used is to block a process when it cannot
+proceed until another process does something.
+for example, a consumer, on discovering that the buffer is empty, has to
+wait for a producer;
+a philosopher, on getting hungry, may have to wait for a neighbor to
+finish eating.
+to provide this facility, monitors can have a special kind of variable
+called a condition variable.
+
+    class condition {
+        public void signal();
+        public void wait();
+    }
+
+a condition variable is like a semaphore, with two differences:
+
+
+a semaphore counts the number of excess up operations, but a
+signal operation on a condition variable has no effect unless some
+process is waiting.
+a wait on a condition variable always blocks the calling
+process.
+
+a wait on a condition variable atomically does an up on
+the monitor mutex and blocks the caller.
+in other words if c is a condition variable c.wait() is rather
+like mutex.up(); c.down(); except that both operations are done
+together as a single atomic action.
+
+here is a solution to the bounded buffer problem using monitors.
+
+    monitor boundedbuffer {
+        buffer b;
+        condition nonfull, nonempty;
+        public void enter_item(object item) {
+            if (b.isfull())
+                nonfull.wait();
+            b.enter_item(item);
+            nonempty.signal();
+        }
+        public object remove_item() {
+            if (b.isempty())
+                nonempty.wait();
+            item result = b.remove_item();
+            nonfull.signal();
+            return result;
+        }
+    }
+
+in general, each condition variable is associated with some logical condition
+on the state of the monitor (some expression that may be either true or false).
+if a process discovers, part-way through a method, that some logical condition
+it needs is not satisfied, it waits on the corresponding condition
+variable.
+whenever a process makes one of these condtions true, it signals the
+corresponding condition variable.
+when the waiter wakes up, he knows that the problem that caused him
+to go to sleep has been fixed, and he may immediately proceed.
+for this kind of reasoning to be valid, it is important that nobody
+else sneak in between the time that the signaller does the signal
+and the waiter wakes up.
+thus, calling signal blocks the signaller on yet another queue
+and immediately wakes up the waiter (if there are multiple processes
+blocked on the same condition variable, the one waiting the longest
+wakes up).
+when a process leaves the monitor (returns from one of its methods),
+a sleeping signaller, if any, is allowed to continue.
+otherwise, the monitor mutex is released, allowing a new process to
+enter the monitor.
+in summary, waiters are give precedence over signallers.
+
+this strategy, while nice for avoiding certain kinds of errors, is
+very inefficient.
+as we will see when we consider implemenation, it is expensive to swith
+processes.
+consider what happens when a consumer is blocked on the nonempty
+condition variable and a producer calls enter_item.
+
+ the producer adds the item to the buffer and calls nonempty.signal().
+ the producer is immediately blocked and the consumer is allowed to
+continue.
+the consumer removes the item from the buffer and leaves the monitor.
+the producer wakes up, and since the signal operation was the last
+statement in enter_item, leaves the monitor.
+
+there is an unnecessary switch from the producer to the consumer and back 
+again.
+
+to avoid this inefficiency, all recent implementations of monitors replace
+signal with notify.
+the notify operation is like signal in that it awakens a process
+waiting on the condition variable if there is one and otherwise does
+nothing.
+but as the name implies, a notify is a ``hint'' that the associated logical
+condition might be true, rather than a guarantee that it is true.
+the process that called notify is allowed to continue.
+only when it leaves the monitor is the awakened waiter allowed to continue.
+since the logical condition might not be true anymore, the waiter needs
+to recheck it when it wakes up.
+for example the bounded buffer monitor should be rewritten to replace
+
+    if (b.isfull())
+        nonfull.wait();
+
+with
+
+    while (b.isfull())
+        nonfull.wait();
+
+
+
+
+java has built into it something like this, but with two key differences.
+first, instead of marking a whole class as monitor, you have to
+remember to mark each method as synchronized.
+every object is potentially a monitor.
+second, there are no explicit condition variables.
+in effect, every monitor has exactly one anonymous condition variable.
+instead of writing c.wait() or c.notify(), where c is a
+condition variable, you simply write wait() or notify().
+a solution to the bounded buffer problem in java might look like this:
+
+    class boundedbuffer {
+        buffer b;
+        synchronized public void enter_item(object item) {
+            while (b.isfull())
+                wait();
+            b.enter_item(item);
+            notifyall();
+        }
+        synchronized public object remove_item() {
+            while (b.isempty())
+                wait();
+            item result = b.remove_item();
+            notifyall();
+            return result;
+        }
+    }
+
+instead of waiting on a specific condition variable corresponding to
+the condition you want (buffer non-empty or buffer non-full),
+you simply wait, and whenever you make either of these conditions true,
+you simply notifyall.
+the operation notifyall is similar to notify, but it wakes up
+all the processes that are waiting rather than just the one that
+has been waiting the longest.
+in general, a process has to use notifyall rather than notify, since
+the process that has been waiting the longest may not
+necessarily be waiting for the condition that the notifier just made true.
+in this particular case, you can get away with notify because there
+cannot be both producers and consumers waiting at the same time.
+
+  messages  
+
+since shared variables are such a source of errors, why not get rid of
+them altogether?
+in this section, we assume there is no shared memory between processes.
+that raises a new problem.
+instead of worrying about how to keep processes from interferring with
+each other, we have to figure out how to let them cooperate.
+systems without shared memory provide message-passing facilities that
+look something like this:
+
+    send(destination, message);
+    receive(source, messsage_buffer);
+
+the details vary substantially from system to system.
+
+
+naming
+
+how are destination and source specified?
+each process may directly name the other, or there may be some sort of
+mailbox or message queue object to be used as the
+destination of a send or the source of a receive.
+some systems allow a set of destinations (called multicast
+and meaning ``send a copy of the message to each destination'')
+and/or a set of sources, meaning ``receive a message from any
+one of the sources.''
+a particularly common feature is to allow source to be ``any'', meaning
+that the reciever is willing to receive a message from any other process
+that is willing to send a message to it.
+
+synchronization
+
+does send (or receive) block the sender, or can it immediately continue?
+one common combination is non-blocking send together with blocking
+receive.
+another possibility is rendezvous, in which both send and
+receive are blocking.
+whoever gets there first waits for the other one.
+when a sender and matching receiver are both waiting, the message is
+transferred and both are allowed to continue.
+
+buffering
+
+are messages copied directly from the sender's memory to the receiver's
+memory, or are first copied into some sort of ``system'' memory in between?
+
+message size
+
+is there an upper bound on the size of a message?
+some systems have small, fixed-size messages to send signals or status
+information and a separate facility for transferring large blocks of data.
+
+these design decisions are not independent.
+for example, non-blocking send is generally only available in systems
+that buffer messages.
+blocking receive is only useful if there is some way to say
+``receive from any'' or receive from a set of sources.
+
+message-based communication between processes is particularly attractive
+in distributed systems (such as computer networks) where processes are
+on different computers and it would be difficult or impossible to allow
+them to share memory.
+but it is also used in situations where processes could share
+memory but the operating system designer chose not allow sharing.
+one reason is to avoid the bugs that can occur with sharing.
+another is to build a wall of protection between processes that don't
+trust each other.
+some systems even combine message passing with shared memory.
+a message may include a pointer to a region of (shared) memory.
+the message is used as a way of transferring ``ownership'' of the region.
+there might be a convention that a process that wants to access some
+shared memory had to request permission from its current owner (by sending
+a message).  the second algorithm of project 2 has this flavor.
+
+unix is a message-based system (at the user level).
+processes do not share memory but communicate through
+pipes.3
+a pipe looks like an output stream connected to an input stream by
+a chunk of memory used to make a queue of bytes.
+one process sends data to the output stream the same way it would
+write data to a file, and another reads from it the way it would
+read from a file.
+in the terms outlined above,
+naming is indirect (with the pipe acting as a mailbox or message queue),
+send (called write in unix) is non-blocking, while recieve (called
+read) is blocking, and there is buffering in the operating system.
+at first glance it would appear that the message size is unbounded, but
+it would actually be more accurate to say each ``message'' is one byte.
+the amount of data sent in a write or recieved in a read is unbounded,
+but the boundaries between writes are erased in the pipe:
+if the sender does three writes of 60 bytes each and the receive does
+two reads asking for 100 bytes, it will get back the first 100 bytes the
+first time and the remaining 80 bytes the second time.
+
+
+continued...
+
+
+
+1in the original semaphore, the up and down operations
+were called v() and p(), respectively, but people had trouble
+remembering which was which.
+some books call them signal and wait, but we will be using those
+names for other operations later.
+
+2monitors are not available in this form in java.
+we are using java as a vehicle for illustrating various ideas present
+in other languages.  see below for a similar
+feature that is available in java.
+
+3there are so many versions of unix that just about any blanket
+statement about it is sure to be a lie.
+some versions of unix allow memory to be shared between processes,
+and some have other ways for processes to communicate other than pipes.
+
+
+
+
+
+
+solomon@cs.wisc.edu
+
+
+thu oct 31 15:38:53 cst 1996
+
+
+
+copyright &#169; 1996 by marvin solomon.  all rights reserved.
+
+
+
+
+
+cs 537 - processes
+cs 537 - processes
+cs 537 - processes
+cs 537 - processes
+cs 537 - processes
+cs 537 - processes
+cs 537 - processes
+cs 537 - processes
+cs 537 - processes
+cs 537 - processes

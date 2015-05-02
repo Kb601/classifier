@@ -1,0 +1,283 @@
+vis5d home page
+
+
+
+
+
+vis5d
+
+introduction
+
+vis5d is a system for interactive visualization of large 5-d gridded
+data sets such as those made by numeric weather models.  one can make
+isosurfaces, contour line slices, colored slices, volume renderings,
+etc of data in a 3-d
+grid then rotate and animate the image in real time.  there's also a
+feature for wind/trajectory tracing, a way to make text anotations for
+publications, etc.
+
+here's a screen shot of vis5d:
+
+
+
+
+click  here 
+or  here 
+for more sample images.
+
+vis5d was written by the
+ visualization project
+at the university of wisconsin-madison
+ space science and engineering center
+(ssec) by
+ bill hibbard  and
+ brian paul 
+with the help of:
+
+
+andre battaiola of cptec, sao paulo, brazil
+dave santek of the ssec
+marie-francoise voidrot-martinez of the french meteorology office.
+dave kamins and jeff vroom of stellar computer, inc.
+simon baas and hans de jong of the netherlands for the hp/vogl port
+pratish shah of kubota computer for the kubota port
+mike stroyan of hp for the pex support
+
+
+the development of vis5d was supported by the nasa marshall space flight
+center
+
+
+
+system requirements
+
+vis5d 4.2, the most recent version, works with the following systems:
+
+
+silicon graphics workstations with irix 4.x or later.
+    multiple cpus are used when present.
+ibm rs/6000 workstations with aix 3 or later.  opengl-based
+     3-d hardware is supported.
+sun workstations with sunos 5.x or later.
+hp workstations with hp-ux a.09.01 or later.  pex-based 3-d
+    hardware is supported.
+dec alpha workstations with osf/1 v1.3 or later.
+ibm pc compatibles with linux v1.2 or later.  90mhz pentium or
+    faster cpu recommended.
+
+
+notes:
+
+at least 32 mb of ram is recommended in all cases.
+at least 8-bit color is needed, 24-bit color is recommended.
+on systems without 3-d hardware rendering is done in software with the
+    mesa library.
+    3-d graphics hardware is highly recommended.
+
+
+the size of your memory determines the size of data set you can visualize.
+you should have two bytes of memory for each point in your data set in
+order to have maximum interactivity.  however, you can visualize larger
+data sets with reduced interactivity.
+
+
+
+how to get vis5d
+
+vis5d is available by anonymous ftp from
+iris.ssec.wisc.edu/pub/vis5d.
+the distribution consists of two files:
+
+
+    vis5d-4.2.tar.z - source code and documenation (5.4mb)
+
+    vis5d-data.tar.z - sample data sets, map files, topography
+     files (4.7mb)
+
+
+if you've used vis5d in the past you do not need the vis5d-data.tar.z file
+since you should already have the files it contains.
+
+the  readme 
+file contains the complete vis5d documentation including compilation and
+installation instructions (section 2).
+
+manual ftp operation:
+
+
+% ftp iris.ssec.wisc.edu
+connected to iris.ssec.wisc.edu
+name:  anonymous
+guest login ok, type your name as password.
+password:  myname@address
+ftp> cd pub/vis5d
+ftp> asc
+ftp> get readme
+ftp> bin
+ftp> get vis5d-4.2.tar.z
+ftp> get vis5d-data.tar.z
+ftp> bye
+
+
+precompiled vis5d executables (along with map and topography files) are
+available for the following systems:
+
+
+ sgi / irix 5.x
+ sgi / irix 4.x
+ ibm r6000 / aix
+ hp / hp-ux
+ hp / hp-ux (pex)
+ dec alpha / osf1
+ sun / sunos 5.x
+ pentium / linux
+
+
+your web browser will ask where to put the file and what to name it.  put
+it in the directory where you want to install vis5d, and name it vis5d.tar
+(your browser should automatically uncompress the file).  then enter the
+command "tar -xvf vis5d.tar" (make sure you're in the dirctory where you
+want to install vis5d).  now vis5d is installed.  you can get rid of the
+tar file by entering the command "rm vis5d.tar".
+
+installing linux on your pc
+
+you can run vis5d on your pc if you install the linux operating system.
+it is a freeware version of unix and you can find everything you need to
+know about it at the
+linux documentation project home page.  note that about 2/3 of the way
+down the page you'll find a list of commercial linux products that make
+installation easy.
+
+
+if you are in europe
+
+recently, users in europe have had problems with low bandwidth to north
+american ftp servers.  the
+deutsches klimarechenzentrum
+has offered to serve as a mirror site for our software.  here are links
+to the files available:
+
+
+vis5d readme
+
+    vis5d-4.2.tar.z
+
+    vis5d-data.tar.z
+sgi / irix 5.x executable and map files
+sgi / irix 4.x executable and map files
+ibm rs/6000 / aix executable and map files
+hp / hp-ux executable and map files
+dec alpha / osf/1 executable and map files
+sun / sunos 5.x executable and map files
+pc / linux executable and map files
+or browse the site
+
+
+manual ftp operation:
+
+
+% ftp ftp.dkrz.de
+connected to info.dkrz.de
+name:  anonymous
+guest login ok, type your name as password.
+password:  myname@address
+ftp> cd pub/visu/ssec/vis5d-4.2
+ftp> asc
+ftp> get readme
+ftp> bin
+ftp> get vis5d-4.2.tar.z
+ftp> get vis5d-data.tar.z
+ftp> bye
+
+
+
+your web browser will ask where to put the file and what to name it.  put
+it in the directory where you want to install vis5d, and name it vis5d.tar
+(your browser should automatically uncompress the file).  then enter the
+command "tar -xvf vis5d.tar" (make sure you're in the dirctory where you
+want to install vis5d).  now vis5d is installed.  you can get rid of the
+tar file by entering the command "rm vis5d.tar".
+
+
+
+serving and viewing vis5d files via the web
+
+in order to make it easy for modelers to examine each other's data sets,
+we have defined vis5d files as a medium for exchanging information on the
+world wide web.  links to vis5d files can be embedded in web pages (just as
+links to gif files can be embedded in web pages), and mosaic can
+automatically invoke vis5d to view them (just as it automatically invokes
+xv to view gif files).
+
+click
+here
+to find out how to do it.
+
+
+
+
+getting help
+
+vis5d is free software and as such we do not provide real support
+for it.  however, we will be happy to answer questions and/or help with
+minor problems (preferably by email).
+
+email can be sent to
+bill hibbard at
+whibbard@macc.wisc.edu.
+
+u.s. mail can be sent to:
+
+space science and engineering center
+university of wisconsin - madison
+1225 w. dayton st.
+madison, wi  53706
+
+
+there is a vis5d mailing list.  to subscribe to it send bill or brian a message
+asking to be subscribed.  to post to the list address your message to vis5d-list@
+ssec.wisc.edu.
+
+
+
+other links
+
+the vis5d faq
+may answer a question you have about installing or using vis5d.
+
+the vis5d scripting
+document describes the new tcl scripting interface in vis5d 4.2
+
+the vis5d api document
+describes the internal programming interface to vis5d.  this is intended for
+programmers only.
+
+check out how the
+uw-nms
+group is using vis5d to visualize operational forecasts.
+
+we also have a home page for
+visad
+.
+
+
+
+
+
+
+last updated on april 12, 1996.
+
+
+
+
+vis5d home page
+vis5d home page
+vis5d home page
+vis5d home page
+vis5d home page
+vis5d home page
+vis5d home page
+vis5d home page
+vis5d home page
+vis5d home page

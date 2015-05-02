@@ -1,0 +1,4 @@
+com 1315 - database management
+focuses on designing a database for use in a relational database management system. uses the entity-relationship model and normalization on example problems. presents the sql language. topics may include the network model, the hierarchical model, or the object-oriented model. non-majors with programming experience in pascal or c are welcome. requires implementing a database management system.
+
+prereq. com 1101

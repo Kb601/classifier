@@ -1,0 +1,74 @@
+publications related to tushar chandra's research
+
+ publications related to my research
+
+research in fault-tolerant distributed computing
+
+message passing systems
+for my ph.d. thesis, i studied
+unreliable failure detection in asynchronous distributed systems (together with
+vassos hadzilacos and my advisor
+sam toueg).  we showed that a
+surprisingly weak failure detector denoted  is sufficient to solve
+consensus and atomic broadcast,
+two fundamental problems that cannot be solved in asynchronous distributed systems (click
+here to find out more).
+we then showed that  is the weakest failure detector for solving
+these problems in asynchronous systems (click here to
+find out more).  for a summary of research on failure detection, click
+here.
+
+sam and i also developed fast and message
+efficient algorithms for reliable broadcast.  click
+here to download
+a postscript document describing our work.
+
+sam,
+vassos, and i showed that it is impossible
+to solve the group membership problem in purely asynchronous systems (click here
+to find out more).
+
+to get an overall picture of the state of research in the area of fault-tolerance in message passing
+distributed systems, have a look at
+"a modular approach to
+fault-tolerant broadcasts and related problems" by
+vassos hadzilacos and
+sam toueg.
+
+shared memory systems
+together with prasad jayanti and
+sam toueg, i studied how to deal with
+faulty objects in wait-free shared memory systems.  click
+here to find out more.
+
+other research
+siddharth chandra and i used undecidability to formally challenge the rational expectations hypothesis
+in economics.  click here to find out more.
+
+selected list of publications
+
+my ph.d. thesis (short abstract)
+
+unreliable failure detectors for reliable distributed systems (short abstract)
+
+the weakest failure detector for solving consensus (short abstract)
+
+fault-tolerant wait-free shared objects (short abstract)
+
+
+time and message efficient reliable broadcast (postscript document)
+
+undecidability in economics: a formal challenge to rational expectations
+(short abstract)
+maintained by tushar@watson.ibm.com
+
+publications related to tushar chandra's research
+publications related to tushar chandra's research
+publications related to tushar chandra's research
+publications related to tushar chandra's research
+publications related to tushar chandra's research
+publications related to tushar chandra's research
+publications related to tushar chandra's research
+publications related to tushar chandra's research
+publications related to tushar chandra's research
+publications related to tushar chandra's research

@@ -1,0 +1,139 @@
+cs384g course description
+
+
+
+ cs384g - computer graphics - fall, 1995
+
+
+
+ time:
+ tth 3:30-5:00
+ place:
+ welch hall 2.310
+ instructor:
+ don fussell
+ office:
+ taylor hall 4.120
+ phone:
+ 471-9719
+ email:
+ fussell@cs.utexas.edu
+ office hours:
+ tth 5:00-6:30 pm or by appointment
+ ta:
+ tba
+ office:
+ tba
+ phone:
+ tba
+ email:
+ tba
+ office hours:
+ tba
+ location:
+ tba
+ recommended text:
+ foley, van dam, feiner and hughes
+ computer graphics, principles and practice
+ addison-wesley
+
+ grading:
+ exams - 50%
+ projects - 50%
+ no other graded homework
+ all grading is on a modified curve, in which natural breakpoints
+ between clusters of numerical scores determines letter grade.
+
+
+
+course description
+
+
+
+this is an introductory course on the major topics in the areas of
+image synthesis, interactive techniques, geometric modeling, and
+computer-based animation.  the material covered includes (1) basic
+principles of operation of raster graphics display devices and common
+two dimensional input devices, (2) basic algorithms for creating and
+manipulating two-dimensional raster objects, including bitblt
+techniques, scan conversion methods for line segments, circles and
+polygons, filling algorithms and simple anti-aliasing schemes, (3)
+homogeneous coordinate transformation techniques, (4) parallel and
+central projection and perspective transformations, (5) common
+algorithms for clipping including cohen-sutherland, sutherland-hodgman
+and liang-barsky, (6) hidden surface removal, (7) basic
+light and reflectance models for local illumination, (8) gouraud and
+phong shading and basic texture and bump mapping, (9) principles of
+ray tracing, (10) basic parametric object modeling, including bezier
+and b-spline curves and surfaces, (11) basic interaction and
+user-interface techniques, (12) principles of hierarchical modeling
+and (12) principles of device-independent graphics software
+architecture.
+
+
+
+grading will be based on two exams, a midterm and a second exam given
+on the last class day, and a series of implementation projects which
+will be assigned through the semester.  the exams will emphasize the
+ideas, principles and mathematics behind the material covered and will
+not involve writing code fragments.  persons taking this course on a
+pass/fail basis need not take the exams.  for these students,
+successful completion of the projects will determine the course grade.
+project submissions will each include a code listing and a written
+project description, which will include a description of the software
+architecture of the system and a user's guide.
+
+
+
+programming may be done on any departmental workstation or, subject to
+prior instructor approval, on other machines accessible to the
+student.  this year we have a new graphics and multimedia teaching
+laboratory in painter hall 3.120 with 20 pentium workstations running
+solaris.  this lab will be used only by students in this course and
+the multimedia systems course, and so will be more accessible than
+public workstations for project use.  the lab is for course use only.
+
+
+
+grading involves interactive demonstrations of the programs
+by the students, so any machine used will have to be available for
+demonstrations of have an accessible counterpart on which we can do
+the demos.  we will assume students are familiar with xwindows or
+whatever alternative gui programming environment they plan to use.
+the course will not concentrate on teaching the use of xwindows or any
+other windowing environment in detail, however.  any programming
+language/environment is acceptable, provided the instructor or ta is
+familiar enough with it to evaluate the project.  this should be
+checked in advance if the student wishes to employ any potentially
+exotic technology.
+
+
+
+i highly recommend the use of the opengl graphics library or its
+equivalent as a basis for image synthesis in these projects, as this
+is rapidly emerging as the industry standard 3-d graphics library.
+the public domain mesa package, which provides an opengl-like set of
+libraries for 3-dimensional image generation, is available for your
+use in the lab and on the departmental suns and ibm x-terminals.  this
+package is publicly available to those who wish to use it on private
+systems (see the 
+mesa home page ). i have successfully installed it on linux-based
+pcs, and there are versions available for windows and for macintoshes
+as well.  in addition, many vendors provide opengl for their own
+platforms, and commercial versions for a variety of platforms are
+available from  portable graphics 
+and  template graphics .
+
+
+
+
+ cs384g course description
+ cs384g course description
+ cs384g course description
+ cs384g course description
+ cs384g course description
+ cs384g course description
+ cs384g course description
+ cs384g course description
+ cs384g course description
+ cs384g course description

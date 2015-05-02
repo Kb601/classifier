@@ -1,0 +1,19 @@
+date: tue, 14 jan 1997 22:54:39 gmt
+server: ncsa/1.5
+mime-version: 1.0
+content-type: text/plain
+last-modified: mon, 02 sep 1996 20:45:02 gmt
+content-length: 205
+
+#
+# makefile for handout for program 1 cse 542 fall 96
+#
+cc=gcc
+cflags=-g
+lib= -lsocket -lnsl
+
+listen:	listen.o
+	$(cc) $(cflags) -o $@ listen.o $(lib)
+
+speak:	speak.o
+	$(cc) $(cflags) -o $@ speak.o $(lib)

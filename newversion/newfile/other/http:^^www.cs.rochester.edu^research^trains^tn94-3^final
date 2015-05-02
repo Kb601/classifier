@@ -1,0 +1,103 @@
+the trains project: 
+  a case study in building a conversational planning agent
+
+
+
+trains technical note 94-3
+the trains project: a case study in building a conversational
+    planning agent  
+
+
+james f. allen, lenhart k. schubert, george ferguson, peter heeman,
+chung hee hwang, tsuneaki kato[1], marc light, nathaniel g.
+martin, bradford w. miller, massimo poesio[2], david r. traum
+
+the trains project has been funded in part by onr/arpa grant
+  n00014-92-j-1512, u.s. air force--rome laboratory research contract
+  f30602-91-c-0010, and nsf grant iri-90-13160.
+
+this paper appeared in the journal of experimental and theoretical
+ai, 7(1995), 7--48.
+
+abstract:
+the trains  project is an effort to build a conversationally
+  proficient planning assistant. a key part of the project is the
+  construction of the trains  system, which provides the research
+  platform for a wide range of issues in natural language
+  understanding, mixed-initiative planning systems, and representing
+  and reasoning about time, actions and events.  four years have now
+  passed since the beginning of the project. each year we have
+  produced a demonstration system that focused on a dialog that
+  illustrates particular aspects of our research.  the commitment to
+  building complete integrated systems is a significant overhead on
+  the research, but we feel it is essential to guarantee that the
+  results constitute real progress in the field. this paper describes
+  the goals of the project, and our experience with the effort so far.
+
+
+[1] tsuneaki kato's address is ntt information and communication
+systems lab, kanagawa, japan.
+[2] massimo poesio's address is centre for cognitive science,
+university of edinburgh, 2 buccleuch place, edinburgh, eh8 9lw
+scotland, uk.
+
+table of contents
+ 
+introduction
+choosing the task
+the trains system as a conversational agent 
+the trains demonstration systems
+the trains system infrastructure
+   
+  the trains-93 architecture
+  episodic logic
+  the ebtl representation
+   
+an overview of the trains modules
+   
+  syntactic and semantic rules
+  lexical processing
+  the parser
+  deindexing
+  conversation act analysis
+  the dialogue manager
+  the domain plan reasoner
+  the execution planner
+   
+other issues
+   
+  the trains simulator
+  temporal reasoning
+  speech repairs
+   
+ discussion
+references
+trains technical note series
+ other trains-related publications
+
+
+
+george ferguson
+
+
+
+the trains project: 
+  a case study in building a conversational planning agent
+the trains project: 
+  a case study in building a conversational planning agent
+the trains project: 
+  a case study in building a conversational planning agent
+the trains project: 
+  a case study in building a conversational planning agent
+the trains project: 
+  a case study in building a conversational planning agent
+the trains project: 
+  a case study in building a conversational planning agent
+the trains project: 
+  a case study in building a conversational planning agent
+the trains project: 
+  a case study in building a conversational planning agent
+the trains project: 
+  a case study in building a conversational planning agent
+the trains project: 
+  a case study in building a conversational planning agent

@@ -1,0 +1,58 @@
+integrating constraints with an object-oriented language
+
+
+
+integrating constraints with an object-oriented language
+
+
+
+authors: bjorn freeman-benson and alan borning
+
+
+
+published in proceedings of the 1992 european conference on
+object-oriented programming, june 1992, pages 268-286.
+
+
+
+
+abstract
+
+constraints are declarative statements of relations among elements of the
+language's computational domain, e.g., integers, booleans, strings, and
+other objects.  orthogonally, the tools of object-oriented programming,
+including encapsulation, inheritance, and dynamic message binding, provide
+important mechanisms for extending a language's domain.  although the
+integration of constraints and objects seems obvious and natural, one basic
+obstacle stands in the way: objects provide a new, larger, computational
+domain, which the language's embedded constraint solver must accommodate.
+in this paper we list some goals and non-goals for an integration of
+constraints and object oriented language features, outline previous
+approaches to this integration, and describe the scheme we use in
+kaleidoscope'91, our object-oriented constraint imperative programming
+language.  kaleidoscope'91 uses a class-based object model,
+multi-methods, and constraint constructors to integrate cleanly the
+encapsulation and abstraction of a state-of-the-art object-oriented
+language with the declarative aspects of constraints.
+
+
+
+
+
+click 
+here to get the postscript file.
+
+
+
+return to constraints home page
+
+integrating constraints with an object-oriented language
+integrating constraints with an object-oriented language
+integrating constraints with an object-oriented language
+integrating constraints with an object-oriented language
+integrating constraints with an object-oriented language
+integrating constraints with an object-oriented language
+integrating constraints with an object-oriented language
+integrating constraints with an object-oriented language
+integrating constraints with an object-oriented language
+integrating constraints with an object-oriented language

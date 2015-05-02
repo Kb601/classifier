@@ -1,0 +1,97 @@
+final review questions
+
+
+final review questions
+
+
+
+i. chapter 1
+    a. describe or define
+       1. classic life cycle model (pg. 24-26)
+       2. spiral model life cycle model (pg. 29-30)
+ii. chapter 3
+    a. describe, define, or be able to estimate number of lines of code (loc)
+       (pg. 76-78)
+    b. describe, define, or be able to use the cocomo model (pg. 84-87)
+iii. chapter 4
+    a. describe, define, or be able to do risk analysis (pg. 96-102)
+    b. describe, define, or be able to use
+       1. pert and gantt charts (pg. 107-117)
+       2. critical path (pg. 107-117)
+    c. describe or define a project plan (pg. 122-124)
+iv. chapter 8 -- this is not really from the book
+    a. be able to read an orm like the ones used to describe the project
+	(see osa tutorial on cs327 homepage)
+v. chapter 12 -- this is not really from the book
+    a. be able to give a class definition with
+	1. domain definition
+        2. method defintions
+             a. pre- and post-conditions
+        3. include the standard 5 methods
+            a. default constructor
+            b. copy constructor
+            c. destructor
+            d. equality operator
+            e. assignment operator
+    b. be able to do a little object-oriented design
+vi. chapter 17
+    a. be able to describe or define . mccall's software 11 quality factors
+       (pg. 550-552)
+    b. be able to describe or define the 10 guidelines of a formal technical
+       review (pg. 564-566)
+    c. be able to describe or define
+        1. software science length metric (it is: n = n1 + n2)
+           -- the equation given in the book is only an esitimate.
+           (pg. 573-575)
+           why is "n" a better metric than loc -- answer not in book
+        2. mccabe's cyclomatic metric (pg. 575-576)
+vii. chapter 18
+    a. decribe or define myer's 3 testing objectives (pg. 596)
+    b. define, describe or be able to use condition testing (pg. 611-614)
+    c. define describe, or be able to use
+        1. equivalence partitioning (pg. 618-619)
+        2. boundary value analysis (pg. 619-620)
+        3. cause effect graphing (pg. 620-623)
+viii. chapter 19
+    a. define verification vs. validation (pg. 632)
+    b. define or describe the 6 activities of sqa (pg. 633 figure)
+    c. describe the software testing strategy (pg. 635-636)
+ix. chapter 20
+    a. define or descirbe adaptive, corrective, perfective maintenance
+       and their approximate percentages (15-25, 20-30, 45-65) (pg. 664-665)
+    d. reverse engineering
+x. chapter 21
+    a. define or describe
+        1. baselines, versions, variants (pg. 694-696, 701-703)
+        2. sci -- conceptual model (697-698)
+        3. management -- change control (pg. 704-706)
+        4. qa -- auditing (pg. 706-707)
+        5. history  -- status reporting (pg. 707-708)
+
+
+
+
+
+
+
+
+
+
+
+
+
+last updated 18 jun 1996
+
+
+
+
+final review questions
+final review questions
+final review questions
+final review questions
+final review questions
+final review questions
+final review questions
+final review questions
+final review questions
+final review questions

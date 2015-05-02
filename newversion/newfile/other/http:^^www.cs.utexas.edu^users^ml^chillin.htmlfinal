@@ -1,0 +1,57 @@
+the chillin inductive logic programming system 
+
+chillin  
+
+
+chillin is an ilp system which integrates top-down search (a la foil), bottom-up
+search (a la golem) and predicate invention (a la champ).  it has been used 
+as the induction algorithm underlying the chill natural-language parser learning
+system. 
+
+the chillin prolog code is available via 
+anonymous ftp.
+see the index file here for details.
+
+pointers to papers on chillin and chill can be found on our ilp research page. below is the standard
+reference (click on the open book image). 
+
+
+
+
+
+  combining top-down and bottom-up techniques in inductive logic programming
+ 
+john m. zelle, raymond j. mooney and joshua b. konvisser 
+
+ proceedings of the eleventh international workshop
+on machine learning, pp. 343-351, rutgers, nj, july 1994. (ml-94) 
+
+
+this paper describes a new method for inducing logic programs from
+examples which attempts to integrate the best aspects of existing ilp
+methods into a single coherent framework.  in particular, it combines
+a bottom-up method similar to golem with a top-down method similar to
+foil.  it also includes a method for predicate invention similar to
+champ and an elegant solution to the ``noisy oracle'' problem which
+allows the system to learn recursive programs without requiring a
+complete set of positive examples.  systematic experimental
+comparisons to both golem and foil on a range of problems are used to
+clearly demonstrate the advantages of the approach.
+
+
+
+
+
+
+estlin@cs.utexas.edu
+
+the chillin inductive logic programming system 
+the chillin inductive logic programming system 
+the chillin inductive logic programming system 
+the chillin inductive logic programming system 
+the chillin inductive logic programming system 
+the chillin inductive logic programming system 
+the chillin inductive logic programming system 
+the chillin inductive logic programming system 
+the chillin inductive logic programming system 
+the chillin inductive logic programming system

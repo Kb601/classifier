@@ -1,0 +1,67 @@
+hints for ms windows compilers
+
+
+
+
+our ms windows-based compilers
+
+this page is under construction.
+
+open output files
+when you are finished looking at the output files you have generated,
+you should close the window.  otherwise, when you attempt to run your
+programs again the output file will be unchanged because your program will not
+be allowed to write to a file while a window is open for a file.
+
+after running your program
+when you are finished running your programs you should remember to close
+the window that the program ran in.  if you leave a window
+open with a running or inactive program it has different effects in the
+c++ and pascal compilers.  in both compilers it will not allow them to
+run your programs.  in the c++ compiler, you can get around this by
+choosing the build option under the project menu.
+the best way to fix this is to bring up the task list
+(ctrl-esc) or left double click on the windows desktop.
+then you can select your programs (u:\prog1.exe, or
+whatever name) and choose end task.
+
+
+
+
+links to other useful places
+
+&lt; cs302 home page &gt;
+
+&lt;
+
+borland c++
+&gt; 
+&lt;
+
+borland pascal
+&gt; 
+&lt;
+
+microsoft fortran
+&gt; 
+
+
+
+
+last modified: wed sep 14 14:11:34 1994 by michael lee
+
+  michaell@cs.wisc.edu
+
+
+
+
+hints for ms windows compilers
+hints for ms windows compilers
+hints for ms windows compilers
+hints for ms windows compilers
+hints for ms windows compilers
+hints for ms windows compilers
+hints for ms windows compilers
+hints for ms windows compilers
+hints for ms windows compilers
+hints for ms windows compilers

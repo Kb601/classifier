@@ -1,0 +1,128 @@
+narrative resume of martin dickey
+
+
+
+
+
+narrative resume 
+
+
+here's a narrative resume, in reverse chronological order. 
+
+i'm new to uw, having arrived this summer from illinois college.
+ic is a small liberal arts college in historic jacksonville, illinois.
+ founded in 1829, ic was the first college in the state to grant
+a degree.  perhaps its best-known graduate was william jennings
+bryan. there were other famous visitors in the early days, including
+abraham lincoln
+(ask me sometime about the lincoln chair) and stephen a. douglas.
+
+at ic i taught practically every computer science course in the
+catalog. 
+
+before that, i was at arizona state university
+in tempe, az, doing a ph.d. my dissertation was about neural network
+speech recognition. languages and linguistics, computational
+or otherwise, have long been an interest of mine.
+
+before drifting into asu's graduate program, i had worked for
+honeywell for 11 years, first in washington d.c. and then in phoenix.
+
+
+my job with honeywell in d.c. was customer support at the international
+headquarters of a notorious and demanding non-profit organization.
+
+
+for most of the honeywell years in phoenix, i was an operating
+systems developer. the os was gcos-8, a mainframe system supporting
+multiprocessing, multiprogramming, transaction processing, and
+large database systems (more about gcos-8).
+ 
+
+before going to honeywell, i worked as an applications and systems
+programmer for the u.s. maritime administration, a block from
+the white house. the district of columbia was the most interesting
+place i've ever lived (outside of a summer in munich) until coming
+to seattle (unless you count that year in new york which i never
+tell people about and which cannot be detected from my resume).
+
+before d.c., i did a master's (math) at the university of kentucky,
+and a b.s at kent state university, a few miles from the ohio
+town where i grew up. in fact, from the windows of my junior high
+school classrooms i could see buildings of the ksu campus. now
+we're practically back to my idyllic childhood -- a good place
+to stop. as you might deduce, i'm old enough to remember 3-cent
+stamps, 48-star flags, the hungarian uprising, and sputnik.
+
+aside from computers and languages, music has played a big part
+in my life. even before moving to seattle i had made four trips
+to seattle to see and hear wagner's
+epic der ring des nibelungen
+(plus three trips for other reasons). since those visits have
+usually been in july or august, i have developed the firm impression
+that seattle has a delightful mediterranean climate not unlike
+nice or san diego. nothing has occurred since my arrival july
+22 to shake this belief. 
+
+
+
+more about gcos-8 (the os) and
+dps-8 (the hardware architecture).  gcos, its history and internals,
+is unfortunately not well known (that's the book i should have
+written). it was comparable in many ways to ibm's mvs. our hardware
+architecture, particularly memory management, was more advanced
+than that of the ibm 370/3090 line (our main competitor), and
+probably influenced the design of the intel 386 (another untold
+story); gcos-8 had in turn been influenced by multics, to which
+honeywell owned the commercial rights (a story which has been
+told and which has an unhappy ending).  
+
+
+each native process sees memory as a variable set of unforgeable
+&quot;descriptors&quot; which give access to protected virtual
+address spaces ranging in size from one byte to many megabytes.
+ separate access keys are associated with each descriptor.  (this
+segmentation scheme is almost completely orthogonal to a virtual
+memory arrangement with two levels of page tables.)  it was possible
+under this scheme to give each global variable and each activation
+record its own address space, making constants truly unmodifiable,
+giving hardware protection against bounds and pointer errors,
+providing a secure method for passing parameters by reference,
+and so forth.
+
+
+there were many other noteworthy innovations in the system, many
+of them going all the way  to the predecessor non-virtual system
+of the late 1960's: gcos-iii, which started life as gecos.  the
+ge originally stood for general electric, which entered the mainframe
+business in the 1950's but sold out to honeywell around 1968.
+ among many features that can be traced back to gcos-iii (or earlier?)
+are: support for symmetric multiprocessing (up to eight cpus);
+databases (the codasyl network database model derived from a honeywell
+product); on-line support (time-sharing and transaction systems
+which both which ran rings around the analogous ibm products);
+a secure and flexible file system, etc. etc.  of course, one can
+find blemishes and limitations, too, especially with the benefit
+of hindsight.
+
+
+shortly after i left honeywell, the company spun off its computer
+division into an independent corporation that was owned jointly
+by honeywell, nec, and bull (france), all of whom had historic
+ties to or vested interests in various of honeywell's computer
+products.  since then, the spin-off company has evolved into a
+subsidiary of groupe bull called bull hn information systems, inc.
+
+
+
+
+narrative resume of martin dickey
+narrative resume of martin dickey
+narrative resume of martin dickey
+narrative resume of martin dickey
+narrative resume of martin dickey
+narrative resume of martin dickey
+narrative resume of martin dickey
+narrative resume of martin dickey
+narrative resume of martin dickey
+narrative resume of martin dickey

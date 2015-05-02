@@ -1,0 +1,666 @@
+content of the read.me file at ftp.cs.wisc.edu/approx 
+
+
+
+content of the read.me file at ftp.cs.wisc.edu/approx 
+ all icons on this page are clickable 
+
+these are the files that can be obtained by anonymous
+
+from ftp.cs.wisc.edu/approx.
+the files are postscript, and are also available as compress(ed) files, as
+indicated by the subscript .z, to be uncompress(ed) before 
+using.
+
+if you have trouble because of file contamination, specify binary
+  as your
+first command in ftp.
+
+the files are in order of increasing age.
+
+
+
+
+bmr.ps,   
+bmr.ps.z :=
+asymptotically optimal approximation and numerical solutions of differential 
+equations
+martin d. buhmann, charles a. micchelli, amos ron}
+october 1996
+
+
+
+cg.ps,   
+cg.ps.z :=
+tight compactly supported wavelet frames of arbitrarily high smoothness
+karlheinz gr\"ochenig, amos  ron
+september 1996
+
+
+
+bdr4.ps,   
+bdr4.ps.z :=
+approximation orders of fsi spaces in $l_2(\rd)$
+carl de boor, ron devore, and amos ron
+march 1996
+additional references added june-july 1996
+referees' comments incorporated aug/sep 1996
+to appear in \ca
+
+
+
+tight.ps,   
+tight.ps.z :=
+compactly supported tight affine spline frames in $l_2(\rd)$
+amos ron and zuowei shen
+february 1996
+to appear in math. comp.
+
+
+
+multiw.ps,   
+multiw.ps.z :=
+stability and independence of the shifts of finitely many refinable
+functions
+thomas a. hogan
+january 1996
+
+
+
+affine.ps,   
+affine.ps.z :=
+affine systems in $l_2(\rd)$: the analysis of the analysis operator
+amos ron, zuowei shen
+december 1995
+
+
+
+zerocount.ps,   
+zerocount.ps.z :=
+the multiplicity of a spline zero
+carl de boor
+december 1995/ january 96 (reflect referee's comments)
+to appear in ann. numer.math.
+
+
+
+ker2.ps,   
+ker2.ps.z :=
+on ascertaining inductively the dimension of the joint kernel 
+of certain commuting linear operators. ii
+carl de boor, amos ron, zuowei shen
+may 1995
+to appear in adv. in math.
+
+
+
+cdr.ps,   
+cdr.ps.z :=
+how smooth is the smoothest function in a given refinable space?
+albert cohen, ingrid daubechies, amos ron
+may 1995
+to appear in applied and computational harmonic analysis
+
+
+
+
+perturb.ps,   
+perturb.ps.z :=
+approximation in $l_p(\rd)$ from spaces spanned by the perturbed integer
+translates of a radial basis function
+michael j. johnson
+may 1995
+
+
+
+sauerxu.ps,   
+sauerxu.ps.z :=
+on the sauer-xu formula for the error in multivariate polynomial interpolation;
+carl de boor
+march 1995
+to appear in math.comp.
+
+
+
+frame2.ps,   
+frame2.ps.z :=
+gramian analysis of affine bases and affine frames
+amos ron and zuowei shen
+march 1995
+\texasviiiw; 375--382;
+
+
+
+multdvdf.ps,   
+multdvdf.ps.z :=
+a multivariate divided difference
+carl de boor
+march 1995
+\texasviiia; 87--96;
+
+
+
+smoothwav.ps,   
+smoothwav.ps.z :=
+smooth refinable functions provide good approximation orders
+amos ron
+february 1995
+to appear in siam j. math. anal.
+
+
+
+stabindep_texasviii.ps,   
+stabindep_texasviii.ps.z :=
+stability and independence of the shifts of a multivariate refinable function
+tom hogan
+february 1995
+\texasviiiw; 159--166;
+
+
+
+stabindep.ps,   
+stabindep.ps.z :=
+stability and independence of the shifts of a multivariate refinable function
+tom hogan
+february 1995
+
+
+
+
+upbound.ps,   
+upbound.ps.z :=
+an upper bound on the approximation power of principal shift-invariant spaces
+michael j. johnson
+december 1994
+constructive approximation, to appear
+
+
+
+lowbound.ps,   
+lowbound.ps.z :=
+on the approximation power of principal shift-invariant subspaces of $l_p(r^d)$
+michael j. johnson
+december 1994
+
+
+
+wh.ps,   
+wh.ps.z :=
+weyl-heisenberg frames and riesz bases in $l_2(\rd)$
+amos ron  and  zuowei shen
+october 1994
+to appear in duke math. j.
+
+
+
+symmetries.ps,   
+symmetries.ps.z :=
+symmetries of linear functionals
+shayne waldron
+october 1994
+
+
+
+hardy.ps,   
+hardy.ps.z :=
+a multivariate form of hardy's inequality and $l_p$-error bounds for
+multivariate lagrange interpolation schemes
+shayne waldron
+august 1994
+
+
+
+lift.ps,   
+lift.ps.z :=
+integral error formul{\ae} for the scale of mean value interpolations which
+includes kergin and hakopian interpolation
+shayne waldron
+july 1994
+
+
+
+hermite.ps,   
+hermite.ps.z :=
+$l_p$-error bounds for hermite interpolation and the associated wirtinger
+inequalities
+shayne waldron
+may 1994
+
+
+
+extremising.ps,   
+extremising.ps.z :=
+extremising the $l_p$-norm of a monic polynomial with roots in a given
+interval and hermite interpolation
+shayne waldron
+may 1994
+
+
+
+polintelim.ps,   
+polintelim.ps.z :=
+gauss elimination by segments and multivariate polynomial interpolation
+carl de boor
+march 1994
+in (approximation and computation), r.v.m. zahar (ed.),
+isnm 119, birkh\"auser verlag (basel-boston-berlin); 1994; 1--22;
+
+
+
+sphere.ps,   
+sphere.ps.z :=
+strictly positive definite functions on spheres
+amos ron and xingping sun
+february 1994
+to appear in math. comp.
+
+
+
+frame1.ps,   
+frame1.ps.z :=
+frames and stable bases for shift-invariant subspaces of $l_2(\rd)$
+amos ron and zuowei shen
+february 1994
+canad. math. j. (1995)
+
+
+
+pscattered.ps,   
+pscattered.ps.z :=
+$l^p$-approximation orders with scattered centres
+martin d. buhmann and amos ron
+january 1994
+
+
+
+scattered.ps,   
+scattered.ps.z :=
+radial basis function approximation: from gridded centers to scattered centers
+nira dyn and amos ron
+november 1993
+proc. london math. soc. (1995)
+
+
+
+approxloc.ps,   
+approxloc.ps.z :=
+approximation orders of  and approximation maps from  local principal 
+shift-invariant spaces
+amos ron
+may 1993
+jat (1995)
+
+
+
+boxeval.ps,   
+boxeval.ps.z :=
+on the evaluation of box splines,
+carl de boor
+march 1993 
+has appeared in numer.algorithms; 5; 1993; 5--23;
+
+
+
+multpp.ps,   
+multpp.ps.z :=
+multivariate piecewise polynomials,
+carl de boor
+october 1992 
+has appeared in acta numerica; 2; 1993; 65--109;
+
+
+
+wav2.ps,   
+wav2.ps.z :=
+multiresolution analysis by infinitely differentiable compactly
+supported functions
+nira dyn, amos  ron
+september 1992
+acha (1995)
+
+
+
+stablemask.ps,   
+stablemask.ps.z :=
+characterizations of linear independence and stability of the shifts of a 
+univariate refinable function in terms of its refinement mask
+amos ron
+september 1992
+
+
+
+sct1.ps,   
+sct1.ps.z :=
+negative observations concerning approximations from spaces generated by 
+scattered shifts of functions vanishing at $\infty$
+amos ron
+september 1992
+has appeared in \jat; 78(3); 1994; 364--372;
+
+
+
+aowoquasi.ps,   
+aowoquasi.ps.z :=
+approximation order without quasi-interpolants
+carl de boor
+august 1992
+has appeared in \texasvii; 1--18;
+
+
+
+ker.ps,   
+ker.ps.z :=
+on ascertaining inductively the dimension of the joint kernel 
+of certain commuting linear operators
+carl de boor, amos ron, zuowei shen
+june 1992; updated apr 96 to reflect copy editor's changes
+has appeared in \aiam; 17; 1996; 209--250;
+
+
+
+aoradial.ps,   
+aoradial.ps.z :=
+the $l_2$-approximation orders of principal shift-invariant
+spaces generated by a radial basis function
+amos ron
+march 1992
+has appeared in \nmatnion; 245--268;
+
+
+
+aobivar.ps,   
+aobivar.ps.z :=
+a sharp upper bound on the approximation order of smooth bivariate pp functions
+carl de boor and rong-qing jia
+march 1992
+has appeared in j.approx.theory; 72(1); 1993; 24--33;
+
+
+
+wavelet.ps,   
+wavelet.ps.z :=
+on the construction of multivariate (pre)wavelets
+carl de boor, ronald a. devore, amos ron
+february 1992
+has appeared in constr.approx.; 9; 1993; 123--166;
+
+
+
+several.ps,   
+several.ps.z :=
+the structure of finitely generated shift-invariant spaces in $l_2(\rr^d)$ 
+carl de boor, ronald a. devore, amos ron
+february 1992
+has appeared in j. of functional analysis 119(1); 1994; 37--78;
+
+
+
+polinterr.ps,   
+polinterr.ps.z :=
+on the error in multivariate polynomial interpolation
+carl de boor
+has appeared in applied numerical mathematics; 10; 1992; 297--305;
+
+
+
+l2shift.ps,   
+l2shift.ps.z := 
+approximation from shift-invariant subspaces of $l_2(\rr^d)$ 
+carl de boor, ronald a. devore, amos ron
+july 1991
+has appeared in trans.amer.math.soc. 341; 1994; 787--806;
+%%% note, this file has the name `ell-2-shift', not `one-two-shift'.
+
+
+
+aoinfty.ps,   
+aoinfty.ps.z :=
+fourier analysis of the approximation power of principal shift-invariant spaces
+carl de boor, amos ron
+july 1991
+has appeared in  constr.approx.; 8; 1992; 427--462;
+
+
+
+quasiaprx.ps,   
+quasiaprx.ps.z :=
+quasiinterpolants and approximation power of multivariate splines
+carl de boor
+july 1990
+has appeared in
+(computations of curves and surfaces), dahmen, gasca, micchelli 
+(eds.), kluwer (dordrecht, netherlands); 1990; 313--345;
+
+
+
+leastsol.ps,   
+leastsol.ps.z :=
+the least solution for the polynomial interpolation problem;
+carl de boor, amos ron
+has appeared in math.zeitschrift; 210; 1992; 347--378;
+
+
+
+compleast.ps,   
+compleast.ps.z :=
+computational aspects of polynomial interpolation in several variables
+carl de boor, amos ron
+has appeared in math.comp.; 58; 1992; 705--727;
+
+
+
+polintconte.ps,   
+polintconte.ps.z :=
+polynomial interpolation in several variables
+carl de boor
+march 1990
+has appeared in 
+(studies in computer science {(in honor of samuel d. conte)}),
+r. demillo and j. r. rice (eds.), plenum press (new york); 1994; 87--119;
+
+
+
+polideal.ps,   
+polideal.ps.z :=
+polynomial ideals and multivariate splines;
+carl de boor, amos ron
+has appeared in 
+(multivariate approximation theory iv, isnm 90),
+c. chui, w. schempp, and k. zeller (eds.),
+birk\-h\"auser verlag (basel); 1989; 31--40;
+
+
+
+multiint.ps,   
+multiint.ps.z :=
+on multivariate polynomial interpolation;
+carl de boor, amos ron
+has appeared in constr. approx.; 6; 1990; 287--302;
+
+
+
+bsplbasic.ps,   
+bsplbasic.ps.z :=
+b-spline basics
+carl de boor
+(mrc 2952, 1986)
+in (fundamental developments of computer-aided geometric modeling),
+les piegl (ed.), academic press (london) 1993; 27--49;
+% corrected (in section 12) on 04 mar 96. 
+% scaling of figures adjusted and misprints corrected on 03 jun 96
+% a misprint corrected (and adjusted to current tex-macros) on 06 jun 96
+
+
+
+quasi.ps,   
+quasi.ps.z :=
+the exponentials in the span of the multiinteger 
+translates of a compactly supported function: 
+quasiinterpolation and approximation order
+1989
+carl de boor and amos ron
+has appeared in
+j. london math. soc. (2); 45; 1992; 519--535;
+
+
+
+
+bbform.ps,   
+bbform.ps.z :=
+$b$--form basics;
+carl de boor
+in (geometric modeling: algorithms and new trends),
+g. e.  farin (ed.),
+siam publications (philadelphia); 1987; 131--148;
+
+
+
+notaknot.ps,   
+notaknot.ps.z :=
+convergence of cubic spline interpolation with the not-a-knot condition
+carl de boor
+mrc tsr 2876, october 1985
+
+
+
+contrapp.ps,   
+contrapp.ps.z :=
+controlled approximation and a characterization of the local
+approximation order;
+carl de boor and r.-q. jia
+has appeared in proc.\ ams; 95(4); 1985; 547--553;
+
+
+
+agee.ps,   
+agee.ps.z :=
+how does agee's smoothing method work?
+carl de boor
+has appeared in 
+(proceedings of the 1979 army numerical analysis and computers conference),
+xxx (ed.), aro rept.\ 79-3, army research office (triangle park nc); 1979;
+299--302;
+
+
+
+survey76.ps,   
+survey76.ps.z := 
+splines as linear combinations of b-splines.  a survey
+(corrected version (with updated references))
+carl de boor
+has appeared in \texasii; 1--47;
+
+
+
+loclinfl.ps,   
+loclinfl.ps.z :=
+on local linear functionals which vanish at all $b$-splines but one;
+carl de boor
+has appeared in (theory of approximation with applications),
+a. g. law and n. b. sahney (eds.),
+academic press (new york); 1976; 120--145;
+
+
+
+quasiint.ps,   
+quasiint.ps.z :=
+the quasi-interpolant as a tool in elementary polynomial spline theory;
+carl de boor, 1973
+has appeared in \texasi; 269--276;
+
+
+
+tr21.ps,   
+tr21.ps.z :=
+least squares cubic spline approximation ii -- variable knots
+carl de boor, john r. rice
+april 1968  csd tr 21
+
+
+
+tr20.ps,   
+tr20.ps.z :=
+least squares cubic spline approximation i -- fixed knots
+carl de boor, john r. rice
+april 1968  csd tr 20
+
+
+
+deboorphd.ps,   
+deboorphd.ps.z :=
+the method of projections as applied to the numerical solution of two point
+boundary value problems using cubic splines
+(corrected version (with updated references))
+carl de boor ph.d. thesis, univ.\ michigan
+august 1966
+
+
+
+
+viva_vi.ps,   
+viva_vi.ps.z :=
+viva vi!, (a brief introduction to vi)
+carl de boor
+version: aug 96
+
+
+
+format.tex,   
+format.tex.z :=
+a file of plain tex macros useful for writing papers and books in plain tex
+(including automatic sequencing of formal items and items in the
+bibliography, and the exact placement of items).
+carl de boor
+version: 15 apr 96
+
+
+
+verbatim.tex,   
+verbatim.tex.z :=
+a file of plain tex macros useful for handling the typesetting of programs
+and program-related material in plain tex.
+carl de boor
+version: 22 se 94
+
+
+
+journal.tex,   
+journal.tex.z :=
+tex macros of use with the spline bibliography.
+carl de boor
+version: 15 apr 96
+
+
+
+proceed.tex,   
+proceed.tex.z :=
+tex macros of use with the spline bibliography.
+carl de boor
+version: 19 apr 96
+
+
+
+refmac.tex,   
+refmac.tex.z :=
+tex macros of use with the spline bibliography.
+carl de boor
+
+
+
+message.mm,   
+message.mm.z :=
+a self-unwrapping wrapper containing files for simplifying the safe mailing of
+files via email.
+carl de boor
+version: mar 96
+
+content of the read.me file at ftp.cs.wisc.edu/approx 
+content of the read.me file at ftp.cs.wisc.edu/approx 
+content of the read.me file at ftp.cs.wisc.edu/approx 
+content of the read.me file at ftp.cs.wisc.edu/approx 
+content of the read.me file at ftp.cs.wisc.edu/approx 
+content of the read.me file at ftp.cs.wisc.edu/approx 
+content of the read.me file at ftp.cs.wisc.edu/approx 
+content of the read.me file at ftp.cs.wisc.edu/approx 
+content of the read.me file at ftp.cs.wisc.edu/approx 
+content of the read.me file at ftp.cs.wisc.edu/approx

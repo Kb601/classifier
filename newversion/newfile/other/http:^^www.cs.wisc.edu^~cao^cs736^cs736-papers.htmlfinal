@@ -1,0 +1,280 @@
+cs 736 paper reading list (spring 96)
+
+
+
+ cs 736 paper reading list (spring 96)
+
+
+pretty old
+
+per brinch hansen,``the nucleus of a multiprogramming system'',
+communications of the acm, 13(4), april 1970, pp. 238-250.
+
+andrew tanenbaum,``fundamental concepts in ms-dos'',
+modern operating systems, chapter 8, section 8.3.1, pp. 328-359.
+
+concurrency
+
+c.a.r. hoare, ``communicating sequential processes'', 
+communications of the acm, 21(8), august 1978, pp. 666-677.
+
+c.a.r. hoare, ''monitors:  an operating system structuring concept''.
+communications of the acm, 17(10), october 1974, pp. 549-557.
+
+butler w. lampson,
+david d. redell,
+``experiences with processes and monitors in mesa'',
+communications of the acm,
+23(2),
+february 1980,
+pp. 105-117.
+
+hugh c. lauer,
+roger m. needham,
+``on the duality of operating system structures'',
+operating systems review,
+13(2),
+april 1979,
+pp. 3-19.
+
+andrew d. birrell,
+``an introduction to programming with threads'',
+system programming with modula-3,
+chapter 4, pp. 88-118.
+
+example systems
+
+dennis m. ritchie, ken thompson.  ``the unix timesharing system''.
+communications of the acm, 17(7), july 1974, pp. 365-375.
+
+david d. redell,
+yogen k. dalal,
+thomas r. horsley,
+hugh c. lauer,
+william c. lynch,
+paul r. mcjones,
+hal g. murray,
+stephen c. purcell,
+``pilot: an operating system for a personal computer'',
+communications of the acm,
+23(2),
+february 1980,
+pp. 81-92.
+
+memory management
+
+mechanisms
+
+a. bensoussan,
+c.t. clingen,
+r.c. daley,
+``the multics virtual memory:  concepts and design'',
+communications of the acm,
+15(5),
+may 1972,
+pp. 308-318.
+
+henry m. levy, peter lipman, ``virtual memory management in vax/vms''.
+computer, 15(3), march 1982, pp. 35-41.
+
+ozalp babaoglu,
+william joy,
+``converting a swap-based system to do paging in an architecture lacking page-reference bits'',
+proceedings of the 8th sosp, operating systems review,
+15(5),
+december 1981,
+pp. 78-86.
+
+michael young,
+avadis tevanian,
+richard rashid,
+david golub,
+jeffrey eppinger,
+jonathan chew,
+william bolosky,
+david black,
+robert baron,
+``the duality of memory and communication in the implementation of a multiprocessor operating system'',
+proceedings of the 11th sosp, operating systems review,
+21(5),
+november 1987,
+pp. 63-76.
+
+policies
+
+peter j. denning,
+``working set past and present'',
+communications of the acm,
+11(5),
+may 1968,
+pp. 323-333.
+
+distributed shared memory
+
+kai li, paul hudak.  ``memory coherence in shared virtual memory systems''.  
+acm transaction on computer systems, 7(4), november 1989,
+pp. 321-359.
+
+
+file systems
+
+chris ruemmler, john wilkes,
+``an introduction to disk drive modeling'',
+ieee computer, 27(3), march 1994, pp.17-29.
+
+m.k mckusick,
+w. n. joy,
+s. j. leffler,
+r. s. fabry,
+``a fast file system for unix'',
+acm trans. on computer systems,
+2(3),
+august 1984,
+pp. 181-197.
+
+mary g. baker, john h. hartman, michael d. kupfer, ken w. shirriff, john k. ousterhout,
+``measurements of a distributed file system'',
+proceedings of the 13th sosp, operating systems review,
+25(5), october 1991.
+
+mendel rosenblum,
+john k. ousterhout,
+``the design and implementation of a log-structured file system'',
+proceedings of the 13th sosp, operating systems review,
+25(5),
+pp. 1-15.
+october 1991.
+
+david a. patterson, garth gibson, randy h. katz
+``a case for redundant array of inexpensive disks (raid)'',
+proceedings of sigmod '88, 1988, pp. 109-116.
+
+distributed systems
+
+andrew d. birrell,
+roy levin,
+roger m. needham,
+michael d. schroeder,
+``grapevine:  an exercise in distributed computing'',
+communications of the acm,
+25(4),
+april 1982,
+pp. 260-274.
+
+andrew d. birrell,
+bruce jay nelson,
+``implementing remote procedure calls'',
+acm transactions on computer systems,
+2(1),
+february 1984,
+pp. 39-59.
+
+david r. cheriton,
+willy zwaenepoel,
+``the distributed v kernel and its performance for diskless workstations'',
+proceedings of the 9th sosp, operating systems review,
+17(5),
+november 1983,
+pp. 129-140.
+
+distributed file systems
+
+russel sandberg, david goldberg, steve kleiman, dan walsh, bob lyon,
+``design and implementation of the sun network filesystem'',
+sun microsystems, inc.
+
+john h. howard, michael l. kazar, sherri g. menees, david a. nichols,
+m. stayanayanan, robert n. sidebotham, and michael j. west, ``scale
+and performance in a distributed file system''.  acm transaction on
+computer systems, 6(1), february 1988, pp. 51-81.
+
+security: authentication
+
+r. l. rivest, s. shamir, l. adleman,
+``a method for obtaining digital signatures and public key cryptosystems'',
+communications of the acm, 21(2), february 1978, pp. 120-126.
+
+j. g. steiner,
+c. neuman,
+j. i. schiller,
+``kerberos: an authentication service for open network systems'',
+usenix '88,
+dallas, tx,
+february 1988,
+pp. 191-202.
+
+butler lampson, martin abadi, michael burrows, edward wobber,
+``authentication in distributed systems: theory and practice'',
+acm transactions on computer systems, 10(4), november 1992, 
+pp. 265-310.
+
+security: authorization
+
+anita k. jones,
+william a. wulf,
+``towards the design of secure systems'',
+software - practice and experience,
+5(4),
+1975,
+pp. 321-336.
+
+frederick t. gramp,
+robert h. morris,
+``unix operating system security'',
+at&t bell laboratories technical journal,
+63(8),
+october 1984,
+pp. 1649-1672.
+
+drew dean, dan s. wallach,
+``security flaws in the hotjava web browser'',
+http://www.cs.princeton.edu/~ddean, november 1995.
+
+case study
+
+henry massalin,
+carlton pu,
+``theads and input/output in the synthesis kernel'',
+proceedings of the 12th sosp, operating systems review,
+23(5),
+december 1989,
+pp. 191-201.
+
+michael podanoffsky,
+``a comparison between the mach and windows nt kernels'',
+http://world.std.com/~mikep, may 1995.
+
+brian n. bershad, stefan savage, przemyslaw pardyak, emin gun sirer,
+marc e. fiuczynski, david becker, craig chambers, susan eggers,
+``extensibility, safety and performance in the spin operating system'',
+proceedings of the 15th sosp, december 1995.
+
+butler w. lampson,
+``hints for computer system design'',
+proceedings of the 9th sosp, operating system review,
+17(5),
+pp. 33-48.
+october 1983,
+
+roy levin,
+david d. redell,
+``an evaluation of the 9th sosp submissions'',
+operating systems review,
+17(3),
+july 1983,
+pp. 35-40.
+
+
+
+
+
+ cs 736 paper reading list (spring 96)
+ cs 736 paper reading list (spring 96)
+ cs 736 paper reading list (spring 96)
+ cs 736 paper reading list (spring 96)
+ cs 736 paper reading list (spring 96)
+ cs 736 paper reading list (spring 96)
+ cs 736 paper reading list (spring 96)
+ cs 736 paper reading list (spring 96)
+ cs 736 paper reading list (spring 96)
+ cs 736 paper reading list (spring 96)

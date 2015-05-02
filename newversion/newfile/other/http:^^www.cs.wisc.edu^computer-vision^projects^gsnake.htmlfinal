@@ -1,0 +1,54 @@
+gsnake api
+
+
+
+gsnake api
+
+
+gsnake api is jointly developed by the information technology institute, singapore, and the school of applied science, nanyang technological university, singapore.
+
+these software programs are available to the user without any license or royalty fees. permission is hereby granted to use, copy, modify, and distribute this software and its documentation for any purpose. iti and ntu gives no warranty, express, implied, or statutary for the software and/or documentation provided, including, without limitation, waranty of merchantibility and warranty of fitness for a particular purpose. the software provided hereunder is on an "as is"  basis, and iti and ntu has no obligation to provide maintenance, support, updates, enhancements, or modifications.
+
+
+you should be able to compile this release on most unix systems, although we 
+have done extensive tests only on sun os 4.x and 5.x. user feedback, bugs, or software and manual suggestions should be sent via electronic mail to one of the following, who may or may not act on them as he/she desires :
+
+
+ dr syin chan, school of applied science, nanyang technological university, singapore, asschan@ntu.ac.sg.
+ dr kok f. lai, information technology institute, singapore, kflai@iti.gov.sg.
+
+
+
+ indexgo to lai kok-fung's homepage for more publications on the generalized active contour model.
+
+
+
+ click here first. before you download, please provide information on yourself, your organisation, how you plan to use gsnake api, your feedbacks on gsnake research as a whole, as well as any other suggestion you may have. this will help us to continue sharing our research results with the community.
+
+gsnake.tar : 3 mb. download tar file containing gsnake api after you have registered.
+it contains the following directories:
+
+
+  src  : contains gsnake api class library written in c++
+  example  : workable examples coded by gsnake api
+  util  : utilities provided with gsnake api
+  docu  : a complete set of manual entries for gsnake api
+  lib   : contains gsnake api library after compilation
+  include  : contains header files for gsnake api
+  bin  : contains test images and binary source after compilation
+  data  : contains some test data, mostly in sun raster format
+  thesis   : contains the thesis by k.f. lai which leads to this api
+
+
+
+
+gsnake api
+gsnake api
+gsnake api
+gsnake api
+gsnake api
+gsnake api
+gsnake api
+gsnake api
+gsnake api
+gsnake api

@@ -1,0 +1,108 @@
+vikram adve's home page
+
+
+
+
+
+
+vikram adve
+
+
+
+vikram adve is a research scientist in the computer science department
+at rice university.  his research interests broadly lie in the design
+and performance evaluation of parallel computing systems, spanning
+performance modeling, parallelizing compilers, and parallel computer
+architecture.  his current work primarily focuses on optimizing
+compilers and programming environments to support machine-independent,
+data-parallel programming.
+
+
+
+education
+
+ ph.d. (1993), m.s (1989),
+     computer sciences,
+     university of wisconsin-madison
+ b.tech. (1987)
+     
+     electrical engineering, indian institute of technology, bombay
+
+
+
+
+research
+
+
+advanced compilation techniques for data-parallel languages
+we are developing a second-generation
+
+high performance fortran (hpf)
+compiler to serve as a platform for experimental research on:
+
+ compilation techniques for regular and irregular
+     data-parallel applications,
+ optimization for message-passing, shared-memory, and hybrid
+     architectures,
+ first-class compiler support for programming tools
+     for performance analysis and data layout selection.
+
+
+
+programming tools for data-parallel languages
+we are developing techniques and tools that enable programers to
+understand and tune the performance of data-parallel applications without
+having to understand the extensive, machine-dependent transformations
+performed by a sophisticated, parallelizing compiler.  
+extensive cooperation between the compiler and performance tools is key to
+providing the detailed, source-level performance feedback required 
+in order to fulfill this goal.
+
+
+
+
+publication list
+
+
+
+affiliations
+
+computer science department
+rice university
+center for research on parallel computation (crpc)
+
+
+
+contact information
+
+    
+    e-mail : adve@cs.rice.edu
+    phone  : 713-285-5934
+    fax    : 713-285-5136
+    office : 3805 duncan hall (aka the computational engineering building)
+
+    us mail: rice university,
+	 	 computer science department, ms 132,
+	 	 6100 south main street,
+	 	 houston, tx 77005-1892.
+
+
+
+
+
+http://www.cs.rice.edu/~adve/
+
+
+
+
+
+vikram adve's home page
+vikram adve's home page
+vikram adve's home page
+vikram adve's home page
+vikram adve's home page
+vikram adve's home page
+vikram adve's home page
+vikram adve's home page
+vikram adve's home page
+vikram adve's home page

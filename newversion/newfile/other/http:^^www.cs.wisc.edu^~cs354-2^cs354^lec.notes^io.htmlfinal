@@ -1,0 +1,330 @@
+lecture notes - chapter 11 - i/o
+
+
+
+ chapter 11 -- i/o
+
+
+
+all about i/o
+-------------
+
+computers aren't useful unless we can put data into them,
+and get results out.
+
+   input --   data to computer
+   output --  data from computer
+
+
+   computer model:
+      
+       -----        --------
+       |cpu|  |memory|
+       -----   ^    --------
+	       |
+	       |
+	      \ /
+
+	     -----
+	     |i/o|
+	     -----
+
+examples of input devices:
+   keyboard, mouse, network, disk,  ??
+
+examples of output devices:
+   printer, (terminal) display, network, ??
+
+
+simulator has only 2 i/o devices,
+  keyboard (for input)
+  display  (for output)
+
+
+issues that must be solved:
+
+programmer interface -- simulator has 
+ get, getc, put, putc, puts
+
+ these are actually os implemented procedures.
+ (the os is the program that interfaces between the programmer
+  or application user and the actual hardware.  for us on the
+  snakes, it is unix.)
+
+
+
+
+protection issues --
+  in a real system, there could be more than one terminal
+  (terminal is a keyboard and display together)
+
+  should one user be able to display characters on another's
+  display?  lock up another's keyboard?  send a file of
+  infinite length to the printer, effectively shutting
+  all others out?
+
+  in practice, the os's job is "resource management,"
+  allocating all portions of the processor.  examples
+  of resources are the cpu and all i/o devices.
+
+
+physical issues --
+  a computer today (1993) can complete an instruction at
+  the rate of about 1 each 20 nsec. (50mhz, or 50 mips).
+  unfortunately, typical i/o devices are much slower, often
+  requiring 10s of milliseconds to deal with a single
+  character. that is approx. 1 million times slower!
+  this situation is dubbed the "access gap."
+
+
+
+disk - a real, live, phisical device
+------------------------------------
+
+vocabulary, to form a picture of a disk (ch 11, p294)
+
+  platter -- sort of like a phonograph record.
+
+  data is stored on a surface of a platter.
+
+  all platters are tied together and rotate around the spindle
+    at a fixed speed.
+
+  each surface has one or more read/write heads.
+
+  platters are broken down into tracks.  a single track is
+    one of many concentric circles on the platter.
+
+  all the corresponding tracks on all surfaces, taken together,
+    form a cylinder.
+
+  each track is broken down into sectors.
+
+
+how we read/write to a sector.
+  given:  the sector position on the cylinder. (looked up in a
+  table, or calculated from the disk address).
+
+  -- the disk is spinning.
+
+  -- the read/write head is moving to the correct cylinder (track).
+     this takes a long time relative to the other stuff.  it is
+     the physical movement, acceleration, etc. comes into play.
+     this is seek time.
+
+  -- once the read/write head is over the correct cylinder, there
+     is bound to be some time to wait until the correct sector
+     is under the head.  this is rotational latency.
+
+  -- even at the correct sector, it still takes some time for
+     the data to be read/written.  this is the read or write
+     time.
+
+
+     time to read a sector =   seek time + rotate time + read time.
+
+
+
+so, the nitty gritty issue is:  how does the os accomplish
+  i/o requests?  there are 2 possibilities.
+
+  1.  have special i/o instructions
+      --  input
+	  need to know  which device, how much data, where the
+	  data is to go
+      --  output
+	  need to know  which device, how much data, where the
+	  data currently is
+
+      how does the cpu know that the instruction has completed?
+	(is there any need to wait?)
+      what happens if the device encounters an error?
+        (does this halt the computer?)
+
+  2.  the solution of choice
+      
+      overload memory locations to use as communication channels.
+
+      for example,
+       address
+       0x0000 0000  -|
+       .             |   real memory
+       .             |
+       .             |
+       0xffff 0000  -|
+
+       0xffff 0008  - data from keyboard (keyboard_data)
+
+       0xffff 0010  - data to display (display_data)
+
+   then, by reading (loading) from location 0xffff0008, data
+   is requested from the keyboard
+   then, by writing (storing) to location 0xffff0010, data
+   is sent to the display
+
+     the syscall code in the os must be (in essence)
+
+     lw  $2, keyboard_data     # getc syscall
+     return from syscall
+
+       and
+
+     sw  $2, display_data      # putc syscall
+     return from syscall
+
+
+     this method of i/o is called memory-mapped i/o.
+
+
+
+problems with memory-mapped i/o as currently given:
+ -- getc presumably returns once a character has been typed.
+    what happens if the user does not type a character?
+    types it on the wrong keyboard?  goes to get a drink
+    of water?
+
+    what happens to the data if the user types 2 characters
+    before getc has been called?
+
+    how does the computer know if a character has been typed?
+
+
+ -- putc and puts:  how does the computer know that the device
+    is ready to print out a second character?  what if the
+    printer jams?  (printers and terminals are slow!)
+
+ what is needed is a way to convey information about the
+ status of i/o devices.  this status information is used
+ to coordinate and synchronize the useage of devices.
+
+       address
+       0x0000 0000  -|
+       .             |   real memory
+       .             |
+       .             |
+       0xffff 0000  -|
+
+       0xffff 0008  - data from keyboard (keyboard_data)
+       0xffff 000c  - status from keyboard (keyboard_status)
+
+       0xffff 0010  - data to display (display_data)
+       0xffff 0014  - status from display (display_status)
+
+  assume that the msb is used to tell the status of a device.
+    msb = 1 means device ready
+    msb = 0 means device is busy
+  note that we can check for device ready/busy by looking to see
+    if the status word is negative (2's comp) or not.
+
+    for the keyboard, a 1 means that a character has been typed
+		      a 0 means that no character is available
+
+    for the display,  a 1 means that a new character may be sent
+		      a 0 means that the device is still disposing
+		         of a previous character
+
+
+then, the syscall code in the os must be more like
+
+
+     getc_loop: lw $8, keyboard_status   # getc syscall
+		bgez $8, getc_loop
+                lw  $2, keyboard_data    
+                return from syscall
+
+       and
+
+     putc_loop: lw $8, display_status   # putc syscall
+		bgez $8, putc_loop
+                sw  $4, display_data
+                return from syscall
+
+
+   this scheme is known as busy waiting, or spin waiting.
+   the little loop is called a spin wait loop.
+
+
+
+something that is not well explained (at this level) is how
+these status bits get set and cleared.  the spin wait loop
+reads the status word, but does not change it.
+
+  the device (its controller) sets and clears the bit.
+  an implied fuction is that the device sets the bit
+  when it becomes ready to work on another character.
+
+  and, a load from keyboard_data also clears the msb of keyboard_status
+  and, a store to display_data also clears the msb of display_status
+
+
+
+
+
+problems with this programmed i/o approach:
+
+-- much time is wasted spin waiting.
+
+   if it takes 100 instructions to program this, and each
+   instruction takes 20ns to execute, then it takes
+
+     100 * 20nsec = 2000nsec = 2 usec    to execute this code
+
+     if a device takes 2msec (=2000usec) to deal with one character,
+        then the percent of time spent waiting is
+
+	time waiting       2000us
+	------------ = --------------- =  .999 = 99.9%
+	total time      2000us + 2usec
+
+
+   we'd like a solution that spent less time "doing nothing"
+
+-- if (somehow) a second key is pressed before the program does
+   a getc, the first key pressed is lost.  there is only one
+   character's worth of storage.
+
+   this problem is actually a "catch-22."  the getc code has
+   to be run often enough that no characters are lost, but
+   executing this code spin waits until a character is pressed.
+   the system could do nothing but getc calls!
+
+
+
+
+some problems are solved by the use of queues (buffers).
+   the check for device ready is separated from the sending
+   and receiving of characters.  code for this is in the
+   text, pages 301 and 302.
+
+   putnextchar:  print a character if there is one in the
+		 queue, and the device is ready
+   printstring:  put character(s) in queue and return
+
+   getnextchar:  get a character if one is available, and put
+		 it in a queue
+   getstring:    get character from queue (if available) and return
+
+
+some difficulties are caused by this situation:
+  
+ -- someone (user?  os?) must call getnextchar regularly and
+    often so as not to lose characters.
+
+ -- what happens if the queue(s) become full?  are characters
+    lost?
+
+ -- someone (user?  os?) must call putnextchar regularly to empty
+    out the queue.
+
+
+
+ lecture notes - chapter 11 - i/o
+ lecture notes - chapter 11 - i/o
+ lecture notes - chapter 11 - i/o
+ lecture notes - chapter 11 - i/o
+ lecture notes - chapter 11 - i/o
+ lecture notes - chapter 11 - i/o
+ lecture notes - chapter 11 - i/o
+ lecture notes - chapter 11 - i/o
+ lecture notes - chapter 11 - i/o
+ lecture notes - chapter 11 - i/o

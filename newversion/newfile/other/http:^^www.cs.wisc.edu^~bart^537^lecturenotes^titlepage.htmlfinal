@@ -1,0 +1,155 @@
+cs 537 - introduction to operating systems - lecture notes
+
+
+
+
+
+
+university of wisconsin-madison
+
+computer sciences department
+
+
+
+
+cs 537
+bart miller
+
+
+lecture notes for cs 537
+
+
+
+i will use these note in the lectures for cs537.
+you should print out each week's lectures and review the notes before
+class.
+bring these to class so that you won't have to spend as much time during
+lecture writing.
+
+this is the first semester that i am using the web to distribute my notes.
+that means that i have to convert them from another word processing package,
+so not all of the notes will be ready at the start of the semester.
+i will announce in class when new sections are ready.
+
+note: sections marked with a "*" are not yet ready.
+you will get unpredictable output if you view or print them.
+
+
+
+section 1
+    course overview
+    january 23
+processes, synchronization, and scheduling:
+section 2
+    introduction to processes
+    january 25
+section 3
+    dispatching and creating processes
+    january 30
+section 4
+    independent and cooperating processes
+    february 1
+section 5
+    synchronization: the too much milk problem
+    february 6
+section 6
+    semaphores
+    february 8
+section 7
+    semaphore example: readers and writers
+    february 13
+section 8
+    monitors
+    february 15 & 20
+section 9
+    message systems
+    february 22
+section 10
+    semaphore implementation
+    february 27
+section 11
+    scheduling and cpu scheduling
+    february 29
+section 12
+    deadlock
+    march 5
+memory management and virtual memory:
+section 13
+    static storage allocation
+    march 7
+section 14
+    dynamic memory allocation
+    march 7
+section 15
+    sharing main memory
+    march 21
+section 16
+    base and bounds, segmentation
+    march 21
+section 17
+    paging
+    march 26
+section 18
+    translation buffers
+    april 2
+section 19
+    virtual memory, page faults
+    april 4
+section 20
+    page selection and replacement
+    april 9
+section 21
+    clock algorithm, thrashing
+    april 11
+section 22
+    working sets
+    april 16
+i/o and file systems:
+section 23
+    i/o devices
+    april 18
+section 24
+    files, disk management
+    april 23
+section 25
+    unix and demos disk allocation
+    april 25
+section 26
+    disk scheduling, directories
+    april 25
+section 27
+    unix directories
+    april 30
+protection and security:
+section 28
+    protection and security
+    may 2
+section 29
+     security abuses
+    may 2
+section 30
+    security improvmenets, encryption
+    may 5
+*section 31
+    title of section 31
+
+
+
+
+last modified:
+mon may  6 13:11:06 cdt 1996
+by
+bart
+
+
+
+cs 537 - introduction to operating systems - lecture notes
+cs 537 - introduction to operating systems - lecture notes
+cs 537 - introduction to operating systems - lecture notes
+cs 537 - introduction to operating systems - lecture notes
+cs 537 - introduction to operating systems - lecture notes
+cs 537 - introduction to operating systems - lecture notes
+cs 537 - introduction to operating systems - lecture notes
+cs 537 - introduction to operating systems - lecture notes
+cs 537 - introduction to operating systems - lecture notes
+cs 537 - introduction to operating systems - lecture notes

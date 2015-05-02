@@ -1,0 +1,467 @@
+cs472 fall 96 course materials
+
+
+
+
+
+cs472 fall 1996
+foundations of artificial intelligence
+course materials
+
+
+
+
+
+cs472/473 newsgroup
+cs472 handouts
+cs472 lecture notes
+cs472 homeworks and solutions
+cs473 handouts and project information
+cs473 lisp mini-tutorial
+lisp environments
+useful common lisp and ai links
+
+
+note: many of these files are postscript files (their names
+end in ".ps").  no browser we know of can display them directly, so you
+either a) have to specify a helper application (like ghostview) to
+display them for you, or b) you can download the file and do something
+with it locally (for example, in unix you could "lpr" it to a
+laser-printer which understands postscript).
+
+netscape navigator in the pc lab, at least on some machines, is
+already configured to use ghostview.  if you try it, and it doesn't
+work, try this.
+
+
+cs472 handouts
+
+
+tentative course syllabus    (last modified 11/4)
+
+general course information    (last modified 9/6)
+[html] 
+
+
+
+cs472 lecture notes
+
+
+introduction to ai
+
+
+(aug 30)  defining artificial intelligence 
+[   postscript; 
+    postscript, 2 per page;
+   html ]
+
+
+
+
+(sep 02)  uninformed search
+ [  postscript;
+    postscript, 2 per page;
+   html ]
+
+
+
+
+(sep 04)  heuristic search
+[  postscript;
+   postscript, 2 per page;
+  html ]
+
+
+
+(sep 06)  optimal search
+[  postscript;
+   postscript, 2 per page;
+  html ]
+
+
+
+(sep 09)  admissible heuristics, adversarial search
+[  postscript;
+   postscript, 2 per page; 
+  html ]
+
+
+
+(sep 11)  minimax, motivation for alph-beta pruning
+ [  postscript;
+    postscript, 2 per page;
+   html ] 
+
+
+
+(sep 13)  alph-beta pruning, state-of-the-art in game playing
+[   postscript;
+    postscript, 2 per page;
+   html ] 
+
+
+
+(sep 16)  introduction to machine learning, k-nn
+  [  postscript;
+     postscript, 2 per page;
+    html ] 
+
+
+
+
+(sep 18)  decision tree learning
+  [  postscript;
+     postscript, 2 per page;
+    html ]
+
+
+
+(sep 20)  issues in decision tree learning
+  [  postscript;
+     postscript, 2 per page;
+    html ]
+
+
+
+(sep 23)  learning as search
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(sep 25)  the version space algorithm
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(sep 27)  genetic algorithms
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(sep 30)  neural networks: feedforward networks
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(oct 2)  neural networks: backpropagation
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(oct 4)  ml applications
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(oct 7)  history of ai; rule-based systems
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(oct 9)  forward chaining rule-based systems
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+
+(oct 16)  backward chaining rule-based systems
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(oct 23) knowledge representation: semantic nets
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(oct 25) representing facts in first-order logic
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(oct 28) resolution theorem proving; conversion to clause form
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(oct 30) unification; selection of clauses
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(nov 1) intro to planning; the frame problem
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(nov 4) partial order planning (i)
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(nov 6) partial order planning (ii)
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(nov 11) hierarchical planning, reasoning under
+uncertainty (intro)
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(nov 13) probabilistic reasoning, bayesian inference 
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(nov 15) belief networks
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(nov 18) natural language processing (intro)
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(nov 20) syntactic analysis: top-down parsing
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(nov 22) sentence analysis: bottom-up chart parsing
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(nov 25) conceptual sentence analysis: the circus parser;
+the problem of inference
+  [  postscript;
+     postscript, 2 per page; 
+    html    ]
+
+
+
+(nov 27) machine learning of natural language (no on-line notes)
+
+
+
+cs472 homeworks and solutions
+
+
+homework 1 (due monday, 9/16)[html] 
+
+homework 1 solutions [html] 
+
+homework 2 (due monday, 9/30)[html] 
+
+homework 2 solutions [html] 
+
+lisp code  for counting tic-tac-toe games (homework 2) 
+
+homework 3 (due wednesday, 10/16) 
+
+homework 3 solutions 
+
+midterm/prelim from fall 1995 (we covered all of the material on that midterm.)[html]  
+
+solution to 1995 midterm [html] 
+
+solution to 1996 midterm [html] 
+
+homework 4 ***note that a clarification for problem 4 was added at 5:30p.m. on
+11/6. here is the clarification: unless otherwise specified, you can assume that either
+(1) the system adds the fact that 
+jb is a 1973 dodge van to the kb at query time, or (2) the fact that jb is a 1973 dodge
+van already exists in the kb. the postscript document has been modified only to include 
+this clarification. *** (due monday, 11/11) 
+
+homework 4 solutions 
+
+note that program information is also available in the cs472 folder on the j drive
+of the pcs. 
+
+program 1 (due monday, 9/23)[html] 
+
+rubix.lisp  
+
+rubix-search.lisp  
+
+
+program 1 solution [html] 
+
+rubix-solution.lisp 
+
+
+
+
+program 2 (due wednesday, 10/23)[html] 
+
+general-game.lisp  
+
+othello.lisp  
+
+program 2 solution [html] 
+
+minimax-solution.lisp 
+
+
+
+
+program 3 (due friday, 11/22 *****new due date: monday 11/25 at
+the beginning of class*****)[html] 
+
+planner.lisp  
+
+rubix-planner.lisp  
+
+
+cs473 handouts and project information
+
+
+ course syllabus and project information   (last modified 9/22)
+
+ project ideas   
+ format for project proposal   (due at class time on tues 10/1, pc lab) 
+     postscript  ,
+     html   
+
+ cs473 due dates   
+ format for status reports  
+     postscript  ,
+     html   
+
+
+here are some examples of code with  good procedural and data abstraction as well 
+as good, consistent indentation. 
+courtesy of ed wayt and oumi mehrotra. 
+     gene.lisp  
+         genetic.lisp  
+   
+
+generic plan for finishing the project on time: it will be
+easier if you write your code in stages. the code reviews provide
+intermediate feedback on your progress.  here is how i'd suggest
+working on the code. (if, for some reason, you think that your
+particular project doesn't fit well into the structure below, let me
+know and i can help you create a schedule that does...) 
+
+     first, think about the major ``modules'' that your project requires and the
+knowledge structures (e.g., rules, state descriptions, board representations) that you'll
+need (including any related constructor functions and accessor functions --- as described by
+winston in our main text). implement the modules   as ``stubs,'' i.e., lisp functions that
+have no substantive code, but that specify all of the necessary parameters and that make calls
+to the appropriate module stubs.  write the code to implement your (generic) knowledge
+structures.  (completed for code review 1, 29 oct)  
+
+     get the system running from beginning to end as soon as possible --- just on a
+simple example. this will invariably require making many simplifying
+assumptions. design the inference engine or control strategies needed for your
+system. e.g., specific search strategy, rule interpreter, move generator,
+learning algorithm.   (completed for code review 2, 18 nov) 
+ 
+     finish the implementation of the ai part (inference engine,
+control strategies, learning algorithm) of your system.  incrementally
+remove the simplifying assumptions by adding the necessary
+code. evaluate the system appropriately. be sure to leave enough time
+for the evaluation --- it is an important component of the final
+grade.  (by project end)  
+    
+
+
+cs473 lisp mini-tutorial
+
+ mini-tutorial 1  (introduction to lisp) 
+
+ mini-tutorial 2  (list primitives, defining functions) 
+
+ mini-tutorial 3  (conditionals, recursion) 
+
+ mini-tutorial 4  (data abstraction, mapping, iteration) 
+
+ mini-tutorial 5  (debugging, structures, objects) 
+
+lisp environments
+
+ the allegro lisp editor  (the lisp for the pc lab)
+
+ using lucid lisp with emacs (only useful if you have an account on 
+	the cs machines and want to use common lisp on those machines rather than the 
+	pc lab)  
+
+useful common lisp and ai links
+
+
+ common lisp the language, guy steele 
+
+ tulane common lisp tutorial 
+
+ johns hopkins common lisp tutorial 
+
+ common lisp resouces from cmu ai repository  (including the lisp faq) 
+
+ free common lisp implementations (from the cmu-ai lisp faq)
+
+ machine learning databases at uc irvine (it's probably best to first
+ check the end of the page for the readme file associated with the data bases.)  
+
+
+
+return
+to cs472 home page
+
+cs472 fall 96 course materials
+cs472 fall 96 course materials
+cs472 fall 96 course materials
+cs472 fall 96 course materials
+cs472 fall 96 course materials
+cs472 fall 96 course materials
+cs472 fall 96 course materials
+cs472 fall 96 course materials
+cs472 fall 96 course materials
+cs472 fall 96 course materials

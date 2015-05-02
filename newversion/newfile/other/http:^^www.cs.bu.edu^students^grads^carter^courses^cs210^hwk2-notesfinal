@@ -1,0 +1,100 @@
+<< operator to shift bits to the left.  the places
+		on the right will be filled with zeros.
+	use the | (or) operator to "or" two bit patterns together.
+		this is a good way to combine bit patterns.
+	use the & operator along with a "mask" bit pattern to set
+		certain bits to 0.   
+
+for example, to put the number -7 into a bit field from position 14 to
+18 in the instruction:
+
+	int instr;    /* the instruction */
+	int num	      /* the number; contains the value -7, say */
+
+	/* at the outset num contains 11111111111111111111111111111001 */
+
+	/* first mask all bits to 0 except those we want to keep */
+	/* this is a pattern of 5 1's since we want to keep 5 bits */
+	num = num & 0x1f;
+
+	/* now num contains 00000000000000000000000000011001 */
+
+	/* now shift the bits to their proper location */
+	num = num << 14;
+
+	/* now num contains 00000000000001100100000000000000 */
+
+	/* now "or" them into the instruction */
+	instr = instr | num;	
+
+
+finally, when you have filled all the bitfields in the instruction,
+write the bits to stdout as follows:
+
+	fwrite(&instr, sizeof(instr), 1, stdout);
+
+frequently asked questions about the sparc assembler project:
+--
+when i run the program i get "illegal instruction (core dumped)".  does
+this mean that my assembler is not converting the assembly file
+correctly into machine code?  
+
+exactly.   your assembler generated a bit pattern that the processor cannot
+interpret as an instruction.
+--
+is there any way i can look at the machine code produced by my assembler
+program?  
+
+there are two ways.   first, use "od -x":
+
+% od -x fib.ao
+0000000 9de3bfc0 a0080010 a2102001 a6102001
+0000020 a8100018 10800006 01000000 a4040011
+0000040 a0100011 a2100012 a604e001 80a4c014
+0000060 06bffffb 01000000 b0100012 81c7e008
+0000100 81e80000
+
+the lefthand column is the byte adress of the first word, in octal.  the
+other columns are the binary words in your machine language file.
+
+an even more useful thing to do is to ask gdb to tell you what
+instructions you have generated, using gdb's "disassemble" command.
+
+load the "runner" into gdb, set a breakpoint at the line that calls
+"pgm", run the program (hitting the breakpoint), use "si" until gdb tells
+you you are in the subroutine you've written, which is called pgm(),
+then "disass" the subroutine (your code).
+
+you should look at the source for "runner" to see how it works to
+understand why this works. 
+--
+what's going to happen when we try to stick a 32 bit number into a 22 
+bit spot, like in a format 2 .... or in format 3, put a 32 bit immediate 
+into a spot that's too small for it? also, if the address in format 1 is 
+negative, using 2's complement don't we need all those bits?
+
+take the case of moving a 32 bit number into a 22 bit field.  first
+assume the number is positive.  it's ok to throw away the high 10 bits
+if they are all zero, right?  that is, if the actual value contained in
+the 32-bit field can be represented in 22 bits, then the 10 high order
+bits are zero anyway.  if the number can't be represented in 22 bits
+(bigger than 4m), then there is nothing we can do anyway -- the user has
+to be alerted of an error condition.  so, the answer is, make sure the
+high order bits are zero, and if they are, throw them away, otherwise
+signal an error.
+
+the case of negative numbers is analagous, with 1's replacing 0's in the
+high order positions.   if the negative number can be encoded in 22
+bits, then the 10 high order bits are all 1's and they can be thrown
+away. (think about it -- to get the positive version of the number we
+would flip the bits, so those ones would become zeroes).
+--
+the "ta" instruction:  this is just one of the family of trap
+instructions, which are format 3 instructions.  chapter 8 refers to the
+whole set of them as the "ticc" instruction.  instead of using chapter 8
+for this instruction, look at p. 386 in appendix c.
+--
+how can i send an error message to the terminal if output is redirected?
+
+send your error messages to "stderr" using fprintf:
+	fprintf(stderr, "error: bad input\n");

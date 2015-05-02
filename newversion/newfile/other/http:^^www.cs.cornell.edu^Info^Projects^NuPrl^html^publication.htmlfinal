@@ -1,0 +1,697 @@
+nuprl project related publications
+
+
+
+nuprl project related web sites
+
+
+	 altavista(tm) search
+	 	paul jackson's nuprl page
+
+
+
+
+
+nuprl project online papers
+
+there are several formats used to present the papers accessible here.
+
+ html : a hypertext version created using  latex2html. 
+ postscript : a downloadable postscript version created using dvips.
+ ncstrl : a pointer into the  networked computer science technical reports library. 
+
+
+
+
+
+ collaborative mathematics environments.
+	[ html , 
+          postscript ]
+ constable, r.
+  experience using type theory as a foundation for computer science, circa 1985-1995.
+        [html ]
+
+
+ constable, r.
+  semantics of evidence.
+	[ html ,
+	  ncstrl ]
+
+ constable, r.
+  the value of automated deductions.
+        [html ]
+    
+ forester, m.
+  formalizing constructive real analysis.
+	[ html ,
+	  ncstrl ,
+          postscript ]
+
+ 
+
+
+
+nuprl project related publications
+
+
+    published papers and chapters of books
+     
+     
+	
+	aagaard, mark and leeser, miriam,
+	verifying a logic synthesis tool in nuprl.
+	proceedings of workshop on computer-aided verification.
+	1992.
+	editor: gregor bochmann and david probst,
+	publisher: springer-verlag,
+	pp. 72-83.
+	(to appear by springer-verlag, 1993)
+
+	
+ 	allen, stuart f. and robert l. constable and douglas j. howe and willaim aitken.
+	the semantics of reflected proof.
+	proc. of fifth symp. on logic in comp. sci.
+	ieee, 
+	1990,
+	pp. 95-197
+
+	
+	allen, stuart f.
+	a non-type-theoretic definition of martin-lof's types.
+	proc. of second symp. on logic in comp. sci.
+	ieee,
+	june 1987,
+	pp. 215-224
+       
+	
+        allen, stuart f.
+        a non-type-theoretic semantics for type-theoretic language.
+        cornell university.
+        1987
+
+	
+	basin, david a.
+	extracting circuits from constructive proofs.
+	dept. of artificial intelligence, edinburgh.
+	1991,
+	research paper 533,
+	(also appeared in proc. of the ifip-ieee int'l. workshop on form
+	al methods in vlsi design, miami usa, 1991.)
+
+
+	
+	basin, david a. and douglas j.howe,
+	some normalization properties of martin-lof's type theory, and applications,
+	theoretical aspects of computer software, int. conf. tacs '91,
+	(lecture notes in computer science, vol. 526})
+	springer-verlag,
+	pp. 475-494,
+	1991
+
+	
+	basin, d. and g. brown and m. leeser,
+	formally verified synthesis of combinational circuits,
+	integration: the international journal of  vlsi design,
+	1991,
+	v. 11,
+	pp. 235-250
+
+       	
+	basin, d. and r. constable,
+	metalogical frameworks,
+	proc. of the second annual workshop on logical frameworks,
+	edinburgh, uk,
+	june 1991
+	
+	
+	basin, david a.,
+	building problem solving environments in constructive type theory,
+	cornell university,
+	1990"
+
+	
+	basin, d. and p. del vecchio
+	hardware specification, verification and synthesis,
+	hardware specification, verification and synthesis:  mathematical aspects,
+	(lecture notes in computer science, vol. 408)
+	1989,
+	pp. 333-357,
+	springer-verlag
+
+	
+	basin, david a.,
+	building theories in nuprl,
+	proc. of logic at botik '89,
+	(lecture notes in computer science, vol. 363),
+	pp. 12-25,
+	springer-verlag, pereslavl-zalesky, ussr,
+	1989,
+	(cornell tr 88-932)
+
+	
+	basin, david a.,
+	an environment for automated reasoning about partial functions,
+	9th international conference on automated deduction,
+	(lecture notes in computer science, vol. 310),
+	pp. 101-110,
+	springer-verlag, ny,
+	1988
+
+	
+        bates, j. l. and robert l. constable,
+        proofs as programs,
+        acm trans. program. lang. and syst.,
+	v. 7,
+	n. 1,
+	pp. 53-71,
+	1985
+
+	
+	bundy, a. and f. van harmelen and c. horn and a. smaill,
+	the oyster-clam system,
+	10th international conference on automated design,
+	(lecture notes in artificial intelligence, vol. 449),
+	springer-verlag,
+	1990,
+	stickel, m.e. (editor),
+	pp. 647-648
+
+	
+	chen, w.z.,
+	tactic-based theorem proving and knowledge-based forward chaining,
+	eleventh international conference on automated deduction,
+	(lecture notes in a.i., vol. 607),
+	1992,
+	d. kapur (editor),
+	pp. 552-566,
+	springer-verlag
+	
+	
+	chirimar, j. and douglas j.~howe,
+	implementing constructive real analysis: a preliminary report,
+	symposium on constructivity in computer science,
+	springer-verlag,
+	1991
+
+	
+	robert l. constable,
+	exporting and reflecting abstract constructive meta-mathematics,
+	lecture notes in artificial intelligence,
+	1994,
+	alan bundy (editor),
+	p. 529,
+	(12th international conference on automated deduction),
+	springer-verlag
+
+        
+	robert l. constable,
+	expressing computational complexity in constructive type theory,
+        lncs/lnai proceedings, 
+        (lecture notes in computer science),
+        1994,
+	pp. 131-144,
+        springer-verlag
+
+	
+	robert l. constable,
+	using reflection to explain and enhance type theory,
+	proof and computation,
+	1994,
+	nato asi series,
+	springer-verlag
+
+	
+	constable, robert l. and paul b. jackson,
+	towards integrated systems for symbolic algebra and formal constructive mathematics,
+	to appear.,
+	1994
+
+	
+	constable, robert l. and scott f. smith,
+	computational foundations of basic recursive function theory,
+	theoretical computer science b: logic, semantics, and theory of programming,
+	1993,
+	v. 121,
+	pp. 89-112
+
+	
+	constable, robert l.,
+	formal theories and software systems:  
+	fundamental connections between computer science and logic,
+	future tendencies in computer science, control and applied mathematics,
+	(lecture notes in computer science, vol. 653),
+	springer-verlag,
+	december, 1992,
+	bensoussan, a. and j.-p. verjus (editors),
+	pp. 105-127
+
+	
+	constable, robert l.,
+	metalevel programming in constructive type theory,
+	programming and mathematical method,
+	(nato asi series, vol. f88),
+	springer-verlag,
+	1992,
+	broy, manfred (editor),
+	pp. 45-93
+
+	
+	constable, robert l.,
+	lectures on: classical proofs as programs,
+	constructive methods of computing science,
+	(nato asi series),
+	m. broy (editor),
+	1992
+
+	
+	constable, robert l. and chetan murthy,
+	finding  computational content from classical proofs,
+	logical frameworks,
+	cambridge university press,
+	1991,
+	gerard huet and gordon plotkin (editors),
+	pp. 341-362
+
+	
+	constable, robert l.,
+	type theory as a foundation for computer science,
+	theoretical aspects of computer software, int. conf. tacs '91,
+	(lecture notes in computer science, vol. 526),
+	1991,
+	pp. 226-243
+
+	
+	constable, robert l. and  stuart f. allen and douglas j. howe,
+	reflecting the open-ended computation system of constructive type  theory,
+	logic, algebra and computation,
+	(nato asi series, vol. f79),
+	h. schwichtenberg (editor),
+	1990
+
+	
+        robert l. constable and douglas j. howe,
+        implementing metamathematics as an approach to automatic theorem proving,
+        formal techniques in artificial intelligence: a source book,
+        elsevier science publishers (north-holland),
+        1990,
+        r.b. banerji (editor),
+        pp. 45-76
+
+	
+	constable, robert l. and douglas j. howe,
+	nuprl as a general logic,
+	logic in computer science,
+	academic press,
+	1990,
+	p. odifreddi (editor),
+	pp. 77-90,
+	(cornell tr 89-1021)
+
+	
+	constable, robert l.,
+	assigning meaning to proofs: a semantic basis for problem solving environments,
+	constructive methods of computing science,
+	(nato asi series, vol. f55),
+	m. broy (editor),
+	pp. 63-91,
+	1989 
+
+	
+	constable, robert l. and scott f. smith,
+	computational foundations of basic recursive function theory,
+	third symp. on logic in comp. sci.,
+	ieee, edinburgh, uk,
+	pp. 360-371,
+	1988,
+	(cornell tr 88-904)
+
+	
+	constable, robert l. and stuart f. allen and h.m. bromley and w.r. cleaveland 
+	and j.f. cremer and r.w. harper and douglas j. howe and t.b. knoblock and 
+	n.p. mendler and p. panangaden and james t. sasaki and scott f. smith,
+	implementing mathematics with the nuprl development system,
+	prentice-hall, nj,
+	1986
+
+	
+	constable, robert l. and n.p. mendler,
+	recursive definitions in type theory,
+	proc. of logics of prog. conf.,
+	pp. 61-78,
+	january 1985,
+	(cornell tr 85-659)
+
+	
+	constable, robert l.,
+	constructive mathematics as a programming logic:  some principles of theory,
+	annals of mathematics,
+	vol. 24,
+	elsevier science publishers, b.v. (north-holland),
+	1985,
+	(reprinted from 
+		topics in the theory of computation, 
+		 selected papers of the intnl. conf. on "foundations of computation theory," fct '83
+	)
+
+	
+	constable, robert l. and t. knoblock and j.l. bates,
+	writing programs that construct proofs,
+	j. automated reasoning,
+	v. 1,
+	n. 3,
+	pp. 285-326,
+	1984
+
+	
+	constable, robert l. and michael j. o'donnell,
+        a programming logic,
+        winthrop, mass,
+        1978
+
+		
+        constable, robert l.,
+        constructive mathematics and automatic program writers,
+        proc. ifip congr.,
+        ljubljana,
+	pp. 229-233,
+        1971
+
+	
+	giunchiglia, f. and a. smaill,
+	reflection in constrcutive and non-constructive automated reasoning,
+	meta-programming in logic programming,
+	mit press,
+	1989,
+	abramson, h. and m.h. rogers (editors),
+	pp. 123-140
+
+	
+	horn, c.,
+	the nuprl proof development system,
+	dept. of artificial intelligence, edinburgh,
+	1988,
+	working paper 214
+
+        
+	howe, douglas j.and stoller, scott d.,
+        an operational approach to combining classical set theory and functional programming languages, 
+        international symposium tacs '94,
+        (lecture notes in computer science),
+        springer-verlag,
+        1994,
+	goos, g. and hartmanis, j. (editors),
+        pp. 36-55
+
+	
+	howe, douglas j.,
+	reasoning about functional programs in nuprl,
+	functional programming, concurrency, simulation and automated reasoning,
+	(lecture notes in computer science),
+	1993,
+	(to appear)
+
+	
+	howe, douglas j.,
+	a simple type theory for reasoning about functional programs.
+	computer science department, cornell univeristy,
+	(pre print),
+	1992
+
+	
+	howe, douglas j.,
+	equality in lazy computation systems,
+	proc. of fourth symp. on logic in comp. sci.,
+	1989,
+	ieee computer society,
+	pp. 198-203
+
+	
+	howe, douglas j.,
+	computational metatheory in nuprl,
+	9th international conference on automated deduction,
+	(lecture notes in computer science, vol. 310),
+	e. lusk and r. overbeek (editors),
+	pp. 238-257,
+	springer-verlag, new york,
+	1988
+
+	
+	howe, douglas j.,
+	automating reasoning in an implementation of constructive type theory,
+	cornell university,
+	1988
+
+	
+	howe, douglas j.
+	implementing number theory: an experiment with nuprl,
+	8th international conference on automated deduction,
+	(lecture notes in computer science, vol. 230),
+	1987,
+	pp. 404-415
+
+	
+	howe, douglas j.
+	the computational behaviour of girard's paradox
+	proc. of second symp. on logic in comp. sci.
+	ieee,
+	1987,
+	pp. 205--214
+
+	
+	jackson, paul b. and robert l. constable,
+	type theory for computer algebra,
+	(in preparation),
+	1995
+
+	
+	paul b. jackson,
+	enhancing the nuprl proof development system and applying it to computational abstract algebra,
+	cornell university,
+	1994,
+	ithaca, ny,
+
+	
+	paul b.~jackson,
+	the nuprl proof development system, version 4.1 reference manual and user's guide,
+	cornell university,
+	ithaca, ny,
+	1994
+
+	
+	paul b. jackson,
+	exploring abstract algebra in constructive type theory,
+	12th conference on automated deduction,
+	1994,
+	a. bundy (editor),
+	springer-verlag,
+	new york
+
+	
+	jackson, paul b.,
+	developing a toolkit for floating-point hardware in the nuprl proof development system, 
+	advanced research workshop on correct hardware design methodologies,
+	pp. 401-419,
+	organized by esprit, turin, italy,
+	june 1991
+
+	
+	jackson, paul b.,
+	nuprl and its use in circuit design, 
+	proceedings of the ifip tc10/wg10.2 
+	international conference on theorem provers in circuit design: 
+	theory, practice and experience,  
+	v. stavridou, t.f. melham and r.t. boute (editors),
+	pp. 311-336,
+	north-holland, the netherlands,
+	1992
+
+	
+	paul b. jackson,
+	logic-based knowledge representation,
+	mit press, cambridge, ma,
+	1989
+
+	
+        knoblock, ted,
+        mathematical extensibility in type theory,
+        cornell university,
+        1987
+
+	
+	knoblock, ted b. and robert l. constable,
+	formalized metareasoning in type theory,
+	proc. of the first symp. on logic in comp. sci.,
+        pp. 237-248,
+	1986,
+	ieee
+
+	
+	kreitz, charles,
+	constructive automata theory implemented with the nuprl proof development system,
+	cornell university,
+	1986,
+	ithaca, new york
+
+	
+	kreitz, charles,
+	meta-synthesis:  deriving programs that develop programs,
+	technical university of darmstadt,
+	november, 1992
+
+	
+	o'leary, john; miriam leester; jason hickey; and mark aagaard,
+	non-restoring integer square root: a case study in design by principled optimization,
+	international conference on theorem proving &amp;  circuit design,
+	1994
+
+	
+	leeser, miriam,
+	using nuprl for the verification and synthesis of hardware,
+	phil. trans. r. soc. lond.,
+	1992,
+	v. 339,
+	pp. 49-68
+
+	
+	madden, p.,
+	automatic program optimization via the transformation of nuprl synthesis proofs, 
+	proc. of the 1988 alvey technical conf.,
+	1988,
+	clarke, l. (editor),
+	(also available from edinburgh as dai research paper no. 392)
+
+	
+	mendler, p.f.
+	recursive types and type constraints in second-order lambda calculus
+	proc. of second symp. on logic in comp. sci.
+	ieee,
+	1987,
+	pp. 30-36
+
+	
+	mendler, p.f.,
+	inductive definition in type theory,
+	cornell university,
+	ithaca, ny,
+	1988
+
+	
+	mendler, n.; robert l.~constable; and p. panangaden
+	infinite objects in type theory
+	proc. of first symp. on logic in comp. sci.
+	ieee,
+	1986,
+	pp. 249-257
+	(cornell tr 86-743)
+
+	
+	murthy, chetan,
+	a computational analysis of girard's translation and lc,
+	proc. of seventh symp. on logic in comp. sci.,
+	1992
+
+	
+	murthy, chetan,
+	an evaluation semantics for classical proofs,
+	proc. of sixth symp. on logic in comp. sci.,
+	1991,
+	pp. 96-109,
+	ieee, amsterdam, the netherlands
+
+	
+	russell, j. and chetan murthy,
+	a direct constructive proof of higman's lemma,
+	pp. 257-269,
+	proc. of fifth symp. on logic in comp. sci.,
+	ieee,
+	1990
+
+	
+	murthy, chetan,
+	extracting constructive content for classical proofs,
+	cornell university, dept. of computer science,
+	1990,
+	(tr 89-1151)
+
+	
+        sasaki, james t.,
+        the extraction and optimization of programs from constructive proofs,
+        cornell university,
+        1985
+
+	
+        smith, scott f. and robert l. constable,
+        partial objects in constructive type theory, 
+	proc. of second symp. on logic in comp. sci.,
+	ieee, washington, d.c.,
+	pp. 183-93,
+        1987
+	
+	
+	smith, scott f.,
+	partial objects in type theory,
+	cornell university,
+	ithaca, ny,
+	1989
+
+	
+	j.l. underwood,
+	aspects of the computational content of proofs,
+	cornell university,
+	1994,
+	ithaca, ny
+	(cornell tr94-1460)
+	
+	
+	underwood, judith,
+	the tableau algorithm for intuitionistic propositional 
+  	calculus as a constructive completeness proof,
+	proceedings of the workshop on theorem proving with analytic tableaux,
+  	marseille, france,
+        pp. 245-248,
+	1993,
+	(available as technical report mpi-i-93-213
+  	max-planck-institut fur informatik, saarbrucken, germany)
+
+	
+	underwood, judith,
+	a constructive completeness proof for the intuitionistic propositional calculus,
+	cornell university,
+	(cornell tr90-1179),
+	1990
+    
+    
+   research papers
+    
+	
+		 coming soon
+		 at your browser!
+	
+    
+   research notes
+    
+	
+		 coming soon
+		 at your browser!
+	
+
+
+
+
+
+ 
+ return to main index  
+
+ nuprl project / nuprl@cs.cornell.edu 
+
+
+nuprl project related publications
+nuprl project related publications
+nuprl project related publications
+nuprl project related publications
+nuprl project related publications
+nuprl project related publications
+nuprl project related publications
+nuprl project related publications
+nuprl project related publications
+nuprl project related publications

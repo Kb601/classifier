@@ -1,0 +1,91 @@
+cse 322 
+assignment 4 
+due friday, january 26, 1996
+
+
+
+
+
+
+
+                 
+ next:    about this document 
+  
+
+cse 322 
+assignment 4 
+due friday, january 26, 1996
+
+
+
+ 
+number 36 on page 69.  better yet construct the derivation tree for
+.
+
+consider the grammar: .  
+
+by example show that this grammar is ambiguous.
+
+design an unambiguous grammar which generates the same language
+as this grammar.  explain why your grammar
+is unambiguous.
+
+ use the construction given in class for producing a regular grammar
+from a regular expression to construct a regular grammar which generates
+the language defined by the regular expression .
+
+let l be the subset of  where the a's and b's are matched
+as parentheses.  the grammar g with
+productions  .  
+generates this language.  prove by induction on the length of 
+a derivation that if  and 
+then x satisfies the two
+properties (i) every prefix of x has at least as many a's as b's
+and (ii) x has an equal number of a's as b's.
+
+note that there is only one derivation of length 1, namely, .
+for the inductive step, if  then there are two
+possibilities  or
+.  your job is to carefully complete
+the induction proof using these ideas.
+ 
+ 
+    about this document ... 
+
+ 
+
+james fix 
+mon jan 22 10:11:12 pst 1996
+
+
+
+cse 322 
+assignment 4 
+due friday, january 26, 1996
+cse 322 
+assignment 4 
+due friday, january 26, 1996
+cse 322 
+assignment 4 
+due friday, january 26, 1996
+cse 322 
+assignment 4 
+due friday, january 26, 1996
+cse 322 
+assignment 4 
+due friday, january 26, 1996
+cse 322 
+assignment 4 
+due friday, january 26, 1996
+cse 322 
+assignment 4 
+due friday, january 26, 1996
+cse 322 
+assignment 4 
+due friday, january 26, 1996
+cse 322 
+assignment 4 
+due friday, january 26, 1996
+cse 322 
+assignment 4 
+due friday, january 26, 1996

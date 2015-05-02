@@ -1,0 +1,108 @@
+courses: databases and information systems 
+
+
+
+
+
+
+
+
+ cs 680: database and information systems  
+
+
+
+
+
+
+
+   fall 1996 information: 
+   
+      time/place: 5:00 - 6:20 pm, washington 308
+      office hours: mondays 2-5, or just after class.
+   
+
+    catalog description: 
+     
+        
+  brief coverage of standard database concepts: relational model,
+  file systems, physical implementation of databases. spatial
+  databases: computational geometry, spatial relations, spatial
+  data structures, query processing. text processing: search
+  techniques, compression methods. image databases: storage issues,
+  compression methods, image indexing, searching by content.
+  additional topics from multimedia and temporal databases.
+  students will implement various algorithms discussed in class.
+
+     
+
+    prerequisites: 
+      
+         
+           an undergraduate algorithms course (e.g. cs 313)
+     
+
+    a more friendly description: 
+     
+        
+  traditional databases cover the standard relational model that is
+  particularly suited to applications in banking and commerce. 
+  the type of data stored has usually been alphanumeric in nature.
+  for example, an employee database has data about employee names,
+  their addresses, salaries, departments etc. queries typically
+  involve finding items and sorting items. today, databases are 
+  starting to be used to store non-alphanumeric data. for example,
+  a county planning office wants to store detailed maps of property,
+  of electrical wiring and drainage systems. in another example,
+  images of products are stored in a product catalog. typical 
+  queries for these types of databases include questions like
+  "find me all residential properties within a 5-mile radius of
+  this factory" or "here is a shape of a vase; find me examples in
+  the catalog that look like it". the above are examples of
+  spatial (or geographic) databases and image databases.
+  
+  while traditional relational databases are well-understood, the
+  same cannot be said about spatial and image databases. this 
+  course will explore the science behind these types of databases.
+  both theory and practice will be considered. the course will
+  start by asking how traditional tree data structures can be
+  modified for spatial data. from there, computational issues
+  about geometry - computational geometry - will be covered.
+  some issues concerning spatial and geographic databases will
+  be addressed next: how to store data, and how to specify and
+  process queries. the material on image databases will start 
+  with storage problems: how to compress 2-d images effectively.
+  following this, some material regarding the organization of
+  image databases will be presented. additional topics include
+  multimedia database issues and temporal database issues.
+
+     
+     
+
+
+
+  
+
+
+
+
+
+
+  back to my homepage  
+
+
+
+
+
+
+
+
+ courses: databases and information systems 
+ courses: databases and information systems 
+ courses: databases and information systems 
+ courses: databases and information systems 
+ courses: databases and information systems 
+ courses: databases and information systems 
+ courses: databases and information systems 
+ courses: databases and information systems 
+ courses: databases and information systems 
+ courses: databases and information systems

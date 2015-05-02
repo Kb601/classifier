@@ -1,0 +1,143 @@
+cse567 announcements
+
+
+
+
+
+cse 567: principles of digital systems design 
+carl ebeling, fall 1996 
+
+
+nov. 1
+
+homework 4, problem 3.  you may assume that exactly one
+"last" bits is asserted, and that there is an initial "last" bit at
+the very beginning of the circuit.  (in general, you may make
+"reasonable" assumptions when you feel the problem spec is incomplete
+or ambiguous.  deciding which assumptions to make is part of design.)
+
+
+oct. 31
+
+homework 4, problem 7.  reset and start are the same signal.
+i changed names in the middle of writing the problem.
+
+
+oct. 28
+
+there's a new note on doing homework in the homework web page.
+you are to work together as teams on homework 4.  please look at
+the problems individually first and sketch possible solutions and
+questions.  then meet together and formulate solutions to each if you
+can, and assign the writeup to one or more team members.  then meet
+again to collate and review your solutions before you hand them in.
+the whole team is responsible for understanding the solution to all
+problems.
+homework 4, problem 7 the problem has been changed to
+adding 8-bit numbers.  also, you may make reasonable assumptions when
+you design this circuit, provided they are reasonable and you explain
+what they are.
+
+
+oct. 25
+
+timing optimization.there are four delay paths that have
+to be considered when optimizing the timing of a circuit.  (we will cover registers soon.)
+
+  register to register path delay.  the clock period constrains this.
+  input to register path delay.
+  register to output path delay.
+  input to output delay.  (this is all there is for a
+  combinational circuit.)
+
+the timing constraints for the last three delay paths must be
+specified explicitly.
+
+
+oct. 25
+
+if you run into trouble, don't hesitate to fire off an email msg to me or
+the tas, preferably all three.  one or the other of us is logged in for
+most of the 24 hours/day and we can probably save you time.  we know that
+you won't ask questions that can be easily answered by looking at a
+handout. 
+
+the cse567 mailing list is for all to use - you can post questions
+to the class if you like, and more important you might want to post hints
+or suggestions, although we'd rather you vet these through us to avoid the
+generation of tool rumors and superstitions.  unfortunately, we don't all
+share a lab where information and ideas flow freely, but the email list is
+a substitute. 
+
+
+oct. 15
+
+homework 2 clarification:
+
+we will count the cost of a circuit as a) the number of gates and then
+b) the number of gate inputs.  ie. we minimuze the number of gates
+first and then the number of inputs.  and we assume negations are free.
+
+it turns out that the cost of a gate (number of transistors) is
+directly proportional to the number of inputs, but the delay generally
+increases as n^2.  and it gets worse - increasing the fanout of a
+signal, ie. the number of places it is used, also increases the delay.
+so large fanin (number of gate inputs) and fanout (number of places
+gate output is used) are bad.
+
+
+
+oct. 14
+
+homework 2: replace problem 2 with the following problem:
+find the minimal sum-of-products form for:
+
+sum m(0,1,2,3,6,7,8,9,10,12,13,14) + d(5,15)
+
+
+
+oct. 7
+
+homework 1 problem 1 has been changed slightly.  check out
+the online homework web page.
+
+
+oct. 4
+
+room change to loew 201. 
+
+
+oct. 3
+
+extra handouts are available on top of the file cabinet in
+the hall outside my door.  i will continue to leave extras out there.
+email addresses. please send me email containing an http
+pointer to your home web page.  if you don't have a web page, this is
+the time to make one!
+no quiz this friday (10/4)
+
+
+sept. 25
+
+welcome to cse 567.  announcements will be posted here as needed.
+
+
+
+
+
+ebeling@cs.washington.edu
+
+
+
+
+
+cse567 announcements
+cse567 announcements
+cse567 announcements
+cse567 announcements
+cse567 announcements
+cse567 announcements
+cse567 announcements
+cse567 announcements
+cse567 announcements
+cse567 announcements

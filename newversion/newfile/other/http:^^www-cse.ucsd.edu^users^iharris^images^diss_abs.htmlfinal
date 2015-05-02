@@ -1,0 +1,91 @@
+dissertation abstract
+
+
+
+
+click here to download the postscript version of this statement.
+
+abstract of dissertation prospectus
+
+
+
+as device sizes continue to diminish, the chip gate-to-pin ratio
+increases, reducing chip testability. the strong effect of testability
+on production cost makes it imperative that it be well integrated into
+the vlsi design process. high-level synthesis automates the design
+process, allowing design alternatives to be explored more efficiently.
+the importance of testability necessitates exploration of test options
+during the design process as early as possible.
+
+the increasing complexity of chip circuitry increases the cost of
+production by causing test time to rise, thereby reducing production
+throughput. for this reason, it is necessary to generate designs which
+deliver high fault coverage with low test time. chip performance is a
+critical constraint for any high speed application area such as real
+time digital signal processing which is used in almost any multi-media
+application. the inclusion of testability into a design often causes a
+severe performance degradation. since testability is also
+important for such designs, it is necessary to include testability
+with minimal impact on the chip performance. low test time and reduced
+performance degradation must be achieved simultaneously during the
+design of a testable system.
+
+
+the chief component of test time is the degree of allowable test
+concurrency between the testing of different parts of the chip. two
+chip components may not be tested concurrently if the tests which
+examine the two components share hardware. in order to minimize test
+time, designs must be generated which allow tests to be defined which
+share hardware as little as possible. performance is reduced when test
+registers are inserted into delay-critical paths of the design. test
+registers must be inserted to ensure testability, while avoiding the
+delay critical paths of the circuit. once a testable design has been
+generated, tests must be defined for that design which are
+parallelizable. 
+
+i will design a system which performs three tasks with the goal of test
+time minimization:
+
+
+
+definition of a circuit which is testable with a high degree of
+test concurrency, from a behavioral description.
+ insertion of test registers into the defined circuit to allow
+the definition of parallelizable tests while minimizing the degradation
+of chip performance.
+ definition of a highly concurrent bist test plan for the circuit.
+
+
+the work presented here will be applied to a wide range of built-in
+self-test (bist) methodologies. by altering the area overhead
+limitation, the designs produced by this system can range from fully
+centralized bist, where all chip components are tested by the same test
+registers, to partially distributed bist, where the degree of test
+register sharing is restricted. 
+
+the cost of chip testing has become a large fraction of chip
+production cost and the effect of test register insertion on
+performance is critical for any high speed application. the need
+for an integrated system which considers test time and performance
+reduction due to testability at the earliest stage of design is clear.
+previous efforts to increase testability neither integrate the
+different levels of testable circuit design nor directly address the
+problem of minimizing test conflicts and performance degradation in a
+computationally efficient way.
+
+
+
+
+
+
+
+dissertation abstract
+dissertation abstract
+dissertation abstract
+dissertation abstract
+dissertation abstract
+dissertation abstract
+dissertation abstract
+dissertation abstract
+dissertation abstract
+dissertation abstract

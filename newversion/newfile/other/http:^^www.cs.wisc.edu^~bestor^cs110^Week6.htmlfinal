@@ -1,0 +1,437 @@
+cs 110 section 2 lecture notes - weeks 6
+
+
+
+
+ lecture notes - week 6
+
+
+
+
+   topic:
+   user-defined functions and subroutines. input arguments and local variables.
+
+   text:
+   chp. 6.1 - 6.6, 6.8
+
+   notes:
+   
+
+   
+
+   
+   user-defined functions
+   
+   
+      fortran has pre-defined or built-in mathematical functions.
+      
+	x = sqrt(y) * sin(x*y) + nint(3.2)
+      
+      functions are small independent program modules that compute commonly used values.  highly reusable.
+      
+	           +----------+
+	 in        |          |      out
+	 y=9 ----> |  sqrt(y) | ----> 3
+	           |          |
+	           +----------+
+      
+      functions take one or more input values called arguments, to produce a single output value called the result.
+      
+	y = cos(x)
+	c = mod(a, b)
+			
+	function    arguments    result
+	--------    ---------    ------
+	cos         x            cosine of x
+	mod         a, b         remainder of a/b
+      
+      functions simplify or break-down a larger problem into a series of smaller problems, called top-down design.
+   
+
+   user-defined functions
+   
+      can define your own functions and use them in your program.
+      resemble mini-programs.  very similar structure.
+      
+	function header
+	argument declarations
+	local variable declarations
+	main executable section
+	return
+	end
+      
+	example: compute the area of a circle.
+      
+	      real function areac (radius)
+	c     computes the area of a circle with
+	c     a radius of radius.
+
+	c     declare radius argument
+	      real radius
+
+	c     declare local variables/constants
+	      real pi
+	      parameter (pi = 3.14159)
+
+	c     compute result
+	      areac = pi * (radius ** 2)
+
+	      return
+	      end
+      
+   
+
+   calling user-defined functions
+   
+      user-defined functions are written after the main program.
+      
+	      program test
+	c     ------------------------------------
+	c                 main program
+	c     ------------------------------------
+	      real twrad, twarea, areac
+
+	      print *, 'enter radius of tower'
+	      read *, twrad
+	      print *, 'area is ', areac(twrad)
+
+	      stop
+	      end
+
+
+	c     ------------------------------------
+	c              user-defined functions
+	c     ------------------------------------
+	      real function areac (radius)
+	      ...
+	      return
+	      end
+      
+      user-defined functions are called from the main program just like any other function; i.e. part of an arithmetic expression.
+      user-defined functions can be called from inside other functions.
+   exception: functions cannot call themselves (called recursion).
+      important: function type must be declared like a variable in the main program (or wherever it is called from).
+      
+	      real ..., areac
+      
+   
+
+   function header
+   
+      the function header specifies the name of the function, the type of value it returns, and the name and number of input arguments.
+      
+	functype function funcname (arguments)
+
+	real function areac (radius)
+	integer function mod (divid, divis)
+      
+      can also have zero arguments, but unusual.
+      
+	integer function foo ( )
+      
+      only the argument names are listed in the function header.
+   
+
+   argument declarations
+   
+      the type of the arguments is specified immediately after the function header but before any local variables.
+      declare arguments just like declaring variables.
+      
+	real radius
+	integer divid, divis
+      
+      also called dummy arguments.
+   
+
+   actual arguments
+   
+      the value of the dummy arguments are initialized to the corresponding values in the function call, called the actual arguments.
+      
+	...
+	y = 10
+	x = areac(y)
+	print *, areac(10 * y + 3)
+	stop
+	end
+
+	real function areac (radius)
+	...
+	return
+	end
+
+
+	actual argument      dummy argument
+	---------------      --------------
+	y                    radius = 10
+	10 * y + 3           radius = 33
+      
+      number and type of actual arguments must correspond to number and type of dummy arguments.  specified in same order.
+      actual arguments may be variables, literals or expressions.
+   
+
+   local variables
+   
+      as with the main program, user-defined functions may need to store intermediate results in variables.
+      variables declared within a function are called local variables because they can only be used locally within the function.
+      important: variables declared in another function or in the main program cannot be used within a function!
+      do not re-assign argument variables within a function (called side-effects).
+      
+	integer function fact (n)
+	integer n
+	integer count, temp
+      
+
+   right:
+      
+	temp = 1
+	do count = 1, n
+	   temp = temp * count
+	end do
+	fact = temp
+      
+   wrong:
+      
+	do count = 1, n-1
+	   n = n * count
+	end do
+	fact = n
+      
+   
+
+   function result
+   
+      the purpose of a function is to compute and return a result.
+      the result of a function is the last value assigned to the function name using a normal assignment statement.
+      
+	funcname = value
+
+
+	integer function fact (n)
+	...
+	fact = temp
+	return
+	end
+      
+   
+
+   return statement
+   
+      the return statement exits the function and resumes execution in the main program (or wherever it was called from).
+      normally the last statement in a function before the end.
+   
+
+   end statement
+   
+      always the last statement in a function.
+      specifies the end of the function definition.
+   
+
+   order of execution
+   
+      program executes all the statements from program header to end.
+      
+	program foo                                          |
+	...                                                  |
+	end                                                  v
+      
+      if statement branches to execute different sections of code.
+      
+	if (bar .ne. 0) then                                 |
+	   ...                                           ____o____ 
+	else                                             |       |
+	   ...                                           |__> 
+      do loop goes back and re-executes code.
+      
+	do bar = 1, 10                                       |
+	   ...                                               + 
+      when call a function, jumps down and execute all the function statements.  return back to the main program on return.
+      
+	print *, fact(y)                    main        function
+	stop                                 |       ____> |
+	end                                  |      /      |
+	                                     * ____/       |
+	real function fact (n)               | 
+   
+
+   
+
+   
+   subroutines
+   
+   
+      functions return a single value, usually a number, and implement some mathematical function.
+      
+	      integer function fact (n)
+	c     computes the factorial of n
+      
+      subroutines can return any number of values and can perform any sort of operation.
+      
+	      subroutine graph (min, max, power)
+	c     print a graph of y = x^power from x=min to x=max
+      
+      subroutines also take one or more input values (i.e. arguments) but may or may not return any results.
+      
+	                +----------+
+	min=0     in    |          | 
+	max=10   ---->  |  graph   | 
+	power=2         |          |
+	                +----------+
+      
+   
+
+   user-defined subroutines
+   
+      subroutines resemble functions.
+      
+	subroutine header
+	argument declarations
+	local variable declarations
+	main executable section
+	return
+	end
+      
+      note: subroutine header does not return a value.
+      example: split a real number into to its whole and fractional parts.
+      
+	      subroutine break (x, whole, frac)
+	c     break a real number into its
+	c     whole and fractional parts
+	
+	c     declare arguments
+	      real x, frac
+	      integer whole
+
+	      whole = int(x)
+	      frac = x - real(int(x))
+
+	      return
+	      end
+      
+   
+
+   calling subroutines
+   
+      subroutines are written with functions after the main program.
+      subroutines are explicitly called from the main program using the call statement.
+      
+	call graph(1, 10, 2)
+	call break(10.3, ipart, fpart)
+      
+      subroutines can be called from inside other subroutines or functions (but no recursion).
+   
+
+   subroutine header
+   
+      the subroutine header specifies the name of the subroutine and the name and number of arguments.
+      
+	subroutine subname (arguments)
+
+
+	subroutine graph (min, max, power)
+	subroutine break (x, whole, frac)
+      
+      can also have zero arguments, not unusual.
+      
+	subroutine menu ( )
+      
+   
+
+   argument declarations
+   
+      as with functions, the type of the arguments is specified immediately after the subroutine header.
+   
+
+   local variables
+   
+      as with functions, subroutines may need to store intermediate results in variables.
+      local variables can only be used locally within the subroutine.
+   
+
+   subroutine results
+   
+      some subroutines do not return any values; e.g. graph just draws a graph on the screen.
+      other subroutines return one or more values; e.g. break takes one input value and returns two output values.
+      a result is returned to the main program when the arguments are re-assigned inside the subroutine.  arguments pass values both into the subroutine as well as out of it.
+      
+	                +----------+
+	min=0     in    |          | 
+	max=10   ---->  |  graph   | 
+	power=2         |          |
+	                +----------+
+
+	                +----------+
+	          in    |          |   out   whole=10
+	x=10.3   ---->  |   break  |  ---->  frac=0.3
+	                |          |
+	                +----------+
+      
+      note: unlike functions, the subroutine name is not assigned a value.
+   
+
+   input arguments
+   
+      input arguments pass values into the subroutine, just like functions.
+      input arguments should not be re-assigned.
+      as with functions, the actual arguments in the subroutine call may be literals, variables or expressions.
+      
+	call graph(x-10, x+10, 2)
+	call break(10.3, ...)
+      
+   
+
+   output arguments
+   
+      output arguments pass values back out to the main program. similar to function results except multiple values can be passed.
+      unlike input arguments, output arguments must be re-assigned to a new value to pass it back out.
+      very important: the actual arguments in the subroutine call must always be variables.
+      these variables are re-assigned inside the subroutine, hence the new values get passed back out to the main program.
+      
+	call break(10.3, ipart, fpart)
+	print *, ipart, fpart	(10   0.3)
+	stop
+	end
+
+
+	subroutine break (x, whole, frac)
+	...
+	whole = int(x)
+	frac = x - real(whole)
+	return
+	end
+      
+      when the dummy arguments whole and frac are re-assigned, the actual arguments ipart and fpart are re-assigned too.
+      actual and dummy argument names do not need to have the same name.
+      output arguments only pass values out.  the original values of ipart and fpart, if any, are ignored.
+   
+
+   input/output arguments
+   
+      some arguments can pass values both into and out of the subroutine.  called input/output arguments.
+      
+	      subroutine sort (num1, num2)
+	c     sorts two numbers so that num1
+   
+
+
+
+
+
+
+
+
+copyright &copy 1996 gareth s. bestor (bestor@cs.wisc.edu).  last modified april 29, 1996.
+
+
+
+
+
+cs 110 section 2 lecture notes - weeks 6
+cs 110 section 2 lecture notes - weeks 6
+cs 110 section 2 lecture notes - weeks 6
+cs 110 section 2 lecture notes - weeks 6
+cs 110 section 2 lecture notes - weeks 6
+cs 110 section 2 lecture notes - weeks 6
+cs 110 section 2 lecture notes - weeks 6
+cs 110 section 2 lecture notes - weeks 6
+cs 110 section 2 lecture notes - weeks 6
+cs 110 section 2 lecture notes - weeks 6

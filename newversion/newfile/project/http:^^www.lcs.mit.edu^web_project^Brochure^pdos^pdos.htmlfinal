@@ -1,0 +1,74 @@
+parallel & distributed operating systems group
+
+
+
+
+
+
+
+
+	
+	
+	
+
+
+ m. frans kaashoek,assistant professor of computer science and engineering 
+	 fernando j. corbat&oacute,ford professorof engineering
+
+
+
+
+
+the parallel and distributed operating systems group
+conducts software research for parallel and distributed
+computing systems. the group collaborates extensively with
+other lcs researchers.
+
+we take a pragmatic approach by focusing on three primary
+goals: simplifying the parallel and distributed programming
+process, building efficient distributed systems with
+off-the-shelf technology that also can be used for parallel
+supercomputing, and building scalable, flexible,
+high-performance storage services for these distributed
+systems.
+
+the first goal is addressed by a software-based
+shared-memory system, called autopilot, that combines the
+ease of shared-memory programming with the physical
+scalability of distributed systems. autopilot's novel
+aspects include the automatic management of locality and
+work distribution.
+
+secondly, the exokernel is a novel operating system
+microkernel that provides low-overhead protected
+communication and a user-customizable kernel interface.
+efficient communication is an especially valuable mechanism
+for structuring complex systems, since it allows the
+systems to be decomposed into separate protection domains.
+by allowing user customization, applications can set their
+own policies instead of being harnessed in a default kernel
+policy.
+
+our research into high-performance storage systems is
+represented by the logical disk (ld), which separates file
+and disk management so that different file systems can be
+run efficiently over the same ld. we also are extending the
+three goals to include mobile distributed systems.
+
+
+
+
+
+
+
+
+parallel & distributed operating systems group
+parallel & distributed operating systems group
+parallel & distributed operating systems group
+parallel & distributed operating systems group
+parallel & distributed operating systems group
+parallel & distributed operating systems group
+parallel & distributed operating systems group
+parallel & distributed operating systems group
+parallel & distributed operating systems group
+parallel & distributed operating systems group

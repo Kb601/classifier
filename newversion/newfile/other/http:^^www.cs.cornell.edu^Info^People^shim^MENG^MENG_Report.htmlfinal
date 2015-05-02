@@ -1,0 +1,387 @@
+viewing system
+
+
+
+
+viewing system 
+
+master of engineering  project 
+ 
+eric young-sang shim 
+ computer science department, 
+ cornell university 
+advisor : professor 
+bruce land  
+
+
+
+
+table of contents
+
+introduction
+equations
+implementation
+how this program works
+conclusion
+acknowledgements
+references
+
+
+
+
+
+
+
+
+
+
+introduction
+
+
+although various three-dimentional display devices exist, most
+computer graphics view surfaces are two-dimentional.  thus a
+three-dimentional pipeline - the jargon term used to describe the
+various processes in converting from three-dimentional world
+coordinate space to a two-dimentional representation - must contain a
+projective transformation and a viewing transformation, the minimum
+requirements to convert a three-dimentional scene to a two-dimentional
+projection.
+
+i have designed and implemented the viewing system iv which was
+carefully explained in the "3d computer graphics" by alan watt using 
+ java . 
+
+all the objects are created in the world coordinate
+system which is conventionally represented as a right-handed
+system.  we can consider a transformation, tview from a
+world coordinate system to a viewing coordinate system (xv, yv,
+zv).  here, in viewing coordinate system, vertices are expressed
+in a left-handed coordinate system with the origin sometimes known as
+the view point or view reference point which is
+represented as the position of a viewer's eye or the position at which
+a virtual camera is placed.  then, the second transformation,
+tpers is applied to project three-dimensional points in
+view space onto the the three-dimensional screen space(xs,
+ys, zs). then, i projected the vertices from screen space onto the
+projection space which is two-dimentional view plane to
+simulate the camera transformation.  
+
+
+a full viewing system will also determine a view
+volume(truncated view frustum), which is the
+subset of world coordinate space which is to be included in the
+transformation process. as far as a general three-dimensional
+rendering pipeline is concerned, i needed to define a view volume.
+to define this view volume, i needed to specify a near plane, a far
+plane and a view plane window.  the specific plane formula will be
+presented in the equations section of this
+report.  
+
+since it was very hard to create the view frustum 
+in the world coordinate system, i have created the view frustum
+in the viewing coordinate space and apply inverse tview
+matrix to the view frustum that has created in the viewing coordinate
+system.  by doing this, i was able to create the view frustum in the
+world coordinate system.  also, the three dimentional clipping should
+be performed in the viewing coordinate space. 
+
+
+
+
+
+
+
+
+equations
+
+we need a viewing direction vector n, and up vector v and an optional
+vector u.  the following equations are showing how to obtain these
+vectors. 
+ 
+n vector is a viewing direction vector and is obtained by calculating
+camera to position subtract camera from position. this n vector is
+used when we calculate the tview matrix.
+
+ 
+v vector is a up vector. because b must be perpendicular to n, we need
+a strategy that can take care of this care where the user entered n is
+not perpendicular to m.  since the user entered v vector is just a
+estimated v vector, we need to calculate the v vector by apply this
+equation. this v vector is also used when we calculate the tview
+matrix. 
+
+ 
+u vector is an optional vector that could be obtained by cross product
+of n and v vector resulting in a left-handed coordinate system. also,
+this u vector is used when we calculate the tview matrix. 
+
+ 
+tview matrix is obtained simply by calculating this
+equation.  this tview can transform any points in world coordinate
+system into the viewing coordinate system.  t matrix translates the
+object, and b matrix roates the object where t and b are
+the followings.  
+ 
+ 
+
+now, we have to have someway to transform from the viewing coordinate
+system into the world coordinate system.  in the case of view frustum
+which was created in the viewing coordinate system, and needed to be
+transformed to world coordinate system. 
+ 
+tview inverse matrix is obtained simply by calculating this
+equation.  this tview inverse can transform any points in viewing coordinate
+system into the world coordinate system.  b transpose matrix translates the
+object, and t(-x) matrix roates the object.  
+
+after we have create the object in the world coordinate system, and
+transform the points into the viewing coordinate system, we need to
+transform the points in viewing coordinate system into the screen
+coordinate system again.  by doing this, we are finally be able to
+simulate the camera transformation from world coordinate system to
+screen coordinate system. 
+ 
+where 
+ 
+tpers matrix is obtained simply by calculating this
+equation.  this tpers matrix is consists of d, f and h
+values that the user has entered from the user interface.  d is the
+distance from the camera to the near plane. incidently, the view plane
+is the same as the near plane in this viewing system.  f is the
+distance from the camera to the far plane.  finally, the h value is
+the half of the height of the view plane window.   
+
+as i create the view frustum, i should be able to specify the six
+planes. there are xv, yv and two zv values.  xv specifies the two
+planes of the view frustum.  yv specifies the top and the bottom planes
+of the view frustum.  and the zv specifies the front(near plane and
+view plane) plane and the far plane. 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+implementation
+
+in this project, i have implemented 14 classes which represents each
+objects in this viewing system.   i will introduce all the classes and
+briefly go over each class' class definition in this section.
+
+class definitions
+
+cameratransformation
+	the main program.  this class creates all the buttons,
+canvases, text fields. and this class contains user input data,
+tview, and tpers matrixs.  also, this
+class initialize all the necessary variables, and handle all the
+events that user entered such as mouse click or enter the value of
+camera location, camera to, v vector, and v, h, f values. 
+
+
+viewer3d
+	this class converts the 3d coordinates into the 2d
+coordinates to draw on the canvases.  to show the 3d effect in 2d
+case, this class rotates the object a little bit by y and z axis so
+that the user can see the object as 3d effected.
+
+
+polygon3d
+	this class is the base class of any other objects that
+would be displayed on the canvases such as view frustum and cube.
+this class contains all the vertices on all three coordinate systems,
+and the points that would be displayed on the canvases which is called
+view coordinates in this class.
+
+
+viewfrustum
+	this class contains all the necessary information about
+the view frustum.  this is extended class from the polygon3d class
+which means that it contains every thing from the polygon3d and plus
+whatever view frustum need to have.  also, this class creates view
+frustum in the viewing coordinate system according to the value of d,
+f, h, camera location and camera to value.
+
+
+cube
+	this class contains all the necessary information about
+the cube.  this class is extended class from the polygon3d
+class. also, this class creates cube on the origin of the world
+coordinate system according to the length of a edge. 
+
+
+tview
+	this class contains all the necessary information about
+the tview.  also, this class creates the
+tview by doing the followings
+	
+	 find v, u, n vectors
+	 create the t matrix
+	 create the b matrix
+	 create the tview matrix by calculating tb
+	 create the tview inv matrix by calculating
+btrnasposet(-x) 
+	
+
+
+
+tpers
+	this class contains all the necessary information about
+the tpers.  also, this class creates the
+tpers according to the d, h and f values that the user
+entered. 
+
+
+
+worldcanvas
+	this class contains all the necessary information of 
+the world canvas.   paints the objects in the world coordinate
+system, and handle the rotation of the objects by draging the mouse on
+the world coordinate system.
+
+
+viewcanvas
+	this class contains all the necessary information of 
+the view canvas.   paints the objects in the viewing coordinate
+system, and handle the rotation of the objects by draging the mouse on
+the viewing coordinate system.
+
+
+screencanvas
+	this class contains all the necessary information of 
+the screen canvas.   paints the objects in the screen coordinate
+system, and handle the rotation of the objects by draging the mouse on
+the screen coordinate system.
+
+
+projectioncanvas
+	this class contains all the necessary information of 
+the projection canvas.   paints the objects in the projection canvas
+in two-dimentional manner.
+
+
+
+matrix4x4
+	this class contains the matrix calculation methods.  for
+this class i have partially referenced from the code of awwwesome
+webware.
+
+
+vectorf
+	this class contains the general vector calculation
+methods.  this class is the base class of vector4 or any other vector
+classes. for this class i have partially referenced from the code of
+awwwesome webware.
+
+
+vector4
+	this class contains the four element vector calculation
+methods.  this class is derived from the vectorf class. for this class
+i have partially referenced from the code of awwwesome webware.
+
+
+
+
+the detailed code of this project can be obtained by clicking on  this
+
+
+
+
+
+
+
+how this program works
+
+if you like to simulate the camera transformation to see how the
+viewing system works, you may press on the viewing system.
+viewing system
+
+
+you will see four canvases in the viewing system which are the world
+coordinate canvas, viewing coordinate canvas, screen coordinate canvas
+and the projection coordinate canvas. as a user changes the
+approximated v vector, camera location vector, camera to vector, d, f
+and h values, this program redraws the objects according to the values
+of variables that user entered on all these four canvas appropreately.
+the user needed to press on view button after they have changed the
+values of variables to simulate the camera transformation.
+
+
+
+
+
+
+conclusion
+
+i was able to simulate the camera transformation for viewing system in
+this project.  by simulating the viewing system iv, i had less
+restriction when i view the object in the world coordinate since i
+could change the camera position and where to look at.  also, by
+having the view frustum, i didn't have to relying on a two-dimentional
+clipping algorithm to eliminate any information in the view plane that
+falls outside the view plane window.  
+eventhough this project performs just fine with my initial design, i
+could think of some more features that could make this project works
+even better.  first, adding more objects to view could make it better
+to understand what is going on while viewing the object.  second,
+diminishing the line brightness when draw the object as it gets deeper
+in z axis could help the user a lot more to tell which line is in
+front and which one is in the back. 
+
+
+
+
+
+
+
+acknowledgements
+
+it would have been difficult to finish this project without the greatest
+guidence of professor 
+bruce land.    i would like to thank him from the deep of my
+heart.   
+i would like to thank my mother, yeon-ja shim, for helping me
+and praying for me to survive from the darkest period of my life.
+thanks to my brother and sister, andy shim and julie shim, for supporting
+me and understanding me by financially and mentally.  i, also,
+would like to thank to my friends and cyber-friends in hana and kids. 
+most of all, i would like to dedicate this work to my father, han-yong
+shim who is in heaven, for giving me a strength and courage to
+continue to learn and complete the masters degree in cornell university.
+
+
+
+
+
+
+
+references
+
+
+[1] alan watt, "3d computer graphics" addison-wesley publishing company, 1993.
+
+
+
+
+
+
+
+
+
+
+
+viewing system
+viewing system
+viewing system
+viewing system
+viewing system
+viewing system
+viewing system
+viewing system
+viewing system
+viewing system

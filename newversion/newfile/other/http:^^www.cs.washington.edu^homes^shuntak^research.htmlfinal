@@ -1,0 +1,250 @@
+research summary of shun-tak a. leung
+
+
+
+
+research summary
+
+
+my current research centers on compiler-directed program restructuring
+techniques to improve the cache locality of array accesses in loops.
+specifically, i am studying the use of 
+array restructuring to optimize for spatial locality and, in parallel
+execution, to reduce false sharing.
+
+i have also worked on improving the performance and applicability of runtime parallelization in an earlier
+project.
+
+my advisor is prof. john
+zahorjan.  for a list of my publications on these and other subjects,
+click here.
+
+
+array restructuring
+
+my current research focuses on compiler-directed program restructuring
+techniques to improve cache locality.  specifically, i am studying the use
+of array restructuring to optimize array accesses in loops. my work
+combines the development of algorithms within a formal framework,
+implementation of a prototype compiler, and extensive experimentation
+with benchmark loops. it shows how array restructuring can be applied
+automatically and efficiently to a wide class of applications.
+
+array restructuring is an approach to enhancing the locality of array
+accesses in loops. these accesses are targeted because they account for a
+major portion of the memory traffic in many array-based scientific
+computations.  moreover, since they are typically executed many times, the
+effort spent on optimizing a few of them in the program text can yield huge
+benefits in execution performance.
+
+under the array restructuring approach, the compiler analyzes how each
+array is accessed and lays out the array appropriately according to the
+access pattern. as a trivial example, if a two-dimensional array is
+accessed by rows, the compiler may decide to store it in row-major order,
+whereas if it is accessed by columns, the compiler would choose
+column-major storage. in contrast, traditionally the storage order is fixed
+for all arrays, forcing programmers concerned about program performance to
+write programs in such a way that the data access pattern matches the fixed
+data layout as far as possible.
+
+my research in array restructuring is motivated in part by the
+observation that array restructuring in many ways complements loop
+restructuring --- an alternative approach that changes the execution order
+of loop iterations rather than the storage order of array elements --- but
+has received much less attention. for example, array restructuring can be
+easily applied to complicated loops that may hamper many automatic loop
+restructuring techniques. also, array restructuring can improve spatial
+locality without jeopardizing temporal locality, whereas loop restructuring
+affects both types of locality. however, while loop restructuring has been
+widely studied, relatively little is known about how to apply array
+restructuring automatically and efficiently.
+
+my research shows how array restructuring can be applied automatically
+and efficiently to a wide class of programs. this not only provides a new
+set of techniques to complement existing loop restructuring techniques, but
+also produces insights and experience that will, i believe, contribute to
+an integrated approach combining the strengths of the two. specifically, my
+work makes four contributions: a framework to
+represent array transformations, algorithms to
+automate array restructuring within this framework, a prototype compiler to implement these algorithms, and
+experiments to evaluate their effectiveness.
+
+framework
+
+i have formulated a framework to represent a general class of array
+transformations. in this framework, an array to be restructured (the
+"original array") is replaced by another array (the "restructured array")
+that contains the same elements but in a different order. correspondence
+between elements of these two arrays is defined by an invertible linear
+transformation of their index vectors. in other words, instead of using an
+index vector to find an element in the original array, we apply a linear
+transformation to that vector and use the result to find the corresponding
+element in the restructured array. it may appear that the extra
+transformation imposes a significant overhead, but in fact this is not the
+case, for the following reason. traditionally the memory address of an
+array element is a linear function of the indices. this condition is the
+basis of most compiler optimizations for reducing indexing
+overhead. applying an extra linear transformation to the index vectors does
+not invalidate this condition and therefore does not entail any extra
+indexing overhead --- a property essential for the efficiency and thus
+viability of array restructuring.
+
+algorithms
+
+i have developed algorithms within this framework for the key steps in
+array restructuring. my algorithms solve these problems with simple linear
+algebraic techniques in the common case where the array indices are linear
+functions of loop variables. these algorithms have also been adapted to
+deal with more general access patterns as well.
+
+
+
+
+the first step of array restructuring is to analyze the access pattern
+of each array and choose a transformation to optimize for locality. to do
+this, we can represent each array access as a linear mapping, relate the
+access's locality properties to the mapping's mathematical properties, and
+select a linear transformation to effect desired changes in the mapping ---
+and thus in the access itself. 
+
+second, we need to compute the set of elements accessed by the loop to
+determine which elements the restructured array must contain. this is
+achieved by representing loop and array bounds as sets of linear
+inequalities or, geometrically, convex polyhedra, which are manipulated
+with known mathematical techniques. 
+
+third, elements of the restructured array have to be laid out in memory
+in such a way that each element can be efficiently located given its
+indices. this is a non-trivial problem; for example, in the case of
+two-dimensional arrays, general array transformations may cause rows of the
+restructured array to have different lengths and start at different column
+positions, violating the basic assumptions of the traditional way of laying
+out array elements. my solution is to apply a further transformation that
+reduces the problem to a more traditional form without jeopardizing the
+locality improvement achieved by prior transformations. 
+
+finally, the program code is transformed appropriately. transformed
+array accesses are generated from their linear mapping representations
+computed earlier. 
+
+
+
+prototype
+
+i have implemented a prototype compiler to perform array restructuring
+automatically. it is based on the suif
+compiler from stanford university. suif itself comprises a number of
+compiler passes over an intermediate program representation. my
+implementation consists of an array restructuring pass (about 9,000 lines
+of c++) added after suif's own optimization passes, and a runtime library
+(about 2,000 lines of c and c++).
+
+results
+
+i have performed a series of experiments using the nasa7 kernels from
+the spec benchmarks and other loops from the literature. the experiments
+were designed to study how array restructuring affects performance for a
+range of problem sizes as well as how it compares and interacts with
+various loop restructuring techniques. they were carried out on four
+different platforms representing two types of machines: single-processor
+workstations (alpha-based dec 3000 and powerpc-based ibm rs/6000) and
+shared-memory multiprocessors (r8000-based sgi power challenge and kendall
+square research's ksr2, which has a proprietary processor).
+
+experimental results have been encouraging. on a dec 3000 workstation,
+array restructuring decreased the execution time in most of the loops by
+40-50% (over 80% in some cases), and increased it in none. the average
+improvement was 53% (or 31% if including loops for which the compiler did
+not apply array restructuring at all).  this occurred for a wide range of
+problem sizes. results for ibm rs/6000 were similar. on both platforms,
+performance improved because array restructuring led to better spatial
+locality. for the same reason, performance on ksr2 and sgi power challenge
+showed similar improvements for execution on any number of
+processors. moreover, in several cases where false sharing had existed,
+array restructuring removed this performance bottleneck, producing
+performance benefits that increased with the number of processors.
+
+experiments also showed that in both applicability and performance,
+array restructuring techniques complemented many common loop
+restructuring techniques, including those performed by a production quality
+optimizing compiler from sgi. it was successfully applied to loops that
+these techniques could not automatically transform. it achieved comparable,
+often better, performance where both were applicable. in the few cases
+where it did not perform as well, simple forms of loop restructuring
+would have sufficed, again suggesting that loop and array restructuring
+are complementary.
+
+more can be found in a technical
+report.  a more concise version is here.
+
+
+
+runtime parallelization
+
+runtime parallelization is a two-step strategy of parallelizing
+loops that may contain substantial parallelism but cannot be parallelized
+at compile time because of insufficient dependence information.  to
+parallelize such a loop, the compiler generates two code fragments: the
+inspector and the executor.  at run time, the inspector computes a parallel
+schedule of the iterations based on dependence information not available at
+compile time.  the executor performs the iterations in parallel using this
+schedule.
+
+
+my research in runtime parallelization has touched on both the
+inspector and the executor.  i have proposed two ways to speed up the
+inspector.  this work appeared in the fourth acm sigplan symposium on
+principles and practice of parallel programming.  the paper is also
+available as technical report
+
+92-12-05.  i have also studied various forms
+of the executor to improve its performance and extend its applicability to
+complex dependence patterns.  (this research is reported in technical
+report 
+
+95-01-08.)  my experiments on the ksr1, a shared address space
+multiprocessor, show that false sharing and poor spatial locality could
+seriously degrade executor performance.  i have proposed and experimentally
+evaluated two simple techniques to address these problems by restructuring
+arrays according to the parallel execution schedule.  (this research is
+reported in technical report 
+
+94-02-01.)
+
+
+
+
+     
+  
+	shun-tak a. leung
+  
+	department of computer science & engineering 
+  
+	university of washington  
+  box 352350 
+  seattle, wa 98195-2350 
+  email: shuntak@cs.washington.edu
+  fax: (206)543-2969
+ 
+
+
+
+last modified: january 8, 1996
+
+
+
+
+
+
+
+
+research summary of shun-tak a. leung
+research summary of shun-tak a. leung
+research summary of shun-tak a. leung
+research summary of shun-tak a. leung
+research summary of shun-tak a. leung
+research summary of shun-tak a. leung
+research summary of shun-tak a. leung
+research summary of shun-tak a. leung
+research summary of shun-tak a. leung
+research summary of shun-tak a. leung

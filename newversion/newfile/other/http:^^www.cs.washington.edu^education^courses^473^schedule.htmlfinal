@@ -1,0 +1,80 @@
+cse 473 (spring 1996) tentative schedule
+
+
+cse 473 (spring 1996)
+tentative schedule
+ 
+
+
+
+
+ introduction: (1 meeting)
+  overview of ai, turing's test, reasoning, learning,
+and communicating.
+
+ common lisp:  (5 meetings)
+  review of basics, examples, advanced features, 
+introduction to clos, programming techniques.
+
+ knowledge representation: (3 meetings)
+ isa hierarchies
+ propositional and predicate logic
+ expressing knowledge using mathematical logic
+
+ state-space search: (3 meetings)
+ iterative and recursive versions of depth-first search.
+ breadth-first, iterative deepening, best-first, uniform-cost, and a* search.
+ minimax and alpha-beta search.
+
+ logical reasoning: (3 meetings)
+ propositional calculus methods.
+ predicate calculus methods.
+
+ probabilistic reasoning: (1 meeting)
+ bayes' rule and its use in probabilistic inference nets.
+
+ case-based reasoning: (1 meeting)
+ matching, adaptation, and indexing.
+
+ planning: (1 meeting)
+ strips representation.
+ world-space vs plan-space methods.
+
+ learning: (2 meetings)
+ building decision trees.
+ theory formation.
+
+ natural-language understanding: (1 meeting)
+ grammars, semantic representation, augmented transition nets.
+
+ vision: (4 meetings)
+ visual perception and illusions
+ image formation and representation, edge detection,
+hough transform, shape description, line labeling.
+
+ neural nets: (1 meeting)
+ perceptrons and perceptron training.
+ multilayer feedforward nets and backpropagation.
+
+ expert systems: (2 meetings)
+ integration of ai techniques, shells, development process.
+
+ final exam.
+
+
+
+tanimoto@cs.washington.edu
+
+
+
+
+cse 473 (spring 1996) tentative schedule
+cse 473 (spring 1996) tentative schedule
+cse 473 (spring 1996) tentative schedule
+cse 473 (spring 1996) tentative schedule
+cse 473 (spring 1996) tentative schedule
+cse 473 (spring 1996) tentative schedule
+cse 473 (spring 1996) tentative schedule
+cse 473 (spring 1996) tentative schedule
+cse 473 (spring 1996) tentative schedule
+cse 473 (spring 1996) tentative schedule

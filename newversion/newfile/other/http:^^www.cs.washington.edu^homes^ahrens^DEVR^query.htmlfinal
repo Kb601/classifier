@@ -1,0 +1,34 @@
+multi-level queries
+
+
+ multi-level queries 
+
+
+
+devr provides a dynamic data definition language for modeling image and vision data, which can
+be integrated with existing image processing and vision applications. schema definitions can be
+fully interleaved with data manipulation, without requiring recompilation. in addition, devr
+provides a powerful application programmer's interface that regulates data access and schema
+definition, maintains indexes, and enforces type safety and data integrity.  
+
+the system supports multi-level queries based on recursive constraint trees. a set of hrs entities
+of a given type is filtered through a network of constraints corresponding to the parts, properties,
+and relations of that type. queries can be constructed interactively with a menu-driven interface,
+or they can be dynamically generated within a vision application using the programmer's interface.
+query objects are persistent and reusable. users may keep libraries of query templates, which can
+be built incrementally, tested separately, cloned, and linked together to form more complex
+queries. 
+
+
+
+
+multi-level queries
+multi-level queries
+multi-level queries
+multi-level queries
+multi-level queries
+multi-level queries
+multi-level queries
+multi-level queries
+multi-level queries
+multi-level queries

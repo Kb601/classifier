@@ -1,0 +1,57 @@
+mark tinguely ndsu staff
+
+
+ mark tinguely
+
+
+258 a12 iacc
+(701) 231-7786
+tinguely@plains.nodak.edu or  hookie.cs.ndsu.nodak.edu
+
+
+my interests include 
+freebsd, xfree86, nextstep, networks
+and bumming around
+casselton.
+projects:
+
+digial vision computer eyes video capture driver for freebsd (isa card)
+. this is a very old version of the computer eyes that supported data
+transfers only through i/o ports and therefore was very, very, very slow.
+
+media vision promoviestudio video capture driver for freebsd (isa card)
+. in addition to the kernel driver, this package contains patches to the
+mbone conferencing tool "nv". the promoviestudio capture card is no longer
+sold but is a popular card but should be available for purchase in the used
+computer market.
+warning: i was unable to get the correct colors with the card i was using.
+
+matrox meteor video capture driver for freebsd (pci card). 
+in addition to the kernel driver, this package contains sample programs to do
+single frame capture in every supported mode and patches to the mbone
+conferencing tools "nv" and "vic". the matrox meteor capture card is sold
+directly from matrox.
+system seminar www
+seminars:
+
+acm seminar www
+fm internet user's group bsd unix
+introduction to cgi
+
+helpfiles:
+
+freebsd multimedia helpfile
+
+
+
+
+mark tinguely ndsu staff
+mark tinguely ndsu staff
+mark tinguely ndsu staff
+mark tinguely ndsu staff
+mark tinguely ndsu staff
+mark tinguely ndsu staff
+mark tinguely ndsu staff
+mark tinguely ndsu staff
+mark tinguely ndsu staff
+mark tinguely ndsu staff

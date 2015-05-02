@@ -1,0 +1,248 @@
+creating an efficient market on the world-wide web
+
+
+
+
+
+
+creating an efficient market on the world-wide web 
+
+
+ramin zabih
+
+cornell university
+
+consumers often purchase mass-produced items that are available
+from many different vendors. these different vendors usually charge
+different prices. if it were easy to compare prices, consumers
+would benefit substantially, and every consumer would be able
+to get the best price. this would create what economists call
+an efficient market. until recently it was too expensive to make
+pricing information widely available. with the world-wide web,
+the cost of publishing information has fallen dramatically. because
+of the web, it may now be possible to create an efficient market
+for many mass-produced consumer items. 
+
+as an example, consider the market in computer peripherals (such
+as printers, modems, etc). in december 1995, the cheapest nationally
+advertised price i could find for the hewlett-packard hp660c printer
+was $330, while the most expensive price was $490. but it took
+many hours of reading advertisements to obtain this information.
+there are several hundred vendors who sell mail-order peripherals,
+and it isn't easy to compare prices. 
+
+several efficient markets exist, including the stock exchange
+and the commodities market. items on these markets (such as hewlett-packard
+stock) are available for a single price at any given time, and
+that price is widely known. consumers rarely benefit from these
+markets because they do not trade consumer goods. 
+the priceweb experiment 
+
+
+together with some friends at cornell i have begun an experiment
+called priceweb (http://www.priceweb.com).
+priceweb is an attempt to create an efficient market in computer
+peripherals. for a given peripheral, priceweb's web site provides
+a list of nationally advertised mail-order prices, listed in increasing
+order. this makes it simple to find the lowest-priced vendor.
+
+
+if priceweb becomes widely used, it will have a major impact on
+the way that computer peripherals are purchased. mail-order vendors
+would have to charge a single, uniform low price, unless they
+can offer customers some additional value. computer peripherals
+are sold with fairly standardized warranties and return policies;
+vendors compete primarily on price and availability. this makes
+product differentiation difficult. 
+
+in an efficient market, most vendors would have to lower their
+prices. short term, priceweb works to the advantage of consumers
+and to the disadvantage of most vendors. but in the long term
+there are advantages for vendors as well. consumers will be able
+to buy items without worrying that they are over-paying (this
+argument is similar to saturn's no-haggling policy for new car
+buyers). and, of course, prices should fall. these effects should
+lead to more customers 
+
+an on-line service like priceweb could have additional advantages
+for vendors. for instance, sometimes vendors wish to clear out
+inventory by selling an item very cheaply. (see onsale
+for an example.) on-line pricing information can eliminate the
+delays involved in print media advertising, thus allowing vendors
+to more rapidly adjust their prices. also, the internet users
+who monitor pricing information will presumably be quite price-sensitive,
+so listing an item at a low price should generate a large response.
+these advantages to vendors have to be balanced against priceweb's
+negative effects on vendor margins. if the negative effects are
+larger, there will be consolidation among vendors.
+
+how much would consumers save in an efficient market? one might
+expect mail-order prices on peripherals to be nearly identical,
+but they aren't. the average price spread on items that priceweb
+covers is $130, and some items have large price spreads. for example,
+the hp officejet is advertised for as little as $377 and as much
+as $769. 
+
+if the vendors wished to avoid an efficient market, they would
+have several options. for instance, each vendor could sell slightly
+different items. if every hp660c printer were significantly different
+from every other hp660c printer, it would be impossible to compare
+their prices. but this would increase manufacturing costs and
+confuse potential customers, thus reducing hp's market share.
+this effect is illustrated by the american automobile industry,
+which for years offered an enormous range of options, partly to
+prevent consumers from comparing prices. the japanese offered
+very few option packages, which gave them a price advantage in
+manufacturing. in the computer industry, almost everything is
+mass-manufactured, due to extensive standardization (see tno 3(1) for
+a discussion of the economic impacts of standardization). so this
+option is not viable, because of opposition from the manufacturers.
+
+
+an efficient market could also be thwarted by punishing the lowest-price
+vendor. for instance, suppose that all the higher-priced vendors
+refuse to carry hewlett-packard printers unless the lowest priced
+vendor is forced to raise its prices. hp could in turn raise the
+price that it charges that vendor, or cut that vendor off completely.
+but this probably would not be in hp's interests. more importantly,
+such actions would violate a number of laws against price fixing,
+such as the robinson-patman act (an excellent overview is
+available from the federal trade commission).
+these laws make it illegal for a manufacturer to fix the price
+that vendors charge. 
+
+an on-line efficient market would also be easier for the government
+to monitor. price-fixing in efficient markets is more obvious
+than in markets where there are multiple prices. for example,
+suppose a vendor cut its prices below costs to drive rivals out
+of business, and then raised its prices. this pattern would be
+fairly easy to spot in an efficient market with  pricing information
+available on-line. the recent sec investigation of nasdaq trading
+practices was motivated by an academic study of pricing trends
+in this market; if this data were not available electronically,
+anti-competitive behavior would be harder to detect.
+challenges 
+
+
+there are a number of challenges that will need to be overcome
+in order to create an efficient market. one potential difficulty
+concerns updating price information. priceweb's information comes
+from printed national advertisements. in a market where prices
+change rapidly, advertised prices may be out of date before they
+appear in print. the obvious solution would be to use on-line
+prices from vendor's web sites, but there are some obstacles.
+while a few vendors (such as computability)
+provide on-line pricing information, most do not -- in fact, surprisingly
+few vendors have web sites. also, a price that appears in a printed
+ad comes with legal protections against false advertising. these
+guarantees may not apply to web-based advertising. 
+
+even if most vendors put their pricing information on-line, it
+may be hard to compare prices. for instance, consider andersen
+consulting's bargainfinder,
+which helps consumers buy audio compact discs cheaply. bargainfinder
+queries 9 on-line vendors that sell cd's via mail-order. unfortunately,
+3 of these vendors currently block bargainfinder from accessing
+their sites. because bargainfinder actively queries on-line web
+sites, it exists at the pleasure of the vendors. in the short
+term, they may not wish to cooperate. 
+
+priceweb will need to become economically self-supporting, which
+is a challenge. on-line pricing information is what economists
+call a public good (like, for example, a lighthouse). it is notoriously
+difficult to get the beneficiaries of a public good to pay for
+it. in addition, the internet's culture makes it hard to charge
+users for information. i believe that consumers will not use priceweb
+if they have to pay for it. there are companies that think consumers
+will pay for such a service -- cybersave shopper,
+for example. if these companies are correct, they will create
+a market in pricing information. mark casson's chapter in information
+acumen (routledge, 1994) discusses the effects on markets of information.
+ an efficient market requires perfect information; as the costs
+associated with information fall, the market can become more efficient.
+ there are costs associated with obtaining pricing information
+for computer peripherals. priceweb does not reduce the costs of
+obtaining the information, but instead collects the information
+centrally and makes it freely available. 
+
+priceweb might be viable simply because the cost of running the
+experiment is so low. placing information on a web page costs
+almost nothing, and the costs associated with gathering and entering
+data are also small. even a small amount of revenue (from advertising,
+for instance) could make priceweb self-supporting. in addition,
+there are a number of services that priceweb could provide for
+vendors that would provide revenue. for instance, vendors could
+be automatically notified if a competitor beats their advertised
+price. 
+will the web eliminate retailers? 
+
+
+a web-based efficient market could also affect the relationship
+between vendors and manufacturers. most manufacturers do not sell
+directly to customers, but via retailers. retail stores carry
+products from multiple manufacturers, so a customer can compare
+products side by side. manufacturers attempted to protect their
+retailers by various means; for example, the manufacturer's suggested
+retail price is usually quite high, so that every retailer can
+charge less than msrp. manufacturers protect retailers to ensure
+that retailers carry their goods. but with the growth of mail-order,
+the value provided by retailers could diminish. it may become
+profitable for the manufacturers to enter the mail-order business
+themselves. an efficient market could eliminate many middlemen.
+
+
+an efficient market in consumer goods would have a substantial
+impact on society. for example, it could eliminate many retail
+stores in favor of mail-order vendors, who can locate in areas
+with low fixed costs. this could have massive consequences for
+many communities, which have downtowns built around retail shopping.
+of course, consumers shop for other reasons than obtaining the
+lowest price. for some items (such as tylenol), the savings may
+be so small that it isn't worthwhile to find the best price. however,
+large supermarkets spend a great deal of effort trumpeting small
+price advantages. it is possible that many shoppers are price-sensitive,
+and would prefer an efficient market. if the web creates such
+a market, its impact could be far greater than any effects we
+have witnessed thus far. 
+
+while many retailers might disappear, some new businesses will
+also come into existence. for instance, it will become much cheaper
+to establish the kind of specialty businesses that traditionally
+only flourish in large cities. a business that only appeals to
+a small percentage of the population can flourish on the web,
+because it can be easily reached by potential customers. 
+conclusions 
+
+
+there have been several experiments in web-based consumer empowerment,
+which are similar in spirit to priceweb. one example is the bbn auto mechanics list,
+profiled by rich lethin in tno 2(8).
+this site lists local auto mechanics in the boston area. besides
+providing names and addresses, it also includes customers' comments
+on their experiences with each shop. the comments are summarized
+by the moderator to provide an overall grade for the repair shop.
+a potential customer can view the comments of other customers,
+and can also add their own comments. another example is the list,
+which performs a similar service for internet service providers.
+like consumer reports, these sites focus on giving consumers useful
+subjective information. 
+
+the web has made an efficient market in consumer goods possible,
+because it has dramatically lowered the cost of publishing information.
+until recently, only large corporations or a few unusual individuals
+could reach a large audience. the web has changed this, and we
+are just beginning to understand its implications. 
+
+
+
+
+creating an efficient market on the world-wide web
+creating an efficient market on the world-wide web
+creating an efficient market on the world-wide web
+creating an efficient market on the world-wide web
+creating an efficient market on the world-wide web
+creating an efficient market on the world-wide web
+creating an efficient market on the world-wide web
+creating an efficient market on the world-wide web
+creating an efficient market on the world-wide web
+creating an efficient market on the world-wide web

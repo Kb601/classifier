@@ -1,0 +1,64 @@
+cs 302 section 70 - program 0
+
+
+
+
+ program0
+
+
+
+program0 requires you to do no programming of your own, nor are you required at this point to understand what the program is doing (although it may make a little more sense once you run it). it's simply intended to get you used to using the pc's, ms-dos, and microsoft fortran.
+
+first, if you haven't already, check out the basics of using fortran on the pc's. second, you're going to need once additional piece of information: the file prog0.dat (that's prog zero) which program0 needs in the same directory that you run your program in.
+
+here is the program to type in:
+
+c       jeff lampert
+c       9/5/96
+c       program 0
+c       cs302, section 70
+
+        program zero
+        implicit none
+        character name*128
+        character buffer*20
+
+        open (unit = 1, file = 'prog0.dat' , status = 'old')  
+
+        print *,'please enter your name: '
+        read '(a)',name
+
+2       continue
+
+           read(1,4,end=3) buffer
+4          format(a)
+           print *,buffer 
+        goto 2
+
+3       continue
+
+        print *, name
+        close(unit=1)
+        stop
+        end
+
+
+
+
+
+copyright &copy 1996 jeff lampert (tick@cs.wisc.edu).  last modified september 5, 1996.
+
+
+
+
+
+cs 302 section 70 - program 0
+cs 302 section 70 - program 0
+cs 302 section 70 - program 0
+cs 302 section 70 - program 0
+cs 302 section 70 - program 0
+cs 302 section 70 - program 0
+cs 302 section 70 - program 0
+cs 302 section 70 - program 0
+cs 302 section 70 - program 0
+cs 302 section 70 - program 0

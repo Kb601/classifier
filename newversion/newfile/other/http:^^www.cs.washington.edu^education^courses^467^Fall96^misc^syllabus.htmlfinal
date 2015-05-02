@@ -1,0 +1,81 @@
+cse467 syllabus
+
+
+
+
+
+cse467: advanced logic design
+ted kehl, fall 1996 
+
+
+
+syllabus
+
+we will be covering these topics, in approximately this order.
+
+
+review
+
+combinational logic
+structured logic implementations
+sequential logic
+finite-state machines
+
+
+implementation
+
+electrical realities
+logic families
+practical issues: reading data books, interfacing
+fixed function parts
+programmable parts
+pals and plds
+fpgas
+
+
+computer-aided design
+
+hardware description languages
+compilation into logic
+logic synthesis
+technology-independent optimizations
+technology mapping
+sequential synthesis
+underlying data structures and algorithms
+tools for mapping to plds and fpgas
+
+
+system components
+
+read-mostly memory technologies (rom, prom, eprom, eeprom, flash)
+static and dynamic memories
+memory controllers and timing generation
+multi-port devices
+special-purpose memory devices
+digital communication
+serial and parallel protocols
+synchronous vs. asynchronous communication
+arbitration schemes
+system busses and bus interface design
+local area networks
+
+
+
+
+
+ted@cs.washington.edu
+
+
+
+
+
+cse467 syllabus
+cse467 syllabus
+cse467 syllabus
+cse467 syllabus
+cse467 syllabus
+cse467 syllabus
+cse467 syllabus
+cse467 syllabus
+cse467 syllabus
+cse467 syllabus

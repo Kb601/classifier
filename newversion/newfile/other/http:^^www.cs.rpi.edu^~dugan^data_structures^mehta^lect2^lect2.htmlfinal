@@ -1,0 +1,523 @@
+data structures - lecture 2
+
+
+
+
+
+
+
+
+data structures - lecture 2
+
+
+c++ review, basic data types
+
+
+topics
+
+
+hello world!
+data types, arrays, pointers, functions
+operators, expressions, statements
+input/output
+examples
+conventions for c++ programs/projects
+(optional) exercises
+
+
+references
+
+
+[w] = weiss, algorithms, data structures, and problem solving
+with c++.
+[h] = harbison and steele, c: a reference manual, prentice
+hall.
+[o] = osborne, c++: the complete reference.
+[m] = musser, saini, stl tutorial and reference guide.
+
+
+topics
+
+hello world!
+
+
+reference: [w:appendix a.1]
+
+
+hello world - source code
+
+
+/* file: hello.cpp */
+#include &lt;iostream.h&gt;
+void main()
+{
+ cout &lt;&lt; &quot;hello world&quot;&lt;&lt; endl;
+}
+
+
+hello world - compile/execute
+
+
+compile &quot;hello world!&quot;:
+% g++ -o hello hello.cpp
+
+execute &quot;hello world!&quot;
+% hello 
+
+
+topics
+
+
+data types, arrays, pointers, functions
+reference: [w:chapter 1, appendix a]; [h]
+
+
+data types - type categories
+
+void type
+
+
+void is a special type.
+represents the absence of a data type.
+a pointer to a void (void *) is treated as a generic pointer.
+examples:
+
+void main () { &#133; }
+void * generic_pointer;
+
+
+
+
+integral types
+
+
+[signed] char, [unsigned] short [int], [unsigned] int, [unsigned]
+long [int]
+unsigned char, unsigned short [int], unsigned int, unsigned
+long [int]
+examples:
+signed int index = 7;
+unsigned long l;
+int i,j;
+
+
+floating point types
+
+
+double
+float
+long double
+examples:
+const double pi = 3.14159;
+extern float x1,y1,x2,y2;
+static double y;
+
+
+enumeration types
+
+
+examples:
+enum fish { trout, carp, halibut } my_fish;
+enum boolean { true, false } success;
+success = true;
+enum color { red, green blue};
+...
+enum color my_favorite, your_favorite;
+
+
+pointer types (example)
+
+
+int i = 5;
+int * ptr;
+ptr = &amp;i;
+i = 7;
+(*ptr) = 2;
+
+
+array types (example)
+
+
+double expenditure[365];
+double * ptr_expenditure = expenditure;
+expenditure[0] = 75.64;
+*ptr_expenditure = 32.45;
+expenditure[20] = 12.87;
+ptr_expenditure[20] = 17.49;
+
+
+
+function types
+
+
+definition example:
+int square (int x) { return x * x; }
+declaration example:
+extern int square (int x);
+static int square (int x);
+other examples:
+extern int f(), (*fp)(), (*apf[])();
+
+
+function example
+
+
+int my_strlen (char * s) {
+ char * ps = s;
+ int cnt = 0;
+ if (s == null) { return 0; }
+ while (*ps != null) { cnt++; ps++; }
+ return cnt;
+}
+
+
+functions in c++
+
+
+overloading of function names
+int max(int a, int b);
+float max (float * floatarray, int sz)
+default parameters
+float log (float x, double base=10);
+log(100) // log 100 base 10
+log(100,2) // log 100 base 2
+inline functions
+inline int max(int a, int b) { return (a&lt;b ? b : a); }
+
+
+topics
+
+
+operators, expressions, statements
+reference: [w:appendix a] [h]
+
+
+operators
+
+
+assignment 
+binary
+unary
+relational
+logical
+bit
+misc
+
+
+assigment operators
+
+
+common operators:
+=, +=, -=, *=, /=
+examples:
+int i,j, k;
+i = 4
+j = k = 3;
+j += 4;
+i *= 2;
+
+
+binary arithmetic operators
+
+
+common operators:
++,  -,  *,  /,  %
+examples:
+3 + 5
+i * 2 + x / y + 10 % 3
+
+
+unary operators
+
+
+common operators:
+-, +, ++, --
+examples:
+x = -2
+y = -x
+z = +x
+w = -(x++) + (--y) + (z++)
+
+
+relational operators
+
+
+==, !=, &lt;, &gt;, &lt;=, &gt;=
+examples:
+s == 0
+a &lt; b
+(a &lt; b &lt; c) // not as expected!
+if (s=0) {&#133;} // not as expected!
+
+
+logical operators
+
+
+&amp;&amp;, ||, !
+examples:
+if ((a&lt;b) &amp;&amp; (c&lt;d)) { &#133; }
+&quot;short circuit&quot; evaluation
+if ((x!=0) &amp;&amp; (1/x != 3)) { &#133; }
+
+
+bit operators
+
+
+~,  &lt;&lt;,  &gt;&gt;,  &amp;,  ^,  |
+~=, &lt;&lt;=, &gt;&gt;=, &amp;=, ^=, |=
+examples
+1 &lt;&lt; 4  // 10000
+3 &amp; 5  // 011 and 101 = 001
+
+
+misc. operators
+
+
+comma
+for (i=1,j=2; i&lt;5; i++,j++)
+conditional
+n = (s==null ? &quot;&lt;null&gt;&quot; : s)
+min = (x &lt;= y ? x : y)
+sizeof(type)
+sizeof(int)
+
+
+expressions
+
+
+example: a * b + c
+l-value (updatable)
+r-value (read-only)
+precedence
+can call other functions
+side effects
+
+
+statements
+
+
+if
+while
+do
+for
+switch
+break/continue
+
+
+if statement
+
+
+syntax 1:
+if ( &lt;expr&gt; ) statement
+next statement
+syntax 2:
+if ( &lt; expr&gt; ) 
+ statement
+else
+ statement
+next statement
+example: if (x==0) x=x+1;
+
+
+while statement
+
+
+syntax
+while ( &lt;expr&gt; ) statement
+next statement
+example
+while (*ps != null) { 
+ cnt++; 
+ ps++; 
+}
+
+
+do statement
+
+
+syntax
+do
+ statement
+while (expression);
+example
+do {
+ prompt_user(&quot;enter value: &quot;);
+ response = read_value();
+} while (! is_valid(response));
+
+
+for statement
+
+
+for (init; test; assignment)
+ statement
+next statement
+example
+for (i=0; i&lt;10; i++) cout &lt;&lt; i &lt;&lt; endl;
+nested loops
+for (i=0; i&lt;10; i++) 
+ for (j=0; j&lt;10; j++)
+  cout &lt;&lt; i &lt;&lt; &quot;,&quot; &lt;&lt; j &lt;&lt;endl;
+
+
+switch statement
+
+
+example
+switch (response) {
+case 'q': exit(0); // quit
+case 's': process_s(); break;
+case 'h': process_h(); break;
+default:
+ cout &lt;&lt; &quot;invalid response\n&quot;;
+ break;
+}
+
+break/continue
+
+
+break exits the innermost loop
+continue begins the next iteration
+
+
+
+example:
+for (i=0; i&lt;n; i++) {
+ if (s[i] &lt; 0) break; // exits loop
+ if (s[i] &gt; 0) continue;
+ cout &lt;&lt; &quot;s[i]=0 for i=&quot; &lt;&lt; i;
+}
+cout &lt;&lt; &quot;i&gt;=n or s[i]&lt;0 for i=&quot; &lt;&lt;
+i;
+topics
+
+
+input/output
+
+
+input/output
+
+
+#include &lt;iostream.h&gt;
+predefined streams:
+cin, cout, cerr, clog
+examples:
+int x,y;
+if (cin &gt;&gt; x &gt;&gt; y) {
+ cout &lt;&lt; &quot;read: &quot; &lt;&lt; x &lt;&lt; &quot;,&quot;
+&lt;&lt; y;
+} else {
+ cerr &lt;&lt; &quot;invalid input!&quot; &lt;&lt; endl;
+}
+
+
+errors in input
+
+
+cin.eof() returns true on end of file
+cin.fail()  returns true on format error
+cin.good()  returns true if no error
+cin.clear()  clears an error
+
+
+topics
+
+
+source files for example program 
+
+
+topics
+
+
+conventions for c++ programs/projects
+
+
+
+main 
+
+
+void main () { &#133; }
+int main () { &#133; }
+int main (int argc, char ** argv) { &#133; }
+
+
+
+example: main.cpp
+int main (int argc, char ** argv) {
+ for (int i=0; i&lt;argc; i++) {
+  cout &lt;&lt; &quot;argv[&quot; &lt;&lt; i &lt;&lt; &quot;]
+= &quot;
+   &lt;&lt; argv[i] &lt;&lt; endl;
+}
+files
+
+
+put declarations in header (.h) files
+iostream.h, point.h
+only header files should be included in other files (#include)
+put implementations in source (.cc, .cpp, or .c) files
+main.cpp, point.cpp
+write makefile to create executable
+
+
+makefile example
+
+
+cc = g++
+
+main: main.o point.o
+ $(cc) -o main main.o point.o
+point.o: point.h point.cpp
+ $(cc) -c point.cpp
+main.o: point.h main.cpp
+ $(cc) -c main.cpp
+
+
+header files
+
+
+start header file (say point.h) with:
+#ifndef _point_h_
+#define _point_h_
+end each header file with:
+#endif // _point_h_
+
+
+topics
+
+
+(optional) exercises
+
+
+optional exercises
+
+
+create, compile, and link hello.cpp
+write makefile for hello.cpp
+
+
+
+write function rot13, to encrypt/decrypt a string.  for example,
+rot13(&quot;abxy&quot;) should return &quot;nokl&quot;.  note:
+use rot13.h, rot13.cpp
+
+write a main program which rot13's the text in a file.
+[w] problem 1.6, 1.14, 1.15
+
+
+
+
+
+
+
+
+data structures - lecture 2
+data structures - lecture 2
+data structures - lecture 2
+data structures - lecture 2
+data structures - lecture 2
+data structures - lecture 2
+data structures - lecture 2
+data structures - lecture 2
+data structures - lecture 2
+data structures - lecture 2

@@ -1,0 +1,747 @@
+lecture 5
+
+
+
+
+
+
+
+lecture #5
+programming languages  mishra 
+
+
+ g22.2210
+
+ programming languages: pl
+
+ b. mishra
+  new york university.
+   
+   
+   lecture # 5
+
+
+ ---slide 1---
+ the ada programming language 
+ language survey 2
+
+
+
+  countess ada augusta lovelace 
+
+ first programmer (hacker) on babbage's  analytical engine.
+
+
+
+  relatively new programming language (1980) developed by dod.
+currently, the only language approved for dod software project
+
+  developed to reduce high cost of  designing, 
+writing and  maintaining dod software.
+
+  major items of software are for `` embedded systems''
+
+
+  primary purpose is control.
+   incorporated in larger systems.
+   large software: 50,000--100,000 lines of code
+   long-lived systems (10--15 years)
+   continuously evolving.
+ 
+
+
+
+
+
+---slide 2---
+ the design history
+
+
+
+  1975: holwg (high order language working group) was established
+       to investigate problems of developing common language for dod.
+  1975--1978: list of requirements:
+        strawman,  woodenman,  tinman, 
+       ironman,  revised ironman, and finally 
+       steelman 
+  design competition: 
+       winner: jean ichbiah, cii honeywell bull
+  1987: ada iso standard 8652
+  1983--1987: analysis of technical queries by arg (ada
+       rapporteur group). resulted in ais (ada issues).
+  1988: dod (and ansi) established ada 9x project.
+  15 feb 1995: ada 95. core language + specialized annexes
+
+
+
+---slide 3---
+ quick overview (ada 83)
+
+
+
+ strong typing 
+
+       scalar, composite, access, private &amp; derived
+
+
+ representation specification
+
+ standard control constructs: 
+
+       structured language--pascalish
+
+
+ subprograms: procedures &amp; functions
+
+ program structuring facilities: packages
+
+ generics: polymorphisms
+
+       extends the concept of type and functional abstractions
+
+
+ exceptions
+
+ separate compilation
+
+ tasking (rendezvous)
+
+
+
+
+---slide 4---
+ quick overview (ada 95)
+
+
+
+ object oriented programming
+
+ program libraries 
+
+	(replaces ada 83's flat structure by a hierarchy---visibility
+	control and program extension without recompilation)
+
+
+ interfacing 
+
+       graphical user interface (gui)---program call-back.
+
+
+ tasking (static monitor)
+
+
+
+
+---slide 5---
+ ada type system
+
+
+
+ programmer defined types 
+
+      set of values, applicable set of operations and set of properties,
+      accessible via attributes
+
+
+  type definition
+    type &lt;identifier&gt; is &lt;type-definition&gt;
+
+ 
+
+  type binding
+    &lt;variable&gt; : &lt;type&gt;
+
+ 
+
+   attributes
+    &lt;name&gt;'&lt;attribute-identifier&gt;
+
+ 
+
+
+---slide 6---
+ examples
+
+
+
+  type day is (mon,tue,wed,thu,fri,sat,sun);
+    --enumeration type
+ today: day; tomorrow: day; current_day: day;
+
+ hours_worked: array(day'first..day'last)
+                    of integer;
+
+ if today &lt;= fri then
+    tomorrow := day'succ(today);
+
+ for current_day in day'first..day'last loop
+    ...
+ end loop;
+
+
+
+
+---slide 7---
+ primitive scalar types
+
+
+
+ discrete types 
+
+ i) enumeration types, ii) character type, 
+ iii) boolean types, iv) integer types
+
+
+ real types 
+
+ i) fixed-point types, ii) floating-point types
+
+
+  note:
+
+       integer and real types together form the  numeric types.
+
+
+ integer =
+
+      predefined integer types 
+      system.min_int..system.max_int
+
+
+ operation 
+
+      +, -, *, / (arithmetic operations) 
+      &lt;, &lt;=, =, /=, &gt;=, &gt;
+      (logical operations)
+
+
+
+
+
+---slide 8---
+ discrete types
+
+
+
+  note:
+
+      characters &amp; boolean are predefined  enumeration types
+
+      characters = 128 ascii characters: 'a', 'b',
+'c', 
+
+      booleans = false &amp; true
+
+
+ 
+       all discrete types are  ordered: false &lt;
+true.
+
+
+ 
+      discrete type values can be used for  indexing &amp; 
+iteration over loops.
+
+
+ 
+      attributes of discrete types (e.g., t )
+
+
+  t'pos:
+ position number
+    suit'pos(hearts) = 0
+
+
+  t'val:
+ inverse of pos
+    suit'val(0) = hearts
+
+
+  t'succ, t'pred
+
+
+  t'first, t'last
+ 
+
+
+ 
+
+
+---slide 9---
+ real type
+
+
+
+ 
+         floating point: 
+accuracy is fixed by a  relative error bound
+
+  type weight is digits 10;
+
+values have an accuracy of 10 digits.
+
+
+ 
+         fixed point: 
+accuracy is fixed by a  relative error bound
+
+  type voltage is delta 0.1 range 0.0..1.0;
+
+values have an accuracy at least as fine as 0.1.
+
+
+ some attributes 
+
+       fx = fixed point: ..
+
+   fx'delta, fx'large
+
+
+
+
+       fl = floating point:
+       ; mantissa has b digits.
+
+   fl'digits, fl'mantissa, fl'emax,
+  fl'small, fl'large, fl'epsilon
+
+
+
+
+
+---slide 10---
+ derived type
+
+
+
+ specific type +  constraints 
+
+    e.g., range constraints for scalar
+
+
+ examples
+   subtype byte_size is integer range -2**7..2**7;
+  subtype caps is character range 'a'..'z';
+  subtype &lt;identifier&gt; is &lt;parent-type&gt; range &lt;constraint&gt;;
+
+
+
+  object declaration
+  x, y: constant integer range 0..128 = abs(n);
+ &lt;identifier&gt;: &lt;mutability&gt; &lt;type&gt; &lt;constraint&gt;
+          = &lt;init-value&gt;;
+
+
+
+ 
+      range constraint can be tested at runtime
+
+   if current_input not in caps then ...
+
+
+
+
+
+---slide 11---
+ assignment statement
+
+
+
+         x := y;
+
+
+  types must match
+ 
+   same type name--not structure. ada uses  name equivalence.
+   type checking is at compile time.
+   type mismatch  
+      program considered  illegal.
+ 
+ 
+
+   subtype constraints
+ 
+   compatibility condition: type(x)  type(y) 
+   constraint checking is at run time.
+   violation raises constraint  exception. 
+     (program is  not illegal.)
+ 
+ 
+
+
+
+---slide 12---
+ examples
+
+
+
+   subtype natural is integer range 1..integer'last;
+  a: integer;
+  b: float;
+  c: natural;
+  d: integer range 0..integer'last;
+
+  a := b;              --illegal
+  a := integer(b);     --type conversion, legal
+  a := c;              --legal
+  a := d - 3;          --legal
+  a := c + integer(b); --legal
+  c := d;              --constraint exception
+  c := a;              --constraint exception
+
+
+
+
+
+---slide 13---
+ arrays
+
+
+
+  arrays in ada:
+ 
+   fixed size---type may be  unconstrained at definition
+but bounds must be given at object declaration.
+   elements are all of same  subtype
+   permits: assignment, equality testing, slicing, 
+ 
+ 
+ subtype natural is integer range 1..integer'last;
+type short_string is array(1..10) of character;
+
+type string is
+     array (natural range &lt;&gt;) of character;
+
+name: string(1..10);
+
+
+
+
+---slide 14---
+ array assignment
+
+
+
+ assigning array b to a:  a := b
+  legal, if type of a is same as type of b.
+
+  if a has same number of elements as b, then
+b is copied into a  positionally---otherwise, 
+constraint-error exception is raised.
+ 
+
+ declare
+  a: string(1..10); b: string(11..20);
+begin
+  a := b;
+end;
+
+
+
+  array attributes 
+
+
+
+
+
+
+---slide 15---
+ array indexing &amp; slicing
+
+
+
+ array indexing:
+  s: string(1..10);
+ s(3) := s(2);
+
+
+
+  array slicing (1d arrays only)
+  s(3..7)              --an array object
+ s(3..7) := s(4..8);
+ s := s(2..10) &amp; s(1) -- &amp; == concatenation opn
+
+
+
+  array aggregates:
+  type sym_tab is array (character range &lt;&gt;) of integer;
+ table: sym_tab('a'..'c') := (0, 1, 2);
+ table := ('c' =&gt; 2, 'b' =&gt; 1, 'a' =&gt; 0);
+ table := ('c' | 'b' =&gt; 1, others =&gt; 0);
+
+
+
+
+---slide 16---
+ records
+
+
+
+  records in ada:
+ 
+    heterogeneous: components need not be of same type.
+   fields are accessed by component names: e.g.,
+my_car.car_make
+    variant records tag (discriminant) fields cannot be
+changed at run-time.
+   permits: assignment and equality testing.
+ 
+ 
+  type car_make is (ford, gm, honda);
+ subtype car_year is integer range 1900..1999;
+ type car is
+   make: car_make;
+   year: car_year;
+ end record;
+
+ my_car: car;
+
+
+
+
+---slide 17---
+ records (contd)
+
+
+
+
+ records may be  nested... initialized at
+declaration.
+  a record b may be assigned to record a, provided
+they have same type.
+   a, b: car;
+  a := b;
+
+
+
+  record aggregates:
+
+   your_car: car :=           your_car: car :=
+     (gm, 1981);                (make =&gt; gm,
+                                 year =&gt; 1981);
+
+
+
+
+---slide 18---
+ variant records
+
+
+
+
+ similar to pascal variant records:
+  except---type declaration only defines a template; when object
+is declared,  discriminant value must be supplied.
+     type vehicle_tag is (car, truck);
+     type vehicle(tag: vehicle_tag) is record
+       year: model_year := 93;
+       case tag is
+         when car =&gt; colors: color_scheme;
+         when truck =&gt; axles: natural;
+       end case;
+     end record;
+
+     your_truck: vehicle(truck);
+     refrigerator: vehicle;      --illegal
+
+
+  there may be more than one discriminant...but they must all be
+of discrete types....discriminant can be used as an uninitialized
+constraint.
+     type buffer(length: natural) is record
+       pool: string(1..length);
+     end record;
+
+
+
+
+
+
+---slide 19---
+ access types
+
+
+
+
+  allow manipulation of pointers.
+  allow control of object creation.
+
+   type string_ptr is access string;
+  type string_10_ptr is access string(1..10);
+  p, q: string_ptr; p10: string_10_ptr;
+
+  p10 := new string(1..10);
+  p10 := new string(2..11);    --constraint error
+  p10 := new string;           --illegal
+
+  p := new string(1..3);       --ok
+  p.all := &quot;bud&quot;;
+  q := new string(&quot;mud&quot;);
+  p := q;
+  p.all := q.all
+
+
+
+  new creates a new object that can be designated by the
+access type.
+
+
+
+
+
+---slide 20---
+ recursive types
+
+
+
+  type node;  --incomplete declaration;
+  type node_ptr is access node;
+
+  type node is
+    record
+      datum: character;
+      next: node_ptr;
+    end record;
+
+
+
+---slide 21---
+ generalized access types
+
+
+
+
+  inherent access to declared objects 
+	(not just objects created by allocators)
+
+   type int_ptr is access all integer;
+
+  ip: int_ptr;
+  i: aliased integer;
+  ip := i'access
+
+
+
+   note: designated variable must be marked aliased.
+  access attribute is only applicable to an object whose
+	lifetime is at least that of the access type.
+  avoids ``dangling reference'' problem.
+
+   type const_int_ptr is access constant integer;
+
+  cip: const_int_ptr;
+  c: aliased constant integer := 1815;
+  cip := c'access
+
+
+
+  access is restricted to read-only
+
+
+
+
+
+
+---slide 22---
+ control structures
+
+
+
+ assignment statements
+      discrim := (b**2 - 4.0*a*c);
+     table(j) := table(j) + 1;
+     vector := (1..10 =&gt; 0);
+
+
+
+  conditional statements
+    if (a=1) then
+     ...
+   end if;                    case a is
+                                when 1 =&gt; --...;
+   if (a=1) then                when 2 =&gt; --...;
+     --...                      when others =&gt; null;
+   elsif (a=2) then           end case;
+     --...
+   else
+     --...
+   end if;
+
+
+
+
+---slide 23---
+ control structures: iteration clause
+
+
+
+ iteration statements---basic loop
+   loop
+    -- statements to be repeated
+  end loop;
+
+
+
+   iteration clause 
+
+	execution of a basic loop terminates when
+   the iteration is completed or
+     a  loop exit statement is executed
+ 
+
+
+ sum := 0;                sum := 0;
+for i in 1..10 loop      for i in reverse 1..10 loop
+ sum := sum + a(i);        sum := sum + a(i);
+end loop;                end loop;
+
+sum := 0; i := 1;        sum := 0; i := 1;
+while i &lt;= 10 loop       loop
+  sum := sum + a(i);       exit when i &gt; 10;
+  i := i + 1;              sum := sum + a(i);
+end loop;                  i := i + 1;
+                         end loop;
+
+
+
+
+---last slide---
+ a complete ada program
+
+
+
+   with i_o_package;
+  procedure temperature_conversion is
+    use i_o_package;
+    -- convert temp in fahrenheit to celsius
+
+    fahrenheit_temp; celsius_temp: float;
+  begin
+    get(fahrenheit_temp);
+    celsius_temp := (fahrenheit_temp - 32.0)*5.0/9.0;
+    put(celsius_temp);
+  end temperature_conversion;
+
+
+
+[end of lecture #5]
+
+
+
+ 
+
+bud mishra 
+thursday october 10 1996
+
+
+
+lecture 5
+lecture 5
+lecture 5
+lecture 5
+lecture 5
+lecture 5
+lecture 5
+lecture 5
+lecture 5
+lecture 5

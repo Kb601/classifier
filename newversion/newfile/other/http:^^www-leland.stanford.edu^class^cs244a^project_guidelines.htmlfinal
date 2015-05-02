@@ -1,0 +1,184 @@
+cs244a programming assignment rules and guidelines
+
+cs244a programming assignment rules and guidelines
+
+this page will give you information about what we expect from you for the
+cs244a programming projects. please read it carefully before starting
+the first project.
+
+background
+although the topic of cs244a is networking, the programming projects assume a good
+deal of background with unix. you will need solid experience with the c programming
+language and at least a working knowledge of unix file i/o, process management, and signals
+in order to do the programming assigments. if you are not sure you have 
+the necessary skills, please talk to one of the course staff in the first week of
+classes to find out if you should defer taking cs244a until later in your
+curriculum.
+
+implementation rules
+all projects are to be coded in ansi c. if you are unsure of the differences between
+ansi and k&r c, there are a number of books available at the bookstore on ansi c.
+
+we expect good coding style throughout. this includes good functional decompostion,
+useful comments, and meaningful variable names. function header comments are
+required. following these rules is to your advantage as 20 out of 100 points on
+each assigment constitute a style grade (see grading policies below).
+
+all of the assignments are designed to be implemented on the leland cluster in sweet 
+hall. your programs must compile and run on both the sparc solaris machines (epicxx)
+and the dec osf/1 machines (amyxx). we will be testing your programs on both platforms.
+you may develop on any platform you like, as long as your program 
+also runs on these two platforms.
+
+at times there will be ambiguities in the assignment specifications, or multiple ways
+an assignment can be implemented. as cs244a is an engineering 
+class, we expect you to make reasonable design decisions in these cases. base your
+decisions on what you know of the assignment as a whole. the ta's may give you
+advice on the tradeoffs of these decisions, but will not make them for you.
+
+tools
+there are several tools on the leland systems that can make your life considerably
+easier. 
+
+make is a utility used to conditionally recompile your program based on the timestamps
+of the source code, object files, and executable. we expect that everyone in the class
+will have seen a makefile before as they are a permanent fixture of every flavor of
+unix and most other platforms. if you don't know how to use make or write
+a makefile, learn. we require a makefile to be submitted with each assignment.
+
+gdb is the gnu debugger. gdb is an interactive, source-level debugger. it allows
+you to trace through your code as it executes and examine program state. if your program
+seg faults, it will show you where. learning to use gdb effectively will save you many
+hours of debugging hell. 
+
+to compile with gdb, simply add the '-g' flag to the gcc command. you can then start
+gdb with your program with the command
+gdb progname
+type 'help' from the gdb prompt for more information.
+
+purify is a development tool from pure software. it checks your program at
+run-time for many common errors. among other things, it checks for memory leaks,
+references to uninitialized or illegal addresses, and invalid parameters passed to
+system calls. to use purify, simple preface the command which links your program
+with 'purify'. for example:
+purify gcc -o myprogram main.o client.o netio.o
+when you run your program, purify will start itself in a separate x window and show
+you diagnostics.
+
+here is a sample makefile which illustrates all of the 
+above options.
+
+deliverables
+there are two expected deliverables with each assignment. the first is the source
+code of your implementation. this should include a makefile which builds a program
+of the name specified in the assignment in the current directory. it is important
+to adhere to this requirement as some of the assignments are tested by shell scripts
+and must be graded by hand if your makefile is wrong. if you do not know how to 
+write a makefile, look in the class directory for a sample.
+
+the second deliverable is a project writeup. this file should be called readme (all caps)
+if your writeup is a straight text file or readme.html if your writeup is in html.
+the submit program will not accept your assignment unless one of these files is present.
+and should reside in the same directory as your source code when you submit. this file
+should contain the following:
+
+an overview of the structure of your code.
+any design decisions you made and a short justification for them. if you found
+ambiguities in the assignment itself, also list here how they were resolved in your
+implementation.
+answers to any questions the assignment asks.
+
+
+submission
+all projects will be submitted electronically. the submit script requires the following
+to be true:
+
+
+  the current directory must contain a file called makefile
+  the current directory must contain a file called either readme or readme.html
+  there must be at least one file with an extension of .c.
+
+
+if there are any additional required files, these will be listed in the assignment 
+specification and the submit script will check for them as well.
+
+if these conditions are true, the script will submit the required files and all other files
+with an extension of .c or .h in the current directory. subdirectories
+will not be submitted. everything needed to compile and run your project should be
+in the current directory.
+
+in order to submit your assignment, enter the following command:
+/usr/class/cs244a/bin/submit assn#
+where assn# is the assignment number; i.e. 1, 2, 3, or 4. 
+
+
+
+honor code
+we will enforce adherence to the stanford honor code as it applies to programming
+assignments. you may use publicly available code from other sources as long as the
+source is noted in the code. be aware, however, that copying code from the stevens
+book verbatim is dangerous as not all of the code is strictly ansi. you may discuss
+the projects with your fellow students, however; you may not work together with
+other students or use code written by another student in your assignment. if you
+have any questions about the honor code, please ask one of the course staff. honor
+code violations are not a laughing matter at stanford and it is much better to ask
+what might seem like a silly question than to risk your academic career.
+
+grading policies
+each assigment is graded from a total of 100 points. all assignments will be
+weighted equally in your final grade. 80 points of the grade will be functionality 
+points and will measure how well your assignment meets the specifications given
+in the assignment handout. the remaining 20 points grade the style of your code
+as specified above. while the functionality points may be contested if you
+think your code was misgraded, the style points are subjective and may not 
+be contested.
+
+as a rule late assignments will not be accepted. only professor mckeown can
+grant individual exceptions to this rule; please do not ask the ta's for 
+extensions. in general extensions will only be granted for serious reasons
+such as a family medical emergency. at times there are system problems with
+the leland cluster which may prevent you from completing your assignment on
+time. in these cases an extension will generally be granted to the entire
+class.
+references and resources
+unix network programming by stevens is the reference of choice for
+programming the unix sockets api. there will also be a review session before
+the first assignment is due which will provide an introduction to socket
+programming.
+
+tcp/ip volume 1: the protocols, also by stevens, is an excellent 
+reference to the specification and common implementations of tcp/ip and some
+of the related protocols. although this book is not a required course text,
+it is an excellent reference. some of the assignments refer to chapters
+in this book for additional reading.
+
+the rfc's (request for comments) are a set of documents which are the 
+absolute reference for internet standards. the rfc's are numbered sequentially.
+there is an rfc web page; you can
+also get the rfc's via anonymous ftp.
+look at index.rfc for
+a list of rfc titles.
+
+each student will be assigned a ta after signing up through the class web 
+page. if you have a question that cannot be answered by any of the class
+materials or the above references, you should contact your ta. the ta's will
+hold office hours in the sweet hall; if you are having problems, you may
+want to schedule one of your programming sessions during these hours.
+
+please e-mail questions to cs244a@leland
+
+
+$id: project_guidelines.html,v 1.2 1997/01/06 20:14:01 jimge exp $
+
+
+ 
+cs244a programming assignment rules and guidelines
+cs244a programming assignment rules and guidelines
+cs244a programming assignment rules and guidelines
+cs244a programming assignment rules and guidelines
+cs244a programming assignment rules and guidelines
+cs244a programming assignment rules and guidelines
+cs244a programming assignment rules and guidelines
+cs244a programming assignment rules and guidelines
+cs244a programming assignment rules and guidelines
+cs244a programming assignment rules and guidelines

@@ -1,0 +1,92 @@
+quotes screaming for formal methods
+
+quotes screaming for formal methods
+this is a list of quotes that may convince you that some kind of
+formalism is needed in the development of critical software. 
+
+from the arianne 5 crash report, july 1996:
+"... the view had been taken that software should be considered correct
+until it is shown to be at fault." 
+
+read the full report
+
+the *daily telegraph* 1 oct 1996: "when failure is out of the question"
+by paul forster
+
+national air traffic services ltd., part of the civil aviation authority, is
+close to completing a new (pounds) 300 million centre at swanick . . .  "it's
+all digital and probably the most advanced atc setup anywhere," says dr john
+barrett, the swanick project director, almost nonchalantly. "it's so complex
+i have difficulty in explaining it even to my board," he says.  throughout,
+safety is paramount. the whole system is made up of networked workstations
+rather than a central mainframe, so there is no single point of failure. . .
+the system totals roughly two million lines of software, but like most
+software it is behind schedule and is still being debugged .  . . operations
+are not now due to begin until the winter of 1997 . . .  "with atc it's
+obvious that we simply have to remove all the faults in the code, and we are
+now working 24 hour a day, seven days a week," says barrett. "our
+over-arching requirement is that the system has to be completely safe."
+
+
+posted to risk digest 18.50, by brian randell, dept. of computing science, university of newcastle
+
+september 16 1996 issue of *aviation week & space technology*
+(pp. 24-25).
+from david a. fulghum's "hard lessons in iraq lead to new attack
+plan" in the september 16 1996 issue of *aviation week & space technology*
+(pp. 24-25).
+
+
+the article states: "bomb damage assessment of the initial cruise missile
+strike indicates that three of the 10 targets attacked by 13 air force
+calcms (conventional air-launched cruise missiles) emerged with "no
+detectable damage," according to a u.s. intelligence report.  the boeing
+built calcms, converted from cold war-era nuclear weapons at a cost of
+$165,000 each, were launched from two b-52h bombers over the persian gulf."
+
+apparently: "part of the problem with the calcms were that they were fired
+at targets they were not designed to destroy, a product of hasty planning,
+according to a senior pentagon official. air force success rates were
+further deflated because of missile computer programming quirks."
+
+further on: "another calcm target escaped damage because of a software
+targetting quirk left over from its nuclear role. if two calcms are aimed at
+the same target at the same time, one of the missiles will re-aim itself at
+the next highest priority target. in the initial raid, one calcm missed the
+target while the other went on to the next site."
+
+
+posted to risk digest 18.56 by kofi crentsil (crentsil.k@atomcon.gc.ca)
+
+*electronic engineering times*, 28 oct 1996 "software explosion rattles car makers"
+
+automakers [are facing] runaway growth in the lines of code their engineers
+must write and manage as microprocessors take over automotive functions...
+``software is where the problem is today,'' said william powers, vp of
+research at ford.  ``today, if you change a line of code, you're looking at
+the potential for some major problems.  hardware is very predictable, very
+repeatable.  software is in much more of a transient state.''  the volume of
+code is exploding as processors proliferate behind the dashboard and under
+the hood.  the typical auto has 10 to 15 processors; high-end cars can have
+as many as 80 ... ``an engine controller can have 100,000 lines of code''
+[according to a bosch vp].  
+
+
+posted to risk digest 18.57 by daniel p. b. smith  dpbsmith@world.std.com
+
+
+jacob kornerup
+
+
+
+
+quotes screaming for formal methods
+quotes screaming for formal methods
+quotes screaming for formal methods
+quotes screaming for formal methods
+quotes screaming for formal methods
+quotes screaming for formal methods
+quotes screaming for formal methods
+quotes screaming for formal methods
+quotes screaming for formal methods
+quotes screaming for formal methods

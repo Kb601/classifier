@@ -1,0 +1,21 @@
+who is logged in at utcs
+who is logged in at utcs (non-idle users)
+
+this lists non-idle sessions for usernames beginning with
+sunghee.
+if the list is empty, the user(s) may be idle or not logged in. 
+
+username machine:terminal        date   time  idle
+-------- ----------------------- ------ ----- ----
+
+
+who is logged in at utcs
+who is logged in at utcs
+who is logged in at utcs
+who is logged in at utcs
+who is logged in at utcs
+who is logged in at utcs
+who is logged in at utcs
+who is logged in at utcs
+who is logged in at utcs
+who is logged in at utcs

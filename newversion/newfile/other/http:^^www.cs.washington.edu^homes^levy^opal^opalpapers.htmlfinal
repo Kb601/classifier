@@ -1,0 +1,162 @@
+opal papers
+
+
+
+
+
+opal
+ 
+
+
+following is a complete list of papers and reports related to
+the opal operating system project.
+
+
+
+theses
+
+ jeffrey s. chase. 
+an operating system structure 
+for wide-address architectures.  phd thesis, department of computer
+science and engineering, university of washington, august 1995.
+
+
+
+conference and journal publications
+
+
+ 
+lightweight shared objects in a 64-bit operating system.
+j. chase, h. levy, e. lazowska, and m. baker-harvey.  in
+proc. of the conference on object-oriented programming systems,
+languages, and applications  (oopsla), october 1992.
+
+ 
+architectural support for single address space operating systems.  
+e. koldinger, j. chase, and s. eggers.  
+in proc. of the 5th 
+int. conference on architectural support for programming languages
+and operating systems (asplos), october 1992.
+
+ 
+integrating coherency and recoverability in distributed systems.
+michael j. feeley, jeffrey s. chase, vivek r. narasayya, 
+and henry m. levy.  in proc. of the first symposium on 
+operating systems design and implementation, november 1994.
+
+ 
+sharing and protection in a single-address-space operating system.
+jeffrey s. chase, henry m. levy, michael j. feeley, and edward
+d. lazowska.  acm transactions on computer systems, 12(4),
+november 1994.
+
+ 
+implementing global memory management in a workstation cluster.
+michael m. feeley, william e. morgan, frederic h. pighin, anna r. karlin,
+henry m. levy, and chandramohan a. thekkath.
+to appear in proc. of the 15th acm symposium on operating systems principles
+, december 1995.
+
+ using shared memory for read-mostly rpc services.
+r. schmidt, j. chase, and h. levy.  to appear in proc. of the 29th hawaii international
+conference on system sciences, january 1996.
+
+
+
+workshop publications
+
+
+
+
+ opal: a single 
+address space system for 64-bit architectures.
+j. chase, h. levy, e. lazowska, and m. baker-harvey.  
+in proc. ieee workshop on workstation operating systems, april 1992.
+
+ using virtual addresses as object references.
+j. chase, h. levy, and a. tiwary.
+in proc. 2nd int. workshop on object orientation
+in operating systems, september 1992.
+
+ supporting 
+distribution in single-address space operating systems.
+j. chase, h. levy, and v. issarny. in proc. 5th acm sigops 
+european workshop, september 1992.  (also appeared 
+in operating systems review, acm sigops, april 1993.)
+
+ some issues for single address space systems.
+jeff chase, mike feeley, and hank levy.  in proc. of the 
+fourth ieee workshop on workstation operating systems, october 1993.
+
+
+
+uw technical reports
+
+
+
+supporting cooperation on wide-address computers.
+j. chase and h. levy.  technical report, 91-03-10, department of computer 
+science and engineering, university of washington, march 1991.
+
+the protection lookaside buffer:  architectural support for
+single-address space systems.  e. koldinger, j. chase, h. levy, 
+and s. eggers.  technical report 91-11-05, 
+department of computer science and engineering, university 
+of washington, november 1991.
+
+ 
+how to use a 64-bit virtual address space. 
+j. chase, h. levy, m. baker-harvey, and e. lazowska.
+technical report 92-03-02, department of computer science and
+engineering, university of washington, march 1992.
+
+ 
+user-level threads and interprocess communication. m.
+feeley, j. chase, and e. lazowska, 
+technical report 93-02-03, department of computer science and
+engineering, university of washington.
+
+
+
+
+family history
+
+opal is a descendant of a number of object-oriented distributed
+systems built at uw during the 1980s.  following are some
+references to some of those systems. 
+
+
+
+ e. jul, h. levy, n. hutchinson, a. black.  
+fine-grained mobility in the emerald
+system. acm trans. on computer systems 6(1), february 1988.
+(emerald is a distributed object-oriented language and system supporting
+a single, logical, distributed, object address space.  it was the first
+system with on-the-fly object mobility.  protection is guaranteed by 
+the language and compiler.)
+
+
+ j. chase, f. amador, e. lazowska, h. levy, r. littlefield.
+the amber system: parallel programming on a network
+of multiprocessors. proc. of the 12th acm symp. on operating
+systems principles, december 1989. (amber is a distributed object-oriented
+system, based on c++, for writing parallel programs that execute on 
+a local-area network;  amber uses a single shared distributed address 
+space above which c++ objects are supported.)
+
+	
+
+
+
+
+
+opal papers
+opal papers
+opal papers
+opal papers
+opal papers
+opal papers
+opal papers
+opal papers
+opal papers
+opal papers

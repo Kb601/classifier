@@ -1,0 +1,138 @@
+journal publications by robert a. van de geijn
+number of times this page has been accessed since july 21, 1995:
+
+
+ 
+journal publications by robert a. van de geijn
+
+ parallel dense linear algebra 
+
+
+almadena chtchelkanova, john gunnels, greg morrow,
+james overfelt,
+robert a. van de geijn,
+
+"parallel implementation of  blas:
+general techniques for level 3 blas," 
+ concurrency: practice and experience   to appear. 
+
+ 
+d. gimenez, v. hernandez, r. van de geijn, and a. vidal,
+ 
+a jacobi method by blocks on a mesh of processors 
+ concurrency: practice and experience,  to appear. 
+
+ greg henry and robert van de geijn,
+
+``parallelizing the qr algorithm for the unsymmetric 
+algebraic eigenvalue problem: myths and reality,'' 
+ siam journal on scientific computing, vol. 14, no. 4, pp. 870-883, 1996
+
+
+brian grayson and robert van de geijn
+ "a high performance parallel
+strassen implementation,"
+ parallel processing letters, vol 6, no. 1 (1996) 3-12.
+
+
+robert van de geijn and jerrell watts
+ "summa: scalable universal matrix multiplication
+algorithm,"
+ concurrency: practice and experience ,  to appear.
+
+ po geng, j. tinsley oden, robert van de geijn,
+ ``massively parallel computation for acoustical scattering 
+problems using boundary element methods,'' 
+ journal of sound and vibration,  191 (1), pp. 145-165.
+
+ jack dongarra, robert van de geijn, and david walker,
+``scalability issues affecting the design of 
+    a dense linear algebra library,'' 
+special issue on scalability
+of parallel algorithms, 
+ journal of parallel and distributed computing, 
+vol. 22, no. 3, sept. 1994. 
+
+tom cwik, robert van de geijn, and jean patterson,
+``the application of parallel computation
+to integral equation models of electromagnetic scattering,'' 
+
+journal of the optical society of america a ,
+vol. 11, no. 4, pp. 1538-1545, april 1994.
+
+ robert van de geijn,
+
+``deferred shifting schemes for parallel qr methods,'' 
+in  siam journal on matrix analysis and application,
+14, 1, pp. 180-194, jan. 1993.
+
+ jack dongarra and robert van de geijn,
+``reduction to condensed form on distributed memory
+architectures,'' 
+in  parallel computing, 18, pp. 973-982, 1992.
+
+
+
+ parallel sparse linear algebra 
+
+
+ e. barragy and r. van de geijn, 
+"blas performance for selected segments of
+a high  p  ebe finite element code,"
+ international journal on numerical methods in engineering, 
+vol. 38, pp. 1327-1340 (1995)
+
+
+e. barragy, g.f. carey, r. van de geijn,
+``performance and scalability of a block preconditioned
+finite element technique in a distributed parallel 
+environment,''
+ international journal on numerical methods in engineering,
+vol. 38, pp. 1535-1554 (1995)
+
+ e. barragy, g. f. carey, and r. van de geijn,
+``performance and scalability of finite element analysis
+for parallel computation,'' 
+ journal of parallel and distributed computing , 21, pp. 202-212 (1994).
+
+
+
+ parallel communication algorithms 
+
+
+ m. barnett, d. payne, r. van de geijn, and j. watts,
+ ``broadcasting on meshes with wormhole routing,'' 
+ journal of parallel and distributed computing, vol. 35, no. 2, pp. 111-122, 1996.
+
+ jerrell watts and robert van de geijn,
+"a pipelined broadcast for multidimensional meshes," 
+ parallel processing letters, vol. 5, no. 2 (1995) pp. 281-292.
+
+
+m. barnett, r. littlefield, d. payne, and r. van de geijn,
+
+``on the efficiency of global combine algorithms for 2-d meshes
+     with wormhole routing,'' 
+ journal of parallel and distributed computing
+24, pp. 191-201 (1995).
+
+ robert van de geijn,
+``on global combine operations,''
+ journal of parallel and distributed computing, 
+ 22 , pp. 324-328 (1994). 
+
+
+
+
+
+
+journal publications by robert a. van de geijn
+journal publications by robert a. van de geijn
+journal publications by robert a. van de geijn
+journal publications by robert a. van de geijn
+journal publications by robert a. van de geijn
+journal publications by robert a. van de geijn
+journal publications by robert a. van de geijn
+journal publications by robert a. van de geijn
+journal publications by robert a. van de geijn
+journal publications by robert a. van de geijn

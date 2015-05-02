@@ -1,0 +1,167 @@
+cornell cs public software
+
+
+a guide to publicly maintained software at cucs
+
+
+
+cornell computer science
+last update: halloween, 1994
+
+this page provides information about using the public software
+in /usr/public on the cornell computer science machines.  the
+/usr/public directory is the place for files that are useful to the
+entire department, but without official support by adm.
+
+current announcements
+
+
+synopsis
+how to access
+what is in /usr/public
+what should not be in /usr/public
+directory organization
+how to obtain further help
+other pages available in /usr/public
+    
+    current list of czars.
+    upson's familiar quotes
+    after cornell survey
+    space used by each user in /usr/public
+    query database for all files in /usr/public
+    
+
+
+current announcements
+the public-czar is currently updating these pages and conducting a
+periodic cleanup of the /usr/public directory.  if you have somthing
+in /usr/public and you haven't used it in a while, please consider
+removing it!
+
+synopsis
+/usr/public/ is a directory which is mounted on all of the
+departmental suns.  it contains all software which is considered
+useful to the entire community and is not officially supported by adm.
+all software in /usr/public is provided without any guarantees by
+other users.  to determine who is responsible for a program, look at
+the owner of the executable.
+
+there is also a public-czar that informally manages the directory.
+periodically this czar will walk through the directory looking for
+space, and if you have installed something, you may receive a message
+from the czar asking if the program is still useful.  we are always
+short of space, so this may happen fairly often.  the public-czar is
+also available to provide assistance if you need help finding or
+installing something, or if you feel something needs to be changed.
+
+the public-czar is currently
+jason hickey
+but mail can be directly sent to the alias "public-czar", which will
+always be kept up-to-date.
+
+how to access /usr/public
+to access the binaries in /usr/public, include "/usr/local/pub.bin"
+into your path (defined in .cshrc).  you should have this at the end
+of your path for security reasons.  games are stored in a directory
+which may be accessed with "/usr/local/public/games".  many useful
+manual entries are also in "/usr/public/man" and may be accessed by
+adding to the environment variable manpath.  for example, the
+following is a reasonable way to define manpath:
+
+setenv manpath /usr/share/man:/usr/public/man
+
+what is in /usr/public
+
+/usr/public contains user supported software.  here is a list of some
+reasonable things to put in /usr/public: compilers for unusual
+languages, experimental editors, games, odd utilities, and data files.
+sources for executables should be stored in /usr/public/src.  for
+security reasons, sources should be available whenever possible.
+include manual pages in /usr/public/man.  look in that directory for
+some examples.  remember, the manual entry is often the only clue
+about what a program does.
+
+there are tips-??? help files in the normal area.  feel free to add
+tips files in /usr/public/man/man1.  remember that these files need to
+be in troff man format.  look at an existing man page to figure it
+out.  if you would like to add www info, contact the public-czar, who
+will add it to this file.  there is also an emacs texinfo page, so
+documentation can be added that way, too.
+
+all public games are stored in /usr/public/.../games.  these are
+managed by the games czar who is ultimately responsible for what stays
+and what goes.  sources for most games are in /usr/public/src/games.
+please do not make private copies of the games because they waste a
+lot of disk space.  in particular, do not copy the ``fortune'' database
+file.
+
+what should not be in /usr/public
+
+it is easy to crowd a public disk with useless junk.  core dumps and
+object files should be removed as quickly as possible.  executables
+should be stripped (see "strip").  large sources for stable programs
+should be deleted.  do not throw something onto /usr/public unless
+these is good reason to believe that other people might use it.  never
+put software into /usr/public which is of questionable origin: viruses
+are a daily concern.  if something seems strange, do not hesitate to
+bring it up.
+
+/usr/public often fills up.  this leads to lots of finger pointing and
+nasty messages so try to be polite.  if you really value something,
+but everyone else does not seem to care, move it to your home
+directory.
+
+directory organization
+
+/usr/public holds binaries for several architectures.  to make access
+somehat machine-independent, architecture-dependent executables are
+available in /usr/local/pub.bin, which will always be a link to the
+appropriate directory.  architecure-independent files are always kept
+in /usr/public/share/...  this includes shell scripts, images,
+emacs-info pages, www pages, and other assorted
+architecture-independent files.  this is true even though right now we
+mostly use sparc/sunos4 throughout the department.  remember, solaris
+is on the way, like it or not.  if it makes you feel more comfortable,
+add a link from executables you install in /usr/public/share/bin to
+corresponding directory entries in /usr/public/{sun4,solaris}/bin.
+if you install in the wrong place, the public-czar will always come
+around to correct you:-)
+
+here is a summary:
+
+ /usr/public/adm: for the public-czar, look here for stats if you want.
+ /usr/public/cdi: various info, this will get incorporated into
+     this page.
+ /usr/public/hp: hp dependent files.
+ /usr/public/include: architecture-independent include files.  this
+should be a link to /usr/public/share/include.
+ /usr/public/lisp: i don't really know why we have this,
+it may go away soon.
+ /usr/public/ls: this is just to give you a hard time:-)
+ /usr/public/src: source directories
+for the installed programs.  any program, whether it is one file or
+not, should be installed in a directory here.
+ /usr/public/sun4: sun4/sunos4 libraries and
+executables.
+ /usr/public/sun4/games: games for sun4/sunos4.
+ /usr/public/solaris: sun4/sunos5 libraries and
+executables.
+ /usr/public/share: architecture-independent libraries,
+info files, shell-scripts, etc.
+
+
+how to get further help
+
+if you need further guidance of any sort, send mail to
+public-czar@cs.cornell.edu.
+
+cornell cs public software
+cornell cs public software
+cornell cs public software
+cornell cs public software
+cornell cs public software
+cornell cs public software
+cornell cs public software
+cornell cs public software
+cornell cs public software
+cornell cs public software

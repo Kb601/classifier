@@ -1,0 +1,158 @@
+cs418 lab 0
+
+
+
+
+
+cs 418: laboratory 0  
+ getting started with dataexplorer. 
+
+these instructions will introduce you to 
+dataexplorer (dx)
+and the lab facilities in the cornell university
+computer science department
+and in the 
+cornell theory center.
+dx is a software package intended to
+be used for scientific visualization. at the start of the semester we will use it as a
+rendering/viewing platform for various computer graphics procedures. machines to
+run dx are located in room 335 in upson and in room 471 in the
+e&tc building.
+there are several sections:
+
+  basic information 
+
+your first dx session (see below).
+ unix for cs 418. 
+ dx data structures.
+ dx use notes and warnings. 
+
+
+  further information 
+
+  
+submitting still images and animation for the course web pages.
+  
+creating mpeg animation files. 
+ there are some dx techniques outlined in the
+ dx repository  
+which may be useful later in the semester.
+you may also want to look at some 
+
+ student programming projects  using dx.
+  disk space: 
+we have set up a temporary 1.7 gbyte partition for cs 418 use at 
+ /afs/theory/tc/courses/cs418/tmp  
+you should consider it scratch space for mpeg compression. materials are
+subject to deletion after 24 hours.
+ to use it:
+ 
+make sure (on the hp machines) that 
+ /usr/local/afsws/bin  is in your
+path. on the ibm machines, skip this step.
+ issue the command klog,
+then enter your ibm system password.
+on the ibm machines, skip this step.
+ issue a cd command to  /afs/theory/tc/courses/cs418/tmp 
+
+ make a directory for your materials
+
+
+
+
+
+
+your first dx session.
+
+to get started, login to one of the 
+ machines (hp700 or ibm rs6000). 
+
+ on the ibm machines
+you will need to start x-windows using the  'xinit' command.  
+ on the hp machines
+ x-windows starts automatically.  
+ 
+ the first time you login you will need to load a few files and 
+ modify your .cshrc file. if you don't know how to do this in unix
+ ask a consultant or check ou the 
+ unix intro  page.
+ 
+  click 
+  here 
+ to download some utilities you will need. when the dialog box appears,
+ save the file as "macros.tar" in your home directory.
+  execute the command  
+ tar -xvf macros.tar   this will put the utilities in a new
+ directory called .dxmacros.
+  add the line setenv dxmacros
+ ~myid/.dxmacros
+  to your  .cshrc  file.
+note that "myid" is a placeholder for your user id.
+ execute the command
+ source .cshrc  
+this will cause the macros to become available to dx when it starts up.
+this command is executed automatically whenever you login or open a new window.
+ 
+ anytime you start a session,
+make sure you have a c-shell running (type  csh ) then start dx by typing  'dx'. 
+
+at the end
+of a session, 
+
+on the ibm machines kill x-windows by typing  cntl-alt-backspace. 
+then  logout.
+ on the hp machines logout from the desktop.
+
+
+dx has extensive on-line help, including tutorials and a complete manual which you
+can look at  by clicking the help menu in the upper right of the editor window. you
+can also click the middle button over any object (module, menu) to get context
+sensitive help.
+
+
+
+back to  main page 
+
+
+go to  lab 1
+
+ 
+
+last modified, 1/23/96 b. land.
+
+
+
+ 
+copyright statement 
+ 
+
+
+
+cs418 lab 0
+
+
+cs418 lab 0
+
+
+cs418 lab 0
+
+
+cs418 lab 0
+
+
+cs418 lab 0
+
+
+cs418 lab 0
+
+
+cs418 lab 0
+
+
+cs418 lab 0
+
+
+cs418 lab 0
+
+
+cs418 lab 0

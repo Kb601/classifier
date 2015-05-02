@@ -1,0 +1,59 @@
+welcome to prema - parallel runtime support system
+
+
+ prema: portable runtime environment for multicomputer architectures 
+
+
+ prema: portable runtime environment for multicomputer architectures  
+
+  advanced computing research institute,  cornell theory center,  cornell university 
+
+
+
+overview
+
+  prema is a runtime support system for parallel compilers and
+problem solving environments that target scientific computing
+applications. prema is build on top of  ports (cornell implementation)   and is designed to run on a variety of mpp and smp computers. prema suppots:  
+
+ 
+ global address space memory model 
+ data and task parallel programming models 
+  multi-threaded style of execution 
+ 
+     automatic work-sharing mechanism (dynamic load balancing)  
+ 
+
+ 
+
+ papers  
+  
+multithreaded model for dynamic load balancing parallel adaptive pde
+computations.  nikos p. chrisochoides, ctc95tr221,
+journal of applied numerical mathematics 6(1996) pp 1--17, 1996.
+
+
+
+
+related research
+
+ 
+ports, portable runtime systems group
+
+  
+pcrc , parallel compiler runtime consortium
+
+
+ copyright &copy 1995  nikos chrisochoides  (nikosc@cs.cornell.edu) 
+
+
+welcome to prema - parallel runtime support system
+welcome to prema - parallel runtime support system
+welcome to prema - parallel runtime support system
+welcome to prema - parallel runtime support system
+welcome to prema - parallel runtime support system
+welcome to prema - parallel runtime support system
+welcome to prema - parallel runtime support system
+welcome to prema - parallel runtime support system
+welcome to prema - parallel runtime support system
+welcome to prema - parallel runtime support system

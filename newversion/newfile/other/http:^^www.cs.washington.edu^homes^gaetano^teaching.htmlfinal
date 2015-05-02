@@ -1,0 +1,75 @@
+gaetano borriello - teaching
+
+gaetano borriello's teaching activities
+
+
+
+recent teaching history
+
+   autumn 1994: cse142, introduction to computer programming i
+   winter 1995: cse477, digital system design
+   spring 1995: cse467, advanced logic design
+   spring 1996: design automation for embedded systems, scuola superiore sant'anna, pisa, italy
+   autumn 1996: cse370, introduction to digital design
+
+
+the courses i teach
+
+   cse370, introduction to digital logic design (junior undergraduate)
+basic logic and finite-state machine design with regular and programmable 
+logic implementation.  students use capilano logicworks for simulation and 
+abel for specification of programmable logic.
+   cse467, advanced digital design (junior/senior undergraduate)
+continues where cse370 leaves off and includes a practical laboratory where
+students prototype circuits that include programmable logic devices and field
+programmable gate arrays.  the course has two parallel tracks: one on 
+implementation techniques, and another on the computer-aided design tools 
+and algorithms.  implementation exercises include interfaces to memories
+and communication interfaces (e.g., busses, serial lines).
+   cse477, digital system design (senior undergraduate)
+capstone design course in which students specify, design, construct, and 
+debug their own embedded system.  designs are done in teams of two and 
+include oral and written presentation of the project.  past projects have
+included: pcmcia interface to a ccd array for video, midi flute, mobile
+robots of various types, 3-d ultrasonic mouse, telephone interfaces to 
+control devices in a home, hand-held logic analyzer, etc. 
+   cse567, principles of digital design (graduate)
+research oriented course that exposes students to current methods in logic
+design including hardware description languages, automatic logic synthesis,
+simulation at various levels, and field-programmable logic for implementation.
+the course includes a substantial project.
+   cse568, implementation of vlsi systems (graduate)
+students design and prototype an interesting system that exploits the 
+capabilities of vlsi technology and includes a custom integrated circuit
+design.  past projects have included: data compression hardware, multi-computer
+routers, graphic accelerators, etc.
+   others . . .
+occasionally, i am called upon to teach introductory level undergraduate 
+courses including: 
+
+cse142, introduction to programming i (a course for all students
+in the college of engineering and many in the college of arts & sciences) and 
+
+cse373, data structures (a course for non-majors).
+
+
+
+
+gaetano@cs.washington.edu
+- - - 
+back to home page
+
+
+
+
+
+gaetano borriello - teaching
+gaetano borriello - teaching
+gaetano borriello - teaching
+gaetano borriello - teaching
+gaetano borriello - teaching
+gaetano borriello - teaching
+gaetano borriello - teaching
+gaetano borriello - teaching
+gaetano borriello - teaching
+gaetano borriello - teaching

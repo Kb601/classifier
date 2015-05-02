@@ -1,0 +1,85 @@
+wisconsin wind tunnel project home page 
+
+
+
+
+
+
+wisconsin wind tunnel project
+
+
+
+
+most future massively-parallel computers will be built from
+workstation-like nodes and programmed in high-level parallel
+languages--like hpf--that support a shared address space in which
+processes uniformly reference data.
+
+the wisconsin wind tunnel (wwt) project seeks to develop a consensus about
+the middle-level interface--below languages and compilers and above
+system software and hardware.  our first proposed interface was
+
+cooperative shared memory, which is an evolutionary extension to
+conventional shared-memory software and hardware.  recently, we have
+been working on a more revolutionary interface called 
+tempest.
+tempest provides the mechanisms that allow programmers, compilers, and
+program libraries to implement and use message passing, transparent
+shared memory, and hybrid combinations of the two.  we are developing
+implementations of tempest on a thinking machines cm-5, a cluster of
+workstations (wisconsin
+cow), and a hypothetical hardware platform.  one approach on cow
+uses bus snooping logic, implemented with 
+fpgas and sram.
+we are collaborating
+with the 
+wisconsin paradyn project to adapt their performance tools to tempest.
+
+ overview
+and  annotated bibliography
+
+ slides from an overview talk (november 1995)
+with one slide per page
+or four slides per page
+
+ complete technical papers
+
+ contributors
+
+ funding sources
+
+ origin of project name
+
+ wisconsin week article on wwt & paradyn
+
+ related projects
+
+ 
+wisconsin cs's computer architecture group
+
+ computer sciences department
+at the university of wisconsin
+
+ 
+world-wide computer architecture information
+
+
+
+
+
+ last updated: 6 july 1995 by mark d. hill (markhill@cs.wisc.edu) 
+
+
+
+
+
+  wisconsin wind tunnel project home page 
+  wisconsin wind tunnel project home page 
+  wisconsin wind tunnel project home page 
+  wisconsin wind tunnel project home page 
+  wisconsin wind tunnel project home page 
+  wisconsin wind tunnel project home page 
+  wisconsin wind tunnel project home page 
+  wisconsin wind tunnel project home page 
+  wisconsin wind tunnel project home page 
+  wisconsin wind tunnel project home page

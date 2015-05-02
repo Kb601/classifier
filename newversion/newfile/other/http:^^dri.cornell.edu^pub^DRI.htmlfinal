@@ -1,0 +1,323 @@
+about the design research institute
+
+
+
+
+design research institute
+
+overview
+the design research institute is an organization of collaborating
+industry and academic scientists and engineers devoted to research
+bringing computer science and computation technology to bear on
+problems of engineering design.
+
+dri was established in 1990 by cornell university and xerox corporation and is located in the 
+center for theory and simulation in science
+and engineering
+on the cornell campus in ithaca, new york.
+
+the institute was founded on the principle that american research
+universities represent a major resource that can and should be employed in
+america's effort to improve its industrial global competitiveness.
+
+at present, five xerox scientists form the nucleus of dri,
+collaborating in research with cornell faculty, students,
+post-doctoral fellows, and visiting scientists in the college of
+engineering. research problems are motivated by industry but solved
+through the pooled talents and expertise of the combined dri
+community. it is anticipated that additional companies and cornell
+units will participate as the institute grows.
+
+the dri mission is pace to product, that is, to develop
+technologies and methodologies for accelerating the design and
+engineering of technology-based products.
+
+dri research currently encompasses three themes:
+
+ information capture and access - developing a corporate memory of
+design, a heterogeneous information base capturing designs and
+design experiences and featuring high-level query and browsing
+capabilities in support of engineering processes and decisions.
+
+ computational prototyping - 
+developing scientific computing
+algorithms and applications, and computing environments for their use, to
+enable mechanical, fluid, and other physical systems to be simulated
+by computer, reducing the need for building hardware prototypes.
+
+ collaboration technology
+- developing tools and methods for
+sharing of engineering information and creating shared engineering
+work spaces.
+
+
+since the issues of engineering productivity addressed by dri are of
+concern to much of american industry, a goal is to secure federal or other
+outside funding to support the cornell associates of dri. industry staff are
+supported by their companies.
+
+most dri research is non-proprietary. software prototypes are
+implemented to demonstrate concepts and show feasibility, and results
+are published in technical reports and journals.  as appropriate,
+technology is expected to be freely transferred into partner
+companies.
+
+dri partners
+
+the design research institute is a partnership of industry, academia,
+and government.
+
+industry. corporations can participate in the institute by engaging in
+the research of dri, generally by establishing groups of research scientists
+and engineers on campus. companies take the lead in setting the research
+agenda and have access to the research results of all of dri.
+
+academia. cornell university is the host institution for the
+design research institute. faculty, staff, and students in the college
+of engineering work closely with industry scientists in collaborative
+research. dri offices and laboratories are located in the center for
+theory and simulation in science and engineering and in the
+department of computer science, and collaboration extends to the
+sibley school of mechanical and aerospace engineering and the departments
+of electrical engineering and theoretical and applied mechanics. future involvement is expected in
+other units of the college of engineering as well as the school
+of industrial and labor relations and the johnson school of management.
+
+government. it is anticipated that government or other external
+organizations will fund part of the research of dri since the research
+goal of the institute is to develop technologies that will enhance the
+competitiveness of all of american industry. such funding will support
+cornell affiliated staff, not industry staff.
+
+mission: accelerating the pace of product development
+
+the research mission of the design research institute is to develop
+technologies and methodologies for increasing the pace of development
+of technology-based products such as aircraft, computing and communications
+equipment, automobiles, machine tools, office equipment, and
+composite materials.
+
+dri research is expected to lead ultimately to shorter product
+development cycles. this focus on the time element of engineering
+reflects the importance of time to market in today's global competitive
+environment.
+
+research projects seek to leverage massive computation, multimedia,
+networks, and heterogeneous database technologies to enable more
+effective engineering by both individuals and work groups.
+
+three themes form the heart of the dri research agenda: information
+capture and access, computational prototyping, and collaboration
+technology. research in these areas is directed toward facilitating
+more effective engineering decision-making and developing means to
+eliminate or accelerate engineering tasks.
+
+
+information capture and access
+
+
+one goal of dri is to develop technologies for an enriched information
+and document environment that enables increased worker productivity in
+project-oriented tasks, especially that of engineering design.
+
+dri research in information capture and access involves a multitude of
+technologies: distributed databases and persistent object storage,
+document image processing and management, multimedia and user
+interface technology, information science for heterogeneous data, and
+knowledge representation and organization.
+
+a centerpiece for this work is a vision of a corporate memory of design,
+a distributed collection of all the information pertaining to product
+development: documents, drawings, schedules, catalogs, field service
+records, minutes of meetings, records of decisions, and histories of past
+projects.
+
+initial contents of the dri prototype corporate memory will be
+engineering reports in scanned and synthetic document form,
+engineering drawings, photographs of engineers along with records of
+their areas of expertise and project assignments, and computational
+prototyping programs, complete with documentation and sample
+visualization output.  the corporate memory will not be centralized,
+but rather will be spread across many computers in many sites linked
+by network. it will be closely integrated with public information
+sources such as electronic libraries and national online
+databases.
+
+the corporate memory will support a wide variety of uses through
+specialized interfaces tailored to various applications. for example, an
+engineer may receive automatic notification of any engineering change on
+his project by electronic mail. a manager may have a permanent project
+status window on his or her workstation refreshed by a program that continuously
+queries the memory for schedule references. a departmental document
+scanner may automatically file in the memory all documents pertinent to
+a particular project. parametric design programs may sift through previous
+designs for best matches to new requirements.
+
+the application-specific clients of the memory will all share a layer
+of intelligent access capabilities such as near-miss querying,
+browsing, natural language interfaces, and self-organization of the
+content of the memory.
+
+an information capture and access testbed is now being implemented.
+it is based on several existing information and document systems ranging
+from an electronic notebook system to network document and database
+access systems to information filters and interfaces. these systems will be
+integrated into a unified environment supporting experiments with and
+development of enabling technologies for the corporate memory.
+
+
+computational prototyping
+
+
+computational prototyping involves the simulation by computer of
+complex physical systems and visual display of their behavior to
+engineers.  this process, enabled by high-speed network access to
+supercomputers, high-performance graphics workstations, scientific
+visualization technology, and new parallel computing algorithms, will
+replace some of the time consuming building of hardware prototypes with
+interactive design at the workstation.
+
+successful simulations have to date been achieved in several key
+physical domains, including flow of fluid and heat in a thermal ink
+jet print-head, free surface ejection of a droplet from an acoustically
+excited pool of liquid, electrostatic interactions of toner particles
+in a xerographic development system, lubricant flow in bearings, and
+charge transport in semiconductors. new methods have been developed to
+solve these problems on supercomputers. ultimately the simulations
+will run fast enough for interactive use by engineers.
+
+an emerging focus area in computational prototyping is
+micro-electro-mechanical systems. in collaboration with departments of
+electrical engineering and theoretical and applied mechanics,
+computational tools are being developed that will lead to an improved
+understanding of mems electromechanical behaviors. specific areas of
+research include reliability and failure modes in these structures, as
+well as techniques for sensitivity analysis and optimal design of
+mems. this project is being funded by the nsf's mems program.
+ 
+a research goal is to develop a flexible, powerful, yet friendly
+environment supplying computational and graphics resources that enable
+an engineer to employ simulation as an everyday design tool. the dri
+vision is of an integrated environment providing easy-to-use
+simulation and visualization capabilities for engineers at xerox and
+other partner companies driven by cornell supercomputers. intelligent
+browsing capability and online documentation are key components of
+the vision.
+
+building toward this goal is protolab, a computing
+environment for engineering simulation featuring automatic generation
+of simulation programs from high-level descriptions and an object
+oriented library of models and methods.  a research proposal on the
+development of protolab, submitted jointly with general electric and
+cornell computer science, has been selected as a potential funding
+candidate by arpa.
+
+
+collaboration technology
+
+
+the design research institute recognizes that the way engineers work
+together as a team is as important as their individual contributions.
+thus collaboration technology forms the third component of the dri
+research agenda. dri activities in this area are in providing shared
+access to objects in the corporate memory and in enabling effective
+communication among engineers. toward the latter, a cooperative
+engineering environment is under development featuring structured
+dialog among members of a team to facilitate resolution of engineering
+changes during product design.
+
+research in this area is just beginning, but is expected to grow to
+involve analysis of engineering processes and development of
+additional tools to facilitate collaboration. of special interest is
+enabling effective teamwork among engineers separated by several time
+zones.
+
+corporate participation
+
+companies joining the institute typically will participate by locating
+research staff on campus. in the case of xerox, the founding partner, a
+group of seven scientists within the corporate research group was
+permanently established at cornell. xerox provides to cornell a yearly
+grant which offsets the cost of its offices and support services.
+
+corporate partners benefit from participation in dri in several ways.
+
+the companies leverage both their intellectual investment and their
+financial investment through participation in collaborative research with
+university faculty and students as well as scientists from other partner
+companies. government or other external funding is expected to support
+the cornell affiliates.
+
+through on-site collaboration, partner companies have direct
+involvement in establishing the research agenda of the institute.
+problems can be drawn from an industrial context and distilled into
+fundamental research questions. this approach provides a new scale and
+perspective that is unusual in academic research, but which promises
+exceptional synergy.
+
+partner companies also have convenient first access to research
+developments in dri, including research involving scientists from other
+companies. there are many avenues of technology transfer, including
+joint projects with off-campus company units and hosting of visiting
+scientists on campus.
+
+intellectual property rights
+
+most research in the design research institute is intended to be open
+and non-proprietary. results will be available for use by partner companies
+as developed and will be published in scientific journals as appropriate.
+
+to cover ownership rights to inventions deriving from current dri
+research, an intellectual property rights agreement has been reached in
+principle between cornell and xerox. it provides that rights to inventions
+of a xerox employee shall be covered by standard xerox policy and that
+rights to inventions of a cornell employee shall be covered by standard
+cornell policy. in the case of a joint invention by xerox and cornell
+employees, rights shall be jointly owned.  joint ownership generally implies
+that each party has the right to use or license the invention independently
+as either party wishes. in the case of dri, joint ownership has been
+redefined by the parties for the mutual benefit of both parties.
+
+when additional corporate partners join dri the issue of intellectual
+property rights will be revisited, but it is expected that agreements
+developed to cover the new partners will be similar to the
+xerox-cornell model.
+
+steering committee and institute organization
+
+policy for the institute is established by a steering committee, whose
+membership includes representatives of cornell and each of the
+partner companies. at present the committee consists of three cornell
+members and five xerox members.
+
+when additional corporate partners join dri, an institute office will
+be created to augment the offices of the individual companies. a director is
+expected to be named at that time. until then, cornell and xerox are
+sharing in the administration of dri.
+
+as the institute grows, it is envisioned to include separate branches
+focusing on key areas of dri research. the branches will engage various
+units of cornell, and partner companies and government agencies may
+participate in any or all of the branches as they choose.
+
+
+
+design research institute
+502 engineering and theory center
+cornell university
+ithaca ny 14853-3801
+607-255-4933
+
+
+
+
+about the design research institute
+about the design research institute
+about the design research institute
+about the design research institute
+about the design research institute
+about the design research institute
+about the design research institute
+about the design research institute
+about the design research institute
+about the design research institute

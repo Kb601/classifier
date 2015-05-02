@@ -1,0 +1,143 @@
+cse462 vlsi design
+   
+
+
+
+
+cse 462: vlsi design
+
+
+
+
+professor:
+
+
+dr. jay brockman
+384 fitzpatrick hall
+phone: 1-8810
+email: jbb@cse.nd.edu
+office hours: tu, th 2:30-3:30, or by appointment
+
+
+teaching assistants:
+
+
+steve dartt
+email: sdartt@bach.helios.nd.edu
+
+
+lecture:
+
+
+monday, wednesday, friday, 117 debartolo hall, 10:40-11:30
+
+
+cad lab:
+
+
+monday, engineering computer cluster, 1:00-2:30
+tuesday, engineering computer cluster, 7:30-9:00 pm
+
+
+texts:
+
+
+required:
+n. weste and k. eshraghian. principals of cmos vlsi design, a systems
+perspective, 2nd ed. addison wesley, 1993.
+
+
+strongly recommended:
+jan m. rabaey, digital integrated circuits: a design perspective,
+prentice hall, 1996
+
+
+lecture notes: 
+
+
+available in class friday, 8/30. bring $10 to cover semester xeroxing
+fee. 
+
+
+homework assignments: 
+
+
+homework 1: complementary cmos logic/devices
+(do problems 1-3 only)
+
+homework 2: mos device characteristics
+
+homework 3: inverter dc performance
+
+homework 4: inverter dynamic performance
+
+homework 5: physical design of
+static cmos gates
+
+homework 6: static cmos logic families
+
+homework 7: dynamic logic
+
+
+lab/design projects: 
+
+
+lab 1: switch-level simulation
+
+lab 2: fabrication process simulation with
+pdfab
+
+lab 3: using accusim for dc and transient
+simulation
+
+lab 4: inverter layout (see custom ic tutorial in mentor bold browser)
+
+lab 5: design rule and layout versus schematic
+checking
+
+lab 6: logical design and simulation
+of an 8-bit counter
+
+lab 7: counter layout and verification
+
+lab 8: evaluation of counter performance
+
+
+class newsgroup: nd.courses.cse462
+
+web sites of related courses:
+
+
+homepage for jan
+rabaey's new ic design text, with links to lecture notes, cad tools,
+sample problems, projects and more. 
+university
+of michigan undergrad vlsi class 
+berkeley's
+undergrad vlsi class 
+berkeley's advanced
+digital integrated circuit class (graduate level) 
+stanford's graduate
+vlsi class 
+
+
+don't miss:
+
+
+university of idaho
+vlsi links
+
+
+
+
+
+cse462 vlsi design
+cse462 vlsi design
+cse462 vlsi design
+cse462 vlsi design
+cse462 vlsi design
+cse462 vlsi design
+cse462 vlsi design
+cse462 vlsi design
+cse462 vlsi design
+cse462 vlsi design

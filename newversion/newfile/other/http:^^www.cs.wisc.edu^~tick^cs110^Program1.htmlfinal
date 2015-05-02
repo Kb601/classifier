@@ -1,0 +1,96 @@
+cs 110 sections 1&2 - program 1
+
+
+
+
+ program1
+
+
+time's fun when you're having flies - kermit the frog
+
+due date:
+wednesday 11/13/96, 5:00 pm
+grade:
+25% of your final grade.
+text covered:
+chp. 2,3
+problem description:
+for the first program, you're going to write a clock. it'll have the following features:
+
+it will ask for the current time; first the hour, then the minute.
+then it will ask how much time is going to pass (again, first number of
+hours, then number of minutes).
+it will then add the two and print out the new time.
+
+this is not simply a case of addition, because you need to keep in mind the following rules for clocks:
+
+clock hours (both initial and final) is always a number between 1 and 12
+clock minutes (both initial and final) is always a number between 0 and 59
+add hours is always a number between 0 and 12
+add minutes is always a number between 0 and 59
+
+
+so you're going to have to handle
+
+
+printing an error if you enter an invalid # of hours or minutes
+rollover (if # of minutes > 59 or # of hrs > 12 due to addition...need to figure out when to carry).
+
+try doing out some examples on paper before you start writing the program. it will help you quite a bit. give yourself some sample times and notice how to solve them. hint: the mod statement may help you.
+program things in steps. first, program in just reading both sets of hours and minutes. once you've complied and run that program, and it runs fine, then go on to the next step; write the lines that deal with reporting an error if you enter a bad number of hours. once that's working okay, then write the code for adding the hours and printing out the response.          
+what to hand in:
+   hand in your assignment online by copying your fortran source code file "program1.for" and the compiled executable file "program1.exe" to your handin directory.
+
+   your files are timestamped with the current time when you copy them to your handin directory.  this will be used to check they were handed in on time or whether late day penalties apply. important - make sure you copy the correct versions of your program files because these are what will be graded.
+
+   you also have to hand in a printed copy of your fortran source code file.
+   gradesheet:
+   the following gradesheet will be used to grade this assignment.  please take a close look at it to make sure you do everything that is required.  note that you will be graded on correct output for the input values given below, so before handing it in you must run your program with these values and manually check that your program gives the correct results in every case.
+   
+correct output                                                  [18]
+   time =  10 hr, 20 min, add 1 hr,  5 min               [3]
+   time =  9  hr,  7 min, add 4 hr,  6 min               [3]
+   time =  8  hr, 27 min, add 2 hr, 47 min               [3]
+   time =  11 hr, 47 min, add 1 hr, 17 min               [3]
+   time =  12 hr, 59 min, add 12hr, 59 min               [3]
+   time =  12 hr, 18 min, add 1 hr, 65 min               [3]
+
+user interface                                                  [8]
+   useful prompts for inputting times                    [4]
+   meaningful display of final time                      [4]
+
+implementation                                                  [18]
+   correct implementation of formulas                    [7]
+   correct use of fortran statements                     [7] 
+   meaningful variable names                             [2]
+   indenting and neatness                                [2]
+
+documentation                                                   [6]
+   program description                                   [3]
+   variable definitions and section comments             [3]
+____________________________________________________________________
+
+total (25%)                                                     [50]
+   
+
+
+
+
+
+
+copyright &copy 1996 jeff lampert (tick@cs.wisc.edu).  last modified november 4, 1996.
+
+
+
+
+
+cs 110 sections 1&2 - program 1
+cs 110 sections 1&2 - program 1
+cs 110 sections 1&2 - program 1
+cs 110 sections 1&2 - program 1
+cs 110 sections 1&2 - program 1
+cs 110 sections 1&2 - program 1
+cs 110 sections 1&2 - program 1
+cs 110 sections 1&2 - program 1
+cs 110 sections 1&2 - program 1
+cs 110 sections 1&2 - program 1

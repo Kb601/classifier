@@ -1,0 +1,193 @@
+cs302 syllabus, fall 1996
+
+
+cs302 syllabus, fall 1996
+
+this syllabus will quite certainly change, so check it often.
+
+
+
+
+
+    
+	wk
+	dates
+	topics
+	readings
+	programs
+    
+
+    
+	1
+        sept 3, 5
+	intro to course, computer science, & c++; using the lab;  
+	    problem solving; computers; compiling; debugging & testing
+	1.1-1.4
+        
+    
+
+    
+	2
+        sept 10, 12
+	data objects; types; variables; expressions;
+	    simple i/o; conditionals; simple loops; quiz #1
+	2.1-2.4
+        
+    
+
+    
+	3
+        sept 17, 19
+	simple i/o; conditionals; simple loops;
+	    style; hello to functions;
+	    quiz #2
+	2.5, 3.1-3.3
+        
+    
+
+    
+	4
+        sept 24, 26
+	procedural abstraction; scope: local variables;
+	    polymorphism: overloading; void functions;
+	3.4-3.6, 4.1
+        
+    
+
+    
+	5
+        oct 1, 3
+	reference & value parameters; more procedural abstraction
+	    more debugging & testing; streams & file i/o; quiz #3
+	4.2-4.4, 5.1
+        
+    
+
+    
+	6
+        oct 8, 10
+	more streams; character i/o; inheritance
+	    structures; classes: member functions, private vs. public
+	5.2-5.4
+	    6.1-6.2
+	    supplemental
+        
+    
+
+    
+	7
+        oct 15, 17
+	review (tues); 
+	    exam #1:  everything above.
+            classes: constructors and destructors (thurs)
+	*
+        
+    
+
+    
+	8
+        oct 22, 24
+	for loop; switch statement;
+	    intro to classes
+	6.1-6.3, 7.1-7.4
+        
+    
+
+    
+	9
+        oct 29, 31
+	constructors/destructors; assignment and copy constructor
+	    quiz #4 (tuesday)
+	supplemental
+        
+    
+
+    
+	10
+        nov 5, 7
+	automatic type conversion; overloaded operators
+	    quiz #5
+	8.1-8.2
+        program 5
+    
+
+    
+	11
+        nov 12, 14
+	arrays:  using, defining, string basics, w/functions, w/classes
+	9.1-9.4, 10.1
+        program 6
+    
+
+    
+	12
+        nov 19, 21
+	review (tuesday);
+	    exam #2:  everything above, emphasis on wks 7-11.
+	
+        
+    
+
+    
+	13
+        nov 26
+	advanced strings; multi-dimensional arrays; string class
+	10.2-10.3
+        program 7
+    
+
+    
+	14
+        dec 3, 5
+	pointers; dynamic memory; dynamic arrays; destructors
+	    quiz#6
+	11.1-11.3
+        program 8
+    
+
+    
+	15
+        dec 10, 12
+	wrap-up;  review for final;  extra fun-stuff...
+	supplemental
+        program 9
+    
+
+    
+	16
+        dec 17
+	exam #3:  everything above, emphasis on wks 12-15.
+	*
+    
+
+
+
+
+while reading you should always do the self-test exercises, and read
+the summary sections.  always do the assigned reading before class.
+that is, you should read each week's assignment before the tuesday of that
+week.    
+
+quizzes will be on thursdays unless otherwise noted.  exams will be
+held on tuesday or wednesday eventings.  
+we will try to establish the place and time
+roughly two weeks before the exam.  the final is on tuesday dec 17,
+1996 at 5:50pm.  mark your calendar.
+
+
+last modified: 
+mon sep 16 15:25:38 cdt 1996
+by greg sharp 
+
+
+
+cs302 syllabus, fall 1996
+cs302 syllabus, fall 1996
+cs302 syllabus, fall 1996
+cs302 syllabus, fall 1996
+cs302 syllabus, fall 1996
+cs302 syllabus, fall 1996
+cs302 syllabus, fall 1996
+cs302 syllabus, fall 1996
+cs302 syllabus, fall 1996
+cs302 syllabus, fall 1996

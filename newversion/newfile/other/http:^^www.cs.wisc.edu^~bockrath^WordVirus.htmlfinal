@@ -1,0 +1,79 @@
+word virus
+
+this virus has been going around, if you have microsoft word, please
+check your system.
+
+(this info is from tech-partners)
+the "concept" virus is written using a wordbasic auto macro, which
+means that it can affect both macintosh and windows versions of
+word 6, and  word 7 for windows '95. the current version is harmless
+but there is no reason why it could not be altered to be harmful;
+anyone who has the virus has the source code.
+
+here's microsoft's recommendation for how to deal with this
+virus (excerpted from their tech-note #q134727 in the 
+microsoft
+knowledgebase choose the
+product category "word for windows and macintosh" and you can
+type in this article number as a keyword to retrieve the entire
+article.)
+
+how to remove the "concept" virus
+
+         remove the macros:
+             
+              on the tools menu, click macro.
+
+              in the macros available in list, click all active
+                templates.
+
+              select the macro named aaazao.
+
+              click the delete button. click yes when asked if you want
+                to delete the macro.
+
+              repeat these steps for the macros named aaazfs, autoopen,
+                and filesaveas.
+             
+                note: leave the macro named payload in the template.
+                although this macro was installed by the prank macro, its
+                presence prevents the prank macro from installing itself
+                in the future.
+
+           correct any affected documents (you must first complete step 1
+             in order for this to work):
+
+              open a document that has been affected by the document (a
+                dialog box containing the number one appears when you do
+                this).
+
+              select the entire document by pressing ctrl+a or by
+                clicking select all on the edit menu.
+
+              eliminate the document's final paragraph mark from the
+                selection by pressing shift+left arrow.
+
+              on the edit menu, click copy.
+
+              on the file menu, click new. select the template you
+                want to use, and click ok.
+
+              on the edit menu, click paste.
+
+              save the document.
+             
+       
+ 
+
+
+
+word virus
+word virus
+word virus
+word virus
+word virus
+word virus
+word virus
+word virus
+word virus
+word virus

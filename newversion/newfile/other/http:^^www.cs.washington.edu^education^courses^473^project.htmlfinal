@@ -1,0 +1,121 @@
+cse 473 project
+
+
+cse 473 project
+ 
+
+
+topic descriptions due friday, may 17.
+preliminary demonstrations due friday, may 24.
+final demonstrations and reports due friday, may 31.
+
+
+rationale
+
+to do justice to more than just a few topics in artificial intelligence
+would require more than a single 3-credit, one-quarter course.
+the project offers you an opportunity to choose for yourself one topic for
+in-depth examination.  this can be one that we don't get to cover
+in the course, or it can be one we have already covered.
+you have the flexibility to work either alone or in a partnership
+with another student in the class.  you may be able to apply some of
+the representation and inference techniques we have studied
+so far.  in any case, you can put to good use the fluency in lisp
+that you have developed over the past few weeks.
+
+topics
+
+you may select any of chapters 5-14
+of the text as your topic area.  within the chapter, select
+a specific topic, such as the use of augmented transition
+networks in the stone world program within natural language
+understanding in chapter 11.
+
+
+
+if you choose a topic that we have already covered in class,
+then your project should explore that topic in greater depth.
+if you choose a topic that we haven't gotten to, then you may
+wish to use one of the sample programs in the text as a starting
+point, and then implement additional features and perform some
+experiments.
+
+
+on friday, may 17, turn in a project topic description that includes
+the following:
+
+ name(s)
+ project name (should be descriptive)
+ book chapter selected
+ name of sample program, if any, you plan to work from.
+ new features or ideas you wish to explore.
+ how the work will be divided, if you are working in a partnership.
+ (not required, but strongly encouraged:)
+a bibliographic reference (other than the text)
+for additional reading on your
+chosen topic.  give a two or three sentence summary of what this
+reference contains that is relevant to your project.
+
+
+whether you select machine learning, natural-language understanding,
+vision, or neural networks, you may wish to design your project
+to work with input data from the world-wide web.
+for example, you may wish to train a neural network to
+distinguish between different types of html files, or you may wish
+to do pattern recognition experiments on images downloaded from
+various online galleries or home pages.
+
+jeremy and i strongly suggest that your project be executed in
+a way that can help others learn something about ai.  to make
+your project useful in this regard, give informal demonstrations
+to classmates from time to time, and ask them for suggestions
+on how to make the program better or more understandable.
+
+preliminary demonstrations
+
+be prepared to show a lisp program on friday, may 24, that
+does something interesting.  if you are using a sample program
+from the text, your demo should include some novel new feature(s).
+
+alternatively, instead of giving a demo at this time, you
+may turn in a 1-page progress report in class.
+
+
+
+
+
+final demonstrations and reports
+
+on may 31, turn in both a diskette with your lisp program,
+and a hardcopy report on your project.  here are the guidelines
+for 
+
+the form of the report.
+
+
+
+
+
+
+
+
+
+
+
+tanimoto@cs.washington.edu
+
+
+
+
+
+
+cse 473 project
+cse 473 project
+cse 473 project
+cse 473 project
+cse 473 project
+cse 473 project
+cse 473 project
+cse 473 project
+cse 473 project
+cse 473 project

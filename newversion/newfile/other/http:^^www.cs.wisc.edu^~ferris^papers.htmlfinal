@@ -1,0 +1,504 @@
+papers of michael c. ferris 
+
+ papers of michael c. ferris 
+
+
+  [fp96] 
+
+m.~c. ferris and j.~s. pang, editors.
+complementarity and variational problems: state of the art,
+  philadelphia, pennsylvania, 1996. siam.
+
+
+  [fz96] 
+
+m. c. ferris and s. k zavriev.
+the linear convergence of a successive linear programming
+  algorithm.
+technical report, computer sciences department, university of wisconsin,
+  madison, wisconsin, 1996.
+
+
+  [af96] 
+
+e. j. anderson and m. c. ferris.
+a direct search algorithm for optimization with noisy function
+  evaluations.
+technical report, computer sciences department, university of wisconsin,
+  madison, wisconsin, 1996.
+
+
+
+  [fmm96]
+
+m. c. ferris, m. p. mesnier, and j. mor\'e.
+the neos system for complementarity problems: path.
+mathematical programming technical report 96-08, computer sciences department,
+  university of wisconsin, madison, wisconsin, 1996.
+also available as mcs-p616-1096, mathematics and computer science division,
+  argonne national laboratory.
+
+
+  [tlf97] 
+
+f. tin-loi and m. c. ferris.
+holonomic analysis of quasibrittle fracture with nonlinear
+  softening.
+in ninth international conference on fracture, april 1-5, 1997, 1997.
+accepted for publication in proceedings.
+
+
+
+  [df96]
+
+s. p. dirkse and m. c. ferris.
+crash techniques for large-scale complementarity problems.
+in m.~c. ferris and j.~s. pang, editors, complementarity and variational
+  problems: state of the art, philadelphia, pennsylvania, 1996. siam.
+
+
+
+  [bdf96]
+
+s. c. billups, s. p. dirkse, and m. c. ferris.
+a comparison of large scale mixed complementarity problem
+  solvers.
+computational optimization and applications, forthcoming, 1996.
+
+
+  [fm95] 
+
+m. c. ferris and o. l. mangasarian.
+breast cancer diagnosis via linear programming.
+{ieee} computational science and engineering, 2:70-71, 1995.
+
+
+  [bfr95] 
+
+c. b\"ohringer, m. c. ferris, and t. f. rutherford.
+exemptions, grandfathered permits and the costs of emission
+  restrictions: results from a general equilibrium model for six eu
+  countries.
+in economic aspects of environmental policy making in a federal
+  system, 1995.
+
+
+
+  [fr96]
+
+m. c. ferris and t. f. rutherford.
+accessing realistic complementarity problems within matlab.
+in g.~di pillo and f.~giannessi, editors, proceedings of nonlinear
+  optimization and applications workshop, erice june 1995, new york, 1996.
+  plenum press.
+
+
+
+  [bf96]
+
+s. c. billups and m. c. ferris.
+qpcomp: a quadratic program based solver for mixed complementarity
+  problems.
+mathematical programming, forthcoming, 1996.
+
+
+
+  [fp95]
+
+m. c. ferris and j. s. pang.
+engineering and economic applications of complementarity
+  problems.
+discussion papers in economics 95-7, department of economics, university of
+  colorado, boulder, colorado, 1995.
+
+
+
+  [fmr95]
+
+m. c. ferris, a. meeraus, and t. f. rutherford.
+computing wardropian equilibrium in a complementarity
+  framework.
+mathematical programming technical report 95-03, computer sciences department,
+  university of wisconsin, madison, wisconsin, 1995.
+
+
+
+  [ef94]
+
+j. eckstein and m. c. ferris.
+operator splitting methods for monotone affine variational
+  inequalities, with a parallel application to optimal control.
+mathematical programming technical report 94-17, computer sciences department,
+  university of wisconsin, madison, wisconsin, 1994.
+
+
+
+  [flr96]
+
+m. c. ferris, s. lucidi, and m. roma.
+nonmonotone curvilinear stabilization techniques for unconstrained
+  optimization.
+computational optimization and applications, 6:117-136, 1996.
+
+
+
+  [bf94]
+
+s. c. billups and m. c. ferris.
+solutions to affine generalized equations using proximal
+  mappings.
+mathematical programming technical report 94-15, computer sciences department,
+  university of wisconsin, madison, wisconsin, 1994.
+
+
+
+  [fr95]
+
+m. c. ferris and d. ralph.
+projected gradient methods for nonlinear complementarity problems via
+  normal maps.
+in d.~du, l.~qi, and r.~womersley, editors, recent advances in nonsmooth
+  optimization, pages 57-87. world scientific publishers, 1995.
+
+
+
+  [fh94]
+
+m. c. ferris and j. d. horn.
+partitioning mathematical programs for parallel solution.
+technical report 1232, computer sciences department, university of wisconsin,
+  madison, wisconsin, may 1994.
+
+
+
+  [df96]
+
+s. p. dirkse and m. c. ferris.
+a pathsearch damped newton method for computing general
+  equilibria.
+annals of operations research, forthcoming, 1996.
+
+
+
+  [cf95]
+
+m. cao and m. c. ferris.
+lineality removal for copositive-plus normal maps.
+communications on applied nonlinear analysis, 2:1-10, 1995.
+
+
+
+  [cf96]
+
+m. cao and m. c. ferris.
+$p_c$ matrices and the linear complementarity problem.
+linear algebra and its applications, 246:299-312, 1996.
+
+
+
+  [df95]
+
+s. p. dirkse and m. c. ferris.
+mcplib: a collection of nonlinear mixed complementarity
+  problems.
+optimization methods and software, 5:319-345, 1995.
+
+
+
+  [fp96]
+
+m. c. ferris and j. s. pang.
+nondegenerate solutions and related concepts in affine variational
+  inequalities.
+siam journal on control and optimization, 34:244-263, 1996.
+
+
+
+  [bf96]
+
+s. c. billups and m. c. ferris.
+convergence of an infeasible interior-point algorithm from arbitrary
+  positive starting points.
+siam journal on optimization, 6:316-325, 1996.
+
+
+
+  [df95]
+
+s. p. dirkse and m. c. ferris.
+the path solver: a non-monotone stabilization scheme for mixed
+  complementarity problems.
+optimization methods and software, 5:123-156, 1995.
+
+
+
+  [bf95]
+
+j. v. burke and m. c. ferris.
+a gauss-newton method for convex composite optimization.
+mathematical programming, 71:179-194, 1995.
+
+
+
+  [fm94]
+
+m. c. ferris and o. l. mangasarian.
+parallel variable distribution.
+siam journal on optimization, 4:815-832, 1994.
+
+
+  [fl94] 
+
+m. c. ferris and s. lucidi.
+nonmonotone stabilization methods for nonlinear equations.
+journal of optimization theory and applications, 81:53-71, 1994.
+
+
+
+  [cf96]
+
+m. cao and m. c. ferris.
+a pivotal method for affine variational inequalities.
+mathematics of operations research, 21:44-64, 1996.
+
+
+
+  [cf94]
+
+m. cao and m. c. ferris.
+an interior point algorithm for monotone affine variational
+  inequalities.
+journal of optimization theory and applications, 83:269-283, 1994.
+
+
+  [fer93] 
+
+m. c. ferris.
+the linear complementarity problem.
+bulletin of the american mathematical society, 28:169-175, 1993.
+
+
+  [ef92] 
+
+j. eckstein and m. c. ferris.
+operator splitting methods for monotone linear complementarity
+  problems.
+tmc 239, thinking machines corporation, cambridge, ma 02142, 1992.
+
+
+
+  [dfpr94]
+
+s. p. dirkse, m. c. ferris, p. v. preckel, and t. rutherford.
+the gams callable program library for variational and complementarity
+  solvers.
+mathematical programming technical report 94-07, computer sciences department,
+  university of wisconsin, madison, wisconsin, 1994.
+
+
+
+  [fm93]
+
+m. c. ferris and o. l. mangasarian.
+error bounds and strong upper semicontinuity for monotone affine
+  variational inequalities.
+annals of operations research, 47:293-305, 1993.
+
+
+
+  [bf93]
+
+j. v. burke and m. c. ferris.
+weak sharp minima in mathematical programming.
+siam journal on control and optimization, 31:1340-1359, 1993.
+
+
+  [af94] 
+
+e. j. anderson and m. c. ferris.
+genetic algorithms for combinatorial optimization: the assembly line
+  balancing problem.
+orsa journal on computing, 6:161-173, 1994.
+
+
+
+  [fl91]
+
+m. c. ferris and s. lucidi.
+globally convergent methods for nonlinear equations.
+technical report 1030, computer sciences department, university of wisconsin,
+  madison, wisconsin, 1991.
+
+
+
+  [fer94]
+
+m. c. ferris.
+parallel constraint distribution for convex quadratic
+  programs.
+mathematics of operations research, 19:645-658, 1994.
+
+
+
+  [bfi91]
+
+k. bennett, m. c. ferris, and y. e. ioannidis.
+a genetic algorithm for database query optimization.
+in r.~k. belew and l.~b. booker, editors, proceedings of the fourth
+  international conference on genetic algorithms, pages 400-407, san
+  mateo, california, 1991. morgan kaufmann publishers, inc.
+
+
+
+  [fm91]
+
+m. c. ferris and o. l. mangasarian.
+parallel constraint distribution.
+siam journal on optimization, 1:487-500, 1991.
+
+
+  [cf91] 
+
+m. cao and m. c. ferris.
+genetic algorithms in optimization.
+journal of undergraduate mathematics and its applications, 12:81-90,
+  1991.
+
+
+  [bfq92] 
+
+j. v. burke, m. c. ferris, and m. qian.
+on the clarke subdifferential of the distance function to a closed
+  set.
+journal of mathematical analysis and its applications, 166:199-213,
+  1992.
+
+
+  [fp92] 
+
+m. c. ferris and a. b. philpott.
+on affine scaling and semi-infinite programming.
+mathematical programming, 56:361-364, 1992.
+
+
+  [af90] 
+
+e. j. anderson and m. c. ferris.
+a genetic algorithm for the assembly line balancing problem.
+in proceedings of the integer programming / combinatorial optimization
+  conference, waterloo, ontario, canada, may 28-30. university of
+  waterloo press, 1990.
+
+
+  [fv92] 
+
+m. c. ferris and m. vlach.
+scheduling with earliness and tardiness penalties.
+naval research logistics quarterly, 39:229-245, 1992.
+
+
+  [af89] 
+
+e. j. anderson and m. c. ferris.
+parallel genetic algorithms in optimization.
+in proceedings of the fourth siam conference on parallel processing for
+  scientific computing, chicago, illinois, december 11-13, 1989.
+
+
+  [fm92] 
+
+m. c. ferris and o. l. mangasarian.
+minimum principle sufficiency.
+mathematical programming, 57:1-14, 1992.
+
+
+  [bf91] 
+
+j. v. burke and m. c. ferris.
+characterization of solution sets of convex programs.
+operations research letters, 10:57-60, 1991.
+
+
+  [fer89] 
+
+m. c. ferris.
+parallel solution of extremely large knapsack problems.
+technical report 842, computer sciences department, university of wisconsin,
+  madison, wisconsin, 1989.
+
+
+  [fm91] 
+
+m. c. ferris and o. l. mangasarian.
+finite perturbation of convex programs.
+applied mathematics and optimization, 23:263-273, 1991.
+
+
+  [fer90] 
+
+m. c. ferris.
+iterative linear programming solution of convex programs.
+journal of optimization theory and applications, 65:53-65, 1990.
+
+
+  [fer91] 
+
+m. c. ferris.
+finite termination of the proximal point algorithm.
+mathematical programming, 50:359-366, 1991.
+
+
+  [fer88] 
+
+m. c. ferris.
+weak sharp minima and penalty functions in mathematical
+  programming.
+technical report 779, computer sciences department, university of wisconsin,
+  madison, wisconsin, 1988.
+
+
+  [fp89] 
+
+m. c. ferris and a. b. philpott.
+an interior point algorithm for semi-infinite linear
+  programming.
+mathematical programming, 43:257-276, 1989.
+
+
+  [fp88] 
+
+m. c. ferris and a. b. philpott.
+on the performance of karmarkar's algorithm.
+journal of the operational research society, 39:257-270, 1988.
+
+
+  [fer88] 
+
+m. c. ferris.
+weak sharp minima and penalty functions in mathematical
+  programming.
+phd thesis, university of cambridge, england, 1988.
+
+
+  [fer85] 
+
+m. c. ferris.
+linear programming and minimum weight design - a comparison of methods
+  for solving a class of structural optimization problems.
+master's thesis, university of cambridge, england, 1985.
+
+
+
+
+
+
+ papers of michael c. ferris 
+ papers of michael c. ferris 
+ papers of michael c. ferris 
+ papers of michael c. ferris 
+ papers of michael c. ferris 
+ papers of michael c. ferris 
+ papers of michael c. ferris 
+ papers of michael c. ferris 
+ papers of michael c. ferris 
+ papers of michael c. ferris

@@ -1,0 +1,192 @@
+a1pgm.html
+   
+
+
+
+cs354, fall 1996
+
+program 1, due monday september 16, before 5pm.
+
+
+purpose: to learn how to use the sal/mal
+simulator, to learn basic sal instructions, to learn how to code
+simple procedure calls in assembly language, to learn about problems
+involving the representation of information.
+
+estimated time-to-complete: 3 - 5 hours.
+
+program description: write a sal program that reads an
+integer and prints its value in roman numeral notation.
+
+use the subtractive representation, for example, write 4 as iv,
+not as iiii. the seven roman numerals are: i = 1, v = 5, x = 10, l =
+50, c = 100, d = 500 and m = 1000. use upper case letters in your
+output. within a number in roman numeral notation, letters with
+higher values should be written to the left of those with lower
+values, except for pairs that use the subtractive representation -
+this rule leads to a unique representation of the number in the roman
+numeral notation.
+
+note - the subtractive representation was not used by the romans.
+it was introduced about 200 years ago in order to shorten the strings
+of roman numerals. the "arabic" notation for numbers was actually
+created and discovered by the hindus and was brought to europe by the
+arabs. it began being used in about 1275 by european scholars.
+
+algorithm: to convert a number from the standard arabic
+notation to the roman notation you need to do the following steps.
+
+
+(1) determine the number of thousands, hundreds, tens and units in
+the number
+
+(2) for each thousand, write an m (1,000,000 would give 1000 m's,
+we will use smaller numbers)
+
+(3) write the hundreds, if any, using letters c, d and m, as:
+
+c, cc, ccc, cd, d, dc, dcc, dccc, cm
+
+
+(4) write the tens, if any, using letters x, l and c, as:
+
+x, xx, xxx, xl, l, lx, lxx, lxxx, xc
+
+
+(5) write the units, if any, using letters i, v and x, as:
+
+i, ii, iii, iv, v, vi, vii, viii, ix
+
+
+example of how the algorithm works: 1986 is mcmlxxxvi since
+1986 is
+
+
+   
+      
+         1000
+      
+         +
+      
+         900
+      
+         +
+      
+         80
+      
+         +
+      
+         6
+      
+   
+      
+         m
+      
+         &nbsp;
+      
+         cm
+      
+         &nbsp;
+      
+         lxxx
+      
+         &nbsp;
+      
+         vi
+      
+   
+      
+         1
+         
+         thousands
+      
+         &nbsp;
+      
+         9
+         
+         hundreds
+      
+         &nbsp;
+      
+         8
+         
+         tens
+      
+         &nbsp;
+      
+         6
+         
+         units
+      
+
+
+notice that the form of the hundreds, tens and units is the same,
+but that different letters are used in the three cases. this means
+that a single procedure can be used to write the hundreds, tens and
+units.
+
+specific requirements for your program:
+
+(1) write a main program that reads an integer, breaks it into
+hundreds, tens and units, and, with the help of a procedure called
+"convert," prints the corresponding value in roman numeral notation.
+
+
+(2) procedure "convert" should have four input parameters: an
+integer from 1 through 9 and three characters. the integer would be
+the number of hundreds, tens or units and the characters would be the
+characters corresponding to hundreds, tens or units. the procedure
+should print the corresponding sequence of one to four roman
+numerals. the procedure should have no output parameters. if, for
+example, you pass your procedure 8, x, l, and c, it should print
+lxxx. if you pass it 6, i, v, and x it should print vi.
+
+(3) you may assume that your input contains no errors, that is,
+the prompted input will be a single positive integer. your labeled
+output should follow on the next line. your program should process a
+single integer and then quit. a sample run would look like:
+
+
+   enter a positive integer: 1986 &lt;- you enter the "1896"
+   
+   in roman numerals: mcmlxxxvi &lt;- the machine responds
+
+
+here are two more sample runs:
+
+
+   enter a positive integer: 8
+   
+   in roman numerals: viii
+   
+   &nbsp;
+   
+   enter a positive integer: 4067
+   
+   in roman numerals: mmmmlxvii
+
+
+handing in your program: you must "hand in" your program
+(the sal source code) to the computer directly by running the script
+
+
+handin1 program1.s
+
+just once, where "program1.s" is the name of the file containing
+your sal source code. no printouts will be turned in. the ta/grader
+will run your program several times using different test data.
+
+
+
+
+
+a1pgm.html
+a1pgm.html
+a1pgm.html
+a1pgm.html
+a1pgm.html
+a1pgm.html
+a1pgm.html
+a1pgm.html
+a1pgm.html
+a1pgm.html

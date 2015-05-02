@@ -1,0 +1,95 @@
+cse 567 syllabus
+
+
+
+
+
+cse 567: principles of digital systems design 
+carl ebeling, fall 1996 
+
+
+
+syllabus
+
+the goal of this course to give an overall understanding of how
+computation is implemented in hardware.  the class starts with the
+basics of implementing functional (combinational) and sequential
+computations.  it builds on this to discuss methodologies for
+designing and implementing large systems comprising many components.
+standard system components like memories, datapath elements and busses
+are described and models for combining them to perform both general
+and special-purpose computation are covered.  topics also include
+system specification using a hardware description language and
+synthesis and optimization of combinational and sequential circuits.
+
+  switching algebra. 3 lectures.
+ boolean algebra
+ switching networks
+ basic theorems
+ canonical logic forms
+
+
+  combinational logic. 5 lectures.
+ analysis and synthesis of combinational logic
+ don't care information
+ two-level and multi-level logic minimization
+
+
+  sequential logic. 5 lectures.
+ synchronous circuits
+ clocking methodologies
+ fsm synthesis and optimization
+ synchronous vs. self-timed systems
+
+
+  specification, synthesis and validation tools 3 lectures
+ verilog hardware description language
+ structural vs. behavioral specification
+ simulation using verilog-xl
+ circuit synthesis using synopsis
+
+
+  regular structures and system components. 5 lectures.
+ decoders, multiplexors and encoders
+ shifters
+ adders, alus and multipliers
+ register files
+ static and dynamic ram design
+ plas and roms
+ bus structures and communication
+
+
+  vlsi processor design. 4 lectures.
+ control/datapath model of computation
+ datapath organization
+ control logic alternatives
+ pipelining
+ retiming
+
+
+  special-purpose computation structures. 4 lectures
+ custom computation
+ overview of high-level synthesis
+ systolic arrays
+ dsp computation
+
+
+
+
+
+ebeling@cs.washington.edu
+
+
+
+
+
+cse 567 syllabus
+cse 567 syllabus
+cse 567 syllabus
+cse 567 syllabus
+cse 567 syllabus
+cse 567 syllabus
+cse 567 syllabus
+cse 567 syllabus
+cse 567 syllabus
+cse 567 syllabus

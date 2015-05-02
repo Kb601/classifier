@@ -1,0 +1,969 @@
+cs 537 - processes, part iii (implementation) 
+
+
+
+
+
+
+cs 537lecture notesprocesses and synchronization, part iii
+implementation of processes
+
+
+
+
+contents
+
+ implementing monitors 
+ implementing semaphores 
+ implementing critical sections 
+ short-term scheduling 
+
+
+
+
+
+
+ implementing processes 
+
+we presented processes from the ``user's'' point of view bottom-up:
+starting with the process concept, then introducing semaphores as
+a way of synchronizing processes, and finally adding a higher-level
+synchronization facility in the form of monitors.
+we will now explain how to implement these things in the opposite order,
+starting with monitors, and finishing with the mechanism for making
+processes run.
+
+tanenbaum makes a big deal out of showing that various synchronization
+primitives are equivalent to each other (section 2.2.9).
+while this is true, it kind of misses the point.
+it is easy to implement semaphores with monitors (as you saw in the
+first part of project 2), but that's not the
+way it usually works.  normally, semaphores (or something very like
+them) are implemented using lower level facilities, and then they
+are used to implement monitors.
+
+  implementing monitors  
+
+assuming that all we have is semaphores, and we would rather have monitors.
+we will assume that our semaphores have an extra operation, beyond the the
+standards operations up and down:
+if s is a semaphore, s.awaited() returns true if
+any processes are currently waiting for the semaphore.
+this feature is not normally provided with semaphores because a race
+condition limits its usefulness:
+by the time s.awaited() returns true, some other process may have
+done s.up(), making it false.
+it so happens that this is not a problem for the way we will use semaphores
+to implement monitors.
+
+since monitors are a language feature, they are implemented with the
+help of a compiler.
+in response to the keywords monitor, condition, signal,
+wait, and notify, the compiler inserts little bits of code
+here and there in the program.
+we will not worry about how the compiler manages to do that, but only
+concern ourselves with what the code is and how it works.
+
+the monitor keyword says that there should be mutual exclusion
+between the methods of the monitor class (the effect is similar to
+making every method a synchronized method in java).
+thus the compiler creates a semaphore mutex initialized to 1 and adds
+
+    muxtex.down();
+
+to the head of each method.  it also adds a chunk of code that we
+call exit (described below) to each place where a method may return--at
+the end of the procedure, at each return statement, at each point where
+an exception may be thrown, at each place where a goto might leave the
+procedure (if the language has gotos), etc.  finding all these return
+points can be tricky in complicated procedures, which is why we want the
+compiler to help us out.
+
+when a process signals or notifies a condition variable
+on which some other process is waiting, we have a problem:
+we can't both of the processes immediately continue, since that would
+violate the cardinal rule that there may never be more than one process
+active in methods of the same monitor object at the same time.
+thus we must block one of the processes:  the signaller in the case
+of signal and the waiter in the case of notify
+we call this semaphore highpriority since processes blocked on
+it are given preference over processes blocked on mutex trying
+to get in ``form the outside.''
+the highpriority semaphore is initialized to zero.
+
+each condition variable c becomes a semaphore c_sem
+initialized to zero, and c.wait() becomes
+
+    if (highpriority.awaited())
+        highpriority.up();
+    else
+        mutex.up();
+    c_sem.down();
+
+before a process blocks on a condition variable, it lets some other
+process go ahead, preferably one waiting on the highpriority
+semaphore.
+
+the operation c.signal() becomes
+
+    if (c_sem.awaited()) {
+        c_sem.up();
+        highpriority.down();
+    }
+
+notice that a signal of a condition that is not awaited has
+no effect, and that a signal of a condition that is awaited
+immediately blocks the signaller.
+
+finally, the code for exit which is placed at every return point, is
+
+    if (highpriority.awaited())
+        highpriority.up();
+    else
+        mutex.up();
+
+note that this is the same code as for c.wait(), except for the
+final c_sem.down().
+
+in systems that use notify (such as java), c.notify() is
+replaced by
+
+    if (c_sem.awaited()
+        c_sem.up();
+
+in these systems, the code for c.wait() also has to be modified
+to wait on the highpriority semaphore after getting the semaphore
+associated with the condition:
+
+    if (highpriority.awaited())
+        highpriority.up();
+    else
+        mutex.up();
+    c_sem.down();
+    highpriority.down();
+
+no system offers both signal and notify.
+
+this generic implementation of monitors can be optimized in special cases.
+first, note that a process that exits the monitor immediately after
+doing a signal need not wait on the highpriority semaphore.
+this turns out to be a very common occurrence, so it's worth optimizing
+for this special case.
+if signal is only allowed just before a return, 
+the implementation can be further simplified:
+see fig 2-16 on page 53 of tanenbaum.
+finally, note that we do not use the full generality of semaphores in
+this implementation of monitors.
+the semaphore mutex only takes on the values 0 and 1 (it is a
+so-called binary semaphore) and the other semaphores never
+have any value other than zero.
+
+  implementing semaphores  
+
+a simple-minded attempt to implement semaphores might look like this:
+
+    class semaphore {
+        private int value;
+        semaphore(int v) { value = v; }
+        public void down() {
+            while (value == 0) {}
+            value--;
+        }
+        public void up() {
+            value++;
+        }
+    }
+
+there are two things wrong with this solution:
+first, as we have seen before, attempts to manipulate a shared variable without
+synchronization can lead to incorrect results, even
+if the manipulation is as simple as value++.
+if we had monitors, we could make the modifications of value atomic
+by making the class into a monitor (or by making each method
+synchronized), but remember that monitors are implemented with
+semaphores, so we have to implement semaphores with something even more
+primitive.
+for now, we will assume that we have critical sections:
+if we bracket a section of code with begin_cs and end_cs,
+
+    begin_cs
+        do something;
+    end_cs
+
+the code will execute atomically, as if it were protected by a semaphore
+
+    mutex.down();
+        do something;
+    mutex.up();
+
+where mutex is a semaphore initialized to 1.
+of course, we can't actually use a semaphore to implement semaphores!
+we will show how to implement begin_cs and end_cs in the
+next section.
+
+the other problem with our implementation of semaphores is that it
+includes a busy wait.
+while semaphore.down() is waiting for value to become
+non-zero, it is looping, continuously testing the value.
+even if the waiting process is running on its own cpu, this busy waiting
+may slow down other processes, since it is repeatedly accessing shared memory,
+thus interfering with accesses to that memory by other cpu's (a shared memory
+unit can only respond to one cpu at a time).
+if there is only one cpu, the problem is even worse:
+because the process calling down() is running, another process that
+wants to call up() may not get a chance to run.
+what we need is some way to put a process to sleep.
+if we had semaphores, we could use a semaphore, but once again, we need
+something more primitive.
+
+for now, let us assume that there is a data structure called a pcb
+(short for ``process control block'') that contains information about a
+process, and a procedure swap_process that takes a pointer to a pcb as
+an argument.
+when swap_process(pcb) is called, state of the currently running process
+(the one that called swap_process) is saved in pcb and the cpu
+starts running the process whose state was previously stored in pcb
+instead.
+given begin_cs, end_cs, and swap_process, the
+complete implementation of semaphores is quite simple (but very subtle!).
+
+    class semaphore {
+        private pcb_queue waiters;    // processes waiting for this semaphore
+        private int value;            // if negative, number of waiters
+
+        static pcb_queue ready_list;  // list of all processes ready to run
+
+        semaphore(int v) { value = v; }
+
+        public void down() {
+            begin_cs
+                value--;
+                if (value &lt; 0) {
+                    // the current process must wait
+
+                    // find some other process to run.  the ready_list must
+                    // be non-empty or there is a global deadlock.
+                    pcb pcb = ready_list.dequeue();
+
+                    swap_process(pcb);
+
+                    // now pcb contains the state of the process that called
+                    // down(), and the currently running process is some
+                    // other process.
+                    waiters.enqueue(pcb);
+                }
+            end_cs
+        }
+        public void up() {
+            begin_cs
+                value++;
+                if (value &lt;= 0) {
+                    // the value was previously negative, so there is
+                    // some process waiting.  we must wake it up.
+                    pcb pcb = waiters.dequeue();
+                    ready_list.enqueue(pcb);
+                }
+            end_cs
+        }
+    } // semaphore
+
+the implementation of swap_process is ``magic'':
+
+    /* this procedure is probably really written in assembly language,
+     * but we will describe it in java.  assume the cpu's current
+     * stack-pointer register is accessible as &quot;sp&quot;.
+     */
+    void swap_process(pcb pcb) {
+        int new_sp = pcb.saved_sp;
+        pcb.saved_sp = sp;
+        sp = new_sp;
+    }
+
+as we mentioned
+earlier,
+each process has its own stack with a stack frame for
+each procedure that process has called but not yet completed.
+each stack frame contains, at the very least, enough information
+to implement a return from the procedure:
+the address of the instruction that called the procedure, and a pointer
+to the caller's stack frame.
+each cpu devotes one of its registers (call it sp) to point to
+the current stack frame of the process it is currently running.
+when the cpu encounters a return statement, it reloads its
+sp and pc (program counter) registers from the stack frame.
+an approximate description in pseudo-java might be something like this.
+
+    class stackframe {
+        int callers_sp;
+        int callers_pc;
+    }
+    stackframe sp;    // the current stack pointer
+
+    // here's how to do a &quot;return&quot;
+    instruction_address return_point = sp.callers_pc;
+    sp = sp.callers_sp;
+    goto return_point;
+
+(of course, there isn't really a goto statement in java, and this
+would all be done in the hardware or a sequence of assembly language
+statements).
+
+suppose process p0 calls swap_process(pcb), where
+pcb.saved_sp points to a stack frame representing a call of
+swap_process by some other process p1.
+the call to swap_process creates a frame on p0's stack
+and makes sp point to it.
+the second statement of swap_process saves a pointer to that stack
+frame in pcb.
+the third statement then loads sp with a pointer to p1's
+stack frame for swap_process.
+now, when the procedure returns, it will be a return to whatever
+procedure called swap_process in process p1.
+    
+  implementing critical sections  
+
+the final piece in the puzzle is to implement begin_cs and
+end_cs.
+there are several ways of doing this, depending on the hardware
+configuration.
+first suppose there are multiple cpu's accessing a single shared memory
+unit.
+generally, the memory or bus hardware serializes requests to
+read and write memory words.
+for example, if two cpu's try to write different values to the same
+memory word at the same time, the net result will be one of the two values,
+not some combination of the values.
+similarly, if one cpu tries to read a memory word at the same time another
+modifies it, the read will return either the old or new value--it will not
+see a ``half-changed'' memory location.
+surprisingly, that is all the hardware support we need to implement
+critical sections.
+
+the first solution to this problem was discovered by the dutch mathematician
+t. dekker.
+a simpler solution was later discovered by gary peterson.
+peterson's solution looks deceptively simple.
+to see how tricky the problem is, let us look at a couple of simpler-- but
+incorrect--solutions.
+for now, we will assume there are only two processes, p0 and p1.
+the first idea is to have the processes take turns.
+
+    shared int turn;             // 1 or 2, depending on 
+    void begin_cs(int i) {       // process i's version of begin_cs
+        while (turn != i) { /* do nothing */ }
+    }
+    void end_cs(int i) {         // process i's version of end_cs
+        turn = 1 - i;            // give the other process a chance.
+    }
+
+this solution is certainly safe, in that it never allows both
+processes to be in their critical sections at the same time.
+the problem with this solution is that it is not live.
+if process p0 wants to enter its critical section and turn == 1,
+it will have to wait until process p1 decides to enter and then
+leave its critical section.
+since we will only used critical sections to protect short operations
+(see the implementation of semaphores
+above), it is reasonable to assume that
+a process that has done begin_cs will soon do end_cs,
+but the converse is not true:  there's no reason to assume that the
+other process will want to enter its critical section any time in the
+near future (or even at all!).
+
+to get around this problem, a second attempt to solve the problem uses
+a shared array critical to indicate which processes are in
+their critical sections.
+
+    shared boolean critical[] = { false, false };
+    void begin_cs(int i) {
+        critical[i] = true;
+        while (critical[1 - i]) { /* do nothing */ }
+    }
+    void end_cs(int i) {
+        critical[i] = false;
+    }
+
+this solution is unfortunately prone to deadlock.
+if both processes set their critical flags to true at
+the same time, they will each loop forever, waiting for the other
+process to go ahead.
+if we switch the order of the statements in begin_cs, the solution
+becomes unsafe.
+both processes could check each other's critical states at the same
+time, see that they were false, and enter their critical sections.
+finally, if we change the code to
+
+    void begin_cs(int i) {
+        critical[i] = true;
+        while (critical[1 - i]) {
+            critical[i] = false;
+            /* perhaps sleep for a while */
+            critical[i] = true;
+        }
+    }
+
+livelock can occur.
+the processes can get into a loop in which each process sets its own
+critical flag, notices that the other critical flag is
+true, clears its own critical flag, and repeats.
+
+peterson's (correct) solution combines ideas from both of these attempts.
+like the second ``solution,'' each process signals its desire to enter
+its critical section by setting a shared flag.
+like the first ``solution,'' it uses a turn variable, but it
+only uses it to break ties.
+
+    shared int turn;
+    shared boolean critical[] = { false, false };
+    void begin_cs(int i) {
+        critical[i] = true;     // let other guy know i'm trying
+        turn = 1 - i;           // be nice: let him go first
+        while (
+            critical[j-1]  // the other guy is trying
+            &amp;&amp; turn != i   // and he has precedence
+        ) { /* do nothing */ }
+    }
+    void end_cs(int i) {
+        critical[i] = false;    // i'm done now
+        
+    }
+
+
+peterson's solution, while correct, has some drawbacks.
+first, it employs a busy wait (sometimes called a spin lock)
+which is bad for reasons suggested above.
+however, if critical sections are only used to protect very short
+sections of code, such as the down and up operations on
+semaphores as above, this isn't too bad a problem.
+two processes will only rarely attempt to enter their critical sections
+at the same time, and even then, the loser will only have to ``spin'' for
+a brief time.
+a more serious problem is that peterson's solution only works for two processes.
+next, we present three solutions that work for arbitrary numbers of
+processes.
+
+most computers have additional hardware features that make the
+critical section easier to solve.
+one such feature is a ``test and set'' instruction that sets a memory location
+to a given value and at the same time records in the cpu's unshared
+state information about the location's previous value.
+for example, the old value might be loaded into a register, or
+a condition code might be set to indicate whether the old value was zero.
+tanenbaum presents in fig 2-9 on page 39 a solution using test-and-set.
+here is a version using java-like syntax
+
+    shared boolean lock = false;    // true if any process is in its cs
+    void begin_cs() {               // same for all processes
+        for (;;) {
+            boolean key = testandset(lock);
+            if (!key)
+                return;
+        }
+    }
+    void end_cs() {
+        lock = false;
+    }
+
+some other computers have a swap instruction that swaps the
+value in a register with the contents of a shared memory word.
+
+    shared boolean lock = false;    // true if any process is in its cs
+    void begin_cs() {               // same for all processes
+        boolean key = true;
+        for (;;) {
+            swap(key, lock)
+            if (!key)
+                return;
+        }
+    }
+    void end_cs() {
+        boolean key = false;
+        swap(key, lock)
+    }
+
+
+the problem with both of these solutions is that they do not necessarily
+prevent starvation.
+if several processes try to enter their critical sections at the same time,
+only one will succeed (safety) and the winner will be chosen in a bounded
+amount of time (liveness), but the winner is chosen essentially randomly,
+and there is nothing to prevent one process from winning all the time.
+the ``bakery algorithm'' of leslie lamport solves this problem.
+when a process wants to get service, it takes a ticket.
+the process with the lowest numbered ticket is served first.
+the process id's are used to break ties.
+
+    static final int n = ...;         // number of processes
+
+    shared boolean choosing[] = { false, false, ..., false };
+    shared int ticket[] = { 0, 0, ..., 0 };
+
+    void begin_cs(int i) {
+        choosing[i] = true;
+        ticket[i] = 1 + max(ticket[0], ..., ticket[n-1]);
+        choosing[i] = false;
+        for (int j=0; j&lt;n; j++) {
+            while (choosing[j]) { /* nothing */ }
+            while (ticket[j] != 0
+                &amp;&amp; (
+                    ticket[j] &lt; ticket[i]
+                    || (ticket[j] == ticket[i] &amp;&amp; j &lt; i)
+                ) { /* nothing */ }
+        }
+    }
+    void end_cs(int i) {
+        ticket[i] = 0;
+    }
+
+
+finally, we note that all of these solutions to the critical-section
+problem assume multiple cpu's sharing one memory.
+if there is only one cpu, we cannot afford to busy-wait.
+however, the good news is that we don't have to.
+all we have to do is make sure that the short-term scheduler (to be
+discussed in the next section) does not switch processes while
+a process is in a critical section.
+one way to do this is simply to block interrupts.
+most computers have a way of preventing interrupts from occurring.
+it can be dangerous to block interrupts for an extended period of time,
+but it's fine for very short critical sections, such as the ones used
+to implement semaphores.
+note that a process that blocks on a semaphore does not need mutual exclusion
+the whole time it's blocked; the critical section is only long enough to
+decide whether to block.
+
+  short-term scheduling  
+
+earlier, we called a process
+that is not blocked ``runnable'' and said that a runnable process is either
+ready or running.
+in general, there is a list of runnable processes called the ready
+list.
+each cpu picks a process from the ready list and runs
+it until it blocks.
+it then chooses another process to run, and so on.
+the implementation of semaphores
+above illustrates this.
+this switching among runnable processes is called short-term
+scheduling1, and the algorithm that
+decides which process to run and how long to run it is called a short-term
+scheduling policy or discipline.
+some policies are preemptive, meaning that the cpu may switch
+processes even when the current process isn't blocked.
+
+before we look at various scheduling policies, it is worthwhile to 
+think about what we are trying to accomplish.
+there is a tension between maximizing overall efficiency and giving
+good service to individual ``customers.''
+from the system's point of view, two important measures are
+
+throughput.
+the amount of useful work accomplished per unit time.
+this depends, of course, on what constitutes ``useful work.''
+one common measure of throughput is jobs/minute (or second, or hour,
+depending on the kinds of job).
+utilization.
+for each device, the utilization of a device is the fraction
+of time the device is busy.
+a good scheduling algorithm keeps all the devices (cpu's, disk drives, etc.)
+busy most of the time.
+
+both of these measures depend not only on the scheduling algorithm, but
+also on the offered load.
+if load is very light--jobs arrive only infrequently--both throughput
+and utilization will be low.
+however, with a good scheduling algorithm, throughput should increase
+linearly with load until the available hardware is saturated and throughput
+levels off.
+
+
+
+
+each ``job''2 also wants good service.
+in general, ``good service'' means good response:
+it is starts quickly, runs quickly, and finishes quickly.
+there are several ways of measuring response:
+
+turnaround.
+the length of time between when the job arrives in the system and when
+it finally finishes.
+response time.
+the length of time between when the job arrives in the system and when
+it starts to produce output.
+for interactive jobs, response time might be more important than turnaround.
+waiting time.
+the amount of time the job is ready (runnable but not running).
+this is a better measure of scheduling quality than turnaround, since
+the scheduler has no control of the amount of time the process spends
+computing or blocked waiting for i/o.
+penalty ratio.
+elapsed time divided by the sum of the cpu and i/o demands of the
+the job.
+this is a still better measure of how well the scheduler is doing.
+it measures how many times worse the turnaround is than it would be
+in an ``ideal'' system.
+if the job never had to wait for another job, could allocate each i/o device
+as soon as it wants it, and experienced no overhead for other operating
+system functions, it would have a penalty ratio of 1.0.
+if it takes twice as long to complete as it would in the perfect system,
+it has a penalty ration of 2.0.
+
+to measure the overall performance, we can then combine the performance
+of all jobs using any one of these measures and any way of combining.
+for example, we can compute average waiting time as the average
+of waiting times of all jobs.
+similarly, we could calculate the sum of the waiting times, the
+average penalty ratio, the variance in response time, etc.
+there is some evidence that a high variance in response time can be
+more annoying to interactive users than a high mean (within reason).
+
+since we are concentrating on short-term (cpu) scheduling, one useful
+way to look at a process is as a sequence of bursts.
+each burst is the computation done by a process between the time
+it becomes ready and the next time it blocks.
+to the short-term scheduler, each burst looks like a tiny ``job.''
+first-come-first-served
+
+the simplest possible scheduling discipline is called first-come,
+first-served (fcfs).
+the ready list is a simple queue (first-in/first-out).
+the scheduler simply runs the first job on the queue until it blocks, then
+it runs the new first job, and so on.
+when a job becomes ready, it is simply added to the end of the queue.
+
+here's an example, which we will use to illustrate all the scheduling
+disciplines.
+
+
+
+    burst    arrival time    burst length
+
+    a    0    3
+
+    b    1    5
+
+    c    3    2
+
+    d    9    5
+
+    e    12    5
+
+
+(all times are in milliseconds).
+the following gantt chart shows the schedule that results from
+fcfs scheduling.
+
+
+
+
+the main advantage of fcfs is that it is easy to write and understand, but
+it has some severe problems.
+if one process gets into an infinite loop, it will run forever and
+shut out all the others.
+even if we assume that processes don't have infinite loops (or take
+special precautions to catch such processes), fcfs tends to excessively favor
+long bursts.
+let's compute the waiting time and penalty ratios for these jobs.
+
+
+
+    burst start time finish time waiting time penalty ratio
+
+    a    0    3    0    1.0
+
+    b    3    8    2    1.4
+
+    c    8    10    5    3.5
+
+    d    10    15    1    1.2
+
+    e    15    20    3    1.6
+
+    average         2.2    1.74
+
+
+as you can see, the shorted burst (c) has the worst penalty ratio.
+the situation can be much worse if a short burst arrives after a very
+long one.  for example, suppose a burst of length 100 arrives at time
+0 and a burst of length 1 arrives immediately after it, at time 1.
+the first burst doesn't have to wait at all, so its penalty ratio is
+1.0 (perfect), but the second burst waits 99 milliseconds, for a penalty
+ratio of 99.
+
+favoring long bursts means favoring
+cpu-bound processes (which have very long cpu bursts between
+i/o operations).
+in general, we would like to favor i/o-bound processes, since if we
+give the cpu to an i/o-bound process, it will quickly finish its burst,
+start doing some i/o, and get out of the ready list.
+consider what happens if we have one cpu-bound process and several i/o-bound
+processes.
+suppose we start out on the right foot and run the i/o-bound processes
+first.
+they will all quickly finish their bursts and go start their i/o operations,
+leaving us to run the cpu-bound job.
+after a while, they will finish their i/o and queue up behind the cpu-bound
+job, leaving all the i/o devices idle.
+when the cpu-bound job finishes its burst, it will start an i/o operation,
+allowing us to run the other jobs.
+as before, they will quickly finish their bursts and start to do i/o.
+now we have the cpu sitting idle, while all the processes are doing i/o.
+since the cpu hog started its i/o first, it will likely finish first,
+grabbing the cpu and making all the other processes wait.
+the system will continue this way, alternating between periods when the
+cpu is busy and all the i/o devices are idle with periods when the cpu
+is idle and all the processes are doing i/o.
+we have destroyed one of the main motivations for having processes in
+the first place:
+to allow overlap between computation with i/o.
+this phenomenon is called the convoy effect.
+
+in summary, although fcfs is simple, it performs poorly in terms of
+global performance measures, such as cpu utilization and throughput.
+it also gives lousy response to interactive jobs (which tend to be
+i/o bound).
+the one good thing about fcfs is that there is no starvation:
+every burst does get served, if it waits long enough.
+shortest-job-first
+
+a much better policy is called shortest-job-first (sjf).
+whenever the cpu has to choose a burst to run, it chooses the
+shortest one.
+(the algorithm really should be called ``shortest burst first'', but
+the name sjf is traditional).
+this policy certainly gets around all the problems with fcfs mentioned
+above.  in fact, we can prove the sjf is optimal with
+respect to average waiting time.
+that is, any other policy whatsoever will have worse average waiting time.
+by decreasing average waiting time, we also improve processor utilization
+and throughput.
+
+here's the proof that sjf is optimal.
+suppose we have a set of bursts ready to run and we run them in some
+order other than sjf.
+then there must be some burst that is run before shorter burst, say
+b1 is run before
+b2, but
+b1 &gt;
+b1.
+if we reversed the order, we would increase the waiting time of
+b1 by
+b2, but decrease the waiting time of
+b2 by 
+b1.
+since
+b1 &gt;
+b1, we have a net decrease in total, and hence average,
+waiting time.
+continuing in this manner to move shorter bursts ahead of longer ones,
+we eventually end up with the bursts sorted in increasing order of size
+(think of this as a bubble sort!).
+
+here's our previous example with sjf scheduling
+
+
+
+    burst start time finish time waiting time penalty ratio
+
+    a    0    3    0    1.0
+
+    b    5    10    4    1.4
+
+    c    3    5    0    1.0
+
+    d    10    15    1    1.2
+
+    e    15    20    3    1.6
+
+    average         1.6    1.24
+
+
+here's the gantt chart:
+
+
+
+
+as described, sjf is a non-preemptive policy.
+there is also a preemptive version of the sjf, which is sometimes called
+shortest-remaining-time-first (srtf).
+whenever a new job enters the ready queue, the algorithm reconsiders which job
+to run.
+if the new arrival has a burst shorter than the remaining
+portion of the current burst, the scheduler moves the current job back
+to the ready queue (to the appropriate position considering the remaining
+time in its burst) and runs the new arrival instead.
+
+with sjf or srtf, starvation is possible.
+a very long burst may never get run, because shorter bursts keep arriving
+in the ready queue.
+we will return to this problem later.
+
+there's only one problem with sjf (or srtf):
+we don't know how long a burst is going to be until we run it!
+luckily, we can make a pretty good guess.
+processes tend to be creatures of habit, so if one burst of a process
+is long, there's a good chance the next burst will be long as well.
+thus we might guess that each burst will be the
+same length as the previous burst of the same process.
+however, that strategy won't work so well if a process has an occasional
+oddball burst that unusually long or short burst.
+not only will we get that burst wrong, we will guess wrong on the next burst,
+which is more typical for the process.
+a better idea is to make each guess the average of the length
+of the immediately preceding burst and the guess we used before that
+burst:
+guess = (guess + previous_burst)/2.
+this strategy takes into account the entire past history of a process
+in guessing the next burst length, but it quickly adapts to changes
+in the behavior of the process, since the ``weight'' of each burst
+in computing the guess drops off exponentially with the time since that
+burst.
+if we call the most recent burst length b1, the
+one before that b2, etc., then the next guess is
+b1/2 + b2/4 + b4/8 + b8/16 +
+....
+round-robin and processor sharing
+
+another scheme for preventing long bursts from getting too much priority
+is a preemptive strategy called round-robin (rr).
+rr keeps all the burst in a queue and runs the first one, like fcfs.
+but after a length of time q (called a quantum), if the
+current burst hasn't completed, it is moved to the tail of the queue
+and the next burst is started.
+here are gantt charts of our example with round-robin and quantum sizes
+of 4 and 1.
+
+
+
+with q = 4, we get an average waiting time of 3.6 and an average
+penalty ratio of 1.98 (work it out yourself!).
+with q = 1, the averages drop to 3.2 and 1.88, respectively.
+the limit, as q approaches zero, is called processor sharing
+(ps).
+ps causes the cpu to be shared equally among all the ready processes.
+in the steady state of ps, when no bursts enter or leave the ready list,
+each burst sees a penalty ratio of exactly n,
+the length of the ready queue.
+of course ps is only of theoretical interest.  there is a substantial
+overhead in switching from one process to another.  if the quantum is
+too small, the cpu will spend most its time switching between processes
+and practically none of it actually running them!
+priority scheduling
+
+there are a whole family of scheduling algorithms that use priorities.
+the basic idea is always to run the highest priority burst.
+priority algorithms can be preemptive or non-preemptive (if a burst arrives
+that has higher priority than the currently running burst, does do we
+switch to it immediately, or do we wait until the current burst finishes?).
+priorities can be assigned externally to processes based on their
+importance.  they can also be assigned (and changed) dynamically.
+for example, priorities can be used to prevent starvation:  if we raise the
+priority of a burst the longer it has been in the ready queue, eventually
+it will have the highest priority of all ready burst and be guaranteed
+a chance to finish.
+one interesting use of priority is sometimes called multi-level feedback
+queues (mlfq).
+we maintain a sequence of fifo queues, numbered starting at zero.
+new bursts are added to the tail of queue 0.
+we always run the burst at the head of the lowest numbered non-empty
+queue.
+if it doesn't complete in complete within a specified time limit,
+it is moved to the tail of the next higher queue.
+each queue has its own time limit:
+one unit in queue 0, two units in queue 1, four units in queue 2,
+eight units in queue 3, etc.
+this scheme combines many of the best features of the other algorithms:
+it favors short bursts, since they will be completed while they
+are still in low-numbered (high priority) queues.
+long bursts, on the other hand, will be run with comparatively few
+expensive process switches.
+
+this idea can be generalized.
+each queue can have its own scheduling discipline, and you can use any
+criterion you like to move bursts from queue to queue.
+there's no end to the number of algorithms you can dream up.
+analysis
+
+it is possible to analyze some of these algorithms mathematically.
+there is a whole branch of computer science called ``queuing theory''
+concerned with this sort of analysis.
+usually, the analysis uses statistical assumptions.
+for example, it is common to assume that the arrival of new bursts is
+poisson:  the expected time to wait until the next new
+burst arrives is independent of how long it has been since the last
+burst arrived.  in other words, the amount of time that has passed since
+the last arrival is no clue to how long it will be until the next
+arrival.  you can show that in this case, the probability of an arrival
+in the next t milliseconds is1 - e-at,
+where a is a parameter called the arrival rate.
+the average time between arrivals is 1/a.
+another common assumption is that the burst lengths follow a similar
+``exponential'' distribution:  the probability that the length of a burst
+is less than t is 1 - e-bt, where b
+is another parameter, the service rate.
+the average burst length is b.
+this kind of system is called an ``m/m/1 queue.''
+
+the ratio p = a/b is of particular
+interest:3
+if p > 1, burst are arriving, on the average, faster than
+they are finishing, so the ready queue grows without bound.
+(of course, that can't happen because there is at most one burst per
+process, but this is theory!)
+if p = 1, arrivals and departures are perfectly balanced.
+
+it can be shown that for fcfs, the average penalty ratio for
+bursts of length t is
+
+p(t) = 1 + p / [ (1-p)bt ] 
+
+as you can see, as t decreases, the penalty ratio increases,
+proving that fcfs doesn't like short bursts.
+also note that as p approaches one, the penalty ration approaches
+infinity.
+
+for processor sharing, as we noticed above, all processes have a penalty
+ratio that is the length of the queue.
+it can be shown that on the average, that length is 1/(1-p).
+
+
+
+1we will see medium-term and long-term scheduling later
+in the course.
+
+2a job might be a batch job (such as printing a run of paychecks),
+an interactive login session, or a command issued by an interactive session.
+it might consist of a single process or a group of related processes.
+
+3actually, a, b, and p are supposed
+to be the greek letters ``alpha,'' ``beta,'' and ``rho,'' but i can't figure
+out how to make them in html.
+
+
+
+
+
+
+solomon@cs.wisc.edu
+
+
+thu oct 31 15:38:53 cst 1996
+
+
+
+copyright &#169; 1996 by marvin solomon.  all rights reserved.
+
+
+
+
+
+cs 537 - processes, part iii (implementation) 
+cs 537 - processes, part iii (implementation) 
+cs 537 - processes, part iii (implementation) 
+cs 537 - processes, part iii (implementation) 
+cs 537 - processes, part iii (implementation) 
+cs 537 - processes, part iii (implementation) 
+cs 537 - processes, part iii (implementation) 
+cs 537 - processes, part iii (implementation) 
+cs 537 - processes, part iii (implementation) 
+cs 537 - processes, part iii (implementation)

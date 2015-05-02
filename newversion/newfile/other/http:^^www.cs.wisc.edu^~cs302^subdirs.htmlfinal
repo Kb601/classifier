@@ -1,0 +1,102 @@
+cs 302: tsao: disk organization (using subdirectories)
+
+
+cs 302 sections 33 &amp 43: disk organization (using subdirectories)
+
+
+in order to keep your disk space organized, you may want to use  
+subdirectories.  in your u: drive, you already have some
+subdirectories, namely windows and email.  to create new
+subdirectories, you should use the file manager:
+
+start the file manager by double-clicking on its icon (in
+the main program group).
+only one window needs to be used in the file manager.  in this
+window, select the u: drive from the drive list, and choose the root
+directory ("u:\") in the directory tree.  the file list will contain
+a list of all of the files and subdirectories in the root directory.
+now, click on the file menu and select the create
+directory... option.  (click here to view what
+the file manager will look like.)
+this will cause a dialog to appear.  in this dialog, type in the name of 
+the subdirectory you want to create.  (a subdirectory's name follows the same
+constraints as a file name.  in general, the extension is not used, thus 
+allowing 8 characters.)  if you want to organize your programs, a good choice
+for the subdirectory's name is progxxxx, where 
+xxxx is the number of the program.  (for example, 
+prog0001, prog0001, etc.)
+in order to use this subdirectory, you can select it when creating a new
+project.  for example, suppose a subdirectory prog0003 was made.  when
+creating the project for program #3, use this subdirectory when filling in the
+project path and name: field:
+
+your source code file, object module, and executable file will automatically 
+be placed within the prog0003 subdirectory.
+
+
+if you already have made a program but want to move it to a newly created
+subdirectory, use should use the file manager to move the files:
+
+first, create a new subdirectory using the first 3 steps above.
+next, in the file manager, open up two windows.  the top window
+should be set up to be the source directory (i.e., the drive and directory
+where the files to be moved currently reside), and the bottom window should 
+be set to the newly created subdirectory (also called the destination 
+directory).
+select all of the files that you want to move from the file list in the
+source directory.  drag the files from the source directory window's file
+list to the destination directory window's file list.  (note: if the source
+and destination drives are the same, this will move the files.  if
+the drives are different, the files will be copied.)
+
+
+for example, suppose you wanted to move a project named prog003 from
+the root directory to the subdirectory prog0003.  all of the files
+that need to be moved have file names starting with prog003, but have
+different extensions.  the files associated with a project have the extensions:
+
+
+[.cpp] - the source code file
+[.h] - the header file
+[.obj] - the object module
+[.csm] - the precompiled headers
+[.ide] - the project file
+[.exe] - the executable program
+[.rc] - resource file
+[.res] - resource script
+[.~de] - a backup of the project file
+[.obr] - other stuff
+[.dsw] - other stuff
+[.rws] - other stuff
+
+
+not all of these files may exist.  it depends upon how far you have gotten 
+in writing a program, and what kind of program you are writing.  (in general,
+the only files which need to be moved are the source code file, the
+header file (if it exists), and the project file.  the other files may be
+deleted.)
+
+
+
+back to: cs 302 home
+page
+
+back to: cs 302: tsao
+
+
+
+
+
+
+
+
+cs 302: tsao: disk organization (using subdirectories)
+cs 302: tsao: disk organization (using subdirectories)
+cs 302: tsao: disk organization (using subdirectories)
+cs 302: tsao: disk organization (using subdirectories)
+cs 302: tsao: disk organization (using subdirectories)
+cs 302: tsao: disk organization (using subdirectories)
+cs 302: tsao: disk organization (using subdirectories)
+cs 302: tsao: disk organization (using subdirectories)
+cs 302: tsao: disk organization (using subdirectories)
+cs 302: tsao: disk organization (using subdirectories)

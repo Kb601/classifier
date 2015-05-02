@@ -1,0 +1,261 @@
+cs631 course information
+
+
+
+
+cs631 course information  
+
+
+what &amp; when
+projects and grades
+the bottom line: what you must do
+
+
+
+
+
+
+what &amp; when
+
+lectures 
+
+
+mon, wed, fri 1:25-2:15 pm olin 155 
+
+
+prerequisites 
+
+
+cs 314 and cs 414, or equivalent courses. students are expected
+to understand fundamental issues in operating systems, file systems,
+and networks and to be comfortable programming in the c programming
+language. 
+lecture notes, texts, and references 
+
+
+multimedia is a new and rapidly developing field. a comprehensive
+text that is appropriate to this course is not available. the
+required readings for this class will consist of selected journal
+and conference articles, as well as notes we will produce. all
+required readings will be made available in class. you are expected
+to read the material before coming to class -- you will
+get significantly more out of the lectures if you do so.
+required 
+
+
+we will hand out course notes and copies of the relevant papers.
+whenever possible, we will place these on-line, but many of the
+papers are not available on line and can only be copied. since
+the copying costs go well beyond the amount allocated for the
+course, you will be ask to pay $30 towards the copying costs.
+please give a check (no cash) to the cindy robinson (upson 4146)
+payable to &quot;cornell university.&quot; in the &quot;memo&quot;
+section of the check, write the course number (cs631).
+optional 
+
+
+partridge, gigabit networking, addison wesley publishing
+company, 1993. 
+jain, fundamentals of digital image processing, prentice
+hall, 1989. 
+
+
+
+you are not required to buy the optional books. partridge is an
+excellent text on next generation networks, jain is a great text
+on digital image processing.
+on-line resources 
+
+
+there will be a newsgroup for this course (cornell.class.cs631)
+and a www home page (http://www.cs.cornell.edu/info/courses/current/cs631).
+the slides used in lecture will be available electronically, as
+will any handouts that we write and several of the papers for
+the course.
+
+
+projects and grades 
+
+laboratory facilities 
+
+
+all enrolled students will be given accounts in the upson cs undergraduate
+lab (room 315). you are welcome to use other machines for doing
+assignments.
+requirements, grading, and regrades 
+
+
+cs631 is a graduate course, and will be graded like one. we expect
+to give out mostly a's, but this depends on your doing the assigned
+work. there is no final exam or mid-term in this course.
+
+your grade is determined by three measures. first, you will be
+graded on your answers to three homework assignments that will
+require programming and/or written responses. second, you will
+complete a small scale research project. the homework assignments
+will constitute 25% of your grade, the project will count for
+75% of your grade. third, you will required to read 75% of the
+papers passed out. for each paper you read, you must post a critique
+of the paper on the web (see below). you must get a passing grade
+on 75% of the critiques to pass this course. the critiques otherwise
+have no effect on your grade.
+
+you should work in groups of two or three on all assignments.
+when working in a group, hand in a single response for
+the group that includes the names of all students in the
+group. the same grade will be given to each student. we expect
+all students in a group to be equally able to answer questions
+about the program or project.
+
+written problem sets should be turned in electronically before
+the beginning of the lecture on the due date. instructions for
+handing in assignments will be given with the assignment. late
+assignments will be rejected. assignments will be returned electronically.
+
+grades will be posted (indexed by a secret id number you provide)
+on the web. if you believe that we have made a grading error,
+please bring the matter to our attention, but no later than one
+week after your assignment has been returned. to submit a
+problem set for regrading, send a short note explaining clearly
+why you think it should be regraded to one of the tas.
+academic integrity 
+
+
+we expect students in cs631 to uphold cornell's standards of academic
+integrity. if we find out otherwise, you will fail the course.
+the work you submit in cs 631 is expected to be the result of
+your individual effort. you are free to discuss course material,
+approaches to problems, and details of the system with your colleagues
+and instructors, but you should never misrepresent someone else's
+work as your own. permissible cooperation should never involve
+a student possessing a copy of all or part of another student's
+program or other work --- regardless of whether that copy is on
+paper or in a computer file on a hard disk or a floppy disk.
+
+the only exception to the above rules is when students work together
+to submit a joint project. 
+
+it is also the student's responsibility to protect his/her work
+from unauthorized access. for example, do not discard copies of
+your programs in public places. if someone turns in your work,
+you may be held partly responsible.
+
+
+the bottom line: what you must do 
+
+
+you must do three things to complete this course: assignments,
+critiques, and the project. each assignment will tell you what
+you have to hand in. critiques and projects are described below.
+critiques 
+
+
+for 75% of the papers you receive, you must publish a critique
+of the paper on the web. the critique should be available from
+your cs 631 web page (which you will create in homework assignment
+one). the purpose of this critique is to get you to think critically
+about what you read (welcome to graduate school, virginia). for
+each paper, your critique should answer the following questions
+in one to two paragraphs:
+
+what is the main point of this paper?
+what is significant about this paper?
+could and experience practitioner reproduce the results in
+this paper?
+what is weak about the paper? how could it have been improved
+(either the research or the writing)?
+rate the paper on a scale of 1 (worst) to 5 (best). 
+
+
+
+we will examine these critiques to determine if you have read
+and understood the paper..
+project guidelines 
+
+
+the final project is a small scale research project. it must have
+two qualities: it must attack a research problem, and it
+must pertain to multimedia. so what is &quot;research&quot;? research
+proposes and evaluates a new solution to an interesting problem.
+this simple statement has two parts:
+
+research proposes and evaluates a new solution... simply
+stating an idea, or writing a program, is not research, because
+there is no evaluation. you must evaluate the idea for it to become
+research. evaluation can take many forms. for example, suppose
+you develop a new method for detecting scene breaks in a video
+sequence. you can evaluate this idea by implementing it and compare
+the results of your algorithm on realistic video sequences with
+that of an existing algorithm. such a comparison might compare
+the runtime performance or the quality of result (how accurately
+did it detect the scene breaks?). or you might compare the results
+of your algorithm to the &quot;best&quot; results (one that a
+human produces). another example of evaluation is designing a
+large system, implementing it, and then discussing the tradeoffs
+in the system design. such &quot;experience&quot; papers are very
+valuable to other system builders. sometimes, but rarely, an idea
+can be novel enough that simply stating it causes such a new way
+of looking at things that it is research. this is a very
+hard thing to sell, however, so it better be earth shaking.
+&#133;to and interesting problem. so how can you tell
+what is interesting. this is clearly subjective, but a good metric
+is to ask how many people want to know the answer to your problem?
+as p. b. medawar, wrote in advice to a young scientist:
+&quot;the only person interested in why 35% of sea anemones have
+black spots is the person studying why 65% of sea anemones do
+not have black spots&quot; (badly paraphrased by brian). remember:
+it is just as hard to do uninteresting research as it is to do
+interesting research. 
+
+
+
+you will work in groups of two to four students on the final project.
+if you want to work individually or in a larger group, you must
+ask brian before sept 23rd. we will provide
+a list of possible projects a few weeks into the course, or you
+may explore an idea of your own, subject to our approval.
+
+you will be required to write a project report approximately ten
+pages in length and to make a 15 minute oral presentation. your
+grade will be based equally on the quality of your research, the
+quality of your writing, and the quality of your presentation.
+sign up sheets for the presentation will be available later. the
+best projects will be selected to present in class during the
+last week of classes.
+
+three milestones, at the 5, 6, and 9 week marks, will help to
+measure your progress. the first milestone (sept 23rd)
+will be a brief written presentation (one to two paragraphs) of
+your two proposed projects (a primary and a backup). such
+papers are called &quot;white papers&quot; in normal research
+projects. the second milestone (sept 30th) will
+be a short (approximately 2 page) written project proposal. the
+third milestone (oct 21st - oct 25th)
+will be a 5 minute presentation on the status of your project.
+the final presentation will take place on nov 25th
+and 26th. 
+
+
+
+
+
+
+
+
+
+cs631 home page
+
+
+
+
+
+cs631 course information
+cs631 course information
+cs631 course information
+cs631 course information
+cs631 course information
+cs631 course information
+cs631 course information
+cs631 course information
+cs631 course information
+cs631 course information

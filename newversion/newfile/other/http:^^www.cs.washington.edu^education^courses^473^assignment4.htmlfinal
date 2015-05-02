@@ -1,0 +1,97 @@
+cse 473 assignment 4
+
+
+cse 473 assignment 4
+ 
+
+
+due monday, april 22 in class.
+
+
+this assignment involves no computer programming!
+
+
+reading
+
+in chapter 4, review pp. 162-168 (especially  4.8.11).
+read sections 4.13-4.15.
+
+in chapter 5, read up through p. 240.
+
+
+
+part 1: exercises
+
+at the end of chapter 4, do exercises 15, 16, 17, 19.
+
+note: it has been called to my attention that there is a miswording
+in problem 16. please make the following change, and answer the
+resulting question.
+
+replace the phrase "however, if the symbol p were
+replaced by the identifier 'raining' "
+by the phrase
+
+however, if the symbols 'weather', 'today', and 'raining' were
+replaced by the symbols 'p', 'a', and 'b', "
+
+
+
+at the end of chapter 5, do exercise 6, and either 8 or 9.
+
+
+
+part 2: mini-project
+
+choose one or more of the following aspects of your education here
+at the university of washington.  
+
+ the goals of your undergraduate education (in terms of mastery
+of subject matter, jobs, social objectives, family objectives, etc.);
+ the goals you have in taking this course on artificial intelligence;
+ academic advice you would give to a freshman or
+sophomore who aspires to major in computer science and engineering;
+ the programming skills or computer science concepts you have learned here.
+
+describe that (or those) aspect(s) in english.  this should be
+a paragraph of several sentences, including not only simple facts,
+but "rules" --- generalizations that will permit inferences to be made.
+
+now encode the english sentences in the predicate calculus.
+you should end up with: (1) several simple facts of the form p(a)
+(but using more descriptive "non-standard" notation), (2) at least
+one rule using a universal quantifier, (3) at least one
+formula using an existentially quantified variable,
+and (4) at least one use of each of the logical connectives
+or, and, implies, and not.  you may need to adjust your english
+paragraph in order to be able to obtain all of these features in
+your formulas.
+
+identify and describe the domain you are assuming for your formulas.
+
+state your intended meaning for each predicate symbol, function
+symbol, and constant that you use.
+
+how well do you feel your logical formulas represent the information
+in the english paragraph?  is anything missing in the logical version?
+does the logical version say anything that the english version does not?
+
+
+
+tanimoto@cs.washington.edu
+
+
+
+
+
+
+cse 473 assignment 4
+cse 473 assignment 4
+cse 473 assignment 4
+cse 473 assignment 4
+cse 473 assignment 4
+cse 473 assignment 4
+cse 473 assignment 4
+cse 473 assignment 4
+cse 473 assignment 4
+cse 473 assignment 4

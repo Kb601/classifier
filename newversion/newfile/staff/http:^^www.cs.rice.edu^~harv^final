@@ -1,0 +1,76 @@
+timothy j. harvey
+
+tim harvey 
+ research programmer  
+ department of computer science  rice university 
+
+ 
+
+background
+
+after receiving his bacherlors' degree in computer science from rice
+university in 1988, tim harvery went to prc, a subcontractor to
+nasa, where he worked as programmer and technical lead building some
+of the support software on the space station freedom project. 
+
+in 1991, tim came back to rice to work on the massively scalar
+compiler project.  he helped design the iloc language and implement
+the parser and support routines (the shared
+code) which serve as a platform upon which all of the mscp
+optimization passes are written. 
+
+after finishing the shared libraries, tim has kept busy by writing an
+implementation of wegman and zadeck's sparse conditional constant
+propagation algorithm.  he also wrote an ssa-based peephole
+optimization pass.  his implementation
+of dominator calculation based on the algorithm by cytron et
+al. is available by ftp.  his implementation of a static single
+assignment form converter is also available. 
+
+
+current work
+
+
+tim is currently working on a reimplementation/webification/augmentation of
+preston briggs' register allocator.
+
+future work
+
+tim is going to be looking at new implementations of register
+allocators. 
+
+
+
+other projects
+learning who robert h. ray was
+enjoying a cool saint arnold amber
+
+
+
+how to reach me:
+
+tim harvey
+rice university
+citi ms41
+6100 south main
+houston, texas 77005
+
+harv@cs.rice.edu
+
+(713) 285-5185
+
+
+
+
+ 
+
+timothy j. harvey
+timothy j. harvey
+timothy j. harvey
+timothy j. harvey
+timothy j. harvey
+timothy j. harvey
+timothy j. harvey
+timothy j. harvey
+timothy j. harvey
+timothy j. harvey

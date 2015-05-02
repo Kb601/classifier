@@ -1,0 +1,88 @@
+home page of anne condon 
+
+
+
+
+ 
+ anne condon 
+
+
+ associate professor 
+ 
+ computer sciences department 
+ university of wisconsin 
+ 1210 w. dayton st. 
+ madison, wi 53706-1685 
+ 
+ telephone: (608) 262-1204 
+ fax: (608) 262-9777 
+ email: 
+ condon@cs.wisc.edu 
+
+
+ph.d., university of washington, 1987 
+interests:
+complexity theory, interactive proof systems, randomized complexity
+classes, theory of parallel computation 
+
+
+
+ research summary 
+
+i am interested in models of computation, such as interactive
+proof systems, which combine nondeterminism and randomness. such
+models have recently proven surprisingly useful in solving classic
+problems in complexity theory. for example, although the theory
+of np-completeness has long been used to identify hard computational
+problems, there has not been much progress in understanding which
+hard problems have solutions that are easy to approximate. recent
+results on interactive proof systems have resulted in novel models
+of np, which in turn can be used to prove non-approximability
+results for several np-hard problems. in our work we are developing
+both positive and negative results on the approximability of hard
+combinatorial problems which arise in game theory, graph theory
+and automata theory. 
+
+i am also interested in design and analysis of parallel algorithms.
+i am currently working on development of parallel algorithms for
+sorting and for graph problems, such as minimum spanning tree.
+the goal is to develop algorithms that work well on `practical'
+parallel models, where communication and synchronization costs
+can be expensive. 
+
+ sample recent publications 
+
+interactive proof systems with polynomially bounded strategies
+(with r. ladner), journal of computer and system sciences,
+vol. 50, no. 3, 1995. 
+ 
+finite state automata with nondeterministic and probabilistic
+states (with l. hellerstein, s. pottle, and a. wigderson), proceedings
+of the 26th annual acm symposium on the theory of computing,
+may 1994. 
+ 
+pspace is provable by two provers in one round (with j.-y. cai
+and r. lipton), journal of computer and system sciences,
+vol. 48, no. 1, february 1994. 
+ 
+
+
+ this page was automatically created october 3, 1995.
+ email pubs@cs.wisc.edu
+to report errors.
+
+
+
+
+
+
+ home page of anne condon 
+ home page of anne condon 
+ home page of anne condon 
+ home page of anne condon 
+ home page of anne condon 
+ home page of anne condon 
+ home page of anne condon 
+ home page of anne condon 
+ home page of anne condon 
+ home page of anne condon

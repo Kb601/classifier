@@ -1,0 +1,136 @@
+cse567 summary
+
+
+
+
+
+cse 567: principles of digital systems design
+carl ebeling, fall 1996 
+
+
+
+catalog data: principles of logic design, combinational and
+sequential circuits, structured design methods, digital system
+components, clocking methodologies, arithmetic circuits, memories,
+hardware description languages, logic and sequential synthesis,
+synthesis and simulation tools, implementation alternative, vlsi
+processor architecture, application-specific computation.
+
+
+prerequisites:
+a working knowledge of boolean algebra and finite-state machines.
+familiarity with the department's computing environment: unix/x
+
+
+course goals:
+to provide in-depth understanding of digital systems and their 
+design, including specification, synthesis, and implementation.
+
+
+facilities:
+you will be making extensive use of computer-aided design (cad) tools
+for designing and implementing digital circuits.  these tools are
+installed on the sun workstations of the northwest laboratory for
+integrated systems (lis).  these are (mostly) located in sieg 424 but
+are accessible from any x-terminal.  you may find it advantageous to
+work in 424 where you can take advantage of manuals, reference texts
+and the knowledge of other students.
+
+ cad tools: cad tools allow us to design and implement
+substantial hardware projects in a reasonable amount of time.  they
+also provide hands-on experience with state-of-the-art design tools
+that incorporate the synthesis algorithms covered in class.  these
+tools are introduced during the first half of the course as basic
+concepts are covered and then used heavily for the design project.
+
+
+ verilog:  verilog is a text-based hardware description
+  language which allows both structural and behavioral descriptions.
+  this course concentrates on structural design but introduces
+  behavioral descriptions and synthesis.  cadence tools are used to
+  simulate the verilog descriptions.
+
+
+
+  synopsys  the synopsys synthesis tools are used to
+  synthesize implementations from the verilog descriptions.  this
+  course uses synopsys to investigate the synthesis process as well as a
+  ``turn-key'' synthesis for implementing the final project.
+
+
+
+assignments: there will be weekly assignments and labs during
+the first half of the quarter.  they will give you experience with
+the concepts you will be using in the second half of the quarter for
+the design project and introduce you to the cad tools.
+
+
+
+project: a substantial part of the course revolves around the
+team design of a large hardware systems project.  each team will
+design a complete project using schematics and verilog for
+specification, verilog-xl for simulation, the synopsys tools for
+synthesis, and xilinx fpgas for implementation.  design projects in
+the past have included a tetris player, an ethernet interface, a cache
+monitor and dna sequence matching.  this quarter we will be designing
+hardware to implement an image processing algorithm.  i haven't
+decided which algorithm yet, but examples include 
+compression, filtering, edge detection, etc.  we will be using a
+prototyping board containing several fpgas and ram that plugs into an
+alpha workstation via a pci bus.  an image will be downloaded into the
+on-board ram, transformed by the hardware into a compressed or
+filtered image, and then uploaded to the alpha.  the project will be
+well-defined, but students will be able to explore different options
+based on performance or cost as well as other possibilities such as
+color images or video.
+
+
+
+collaborative learning:
+it is well known that students can learn a lot from each other given
+the chance.  during the second week i will assign everyone into teams
+of three and four students.  you will work together on the homework
+assignments and the project.  each member of the team will be
+responsible for the performance of all other team members; that is,
+the entire team must understand the solution and contribute to part of
+it.  we will talk about how this works in more detail later.
+
+
+quizzes and exams:
+there will be a short but challenging quiz every friday at the end of
+class which will cover all material covered through that wednesday.
+as compensation, there will be no mid-term exam.  the final exam will
+be a two-hour comprehensive examination given at the regularly
+scheduled final exam time.  quizzes and the final exam will be open
+book and open notes.
+
+
+grading:
+the course grade will be roughly determined as follows:
+
+  assignments (homework and laboratory): 20%
+  quizzes: 20%
+  project: 40%
+  final exam: 20%
+  participation and intangibles: 10%
+
+
+
+
+
+ebeling@cs.washington.edu
+
+
+
+
+
+cse567 summary
+cse567 summary
+cse567 summary
+cse567 summary
+cse567 summary
+cse567 summary
+cse567 summary
+cse567 summary
+cse567 summary
+cse567 summary

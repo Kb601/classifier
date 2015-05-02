@@ -1,0 +1,66 @@
+the skyblue constraint solver
+
+
+
+
+the skyblue constraint solver
+
+
+
+author: michael sannella
+
+
+
+published as uw tech report 92-07-02.
+
+
+
+
+abstract
+
+a constraint describes a relationship that should be maintained, for
+example that the equality a+b=c holds between three variables, that a set
+of displayed objects are aligned, or that the elements in a data structure
+are consistent with a graphic display of this structure.  constraint
+solvers have been successfully applied to problems in computer graphics
+including geometric design and user interface construction.  this paper
+presents the skyblue constraint solver, an efficient incremental algorithm
+that uses local propagation to maintain sets of required and preferential
+constraints.  skyblue is a successor to the deltablue algorithm, which was
+used as the constraint solver in the thinglab ii user interface development
+environment.  deltablue has two limitations: cycles of constraints are
+prohibited, and the procedures used to satisfy a constraint can only have a
+single output.  skyblue relaxes these restrictions, allowing cycles of
+constraints to be constructed (although skyblue may not be able to satisfy
+all of the constraints in a cycle) and supporting multi-output methods.
+the skyblue algorithm has been incorporated into multi-garnet, an extended
+version of the garnet user interface development system that supports
+multi-way constraints.  multi-garnet has been used to build several user
+interfaces exploiting the features of skyblue that would have been
+difficult to build within garnet.  this paper describes the basic skyblue
+algorithm and outlines several techniques that significantly improve its
+performance for large constraint graphs.  performance measurements are
+presented demonstrating that skyblue is efficient enough to use in
+interactive user interfaces.
+
+
+
+
+
+click 
+here to get the postscript file.
+
+
+
+return to constraints home page
+
+the skyblue constraint solver
+the skyblue constraint solver
+the skyblue constraint solver
+the skyblue constraint solver
+the skyblue constraint solver
+the skyblue constraint solver
+the skyblue constraint solver
+the skyblue constraint solver
+the skyblue constraint solver
+the skyblue constraint solver

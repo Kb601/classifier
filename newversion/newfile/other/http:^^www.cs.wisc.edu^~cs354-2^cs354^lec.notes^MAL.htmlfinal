@@ -1,0 +1,96 @@
+lecture notes - chapter 8 - mal and registers
+
+
+
+ chapter 8 -- mal and registers
+
+
+
+registers and mal
+-----------------
+
+an introduction to the subject of registers -- from a motivational
+point of view.
+
+this lecture is an attempt to explain a bit about why computers
+are designed (currently) the way they are.  try to remember that
+speed of program execution is an important goal.  desire for increased
+speed drives the design of computer hardware.
+
+
+the impediment to speed (currently):  transfering data to and from
+memory.
+
+look at a sal instruction:
+    add  x, y, z
+
+    -x, y, and z must all be addresses of data in memory.
+    -each address is 32 bits.
+    -so, this instruction requires more than 96 bits.
+
+    if each read from memory delivers 32 bits of data,
+    then it takes a lot of reads before this instruction can
+    be completed.
+       at least 3 for instruction fetch
+       1 to load x
+       1 to load y
+       1 to store z
+
+       that's 6 transactions with memory for 1 instruction!
+
+
+how bad is the problem?
+  assume that a 32-bit 2's complement addition takes 1 time unit. 
+  a read/write from/to memory takes about 10 time units.
+
+  so we get
+     fetch instruction:  30 time units
+     decode               1 time unit
+     load x              10 time units
+     load y              10 time units
+     add                  1 time unit
+     store z             10 time units
+     ---------------------------------
+       total time:       62 time units
+
+     60/62 = 96.7 % of the time is spent doing memory operations.
+
+
+
+what do we do to reduce this number?
+  1. transfer more data at one time
+     if we transfer 2 words at one time, then it only takes 2 reads
+     to get the instruction.  there is no savings in loading/storing
+     the operands.  and, an extra word worth of data is transferred
+     for each load, a waste of resources.
+     so, this idea would give a saving of 1 memory transaction.
+  
+  2. modify instructions such that they are smaller.
+     this was common on machines from more than a decade ago.
+     here's how it works:
+
+     sal implies what is called a 3-address machine.  each 
+     arithmetic type instruction contains 3 operands, 2 for sources
+     and 1 for the destination of the result.
+
+     to reduce the number of operands (and thereby reduce the number
+     of reads for the instruction fetch), develop an instruction set
+     that uses 2 operands for arithemtic type instructions.
+     (called a 2-address machine.)
+
+     now, instead of       add  x, y, z
+
+     we will have          load x, z      (puts the value of z into x)
+			   add  x, y      ( x 
+
+
+ lecture notes - chapter 8 - mal and registers
+ lecture notes - chapter 8 - mal and registers
+ lecture notes - chapter 8 - mal and registers
+ lecture notes - chapter 8 - mal and registers
+ lecture notes - chapter 8 - mal and registers
+ lecture notes - chapter 8 - mal and registers
+ lecture notes - chapter 8 - mal and registers
+ lecture notes - chapter 8 - mal and registers
+ lecture notes - chapter 8 - mal and registers
+ lecture notes - chapter 8 - mal and registers

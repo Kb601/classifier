@@ -1,0 +1,343 @@
+the horus papers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+publications
+
+
+through this page you can retrieve most of the papers, reports and
+thesis produced by members and visitors of the horus project. the
+papers on horus and related issues start in 1993, for earlier papers
+you should consult the 
+
+isis papers. 
+
+
+
+
+available retrieval methods
+
+
+
+
+each entry in the bibliographical list has one or more icons associated with it:
+
+
+
+
+
+ 
+ 
+an abstract for this paper can be found on the
+horus abstracts page.
+   
+ 
+
+
+a postscript version can be retrieved from the 
+cornell cs ftp server.
+   
+ 
+ 
+the document can be retrieved in various forms from the 
+ cornell cs technical report server.
+   
+ 
+ 
+the paper is on-line as an html document.
+ 
+
+
+
+selecting an icon will retrieve the document (in case
+of postscript) or bring you to the appropriate page
+where you can view the document in the selected form.
+
+
+
+
+
+
+horus architecture, protocols and performance.
+
+ 
+kenneth p. birman and robbert van renesse,
+software for reliable networks, in 
+scientific american, may, 1996.
+
+
+
+
+
+
+robbert van renesse, kenneth p. birman and silvano maffeis, 
+horus, a flexible group communication system, 
+communications of the acm, april 1996.
+
+
+
+
+
+
+robbert van renesse,
+masking the overhead of protocol layering
+to appear in the proceeding of the 1996 acm sigcomm conference,
+stanford, september 1996.
+
+
+
+
+roy friedman and ken birman,
+using group communication technology to implement a reliable and
+scalable distributed in coprocessor,
+to appear in the proceedings of tina'96, heidelberg, 
+september, 1996.
+
+
+
+
+
+
+werner vogels, 
+world wide failures
+in the proceedings of the acm sigops 1996 european workshop,
+connamoran, ireland, september 1996.
+
+
+
+
+
+
+robbert van renesse, kenneth p. birman, roy friedman, mark hayden, 
+and david a. karr, 
+a framework for protocol composition in horus, 
+in the proceedings of principles of distributed computing, august, 1995. 
+
+
+
+
+
+
+roy friedman and  robbert van renesse, 
+strong and weak virtual synchrony in horus, 
+cornell university technical report, tr95-1537, august, 1995.
+
+
+
+
+
+
+roy friedman and  robbert van renesse,
+packing messages as a tool for boosting the performance of
+total ordering protocols,
+cornell university technical report, tr95-1527, august, 1995.
+
+
+
+
+
+
+robbert van renesse and  kenneth p. birman,
+protocol composition in horus,
+cornell university technical report, tr95-1505, march, 1995.
+
+
+
+
+
+
+robbert van renesse,  kenneth p. birman,  bradford b. glade,  katie
+guo,  mark hayden,  takako hickey,  dalia malki,  alex vaysburd and
+werner vogels,
+horus: a flexible group communications system
+cornell university technical report, tr95-1500, march, 1995.
+
+
+
+
+
+
+takako m. hickey and  robbert van renesse,
+incorporating system resource information into flow control
+cornell university technical report, tr95-1489, february, 1995.
+
+
+
+
+
+
+robbert van renesse, takako m. hickey, and kenneth p. birman,
+design and performance of horus:
+a lightweight group communications system
+cornell university technical report, tr94-1442, august, 1994.
+
+
+
+
+
+
+werner vogels and robbert van renesse,
+support for complex multi-media applications using the horus
+system.
+december, 1994.
+
+
+
+
+
+horus and security
+
+
+
+david a. cooper and  kenneth p. birman,
+preserving privacy in a network of mobile computers,
+cornell university technical report, tr95-1490, march, 1995.
+
+
+
+
+
+
+michael k. reiter,  kenneth p. birman and  robbert van renesse
+a security architecture for fault-tolerant systems
+cornell university technical report, tr93-1354, june, 1993.
+
+
+
+
+
+
+virtual synchrony, partitions and new protocols.
+
+
+
+roy friedman and  ken birman,
+trading consistency for availability in distributed systems
+cornell university technical report, tr95-1579, april, 1996.
+
+
+
+
+
+
+roy friedman,  idit keidar,  dalia malki,  ken birman and  danny dolev,
+ deciding in partitionable networks
+cornell university technical report, tr95-1554, november, 1995.
+
+
+
+
+
+
+roy friedman,
+using virtual synchrony to develop efficient fault tolerant
+distributed shared memories 
+cornell university technical report, tr95-1506, march, 1995.
+
+
+
+
+
+
+mark hayden and  kenneth p. birman,
+achieving critical reliability with unreliable components and
+unreliable glue
+cornell university technical report, tr95-1493, march, 1995.
+
+
+
+
+
+
+dalia malki,  kenneth p. birman,  aleta m. ricciardi and  andre schiper,
+uniform actions in asynchronous distributed systems,
+cornell university technical report, tr94-1447, september, 1994.
+
+
+
+
+
+
+aleta m. ricciardi,  andre schiper and  kenneth p. birman
+understanding partitions and the ``no partition'' assumption
+cornell university technical report, tr93-1355, june, 1993.
+
+
+
+
+
+
+andre schiper and  aleta m. ricciardi,
+virtually-synchronous communication based on a weak failure
+suspector
+cornell university technical report, tr93-1339, april, 1993.
+
+
+
+
+
+
+aleta m. ricciardi and  kenneth p. birman,
+process membership in asynchronous environments
+cornell university technical report, tr93-1328, march, 1995.
+
+
+
+
+
+
+
+comments to
+werner vogels 
+
+
+
+
+
+the horus papers
+the horus papers
+the horus papers
+the horus papers
+the horus papers
+the horus papers
+the horus papers
+the horus papers
+the horus papers
+the horus papers

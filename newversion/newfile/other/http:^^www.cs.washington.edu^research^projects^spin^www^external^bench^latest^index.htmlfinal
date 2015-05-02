@@ -1,0 +1,170 @@
+spin benchmarks
+
+
+
+spin benchmarks (under contruction) 
+this page is devoted to measurements of operating system performance
+for spin and other operating systems.  this page will be constantly 
+evolving as new measurements are made and new benchmarks are added.
+under each clickable benchmark item you should find an explanation of
+the test, the source code for the benchmark for each system (still not ready, sorry -stefan), and possibly some discussion about the significance of
+the results.  some pages have not yet been completed, please bear with us.
+
+note: this page uses the table extension and may not be viewable 
+with all viewers.
+
+
+control transfer
+
+protected in-kernel call
+
+        
+        dec osf/1 mach 3.0spin extension
+        
+        
+        n/a n/a .13 usecs
+        
+        
+
+
+system call
+
+        
+        dec osf/1 mach 3.0spin extension
+        
+        
+        5 usecs 7 usecs 4 usecs
+        
+        
+
+
+cross-address space call (ipc)
+
+        
+        dec osf/1mach 3.0spin extension
+        
+        
+        845 usecs 104 usecs 89 usecs
+        
+        
+        124 usecs 873 usecs 117 usecs
+        
+        
+
+
+thread management
+
+kernel thread interface
+
+        
+        dec osf/1mach 3.0spin extension
+        
+        
+        fork-join198 usecs101 usecs22 usecs
+        
+        
+        ping-pong21 usecs71 usecs17 usecs
+        
+        
+
+
+
+user thread interface
+
+        
+        dec osf/1mach 3.0spin layeredspin integrated
+        
+        
+        forkjoin1230 usecs338 usecs262 usecs111 usecs
+        
+        
+        ping-pong264 usecs115 usecs159 usecs85 usecs
+        
+        
+
+
+memory management
+
+memory protection
+
+     
+     dec osf/1mach 3.0spin extension
+     
+     
+     dirtyn/an/a2 usecs
+     
+     
+     fault329 usecs415 usecs29 usecs
+     
+     
+     trap200 usecs185 usecs7 usecs
+     
+     
+     prot145 usecs106 usecs16 usecs
+     
+     
+     prot1001041 usecs1792 usecs213 usecs
+     
+     
+     unprot1001016 usecs302 usecs214 usecs
+     
+     
+     appel1382 usecs819 usecs39 usecs
+     
+     
+     appel2351 usecs608 usecs29 usecs
+     
+        
+
+
+
+networking
+
+latency
+
+        
+        networkdec osf/1spin extension
+        
+        
+        ethernet789 usecs565 usecs
+        
+        
+        atm631 usecs421 usecs
+        
+        
+
+
+bandwidth
+
+        
+        networkdec osf/1spin extension
+        
+        
+        ethernet8.9 mb/s8.9 mb/s
+        
+        
+        atm27.9 mb/s33.0 mb/s
+        
+        
+
+
+
+
+
+this page maintained by stefan savage.
+
+savage@cs.washington.edu
+
+
+
+
+spin benchmarks
+spin benchmarks
+spin benchmarks
+spin benchmarks
+spin benchmarks
+spin benchmarks
+spin benchmarks
+spin benchmarks
+spin benchmarks
+spin benchmarks

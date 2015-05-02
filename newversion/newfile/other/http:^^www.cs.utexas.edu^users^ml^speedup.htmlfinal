@@ -1,0 +1,273 @@
+speedup learning
+
+speedup learning/learning for planning
+
+to view a paper, click on the open book image.  
+
+
+
+
+
+
+
+
+
+
+ integrating ebl and ilp to acquire control rules for planning
+tara a. estlin and raymond j. mooney
+
+proceedings of the third international workshop on
+multi-strategy learning, pp. 271-279, harpers ferry, wv, may
+1996. (msl-96).
+
+
+most approaches to learning control information in planning systems
+use explanation-based learning to generate control rules.
+unfortunately, ebl alone often produces overly complex rules that
+actually decrease planning efficiency.  this paper presents a novel
+learning approach for control knowledge acquisition that integrates
+explanation-based learning with techniques from inductive logic
+programming. ebl is used to constrain an inductive search for
+selection heuristics that help a planner choose between competing plan
+refinements. scope is one of the few systems to address learning
+control information in the newer partial-order planners.
+specifically, scope learns domain-specific control rules for a version
+of the ucpop planning algorithm. the resulting system is shown to
+produce significant speedup in two different planning domains.
+
+
+
+
+
+
+
+
+
+multi-strategy learning of search control for partial-order
+planning
+tara a. estlin and raymond j. mooney
+
+proceedings of the thirteenth national conference on aritificial intelligence,
+pp. 843-848, portland, or, august, 1996. (aaai-96)
+
+
+
+most research in planning and learning has involved linear,
+state-based planners. this paper presents scope, a system for learning
+search-control rules that improve the performance of a partial-order
+planner.  scope integrates explanation-based and inductive learning
+techniques to acquire control rules for a partial-order planner.
+learned rules are in the form of selection heuristics that help the
+planner choose between competing plan refinements.  specifically,
+scope learns domain-specific control rules for a version of the ucpop
+planning algorithm. the resulting system is shown to produce
+significant speedup in two different planning domains.
+
+
+
+
+
+
+
+
+
+ integrating explanation-based and inductive learning techniques
+to acquire search-control for planning
+tara a. estlin
+
+ph.d. proposal, department of computer sciences, university of texas
+at austin, 1996. 
+
+
+planning systems have become an important tool for automating
+a wide variety of tasks. control knowledge guides a planner to find
+solutions quickly and is crucial for efficient planning in most
+domains.  machine learning techniques enable a planning system to 
+automatically acquire domain-specific search-control knowledge for
+different applications.  past approaches to learning control
+information have usually employed explanation-based learning
+(ebl) to generate control rules.  unfortunately, ebl alone often
+produces overly complex rules that actually decrease rather than
+improve overall planning efficiency.  this paper presents a novel
+learning approach for control knowledge acquisition that integrates
+explanation-based learning with techniques from inductive logic
+programming. in our learning system scope, ebl is used to constrain
+an inductive search for control heuristics that help a planner choose
+between competing plan refinements. scope is one of the few systems
+to address learning control information for newer, partial-order
+planners.  specifically, this proposal describes how scope learns
+domain-specific control rules for the ucpop planning algorithm. the
+resulting system is shown to produce significant speedup in two
+different planning domains, and to be more effective than a pure ebl
+approach.  
+
+future research will be performed in three main areas.  first, scope's
+learning algorithm will be extended to include additional techniques
+such as constructive induction and rule utility analysis.  second,
+scope will be more thoroughly tested; several real-world planning
+domains have been identified as possible testbeds, and more in-depth
+comparisons will be drawn between scope and other competing
+approaches.  third, scope will be implemented in a different planning
+system in order to test its portability to other planning algorithms.
+this work should demonstrate that machine-learning techniques can be a
+powerful tool in the quest for tractable real-world planning.
+
+
+
+
+
+
+
+
+
+  hybrid learning of search control for partial-order planning  
+
+tara a. estlin and raymond j. mooney 
+
+new directions in ai planning, m. ghallab and a. milani, eds,
+ios press, 1996, pp. 129-140.   
+
+
+this paper presents results on applying a version of the dolphin
+search-control learning system to speed up a partial-order planner.
+dolphin integrates explanation-based and inductive learning techniques
+to acquire effective clause-selection rules for prolog programs.  a
+version of the ucpop partial-order planning algorithm has been
+implemented as a prolog program and dolphin used to automatically
+learn domain-specific search control rules that help eliminate
+backtracking. the resulting system is shown to produce significant
+speedup in several planning domains.
+
+
+
+
+
+
+
+
+
+  integrating ilp and ebl    
+
+raymond j. mooney and john m. zelle  
+
+ sigart bulletin, volume 5, number 1, jan. 1994, pp 12-21. 
+
+
+this paper presents a review of recent work that integrates methods from
+inductive logic programming (ilp) and explanation-based learning (ebl).  ilp
+and ebl methods have complementary strengths and weaknesses and a number of
+recent projects have effectively combined them into systems with better
+performance than either of the individual approaches. in particular, integrated
+systems have been developed for guiding induction with prior knowledge
+(ml-smart, focl, grendel) refining imperfect domain theories
+(forte, audrey, rx), and learning effective search-control
+knowledge (axa-ebl, dolphin).
+
+
+
+
+
+
+
+
+
+  learning search-control heuristics for logic programs:
+applications to speedup learning and language acquisition  
+
+john m. zelle  
+
+ph.d. proposal, department of computer sciences, university of texas
+at austin, 1993. 
+
+
+this paper presents a general framework, learning search-control heuristics for
+logic programs, which can be used to improve both the efficiency and accuracy
+of knowledge-based systems expressed as definite-clause logic programs.  the
+approach combines techniques of explanation-based learning and recent advances
+in inductive logic programming to learn clause-selection heuristics that guide
+program execution.  two specific applications of this framework are detailed:
+dynamic optimization of prolog programs (improving efficiency) and natural
+language acquisition (improving accuracy).  in the area of program
+optimization, a prototype system, dolphin, is able to transform some
+intractable specifications into polynomial-time algorithms, and outperforms
+competing approaches in several benchmark speedup domains.  a prototype
+language acquisition system, chill, is also described.  it is capable of
+automatically acquiring semantic grammars, which uniformly incorprate syntactic
+and semantic constraints to parse sentences into case-role representations.
+initial experiments show that this approach is able to construct accurate
+parsers which generalize well to novel sentences and significantly outperform
+previous approaches to learning case-role mapping based on connectionist
+techniques.  planned extensions of the general framework and the specific
+applications as well as plans for further evaluation are also discussed.
+
+
+
+
+
+
+
+
+
+
+  combining foil and ebg to speed-up logic programs   
+
+john m. zelle and raymond j. mooney  
+
+ proceedings of the thirteenth international joint conference on artificial
+intelligence, pp. 1106-111, chambery, france, 1993. (ijcai-93) 
+
+
+this paper presents an algorithm that combines traditional ebl
+techniques and recent developments in inductive logic programming to
+learn effective clause selection rules for prolog programs.  when
+these control rules are incorporated into the original program,
+significant speed-up may be achieved.  the algorithm is shown to be an
+improvement over competing ebl approaches in several domains.
+additionally, the algorithm is capable of automatically transforming
+some intractable algorithms into ones that run in polynomial time.
+
+
+
+
+
+
+
+
+
+ 
+  speeding-up logic programs by combining ebg and foil   
+ 
+john m. zelle and raymond j. mooney  
+
+ proceedings of the 1992 machine learning workshop on knowledge
+compilation and speedup learning, aberdeen scotland, july 1992. 
+
+
+this paper presents an algorithm that combines traditional ebl
+techniques and recent developments in inductive logic programming to
+learn effective clause selection rules for prolog programs.  when these
+control rules are incorporated into the original program, significant
+speed-up may be achieved.  the algorithm produces not only ebl-like
+speed up of problem solvers, but is capable of automatically
+transforming some intractable algorithms into ones that run in
+polynomial time.
+
+
+
+
+
+
+
+
+estlin@cs.utexas.edu
+
+speedup learning
+speedup learning
+speedup learning
+speedup learning
+speedup learning
+speedup learning
+speedup learning
+speedup learning
+speedup learning
+speedup learning

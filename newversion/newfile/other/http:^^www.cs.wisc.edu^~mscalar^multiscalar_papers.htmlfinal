@@ -1,0 +1,143 @@
+papers written by members of the multiscalar research group 
+
+
+
+
+
+papers by members of the multiscalar research group
+
+
+ return to multiscalar home page
+
+
+
+
+
+
+trace cache: a low latency approach to high bandwidth instruction fetching
+,
+eric rotenberg, steve bennett, and james e. smith,
+technical report #1310, computer sciences department,
+university of wisconsin - madison, april 1996.
+
+
+
+
+high-bandwidth address translation for multiple-issue processors,
+
+t. m. austin and g. s. sohi, to appear in
+23rd annual international symposium on computer architecture, may 1996.
+an appendix of
+detailed results
+is also available.)
+
+
+
+
+
+zero-cycle loads: microarchitecture support for reducing load latency
+
+t. m. austin and g. s. sohi,
+28th annual international symposium on microarchitecture (micro-28), 1995.
+
+
+
+
+
+the microarchitecture of superscalar processors
+
+
+j. e. smith and g. s. sohi,
+in proceedings of the ieee.
+
+
+
+
+arb: a hardware mechanism for dynamic reordering of memory references
+
+
+m. franklin and g. s. sohi,
+in ieee transactions on computers.
+
+
+
+
+multiscalar processors,
+
+
+g. s. sohi, s. breach,  and t. n. vijaykumar,
+22th international symposium on computer architecture, 1995.
+
+
+
+
+streamlining data cache access with fast address calculation,
+
+
+t. m. austin, d. n. pnevmatikatos, and g. s. sohi,
+22th international symposium on computer architecture, 1995.
+
+
+
+
+the anatomy of the register file in a multiscalar processor,
+
+
+s. breach, t. n. vijaykumar, and g. s. sohi,
+27th annual international symposium on microarchitecture (micro-27), 1994.
+
+
+
+
+the multiscalar architecture
+
+
+manoj franklin,
+
+ph.d. thesis,  december 1993,
+
+
+
+
+
+control flow prediction for dynamic ilp processors, 
+
+
+d. pnevmatikatos, m. franklin and g. s. sohi,
+26th annual international symposium on microarchitecture (micro-26), 1993.
+
+
+
+
+the expandable split window paradigm for exploiting fine-grain parallelism,
+
+
+m. franklin and g. s. sohi, 19th international symposium on computer architecture, 1992.
+
+
+
+
+register traffic analysis for streamlining inter-operation communication
+in fine-grain parallel processors,
+
+
+m. franklin and g. s. sohi, 25th annual international symposium on microarchitecture
+(micro-25), 1992.
+
+
+
+ last updated: 20 september 1995 by guri sohi 
+
+
+
+
+ papers written by members of the multiscalar research group 
+ papers written by members of the multiscalar research group 
+ papers written by members of the multiscalar research group 
+ papers written by members of the multiscalar research group 
+ papers written by members of the multiscalar research group 
+ papers written by members of the multiscalar research group 
+ papers written by members of the multiscalar research group 
+ papers written by members of the multiscalar research group 
+ papers written by members of the multiscalar research group 
+ papers written by members of the multiscalar research group

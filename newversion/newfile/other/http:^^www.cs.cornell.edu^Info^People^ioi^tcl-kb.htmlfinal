@@ -1,0 +1,119 @@
+tcl/tk knowledge base
+
+
+
+
+this page is intended to be answer general questions for tcl/tk
+developers ...
+
+
+
+
+q: on solaris 2.x, linking tk 4.0 gives me the error:
+
+      undefined                       first referenced
+       symbol                             in file
+      socket                              /usr/local/x11r6/lib/libx11.so
+      getpeername                         /usr/local/x11r6/lib/libx11.so
+      xdrmem_create                       /usr/local/x11r6/lib/libx11.so
+      gethostbyname                       /usr/local/x11r6/lib/libx11.so
+      ...
+
+a: you need to add "-lsocked -lnsl" to the "libs = " line in the makefile.
+
+----------------------------------------------------------------------
+system lab specific:
+
+q: how do i access the files in my unix account from my windows 95 and nt
+   desktop?
+
+a: open explorer. go to the menu "tools, map network drive" and enter
+   "\\dawn\" in the "path" entry box. for
+   example, i would use in "\\dawn\ioi". then, you will be able to
+   access your files from the mapped drive.
+
+   note that (as of 09/10/96) the server dawn is not visible in the
+   "network neighborhood" list, but steps above work anyway.
+
+q: how do i use windows applications in unix?
+
+a: you can use the "windd" command (/usr/local/bin/windd) to log on an
+   nt machine. type "windd" in an xterm and the windd desktop will
+   come up.  type the name of an nt server (such as vulture) in the
+   "application server" entry box and press return. that will bring
+   you to the nt login screen.
+
+   notice that windd runs windows nt 3.51 only but most applications
+   should work without problems. you'll miss the nt 4.0 desktop,
+   though :-)
+
+   also, windd doesn't work on a black-and-white display.
+
+   if you want to increase the size of the windd dekstop, try giving
+   the -geometry option when you start windd. e.g. "windd -geometry
+   1024x768".
+
+q: where is purify for the different cucs systems?
+
+a: on solaris: /opts/pure/bin/purify
+   on sunos:   /vol/pure/bin/purify
+
+
+----------------------------------------------------------------------
+the answers to the following topics will come up shortly.
+
+q: how do i maintain binaries of different platforms in the same file system?
+   e.g., i want to compile tcl/tk for both sunos and solaris, but now i need
+   to do a "make distclean; ./configure" each time i want to compile binaries
+   for a different platform.
+
+a: use symbolic links. cd ~ioi/wdev and look at the directory
+   structure. i use it to manage four configurations
+   (sunos+solaris)*purify with a single source base.
+
+   more explanations will come up shortly.
+
+q: what is purify? why can it help me with my tcl/tk development?
+
+
+
+q: there is no purify on linux. what alternatives can i use?
+
+q: what is the -dmem_debug flag when i compile tcl?
+
+q: what is the tcl/tk engineering manual?
+
+q: what is cvs?
+
+q: how do i develop a test suite for my tcl/tk applications?
+
+q: a quick example for writing tcl/tk test suites?
+
+q: how do i compile my tcl/tk extension into a shared library?
+
+a: i am working on an example ...
+
+
+cornell cs department specific:
+
+q: is there a quick example for cvs?
+
+
+
+
+
+
+
+
+
+
+tcl/tk knowledge base
+tcl/tk knowledge base
+tcl/tk knowledge base
+tcl/tk knowledge base
+tcl/tk knowledge base
+tcl/tk knowledge base
+tcl/tk knowledge base
+tcl/tk knowledge base
+tcl/tk knowledge base
+tcl/tk knowledge base

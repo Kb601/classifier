@@ -1,0 +1,196 @@
+cs 302 section 70 - announcements
+
+
+
+
+ announcements
+
+
+
+make sure to check these announcements and reminders on a regular basis to keep up-to-date with the latest news and changes.
+
+
+[12/12/96]quiz6 solutions up. note for friday.
+quiz6 solutions are up. also, bring questions to the exam for friday.
+it'll be cumulative but focused more towards the 2nd half of the course
+(from arrays onward).
+[12/6/96]lecture notes up
+lecture notes on everything including complex numbers are up. it
+also has some additional info on double precision numbers that will
+be talked about on monday.
+[12/6/96]quiz6, one test case removed for program7, rest of schedule
+quiz 6 is wed the 11th. one question on graphs, one question on
+complex numbers, and one on either integration or least-sqaures fit,
+depending on how much of least-squares we get to on monday. for program
+7, there are now 4 test cases instead of 5. the first one (the one with d=29)
+is removed because it doesn't make sense to put golfer 2 *past* the hole.
+as for next week, monday we'll do-least-squares, wed is the quiz (it'll
+be shorter than last time), then the rest of wed. and all of fri. will
+be review, so bring questions.
+[12/4/96]quiz5 solutions, another way to do program 7
+quiz 5 solutions are up on the web page. as for program 7, the book
+suggests using tincr rather than xincr. this is due to the fact that
+parametric functions are not always functions in terms of x and y.
+for example, x = cos(t), y = sin(t) generates a unit circle around the
+origin. a circle is not a function in terms of x and y (x=0 gives two
+values of y, -1 and 1), but it is a function of t from 0 to 2pi  (each
+(x,y) pair of our circle corresponds to exactly one t on 0 to 2pi). for
+this reason you can't really work with xincr (you have no idea how
+many y values you'll need to test for), but you can work with tincr.
+however, when you hit a golf ball, its trajectory is a parabola, which
+we know is a function in (x,y) coordinates. our equations were
+x = vtcos(theta) and y = vtsin(theta) - 32t^2, so we can write y in terms of x
+by solving the x equation for t and then plugging that into the y equation.
+so we get an equation y = f(x), and we can use xincr normally, even though
+this is a parametric equation.
+
+[12/2/96]prog7-8 fully up (test cases included), quiz note, week13 notes
+the test cases for programs 7 and 8 are fully up; all test cases are
+now included in the gradesheets. also, a note for quiz5; most of the material
+(everything except the fixed-point method) is form sec 12.1-12.2 of the book,
+so looking that over will help. also, week13 notes (root-finding methods)
+are up.
+
+[11/27/96]prog7-8, week 12-13 notes, final, quizzes
+program 7 is pg 597, problem 6 of the text. gradesheets can be found
+with program7's link on the main web page (not up yet). program 8 will
+be up today. both are due the last day of class. program 8 will count
+double (6% of grade). week 12-13 notes will be up today as well. there
+will be 2 more quizzes; wed the 4th and wed the 11th. more detail will be
+given on monday. the final will be tues. the 17th in the same room class
+meets in (1289 cs&s) at 5:05 pm.
+ 
+[11/16/96]prog5 note, prog6 note, week11 (stack and queue) notes up
+on program 5 - i told the grader to concentrate mainly on the pig-latin
+part of the assignment. if you read the lines in from the keyboard and
+print to screen instead of disk, as long as it compiles and works correctly,
+you won't lose more than 2-3 points. on program 6 - make sure to maintain
+an integer variable to keep track of priority queue size, so heapify
+and the other pq operations only operate on the sections of the array that
+are currently in use. also, remember to never delete from the name and age
+arrays. the age may be deleted from one of the data structures but not
+from all. week 11 notes are up to help you with stacks and queues.
+[11/13/96]quiz4 solutions are available on the web page
+also, i got my days mixed up in class. program 6 is due a week from
+friday, not a week from wed.
+[11/12/96]prog5.dat, program 6 available, room assigned for exam
+yes, at long last, prog5.dat is now in r:\public\tick (anyone know where
+the paragraph comes from?) program 6 is due a week from wednesday. yes, that's
+only a week, but it's a short assignment. the next one will be short as well.
+we'll be covering the material for program6 after quiz4 on wednesday. lastly,
+room 1325 is where we'll be having the exam on tuesday the 19th, 7:15-9:15
+[11/8/96]extension on program5, quiz next wed, exam the 19th, week 10 notes
+program 5 is now due wed the 13th. also on wed, we'll have a quiz on
+sorting,searching,and recursion. i'll explain what'll be covered on monday.
+also, the 2nd exam is tuesday the 19th at 7:15...i haven't been given a
+room assignment yet. the week10 notes on heaps is available...still editing 
+the notes on recursion.
+[10/27/96]notes on 2-d arrays on web, program 5 up, quiz on friday
+the web pages for the notes are updated. program 5 is indeed a pig-latin
+creator. it's due friday, 11/8. there's some tricks involved in loading in
+and saving to disk, so it's not as easy as it sounds. also, there will
+be a quiz on friday on arrays. one question on 1-d arrays, one of multidim.
+arrays. it will involve declaring arrays, passing them in an out of functions.
+they'll be a total of 3 questions, one of which will be writing a small
+amount of code.
+[10/19/96]my version of program 3 now on lab computers
+my solution can be found on r:\public\tick\prog3.for. if you wish to copy
+it to your working directory, get into your working directory and type
+copy \public\tick\prog3.for filename
+where filename stands for whatever you want to rename prog3.for to
+(presumably, if you already have your own version of program 3 called
+prog3.for, you'll want to rename my version, because it's always good to keep
+your copy around, in case you decide later on that you don't want to use my
+version. most of it is straight-forward, except for two things:
+
+for ntwall, you can't increment marvin's x and y coordinates and then check to see if he's in a wall, because if he is and you return .false., marvin's
+now sitting in the wall (you've already moved him). however, if you copy
+x and y into two temporary variables, you can move those temporaries, then
+test those instead. only the temporaries will be moved, not the actual
+x and y coordinates. so i actually used mkmove to increment the temporary
+variables (rather than having to write out that 4 part if statement in
+both mkmove and ntwall).
+the subroutine for printing the grid had quite a lot of very similar
+if statements as well, so i made an auxiliary subroutine setgrd to take
+care of it. look at grid before you look at setgrd; the latter will be
+easier to follow if you look at grid first.
+
+[10/18/96]program 4 reduced, due date moved, week7 notes on web, my version of program3 coming soon.
+since many of you have been finishing up program 3 until now, the due date for program 4 needed to be extended (to monday, 10/28). also program 4 has been shortened. now there is no creating a new board from within your program and writing it to disk, and the board stays fixed at size 5 x 5. you will still read in the board from disk from a file called board.dat. also, you'll still be adding the interior walls and the 2-dimensional array for the board. once everyone's program 3 is turned in, i'll be putting my version of program 3 on the web. you may add to this version for program 4 if you wish. also, week 7 lecture notes are on the web.
+[10/11/96]exam
+just to repeat, the first exam is tuesday the 15th, chapters 1-6, 1207 cs from 7:15 to 9:15
+[10/11/96]program 4,week6 notes on web
+also remember program 3's due date is extended to this monday, the 14th.
+[9/30/96]reminder
+quiz 2 is wednesday. one question of writing do and do-while loops,
+one question on fixing logical errors in do and if statements, on qeustion
+on subroutine arguments.
+[9/30/96]program 3, lecture notes for week4:
+both are up on the web. the due date for program 3 is wed october 9th.
+[9/20/96]program 2, lectures notes for week 2 and week3,quiz 1 solutions:
+all of the above are now up on the web. program 2 was too complex as i presented it in class, so it's been scaled down; we may implement some of the other features in later assignments. the due date is mon september 30th.
+[9/12/96]new things up on web.
+program 1, and notes for week1 are both up on the web.
+[9/10/96]consolidated description of what to do in dos/fortran
+i've now consolidated everything on how to log-on/use fortran/dos/etc onto one web page here . it's in the form of a set of steps you can follow, plus descriptions of each step. the actual steps are in bold. make sure to read the descriptions, as they will tell you when to use those steps and when to skip them.  
+   [9/6/96]consultants good at fortran
+   click  here for the schedule of the consultants and a list of which are proficient in fortran.   
+   [9/6/96]slight alteration in program0
+   program0 has been altered slightly (1:30pm on fri). the current version is on the program0 home page.
+   [9/5/96]the class location is being moved
+   starting monday, class will be in 1289 computer science and statistics.
+
+   [9/5/96] program0 is available
+   while it is not going to be graded, program0 will get you used to working
+on microsoft fortran, as well as the few basic dos commands that you'll need in
+the future. also, it will give you a sense of how the directories are arranged 
+for class. i will be in the lab both friday and monday, 11:00-1:00.
+   [8/30/96] read our home page thoroughly:
+   please make sure that you have read everything in the class home page thoroughly. it contains everything you need to know about this course: gradesheets, late policy, academic misconduct, etc. this constitutes a "class hanout" so you are required to be familiar with everything in it.
+   [8/30/96] class mailing list:
+   please send me a piece of e-mail from the same account you normally read your e-mail from (e.g. your-name@students.wisc.edu) or otherwise somehow let me know your e-mail address so that i can add you to the class mailing list.
+   
+      click here to send me e-mail.
+   
+   
+
+
+
+
+
+
+ reminders
+
+
+
+
+   logging out:
+   remember to exit windows to logout before you leave the lab.  otherwise the next person has complete access to your account (e.g. change your password, delete your files, etc).  also remember to remove your floppy disk before you go.  in case you forget make sure you have your name, class and section number written on all your disks so that they can be returned to you.
+
+   sending and reading e-mail:
+   the default when you first run the e-mail program is to use your computer science e-mail account (i.e. your-name@cs.wisc.edu).  however, you probably want to use your wiscworld account most of the time (i.e. your-name@students.wisc.edu).  to change this go to the "special" menu in the e-mail program, select the "configuration" menu option and change the "account name" to your-name@students.wisc.edu.  when you send me e-mail make sure you send it from the account you will read your e-mail from because i will reply to the same account that you e-mailed me from.
+
+   forwarding e-mail:
+   to forward all the e-mail sent to your computer science account to your wiscworld account you need to talk to the pc lab administrator on the 2nd floor of the computer science building.
+
+
+
+
+
+
+
+copyright &copy 1996 modified from gareth s. bestor (bestor@cs.wisc.edu).  last modified august 30, 1996.
+
+
+
+
+cs 302 section 70 - announcements
+cs 302 section 70 - announcements
+cs 302 section 70 - announcements
+cs 302 section 70 - announcements
+cs 302 section 70 - announcements
+cs 302 section 70 - announcements
+cs 302 section 70 - announcements
+cs 302 section 70 - announcements
+cs 302 section 70 - announcements
+cs 302 section 70 - announcements

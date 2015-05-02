@@ -1,0 +1,77 @@
+cse 533 - topics in complexity, autumn 1995
+
+
+
+
+cse533 propositional theorem proving, satisfiability testing and proof complexity
+
+ general information 
+
+    instructor:  paul beame 
+    meeting times: tuesday, thursday 12:00-1:20 in loew 113.
+
+
+
+automated theorem proving and computer-aided verification in ai, vlsi, and
+software engineering give algorithms that attempt to decide the truth
+of logical statements in propositional or in first- (or higher-) order logic. 
+this course will concentrate on complexity issues for the propositional case
+as well as for its flip side, satisfiability-testing.  (even the uses of
+theorem proving in first-order and higher-order logic often involve finite
+domains where the proofs can be interpreted in propositional logic anyway.)
+
+
+
+we will consider a variety of systems for propositional theorem
+proving and satisfiability testing.  key issues for such systems are:
+
+ how complex are proofs within the system?
+ what are good choices for search strategies?
+
+
+there has been considerable theoretical and practical work on both of these
+questions.  we will concentrate on theoretical issues of proof complexity
+and of the relative complexity of search strategies.  we will also examine a
+number of implementations of propositional logic algorithms to compare theory
+and practice.
+
+ papers and things 
+
+  urquhart's complexity of proofs survey 
+  519 talk slides 
+
+ installed software 
+
+for our amusement i have installed a few theorem provers, anl-dp, sato, and
+boyer moore as well as one satisfiability tester, gsat on june in the
+directory:
+
+/cse/courses/cse533/provers
+
+
+there are few papers scattered there as well and i am in the process of
+installing more theorem provers.    
+
+
+
+
+
+ cse 533 - topics in complexity, autumn 1995
+
+ cse 533 - topics in complexity, autumn 1995
+
+ cse 533 - topics in complexity, autumn 1995
+
+ cse 533 - topics in complexity, autumn 1995
+
+ cse 533 - topics in complexity, autumn 1995
+
+ cse 533 - topics in complexity, autumn 1995
+
+ cse 533 - topics in complexity, autumn 1995
+
+ cse 533 - topics in complexity, autumn 1995
+
+ cse 533 - topics in complexity, autumn 1995
+
+ cse 533 - topics in complexity, autumn 1995

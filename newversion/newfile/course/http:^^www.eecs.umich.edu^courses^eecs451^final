@@ -1,0 +1,498 @@
+eecs451 home page 
+
+
+
+
+
+eecs 451 
+digital signal processing
+fall '96
+
+
+
+
+
+
+
+
+announcements
+
+
+
+send me feedback!
+
+
+
+assignments
+
+
+
+group projects
+
+
+
+matlab code
+
+
+
+brain teasers
+
+
+
+course details
+
+
+
+
+
+
+
+
+
+announcements
+
+
+
+
+remember that exam 3 will be a take-home exam given out on dec. 6, to be 
+returned dec. 10, and the
+group projects will be due on dec. 13.
+
+
+
+
+
+
+
+
+
+assignments
+
+
+
+
+homework #8: chapter 8 problems: 1, 9, 12, 15, 19, 23
+due in class wednesday, november 27
+
+
+
+
+exam review problems
+do not hand in for grading!
+
+chapter 4 problems: 8a),c), 10a),b), 17a)-d), 28, 45a)-c), 54
+chapter 5 problems: 5, 7, 11, 21, 22, 23
+
+
+
+
+homework #7:
+chapter 5 problems: 16, 18, 28
+chapter 6 problems: 3, 8, 37
+
+
+
+
+homework #6: chapter 4 problems: 15, 22, 25, 35, 48, 49
+
+
+
+
+homework #5: see last two pages of monday's handout (oct. 21)
+
+
+
+
+exam review problems
+
+chapter 2 problems: 28, 32, 37, 41, 44, 46 (use z-transforms as necessary)
+
+chapter 3 problems: 14 a) c) e) g) i), 35, 41, 45, 47, 49
+
+
+
+read chapters 4 and 5.
+
+
+
+
+homework #4:
+chapter 3 problems: 24, 25, 26, 34, 39, 44
+
+note: the solution to problem 34 a) has a slight mistake. the
+pole is at -0.81, not 0.81.
+
+
+
+
+homework #3:
+chapter 3 problems: 3, 9, 13, 16, 22, 23
+
+
+
+
+homework #2:
+chapter 2 problems: 25, 30, 33, 35, 36, 39
+
+
+
+read chapter 3.
+
+
+
+homework #1:
+chapter 2 problems: 3, 5, 7, 8, 11, 15, 18, 21, 23, 24
+
+note that the solutions to homework #1 have
+some errors in them. specifically, problem 2.7 parts (d), (h), and (l)
+are time-variant systems, not time-invariant as the solutions indicate.
+
+
+
+read chapter 2.
+
+
+skim through chapter 1, mainly for your own interest.
+
+
+
+
+
+
+
+
+group projects
+
+
+remember, the group projects will count for 15% of your grade and will be
+due on december 13th.
+
+for those of you doing data analysis on a pc, i suggest you consider
+using the 
+goldwave digital audio editor. this is a shareware package that
+can be found on the caen pentium machines in the media union. the program
+is located on the s: drive in the \bin\goldwave directory.
+
+goldwave does not replace matlab for doing
+fourier analysis, filtering, lpc modelling, etc. but it is a good
+tool for manipulation of audio at the sample level and performing
+simple transformations such as volume adjustments. most importantly,
+goldwave is an excellent tool for performing conversions between
+audio formats and extracting short segments of your waveforms for input
+to matlab. goldwave will, for example, convert wav files to/from matlab
+format.
+
+if you'd like some data to play with, and don't have any of your own
+yet, here are 2 sample files that you can use. they are recordings
+of prof. wakefield's voice pronouncing 5 vowels, as heard in class.
+use your browser's "save link as..." feature to save these to a file
+in your account (shift-left-click instead of just left-click if you
+are using netscape).
+
+note:  these sounds are currently corrupted due to a bad file
+transfer. i will have fixed versions of these sounds available asap.
+
+
+
+the gwvowel.raw file is in raw (i.e.,
+headerless) 16-bit, signed, monophonic format. this file was created
+on a pc so it is in little-endian format (meaning the least significant
+8 bits of each 16-bit sample comes first in the file). 
+if you want to do
+your experiments on a big-endian machine (such as a sun or hp), you should use
+this file, gwbsw.raw, which is the same data
+but it has already been byte-swapped for you. if you use the wrong
+file, there'll be no doubt about it when you play it over speakers or
+headphones.
+
+
+
+
+
+
+
+matlab code
+
+here is some matlab code that may be of use
+or of interest. you can get the code by clicking on each link,
+copying the code, and pasting it into an editor window. easier is to
+use your browser's "save link as..." function to save the code to a file.
+using netscape on a unix workstation, right-click on the link and
+select "save link as..." or shift-left-click to achieve the same thing.
+
+
+please do not print out this code. remember
+how uptight caen is about printing things out. too many people printing
+off copies of the same file will lead to all of these files being
+removed.
+
+
+problem 5.28 from the text
+plot magnitude/phase of filter response (filtplot.m)
+short-time fourier transform computation (stft.m)
+short-time autoregressive modelling (star.m)
+matlab examples from lecture 17
+plot a sequence and its fft as stems
+plot a sequence to overlay an orthstem plot
+homework #5 problem #1 code to plot bk vectors
+homework #5 problem #4a code to plot hadamard vectors
+homework #5 problem #4d code to plot expansion coefficients of a sinusoid on the hadamard basis
+
+
+
+
+
+
+
+brain teasers
+
+
+here is a compendium of the "brain teaser du jour" questions that have
+been sent out on the mailing list. someone suggested they might make
+good review questions or study aids (or even quals questions, nudge nudge,
+wink wink, say no more).
+
+
+
+
+  consider the analog unit step signal u(t)=1, t&gt;=0, u(t)=0, t&lt;0. is there
+  any sampling frequency we can use to sample u(t) so that the resulting
+  digital signal, u(n), exhibits no frequency-domain aliasing?
+
+  realizing that the answer to the above question is "no", now consider
+  the sampled signal u(n).  what does this signal look like, for *any*
+  sampling rate? how can this be explained?
+
+
+
+
+show that an fir system may be written as an iir system with an
+infinite number of poles.
+
+
+
+
+show that an antisymmetric impulse response (i.e., h(n) = -h(-n)) has
+a zero in its frequency response at omega=pi (and, of course, omega=-pi).
+
+
+
+
+consider the discrete-time signal:
+
+        x(n) = cos(2*pi*f*n) for n in the range [0,15]
+
+
+and the frequency 'f' is 5/16. what is the 16-point dft of this signal? now
+define the signal:
+
+        y(n) = x(n), n in the range [0,15]
+             = 0, n in the range [16,31]
+
+
+what is the 32-point dft of this signal? it is possible to answer all
+of the above questions without a computer and without doing any math.
+
+having done so, repeat this exercise using matlab. display the magnitude
+of your dft's on a logarithmic scale to see the difference between theory
+and reality. also, do it again using f=5.5/16. think about what you'd
+expect to see both for the 16-point dft and the 32-point dft.
+
+
+
+
+let {bk} be one set of basis vectors for n-point sequences. let {vk}
+be another set of basis vectors for the same space. find the "change of 
+basis" transformation.  that is, find a matrix t such that:
+
+                            h
+                       y = t x
+
+
+transforms the vector of expansion coefficients x (expanded on the {bk}
+vectors) to the vector of expansion coefficients y (expanded on the {vk}
+vectors). as its name implies, this transformation maps a data vector
+from one basis to another. both x and y represent the same data vector,
+but written in terms of different bases.
+
+what's the change of basis transformation for mapping a fourier expansion
+onto a hadamard expansion?
+
+
+
+
+consider the continuous function:
+
+f(w) = exp(-jw(n-1)/2)*sin(wn/2)/sin(w/2)
+
+
+
+where 'w' is a real-valued continuous variable, n is a positive integer (n>1),
+'j' is the square root of -1, and exp() is the standard exponential
+function (i.e., "e to the power of...").
+ 
+compute the n-point circular convolution of f(w) with itself: f(w) ** f(w)
+where '**' indicates circular convolution. note: if you can do this problem
+in your head without doing any math, then you are in great shape (mentally
+speaking, of course).
+
+
+
+
+consider two nxn circulant matrices a and b (see page 4 of lecture 20
+for an example of a circulant matrix).
+
+
+show that ab (this is matrix multiplication) is also a circulant
+matrix.
+show that ab=ba. is this true in general (i.e., for any matrix)?
+why are the above properties important when considering which
+matrices can represent linear circularly-shift-invariant operators?
+prove that circular convolution is commutative (hint: you've already
+done it).
+
+
+
+
+
+brain teasers from the first third of the course
+have been placed on a separate page.
+
+
+
+
+so where are the answers? come to office hours!
+
+
+want more? tell me and i'll try to think of some.
+
+
+
+
+
+
+course details
+
+
+
+
+meeting times
+
+ 
+  lectures
+  mwf 12:30-1:30
+  ggb 1504 (lee iacocca lecture hall)
+ 
+ 
+  recitation
+  tues 1:30-2:30
+  eecs 1003
+ 
+ 
+  or
+ 
+ 
+  thurs 2:30-3:30
+  ggb 1371
+ 
+
+
+the two recitation sections will be identical so please come to only
+one or the other. we'd like to keep the recitations more informal and
+that is hard to do if everyone comes to the same recitation.
+
+ggb 1371 is hard to find. it is in the north-east section of g.g. brown,
+in that heavy machinery area where they build the concrete canoe, etc.
+if you're coming to thursday's recitation, plan on a few extra minutes
+for finding the room. use the building maps posted on the walls. 
+bring your hard-hat.
+
+
+
+instructor
+prof. gregory h. wakefield 
+    ghw@eecs.umich.edu 
+    4118 eecs 
+    3-9857
+
+
+
+teaching assistant
+andrew sterian 
+    asterian@eecs.umich.edu
+
+
+
+
+office hours
+
+
+  
+    andrew sterian
+    monday 2:30-4:30
+    eecs 2420
+  
+  
+    tuesday 2:30-4:30
+  
+  
+    wednesday 1:30-3:30
+  
+  
+    thursday 1:30-2:30
+  
+  
+    prof. wakefield
+    friday 1:30-3:30
+    eecs 4118
+  
+ 
+
+
+
+textbook
+digital signal processing: principles, algorithms, and applications.
+ (3rd ed.) john proakis and dimitris manolakis, prentice-hall.
+
+
+
+workload
+
+  
+  homework (10%) note: one homework will not be counted
+  group project (15%)
+  3 exams (25% each)
+  
+  computer environment will utilize matlab
+
+
+
+syllabus
+
+  
+  introduction: what you have learned in the course... [3-5]
+  chapter 2: discrete-time signals and systems [3]
+  chapter 3: z-transform [6]
+  chapter 4: frequency analysis [6]
+  chapter 5: discrete fourier transform [2]
+  chapter 6: fft [2]
+  chapter 7: implementation [6]
+  chapter 8: design of digital filters [6]
+  chapter 9: sampling and reconstruction [2]
+  chapter 12: power spectrum estimation [3]
+  
+
+
+
+
+
+eecs451 home page
+eecs451 home page
+eecs451 home page
+eecs451 home page
+eecs451 home page
+eecs451 home page
+eecs451 home page
+eecs451 home page
+eecs451 home page
+eecs451 home page

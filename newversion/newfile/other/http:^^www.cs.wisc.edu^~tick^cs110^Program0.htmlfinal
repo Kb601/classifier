@@ -1,0 +1,84 @@
+cs 110 sections 1&2 - program 0
+
+
+
+
+ program0
+
+
+
+due date:
+friday 11/1/96, 5:00 pm
+grade:
+4% of your final grade.
+text covered:
+none
+problem description:
+program0 requires you to do no programming of your own, nor are you required at this point to understand what the program is doing (although it may make a little more sense once you run it). it's simply intended to get you used to using the pc's, ms-dos, and microsoft fortran.
+
+send me e-mail (tick@cs.wisc.edu) indicating which
+email address you send and receive your mail from. 
+you need to be registered for this class in order to be given an account on the vectras. the account will take about 2 days to set-up after you register. if your account won't be set-up yet by the due date of this program, let me know immediately.  
+check out the basics of using fortran on the pc's. this will tell you exactly what to do; just read the following comments below, then follow the steps.
+
+
+note that step 10 talks about copying additional files. for this program, you'll want to copy a file called prog0.dat (that's a zero, not the letter o) into your working directory.     
+
+when you type this program in, use your name instead of mine where it appears
+near the top of the program. also, make sure that you type this *exactly*
+as you see it. the c's and line #s must be in the very first column, and
+the rest (i.e. program zero, implicit none, etc) must be in column 7...use
+the tab key to jump to column 7.
+here is the program to type in (step 13): 
+
+
+
+c       jeff lampert
+c       10/26/96
+c       program 0
+c       cs110, section 2
+
+        program zero
+        implicit none
+        character name*128
+        character buffer*20
+
+        open (unit = 1, file = 'prog0.dat' , status = 'old')  
+
+        print *,'please enter your name: '
+        read '(a)',name
+
+2       continue
+
+           read(1,4,end=3) buffer
+4          format(a)
+           print *,buffer 
+        goto 2
+
+3       continue
+
+        print *, name
+        close(unit=1)
+        stop
+        end
+
+
+
+
+
+copyright &copy 1996 jeff lampert (tick@cs.wisc.edu).  last modified october 26, 1996.
+
+
+
+
+
+cs 110 sections 1&2 - program 0
+cs 110 sections 1&2 - program 0
+cs 110 sections 1&2 - program 0
+cs 110 sections 1&2 - program 0
+cs 110 sections 1&2 - program 0
+cs 110 sections 1&2 - program 0
+cs 110 sections 1&2 - program 0
+cs 110 sections 1&2 - program 0
+cs 110 sections 1&2 - program 0
+cs 110 sections 1&2 - program 0

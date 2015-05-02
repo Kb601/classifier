@@ -1,0 +1,106 @@
+the xii planner
+
+
+
+
+
+
+the xii planner
+
+
+classical planners presuppose correct and
+complete information about the world.  although recent work has
+sketched a number of algorithms for planning with incomplete
+information, 
+substantial problems remain before these planners can be applied to
+real-world domains. since the presence of incomplete information
+invalidates the closed world assumption, an agent cannot deduce that a
+fact is false based on its absence from the agent's world model. this
+leads to two challenges:
+
+
+  satisfying universally quantified goals:  goals of the form
+  ``move all widgets to the warehouse'' or ``make all files in  /tex
+  write protected'' are common in real world domains. classical
+planners such as prodigy or ucpop
+satisfy universally quantified goals by computing the set of ground
+instances of the goal.  but how can a planner compute this set in the
+absence of complete information?  sometimes it may have to sense
+which widgets or which files are present before
+generating its plan.
+
+  avoiding redundant sensing: should the planner insert a sensory
+  action (e.g., scan with the camera, or the unix command ls) into its
+  plan? or is the action redundant, yielding information already
+  known to the planner?  since satisfying the preconditions of a sensory
+  action can require arbitrary planning, the cost of redundant sensing is
+  potentially unbounded and quite large in practice.
+
+
+
+this paper reports on the fully-implemented xii planner (xii stands
+for ``execution and incomplete information'') which addresses these
+challenges.  we allow incomplete information, but assume the
+information that is known is correct. xii's planning algorithm
+is based on ucpop, but xii interleaves planning and execution
+(following ipem) and, unlike ucpop, does not make the closed world
+assumption.  xii uses closed world reasoning to avoid redundant
+information gathering and to solve universally quantified goals in the
+presence of incomplete information.
+
+  the folks behind xii: 
+ dan weld,
+ keith golden, 
+ oren etzioni.
+
+
+  a  short
+paper (to appear at aaai-94) describing xii, (also available in 
+html) and a
+ a more
+theoretical paper (to appear at kr'94) describing local
+closed world information, a key contribution of this work.
+
+	
+
+
+
+
+
+  
+   
+   
+   
+  
+    back to ai home page
+  
+
+
+
+
+  
+   
+   
+   
+  
+    back to cse home page
+  
+
+
+	
+	for more information, send mail to "bug-ucpop@cs.washington.edu".
+	
+	
+
+
+
+the xii planner
+the xii planner
+the xii planner
+the xii planner
+the xii planner
+the xii planner
+the xii planner
+the xii planner
+the xii planner
+the xii planner

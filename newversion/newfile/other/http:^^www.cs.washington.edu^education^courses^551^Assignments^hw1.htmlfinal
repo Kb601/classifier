@@ -1,0 +1,66 @@
+assignment 1
+
+assignment 1 -- getting started
+
+due thursday april 11.
+
+
+this assignment is intended to (re)familiarize you with programming in c 
+and unix.  it should also serve to convince you that kernel operations are
+expensive, and that reducing or eliminating such operations might greatly 
+improve program performance.
+
+please note that this is an individual assignment. you should do your
+own measurements and turn in your own results, although this certainly
+doesn't mean that you cannot discuss with others what you are doing.
+in the project, you may work in groups of two or three.
+
+
+ timing simple unix system calls.
+
+we mentioned in class that system calls take much more time than regular 
+procedure calls.  show that this is the case by timing how long system 
+calls take to execute as opposed to procedure calls.  you will need to use
+the standard unix timing facility gettimeofday().  the unix timer only has
+a granularity of about 10ms, so you will need to execute each timed operation
+a large number of times in order to get accurate results.  the system call 
+getpid() is extremely simple, and so would be a good candidate for measurement.
+remember to factor out any timing overhead that you may introduce.
+
+
+ unix processes.
+
+use the timing mechanism that you built for part 1 to time how long it takes 
+for create and destroy a unix process using the fork(), exit() system calls.
+
+
+ turning in
+you should turn in 
+
+ your timing code
+ the results
+ a description of the computer on which they were gathered
+
+
+
+
+
+you might find the following man pages helpful: 
+
+  gettimeofday
+  getpid
+  fork
+  exit
+   ps
+
+
+assignment 1
+assignment 1
+assignment 1
+assignment 1
+assignment 1
+assignment 1
+assignment 1
+assignment 1
+assignment 1
+assignment 1

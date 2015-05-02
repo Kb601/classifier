@@ -1,0 +1,118 @@
+cs235 calendar
+
+
+
+cs235 calendar
+winter 1997
+
+
+week          lecture topics                      reading
+
+week 1   (jan 6 - 10)
+  intro, abstraction, data models                 au* ch. 1
+  the pascal data model                           au ch. 1
+  pascal storage allocation                       n@ p383-414
+
+week 2   (jan 13 - 17)
+  dynamic allocation of objects                   n p415-465
+  iteration                                       au sec 2.2
+  inductive proofs                                au sec 2.3
+  complete induction                              au sec 2.4
+
+week 3   (jan 21 - 24)
+  proving properties of programs                  au sec 2.5
+  recursive definitions                           au sec 2.6
+  recursive methods                               au sec 2.7, n p466-474
+
+week 4   (jan 27 - 31)
+  execution of recursive calls                     n p475-481
+  merge sort                                       au sec 2.8
+  proving properties of recursive programs         au sec 2.9
+  quicksort                                        n p489-496
+
+exam 1  feb 4 - 6, covering ch. 1 & 2 and 142 lectures.
+
+week 5   (feb 3 - 7)
+  measuring running time                          au sec 3.1-3.3
+  big-oh                                          au sec 3.4, 3.5
+  analyzing program running time                  au sec 3.6
+
+week 6   (feb 10 - 14)
+  bounding running time                           au sec 3.7
+  analyzing programs with procedure calls         au sec 3.8
+  analyzing recursive procedures                  au sec 3.9
+  analysis of merge sort                          au sec 3.10
+
+week 7   (feb 18 - 21) 
+  solving recurrence relations                    au sec 3.11
+  trees, basic terminology                        au sec 5.1-5.2
+  data structures for trees                       au sec 5.3
+
+week 8   (feb 24 - 28)
+  recursions on trees                             au sec 5.4
+  structural induction                            au sec 5.5
+  binary trees                                    au sec 5.6
+  binary search trees                             au sec 5.7-5.8
+
+week 9   (mar 3 - 7)
+  avl trees
+  cs235 binary_tree class
+  priority queues and partially ordered trees     au sec 5.9
+  heap sort                                       au sec 5.10
+
+week 10   (mar 10 - 14)
+  lists                                           au sec 6.1-6.5
+  stacks                                          au sec 6.6
+  queues                                          au sec 6.8
+
+exam 2  mar 18 - 20  covering ch. 3, 5 & 6 through 6.8.
+
+week 11   (mar 17 - 21)
+  longest common subsequences                     au sec 6.9
+  character strings                               au sec 6.10
+  sets - basic definitions, operations            au sec 7.1-7.2
+  operations on sets                              au sec 7.3
+
+week 12   (mar 24 - 28)
+  implementation of sets                          au sec 7.4-7.5
+  probability                                     au sec 4.9-4.10
+  hashing                                         au sec 7.6
+
+week 13   (mar 31 - apr 4)
+  relations and functions                         au sec 7.7
+  implementing functions & relations              au sec 7.8-7.9
+  binary relations                                au sec 7.10
+
+week 14   (apr 7 - 11)
+  infinite sets                                   au sec 7.11
+  counting                                        au sec 4.1-4.2
+  permutations                                    au sec 4.3
+  selections, orderings, assignments              au sec 4.4-4.6
+
+week 15   (apr 14 - 15)
+  distribution of objects to bins                 au sec 4.7
+  review
+
+  final section 1  friday, april 18, 7am-10am (in class)
+  final section 2  wednesday, april 23, 7am-10am (in class)
+
+
+*aho, alfred v. & ullman, jeffrey d., "foundations of computer science," 
+  (c edition), 1995, computer science press   
+
+@norman, theodore a., "a first course in object-oriented programming", byu
+bookstore packet 
+
+
+
+
+cs235 calendar
+cs235 calendar
+cs235 calendar
+cs235 calendar
+cs235 calendar
+cs235 calendar
+cs235 calendar
+cs235 calendar
+cs235 calendar
+cs235 calendar

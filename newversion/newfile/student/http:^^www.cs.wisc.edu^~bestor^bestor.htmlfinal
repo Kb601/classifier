@@ -1,0 +1,136 @@
+gareth bestor's home page
+
+
+
+
+
+welcome to gareth bestor's home page
+
+
+
+
+
+gareth s. bestor 
+
+   dissertator and teaching assistant
+   computer sciences department
+   university of wisconsin-madison
+   1210 west dayton street
+   madison, wi 53706-1685, u.s.a.
+   telephone: (608) 262-6601
+   fax: (608) 262-9777
+   e-mail: bestor@cs.wisc.edu (click here for finger)
+   world-wide-web: http://www.cs.wisc.edu/~bestor
+   
+   systems administrator
+   data and program library service
+   1180 observatory drive
+   madison, wi 53705, u.s.a.
+   telephone: (608) 262-7962
+   e-mail: bestor@dpls.dacc.wisc.edu
+
+
+education:
+
+   m.s. computer sciences, university of wisconsin-madison, 1991
+   b.sc. (honors) computer science, massey university, new zealand, 1989
+   b.sc. computer science, massey university, new zealand, 1988
+   
+       curriculum vitae (postscript)
+       resume (postscript)
+       graduate coursework (postscript)
+   
+
+
+
+
+dissertation research 
+
+   title:
+   structure from motion: the inverse projection problem
+
+   
+   
+   
+   
+
+   abstract:
+   an important problem in computer vision is recovering the 3-d structure of a scene and the position of the observer within it from one or more projected 2-d images.  this is essentially the inverse projection problem.  existing structure-from-motion (sfm) techniques solve this problem by examining multiple images projected from a rigid scene.  however sfm has not been used extensively in practice because these techniques are very sensitive to noise, do not accurately model optical projection, or restrict the position of the observer and/or the structure of the scene.  my research uses a new technique for solving the inverse projection problem called the concurrent projector model which makes no assumptions about the scene other than it is rigid and no assumptions about the position of the observer.  this technique uses a projector based model of projection instead of the camera based model traditionally used in sfm.  as a result, the algorithm is defined for any geometric transformation in any dimension, not just 3-d perspective projection.  for a given transformation and dimension the algorithm identifies when the inverse projection problem is under-constrained and specifies the minimum number of points and images required to solve it.  the concurrent projector model can also examine additional points and images to minimize the types of projection errors that occur in real-world applications by allowing the projectors to approximately intersect.
+
+this technique is currently being applied to the problem of robot navigation and exploration to both determine the position of a robot in an unknown environment and at the same time to map this environment.
+
+   advisor:
+    prof. charles r. dyer
+
+   research interests:
+   computer and machine vision, vision-based robot navigation and exploration, 3-d computer graphics, virtual reality.
+   
+       artificial intelligence group
+       computer vision group
+       machine learning research group
+       robotics lab
+   
+   
+
+
+
+
+teaching duties for spring 1995-96
+
+   cs 110 introduction to computer programming:
+   sections 1 and 2 (fortran)
+
+   cs 110 is a one-credit course which covers the basic programming structures needed to prepare students for cs 310 and elementary engineering courses.  no prior computer programming experience is required and only a basic knowledge of computers is assumed.  the material covered enables students to write simple computer programs to solve engineering problems in elementary courses.  all programming is done in fortran.  this course is intended for students who received little or no programming instruction in high school.
+
+these sections are taught entirely in the fortran programming language and are intended primarily for engineering students and non-computer science majors.
+   
+       cs 110 sections 1 and 2 home page
+   
+   
+
+   cs 302 algebraic language programming:
+   section 70 (fortran)
+
+   construction of algorithms; problem solving; instruction and experience in the use of at least one procedure-oriented language (e.g., pascal or fortran); survey of other such languages, advanced programming techniques. prereq: advanced high school mathematical preparation or some college work in mathematics, statistics or logic; or consent of instructor. open to fr.
+
+   this section is taught entirely in the fortran programming language and is intended primarily for engineering students and non-computer science majors.
+   
+       cs 302 section 70 home page
+   
+   
+
+
+
+
+other pointers of interest
+
+    computer sciences department home page
+    university of wisconsin-madison wiscinfo home page
+    information about new zealand
+    uw hoofer outing club
+    nextstep and next software, inc.
+   
+    starting points for internet exploration
+    lycos (search the world-wide-web by keyword)
+
+
+
+
+
+
+
+copyright &copy 1996 gareth s. bestor (bestor@cs.wisc.edu). last modified january 30, 1996.
+
+
+
+
+gareth bestor's home page
+gareth bestor's home page
+gareth bestor's home page
+gareth bestor's home page
+gareth bestor's home page
+gareth bestor's home page
+gareth bestor's home page
+gareth bestor's home page
+gareth bestor's home page
+gareth bestor's home page

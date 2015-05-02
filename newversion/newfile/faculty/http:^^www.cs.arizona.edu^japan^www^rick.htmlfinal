@@ -1,0 +1,207 @@
+richard d. schlichting home page
+
+
+ richard d. schlichting 
+
+
+
+ rick received the b.a. degree in history and mathematics (computer science
+option) from the  college of
+william and mary  in 1977, and the m.s. and ph.d. degrees in computer
+science from  cornell university 
+in 1979 and 1982, respectively.  
+
+ since 1982, rick has been in the 
+department of computer science  at 
+the university of arizona , where he is currently 
+holds the rank of professor.  his research interests include 
+distributed systems, fault-tolerant computing, and heterogeneous 
+scientific applications.  in the latter area, he heads the 
+ schooner project ,
+whose goal is to provide software support for constructing scientific
+meta-computations across networks of heterogeneous machines.
+much of his current work in fault-tolerant computing involves
+using the x-kernel in various ways to support fault-tolerance, and is done
+in cooperation with members of the 
+
+network systems research group .
+he currently supervises one postdoctoral 
+associate (
+matti hiltunen ), 
+and four graduate students
+(
+nina bhatti , ilwoo chang, xiaonan han,
+and 
+don waugaman ).
+
+ rick is also active in promoting increased 
+interaction between u.s. and japanese computer scientists. 
+he spent seven months in 1990 visiting the 
+ 
+katayama laboratory at tokyo institute of technology ,
+where he worked on using an attribute-grammar formalism to implement
+fault-tolerant software.  he is currently spending a year at
+
+hitachi central research laboratory near tokyo working on
+various software issues related to heterogeneous scientific computation. 
+both of these visits have been supported by
+the nsf u.s.-japan cooperative science program.
+
+ rick is a member of acm, ieee, and 
+the 
+ifip working
+group 10.4 on dependable computing and fault-tolerance.  
+he is on the editorial boards of ieee transactions on computers,
+ieee parallel and distributed technology, and
+the springer-verlag series on dependable computing and fault-tolerant systems.
+he is also current vice-chair of the ieee technical committee on
+fault-tolerant computing, and has served on numerous conference
+program committees in the areas of fault tolerance and distributed 
+computing.
+he was general chair of the second ifip working 
+conference on dependable computing for critical applications in 1991,
+and program committee chair of the thirteenth ieee symposium on
+reliable distributed computing in 1994.
+
+ as part of his japan activities, rick heads the
+ japancs
+project , and is founder and
+current moderator of the usenet newsgroup 
+
+comp.research.japan , an
+electronic forum devoted to japanese research developments in
+computing and computer science.
+he is also a member of the association of research libraries
+working group on japanese scientific and technical information.
+
+ when not working, rick likes to haunt local japanese restaurants
+with his family.  their favorite is samurai, which during the winter
+months serves the best miso ramen this side of japan.  rick also
+follows the arizona wildcat sports teams.
+
+
+
+ some recent talks 
+
+
+ 
+     an approach to constructing configurable high-level protocols
+     for fault tolerance, invited talk, dept. of eecs, univ.
+     of michigan, february 1996. 
+
+ 
+     an introduction to fault-tolerant software ,
+     invited talk, international workshop on fault tolerance in
+     information systems (ftis95), tokyo, november 1995. 
+
+
+
+
+
+ some recent papers 
+
+
+ 
+    p. homer and r. schlichting, configuring scientific applications
+    in a heterogeneous distributed system,
+    distributed systems engineering (september 1996), to appear. 
+
+
+    m. suzuki, t. katayama, and r. schlichting, 
+    ftag: a functional and attribute based model for writing fault-tolerant
+    software, technical report 96-6, department of computer science, 
+    university of arizona, may 1996.  
+
+ 
+    m. hiltunen and r. schlichting, a configurable membership service,
+    technical report 94-37a, department of computer science, university of
+    arizona, december 1994 (revised january 1996). 
+
+ 
+    m. hiltunen and r. schlichting, understanding membership,
+    technical report 95-07, department of computer science, university of
+    arizona, july 1995. 
+
+ 
+    p. homer and r. schlichting, constructing scientific meta-computations,
+    proc. hpc-asia '95, taipei, taiwan (sept. 1995). 
+
+ 
+    m. hiltunen and r. schlichting, adaptive distributed and 
+    fault-tolerant systems, computer systems science and engineering 
+    (1996), to appear. 
+
+ 
+    n. bhatti and r. schlichting, a system for constructing configurable
+    high-level protocols, proc. sigcomm '95, cambridge, ma (august
+    1995), 138-150. 
+
+ 
+    m. hiltunen and r. schlichting, constructing a configurable group 
+    rpc service, proc. 15th int. conf. on distributed
+    computing systems, vancouver, canada (may 1995), 288-295. 
+
+ 
+    m. hiltunen and r. schlichting, properties of membership services,
+    proc. 2nd int. symp. on autonomous decentralized systems,
+    phoenix, az (april 1995), 200-207. 
+
+ 
+    z. chen and r. schlichting, monitoring and controlling remote 
+    parallel computations using schooner, proc. 9th int. parallel processing 
+    symp., santa barbara, ca (april 1995), 614-620. 
+
+ 
+    r. schlichting and v. thomas,
+    programming language support for writing fault-tolerant distributed
+    software, ieee trans. on computers (special issue on fault-tolerant
+    computing) 44, 2 (february 1995), 203-212. 
+
+ 
+    d. bakken and r. schlichting, supporting fault-tolerant parallel 
+    programming in linda, ieee trans. on parallel and distributed 
+    systems 6, 3 (march 1995), 287-302. 
+
+ 
+    m. suzuki, t. katayama, and r. schlichting, 
+    implementing fault-tolerance with an attribute and functional
+    based model, proc. 24th symp. on fault-tolerant computing, 
+    austin, tx (june 1994), 244-253. 
+
+ 
+    p. homer and r. schlichting ,
+    a software platform for constructing scientific applications
+    from heterogeneous resources,  jour. of parallel and distributed 
+    computing (special issue on heterogeneous processing) 21, 3 
+   (june 1994), 301-315. 
+
+ 
+    p. homer and r. schlichting ,
+    using schooner to support distribution and heterogeneity in the
+    numerical propulsion system simulation project,
+    concurrency-practice and experience 6, 4 (june 1994), 271-287. 
+
+ 
+    s. mishra and r. schlichting, 
+    abstractions for constructing dependable distributed systems,
+    technical report 92-19, department of computer science,
+    university of arizona, august 1992.
+
+
+
+
+
+
+phone: (520) 621-4324 / fax: (520) 621-4246 / rick@cs.arizona.edu
+
+
+richard d. schlichting home page
+richard d. schlichting home page
+richard d. schlichting home page
+richard d. schlichting home page
+richard d. schlichting home page
+richard d. schlichting home page
+richard d. schlichting home page
+richard d. schlichting home page
+richard d. schlichting home page
+richard d. schlichting home page

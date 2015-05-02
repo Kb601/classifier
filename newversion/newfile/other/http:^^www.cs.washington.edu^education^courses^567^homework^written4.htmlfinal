@@ -1,0 +1,88 @@
+cse567 homework assignment #4
+
+
+
+
+cse 567: principles of digital systems design 
+carl ebeling, fall 1996 
+
+
+
+homework 4
+
+distributed: monday oct. 28 - due wed. nov. 6, in class
+
+
+you are to work together as teams on homework 4.  please look at
+the problems individually first and sketch possible solutions and
+questions.  then meet together and formulate solutions to each if you
+can, and assign the writeup to one or more team members.  then meet
+again to collate and review your solutions before you hand them in.
+the whole team is responsible for understanding the solution to all
+problems.
+
+for problems involving verilog code, hand in your code and your
+simulation log (or at least part of it if it's really long).  
+
+ [leiserson 29.2-1]
+ [leiserson 29.2-2]
+ let's say we have a set of n clients requesting service at the
+same time, only one of which we can service.  we can use a round-robin
+approach to decide who next gets serviced.  the n clients are put in
+some order, c_1 to c_n, and two bits are associated with each client.
+the first bit indicates whether the client is requesting service and
+the second bit indicates whether this client was the last client to be
+serviced.  when choosing the next client to service, we start at the
+last client serviced and find the next requesting client.
+
+design a circuit based on parallel-prefix to implement the round-robin
+protocol.  assume that once you get to the end of the list of clients,
+something happens to restart the operation from the beginning.
+define your operator, show that it is associative, and
+sketch the resulting circuit.
+
+extra credit: can you solve this problem if we place the clients in a
+circle, with no start or end, instead of a list?
+
+ show that the conditional sum operator defined in class is
+associative.  design the conditional sum adder for an 8-bit adder.
+write a verilog program for this adder and simulate it to show that it
+works correctly.
+
+ show that the delay of the carry-select adder is o(n^1/2). (root n)
+
+ take your sorting circuit from homework #3 and turn it into a
+pipelined sorter by inserting the appropriate registers.  model delay
+using the unit-delay model and calculate the clock period.
+simulate your circuit and show that it works correctly.
+
+ design a fast accumulator circuit which adds up a list
+of 8-bit numbers presented sequentially, one per clock cycle.  your
+circuit should have two inputs, data and start, and two outputs, sum
+and valid.  start is asserted on the cycle that a new list of numbers
+starts.  valid is asserted on the cycle that the sum of the last list
+of numbers is valid.  that is, it may take more than one cycle after a
+list of numbers has been entered to generate the final sum.  implement
+your circuit using verilog using the unit-delay model to model the
+circuit delays.  simulate your circuit, showing how fast it is and
+that it works.
+
+
+
+
+
+ebeling@cs.washington.edu
+
+
+
+
+cse567 homework assignment #4
+cse567 homework assignment #4
+cse567 homework assignment #4
+cse567 homework assignment #4
+cse567 homework assignment #4
+cse567 homework assignment #4
+cse567 homework assignment #4
+cse567 homework assignment #4
+cse567 homework assignment #4
+cse567 homework assignment #4

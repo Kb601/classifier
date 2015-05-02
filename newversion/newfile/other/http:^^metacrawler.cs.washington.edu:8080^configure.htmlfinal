@@ -1,0 +1,115 @@
+metacrawler configuration
+
+
+
+
+
+
+
+
+metacrawler
+configuration options 
+
+
+this page is for users who wish to personalize
+metacrawler.  many features can be tailored to function the way
+you desire.
+to configure metacrawler, simply select the options you prefer, and then
+click the save configuration button.
+metacrawler will remember the options you choose, and next time
+you visit our site the configuration will be the same.
+technical note: if your browser does not support cookies, the
+configuration will not be saved properly.  the solution is to bookmark
+the link produced after saving the configuration and using
+this bookmark to access metacrawler in the future.
+
+
+
+extra functionality
+
+
+enable
+
+some features supported by metacrawler are not displayed by default.  this
+option will allow the user to utilize this extra functionality.
+
+
+dynamic status displays
+
+
+enable
+
+if you have a java
+capable browser, you may wish to view your search results
+with the metacrawler control applet.  this allows you to request results
+updates at any time during a search.  java capable browsers include 
+netscape
+navigator version 2.0 and greater and 
+internet explorer 
+version 3.0 and greater.
+note for internet explorer users: internet explorer version 3.0
+will crash when it tries to run our applet.  please either turn off
+java just-in-time compilation or upgrade to internet explorer
+version 3.01.
+
+
+frame support
+
+
+enable
+
+if dynamic status displays are enabled above, the display applet may be located
+in a 
+
+frame
+of its own, which allows the user to scroll through search results
+while still viewing search progress. note that some versions of netscape
+will not save your place after following a link out of a frame, a potential
+annoyance.
+
+
+link targets
+
+
+
+same windowsame framenew window
+
+
+if frame support is enabled above, the default is to replace the search page
+with the target page when links are followed.  you may optionally choose to
+display these results in the same frame as the followed link, or even in an
+entirely new window.
+
+
+
+
+
+
+
+
+       home
+&#183; configure 
+&#183; about 
+&#183; problems
+
+
+
+webmaster@metacrawler.com
+
+copyright &copy; 1996 erik selberg, oren etzioni and greg lauckhart.  all rights reserved.
+
+
+
+
+
+
+metacrawler configuration
+metacrawler configuration
+metacrawler configuration
+metacrawler configuration
+metacrawler configuration
+metacrawler configuration
+metacrawler configuration
+metacrawler configuration
+metacrawler configuration
+metacrawler configuration

@@ -1,0 +1,71 @@
+compilers at the uw  
+
+
+
+ compilers at the uw 
+
+this is an overview of the university of washington's compiler
+research.
+click
+here
+to find out about other cs&e research, and
+here
+to find out how to add bibliographic entries to this web page.
+
+
+	benchmarks
+	debugging
+	implementation techniques
+	-- techniques for implementing both
+	conventional and novel programming languages.
+	instruction-level parallelism
+	-- compiler techniques for exploiting ilp
+	interpreters and simulators
+	-- implemented using compilers and compiler techniques.
+	language design
+	multiple processors
+	-- compiling for machines with multiple processors,
+	both shared-memory multiprocessors and distributed-memory
+	multicomputers.
+	profiling and tracing
+	-- use compiler techniques to improve profiling and tracing,
+	use profiles to improve compilation.
+	register allocation
+	runtime code generation
+	-- introducing new code into a running program.
+	synchronization
+	-- how it behaves and how to implement it.
+	threads and multithreading
+	runtime systems for multithreading.
+
+
+links to compilers-related work at other sites.
+
+
+
+
+        department of computer science & engineering
+university of washington, fr-35 
+seattle, washington
+98195, usa
+
+
+
+
+
+	pardo@cs.washington.edu
+ 
+
+
+
+
+ compilers at the uw 
+ compilers at the uw 
+ compilers at the uw 
+ compilers at the uw 
+ compilers at the uw 
+ compilers at the uw 
+ compilers at the uw 
+ compilers at the uw 
+ compilers at the uw 
+ compilers at the uw

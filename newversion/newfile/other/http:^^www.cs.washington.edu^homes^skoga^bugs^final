@@ -1,0 +1,169 @@
+bugs
+
+
+
+
+
+bugs. i hate bugs.
+
+
+
+you wish you could just squash 'em like so:
+
+
+
+
+you always seem to be on the losing side...
+
+
+
+
+this is what releasing a new version of software is like
+
+ note: all of these images come from the  skuld
+shrine. the picture of the girl (yes, she's only 12) is skuld, one
+of the main characters from the animation  oh my goddess!
+. no, i have yet to see a single episode of the animation, but i
+thought that the bugs were rather cute. this was done in a fit of
+frustration at 3:00am.  
+
+
+
+
+shuichi koga (
+  
+skoga@cs.washington.edu)
+
+
+last modified: tue jul 25 03:00:45 1995
+
+
+
+
+dynamic
+compilation (these concepts overlap).  i plan to do my generals
+and my thesis in this area, and hope to graduate around the time our
+new building is
+completed (or soon after).
+
+other interests
+
+in addition to phased compilation, lately i've been interested in
+extensible
+operating systems and distributed
+systems.  this past spring, i read up on techniques for creating
+and exploiting instruction-level
+parallelism (ilp).  many of the papers came from the impact group at uiuc.
+
+in the past i've been interested in parallel
+programming languages and environments, parallel algorithms, and scientific computing.
+i'm also concerned about the impact of
+computing technologies on society.
+
+collective communication
+
+in spring 1995, i finished my quals project under richard
+ladner, design and analysis of collective-communication
+primitives.  i have a few more ideas that i'm exploring in this
+area and i should have a paper available later this year.
+
+gapp
+
+in my second year, i also did a cool
+project with eric anderson for
+the distributed
+and parallel systems course.  it was a general-purpose,
+user-programmable, kernel-resident packet processor (boy, what a
+mouthful!).  it was a good idea, but its performance suffered a little
+due to a massive, sparse switch statement that was converted to a
+series of tests and branches by the compiler.  we never had time to
+rewrite it and collect some real times, but we're sure they would have
+been great.  actually, dynamic compilation would have been ideal for
+this application.  we also had some other ideas for optimizing the
+computation of which packet processors should execute on a given
+packet, but development on spin's
+networking framework was beginning by the end of the quarter, so
+we didn't bother to pursue it further.
+
+teaching
+
+during my first year at uw, when my office
+was in sieg, i was a teaching assistant, first for cse/engr-142,
+the first-semester programming course (when it was in ada), then for
+cse-451,
+the undergraduate operating systems course.  now, my office is in the
+chateau, and i am supported by a nsf graduate
+fellowship.
+
+lawrence livermore national laboratory
+
+
+i spent three summers at lawrence
+livermore national laboratory.  my first summer at llnl, i studied
+cluster message-passing systems, mainly pvm.  during the next two
+summers, while working on my main project, a parallel climate model, i
+looked into mpi,
+even attending one of the mpi forums in dallas.  i gave a tutorial on mpi at llnl, and
+later another at boeing computing
+services.
+
+
+
+the climate model i worked on was a parallel global climate model
+called the earth system model (esm).  the esm
+is a framework for supporting parallel global climate modeling.  the
+requirements of the esm project are that the model be transportable,
+scalable, and modular.  the transportability of the code was deemed to
+be crucial, as this would allow the group to take advantage of the
+latest, most powerful multicomputers available.  i ported the code to
+mpi, instrumented the code for post-mortem performance evaluation
+using paragraph,
+upshot, pablo, or some of my
+own tools, and worked on building a library of portable
+collective-communication routines.
+
+purdue
+
+ i got my undergraduate degree in computer science and mathematics at purdue university.  my senior year i
+was president of the purdue student chapter of
+the acm.  i also helped start a upe chapter, and
+served as the chapter's second president.  additionally, i helped to
+resurrect the defunct math club by serving
+as its treasurer, then vice president, and by helping to make it a
+student chapter of the mathematical
+association of america.
+
+
+
+
+
+department of computer science and engineering
+university of washington
+box 352350
+seattle, wa 98195-2350
+office: guggenheim annex 115 (the
+chateau)
+phone: (206) 616-1854 
+fax: (206) 543-2969 
+at school, i use a sgi indy.
+
+
+
+
+
+last updated august 30, 1996.
+brian kris grant (grant@cs.washington.edu)
+
+
+
+
+bugs
+bugs
+bugs
+bugs
+bugs
+bugs
+bugs
+bugs
+bugs
+bugs

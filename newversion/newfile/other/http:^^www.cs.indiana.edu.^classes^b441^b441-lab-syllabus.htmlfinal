@@ -1,0 +1,247 @@
+b441/b541 lab syllabus for fall, 1996
+digital design b441/b541lab syllabus for fall, 1996
+
+
+contents
+
+associate instructor
+newsgroup
+format of the lab
+laboratory grading
+lab info
+lab schedule
+
+
+
+
+your friendly ai
+
+
+david wilson
+ 
+office: lindley hall 406 (x5-8702)
+office hours: tuesday 12-1, wednesday 10-11
+e-mail: davwils@cs.indiana.edu
+
+
+
+
+
+newsgroup
+a newsgroup has been set up for this course:
+ac.csci.b441.
+it is recommended that you post all questions to this newsgroup.
+if you want to know the answer to a question, chances are
+someone else does, too.
+also, if you know the answer to a question someone has posted, we
+encourage you to post your answer and discuss the possible
+solutions. 
+
+all of this, of course, assumes you are following the guidelines on
+academic honesty. 
+
+
+
+format of the lab
+for the first nine weeks of the lab (except for the first lab), there
+will be an assignment due at the beginning of each lab. the assignment
+will typically consist of both written work and a working circuit on
+your logic engine. since the pdp-8 is such a wiring intensive project,
+it will be divided into three parts with extended deadlines. in
+addition to the lab assignments, you will be given a laboratory exam
+relating to the pdp-8. this exam will come at the end of the semester
+and will test for practical, in-depth knowledge of your circuit. 
+
+please note that, in general, you will be working in pairs.
+all written exercises are to be handed in individually and will be
+graded as individual work. you and your partner will co-operate on all
+circuits, however, and will be given a single grade for your
+circuitry. because wiring experience will be shared, it is
+your responsibility to make sure you understand what wiring
+your partner has done and to make sure that you are doing your fair
+share. you may divide up the work however you and your partner prefer,
+but if we see that one of you is consistently not doing enough work,
+we may re-arrange the groups. 
+
+
+
+laboratory grading
+the lab grade will be broken down in the following way:
+
+ 75% -- lab assignments
+ 10% -- working pdp-8
+ 15% -- final exam
+
+
+
+
+lab info
+
+
+       software tools documentation (man pages)
+
+       sample diglog configuration file 
+
+       getting started with diglog  
+
+       manual asm control of pdp-8, lab 10  
+
+       pdp-8 faq  
+
+       other pdp-8 info on the web  
+
+
+
+
+
+
+
+
+
+
+
+
+laboratory schedule
+                  digital design b441/b541
+                  fall '96
+
+
+
+
+week of
+manual section
+topic
+
+
+
+september 3
+lab 1
+introduction to laboratory equipment and procedures.  simulation.
+
+
+
+september 10
+|
+|
+
+
+
+september 17
+lab 2
+mixed logic
+
+
+
+september 24
+lab 3
+three-state logic
+
+
+
+|
+lab 4
+programmable logic and plds
+
+
+
+october 1
+lab 5
+synthesis of combinational elements -- muxes, encoders, comparators
+
+
+
+october 8
+lab 6
+an alu
+
+
+
+october 15
+lab 7
+sequential circuits -- counters
+
+
+
+october 22
+lab 8
+register-transfer concepts
+
+
+
+october 29
+lab 9
+building the pdp-8 data-path pals
+
+
+
+|
+lab 10
+manual asm control of the pdp-8
+
+
+
+|
+lab 11
+building the pdp-8 controller
+
+
+
+november 5
+|
+|
+
+
+
+november 12
+|
+|
+
+
+
+november 19
+|
+| (by this week, you should have completed the design and wiring of your pdp-8 processor, and should have installed and wired the supplied i/o interface.)
+
+
+
+november 26
+ 
+thanksgiving recess
+
+
+
+december 3
+lab 12
+debugging and testing the pdp-8 processor
+
+
+
+december 10
+---
+final pdp-8 test and lab checkout
+
+
+
+december 16
+ 
+finals week -- no scheduled lab activity
+
+
+
+
+
+
+dcw 8/27/96
+
+
+
+b441/b541 lab syllabus for fall, 1996
+b441/b541 lab syllabus for fall, 1996
+b441/b541 lab syllabus for fall, 1996
+b441/b541 lab syllabus for fall, 1996
+b441/b541 lab syllabus for fall, 1996
+b441/b541 lab syllabus for fall, 1996
+b441/b541 lab syllabus for fall, 1996
+b441/b541 lab syllabus for fall, 1996
+b441/b541 lab syllabus for fall, 1996
+b441/b541 lab syllabus for fall, 1996

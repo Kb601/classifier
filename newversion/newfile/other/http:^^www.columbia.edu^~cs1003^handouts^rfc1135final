@@ -1,0 +1,1850 @@
+date: tue, 14 jan 1997 23:01:22 gmt
+server: apache/1.1.1
+content-type: text/plain
+content-length: 75171
+last-modified: tue, 08 oct 1996 18:08:45 gmt
+
+network working group                                        j. reynolds
+request for comments: 1135                                           isi
+                                                           december 1989
+
+
+                   the helminthiasis of the internet
+
+status of this memo
+
+   this memo takes a look back at the helminthiasis (infestation with,
+   or disease caused by parasitic worms) of the internet that was
+   unleashed the evening of 2 november 1988.  this rfc provides
+   information about an event that occurred in the life of the internet.
+   this memo does not specify any standard.  distribution of this memo
+   is unlimited.
+
+introduction
+
+         ----- "the obscure we see eventually, the completely
+         apparent takes longer." ----- edward r. murrow
+
+   the helminthiasis of the internet was a self-replicating program that
+   infected vax computers and sun-3 workstations running the 4.2 and 4.3
+   berkeley unix code.  it disrupted the operations of computers by
+   accessing known security loopholes in applications closely associated
+   with the operating system.  despite system administrators efforts to
+   eliminate the program, the infection continued to attack and spread
+   to other sites across the united states.
+
+   this rfc provides a glimpse at the infection, its festering, and
+   cure.  the impact of the worm on the internet community, ethics
+   statements, the role of the news media, crime in the computer world,
+   and future prevention will be discussed.  a documentation review
+   presents four publications that describe in detail this particular
+   parasitic computer program.  reference and bibliography sections are
+   also included in this memo.
+
+1.  the infection
+
+         ----- "sandworms, ya hate 'em, right??" ----- michael
+         keaton, beetlejuice
+
+   defining "worm" versus "virus"
+
+      a "worm" is a program that can run independently, will consume the
+      resources of its host from within in order to maintain itself, and
+      can propagate a complete working version of itself on to other
+      machines.
+
+
+
+reynolds                                                        [page 1]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+      a "virus" is a piece of code that inserts itself into a host,
+      including operating systems, to propagate.  it cannot run
+      independently.  it requires that its host program be run to
+      activate it.
+
+      in the early stages of the helminthiasis, the news media popularly
+      cited the internet worm to be a "virus", which was attributed to
+      an early conclusion of some in the computer community before a
+      specimen of the worm could be extracted and dissected.  there are
+      some computer scientists that still argue over what to call the
+      affliction.  in this rfc, we use the term, "worm".
+
+   1.1  infection - the worm attacks
+
+      the worm specifically and only made successful attacks on sun
+      workstations and vaxes running berkeley unix code.
+
+      the internet worm relied on the several known access loopholes in
+      order to propagate over networks.  it relied on implementation
+      errors in two network programs: sendmail and fingerd.
+
+      sendmail is a program that implements the internet's electronic
+      mail services (routing and delivery) interacting with remote sites
+      [1, 2].  the feature in sendmail that was violated was a non-
+      standard "debug" command.  the worm propagated itself via the
+      debug command into remote hosts.  as the worm installed itself in
+      a new host the new instance began self-replicating.
+
+      fingerd is a utility program that is intended to help remote
+      internet users by supplying public information about other
+      internet users.  this can be in the form of identification of the
+      full name of, or login name of any local user, whether or not they
+      are logged in at the time (see the finger protocol [3]).
+
+      using fingerd, the worm initiated a memory overflow situation by
+      sending too many characters for fingerd to accommodate (in the
+      gets library routine).  upon overflowing the storage space, the
+      worm was able to execute a small arbitrary program.  only 4.3bsd
+      vax machines suffered from this attack.
+
+      another of the worm's methods was to exploit the "trusted host
+      features" often used in local networks to propagate (using rexec
+      and rsh).
+
+      it also infected machines in /etc/hosts.equiv, machines in
+      /.rhosts, machines in cracked accounts' .forward files, machines
+      cracked accounts' .rhosts files, machines listed as network
+      gateways in routing tables, machines at the far end of point-to-
+
+
+
+reynolds                                                        [page 2]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+      point interfaces, and other machines at randomly guessed addresses
+      on networks of first hop gateways.
+
+      the internet worm was also able to infect systems using guessed
+      passwords, typically spreading itself within local networks by
+      this method.  it tried to guess passwords, and upon gaining
+      access, the worm was able to pose as a legitimate user.
+
+   1.2  festering - password cracking
+
+      the worm festered by going into a password cracking phase,
+      attempting to access accounts with obvious passwords (using clues
+      readily available in the /etc/passwd file), such as: none at all,
+      the user name, the user name appended to itself, the "nickname",
+      the last name, the last name spelled backwards.  it also tried
+      breaking into into accounts with passwords from a personalized 432
+      word dictionary, and accounts with passwords in /usr/dict/words.
+
+      most users encountered a slowing of their programs, as the systems
+      became overloaded trying to run many copies of the worm program,
+      or a lack of file space if many copies of the worm's temporary
+      files existed concurrently.  actually, the worm was very careful
+      to hide itself and leave little evidence of its passage through a
+      system.  the users at the infected sites may have seen strange
+      files that showed up in the /usr/tmp directories of some machines
+      and obscure messages appeared in the log files of sendmail.
+
+   1.3  the cure
+
+      teams of computer science students and staff worked feverishly to
+      understand the worm.  the key was seen to get a source (c
+      language) version of the program.  since the only isolated
+      instances of the the worm were binary code, a major effort was
+      made to translate back to source, that is decompile the code, and
+      to study just what damage the worm was capable of.  two specific
+      teams emerged in the battle against the internet worm: the
+      berkeley team and the mit team.  they communicated and exchanged
+      code extensively.  both teams were able to scrutinize it and take
+      immediate action on a cure and prevent reinfection.  just like
+      regular medical doctors, the teams searched, found and isolated a
+      worm specimen which they could study.  upon analyzing the specimen
+      and the elements of its design, they set about to develop methods
+      to treat and defeat it.  through the use of the "old boy network"
+      of unix system wizards (to find out something, one asks an
+      associate or friend if they know the answer or who else they could
+      refer to to find out the answer), email and phone calls were
+      extensively used to alert the computer world of the program
+      patches that could be used at sites to close the sendmail hole and
+
+
+
+reynolds                                                        [page 3]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+      fingerd holes.  once the information was disseminated to the sites
+      and these holes were patched, the internet worm was stopped.  it
+      could not reinfect the same computers again, unless the worm was
+      still sitting in an infected trusted host computer.
+
+      the internet worm was eliminated from most computers within 48-72
+      hours after it had appeared, specifically through the efforts of
+      computer science staffs at the university research centers.
+      government and commercial agencies apparently were slow in coming
+      around to recognizing the helminthiasis and eradicating it.
+
+2.  impact
+
+         ----- "off with his head!!!" ----- the red queen,
+         alice in wonderland
+
+   two lines have been drawn in the computer community in the aftermath
+   of the internet worm of november 1988.  one group contends that the
+   release of the worm program was a naive accident, and that the worm
+   "escaped" during testing.  yet, when the worm program was unleashed,
+   it was obvious it was spreading unchecked.  another group argues that
+   the worm was deliberately released to blatantly point out security
+   defects to a community that was aware of the problems, but were
+   complacent about fixing them.  yet, one does not necessarily need to
+   deliberately disrupt the entire world in order to report a problem.
+
+   both groups agree that the community cannot condone worm infestation
+   whether "experimental" or "deliberate" as a means to heighten public
+   awareness, as the consequences of such irresponsible acts can be
+   devastating.  meanwhile, several in the news media stated that the
+   author of the worm did the computer community a favor by exposing the
+   security flaws, and that bugs and security flaws will not get fixed
+   without such drastic measures as the internet worm program.
+
+   in the short term, the worm program did heighten the computer
+   community's awareness of security flaws.  also, the "old boy network"
+   proved it was still alive and well!  while networking and computers
+   as a whole have grown by leaps and bounds in the last twenty years,
+   the internet community still has the "old boys" who trust and
+   communicate well with each other in the face of adversity.
+
+   in the long term, all results of the helminthiasis are not complete.
+   many sites have either placed restrictions on access to their
+   machines, and a few have chosen to remove themselves from the
+   internet entirely.  the legal consequences of the internet worm
+   program as a computer crime are still pending, and may stay in that
+   condition into the next decade.
+
+
+
+
+reynolds                                                        [page 4]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   yet, the problem of computer crime is, on a layman's level, a social
+   one.  legal statutes, which notoriously are legislated after the
+   fact, are only one element of the solution.  development of
+   enforceable ethical standards that are universally agreed on in the
+   computer community, coupled with enforceable laws should help
+   eradicate computer crime.
+
+3.  ethics and the internet
+
+         ----- "if you're going to play the game properly,
+         you'd better know every rule." ----- barbara jordan
+
+   ethical behavior is that of conforming to accepted professional
+   standards of conduct; dealing with what is good or bad within a set
+   of moral principles or values.  up until recently, most computer
+   professionals and groups have not been overly concerned with
+   questions of ethics.
+
+   organizations and computer professional groups have recently, in the
+   aftermath of the internet worm, issued their own "statement of
+   ethics".  ethics statements published by the internet activities
+   board (iab), the national science foundation (nsf), the massachusetts
+   institute of technology (mit), and the computer professionals for
+   social responsibility (cpsr) are discussed below.
+
+   3.1  the iab
+
+      the iab issued a statement of policy concerning the proper use of
+      the resources of the internet in january, 1989 [4] (and reprinted
+      in the communications of the acm, june 1989).  an excerpt:
+
+      the internet is a national facility whose utility is largely a
+      consequence of its wide availability and accessibility.
+      irresponsible use of this critical resource poses an enormous
+      threat to its continued availability to the technical community.
+
+      the u.s. government sponsors of this system have a fiduciary
+      responsibility to the public to allocate government resources
+      wisely and effectively.  justification for the support of this
+      system suffers when highly disruptive abuses occur.  access to and
+      use of the internet is a privilege and should be treated as such
+      by all users of this system.
+
+      the iab strongly endorses the view of the division advisory panel
+      of the national science foundation division of network,
+      communications research and infrastructure which, in paraphrase,
+      characterized as unethical and unacceptable any activity which
+      purposely:
+
+
+
+reynolds                                                        [page 5]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+         (a) seeks to gain unauthorized access to the resources of the
+             internet,
+
+         (b) disrupts the intended use of the internet,
+
+         (c) wastes resources (people, capacity, computer) through such
+             actions,
+
+         (d) destroys the integrity of computer-based information, and/or
+
+         (e) compromises the privacy of users.
+
+      the internet exists in the general research milieu.  portions of
+      it continue to be used to support research and experimentation on
+      networking.  because experimentation on the internet has the
+      potential to affect all of its components and users, researchers
+      have the responsibility to exercise great caution in the conduct
+      of their work.  negligence in the conduct of internet-wide
+      experiments is both irresponsible and unacceptable.
+
+      the iab plans to take whatever actions it can, in concert with
+      federal agencies and other interested parties, to identify and to
+      set up technical and procedural mechanisms to make the internet
+      more resistant to disruption.  such security, however, may be
+      extremely expensive and may be counterproductive if it inhibits
+      the free flow of information which makes the internet so valuable.
+      in the final analysis, the health and well-being of the internet
+      is the responsibility of its users who must, uniformly, guard
+      against abuses which disrupt the system and threaten its long-term
+      viability.
+
+   3.2  nsf
+
+      the nsf issued an ethical network use statement on 30 november
+      1988, during the regular meeting of the division advisory panel
+      for networking and communications research and infrastructure (and
+      reprinted in the communications of the acm (june of 1989) [5]),
+      that stated, in part:
+
+      the division advisory panel (dap) of the nsf division of
+      networking and communication research and infrastructure (dncri)
+      deplores lapses of ethical behavior which cause disruption to our
+      national network resources.  industry, government, and academe
+      have established computer networks in support of research and
+      scholarship.  recent events have accentuated the importance of
+      establishing community standards for the ethical use of networks.
+      in this regard, the dncri dap defines as unethical any activity
+      which purposefully or through negligence:
+
+
+
+reynolds                                                        [page 6]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+         a. disrupts the intended use of the networks,
+
+         b. wastes resources through such actions (people, bandwidth or
+            computer),
+
+         c. destroys the integrity of computer-based information,
+
+         d. compromises the privacy of users,
+
+         e. consumes unplanned resources for control and eradication.
+
+      we encourage organizations managing and operating networks to
+      adopt and publicize policies and standards for ethical behavior.
+      we also encourage these organizations to adopt administrative
+      procedures to enforce appropriate disciplinary responses to
+      violations and to work with appropriate bodies on drafting
+      legislation in this area.
+
+   3.3  mit
+
+      mit issued a statement of ethics entitled, "teaching students
+      about responsible use of computers" in 1985-1986 (and reprinted in
+      the communications of the acm (june 1989) [6]).  the official
+      statement of ethics specifically outlined mit's position on the
+      intended use, privacy and security, system integrity, and
+      intellectual property rights.
+
+      those standards, outlined in the mit bulletin under academic
+      procedures, call for all members of the community to act in a
+      responsible, ethical, and professional way.  the members of the
+      mit community also carry the responsibility to use the system in
+      accordance with mit's standards of honesty and personal conduct.
+
+   3.4  cpsr
+
+      the cpsr issued a statement on the computer virus in november 1988
+      (and reprinted in the communications of the acm (june 1989) [7]).
+      the cpsr believes:
+
+      the incident should prompt critical review of our dependence on
+      complex computer networks, particularly for military and defense-
+      related function.  the flaws that permitted the recent virus to
+      spread will eventually be fixed, but other flaws will remain.
+      security loopholes are inevitable in any computer network and are
+      prevalent in those that support general-purpose computing and are
+      widely accessible.
+
+      an effective way to correct known security flaws is to publish
+
+
+
+reynolds                                                        [page 7]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+      descriptions of the flaws so that they can be corrected.  we
+      therefore view the effort to conceal technical descriptions of the
+      recent virus as short-sighted.
+
+      cpsr believes that innovation, creativity, and the open exchange
+      of ideas are the ingredients of scientific advancement and
+      technological achievement.  computer networks, such as the
+      internet, facilitate this exchange.  we cannot afford policies
+      that might restrict the ability of computer researchers to
+      exchange their ideas with one another.  more secure networks, such
+      as military and financial networks, sharply restrict access and
+      offer limited functionality.  government, industry, and the
+      university community should support the continued development of
+      network technology that provides open access to many users.
+
+      the computer virus has sent a clear warning to the computing
+      community and to society at large.  we hope it will provoke a long
+      overdue public discussion about the vulnerabilities of computer
+      networks, and the technological, ethical, and legal choices we
+      must address.
+
+4.  the role of the media
+
+         ----- "you don't worry about whether or not they've
+         written it, you worry whether or not they've read it
+         before they go on the air." ----- linda ellerbee,
+         the pat sajak show.
+
+   airplane accidents, pit bulldog attacks, drought, disease...the media
+   is there...whether you want them there or not.  predictably, some
+   members of the press grabbed on to the worm invasion of the internet
+   and sensationalized the outbreak.  sites were named (including sites
+   like nasa ames and lawrence livermore) and pointed to as being
+   "violated".  questions of computer security were rampant.  questions
+   of national security appropriately followed.  the alleged perpetrator
+   of the worm tended to be thought of by the press as a "genius" or a
+   "hero".
+
+   during the helminthiasis of the internet, handling this news media
+   "invasion", was critical.  it's akin to trying to extinguish a major
+   brush fire with a news reporter and a microphone in your way.  time
+   is of the essence.  the u.c. berkeley group, among others, reported
+   that it was a problem to get work accomplished with the press
+   hounding them incessantly.  at mit, their news office was commended
+   in doing their job of keeping the press informed and satisfied, yet
+   out of the way of the students and staff working on the a cure.
+
+   what is an appropriate response??  at mit, even a carefully worded
+
+
+
+reynolds                                                        [page 8]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   "technical" statement to the press resulted in very few coherent
+   press releases on the internet worm.  extrapolation and "flavoring"
+   by the press were common.  according to eichin and rochlis, "we were
+   unable to show the t.v. crew anything "visual" caused by the virus,
+   something which eventually become a common media request and
+   disappointment.  instead, they settled for people looking at
+   workstations talking 'computer talk'." [10]
+
+   cornell university was very critical of the press in their report to
+   the provost: "the commission suggests that media exaggeration of the
+   value and technical sophistication of this kind of activity obscures
+   the far more accomplished work of those students who complete their
+   graduate studies without public fanfare; who make constructive
+   contributions to computer sciences and the advancement of knowledge
+   through their patiently constructed dissertation; and who subject
+   their work to the close scrutiny and evaluation of their peers, and
+   not to the interpretations of the popular press." [9]
+
+5.  crime in the computer world
+
+         ----- "a recent survey by the american bar association
+         found that almost one-half of those companies and
+         government agencies that responded had been victimized
+         by some form of computer crime.  the known financial loss
+         from those crimes was estimated as high as $730 million,
+         and the report concluded that computer crime is among
+         the worst white-collar offenses." ----- the computer
+         fraud and abuse act of 1986
+
+   the term white collar crime was first used by edwin sutherland, a
+   noted american criminologist, in 1939.  sutherland contended that the
+   popular view of crime as primarily a lower class (blue collar)
+   activity was based on the failure to consider the activities of the
+   robber barons and captains of industry who violated the law with
+   virtual impunity.
+
+   in this day and age, white collar crime refers to violations of the
+   law committed by salaried or professional persons in conjunction with
+   their work.  computer crimes are identified and included in this
+   classification.  yet, law enforcement agencies have historically paid
+   little attention to this new phenomenon.  when a trial and conviction
+   does occur, it's resulted more often in a fine and probation, than a
+   prison term.  a shift became apparent in the late 1970s, when the
+   fbi's abscam investigation (1978-80) resulted in the conviction of
+   several u.s. legislators for bribery and related charges.
+
+   the legal implication of the internet worm program as a computer
+   crime is still pending, as there are few cases to rely on.  on the
+
+
+
+reynolds                                                        [page 9]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   federal level, hr-6061, "the computer virus eradication act of 1988"
+   (herger & carr) was introduced in the u.s. house of representatives.
+   on the state level, several states are considering their own
+   statutes.  time will tell.
+
+   meanwhile, computer network security is still allegedly being
+   compromised, as described in a recent ddn security bulletin [12].
+
+6.  future prevention
+
+         ----- "this is a pretty kettle of fish." ----- queen mary to
+         stanley baldwin at the time of edward vii's abdication
+
+   what roles can the computer community as a whole, play in preventing
+   such outbreaks?  why were many people aware of the debug problem in
+   the sendmail program and the overflow problem in fingerd, yet,
+   appropriate fixes were not installed in existing systems?
+
+   various opinions have emerged:
+
+         1) computer ethics must be taken seriously.  a standard for
+            computer ethics is extremely important for the new groups of
+            computer professionals graduating out of universities.  the
+            "old" professionals and "new" professionals who use
+            computers are all responsible for their applications.
+
+         2) the "powers that be" of the internet (iab, darpa, nsf, etc.)
+            should pursue the current problems in network security, and
+            cause the flaws to be fixed.
+
+         3) the openness and free flow of information of networking
+            should be rightfully preserved, as it demonstrated its worth
+            during the helminthiasis by expediting the analysis and cure
+            of the infestation.
+
+         4) promote and coordinate the establishment of committees or
+            agency "police" panels that would handle, judge, and enforce
+            violations based on a universally set standard of computer
+            ethics.
+
+         5) the continued incidences of "computer crime" show a lack of
+            professionalism and ethical standards in the computer
+            community.  ethics statements like those discussed in this
+            rfc, not only need to be published, but enforced as well.
+            there is a continuing need to instill a professional code of
+            ethics and responsibilities in order to preserve the
+            computer community.
+
+
+
+
+reynolds                                                       [page 10]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+7.  documentation review
+
+         ----- "everybody wants to get into the act!" ----- jimmy
+         durante.
+
+   quite a number of articles and papers were published very soon after
+   the worm invasion.  books, articles, and other documents are
+   continuing to be written and published on the subject (see section 9,
+   bibliography).  in this rfc, we have chosen four to review: the
+   cornell university report on "the computer worm" [8], presented to
+   the provost of the university, eichin and rochlis' "with microscope
+   and tweezers: an analysis of the internet virus of november 1988"
+   [9], donn seeley's "a tour of the worm" [10], and gene spafford's,
+   "the internet worm program: an analysis" [11].
+
+   7.1  the cornell university report
+
+      the cornell university report on "the computer worm", was
+      presented to the provost of the university on 6 february 1989, by
+      the commission of preliminary enquiry, consisting of: ted
+      eisenberg, law, david gries, computer science, juris hartmanis,
+      computer science, don holcomb, physics, m. stuart lynn, office of
+      information technologies (chair), and thomas santoro, office of
+      the university counsel.
+
+      an introduction set the stage of the intent and purpose of the
+      commission:
+
+         1)  accumulate all evidence concerning the involvement
+             of the alleged cornell university computer science
+             graduate student in the worm infestation of the internet,
+             and to assess the gathered evidence to determine the
+             alleged graduate student was the perpetrator.
+
+         2)  accumulate all evidence concerning the potential
+             involvement of any other members of the cornell university
+             community, and to assess such evidence to determine
+             whether or not any other members of the cornell university
+             community was involved in unleashing the worm on to the
+             internet, or knew of the potential worm infestation ahead
+             of time.
+
+         3)  evaluate relevant computer policies and procedures to
+             determine which, if any, were violated and to make
+             preliminary recommendations to the provost as to
+             whether any of such policies and procedures should be
+             modified to inhibit potential future security violations
+             of this general type.
+
+
+
+reynolds                                                       [page 11]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+
+      in the summary of findings and comments, the commission named the
+      cornell university first year computer science graduate student
+      that allegedly created the worm and unleashed it on to the
+      internet.  the findings section also discussed:
+
+         1)  the impact of the invasion of the worm,
+         2)  the mitigation attempts to stop the worm,
+         3)  the violation of computer abuse policies,
+         4)  the intent,
+         5)  security attitudes and knowledge,
+         6)  technical sophistication,
+         7)  cornell's involvement,
+         8)  ethical considerations,
+         9)  community sentiment,
+         10) and cornell university's policies on computer abuse.
+
+      the report concluded that the worm program's gathering of
+      unauthorized passwords and the dissemination of the worm over a
+      national network were wrong.  the commission also disclaimed that
+      contrary to media reports, cornell university did not condone the
+      worm infection, nor heralded the unleashing of the worm program as
+      a heroic event.  the commission did continue to encourage the free
+      flow of scholarly research and reasonable trust within the
+      university/research communities.
+
+      a background on the worm program, methods of investigation, an
+      introduction to the evidence, an interpretation and findings,
+      acknowledgements, and an extensive appendices were also included
+      in the commission's report.
+
+   7.2  "with microscope and tweezers: an analysis of the internet
+        virus of november 1988"
+
+      eichin and rochlis' "with microscope and tweezers: an analysis of
+      the internet virus of november 1988", provides a detailed
+      dissection of the worm program.  the paper discusses the major
+      points of the worm program then reviews strategies, chronology,
+      lessons and open issues, acknowledgements; also included are a
+      detailed appendix on the worm program subroutine by subroutine, an
+      appendix on the cast of characters, and a reference section.
+
+      a discussion of the terms "worm" versus "virus" is presented.
+      these authors concluded that it was a "virus" infection, not worm
+      infection.  thus they use the term "virus" in their document.  in
+      section 1, goals and targets by the teams of computer scientists
+      were defined.  there were three steps taken to find out the inner
+      workings of the virus:
+
+
+
+reynolds                                                       [page 12]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+         - isolating a specimen of the virus in a form
+           which could be analyzed.
+
+         - "decompiling" the virus, into a form that could
+           be shown to reduce to the executable of the real
+           things, so that the higher level version could be
+           interpreted.
+
+         - analyzing the strategies used by the virus, and
+           the elements of its design, in order to find weaknesses
+           and methods of defeating it.
+
+      major points were outlined of how the virus attacked and who it
+      attacked:
+
+         how it entered.
+
+         who it attacked.
+
+         what it attacked.
+
+         what it did not do.
+
+      in section 2, the target of the attacks by the virus were
+      discussed.  this included the sendmail debug mode, the finger
+      daemon bug, rexec and passwords, rsh, trusted host features, and
+      information flow.  a description of the virus' self protection
+      included how it covered its tracks, and what camouflage it used to
+      go undetected to the machines and system administrators.  flaws
+      were analyzed in three subjects: reinfection prevention,
+      heuristics, and vulnerabilities not used.
+
+      many defenses were launched to stop the virus.  some were
+      convenient or inconvenient for end users of the infected systems.
+      those mentioned in this document included:
+
+         - full isolation from the network
+
+         - turning off mail service
+
+         - patching out the "debug" command in sendmail
+
+         - shutting down the finger daemon
+
+         - fixing the finger daemon
+
+         - mkdir /usr/tmp/sh (a simple way to keep the virus
+           from propagating)
+
+
+
+reynolds                                                       [page 13]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+         - defining pleasequit (did not stop the virus)
+
+         - renaming the unix c compiler and linker
+
+         - requiring new passwords for all users
+
+      after the virus was diagnosed, a tool was created which duplicated
+      the password attack (including the virus' internal directory) and
+      was posted to the internet.  system administrators were able to
+      analyze the passwords in use on their system.
+
+      section 3 chronicles the events that took place between wednesday,
+      2 november 1988 through friday, 11 november 1988 (est).  in
+      section 4, lessons and open issues are viewed and discussed:
+
+         - connectivity was important.
+
+         - the "old boy network" worked.
+
+         - late night authentication is an interesting problem.
+           (how did you know that it really is mit on the
+           phone??)
+
+         - whom do you call (if you need to talk to the manager of
+           the ohio state university network at 3 o'clock in the
+           morning)?
+
+         - speaker phones and conference calling proved very useful.
+
+         - the "teams" that were formed and how they reacted to
+           the virus is a topic for future study.
+
+         - misinformation and illusions ran rampant.
+
+         - tools were not as important as one would have
+           anticipated.
+
+         - source availability was important.
+
+         - the academic sites performed the best, better than
+           government and commercial sites.
+
+         - managing the press was critical.
+
+      general points for the future:
+
+         - "we have met the enemy and he is us."
+           (alleged author of the virus was an insider.)
+
+
+
+reynolds                                                       [page 14]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+         - diversity is good.
+
+         - "the cure shouldn't be worse than the disease."
+           (it may be more expensive to prevent such attacks
+           than is is to clean up after them.)
+
+         - defenses must be at the host level, not the network level.
+           (the network performed its function perfectly and should
+           not be faulted; the flaws were in several application
+           programs.)
+
+         - logging information is important.
+
+         - denial of service attacks are easy.
+
+         - a central security fix repository may be a good idea.
+
+         - knee-jerk reactions should be avoided.
+
+      appendix a describes the virus program subroutine by subroutine.
+      a flow of information among the subroutines is pictured on page
+      19.  appendix b presents the 432 words built in the worm's
+      dictionary.  appendix c lists the "cast of characters" in
+      defeating the virus.
+
+   7.3  "a tour of the worm"
+
+      in donn seeley's "a tour of the worm", specific details were
+      presented as a "walk thru" of this particular worm program.  the
+      paper opened with an abstract, introduction, detailed chronology
+      of events upon the discovery of the worm, an overview, the
+      internals of the worm, personal opinions, and conclusion.
+
+      the chronology section presented a partial list representing the
+      current known dates and times (in pst).  in the descriptive
+      overview, the worm is defined as a 99-line bootstrap program
+      written in the c language, plus a large relocatable object file
+      that was available in vax and various sun-3 versions.  seeley
+      classified activities of the worm into two categories of attack
+      and defense.  attack consisted of locating hosts (and accounts) to
+      penetrate, then exploiting security holes on remote systems to
+      pass across a copy of the worm and run it.  the defense tactics
+      fell into three categories: preventing the detection of intrusion,
+      inhibiting the analysis of the program, and authenticating other
+      worms.  when analyzing this particular program, seeley stated that
+      it is just as important to establish what the program does not do,
+      as what it does do:
+
+
+
+
+reynolds                                                       [page 15]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+         this worm did not delete a system's files,
+
+         this worm did not modify existing files,
+
+         this worm did not install trojan horses,
+
+         this worm did not record or transmit decrypted passwords,
+
+         this worm did not try to capture superuser privileges,
+
+         this worm did not propagate over uucp, x.25, decnet, or bitnet,
+
+         this worm specifically draws upon tcp/ip,
+
+         and
+
+         this worm did not infect system v systems, unless they had been
+         modified to use berkeley network programs like sendmail,
+         fingerd, and rexec.
+
+      in section 4, the "internals" of the worm were examined and
+      charted.  the main thread of control in the worm was analyzed,
+      then an examination of the worm's data structure was presented.
+      population growth of the worm, security holes, the worms' use of
+      rsh and rexec network services, the use of the tcp finger service
+      to gain entry to a system, and the sendmail attack are discussed.
+      password cracking and faster password encryption algorithms are
+      discussed.
+
+      in the opinions section, certain questions that a "mythical
+      ordinary system administrator" might ask were discussed:
+
+         did the worm cause damage?
+
+         was the worm malicious?
+
+         will publication or worm details further harm security?
+
+   7.4  "the internet worm program: an analysis"
+
+      gene spafford's "the internet worm program: an analysis",
+      described the infection of the internet as a worm program that
+      exploited flaws in utility programs in unix based systems.  his
+      report gives a detailed description of the components of the worm
+      program: data and functions.  he focuses his study on two
+      completely independent reverse-compilations of the worm and a
+      version disassembled to vax assembly language.
+
+
+
+
+reynolds                                                       [page 16]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+      in section 4, spafford provided a high-level example of how the
+      worm program functioned.  the worm consisted of two parts: a main
+      program, and a bootstrap (or vector) program.  a description from
+      the point of view of a host that was infected was presented.
+
+      section 5 describes the data structures and organization of the
+      routines of the program:
+
+         1)  the worm had few global data structures.
+
+         2)  the worm constructed a linked list of host
+             records.
+
+         3)  the worm constructed a simple array of gateway
+             ip addresses through the use of the system
+             "netstat" command.
+
+         4)  an array of records was filled in with information
+             about each network interface active on the current host.
+
+         5)  a linked list of records was built to hold user
+             information.
+
+         6)  the program maintained an array of "object" that
+             held the files that composed the worm.
+
+         7)  a mini-dictionary of words was present in the worm
+             to use in password guessing.
+
+         8)  every text string used by the program, except for
+             the words in the mini-dictionary, was masked (xor)
+             with the bit pattern 0x81.
+
+         9)  the worm used the following routines:
+
+              setup and utility:
+                      main, doit, crypt, h_addaddr,
+                      h_addname, h_addr2host, h_clean,
+                      h_name2host, if_init, loadobject,
+                      makemagic, netmastfor, permute,
+                      rt_init, supports_rsh, and supports_telnet
+
+              network and password attacks:
+                      attack_network, attack_user, crack_0,
+                      crack_1, crack_2, crack_3, cracksome,
+                      ha, hg, hi, hl, hul, infect, scan_gateways,
+                      sendworm, try_fingerd, try_password,
+                      try_rsh, try_sendmail, and waithit
+
+
+
+reynolds                                                       [page 17]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+              camouflage:
+                      checkother, other_sleep, send_message,
+                      and xorbuf
+
+   in section 6, spafford provides an analysis of the code of the worm.
+   he discusses the structure and style, the problems of functionality,
+   camouflage, specific comments, the sendmail attack, the machines
+   involved, and the portability considerations.
+
+   finally, appendices supply the "mini-dictionary" of words contained
+   in the worm, the bootstrap (vector) program that the worm traversed
+   over to each machine, a corrected fingerd program, and the patches
+   developed and invoked to sendmail to rectify the infection.
+
+8.  references
+
+   [1]  allman, e., "sendmail - an internetwork mail router", university
+        of california, berkeley, issued with the bsd unix documentation
+        set, 1983.
+
+   [2]  postel, j., "simple mail transfer protocol", rfc 821,
+        usc/information sciences institute, august 1982.
+
+   [3]  harrenstien, k., "name/finger", rfc 742, sri, december 1977.
+
+   [4]  internet activities board, "ethics and the internet", rfc 1087,
+        iab, january 1989.  also appears in the communications of the
+        acm, vol. 32, no. 6, pg. 710, june 1989.
+
+   [5]  national science foundation, "nsf poses code of networking
+        ethics", communications of the acm, vol. 32, no. 6, pg. 688,
+        june 1989.  also appears in the minutes of the regular meeting
+        of the division advisory panel for networking and communications
+        research and infrastructure, dave farber, chair, november 29-30
+        1988.
+
+   [6]  massachusetts institute of technology, "teaching students about
+        responsible use of computers", mit, 1985-1986.  also reprinted
+        in the communications of the acm, vol. 32, no. 6, pg. 704,
+        athena project, mit, june 1989.
+
+   [7]  computer professionals for social responsibility, "cpsr
+        statement on the computer virus", cpsr, communications of the
+        acm, vol. 32, no. 6, pg. 699, june 1989.
+
+   [8]  eisenberg, t., d. gries, j. hartmanis, d. holcomb, m. lynn, and
+        t. santoro, "the computer worm", cornell university, 6 february
+        1989.
+
+
+
+reynolds                                                       [page 18]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   [9]  eichin, m., and j. rochlis, "with microscope and tweezers: an
+        analysis of the internet virus of november 1988", massachusetts
+        institute of technology, february 1989.
+
+  [10]  seeley, d., "a tour of the worm", proceedings of 1989 winter
+        usenix conference, usenix association, san diego, ca, february
+        1989.
+
+  [11]  spafford, e., "the internet worm program: an analysis", computer
+        communication review, vol. 19, no. 1, acm sigcom, january 1989.
+        also issued as purdue cs technical report csd-tr-823, 28
+        november 1988.
+
+  [12]  dca ddn defense communications system, "ddn security bulletin
+        03", ddn security coordination center, 17 october 1989.
+
+9.  bibliography
+
+   alexander, m., "a year later, internet still under attack",
+   computerworld, vol. 23, no. 45, pg. 1, 6 november 1989.
+
+   alexander, m., "it's ba-a-ack: 'no nukes worm' haunts internet", vol.
+   23, no. 45, pg. 6, 6 november 1989.
+
+   aucoin, r., "computer viruses: checklist for recovery", computers in
+   libraries, vol. 9, no. 2, pg. 4, 1 february 1989.
+
+   aviation week & space technology, "rapid spread of virus confirms
+   fears about danger to computers", aviation week & space technology,
+   vol. 129, no. 20, pg. 44, 14 november 1988.
+
+   barnes, j., "drawing the lines: changes in computer technology and
+   law guarantee that resdistricting in ther 1990s will be different and
+   a more difficult game", national journal, vol. 21, no. 13, pg. 787, 1
+   april 1989.
+
+   bellovin, s., "security problems in the tcp/ip protocol suite",
+   computer communication review, vol. 19, no. 2, pg. 32, 1 april 1989.
+
+   bellovin, s., "the worm and the debug option", forum risks to the
+   publics in computer and related systems, vol. 7, no. 74, acm
+   committee on computers and public policy, 10 november 1988.
+
+   bender, d., "computer law: evidence and procedure", (kept up to date
+   with supplements.), m. bender, new york, ny, 1978-present.
+
+   bidgoli, h., and r. azarmsa, "computer security: new managerial
+   concern for the 1990's and beyond", journal of systems management,
+
+
+
+reynolds                                                       [page 19]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   vol. 40, no. 10, pg. 21, 1 october 1989.
+
+   bloombecker, j., "short-circuiting computer crime", datamation, vol.
+   35, no. 19, pg. 71, 1 october 1989.
+
+   bloombecker, j., and j. buck, "computer ethics for cynics", computers
+   and society, vol. 18, no. 3, pgs. 30-32, acm special interest group
+   on computers and society, new york, ny, july 1988.
+
+   bologna, j. "computer insecurities: an analysis of recent surveys on
+   computer related crime and computer security", data processing &
+   communications security, vol. 12, no. 4, fall 1988.
+
+   bologna, j. "the one minute fraud auditor", computers & security,
+   vol. 8, no. 1, pg. 29, 1 february 1989.
+
+   boston herald, "computer whiz puts virus in computers", pg. 1, boston
+   herald, 5 november 1988.
+
+   brand, r., "attack of the tiger teams: inside america's computer
+   security crisis", tempus books, august 1989.
+
+   brenner, a., "lan security", lan magazine, august 1989.
+
+   brunner, j., "the shockwave rider", harper & row, 1975.
+
+   burger, r., "computer viruses: a high-tech disease", 2nd edition,
+   abacus, grand rapids, michigan, 1988.
+
+   campbell, b., and c. jackson, "the internet worm: rethinking the
+   security threat", unisphere, vol. 9, no. 1, pgs. 44, 46, 48, april
+   1989.
+
+   campell, d., "computer contagion", security management, vol. 32, no.
+   10, pg. 83, 1 october 1988.
+
+   chain store age executive, "retail technology: computer 'viruses'",
+   chain store age executive, vol. 64, no. 12, pg. 67, 1 december 1989.
+
+   chess, d., "computer viruses and related threats to computer and
+   network integrity", computer networks and isdn systems, vol. 17, no.
+   2, 1989.
+
+   christiansen, d., "a matter of ethics", ieee spectrum, vol. 25, pg.
+   15, august 1988.
+
+   cohen, f., "computational aspects of computer viruses", computers &
+   security, vol. 8, no. 4., pg. 325, 1 june 1989.
+
+
+
+reynolds                                                       [page 20]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   cohen, f., "models of practical defenses against computer viruses",
+   computers & security, vol. 8, no. 2, pg. 149, 1 april 1989.
+
+   colyer, j., "risks of unchecked input in c programs", forum risks to
+   the publics in computer and related systems, vol. 7, no. 74, acm
+   committee on computers and public policy, 10 november 1988.
+
+   commerce clearing house, "guide to computer law", (topical law
+   reports), chicago, ill., 1989.
+
+   communications of the acm, "letters", acm forum, vol. 32, no. 6, pgs.
+   672-673, june 1989.
+
+   communications of the acm, "letters", acm forum, vol. 32, no. 9, pgs.
+   1044-1045, september 1989.
+
+   computers & security, "random bits & bytes", computers & security,
+   vol. 8, no. 3, pg. 178, 1 may 1989.
+
+   computer law and tax report, "difficult to prosecute virus authors",
+   computer law and tax report, vol. 15, no. 5, pg. 7, 1 december 1988.
+
+   computer law and tax report, "virus bill introduced", computer law
+   and tax report, vol. 15, no. 4, pg. 13, 1 november 1988.
+
+   computerworld, "mis reacts", pg. 157, 7 november 1988.
+
+   cornell computer science department, "policy for the use of the
+   research computing facility", cornell university, 21 august, 1987.
+
+   data communications, "internet virus aftermath: is tighter security
+   coming?", data communications, vol. 17, no. 14, pg. 52, 1 december
+   1988.
+
+   dean, p., "was science-fiction novel germ of a computer virus?", los
+   angeles times, san diego county edition, part v, pgs. 1, 2, & 3, 9
+   november 1988.
+
+   debow, y., "bankers review security procedures after virus attack",
+   computer banking, vol. 6, no. 1, pg. 8, january 1989.
+
+   defense data network, "bsd 4.2 and 4.3 software problem resolution",
+   ddn mgt bulletin #43, ddn network information center, 3 november
+   1988.
+
+   demaio, h., "viruses - a management issue", computers & security,
+   vol. 8, no. 5, pg. 381, 1 august 1989.
+
+
+
+
+reynolds                                                       [page 21]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   denning, p., "the science of computing: the internet worm", american
+   scientist, vol. 77, no. 2, pgs. 126-128, march 1989.
+
+   devoy, j., gilssmann, r., and k. miklofsky, "media, file management
+   schemes facilitate worm utilization", computer technology review,
+   vol. 8, no. 13, fall 1988.
+
+   dewdney, a., "computer recreations; of worms, viruses and core war",
+   scientific american, march 1989
+
+   discover, "technology: communicable computer disease", discover, vol.
+   10, no. 1, pg. 64, 1 january 1989.
+
+   el-baghdadi, m., "the pivotal role in computer security", security
+   management, vol. 33, no. 7, pg. 63, 1 july 1989.
+
+   electronic learning, "computer viruses: an epidemic real or
+   imagined?", electronic learning, vol. 8, no. 6, april 1989.
+
+   eloff, j., "computer security policy: important issues", computers &
+   security, vol. 7, no. 6, pg. 559, 1 december 1988.
+
+   ellerbee, l., "and so it goes", g.p. putnam's sons, berkley edition,
+   june 1987.
+
+   ellis, a., "underwriting update-computer viruses: working out the
+   bugs", best's review, vol. 90, no. 1, pg. 84, 1 may 1989.
+
+   elmer-dewitt, p., "invasion of the data snatchers! - a 'virus'
+   epidemic strikes terror in the computer world", time magazine,
+   technology section, pgs. 62-67, 26 september 1988.
+
+   elmer-dewitt, p., "the kid put us out of action", time magazine, pg.
+   76, 14 november 1988.
+
+   elmer-dewitt, p., "you must be punished", time magazine, technology
+   section, pg. 66, 26 september 1988.
+
+   fainberg, t., "the night the network failed", new scientist, vol.
+   121, no. 1654, pg. 38, 4 march 1989.
+
+   fenwick, w., chair, "computer litigation, 1985: trial tactics and
+   techniques", litigation course handbook series no. 280, prepared for
+   distribution at the computer litigation, 1985: trial tactics and
+   techniques program, february-march 1985.
+
+   fifield, k., "smartcards outsmart computer crime", computers &
+   security, vol. 8, no. 3, may 1989.
+
+
+
+reynolds                                                       [page 22]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   fisher, l., "on the front lines in battling electronic invader", the
+   new york times, november 1988.
+
+   fites, p., johnston, p., and m. kratz, "the computer virus crisis",
+   van nostrand reinhold, new york, ny., 1989
+
+   forcht, k., thomas, d., and k. wigginton, "computer crime: assessing
+   the lawyer's perspective", journal of business ethics, vol. 8, no. 4
+   april 1989.
+
+   friis, w., "is your pc infected?", aba banking journal, vol. 81, no.
+   5, pg. 49, 1 may 1989.
+
+   gardner, e., samuels, l., and b. render, "computer security", the
+   journal of information systems management, vol. 6, no. 4, pg. 42,
+   fall 1989.
+
+   gardner, p., "the internet worm: what was said and when", computers &
+   security, vol. 8, no. 4, june 1989.
+
+   gemignani, m., "viruses and criminal law", communications of the acm,
+   vol. 32, no. 6, pgs. 669-671, june 1989.
+
+   gerlth, j., "intruders into computer systems still hard to
+   prosecute", the new york times, 5 november 1988.
+
+   gerrold, d., "when harlie was one", ballentine books, 1st edition,
+   1972.
+
+   gleissner, w., "a mathematical theory for the spread of computer
+   viruses", computers & security, vol. 8, no. 1, pg. 35, 1 february
+   1989.
+
+   greenberg, r., "know thy viral enemy: it's more important than ever
+   to guard your data and your system against infection by computer
+   viruses", byte, vol. 14, no. 6, pg. 275, 1 june 1989.
+
+   greenia, m., "computer security information sourcebook", lexikon
+   services, sacramento, ca, 1989.
+
+   harvard college, "misuse of computer systems", handbook for
+   students", pg. 85, harvard college, 1987-1988.
+
+   hawkins, c., "what users should know about computer viruses",
+   telecommunications, north american edition, vol. 23, no. 7, 1 july
+   1989.
+
+   herrick, g., "computer viruses: prevention is better than cure", the
+
+
+
+reynolds                                                       [page 23]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   accountant's magazine, vol. 93, no. 992, pg. 24, 1 march 1989.
+
+   hertzoff, i., "layer your lan", security management, vol. 33, no. 9,
+   pg. 201, 1 september 1989.
+
+   highland, h., "reports from the victims", computers & security, vol.
+   8, no. 2, pg. 101, 1 april 1989.
+
+   hispanic business, "consumer showcase: bits & bytes: from
+   thunderstorms to disgruntled employees to computer viruses, a data
+   system's vulnerability is often overlooked until disaster strikes",
+   hispanic business, vol. 11, no. 8, pg. 36, 1 august 1989.
+
+   hoffer, j., and d. straub, "the 9 to 5 underground: are you policing
+   computer crimes?", sloan management review, vol. 30, no. 4, pg. 35,
+   summer 1989.
+
+   hoffman, l., "risk analysis and computer security: towards a theory
+   at last", computers & security, vol. 8, no. 1, pg 23, 1 february
+   1989.
+
+   hospitals, "information management: electronic computer viruses are
+   not running rampant in hospital information systems, but health care
+   executives are entirely too lax about computer system security", vol.
+   63, no. 11, pg. 64, 5 june 1989.
+
+   huband, f., and r. shelton, editors, "protection of computer systems
+   and software: new approaches for combating theft of software and
+   unauthorized intrusion", papers presented at a workshop sponsored by
+   the national science foundation, 1986.
+
+   hughes, w., "the computer fraud and abuse act of 1986, congressional
+   record (30 april 1986)", washington, d.c., 30 april 1986.
+
+   industry week, "computer flu is after you", industry week, vol. 238,
+   no. 2, pg. 39, 16 january 1989.
+
+   information executive, "promoting computer ethics: the next
+   generation", information executive, vol., 2, no. 4, pg. 42, fall
+   1989.
+
+   information hotline, "plan to combat computer viruses", vol. 21, no.
+   8, pg. 10, 1 october 1989.
+
+   jamieson, r., and l. graham, "security and control issues in local
+   area network design, computers & security, vol. 8, no. 4, pg. 305, 1
+   june 1989.
+
+
+
+
+reynolds                                                       [page 24]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   jander, m., "the naked network", computer decisions, vol. 21, no. 4,
+   pg. 39, 1 april 1989.
+
+   joyce, e., "time bomb: inside the texas virus trial", computer
+   decisions, vol. 20, no. 12, pg. 38, 1 december 1988.
+
+   keenan, t., "emerging vulnerabilities in office automation security",
+   computers & security, vol. 8, no. 3, pg. 223, 1 may 1989.
+
+   kellam-scott, b., "profile: bellcore computer and network security
+   symposium", bellcore exchange, vol. 5, no. 1, pg. 24, 1 january 1989.
+
+   king, k., "overreaction to external attacks on computer systems could
+   be more harmful than the viruses themselves", chronicle of higher
+   education, pg. a36, 23 november 1988.  also in: educom bulletin, vol.
+   23, no. 4, pg. 5, winter 1988
+
+   kluepfel, h., "computer use and abuse: computer systems and their
+   data are vulnerable to error, omission, and abuse", security
+   management, vol. 33, no. 2, pg. 72, 1 february 1989.
+
+   kocher, b., "a hygiene lesson", communications of the acm, vol. 32,
+   no. 6, pg. 3, january 1989.
+
+   kosko, j., "computer security experts advise steps to reduce the risk
+   of virus attacks", virus discussion list, 22 september 1989.
+
+   kruys, j., "security of open systems", computers & security, vol. 8,
+   no. 2, pg. 139, 1 april 1989.
+
+   lapsley, p., "'we are under attack. . .' (the internet 'worm': a
+   chronology)", unix review, vol. 7, no. 1, pgs. 69-70, 72-73, january
+   1989.
+
+   lerner, e., "computer virus threatens to become epidemic", aerospace
+   america, vol. 27, no. 2, pg. 14, 1 february 1989.
+
+   lewyn, m., and d. carroll, "'scary' virus clogs top computers", usa
+   today, section a, col. 2, pg. 1, 4 november 1988.
+
+   lim, b., "protection of computer programs under the computer program
+   protection law of the republic of korea", harvard international law
+   journal, vol. 30, no. 1, pg. 171, winter 1989.
+
+   lu, w., and m. sundareshan, "secure communication in internet
+   environments: a hierachical key management scheme for end-to-end
+   encryption", ieee transactions on communications, vol. 37, no. 10,
+   pg. 1014, 1 october 1989.
+
+
+
+reynolds                                                       [page 25]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   lunt, t., "access control policies: some unanswered questions",
+   computers & security, vol. 8, no. 1, pg. 43, 1 february 1989.
+
+   lynn, m., "ethical responsibility key to computer security", the
+   educational record, vol. 70, no. 2, pg. 36, spring 1989.
+
+   machalow, r., "security for lotus files", computers in libraries,
+   vol. 9, no. 2, pg. 19, 1 february 1989.
+
+   maher, j., and j. hicks, "computer viruses: controller's nightmare",
+   management accounting, vol. 71, no. 4, pg. 44, 1 october 1989.
+
+   markoff, j., "author of computer 'virus' is son of u.s.  electronic
+   security expert", pgs. a1, a7, the new york times, 5 november 1988.
+
+   markoff, j., "computer experts say virus carried no hidden dangers",
+   the new york times, 9 november 1988.
+
+   markoff, j., "computer snarl: a 'back door' ajar", pg. b10, the new
+   york times, 7 november 1988.
+
+   markoff, j., "learning to love the computer whiz", the new york
+   times, 8 november 1988.
+
+   markoff, j., "the computer jam: how it came about", the new york
+   times, 9 november 1988.
+
+   markoff, j., "u.s. is moving to restrict access to facts about
+   computer virus", pg. a28, the new york times, 11 november 1988.
+
+   markoff, j., "'virus' in military computers disrupts systems
+   nationwide", the new york times, 4 november 1988.
+
+   marshall, e., "the worm's aftermath", science, vol. 242, pg. 1121, 25
+   november 1988.
+
+   martin, m., and r. schinzinger, "ethics in engineering", mcgraw hill,
+   2nd edition, 1989.
+
+   martin, n., "revenge of the nerds", the washington monthly, vol. 20,
+   no. 12, pg. 21, 1 january 1989.
+
+   mcafee, j., "the virus cure", datamation, vol. 35, no. 4, pg. 29, 15
+   february 1989.
+
+   mcewen, j., "dedicated computer crime units", report contributors: d.
+   fester and h. nugent, prepared for the national institute of justice,
+   u.s. department of justice, by institute for law and justice, inc.
+
+
+
+reynolds                                                       [page 26]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   under contract number ojp-85-c-006, washington, d.c., 1989.
+
+   menkus, b., "it's time to rethink data processing fire protection",
+   computers & security, vol. 8, no. 5, pg. 389, 1 august 1989.
+
+   menkus, b., "the computer virus situation is not encouraging",
+   computers & security, vol. 8, no. 2, pg. 115, 1 april 1989.
+
+   menkus, b., "the employee's role in protecting information assets",
+   computers & security, vol. 8, no. 6, pg. 487, 1 october 1989.
+
+   menkus, b., "understanding password compromise", computers &
+   security, vol. 7, no. 6, pg. 549, 1 december 1989.
+
+   menkus, b., "u.s. government agencies belatedly address information
+   system security issues", computers & security, vol. 7, no. 4, pg.
+   361, 1 august 1988.
+
+   meredith, d., "cornell panel concludes morris responsible for
+   computer worm", cornell chronicle, april 1989.
+
+   miller, jr., k., "computer viruses", business and economic review,
+   vol. 35, no. 4, pg. 36, 1 june 1989.
+
+   mizock, m., "ethics--the guiding light of professionalism", data
+   management, vol. 24, no. 8, august 1986.
+
+   modern railroads, "how to outwit computer 'hackers'", modern
+   railroads, vol. 44, no. 3, pg. 40, 1 february 1989.
+
+   moir, d., "maintaining system security", dr. dobb's journal of
+   software tools for the pro, vol. 14, no. 6, pg. 75, 1 june 1989.
+
+   munro, n., "big guns take aim at virus", government computer news,
+   vol. 7, no. 24, pgs. 1, 100, november 1988.
+
+   national computer security center, "proceedings of the virus post-
+   mortem meeting", ncsc, st. george meade, md, 8 november 1988.
+
+   national institute of standards and technology, "computer viruses and
+   related threats: a management guide", nist special publication 500-
+   166, august 1989.
+
+   neumann, p., editor, "forum of risks to the public in computers and
+   related systems", vol. 7, no. 69, acm committee on computers and
+   public policy, 3 november 1988.
+
+   newhouse news service, "congressmen plan hearings on virus", the
+
+
+
+reynolds                                                       [page 27]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   seattle times, pg. b2, 27 november 1988.
+
+   nsf network service center (nnsc), "internet computer virus update",
+   nsfnet, cambridge, ma, 4 november 1988.
+
+   ostapik, f., "the effect of the internet worm on network and computer
+   security", connextions, vol. 3, no. 9, pgs. 16-17, september 1989.
+
+   ostrow, r., and t. maugh ii, "legal doubts rise in computer virus
+   case", los angeles times, part i, col. 1, pg. 4, 9 november 1988.
+
+   page, b., "a report on the internet worm", university of lowell,
+   computer science department, 7 november 1988.
+
+   palmore, t., "computer bytes: viruses and vaccines", techtrends, vol.
+   34, no. 2, pg. 26, 1 march 1989.
+
+   parker, d., "fighting computer crime", scribner, new york, 1983.
+
+   pc week, "'worm' attacks national network", pg. 8, 7 november 1988.
+
+   perry, w., "why software defects so often go undiscovered",
+   government computer news, vol. 7, no. 24, pg. 85, 21 november 1988.
+
+   peterson, i., "worming into a computer's vulnerable core", science
+   news, volume #134, 12 november 1988.
+
+   phelps, e., "bug bytes", security management, vol. 33, no. 9, pg. 85,
+   1 september 1989.
+
+   presstime, "contagious communication", presstime, vol. 11, no. 3,
+   march 1989.
+
+   radai, y., "the israeli pc virus", computers & security, vol. 8, no.
+   2, pg. 111, 1 april 1989.
+
+   reese, l., "of mice and men", security management, vol. 33, no. 9,
+   pg. 89, 1 september 1989.
+
+   resource management, "computer viruses: background and
+   recommendations for keeping software healthy are detailed", resource
+   management, pg. 8, 1 july 1989.
+
+   richards, t., and r. knotts, "top management's view of computer
+   related fraud", sig security, audit & control review, vol. 6, no. 4,
+   pg. 34, winter 1989.
+
+   rivera, a., "computer viruses: a different perspective", data
+
+
+
+reynolds                                                       [page 28]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   processing & communications security, vol. 13, no. 1, winter 1989.
+
+   rowe, j., shelton, c., and m. krohn, "avoiding computer viruses",
+   business education forum, vol. 44, no. 2, pg. 17, 1 november 1989.
+
+   royko, m., "here's how to stop computer vandals", chicago tribune, 6
+   november 1988.
+
+   rubin, h., and a. paliotta, "perimeter security for telecommunication
+   with external entities", the internal auditor, vol. 46, no. 2, pg.
+   40, march-april 1989.
+
+   rubin, m., "private rights, public wrongs: the computer and personal
+   privacy", ablex publishing 1988.
+
+   sampson, k., "computer viruses: not fads, not funny", the office,
+   vol. 110. no. 4, pg. 56, 1 october 1989.
+
+   samuelson, p., "can hackers be sued for damages caused by computer
+   viruses?", communications of the acm, vol. 32, no. 6, pgs.  666-669,
+   june 1989.
+
+   schneider, w., "computer viruses: what they are, how they work, how
+   they might get you, and how to control them in academic
+   institutions", behavior research methods, instruments, & computers,
+   vol. 21, no. 2, pg. 334, 1 april 1989.
+
+   schultz, j., "low cost security solutions for personal computers",
+   signal, vol. 44, no. 3, pg. 71, 1 november 1989.
+
+   schweitzer, j., "protecting information on local area networks",
+   butterworths, boston, 1988.
+
+   seeley, d., "password cracking: a game of wits", communications of
+   the acm, vol. 32, no. 6, pgs. 700-703, june 1989.
+
+   shadabuddin, s., "computer security problems and control techniques",
+   american business review, vol. 7, no., 1, pg. 14, 1 january 1989.
+
+   shaw, e., jr., "computer fraud and abuse act of 1986, congressional
+   record (3 june 1986), washington, d.c., 3 june 1986.
+
+   sheiman, d., "legal affairs: coming soon...to a personal computer
+   near you", the amicus journal, vol. 11, no. 3, pg. 38, summer 1989.
+
+   siegel, l. and j. markoff, "the high cost of high tech, the dark side
+   of the chip", harper & row, new york, 1985.
+
+
+
+
+reynolds                                                       [page 29]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   sims, c., "researchers fear computer 'virus' will slow use of
+   national network", the new york times, 14 november 1988.
+
+   sitomer, c., "crooks find computers useful: terrorists see vulnerable
+   targets", the christian science monitor, vol. 79, no. 8, sec. a, pg.
+   6, december 1986.
+
+   slayden, p. ii, "computer flu blues: computer managers must be ready
+   to provide vaccines against infectious computer viruses", security
+   management, vol. 33, no. 8, pg. 108, 1 august 1989.
+
+   spafford, e., "some musing on ethics and computer break-ins",
+   proceedings of the winter usenix conference, usenix association, san
+   diego, ca, february 1989.
+
+   spafford, e., "the internet worm: crisis and aftermath",
+   communications of the acm, vol. 32, no. 6, pgs. 689-698, june 1989.
+
+   spafford, g., "a cure!!!!!", forum risks to the publics in computer
+   and related systems, vol. 7, no. 70, acm committee on computers and
+   public policy, 3 november 1988.
+
+   spafford, g., "a worm 'condom'", forum risks to the publics in
+   computer and related systems, vol. 7, no. 70, acm committee on
+   computers and public policy, 3 november 1988.
+
+   state of wisconsin, "computer law - state of wisconsin statute",
+   chapter 293, laws of 1981, section 943.70, computer crimes.
+
+   steinberg, t., "developing a computer security charter", sig
+   security, audit & control review, vol. 6, no. 4, pg. 12, winter 1989.
+
+   stipp, d., and b. davis, "new computer break-ins suggest 'virus' may
+   have spurred hackers", the wall street journal, 2 december 1988.
+
+   stoll, c., "how secure are computers in the u.s.a.?", computers &
+   security, vol. 7, no. 6, pg. 543, 1 december 1988.
+
+   stoll, c., "stalking the wily hacker", communications of the acm,
+   vol. 31, no. 5, pgs. 484-497, acm, new york, ny, may 1988.
+
+   stoll, c., "the cuckoo's egg", isbn 00385-24946-2, doubleday, 1989.
+
+   stuller, j., "computer cops and robbers", across the board, vol. 26,
+   no. 6, june 1989.
+
+   tester, d., "the key to data security", security management, vol. 33,
+   no., 9, pg. 206, 1 september 1989.
+
+
+
+reynolds                                                       [page 30]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   the accountant, "computer viruses", no. 5829, pg. 25, 1 september
+   1989.
+
+   the economist, "halting computer hackers", the economist, vol. 313,
+   no. 7626, pg. 18, 28 october 1989.
+
+   the engineer, "computer security, moves to outlaw computer hackers
+   are being complicated by computer viruses", the engineer, vol. 268,
+   no. 6935, 23 february 1989.
+
+   the engineer, "disk diseases", the engineer, vol. 267, no. 6921, pg.
+   28, 17 november 1988.
+
+   the new york times, "forgetfulness and the 'virus'", the new york
+   times, 7 november 1988.
+
+   the new york times, "letter bomb of the computer age", the new york
+   times, 5 november 1988.
+
+   the wall street journal, "spreading a virus", a wall street journal
+   news roundup, 7 november 1988.
+
+   time magazine, letters section, "poison program", pg. 6, 5 december
+   1988.
+
+   tinto, m., "computer viruses: prevention, detection, and treatment",
+   national computer security center c1 technical report c1-001-89, june
+   1989.
+
+   trible, p., "the computer fraud and abuse act of 1986", u.s. senate
+   committee on the judiciary, 1986.
+
+   united states, "computer fraud and abuse act of 1986, an act to amend
+   title 18, united states code, to provide additional penalties for
+   fraud and related activities in connection with access devices and
+   computers, and for other purposes", washington, d.c., g.p.o.,
+   distributor, 1986.
+
+   united states congress house committee on science, space, and
+   technology, subcommittee on transportation, aviation, and materials,
+   "implementation of the computer security act: hearing before the
+   subcommittee on transportation, aviation, and materials of the
+   committee on science, space, and technology", u.s. house of
+   representatives, one hundredth congress, second session, washington,
+   d.c., 22 september 1988.
+
+   united states congress house committee on science, space, and
+   technology, subcommittee on transportation, aviation, and materials,
+
+
+
+reynolds                                                       [page 31]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   "implementation of the computer security act: hearing before the
+   subcommittee on transportation, aviation, and materials and the
+   subcommittee on science, research, and technology of the committee on
+   science, space, and technology", u.s. house of representatives, one
+   hundred first congress, first session, washington, d.c., 21 march
+   1989.
+
+   united states congress senate committee on the judiciary, "the
+   computer fraud and abuse act of 1986, hearing before the committee on
+   the judiciary", united states senate, ninety-ninth congress, second
+   session, washington, d.c., 16 april 1986.
+
+   united states congress senate committee on the judiciary, "the
+   computer fraud and abuse act of 1986, report (to accompany h.r.
+   4712)", washington, d.c., 22 may 1986.
+
+   united states congress senate committee on the judiciary, "the
+   computer fraud and abuse act of 1986, report together with additional
+   views", ninety-ninth congress, second session, washington, d.c., 3
+   september 1986.
+
+   united states general accounting office, "computer security",
+   gao/imtec-89-57, june 1989.
+
+   united states of america, "computer security act of 1987", g.p.o.
+   distributor, washington d.c., 1988.
+
+   unix today!, "uncle sam's anti-virus corps", unix today!, pg. 10, 23
+   january 1989.
+
+   vance, m., "computer crime", vance bibliographies, monticello, ill.,
+   february 1988.
+
+   vasilyev, d., and y. novikov, "technology: computer viruses", soviet
+   life, no. 394, pg. 37, 1 july 1989.
+
+   wasik, m., "law reform proposals on computer misuse", the crimminal
+   law review, pg. 257, 1 april 1989.
+
+   white, c. jr., "viruses and worms: a campus under attack", computers
+   & security, vol. 8, no. 4, pg. 283, 1 june 1989.
+
+   white, s., and d. chess, "coping with computer viruses and related
+   problems", ibm research report rc 14405 (#64367), january 1989.
+
+   wines, m., "a family's passion for computers, gone sour", pg. 1, the
+   new york times, 11 november 1988.
+
+
+
+
+reynolds                                                       [page 32]
+
+rfc 1135           the helminthiasis of the internet       december 1989
+
+
+   wines, m., "'virus' eliminated, defense aides say", the new york
+   times, 5 november 1988.
+
+   winter, c.," virus infects huge computer network", chicago tribune,
+   section i, col. 2, pg. 1, 4 november 1988.
+
+   wiseman, s., "preventing viruses in computer systems", computers and
+   security, vol. 8, no. 5, pg. 427, 1 august 1989.
+
+   wood, c., "planning: a means to achieve data communications
+   security", computers & security, vol. 8, no. 3, pg. 189, 1 may 1989.
+
+   yovel, s., "conquering computer viruses", security management, vol.
+   33, no. 2, pg. 64, 1 february 1989.
+
+   zajac, b., "disaster recovery - are you really ready?", computers &
+   security, vol. 8, no. 4, pg. 297, 1 june 1989.
+
+   zajac, b., "legal options to computer viruses", computers & security,
+   vol. 8, no. 1, pg. 25, 1 february 1989.
+
+   zajac, b., "viruses: should we quit talking about them", computers &
+   security, vol. 7, no. 5, pg. 471, 1 october 1989.
+
+10.  security considerations
+
+   if security considerations had not been so widely ignored in the
+   internet, this memo would not have been possible.
+
+author's address
+
+   joyce k. reynolds
+   university of southern california
+   information sciences institute
+   4676 admiralty way
+   marina del rey, ca 90292
+
+   phone: (213) 822-1511
+
+   email: jkrey@isi.edu
+
+
+
+
+
+
+
+
+
+
+
+reynolds                                                       [page 33]

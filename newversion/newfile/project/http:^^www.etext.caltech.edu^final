@@ -1,0 +1,166 @@
+caltech archetypes/etext project
+
+
+	
+
+
+
+the caltech archetypes / etext project
+
+
+
+
+
+the caltech archetypes/etext project combines work in two areas:
+
+ an investigation of programming archetypes,
+	where 
+	a programming archetype (briefly) is an abstraction from
+	a class of programs with a common structure and includes
+	class-specific design strategies
+	and a collection of example program designs and implementations.
+ an experimental electronic textbook, with content based on
+	the idea of programming archetypes.
+
+
+
+please send comments and suggestions to
+archetype@cs.caltech.edu
+or
+etext@cs.caltech.edu.
+
+
+
+
+
+
+
+
+
+ overview 
+
+
+	the paper concurrent program archetypes
+	(.html
+	or .ps),
+	delivered as the keynote address of the 1994
+	international parallel processing symposium,
+	gives an overview of
+	what an archetype is and how it can be used. 
+
+
+
+
+ prototype archetype implementations 
+
+
+	we have developed a collection of 
+	
+	prototype archetype implementations,
+	each containing documentation and program code.
+
+
+
+
+ archetype applications 
+
+
+	we have developed several
+	
+	archetype-based applications.
+
+
+
+
+ the electronic textbook  
+
+
+	we have a collection of 
+	prototype chapters
+	for an electronic textbook based on archetypes.
+
+	most of these chapters were initially developed using a
+	next-based authoring tool called the
+	etext engine.
+
+
+
+
+ related papers and student projects 
+
+
+	we also have a collection of
+	papers and student projects
+	about archetypes and the electronic textbook.
+
+
+
+
+ useful links 
+
+
+	here
+	is a collection of useful links -- related projects,
+	textbooks, bibliographies, etc.
+
+
+
+
+ repositories of code and documentation 
+
+
+	much program code is available via
+	anonymous ftp from etext.caltech.edu,
+	as noted in individual documentation.
+
+	postscript versions of many of the html documents are also
+	available via anonymous ftp from etext.caltech.edu.
+	they are collected in this
+	repository.
+
+
+
+
+
+
+
+copyright (c) 1994, k. mani chandy.  all rights reserved.
+reproduction of all or part of this work is permitted for educational
+or research use provided that this copyright notice is included in
+any copy.
+
+
+
+
+
+
+
+from the
+
+	compositional systems research group 
+of the caltech cs dept.
+last modified by
+berna massingill,
+september, 1996.
+
+
+
+
+this work was supported in part by
+darpa grant n00014-91-j-4014 and
+crpc grant ccr-9120008.
+
+
+
+
+
+caltech archetypes/etext project
+caltech archetypes/etext project
+caltech archetypes/etext project
+caltech archetypes/etext project
+caltech archetypes/etext project
+caltech archetypes/etext project
+caltech archetypes/etext project
+caltech archetypes/etext project
+caltech archetypes/etext project
+caltech archetypes/etext project

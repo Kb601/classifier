@@ -1,0 +1,42 @@
+questions about program 6
+
+questions about program 6
+
+is it ok to assume that the user is going to enter 
+a 'y','y','n',or 'n' when asked if he/she wishes to make
+an appointment?
+at this point, you should do this type of error-checking.
+you should have a similar function from a previous assignment
+that you can cut-and-paste into program 6; make sure to change
+the prompt accordingly.
+if the month,day,hour,etc. entered by the user is invalid,
+do we just include some sort of default value or can we
+indicate to the user that his/her answer was invalid and then ask him/her to
+select again?
+
+since the input is within a member function, it certainly makes
+sense to do the latter.  contrast this with the following:  suppose
+instead of read_app, you had to write a bunch of
+writer functions that filled each field one by one.
+these writer functions would probably do error checking on their
+own and assign default values since they don't interact with the
+user.
+to summarize, if the interaction with the user is built into a member
+function (as it is with read_app), then, if the user
+enters an invalid value, she should be prompted again for a valid value.
+if the interaction with the user is not built into a member
+function (see the hourlyemployee example), then your
+writer functions should be prepared to assign default values (or nothing
+at all) to the member variables.
+
+
+questions about program 6
+questions about program 6
+questions about program 6
+questions about program 6
+questions about program 6
+questions about program 6
+questions about program 6
+questions about program 6
+questions about program 6
+questions about program 6

@@ -1,0 +1,54 @@
+the accel abductive reasoning system
+
+accel
+
+accel is a general purpose system that uses abductive reasoning to
+construct explanations for observed intelligent phenomena.  these
+explanations are then used to avoid redundant work in future problem
+solving episodes.  we define an abductive explanation as a consistent
+set of assumptions which when combined with background knowledge,
+logically entails a set of observations. 
+
+accel has been constructed as a domain-independent system, in which
+knowledge about a variety of domains has been uniformly encoded as
+first-order horn-clause axioms.  a general-purpose abduction
+algorithm, aaa, is used to efficiently construct explanations by
+caching partial explanations.  accel has been shown to achieve more
+than an order of magnitude speedup in run time for a variety of
+domains, including plan recognition in text understanding, and
+diagnosis of medical diseases, logic circuits, and dynamic
+systems. 
+
+
+common lisp source code for the accel system and several diagnosis
+domains is available via  
+anonymous ftp . 
+
+a more detailed description of this system can be found in the
+following publications: 
+
+
+  hwee tou ng and raymond mooney, "abductive plan recognition and diagnosis: 
+  a comprehensive empirical evaluation," proceedings of the third international 
+  conference on principles of knowledge representation and reasoning (kr-92), 
+  pp. 499-508, cambridge, ma, october 1992. 
+  hwee tou ng and raymond mooney, "an efficient first-order horn-clause abduction 
+  system based on the atms," proceedings of the ninth national conference on
+  artificial intelligence, pages 494-499, anaheim, ca, july 1991. 
+
+
+poniters to these and other related papers can be found on our abduction research page.
+
+
+estlin@cs.utexas.edu
+
+the accel abductive reasoning system
+the accel abductive reasoning system
+the accel abductive reasoning system
+the accel abductive reasoning system
+the accel abductive reasoning system
+the accel abductive reasoning system
+the accel abductive reasoning system
+the accel abductive reasoning system
+the accel abductive reasoning system
+the accel abductive reasoning system

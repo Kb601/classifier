@@ -1,0 +1,110 @@
+programming in prolog
+
+
+
+
+
+
+
+   
+ next: how to run prolog 
+ 
+programming in prolog
+
+   logic programming works by defining a set of facts and rules. facts are 
+simplest form of prolog predicates. for example, suppose we want to express 
+the fact that it is raining. in prolog, it will be expressed as
+
+ raining.
+
+
+
+whereas in pascal, we will declare a boolean variable raining, and then 
+assign it a value true.
+
+ var &#175;
+
+		 raining :  boolean ;
+
+		 
+
+		 raining :=  true ;
+
+
+
+note the use of period (`.') after the statement. each statement in prolog must be 
+ended by a period. note all the predicates like raining must start with
+small letters. the words starting with capital letters are assumed to be
+variables. a rule can be expressed using propositional logic taught in
+lecture. for example, the fact that `i'll get wet if it's raining', can
+be expressed as
+
+ wet :- raining.
+
+
+
+and its equivalent code in pascal will look like
+
+ if &#175;( raining ) then
+
+		wet :=  true ;
+
+
+
+the symbol `:-' is read as if. the and and or
+operators can also be expressed in prolog easily. for example,
+
+ miserable :- cold, wet.
+
+
+
+means that `i'll be miserable if it's cold and if i get wet'. the
+symbol `,' is read as and. similarly,
+
+ miserable :- cold.
+
+miserable :- wet.
+
+
+
+expresses the fact that 'i'll be miserable if it's cold or if i get wet'.
+
+1)
+ write prolog statements for the following
+
+
+ i am mortal. a metal is gold if it is yellow and heavy. i will pass the course if i do well in the finals.
+ 
+ 
+
+   comments can we written in prolog by putting a percent sign (%) at the 
+beginning of a line.
+
+ % this is an example program
+
+% it illustrates how to put comments
+
+wet :- raining.
+
+miserable :- cold.
+
+miserable :- wet.
+
+ 
+
+dwip narayan banerjee 
+wed nov 27 16:24:30 cst 1996
+
+
+
+
+programming in prolog
+programming in prolog
+programming in prolog
+programming in prolog
+programming in prolog
+programming in prolog
+programming in prolog
+programming in prolog
+programming in prolog
+programming in prolog

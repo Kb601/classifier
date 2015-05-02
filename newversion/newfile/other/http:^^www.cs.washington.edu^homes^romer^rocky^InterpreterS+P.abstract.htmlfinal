@@ -1,0 +1,49 @@
+the structure and performance of interpreters
+the structure and performance of interpreters
+
+romer, lee, voelker, wolman, wong, baer, bershad, and levy,
+the structure and performance of interpreters, asplos vii, to appear.
+
+abstract:
+
+  interpreted languages have become increasingly popular
+  due to demands for rapid program development, ease of use,
+  portability, and safety.  beyond the general impression 
+  that they are ``slow,'' however, little has been documented 
+  about the performance of interpreters as a class of
+  applications.
+
+  this paper examines interpreter performance by measuring and
+  analyzing interpreters from both software and hardware perspectives.
+  as examples, we measure the mipsi, java, perl, and tcl interpreters
+  running an array of micro and macro benchmarks on a dec alpha
+  platform.  our measurements of these interpreters relate performance
+  to the complexity of the interpreter's virtual machine and
+  demonstrate that native runtime libraries can play a key role in
+  providing good performance.  from an architectural perspective, we
+  show that interpreter performance is primarily a function of the
+  interpreter itself and is relatively {\em independent} of the
+  application being interpreted.  we also demonstrate that high-level
+  interpreters' demands on processor resources are comparable
+  to those of other complex compiled programs, such as gcc.  we
+  conclude that interpreters, as a class of applications, do not
+  currently motivate special hardware support for increased
+  performance.
+
+download postscript.
+
+rocky home page.
+
+
+
+
+the structure and performance of interpreters
+the structure and performance of interpreters
+the structure and performance of interpreters
+the structure and performance of interpreters
+the structure and performance of interpreters
+the structure and performance of interpreters
+the structure and performance of interpreters
+the structure and performance of interpreters
+the structure and performance of interpreters
+the structure and performance of interpreters

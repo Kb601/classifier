@@ -1,0 +1,251 @@
+computerized diagnosis press release
+
+
+
+
+
+breast cancer diagnosis1s via image analysis and machine learning
+
+w.h. wolberg, w.n. street, and o.l. mangasarian
+
+
+during the past six years, my colleagues and i at the
+university of wisconsin, madison have taken a mathematical
+technique originally developed for oil prospecting and modified it
+to create a computerized method of diagnosing cancer in breast
+tissue samples obtained by a technique called fine-needle
+aspiration (fna). in the past, interpreting fna samples has been
+rather subjective, but with our program we have been able to
+develop an accurate and objective system of fna interpretation.
+
+
+with this computer program, we are also able for the first
+time to calculate a mathematical probability that a sample is
+malignant, rather than having to use fuzzy terms such as atypical
+or suspicious. by sharing this probability data with patients, we
+involve them in the decision-making process to a greater degree
+than has previously been possible. in particular, instead of our
+having to make a recommendation based solely upon our own values,
+we can provide patients with the probability data and let them make
+up their own minds as to subsequent treatment.
+
+
+while we don't expect that our computer program will be
+putting pathologists out of business any time soon, we do expect
+that it will prove useful as an objective backup for pathologists
+and assist them in improving their fna interpretative skills.
+
+the role of fna in breast cancer diagnosis
+
+
+in the majority of all beast cancer cases, discovery of a mass
+-- feeling a lump in the breast -- represents the first sign that
+cancer is present. however, finding a breast mass does not
+necessarily signal that cancer is present: indeed, most breast
+masses are benign, not malignant.
+
+
+currently, the only definitive way to distinguish between
+benign and malignant breast masses is for a pathologist to examine
+a sample of breast tissue under a microscope. to obtain such
+tissue, surgeons have traditionally performed a breast biopsy, in
+which they take a patient to the operating room, administer
+anesthesia, cut open the breast, and remove a piece of tissue.
+
+
+more recently, fna has emerged as a less invasive, less
+painful, and less expensive alternative to surgical breast biopsy.
+as its name suggests, breast fna involves inserting a small needle
+into the breast and suctioning cells into a syringe. the procedure
+takes only minutes and does not require anesthesia.
+
+the problem of fna subjectivity
+
+until recently, however, interpretation of an fna specimen has
+been a highly subjective process that, in the absence of firm
+objective diagnostic criteria, relies heavily on the training and
+experience of the persons examining the tissue. although fna has
+gained wide acceptance for the diagnosis of cancer in the thyroid
+and certain other organs, clinicians treating breast cancer have
+usually preferred to employ less subjective diagnostic procedures
+such as breast biopsy.
+
+
+when looking under a microscope at pieces of breast biopsy
+tissue, pathologists can examine the intact structure of breast
+tissue and look for certain signs that provide definitive signs of
+malignancy. one such sign, for instance, is call invasiveness: if
+the pathologist sees a group of cells invading into normal tissue,
+that invasion by itself is a sufficient indicator that cancer is
+present.
+
+
+the fna technique, though, destroys the structure of breast
+tissues and thus forces pathologists to base their interpretation
+almost entirely on the appearance of the individual cells in the
+sample. pathologists examining a breast fna specimen need to
+evaluate a number of cell features, such as size, shape, and
+various nuclear characteristics. however, since no single one of
+these features, by itself, is able to yield an unequivocal
+diagnosis of malignancy, pathologists have had to subjectively
+weigh these various features in order to arrive at a diagnosis.
+
+
+in instances when the various cell features point in the same
+direction, the diagnosis of malignant vs. benign is clear-cut. in
+other instances, though, when features point in different
+directions -- some suggesting malignant and others suggesting
+benign -- different observers might arrive at different verdicts,
+depending on how they choose to weigh the conflicting pieces of
+evidence. in the face of such potential for uncertainty and the
+consequences of a wrong diagnosis, clinicians have been reluctant
+to rely on fna for diagnosing breast cancer.
+
+prospecting for cancer
+
+
+in 1987, during a chance encounter with olvi l. mangasarian,
+ph.d., a professor in the computer sciences department at uw-madison,
+i described to him the frustrations that i had encountered
+in trying to find a more  objective way of interpreting fna
+specimens. he realized that my problem was analogous to a linear
+programming problem he had studied some 20 years earlier while
+working in the oil industry -- the problem of where to drill for
+oil. like evaluating fna samples for cancer, deciding where to
+drill for oil involves finding a way to weigh a number of factors,
+such as geological features, no single one of which can
+definitively predict whether or not one will find oil.
+
+
+to solve his oil prospecting problem, dr. mangasarian
+developed a method call multisurface pattern separation, which we
+have now adapted for use with fna samples. in essence, the method
+begins with us mathematically modelling the cytological features,
+such as size or shape, that we need to evaluate in order to
+determine whether or not an fna sample is malignant. next we
+"train" the computer with data from two sets of fna samples for
+which we already know the diagnosis -- one set of benign samples,
+and a second set of malignant samples. during this machine
+process, we iteratively build portions of a "fence" between the two
+data sets until we have completely fenced off the two data sets
+from each other.
+
+
+once we have trained the computer, we can then enter data from
+an unknown fna sample. the computer determines which side of the
+"fence" the sample falls on and makes the appropriate diagnosis of
+malignant or benign. the computer also calculates a probability of
+malignancy which serves as a quantitative measure of the degree to
+which the computer is certain of its diagnosis.
+
+image analysis
+
+
+using digital image analysis techniques developed by mr. nick
+street, a computer science graduate student, we have now largely
+automated our computerized system for interpreting fna samples. we
+look under a microscope to find suitable views of the sample and
+use a video camera attached to the microscope to record the images.
+the computer then digitizes the video pictures and stores the data
+in computer files.
+
+
+to run an fna analysis, the computer program reconstructs the
+digitized microscopic image and displays it on the computer screen.
+the computer operator simply uses a mouse to trace out rough
+outlines of the nuclei, and the computer does the rest. if
+desired, the operator can trace out more nuclei or remove nuclei
+that have already been traced out, and then return the analysis.
+
+findings and results
+
+
+our first goal has been to make the diagnosis of breast cancer
+from fna samples more objective and accurate than has previously
+been possible. we have now succeeded in developing a highly
+accurate diagnostic system that requires only a modest level of
+expertise to operate. we now have a training set of 569 fna
+samples and calculate that the system will correctly diagnose
+breast fna samples 97% of the time. in practice, the system has
+correctly diagnosed the last 92 samples that we have tested.
+
+
+our second goal has been to develop an objective method of
+determining prognosis for those patients whom our diagnostic
+program identifies as having breast cancer, that is, to accurately
+predict the likelihood that their cancer will recur. in regards to
+this goal, we are still at a relatively early stage of development,
+as we only have 187 samples in our training set. although we are
+encouraged by our results to date, we still need to add more
+samples to our training set and to improve the program's accuracy.
+
+
+one of the key findings from our studies has been the
+discovery that with our computer program, nuclear features (i.e.
+nuclear "grade") are more accurate in determining prognosis than
+are determinations of prognosis based on the traditional measures
+of tumor size and axillary node status. our research may thus have
+a significant impact on the current practice of surgeon performing
+axillary lymph node dissection at the time of mastectomy for
+prognostic purposes.
+
+
+presently, determination of whether breast cancer has spread
+into a patient's axillary lymph nodes is considered to be an
+important factor in establishing prognosis: patients with tumor
+spread in axillary lymph nodes (e.g. node positive) have a higher
+likelihood of tumor recurrence than those without tumor spread into
+axillary lymph nodes (e.g. node negative). patients with node
+positive tumors tend also to have earlier recurrences and, in
+general, do worse than patients with node negative tumors.
+
+
+data from our research, however, have indicated that a
+patient's nodal status (node positive vs. node negative) provides
+no new additional information about prognosis beyond that which is
+already available from an fna biopsy. when we use fna data alone
+to run our prognostic program, the results are just as accurate as
+when we run the program using fna data plus information on nodal
+status and tumor size. that is, we have found that analysis of a
+patient's fna sample alone provides all the information about
+prognosis that we need, and thus that performing an axillary lymph
+node dissection solely for prognostic purposes is unnecessary.
+should studies at other institutions confirm to our findings, many
+breast cancer patients in the future could be spared the necessity
+of undergoing axillary lymph node biopsy.
+
+future directions
+
+
+we are now seeking to collaborate with other institutions to
+validate our computer program using their fna samples. we have not
+patented our program and are willing to provide copies of our
+program to those researchers who sign collaborative agreements with
+us. we recently analyzed 19 breast fna slides from ucla and were
+gratified to find that we correctly diagnosed them all.
+
+
+we are are also interested in expanding our computerized
+interpretative method to other organs besides breasts. we have had
+good early results with thyroid cancer and also believe our
+approach could prove particularly useful for evaluating lymphomas.
+
+
+
+last modified: thu jan  4 16:45:23 1996 by nick street
+
+  street@cs.wisc.edu
+
+
+
+
+computerized diagnosis press release
+computerized diagnosis press release
+computerized diagnosis press release
+computerized diagnosis press release
+computerized diagnosis press release
+computerized diagnosis press release
+computerized diagnosis press release
+computerized diagnosis press release
+computerized diagnosis press release
+computerized diagnosis press release

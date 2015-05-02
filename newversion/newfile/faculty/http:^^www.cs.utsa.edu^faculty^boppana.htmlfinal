@@ -1,0 +1,149 @@
+rajendra v. boppana
+
+
+
+
+rajendra v. boppana
+
+
+associate professor 
+
+ e-mail: 
+ boppana@cs.utsa.edu
+
+
+ phone:  x-5692, x-4436 (div. office),
+ fax:  x-4437   (x=210-458) 
+ 
+ postal address:   
+the university of texas at san antonio 
+division of computer science 
+6900 north loop 1604 west 
+san antonio, tx 78249-0667, usa 
+
+
+
+ education 
+
+ph.d., computer engineering (1991), university of southern california, ca 
+m.tech.,  computer technology (1985), iit, new delhi, india  
+b.tech.,  electronics and telecommun. engin. (1983),
+ university of mysore, india
+
+
+
+ areas of interest 
+computer architecture, fault-tolerance, networks, and
+parallel processing
+
+ summary of research
+i am interested in integrating the access of nonlocal data and message
+routing in multicomputers and distributed shared memory multiprocessors.
+current directory based cache protocols are not designed to exploit
+multicast hardware that is likely to be provided in future wormhole routers.
+i am currently investigating new cache protocols to take advantage of
+network abilities and new routing protocols that support cache coherence
+and synchronization traffic efficiently.  one possible solution may lead
+to the design of integrated router and cache controllers.  in my recent
+work, i have investigated methods to enhance known wormhole routing algorithms
+to handle faults, deadlock issues in multicast communication, and design of
+new wormhole routing algorithms.  i am applying my results on fault-tolerant
+and multicast communication to current router designs such as the multichip
+routers implemented in cray t3d(tm) to study the design of next generation
+routers and switch fabrics for high-speed local area networks.
+
+
+representative publications
+ 
+
+r.v. boppana and s. chalasani,
+"fault-tolerant wormhole routing algorithms for mesh networks."
+ieee transactions on computers,
+vol. 44, no. 7, pp. 848-864, july 1995. 
+related conference publications:
+ ics 1994,
+ sc 1994,
+ ispan 1994,
+
+ icpp 1995,
+ euro-par 1995,
+ hpca 1996
+
+  
+s. chalasani and r.v. boppana,
+"fault-tolerant wormhole routing in tori."
+iee proceedings: computers and digital techniques,
+vol. 142, no. 6, pp. 386-394, november 1995. 
+based on conference publication:
+ ics 1994
+
+
+r.v. boppana and s. chalasani,
+"a framework for designing deadlock-free wormhole routing algorithms."
+ieee transactions on parallel and distributed systems,
+vol. 7, no. 2, pp. 169-183, february 1996. 
+related conference publications:
+ ipps 1993,
+ isca 1993
+
+
+s. chalasani and r.v. boppana,
+"communication in multicomputers with nonconvex faults."
+ieee transactions on computers (accepted for publication). 
+based on conference publication:
+ euro-par 1995
+
+ 
+r.v. boppana and s. chalasani,
+"
+a comparison of adaptive wormhole routing algorithms."
+20th annual int'l symp. on computer architecture, may 1993. 
+
+r.v. boppana, s. chalasani, and c.s. raghavendra,
+"
+on multicast wormhole routing in multicomputers."
+sixth ieee symp. on par. and distr. processing, october 1994. 
+further work:
+utsa technical report
+ cs 95-6 
+
+
+r.v. boppana and s. chalasani,
+"
+fault-tolerant multicast communication in multicomputers."
+1995 int'l conf. on parallel processing, august 1995. 
+
+s. chalasani and r.v. boppana,
+"
+fault-tolerance with multimodule routers."
+2nd int. symp. on high-performance comput. arch., february 1996. 
+
+
+
+ reseach collaborators:
+
+dr. suresh chalasani,
+
+dr. c. s. raghavendra.
+
+
+
+rajendra v. boppana
+
+rajendra v. boppana
+
+rajendra v. boppana
+
+rajendra v. boppana
+
+rajendra v. boppana
+
+rajendra v. boppana
+
+rajendra v. boppana
+
+rajendra v. boppana
+
+rajendra v. boppana
+
+rajendra v. boppana

@@ -1,0 +1,968 @@
+teitelbaum cv
+
+tim teitelbaum
+
+associate professor		
+department of computer science
+cornell university
+ithaca, new york 14853
+usa				
+
+
+date of birth: april 12, 1943
+social security: 071-34-7678
+citizenship: united states
+telephone: (607) 255-7573
+fax: (607) 255-4428
+email: tt@cs.cornell.edu
+
+contents
+
+ education
+ positions
+ awards
+ grants
+ ph.d. students
+ publications
+ lectures
+ professional activities
+ cornell activities
+ cornell courses taught
+ cornell lectures
+
+
+
+education
+
+[1975]  carnegie-mellon university, ph.d., computer science
+[1964]  massachusetts institute of technology, b.s., mathematics
+
+
+
+
+positions
+
+
+[1981-] associate professor, department of computer science, cornell
+university
+
+[1982-83] visiting researcher, institut national de recherche en
+informatique et en automatique (inria), rocquencourt, france
+
+[1979-81] senior lecturer, department of computer science, cornell
+university
+
+[1973-79] assistant professor, department of computer science, cornell
+university
+
+[1968-72] graduate student, department of computer science,
+carnegie-mellon university
+
+[1965-68] senior research programmer, physics department, columbia
+university
+
+[1964-65]  programmer, western electric corporation
+
+
+
+
+awards
+
+dean's prize for innovation in undergraduate teaching, may 1986.
+
+
+
+grants
+
+software engineering with a transformational system, nsf,
+1995-98, $270,000 (with d. gries).
+
+incremental computation, onr, 1995-1998, $270,000.
+
+incremental computation, onr, 1992-1995, $300,000.
+
+the synthesizer generator, nsf, 1990-1991, $100,000.
+
+incremental computation, onr, 1988-1990, $400,000.
+
+generating efficient language-based programming environments,
+nsf, 1988-1989, $8,000.
+
+research experience for undergraduates, nsf, 1987-1988, $8,000.
+
+generating efficient language-based programming environments,
+nsf/onr, 1986-1989, $428,182. (supplement for undergraduate research,
+1987-1988, $22,000.)
+
+coordinated experimental research on systems for constructing
+and manipulating complex objects, nsf, 1986-1991, $3,606,266 (with
+gries, constable and hopcroft).
+
+language editors and their generators, ibm, 1984-85, $99,957.
+
+affiliation program for education in language editors and their
+implementations, ibm, 1984-85, $25,000.
+
+syntax-directed programming environments, nsf, 1982-85, $364,966.
+
+syntax-directed programming environemnts, nsf, 1980-82, $145,033.
+
+
+
+
+ph.d. students
+
+yanhong a. liu (1995)
+
+john reppy (1992)
+
+john field (1991)
+
+allan zaring (1990)
+
+stephen peckham (1990)
+
+william pugh (1988), [pyi, packard fellow]
+
+roger hoover (1987)
+
+susan horwitz (1985), [pyi]
+
+thomas reps (1982, winner of the acm doctoral dissertation award.), [pyi, packard fellow]
+
+
+
+publications
+
+software
+
+
+ the synthesizer generator,
+release 1.0, december 1985;
+release 2.0, july 1987;
+release 3.0, april 1989; 
+release 3.4, april 1991;
+release 3.5, september 1991 (grammatech);
+release 4.0, december 1992 (grammatech),(with t. reps, et al.);
+release 4.1, august 1993 (grammatech);
+release 4.2, january 1995 (grammatech).
+
+
+the synthesizer generator is a tool for creating language-based
+environments from formal specifications.  to date, it has been
+licensed, in source code form, for research purposes, to approximately
+330 sites worldwide.  roughly half of the sites are in the u.s. and
+half are overseas; roughly half the sites are academic and half are
+government or industrial research laboratories.  the implementation
+of release 4 consists of about 120,000 lines of c source code;
+23 demonstration environments distributed with the system are
+implemented in about 50,000 lines of synthesizer specification
+language (ssl) code.
+
+
+ the cornell program synthesizer, version 1, june 1979;
+version 1.02, september 1980; version 1.03, september 1981 (with t.
+reps).
+
+
+the cornell program synthesizer was a programming environment for a
+small dialect of pl/i.  during its lifetime, it was licensed to 110
+sites worldwide and was used by over 20,000 introductory programming
+students.
+
+
+books
+
+  the synthesizer generator: a system for constructing
+language-based editors, 315 pages,
+springer-verlag, ny, 1988 (with t. reps) 
+
+
+   the synthesizer generator reference manual.  first
+edition, cornell university, ithaca, ny, august 1985, 51 pages; second
+edition, cornell university, ithaca, ny, june 1987, 162 pages; third
+edition, 171 pages, springer-verlag, ny, ny, 1988 (with t. reps);
+fourth edition, 268 pages, grammatech, ithaca, ny, 1992 (with
+grammatech staff).
+
+
+
+chapters in books
+
+
+ alex --- an alexical programming language.  visual
+languages and applications, ed. t. ichikawa, e. jungert and
+r. korfhage, plenum press, ny, 1990.
+
+ the cornell program synthesizer: a syntax-directed
+programming environment.  interactive programming environments,
+ed. d. r. barsow, e. sanderwall, and h. shrobe, mcgraw-hill, ny, 1984,
+pages 97-116 (with t. reps).  (also appeared in cacm 24(9), september
+1981, pages 563-573.)
+
+ the why and wherefore of the cornell program synthesizer.
+tutorial: software development environments, ed. a.i. wasserman, ieee
+computer society press, november 1981, pages 64-72 (with t. reps and
+s. horwitz).  (also appeared in proceedings of acm/sigplan-sigoa
+symposium on text manipulation, portland, or, june 8-10, 1981, sigplan
+notices 16, 6 june 1981, pages 8-16.
+
+
+
+journals
+
+
+
+
+systematic derivation of incremental programs.  
+science of
+computer programming 24(1), pages 1-39, 1995.  (with yanhong a. liu).
+
+ language processing in program editors.
+ieee computer 20(11), pages 29-40, november 1987 (with t. reps).
+
+ an efficient general iterative algorithm for dataflow analysis,
+acta informatica 24(6), pages 679-694, 1987 (with s. horwitz and
+a. j. demers).
+
+ generating editing environments based on relations and attributes.
+toplas 9(3), pages 577-608, october 1986 (with s. horwitz).
+
+ incremental context-dependent analysis for language-based editors.
+toplas 5(3), pages 449-477, july 1983 (with t. reps and a. j. demers).
+
+ the cornell program synthesizer: a syntax-directed programming
+environment.  cacm 24(9), september 1981, 563-573 (with
+t. reps).  (reprinted in interactive programming environments,
+barsow, d.r., sanderwall, e., and shrobe, h., mcgraw hill, 1984.)
+
+
+
+refereed conference proceedings
+
+
+discovering auxiliary information for incremental computation,
+ proceedings
+of 23rd acm symposium on principles of programming languages,
+st. petersburg beach, fl, pages xx-xx, january 21-24, 1996,
+(with yanhong a. liu and scott d. stoller).
+
+
+
+caching intermediate results for program improvement.  
+proceedings of acm sigplan symposium on pepm, la jolla, ca, pages
+190-201, june 1995 (with yanhong a. liu).
+
+ incremental reduction in the lambda calculus.
+presented at  1990 lisp and functional programming conference,
+nice, france, pages 307-322, june 1990 (with j. field).
+
+ higher-order attribute grammars and editing environments.  
+proceedings of acm sigplan '90 conference on programming language
+design and implementation, white plains, ny, pages 197-208, june 1990
+(with r. chapman).
+
+ incremental computation by function caching.   proceedings
+of 16th acm symposium on principles of programming languages, austin,
+tx, january 11-13, 1989, pages 269-276 (with w. pugh).
+
+ alex - an alexical programming language.
+ workshop on visual language,
+linkoping, sweden, august 19-21, 1987 (with d. kozen,  et al.).
+
+ efficient incremental evaluation of aggregate values in
+attribute grammars,  proceedings of acm sigplan '86 symposium on
+compiler construction, palo alto, ca, june 1986, pages 39-50 (with
+r. hoover).
+
+ remote attribute updating for language-based editors,
+ proceedings of 13th acm symposium on principles of programming languages,
+st. petersburg, fl, january 1986, pages 1-13 (with t. reps and c. marceau).
+
+ relations and attributes: a symbiotic basis for editing
+environments.   proceedings of acm sigplan '85 symposium on
+language issues in programming environments.  sigplan notices 20, 7,
+june 1985, pages 93-106 (with s. horwitz).
+
+ the synthesizer generator.
+ proceedings of acm sigsoft/sigplan software engineering symposium
+on practical software development environments,
+pittsburgh, pa, april 1984, pages 42-48 (with t. reps).
+
+ the why and wherefore of the cornell program synthesizer.  
+proceedings of acm/sigplan-sigoa symposium on text manipulation,
+portland, or, june 8-10, 1981,  sigplan notices 16, 6 june 1981,
+pages 8-16 (with t. reps and s. horwitz).  (reprinted in 
+tutorial: software development environments, wasserman, a.i., ieee
+computer society press, november 1981, pages 64-72.)
+
+ incremental evaluation for attribute grammars with application to 
+syntax-directed editors.   proceedings of 8th acm symposium
+principles of programming languages, williamsburg, va, january 26-28,
+1981, pages 105-116 (with a. j. demers and t. reps).
+
+ encapsulated data types and generic procedures.  
+proceedings of dod workshop on a common programming language for
+embedded systems, ithaca, ny, 1976, springer-verlag, pages 171-214
+(with a. j. demers,  et al.).
+
+ context-free error correction by evaluation of algebraic power series.  
+ proceedings of 5th acm symposium theory of computing,
+austin, tx, april 30--may 2, 1973, pages 196-199.
+
+ a study of sigma leptonic decay using an hpd in pattern
+recognition mode.   proceedings international conference advanced
+data processing for bubble chambers and spark chambers, new york, ny,
+october 1968, pages 256-265 (with newman,  et al.).
+
+ current status of automatic scanning at columbia university.  
+ 1967 international conference on programming for flying spot devices, 
+munich, january 1967 (with d. burd).
+
+
+tutorials
+
+ semantic analysis.  sigplan '93 conference on
+programming language design and implementation, albuquerque, nm,
+june, 1993.
+
+ generating language-sensitive environment.  sigplan
+'92 conference on programming language design and implementation, san
+francisco, ca, june 15-19, 1992.
+
+
+ semantic analysis.  sigplan '88 conference on
+programming language design and implementation, atlanta, ga, june
+22-24, 1988.
+
+ semantic analysis.  sigplan '86 symposium on
+complier construction, palo alto, ca, june 25-27, 1986.
+
+
+other publications
+
+on the value of syntax-directed editors.
+cacm 25(5), may 1982, pages 351-352 (with t. reps).
+ 
+the cornell program synthesizer: a tutorial introduction.
+department of computer science, cornell university, first edition,
+july 1979, fifth edition, may 1983, 49 pages.  approximately 20,000
+copies printed.
+
+the cornell program synthesizer: announcement.
+sigplan notices, october 1979, page 75.
+
+
+technical reports
+
+
+
+incremental computation for transformational software
+development.  tech. rep. 95-1499, department of computer science,
+cornell unversity, ithaca, ny, march 1995 (with yanhong a. liu).
+
+
+
+caching intermediate results for program improvement.
+tech. rep. 95-1498, department of computer science, cornell
+university, ithaca, ny, march 1995 (with yanhong a. liu).
+
+
+
+systematic derivation of incremental programs.
+tech. rep. 94-1444, department of computer science, cornell
+university, ithaca, ny, august 1994 (with yanhong a. liu).
+
+
+
+deriving incremental programs.  tech. rep. 93-1384, department
+of computer science, cornell university, ithaca, ny, september
+(revised october) 1993 (with yanhong a. liu).
+
+
+alex --- an alexical programming language.  tech. rep. 87-835,
+department of computer science, cornell university, ithaca, ny, may
+1987 (with d. kozen, et al.).
+
+
+the cornell program synthesizer: a microcomputer implementation
+of pl/cs.  tech. rep. 79-370, department of computer science, cornell
+university, ithaca, ny, march 1979.
+
+
+a formal syntax for pl/cs.  tech. rep. 76-281, department of
+computer science, cornell university, ithaca, ny, january 1976.
+
+a compiler project.  department of computer science,
+cornell university, ithaca, ny, january 1976.
+
+minimal distance analysis of syntax errors in computer
+programs.  ph d. thesis, department of computer science,
+carnegie-mellon university, pittsburgh, pa, september 1975.
+
+
+
+lectures
+
+ assuring software quality using an ada language-sensitive
+programming environment.
+
+martin-marietta corporation, syracuse, ny, april 1994.
+loral aerospace corporation, owego, ny, june 1994.
+ibm federal systems division, owego, ny, april 1993.
+software productivity laboratory, herndon, va, march 1993.
+saic, orlando, fl, march 1993.
+martin-marietta corp., orlando, fl, march 1993.
+ecc, orlando, fl, march 1993.
+ge aerospace corp., syracuse, ny, july 1992.
+ibm federal systems division, owego, ny, july 1992.
+
+
+ higher-order attribute grammars and editing environments.
+
+rice university, houston, tx, april 1990.
+acm sigplan '90  conference on programming language and design and 
+implementation, white plains, ny, june 1990
+
+
+static semantic analysis.
+
+acm sigplan conference-93, albuquerque, nm, june 1993.
+
+
+automatically enforcing quality in ada software: implications
+for interactive tools.
+
+10th annual washington ada symposium, mclean, va, june 1993.
+
+
+the synthesizer generator: a system for constructing
+language-based editors.
+
+at\&t bell laboratories, murray hill, nj, may 1993.
+hp laboratories, palo alto, ca, march 1993.
+lockheed missiles and space co., palo alto, ca, march 1993.
+hp corp., ft. collins, co, march 1993.
+software productivity consortium, herndon, va, march 1993.
+digital equipment corporation, nashua, nh, february 1993.
+ratheon corporation, portsmouth, ri, november 1992.
+ge aerospace corp., syracuse, ny, july 1992.
+radc, rome, ny, july 1992.
+case-92, montreal, canada, july 1992.
+gte, research triangle park, nc, may 1992.
+verdix corporation, herndon, va, april 1992.
+loral space and range systems, san jose, ca, march 1992.
+sun microsystems laboratories, inc., mountain view, ca, march 1992.
+sunpro, mountain view, ca, march 1992.
+lockheed missiles and space co., palo alto, ca, march 1992.
+workshop on programming environments, dagstuhl, germany, march 1992.
+unisys/paramax, arlington, va, march, 1992.
+software productivity consortium, herndon, va, february 1992.
+seer technologies, new york, ny, october 1991.
+tandem computers, cupertino, ca, september 1991.
+software productivity laboratory, loral aerospace corp., san jose, ca, september 1991.
+ide, san fransisco, ca, september 1991.
+telesoft corp., san diego, ca, septmber 1991.
+naval oceans systems center (nosc), san diego, ca, september 1991.
+nasa, langley air force base, fl., may 1991.
+ford aerospace corp., san jose, ca., january 1990.
+annual meeting, syracuse university case center, blue mountain lake, ny, july 1989.
+
+
+incremental computation
+
+office of naval research, april 1988.
+
+
+generation of language-based programming environments .
+
+boston sigplan, intermetrics, cambridge, ma, november 1988.
+
+general motors, warren, mi, march 1988.
+
+department of computer science, bucknell university, lewisburg, pa,
+november1987.
+
+department of mathematics and computer science, dartmouth college, hanover, nh,
+october 1987.
+
+general electric, schnectady, ny, july 1987.
+
+institute for the retraining in computer science. clarkson university, potsdam, ny, july 1986.
+
+office of naval research, washington, dc,
+february 1986.
+
+wang institute, january, 1985.
+
+department of computer science, university of maryland,
+october, 1984.
+
+
+syntax-directed programming environments.
+
+
+department of computer science, eth, lausanne, switzerland,
+july 1984 (2 lectures).
+
+department of computer science, university of oslo, oslo, norway,
+february 1983.
+
+department of computer science, university of linkoping, linkoping, sweden,
+february 1983.
+
+
+incremental evaluation for attribute grammars with application to
+syntax-directed editors.
+
+sino-american symposium of computer software engineering,
+changsha, peoples republic of china, april 1982.
+
+central research laboratory, nippon electric company, kawasaki-city, japan,
+april 1982.
+
+department of computer science, new york university, new york, ny,
+march 1981.
+
+department of computer science, purdue university, lafayette, in,
+february 1981.
+
+eighth annual acm symposium on principles of programming languages (popl),
+williamsburg, va, january 1981.
+
+department of computer science, carnegie-mellon university, pittsburgh, 
+pa, november l980.
+
+
+
+design and implementation of the cornell program synthesizer,
+a syntax-directed programming environment,
+usually with demonstrations on a terak (lsi-11) microcomputer.
+
+
+
+department of computer science, tsinghua university,
+peking, peoples republic of china, april 1982.
+
+sino-american symposium of computer software engineering,
+changsha, peoples republic of china, april 1982.
+
+central research laboratory, nippon electric company, kawasaki-city, japan,
+april 1982.
+
+language issues for large-scale computing,
+department of energy,
+gleneden beach, or, march 1982.
+
+department of computer science, pennsylvania state university, state college,
+pa, december 1981.
+
+department of mathematical sciences, rensselaer polytechnic institute,
+troy, ny, december 1981.
+
+department of computer science, brown university, providence, ri,
+september 1981.
+
+department of computer science, suny stony brook, stony brook, ny, 
+march 1981.
+
+national bureau of standards, gaithersburg, md, march 1981.
+
+department of computer science, city university of new york, new york, ny,
+march 1981.
+
+department of computer science, university of indiana, bloomington, in,
+february 1981.
+
+department of computer science, purdue university, lafayette, in,
+february 1981.
+
+department of computer science, university of rochester, rochester, ny,
+january 1981.
+
+schlumberger-doll research, ridgefield, ct, january 1981.
+
+ibm,  t. j. watson research center, yorktown heights, ny,
+january 1981.
+
+department of mathematics, dartmouth, hanover, nh, december 1980.
+
+department of computer science, university of waterloo, ontario, canada,
+december 1980.
+
+bell telephone laboratories, murray hill, nj, november 1980.
+
+ibm endicott development laboratory, endicott, ny, november 1980.
+
+department of electrical and computer engineering, and the department of
+computer and information sciences (coins), university of massachusetts,
+amherst, ma, november 1980.
+
+department of computer science, new york university, new york, ny,
+october 1980.
+
+department of computer science, university of texas, austin, tx,
+october 1980.
+
+department of mathematical sciences, rice university, houston, tx,
+october 1980.
+
+general motors research laboratories, warren, mi, may 1980.
+
+department of computer and information sciences, university of michigan, ann arbor, mi,
+may 1980.
+
+bell telephone laboratories, naperville, il,
+may 1980.
+
+department of mathematics, ithaca college, ithaca, ny,
+april 1980.
+
+department of electrical engineering and computer science, university of connecticut, storrs, ct,
+april 1980.
+
+department of mathematics, wesleyan university, middletown, ct, 
+april 1980.
+
+bell telephone laboratories, holmdel, nj,
+march 1980.
+
+department of computer science, queens university, kingston, canada, 
+february 1980.
+
+digital equipment corporation, maynard, ma,
+july 1979.
+
+department of computer science, university of guelph, guelph, canada,
+june 1979.
+
+department of mathematics, hamilton college, clinton, ny,
+april 1979.
+
+ieee delaware bay chapter, newark, de,
+april  1979.
+
+department of electrical engineering, university of delaware, newark, de, 
+april  1979.
+
+department of computer science, carnegie-mellon university, pittsburgh, pa,
+march  1979.
+
+department of computer science, north carolina state university, raleigh, nc,
+march  1979.
+
+department of computer science, duke university, durham, nc, 
+march  1979.
+
+ibm scientific center, cambridge, ma,
+march 1979.
+
+zilog inc., cupertino, ca,
+february 1979.
+
+department of electrical engineering and computer science, university of 
+santa clara, santa clara, ca,
+february 1979.
+
+intel corporation, santa clara, ca,
+february 1979.
+
+ibm research laboratory, san jose, ca,
+february  1979.
+
+department of electrical engineering and computer science, columbia university, new york, ny,
+january 1979.
+
+department of electrical engineering and computer science, princeton university, princeton, nj,
+january 1979.
+
+ibm,  t. j. watson research center, yorktown heights, ny,
+january 1979.
+
+
+
+
+computer science and software engineering education at cornell.
+changsha institute of technology, changsha, peoples republic of china,
+april 1982.
+
+on encapsulated data types and generic procedures.
+department of computer science, suny stony brook,
+stony brook, ny, december 1976.
+
+on structured assembly languages.
+u.s. army electronics command, fort monmouth, nj,
+december 1975.
+
+on the diagnosis and correction of syntax errors in programs by evaluation
+of algebraic power series in non-commuting variables.
+
+
+fifth annual acm symposium on theory of computing (sigact),
+austin, tx, may 1973.
+
+department of computer science, cornell university, ithaca, ny,
+march 1973.
+
+department of electrical engineering, massachusetts institute of technology, cambridge, ma,
+march 1973.
+
+department of computer science, duke university, durham, nc,
+march 1973.
+
+school of electrical engineering, university of pennsylvania, philadelphia, pa,
+february 1973.
+
+department of electrical engineering, princeton university, princeton, nj,
+february 1973.
+
+department of computer science, suny stony brook, stony brook, ny,
+december 1973.
+
+
+on automatic scanning of bubble chamber photographs, brookhaven laboratory, upton, ny,
+october 1967.
+
+
+
+
+professional activities
+
+chairman
+
+doctoral dissertation award committee, acm, 1992-93.
+
+
+member
+
+doctoral dissertation award committee, acm, july 1988-94.
+
+academic advisory committee, adapso, october 16-19, 1988, dallas, tx.
+
+program committee, acm sigplan `88 compiler construction conference, june 
+20-24, 1988, atlanta, ga.
+
+panel, software engineering program, nsf, april 4, 1988, washington, dc.
+
+nsf software engineering workshop, february 24-26, 1988, atlanta, ga.
+
+program committee,
+fifteenth annual acm sigact/sigplan symposium on principles of programming languages,
+january 1987.
+
+program committee, acm sigplan '84 symposium on compiler construction, 
+montreal, canada, june, 1984.
+
+program committee, international course on syntax-directed editors,
+aussois, france, april 18-22, 1983 (co-director).
+
+program committee, tenth annual acm sigact/
+sigplan symposium on principles of programming languages, january 24-26, 
+1983 (co-chairman).
+
+program committee, acm sigplan '82 symposium on
+compiler construction, boston, ma, june 23-25, 1982.
+
+ delegate, sino-american symposium on computer software
+engineering, changsha, peoples republic of china, april 8-10, 1982.
+
+program committee, acm sigsoft/sigplan software engineering symposium on
+high-level debugging, 1981-82.
+
+panel, productivity in education, ieee compcon,
+washington, dc, september 15, 1981.
+
+association for computing machinery
+
+
+consultant
+
+ ibm (1985),
+ams/acm summer computer science institute planning committee (1982),
+terak corp. (1979),
+u.s. army electronics command (1975),
+digital equipment corp. (1970).
+
+
+reviewer
+
+acm computing surveys,
+acm toplas,
+ieee computer,
+ieee software,
+ieee transactions on software engineering,
+mit press.
+
+
+referee
+
+ nsf, nserc
+
+
+
+cornell activities
+
+member, computing policy committee (1994-  )
+
+chairman, departmental computer facilities committee (1990-91)
+
+member, 2001 committee (1990-91)
+
+member, committee on instructional computer technologies (1990-91)
+
+member, search committee for associate dean for undergraduate affairs (1986)
+
+member, cer management committee (1986-89); chairman (1987-88)
+
+chairman, department chairman search committee (1986-87)
+
+member, senior faculty recruiting committee (1985-1992); chairman (1985-87)
+
+member, engineering college resource allocation advisory committee (1985-86)
+
+member, engineering college computing board (1984-88); chairman (1987-88)
+
+member, computer science undergraduate academic affairs committee (1984-85)
+
+member, university appeals panel (1984-89)
+
+director, undergraduate programs in computer science (1983-85)
+
+member, engineering college computer advisory committee (1983-84)
+
+member, committee to study computers in engineering mathematics (1983-84)
+
+co-director, computer science summer school program (1981-82)
+
+member, university computing board subcommittee (1981-82)
+
+member, faculty appeals board (1981-82)
+
+director, computer science summer school program (1979-80)
+
+member, engineering college core curriculum committee (1977-82) 
+
+undergraduate program advisor (1977-1995)
+
+
+
+cornell courses taught
+
+
+cs100---introduction to computer programming
+
+fall 1994, 270 students
+fall 1993, 317 students
+fall 1992 and spring 1993, 478 students
+fall 1985, 645 students
+fall 1984, 758 students
+fall 1983, 749 students
+fall 1981, 725 students
+fall 1980 and spring 1981, 1176 students
+fall 1979 and spring 1980, 1020 students
+fall 1978 and spring 1979, 952 students
+fall 1977, 475 students
+fall 1976, 544 students
+fall 1975, 460 students
+
+
+cs100s---introduction to computer programming (honors)
+
+fall 1987, 45 students
+spring 1987, 10 students
+
+
+cs211---computers and programming
+
+fall 1990, 85 students
+
+
+cs212---modes of algorithmic expression
+
+fall 1988, 42 students
+
+
+cs314---introduction to computer systems and organization
+
+fall 1974, 35 students
+fall 1973, 48 students
+
+
+cs411---introduction to programming languages
+
+spring 1988, 23 students
+
+
+cs412---translator writing
+
+spring 1994, 37 students
+spring 1993, 24 students
+spring 1974, 42 students
+spring 1973, 25 students
+
+
+cs612---advanced programming languages and translator writing
+
+spring 1995, 10 students
+spring 1986, 28 students
+spring 1984, 32 students
+spring 1982, 24 students
+spring 1977, 33 students
+spring 1976, 29 students
+spring 1975, 36 students
+
+
+cs712---topics in programming languages and systems
+
+spring 1989, 10 students
+fall 1986, 7 students
+spring 1985, 11 students
+
+
+
+
+cornell lectures
+
+computer programming as engineering design.
+cornell college of engineering alumni council, may 1984.
+
+_____. engineering career orientation forum, 
+february 1984.
+
+the cornell program synthesizer.
+conversations at cornell, may 1982.
+
+_____. computing in agriculture, atc/cals
+faculty series, january 6, 1981.
+
+the computer: idiot savant or wunderkind?
+freshman orientation program, august 28, 1980.
+
+from slide rule to microcomputer: how freshmen learn to compute.
+cornell trustee's weekend, october 12, 1979.
+
+design and implementation of the cornell program synthesizer,
+a syntax-directed programming environment, with demonstration.
+ocs seminar, march 28, 1979.
+
+_____. department of computer science,
+december 7, 1978.
+
+computer programming as engineering communication.
+parents' weekend, october 22, 1977.
+
+
+
+
+
+
+teitelbaum cv
+teitelbaum cv
+teitelbaum cv
+teitelbaum cv
+teitelbaum cv
+teitelbaum cv
+teitelbaum cv
+teitelbaum cv
+teitelbaum cv
+teitelbaum cv

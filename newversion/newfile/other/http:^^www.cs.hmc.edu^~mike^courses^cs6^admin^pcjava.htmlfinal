@@ -1,0 +1,88 @@
+cs6 - java on the pc
+
+
+
+
+
+
+
+
+
+
+
+ 
+ cs6 java on the pc
+
+ 
+
+
+a few people have attempted to put java on their pc's.
+the following is a rough outline of the steps necessary
+to move the
+hmcsupport
+library to a pc
+and to create a working
+classpath
+once you have installed the 
+1.0.2
+
+
+
+ftp the directories and all their files
+from
+ /home/osiris/cs/cs5/java
+files and store them in 2 directories,
+e.g.,
+
+c:\java\lib\acme
+and
+c:\java\lib\hmc
+
+note, that if you use
+ws-ftp
+then entire directories can be ftp'ed
+otherwise, individual files would need to be ftp'ed.
+look at "the whole internet"
+for a discussion of ways to ftp entire directories.
+
+
+add the line
+
+set classpath=.;c:\java\lib\classes.zip;c:\java\lib
+
+to the autoexec.bat file.
+
+note:
+the
+classes.zip
+stays "ziped".
+it is part of the jdk.
+
+
+reboot
+
+
+note:
+you can send mail to:
+pc-system-l@hmc.edu,
+the general pc mail list at hmc,
+for any pc related questions and issues.
+
+
+
+
+last modified september 20, 1996 by mike@cs.hmc.edu
+
+
+
+
+cs6 - java on the pc
+cs6 - java on the pc
+cs6 - java on the pc
+cs6 - java on the pc
+cs6 - java on the pc
+cs6 - java on the pc
+cs6 - java on the pc
+cs6 - java on the pc
+cs6 - java on the pc
+cs6 - java on the pc

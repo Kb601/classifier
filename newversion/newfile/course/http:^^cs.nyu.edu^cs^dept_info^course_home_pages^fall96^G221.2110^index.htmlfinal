@@ -1,0 +1,349 @@
+programming languages i:g221.2110 hand out 0
+
+
+
+
+
+
+
+							
+programming languages i:g221.2110 hand out 0
+b. mishra
+							
+ lecturer:
+  
+	professor b. mishra
+							
+ teaching assistants:
+  
+	tao zhao
+	office hours: wednesday, 2:00pm-4:00pm
+	e-mail: taozhao@cs.nyu.edu
+	office: 251 mercer street, room 417 (wwh)
+	telephone: (212) 998-3106
+	de-wang zhu
+	office hours: tuesday, 3:00pm-5:00pm
+	e-mail:	dewang@cs.nyu.edu
+	office: 715 broadway, room 1006
+	telephone: (212) 998-3346
+							
+ electronic office hours:
+
+ mail 1 
+ mail 2 
+ mail 3 
+ mail 4 
+ mail 5 
+							
+each lecture is organized as follows: the link marked "lecture[#]" is a
+file which will give you the slides from the class in .html format. the same
+information is available in ".ps" and a "short ps" formats (links marked
+in square brackets: [ps, short ps]). the ps link will give you the exact
+copies of the slides and short ps link will give four slides formatted
+in one page. however, to be able to see the .ps files, you must ensure
+that your browser has post script viewing ability.
+							
+							
+							
+
+
+							
+	
+lecture 1 [
+	 ps,
+	 short ps
+	]
+							
+	introduction
+							
+	reading assignment: ch 1 (sethi), ch 1 (stansifer)
+							
+	 compilers and interpreters
+	[ps]
+							
+	 survey of languages
+	[ps]
+							
+	
+lecture 2 [
+	 ps,
+	 short ps
+	]
+							
+	models of computation
+							
+	language design principles
+							
+	reading assignment: r.d.tennent
+	"language design methods based on semantics principles"
+	acta informatica, 8, 97--112 (1977)
+	
+	r.d.tennent
+	principles of programming languages
+	prentice hall.	
+							
+	
+lecture 3 [
+	 ps,
+	 short ps
+	]
+							
+	syntax & semantics
+							
+	assignment & types
+							
+	reading assignment: ch 2, 3 & 4 (sethi), ch 2, 3 & 4 (stansifer)
+							
+	 homework 1 (only in ps)
+							
+	
+lecture 4 [
+	 ps,
+	 short ps
+	]
+							
+	language survey 1: c	
+							
+	reading assignment: brian kernighan and dennis ritchie
+	the c programming language
+	prentice-hall
+							
+	
+lecture 5 [
+	 ps,
+	 short ps
+	]
+							
+	language survey 2: ada 95
+							
+	reading assignment: j. barnes
+	programming in ada 95
+	addison wesley
+							
+	 homework 2 (only in ps)
+	 gnatmake for ada 95 
+							
+	
+lecture 6 [
+	 ps,
+	 short ps
+	]
+							
+	scope issues						
+							
+	reading assignment: ch 5 (sethi), ch 5 (stansifer)
+							
+	
+lecture 7 [
+	 ps,
+	 short ps
+	]
+							
+	runtime system
+							
+	reading assignment: ch 5 (sethi), ch 5 (stansifer)
+							
+	
+lecture 8 [
+	 ps,
+	 short ps
+	]
+							
+	exception handling
+							
+	reading assignment: section 9.6 (sethi), section 5.5 (stansifer)
+							
+	
+lecture 9 [
+	 ps,
+	 short ps
+	]
+							
+	object oriented programming
+							
+	inheritance & polymorphism
+							
+	reading assignment: ch 6 & 7 (sethi), ch 4 (stansifer)
+	 homework 3 (only in ps)
+							
+	
+lecture 10 [
+	 ps,
+	 short ps
+	]
+							
+	language survey 3: c++
+							
+	reading assignment: bjarne stroustroup
+	c++: programming language
+	addison wesley publishers
+							
+	
+lecture 11 [
+	 ps,
+	 short ps
+	]
+							
+	language survey 4: java
+							
+	reading assignment: james gosling, bill joy & guy steele
+	java language specification
+	addison wesley
+							
+	 homework 4 (only in ps)
+							
+	
+lecture 12 [
+	 ps,
+	 short ps
+	]
+							
+	language survey 5: common lisp
+							
+	reading assignment: guy steele
+	common lisp manual,
+	digital press. 
+							
+	
+lecture 13 [
+	 ps,
+	 short ps
+	]
+							
+	lisp runtime system 
+							
+	garbage collection
+							
+	reading assignment: ch 10 (sethi)
+							
+	
+lecture 14 [
+	 ps,
+	 short ps
+	]
+							
+	concurrency
+							
+	reading assignment: ch 12 (sethi)
+
+							
+	office hours: 12:00 noon--1:00pm, thursday 
+	office phone: 212.998.3464 
+	email address: mishra@nyu.edu
+							
+ day and time:
+  
+	thursdays 5:00-6:50pm est
+							
+ credits for course:
+  
+	3
+							
+ description:
+  
+	issues in programming languages; three views: users, semanticists
+	and compiler writers; paradigms: imperative, declarative, functional,
+	logic, object-oriented, etc.; history and ideas; computational
+	models; principles of orthogonality, qualification and
+	correspondence; abstract syntax; denotational semantics;
+	assignment; type system; scope issues; runtime systems;
+	exception handling; encapsulation; oops; inheritance;
+	polymorphism; memory management and garbage collection in
+	lisp; concurrency; idioms and styles: fortran, pascal, c, ada
+	95, c++, java and common lisp (mathematica, if time permits).
+
+							
+ prerequisites:
+  
+	programming experience involving pascal, c or fortran.
+							
+ required text(s):
+  
+ ravi sethi, 
+	 programming languages---concepts and constructs, 2nd edn,
+	addison wesley. isbn 0-201-59065-4.
+							
+ reference text(s):
+  
+(you don't need to buy all the reference books immediately. if you
+already have some other language manuals, then you may be able to work
+with those. if you have already taken a course in programming
+languages, you may consider buying stansifer's book instead of sethi's.)
+
+ ryan stansifer,
+	 the study of programming languages,
+	prentice hall, inc, engelwood cliff. isbn 0-13-726936-6.
+
+  bjarne stroustroup,
+	 c++: programming language,
+	addison wesley publishers.isbn 0-201-12078-x.
+
+  james gosling, bill joy and guy steele,
+	 java language specification,
+	addison wesley. isbn 0-201-63451-1.
+	now available in the bookstores. (september 19 1996)
+
+  j. barnes,
+	 programming in ada 95
+	addison wesley. isbn 0-201-87700-7.
+
+  guy steele,
+	 common lisp manual,
+	digital press. isbn 0-932376-41-x.
+
+  stephen wolfram, 
+	 mathematica: a system for doing mathematics,
+	addison wesley. isbn 0-201-51507-5.
+ 
+							
+ midterm date:
+  
+	wednesday, october 31, 1996, 55 minutes, closed book.
+ final date:
+  
+	wednesday, december 19, 1996, 110 minutes, closed book.
+ homework(s):
+  
+	four assignments: conceptual and computational work
+							
+ grading:
+  homework 40%, midterm 20%, final 40%
+
+							
+ homeworks:
+
+	 homework 1 (only in ps)
+	[ solution (by tao zhao)]
+
+
+	 homework 2 (only in ps)
+	[ solution]
+
+
+	 homework 3 (only in ps)
+
+
+	 homework 4 (only in ps)
+
+  
+ 
+course outline
+ 
+
+ 
+
+bud mishra 
+sun september 10 edt 1996
+
+
+
+programming languages i:g221.2110 hand out 0
+programming languages i:g221.2110 hand out 0
+programming languages i:g221.2110 hand out 0
+programming languages i:g221.2110 hand out 0
+programming languages i:g221.2110 hand out 0
+programming languages i:g221.2110 hand out 0
+programming languages i:g221.2110 hand out 0
+programming languages i:g221.2110 hand out 0
+programming languages i:g221.2110 hand out 0
+programming languages i:g221.2110 hand out 0

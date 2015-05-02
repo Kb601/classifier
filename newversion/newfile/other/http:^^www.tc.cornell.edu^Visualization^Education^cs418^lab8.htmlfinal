@@ -1,0 +1,156 @@
+cs418 lab 8
+
+
+
+
+ 
+cs 418: laboratory 8 
+ modeling and scientific visualization
+ introduction. 
+scientific visualization is a term which refers to the process of converting
+data into pictures. this lab will demonstrate several of the techniques
+of visualization. the techniques will be used to view a simulated landscape, 
+complete with rivers and clouds. the examples shown below are the result
+of calculating:
+
+ a height field, z=f(x,y), and displaying it as landscape.
+the blue is a flat polygon simulating a water surface.
+
+ a density field d=f(x,y,z) and displaying it as a cloud, either by
+volume rendering or by isosurface extraction followed by polygon rendering.
+
+ 
+ 
+ a set of rivers determined by plotting streamlines of the gradient of
+the height field. the gradient vectorfield and the streamlines are shown also.
+the vectorfield can be considered an "plan view" of the landscape slopes. 
+the third image shows a landscape with about 100 stream start locations.
+
+
+
+
+
+
+procedure: 
+
+you will need to download the program
+
+ landscape.net 
+ landscape.cfg 
+ 
+the program caluclates a 2d field of altitudes to make a landscape.
+it also calculates a 3d scalar field of densities to use as a cloud.
+these two fields are manipulated (e.g. to derive the slope of the
+surface), then visualized. new modules which are used include the:
+
+ isosurface module which fits polygons to points of equal
+field strength in a 3d field.
+ autoglyph module which constructs an arrow at every point in
+a vector field
+ streamline module which follows a vector field in its direction of flow.
+ refine module which interpolates points into a field.
+ map module which allows the data in one field to be interpolated onto
+the positions of another field.
+
+you may want to look at the example programs in
+ /usr/lpp/dx/samples/programs/  for further examples that
+use these modules.
+
+  assignment:
+
+run the program a few times to see what it does. try out various options
+on the control panel. modify the program to add the following features:
+
+ modify the colors of the rivers by mapping the magnitude of the
+gradient (the slope) onto the streamlines, then coloring them so that
+high slopes regions of the streams are white to simulate rapids, while
+lower slopes are blue. the program as given uses a map module to map
+altitude to the streamlines. you will need to add another map module
+and cotrol the colors based on the data component of the field.
+one possible example is shown below. 
+
+ modify the surface color so that is green near ocean level and white
+at mountain peaks with pale yellow in between. use the colormap module.
+
+
+ modify the river generator to start rivers at regular grid points
+(say 5 by 5) on the surface. use the construct module to make a starting
+grid. see the image above with 100 stream starts for an example.
+
+ modify the program to produce "trees" on the surface. the glyph
+module will produce arrows when given a vector field.
+if the "type" input of the glyph module is given a geometry (say
+a cone) it will place it at every point on the surface. if you
+use a parametric surface as an input be sure to run it through 
+a refine module with the "level" input set to "triangles".
+use an include module to limit the trees to a band of elevations,
+as shown below.
+you will probably want to use a reduce module to lower the density 
+of trees on the surface.
+
+
+
+ modify the program to produce an animation of the cloud. the animation
+should show the cloud changing from one density distribution to another
+by interplolating between two fixed density functions.
+make perhaps ten time steps in the sequence.
+
+
+ some results from 1996 .
+
+you will need to demo all of the assigned functions in one modified net
+with the appropriate interactors to control the functions you have added.
+as usual, the style of the program will be graded, as will its function.
+the cloud animation may be in a separate program.
+
+the
+ lab 8 grading guide 
+will be filled out by a consultant during section to evaluate your work.
+
+
+
+
+back to main page
+
+
+go to lab 9
+ 
+
+last modified, 2/26/96, b. land.
+
+
+
+ 
+copyright statement 
+ 
+
+
+
+cs418 lab 8
+
+
+cs418 lab 8
+
+
+cs418 lab 8
+
+
+cs418 lab 8
+
+
+cs418 lab 8
+
+
+cs418 lab 8
+
+
+cs418 lab 8
+
+
+cs418 lab 8
+
+
+cs418 lab 8
+
+
+cs418 lab 8

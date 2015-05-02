@@ -1,0 +1,45 @@
+rebecca hasti's room reservation viewer
+	
+ 
+
+ room reservations
+
+this applet is a viewer for the rooms database.
+the user can request to view all the reservations for a particular date 
+or for a particular day of the week.  
+the applet then connects to the rooms database and displays the results
+in sorted order (by room number, starting time, or ending time depending
+on the user's choice).
+
+instructions:
+
+to change the field on which the output is sorted, click on the box 
+under the words "sort by:" and select the desired field.  
+note: changing the sort choice must be done before selecting the day or
+date.
+
+to see all the standing reservations for a particular day of the week,
+double-click on that day in the box on the left.
+
+to see all the reservations for a particular day, replace the string 
+"put a date here" with the date (e.g. 10/23/96) and then click the 
+"show reservations" button.
+
+
+however, the net browser you are using does not implement java.
+
+
+
+
+
+
+ rebecca hasti's room reservation viewer
+ rebecca hasti's room reservation viewer
+ rebecca hasti's room reservation viewer
+ rebecca hasti's room reservation viewer
+ rebecca hasti's room reservation viewer
+ rebecca hasti's room reservation viewer
+ rebecca hasti's room reservation viewer
+ rebecca hasti's room reservation viewer
+ rebecca hasti's room reservation viewer
+ rebecca hasti's room reservation viewer

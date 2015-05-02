@@ -1,0 +1,440 @@
+cse467 laboratory assignment #5
+
+
+
+
+cse467: advanced logic design
+ted kehl fall1996 
+
+
+
+lab 5
+
+using the oscilloscope and logic analyzer
+
+distributed: nov 11
+  due: ta option
+
+
+objectives
+after completing this lab you will know how to use the oscilloscope
+and logic analyzer to test and debug sequential circuits.
+
+you should divide into groups of two to complete this lab assignment.
+
+i.  digital oscilloscope and switch debouncing
+the digital oscilloscope lets you examine the detailed
+behavior of signals as a function of time.  you will examine
+the output of the clock generator provided in your
+designkit.  you will also observe switch bounce and learn
+how to measure propagation delay.
+the oscilloscope
+oscilloscopes display voltage waveforms as a function of
+time in much the same way that a simulator
+displays signal waveforms.  the scopes that you will be
+using are part of the tektronix 1230 logic analyzers.  these
+scopes can sample two signals and display their waveforms
+either separately or simultaneously.  each signal is sampled
+at some rate up to 100 mhz (every 10ns.) and this sampled
+signal is displayed according to commands that you enter
+into the logic analyzer.  oscilloscopes sample the voltage
+of the signal and display its value at each sample time.
+logic analyzers work similarly except that they only sample
+0 and 1 values.  the hard part of operating the scope is
+indicating  (1) how you want the signal sampled and (2) how
+you want it displayed.  this lab assignment will try to show
+you how to do both.
+the tek 1230 logic analyzer / digital oscilloscope
+the tektronix 1230 logic analyzer console has a video
+monitor on the left side of the console.  buttons and ribbon
+cable connectors are on the right side.  because the 1230
+uses menus on the monitor to control operation, few controls
+are needed on the console.   however, the menus and commands
+can be confusing.
+
+the logic analyzers with digital scope boards have bnc
+connectors on the rear panel for scope and trigger input.
+probes are attached to the bnc connectors to make
+measurements.  these probes provide extra impedance to the
+circuit to minimize disturbance to the circuit.
+
+after the logic analyzer is powered up using the switch
+located on the rear panel, it will eventually display an
+opening screen.  press the &lt;menu&gt; key to start operation.
+the figure at the top of the next page is a road map for
+using the oscilloscope that shows what commands are
+available in the different modes.  you will find it helpful
+to refer to this figure as you read the rest of the lab
+assignment.
+
+the  main menu is divided into three sections: setup, data,
+and utilities.  only two of these menus are used to access
+the scope capabilities of the system.  the menu selection
+marked "digital scope" in the "data" section is used to
+display waveforms (&lt;a&gt;).  the menu selection marked "digital
+scope" in the "setup" section is used to change setup
+parameters of the oscilloscope (&lt;5&gt;) that determine how the
+signals are sampled.
+
+
+
+notice the menu bar on the bottom of the screen.  the menu
+bar simply provides a reminder of the commands available.
+commands are always issued by pressing a key and not through
+the menu.   a command does not need to be visible in the
+menu bar for you to perform that command using the keypad.
+the menu bar assists you in remembering which functions are
+available from which menus and modes.   if there are too
+many commands, then pressing the &lt;f&gt; key will rotate through
+multiple menu bars.
+
+the &lt;notes&gt; key is used to display on line help about the
+available commands and options.  a screen of reference
+material will be displayed on the screen when you press the
+&lt;notes&gt; key.
+
+the arrow keys are used to move the cursors around the
+screen.  in some cases, the cursor is a highlighted
+selection that can be moved from one item to another.   the
+value of a highlighted selection is changed either by using
+the &lt;0&gt; and &lt;2&gt; to rotate through the available alternatives
+or by entering the proper value using the keypad.
+using the oscilloscope to examine your clock generator
+find the bnc connector marked "scope input ch1" on the rear
+of the console and connect an oscilloscope probe to it.
+connect the tip of the probe to the output of your clock
+generator.  remember that your clock generator output is open
+collector so you will need a pull-up resistor.  connect the
+black grounding wire to the ground of your protoboard.
+the data / digital scope screen
+before you start, make sure you are starting with the
+default setup by pressing &lt;notes&gt; and &lt;enter&gt;
+simultaneously.  now press &lt;menu&gt; to obtain the logic
+analyzer's main menu.  press &lt;a&gt; on the logic analyzer
+keypad to go to the digital scope display screen.  you'll
+see a window which displays signal waveforms and a list of
+parameters on the left side of the screen.
+
+this screen functions in two modes.  one mode brings up a
+reverse video cursor which allows you to change some of the
+setup parameters listed on the left side of the screen.   in
+the other mode, the reverse video cursor is not present, but
+you can change other parameters by commands accessed via
+keypad.
+selecting channel
+the "channel" field indicates which channel is being
+displayed.  to change this setting press the &lt;0&gt; and &lt;2&gt;
+keys.  set the oscilloscope to display channel 1.  you
+should see the clock waveform on the screen.
+changing the setup
+enter the "change setup" mode by pressing the &lt;don't care /
+x&gt; key.  a reverse video cursor will appear.  use the cursor
+keys to move the cursor.  you'll see that you can change the
+attenuator, position, and timebase fields.   use the arrow
+keys to move the cursor and the &lt;0&gt; and &lt;2&gt; keys to change
+the values.
+attenuator
+the "attenuator" field is used to set the vertical scale of
+the display.  that is you select the number volts per grid
+square so that your waveform fits in the display.  set the
+attenuator to 2v per square.
+position
+the "position" field indicates the vertical displacement
+used in displaying the waveform.  by adjusting this
+parameter, you can shift the waveform up or down.  using the
+attenuator and position together, you can view any part of
+the waveform in any detail.
+timebase
+"timebase" is used to set the horizontal scale of the
+display, that is, how often your signal is sampled.  this
+parameter is usually set so that enough of the signal is
+captured.  for example,  by changing this parameter, you can
+choose how many periods of a periodic waveform are displayed
+on the screen.
+
+change these three parameters until you get an easy to read
+trace of your clock signal.  change the frequency of your
+clock signal.  observe how this changes your trace.
+
+to retain your changes, you must press the &lt;enter&gt; key after
+you have finished adjusting parameters.  if you press the
+&lt;don't care / x&gt; key to leave the "change setup" mode, your
+changes will be discarded.
+controlling the display
+now that you have determined how you want to sample the
+signal, there are several commands that change how it is
+displayed.
+zoom in/out
+note the bar graph display above the scope display.  this
+graph indicates what part of the waveform is being displayed
+on the screen.  you can press the &lt;4&gt; and &lt;5&gt; keys to change
+the resolution of the display.  in effect, the horizontal
+scale of the trace expands or contracts.  decreasing the
+number of samples displayed on the screen allows you to
+examine a waveform in more detail.
+scanning the trace and taking measurements
+note the cursor in the trace display.  you can move this
+cursor left and right using the arrow keys.  as you
+move the cursor, the cursor position is displayed so that
+you can measure the time from one point on the trace to
+another.  this measurement is made even easier by the
+ability to place a reference cursor using the &lt;enter&gt; key.
+this establishes that location as a reference point; the
+reference point will be marked with a dashed line.  then
+move the cursor to the second point.  the delta values will
+be displayed on the screen display.
+
+the cursor can be changed to a horizontal cursor using the
+&lt;e&gt; key.  this is useful for measuring the voltages.
+taking measurements with a grid
+you can take approximate measurements from this screen by
+superimposing a grid on the screen.  press &lt;3&gt; to toggle the
+grid on and off.  although this allows you to read values
+directly from the screen, these measurements are necessarily
+quite approximate.  precise measurements are better taken
+using the cursors.
+using the setup / digital scope screen
+not all of the scope sampling settings are accessible from
+the change setup part of the data / digital scope screen.
+press &lt;menu&gt; and then &lt;5&gt; to obtain the setup / digital
+scope screen and examine the other scope settings.  use the
+arrow keys to move the reverse video cursor around the
+screen.  you can change the values of the parameters by
+pressing the &lt;0&gt; and &lt;2&gt; keys.  some of the settings on this
+screen are also accessible from the change setup screen.
+coupling
+"coupling" toggles between ac and dc.  the dc stands for
+direct coupling.  dc is used to display all frequency
+components of a signal.  if you want to use the scope as a
+simple voltmeter, be sure the input is dc coupled.  ac
+filters the direct component of the signal, so that only the
+alternating component of the signal is displayed.  this
+setting can be used to examine a small alternating signal
+that is superimposed on a large dc voltage.  we will
+typically use the dc setting.
+triggering
+triggering determines when the scope samples the signal.  in
+"free" triggering mode, the scope starts sampling a new
+trace as soon as the previous trace is finished being
+captured.   this means that the position of edges in a
+periodic signal will be placed randomly depending on when
+the scope starts sampling the signal.  free triggering is
+useful to get a continuous monitor of a signal, but is not
+used all that much.  set the triggering to "free".  notice
+that the waveform seems to "move" as it is redrawn because
+the transitions are not redrawn in the same places.  if you
+want to freeze the image press &lt;stop&gt;.  press &lt;start&gt; to
+resume sampling.
+
+continuous triggering mode (cont) is like free triggering
+except that a synchronizing signal is used to determine when
+to start sampling a signal.  this signal is determined by
+the parameters called "source", "coupling", "slope" and
+"level".
+
+the source of the triggering signal is typically the signal
+being sampled, although it can come from an external source.
+
+coupling here means the same thing as for the signal itself.
+we will typically use dc coupling.
+
+the trigger is defined by some edge in the signal you are
+observing.  you indicate whether you want to trigger on the
+rising or falling (+/-) edge using the slope parameter.  you
+indicate at what point on the edge you want to trigger by
+specifying the voltage level.
+
+change the triggering mode to "cont" and observe the
+waveform again.  the waveform should be stable now.  this is
+possible because continuous triggering uses the trigger
+signal to start sampling at the same point of the waveform
+each time.  if the signal is not stable, then you must
+adjust the trigger parameters described above.
+ the final parameter, "position", specifies where the
+triggering event is displayed on the screen.  by changing
+this parameter, you can examine events before or after the
+triggering event.
+switch debouncing and single traces
+since this is a digital storage scope, you can sample a
+single trace and examine it at your leisure.  this is single
+triggering mode.  first setup the trigger and then press
+&lt;start&gt;.  this will cause just one sampling to take place
+when the first trigger event is detected.  use this to
+display the bounce on your push-button switch as connected
+below.
+
+connect the oscilloscope to the output, depress the
+pushbutton, and capture the waveform showing what happens as
+the switch is closed.  (note: you will need to set a trigger
+for the oscilloscope.)  you will notice that the output does
+not make a clean transition but bounces around a bit. how
+long does the bounce last?  repeat the experiment several
+times. also repeat the experiment observing the output when
+the pushbutton in released. (you will need to change the
+trigger setting.)
+
+we will now debounce the pushbutton.  to debounce this type
+of switch (single-pole single-throw or spst) we will require
+a special analog circuit consisting of a resistor,
+capacitor, and a schmitt trigger (your 'ls14).  you already
+have a resistor connected.  the circuit should be configured
+as:
+                              
+when the button is depressed, the capacitor is shorted to
+ground and is quickly discharged.  this makes the output of
+the schmitt trigger inverter immediately go high.  if the
+button momentarily disconnects, the capacitor will start
+recharging but only slowly due to the large rc time
+constant.  if the time constant is longer than the bounce
+time there won't be time to charge the capacitor enough to
+trip the schmitt trigger and the output will stay high.  the
+internal hysteresis of the schmitt trigger  will prevent it
+from switching again until the input gets very high.  once
+the pushbutton is released, there will be enough time and
+the capacitor will eventually charge to 5v and the output of
+the schmitt triggers will be low.  the r and c values should
+be chosen so that r times c is more than 10 times the
+duration of the longest bounce in the previous experiment.
+also, r should not be larger than 100 kiloohms or the 'ls14  will
+not work correctly (its input will sink more current than is
+being provided through r).  compare the waveforms on the
+pushbutton output before and after you add the debouncing
+circuit.
+measuring propagation delay
+propagation delay is the time for a change in the input of a
+gate to be reflected at the output.  propagation delays are
+measured from the 50% points of the transitions, the points
+in the transition that are halfway between the high and low
+values of the waveform.  for an inverter we can define two
+propagation times: tphl, the transition time for a rising
+transition to be propagated, and tplh, the time for a
+falling transition to be propagated.
+>
+we will measure the delay of one of the 74ls04 inverters in
+your kit by connecting the clock generator to one input and
+comparing it to the output of the inverter as shown above.
+unfortunately, the scope boards do not permit us to
+superimpose two traces on the same display.  therefore, the
+procedure for making these measurements is somewhat
+complicated.
+connect another scope probe to channel two of your scope.
+use one channel of the scope to examine the clock signal and
+the other channel to examine the signal coming out of the
+'04 chip.  to make the comparison honest, you should load
+the '04 output with a ttl input (another inverter will do
+for this).  are the propagation delays within the range you
+expected?  does the delay change if the fanout of the
+inverter is increased?
+dual screen mode
+from the scope display screen, press &lt;6&gt; to go into dual
+screen mode.  the dual screen mode works like the single
+screen mode you used before except that two traces are
+displayed.  you can only access one half of the screen at a
+time.  to toggle between the upper and lower halves of the
+screen, press the &lt;9&gt; key.  the grid overlay you obtained by
+pressing &lt;3&gt; is disabled in this mode.
+
+adjust the parameters to the two traces until you can see
+the signal going into the inverter and the signal coming out
+of the inverter.  to take measurements between these
+screens, you must ensure that the signals are comparable -
+both traces must have the same timebases and zoom factor.
+you have already learned how to adjust the timebases.  to
+ensure that both traces trigger from the same source, go to
+the scope setup menu.  adjust the triggering parameters so
+that both waveforms are in continuous trigger mode with the
+same triggering parameters.  (you can use the &lt;c&gt; key to
+copy a parameter from one channel to another.)  channel one
+should have "int" as the triggering source.  channel two
+should have "ch1" as its triggering source so that they both
+start sampling at precisely the same time.
+
+return to the scope display and examine the displays.
+adjust the timebase parameters and if necessary your clock
+generator to obtain traces from which you can accurately
+measure propagation delay.  use the cursor and reference
+cursors to measure the delay from one signal to the other.
+make sure the that the zoom factor is identical for both
+traces and that the horizontal trace position is identical.
+hand in: (due may 10)
+
+do the frequencies you observed on the oscilloscope match the
+setting of your clock generator?  how far off are they?
+how long does the bounce on your push-button switch last?  how
+many edges are there on average?  does the debouncing circuit
+eliminate the bounce?
+what is the delay of a signal through a 74ls04 inverter?  is it
+what you expected given the information in the data sheets?
+
+
+ii.  logic analyzer
+debugging sequential circuits is much more difficult than debugging
+purely combinational circuits.  logic analyzers sample and collect data
+and display the waveforms on their screen.  this will enable you to
+observe the behavior of your circuit during an entire time interval
+rather than at just one point in time as is possible with your probe.
+
+in the lab, there is documentation that describes the operation of the
+tektronix 1230 logic analyzer.  you may find using this logic analyzer
+confusing at first, so we suggest you read carefully pages 7-9 of
+section 1 which covers general information about using the logic
+analyzer.  you should also read the rest of this section, but some of
+the information will not make sense until you actually try to use the
+logic analyzer.  the next step is to try out the logic analyzer using
+the exercises from section 2 in the documentation.  the best way to
+learn is to try things out and ask questions if you don't understand
+something.
+
+section 2 contains two exercises which rely on a test card (available
+in the lab) that contains a simple counter circuit.  the first
+exercise covers asynchronous operation which uses a free-running
+internal clock to sample data.  with this type of sampling, the logic
+analyzer will not generate crisp waveform and you'll need to
+oversample (multiple samples per clock edge) in order to get evenly
+spaced transitions on signals.  the second exercise covers synchronous
+operation which uses a clock that you supply to sample data.  this
+makes sense when you want to see the value of signals precisely at the
+active edge of the system clock and not deal with the jitter typically
+seen in asynchronous operation.  by sampling more wisely, you'll be
+able to avoid oversampling and collect a longer history into the logic
+analyzer's memory.
+
+after you have done these two exercises, use the logic analyzer to
+observe your 3-bit counter from the previous lab assignment, using the
+pushbutton switch to generate the clock signal.  connect
+leads of the logic analyzer to the switch controlling the counter and
+all its outputs.  have the analyzer trigger on a transition on the
+debounced switch.  then do it again without the debounce circuitry
+(with a switch you know bounces) and see if you get a waveform that
+shows the counter counting more than one for a single (bouncy) switch
+press.  lastly, try triggering on a counter value of 6 making sure to
+collect some data before the trigger (so that you can see the switch
+event that caused the counter to advance to 6).
+
+
+
+hand in: (due ta option
+
+demonstrate your mastery of the logic analyzer to the ta using the
+counter circuit.  your ta should sign your turn in sheet from part i
+to show you have completed the demo.
+
+
+
+
+
+ted@cs.washington.edu
+
+
+
+
+cse467 laboratory assignment #5
+cse467 laboratory assignment #5
+cse467 laboratory assignment #5
+cse467 laboratory assignment #5
+cse467 laboratory assignment #5
+cse467 laboratory assignment #5
+cse467 laboratory assignment #5
+cse467 laboratory assignment #5
+cse467 laboratory assignment #5
+cse467 laboratory assignment #5

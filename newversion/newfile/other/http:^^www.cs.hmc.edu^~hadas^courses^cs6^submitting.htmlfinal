@@ -1,0 +1,71 @@
+how to submit your homework
+
+
+
+
+ 
+ how to submit your homework
+ 
+
+
+
+we now have a new program on osiris called submit.
+before you submit your homework, please be sure that your c++
+programs end with .cc (as in my_cool_program.cc)
+and that any file that just contains text (such as an essay or
+written answers to a question) ends with .txt 
+(as in my_answer.txt).  if your files don't end with these
+suffixes, submit will whine and complain and won't deliver
+your files to us.
+
+ 
+you will submit each part of the homework in a separate file.
+assume that your program for problem 1 on the homework assignment
+is called problem1.cc.  then, type submit
+problem1.cc.  the program will then ask you some questions.
+first, it will ask you:
+ 
+what assignment are you submitting?  
+if you enter 2 that stands for assignment 2.  next it will ask you:
+ 
+
+what problem from the assignment are you submitting?
+
+ 
+if the assignment has six parts, you will enter a number between 1 and
+6 in response.  then the program will ask you if this is a first
+submission or a regrade.  i'll talk about regrades in class, but for
+now choose first submission.
+don't worry that the program doesn't ask who you
+are or what class you're submitting a homework for.  the submit
+program figures all that out by itself. (if it gets confused, it 
+sends e-mail to one of the cs 5 or cs 6 professors for help.)
+similarly, if your file is a text file (not a program), just type
+submit filename.txt.
+
+ 
+last modified september 11, 1995 by hadas@cs.hmc.edu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+how to submit your homework
+how to submit your homework
+how to submit your homework
+how to submit your homework
+how to submit your homework
+how to submit your homework
+how to submit your homework
+how to submit your homework
+how to submit your homework
+how to submit your homework

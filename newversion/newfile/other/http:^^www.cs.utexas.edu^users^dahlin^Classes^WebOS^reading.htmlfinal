@@ -1,0 +1,268 @@
+cs 395t: web operating systems
+   
+
+
+
+cs 395t: web operating systems
+
+unique no. 47928 mwf 1:00-2:00 tay 3.144 mike dahlin 
+
+the bold faced papers will be available in a reader at the texas
+union copy center (24th and guadeloupe). most of the rest are available
+on line. 
+
+internet basics 
+
+
+d. clark &quot;the design philosophy of the darpa internet protocols&quot;
+sigcomm88 computer communication review vol. 19, no. 4 aug 1988 pp 106-114.
+
+
+c.
+hendrick &quot;introduction to the internet protocols&quot; 1987. 
+
+v. paxon
+&quot;end-to-end routing behavior in the internet&quot; acm sigcomm96 aug
+96. 
+
+rfc 793 (tcp) 
+
+rfc 1883 (ip version
+6) 
+
+jacobson, v.&quot;congestion avoidance and control&quot; (sigcomm
+'88 symposium: communications architectures and protocols, stanford, ca,
+usa, 16-19 aug. 1988). computer communication review, aug. 1988, vol.18,
+(no.4):314-29. 
+
+jeff mogul &quot;the case for persistent-connection http&quot; sigcomm95
+p299-313 
+
+-or- 
+
+v.
+padmanabhan and j. mogul &quot;improving http latency&quot; 
+
+b.
+callaghan &quot;webnfs: the file system for the world wide web&quot; sun
+white paper may 1996. 
+
+h. eriksson &quot;mbone: the multicast backbone&quot; cacm aug1994
+v37 pp 54--60 
+
+another real-time networking paper? ask harrick. or perhaps uiuc &quot;vosaic&quot;
+
+
+
+remote file service 
+
+
+howard, j.h., kazar, m.l., menees, s.g., nichols, d.a., satyanarayanan,
+m., sidebotham, r.n., west, m.j. &quot;scale and performance in a distributed
+file system&quot; acm transactions on computer systems feb. 1988, vol.
+6, no. 1, pp. 51-81. 
+
+j. kistler and m. satyanarayanan &quot;disconnected operation in
+the coda file system&quot; acm transactions on computer systems. feb. 1992,
+vol. 10, no. 1, pp. 3-25 
+
+gwertzman,
+j., seltzer, m. &quot;world-wide web cache consistency&quot; proceedings
+of the 1996 usenix technical conference, san diego, ca january 1996. 
+
+internet draft
+&quot;a design for caching in http 1.1&quot; 
+
+s.
+glassman &quot;a caching relay for the world wide web&quot; proceedings
+www94 
+
+a. luotonen and
+k. altis &quot;world-wide web proxies&quot; proceedings www94 april 94.
+
+
+anawat chankhunthod,
+peter b. danzig, chuck neerdaels, michael f. schwartz and kurt j. worrell.
+a hierarchical internet object cache. 
+
+d.
+terry and m. theimer and k. petersen and a. demers and m. spreitzer and
+c. hauser &quot;managing update conflicts in bayou, a weakly connected
+replicated storage system&quot; 
+
+c. gray and d. cheriton &quot;leases: an efficient fault-tolerant
+mechanism for distributed file cache consistency&quot; symposium on operating
+systems principles 1989 pp. 202-210. 
+
+www&nbsp;cache
+related links
+
+chankhunthod
+et. al &quot;a hierarchical internet object cache&quot;
+
+
+extensibility 
+
+
+d. wagner
+and i. goldberg and r. thomas &quot;a secure environment for untrusted
+helper applications: confining the wily hacker&quot; 1996 usenix security
+symposium. to appear. 
+
+r. wahbe, s. lucco,
+t. anderson and s. graham. ``efficient software-based fault isolation.''
+proc. fourteenth acm symposium on operating system principles, december
+1993, pp. 203-216. 
+
+sun white paper
+&quot;java language overview&quot; 1996. 
+
+sun microsystems
+&quot;hotjava: the security story&quot;. may 1995. 
+
+f. yellin &quot;low
+level security in java&quot; 1996. 
+
+d. hopwood &quot;security
+bugs in java&quot; web page -- descriptions and links to other sites. 
+
+d. dean
+and e. felten and d. wallach &quot;java security: from hotjava to netscape
+and beyond&quot; 1996. 
+
+d. tennenhouse
+and d. wetherall &quot;towards an active network architecture&quot; computer
+communication review. to appear. 1996. 
+
+e.
+baldeschwiler and r. blumofe and e. brewer &quot;atlas: an infrastructure
+for global computing&quot; sept 1996. 
+
+rent-a-server 
+
+
+scalable services 
+
+
+t. anderson, d. culler,
+d. patterson &quot;a case for networks of workstations: now&quot; ieee
+micro feb. 1995. 
+
+e. katz and m. butler
+and r. mcgrath &quot;a scalable http server: the ncsa prototype&quot; www94
+conference. 
+
+t.
+anderson, m. dahlin, j. neefe, d. patterson, d. roselli, and r. wang. &quot;serverless
+network file systems.&quot; tocs (february 1996) 
+
+j.
+d. guyton and m. f. schwartz, &quot;locating nearby copies of replicated
+internet servers&quot;, in proceedings of acm sigcomm'95, 1995 
+
+c. yoshikawa,
+b. chun, p. eastham, a. vahdat, t. anderson, and d. culler. ``using smart
+clients to build scalable services.'' to appear, proc. of the 1997 usenix
+conference, jan. 1997. 
+draft version of final paper
+
+
+reliability/availability 
+
+
+j. gray &quot;a census of tandem system availability between 1985
+and 1990&quot; ieee transactions on reliability&quot; v39 n4 october 1990
+pp. 409--418. 
+
+t. haerder and a. reuter &quot;principles of transaction-oriented
+database recovery&quot; acm computing surveys 15(4):287--318 1983. 
+
+xxx distributed reliability: consensus/3-phase commit paper. 
+
+
+security: secure communication 
+
+
+d. denning and p. denning &quot;data security&quot; computing surveys
+v11 n3 sept 1979 pp. 227--249. 
+
+j. steiner and c. neuman and j. schiller &quot;kerberos: an authentication
+service for open network systems&quot; usenix winter conference feb 9-12
+1988 pp. 191--202. 
+
+a. freier
+and p. karlton and p. kocher &quot;secure socket layer&quot; march 96.
+
+
+m. burrows and m. abadi and r. needham &quot;a logic of authentication&quot;
+acm transactions on computer systems v8 n1 feb 1990 pp. 18--36. 
+
+s.
+glassman and m. manasse and m. abadi and p. gauthier and p. sobalvarro
+&quot;the millicent protocol for inexpensive electronic commerce&quot;
+www4 conference dec 1995. 
+
+
+resource allocation 
+
+
+carl a.
+waldspurger and william e. weihl. stride scheduling: deterministic proportional-share
+resource mangement, technical memo mit/lcs/tm-528, june 1995. 
+
+d. engler
+and f. kaashoek and j. o'toole &quot;exokernel: an operating system architecture
+for application-level resource management&quot; sosp95 dec. 1995 
+
+z.
+qin and w. wang and f. wu and t. lo and p. aoki &quot;mariposa: a wide-area
+distributed database system&quot; vldb journal 5 1 (jan 9`1996) pp 48--63.
+
+
+
+workloads
+
+
+webstone
+
+specweb96
+
+internet
+traffic archive
+
+
+more topics? 
+
+
+hollow pc paper? 
+
+a. birrell, r. levin, r. needham, m. schroeder &quot;grapevine: an
+exercise in distributed computing&quot; cacm v25 n4 april 1982 pp. 260--274.
+
+
+m. schroeder, a. birrell, r. needham &quot;experience with grapevine:
+the growth of a distributed system&quot; acm tocs v2 n1 feb 1984 pp 3--23.
+
+
+vrml:virtual reality modeling language 
+
+e-mail, news 
+
+d.
+hardy and m. schwartz &quot;customized information extraction as a basis
+for resource discovery&quot; tocs v14 n2 may 1996 
+
+
+
+
+
+cs 395t: web operating systems
+cs 395t: web operating systems
+cs 395t: web operating systems
+cs 395t: web operating systems
+cs 395t: web operating systems
+cs 395t: web operating systems
+cs 395t: web operating systems
+cs 395t: web operating systems
+cs 395t: web operating systems
+cs 395t: web operating systems

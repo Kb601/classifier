@@ -1,0 +1,394 @@
+cs 736 paper reading list
+
+
+
+ cs 736 paper reading list
+
+
+
+return to cs736 home page.
+
+
+
+memory management
+
+
+peter j. denning,
+"the working set model of program behavior",
+communications of the acm,
+11
+5,
+may 1968,
+pp. 323-333.
+
+
+richard carr,
+john hennessy,
+"wsclock - a simple and effective algorithm for virtual memory management",
+proceedings of the 8th sosp, operating systems review,
+15
+5,
+december 1981,
+pp. 87-95.
+
+
+ozalp babaoglu,
+william joy,
+"converting a swap-based system to do paging in an architecture lacking page-reference bits",
+proceedings of the 8th sosp, operating systems review,
+15
+5,
+december 1981,
+pp. 78-86.
+
+
+michael young,
+avadis tevanian,
+richard rashid,
+david golub,
+jeffrey eppinger,
+jonathan chew,
+william bolosky,
+david black,
+robert baron,
+"the duality of memory and communication in the implementation of a multiprocessor operating system",
+proceedings of the 11th sosp, operating systems review,
+21
+5,
+november 1987,
+pp. 63-76.
+
+synchronization and communication
+
+
+gregory r. andrews,
+fred. b. schneider,
+"concepts and notations for concurrent programming",
+acm computing surveys,
+15
+1,
+march 1983,
+pp. 3-44.
+
+butler w. lampson,
+david d. redell,
+"experiences with processes and monitors in mesa",
+communications of the acm,
+23
+2,
+february 1980,
+pp. 105-117.
+
+hugh c. lauer,
+roger m. needham,
+"on the duality of operating system structures",
+operating systems review,
+13
+2,
+april 1979,
+pp. 3-19.
+
+protection and security
+
+anita k. jones,
+william a. wulf,
+"towards the design of secure systems",
+software - practice and experience,
+5
+4,
+1975,
+pp. 321-336.
+
+frederick t. gramp,
+robert h. morris,
+"unix operating system security",
+at&t bell laboratories technical journal,
+63
+8,
+october 1984,
+pp. 1649-1672.
+
+gerald j. popek,
+charles s. kline,
+"encryption and secure computer networks",
+computing surveys,
+11
+4,
+december 1979,
+pp. 331-356.
+
+j. g. steiner,
+c. neuman,
+j. i. schiller,
+"kerberos: an authentication service for open network systems",
+usenix '88,
+dallas, tx,
+february 1988,
+pp. 191-202.
+
+kernels
+
+david d. redell,
+yogen k. dalal,
+thomas r. horsley,
+hugh c. lauer,
+william c. lynch,
+paul r. mcjones,
+hal g. murray,
+stephen c. purcell,
+"pilot: an operating system for a personal computer",
+communications of the acm,
+23
+2,
+february 1980,
+pp. 81-92.
+
+barton p. miller,
+david l. presotto,
+michael l. powell,
+"demos/mp: the development of a distributed operating system",
+software-practice & experience,
+17
+4,
+april 1987,
+pp. 277-290.
+
+david r. cheriton,
+willy zwaenepoel,
+"the distributed v kernel and its performance for diskless workstations",
+proceedings of the 9th sosp, operating systems review,
+17
+5,
+november 1983,
+pp. 129-140.
+
+brian d. marsh,
+michael l. scott,
+thomas j. leblanc,
+evangelos p. markatos,
+"first-class user-level threads",
+proceedings of the 13th sosp, operating systems review,
+25
+5,
+october 1991,
+pp. 110-121.
+
+henry massalin,
+carlton pu,
+"theads and input/output in the synthesis kernel",
+proceedings of the 12th sosp, operating systems review,
+23
+5,
+december 1989,
+pp. 191-201.
+
+graham hamilton,
+panos kougiouris,
+"the spring nucleus: a microkernel for objects",
+1993 summer usenix conference,
+cincinatti,
+june 1993,
+pp. 3-44.
+
+file systems
+
+m.k mckusick,
+w. n. joy,
+s. j. leffler,
+r. s. fabry,
+"a fast file system for unix",
+acm trans. on computer systems,
+2
+3,
+august 1984,
+pp. 181-197.
+
+bruce walker,
+gerald popek,
+robert english,
+charles kline,
+greg thiel,
+"the locus distributed operating system",
+proceedings of the 9th sosp, operating systems review,
+17
+5,
+november 1983,
+pp. 49-70.
+
+david k. gifford,
+robert n. needham,
+michael d. schroeder,
+"the cedar file system",
+communications of the acm,
+31
+3,
+pp. 288-297.
+march 1988,
+
+mendel rosenblum,
+john k. ousterhout,
+"the design and implementation of a log-structured file system",
+proceedings of the 10th sosp, operating systems review,
+25
+5,
+pp. 1-15.
+october 1991,
+
+russel sandberg,
+david goldberg,
+steve kleiman,
+dan walsh,
+bob lyon,
+"design and implementation of the sun network file systems",
+sun microsystems inc.
+
+john h. howard,
+michael l. kazar,
+sherri g. menees,
+david a. nichols,
+m. satyanarayanan,
+robert n. sidebotham,
+michael j. west,
+"scale and performance in a distributed file system",
+acm transactions on computer systems,
+6
+1,
+pp. 51-81.
+february 1988,
+
+james j. kistler,
+m. satyanarayanan,
+"disconnected operation in the coda file system",
+proceedings of the 10th sosp, operating systems review,
+25
+5,
+pp. 213-225.
+october 1991,
+
+distributed systems
+
+andrew d. birrell,
+roy levin,
+roger m. needham,
+michael d. schroeder,
+"grapevine:  an exercise in distributed computing",
+communications of the acm,
+25
+4,
+april 1982,
+pp. 260-274.
+
+andrew d. birrell,
+bruce jay nelson,
+"implementing remote procedure calls",
+acm transactions on computer systems,
+2
+1,
+february 1984,
+pp. 39-59.
+
+rob pike,
+david l. presotto,
+ken thompson,
+howard trickey,
+"plan 9 from bell labs",
+proceedings of the 1990 usenix conference,
+
+experience and systems reports
+
+hugh c. lauer,
+"observations on the development of an operating system",
+proceedings of the 8th sosp, operating systems review,
+15
+5,
+december 1981,
+pp. 30-36.
+
+butler w. lampson,
+"hints for computer system design",
+proceedings of the 9th sosp, operating system review,
+17
+5,
+pp. 33-48.
+october 1983,
+
+reliability and recovery
+
+david k. gifford,
+"weighted voting for replicated data",
+proceedings of the 7th sosp, operating systems review,
+13
+5,
+pp. 150-169.
+1979,
+
+jacques-louis lions,
+lennart lebeck,
+jean-luc fauquembergue,
+gilles kahn,
+wolfgang kubbat,
+stefan levedag,
+leonardo mazzini,
+didier merle thomson,
+colin o'halloran,
+"ariane 5 flight 501 failure: report by the inquiry board",
+european space agency report,
+paris, july 1996.
+url:
+
+http://www.esrin.esa.it/htdocs/tidc/press/press96/ariane5rep.html
+or
+
+http://www.cs.wisc.edu/~bart/ariane5rep.html.
+
+bruce j. walker,
+richard a. kemmerer,
+gerald j. popek,
+"specification and verification of the ucla unix security kernel",
+communications of the acm,
+23
+2,
+february 1980,
+pp. 118-131.
+
+technical writing
+
+donald knuth,
+"notes on technical writing",
+unpublished article,
+
+desiree thalley,
+"know how to write the right way?",
+wisconsin state journal,
+sunday, november 18, 1984,
+pp. 6.
+
+roy levin,
+david d. redell,
+"an evaluation of the 9th sosp submissions",
+operating systems review,
+17
+3,
+july 1983,
+pp. 35-40.
+
+
+
+
+last modified:
+fri oct  4 08:04:27 cdt 1996
+by
+bart
+
+
+
+ cs 736 paper reading list
+ cs 736 paper reading list
+ cs 736 paper reading list
+ cs 736 paper reading list
+ cs 736 paper reading list
+ cs 736 paper reading list
+ cs 736 paper reading list
+ cs 736 paper reading list
+ cs 736 paper reading list
+ cs 736 paper reading list

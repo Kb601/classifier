@@ -1,0 +1,174 @@
+pei cao' home page 
+
+
+
+
+ pei cao (cao@cs.wisc.edu) 
+
+assistant professor of computer science
+department of computer sciences
+university of wisconsin - madison
+1210 west dayton street
+madison, wi 53706  usa
+cao@cs.wisc.edu
+phone: 608-262-2252
+departmental office: 262-1204
+fax:  608-262-9777
+
+
+ education
+ research interests
+ courses
+ recent papers
+ recent talks
+ summary
+ my collection of links
+
+
+
+ education:
+
+ ph.d. princeton university, 1996.
+ m.s. princeton university, 1992.
+ b.s. tsinghua university, beijing, china, 1990.
+
+
+ research interests:
+
+
+operating systems, high performance file systems, memory resource allocation;
+
+high performance i/o systems for parallel computers;
+
+
+
+research projects:
+
+
+optimal parallel prefetching and caching
+
+acfs: application controlled file caching and prefetching
+
+
+
+ courses:
+
+
+cs739: research topics in distributed systems and operating systems (fall 1996)
+
+cs736: advanced operating system (spring 1996)
+
+
+
+ traces and simulators: 
+
+ file access traces
+
+
+
+
+recent papers
+
+
+
+
+integrated parallel prefetching and caching
+
+tracy kimbrel, pei cao, anna karlin, ed felten, and kai li,
+
+princeton cs department tech report tr-502-95, november 1995.  a shorter 
+version is in the proceedings of 1996 sigmetrics conference.
+
+
+
+application controlled file caching and prefetching (phd thesis)also princeton cs department tech report tr-522-96. 
+
+
+ 
+implementation and performance of integrated application-controlled caching, pre
+fetching and disk scheduling
+pei cao, edward w. felten, anna karlin and kai li.  cs-tr-94-493, princeton
+university.  to appear in acm tocs.
+
+
+ 
+a study of integrated prefetching and caching strategies
+pei cao, edward w. felten, anna karlin and kai li.  cs-tr-94-479, princeton
+university. proceedings of sigmetrics/peformance '95.
+
+
+ 
+implementation and performance of application controlled file cache. 
+pei cao, edward w. felten, and kai li.  cs-tr-94-462, princeton university,
+1994.  proceedings of the first osdi symposium, 1994.
+here are the 
+slides of the presentation at osdi94.
+
+
+ 
+application-controlled file caching policies.
+pei cao, edward w. felten, and kai li.  proceedings of the usenix summer 1994
+technical conference.
+
+
+ 
+the tickertaip parallel raid architecture.
+pei cao, swee boon lim, shivakumar venkataraman, and john wilkes.
+proceedings of isca 93.  
+
+
+
+
+
+
+recent talks
+
+
+slides for "application controlled file caching and prefetching";
+postscript of page 26 and
+postscript of page 46.  
+
+
+
+
+
+
+research summary
+
+my research focuses on i/o and storage management in uniprocessor and
+parallel systems.  in particular, i am investigating two techniques to improve
+file system performance: application-specific replacement policies for the file
+cache, and aggressive prefetching of file data from the disk.  i have
+developed a system in which the kernel allocates physical pages to individual
+applications, and each application is responsible for deciding how to use
+its physical pages for caching and prefetching.  the system uses a fair
+global allocation policy in the kernel, and carefully integrates cache
+replacement, prefetching and disk scheduling.  a prototype implementation
+on uniprocessor systems has demonstrated
+that good application-chosen replacement strategies and prefetching information
+can significantly improve the i/o performance of many applications.
+
+currently, i am extending these techniques to parallel systems.  i am
+developing integrated caching and prefetching algorithms for parallel disk
+arrays.  in addition, i am investigating the global resource management
+problems in operating systems.
+
+
+last modified: wed apr  24 21:38:49 1996 by pei cao
+
+  cao@cs.wisc.edu
+
+
+
+
+
+ pei cao' home page 
+ pei cao' home page 
+ pei cao' home page 
+ pei cao' home page 
+ pei cao' home page 
+ pei cao' home page 
+ pei cao' home page 
+ pei cao' home page 
+ pei cao' home page 
+ pei cao' home page

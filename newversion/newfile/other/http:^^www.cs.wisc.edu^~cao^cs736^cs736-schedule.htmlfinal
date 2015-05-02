@@ -1,0 +1,91 @@
+cs 736 tentative schedule (spring 96)
+
+
+
+ cs 736 tentative schedule (spring 96)
+
+1/23: introduction; ``the nucleus of a multiprogramming system'';
+1/25: ``fundamental concepts in ms-dos'';
+
+1/30: ``communicating sequential processes''; 
+	''monitors:  an operating system structuring concept''; 
+	``on the duality of operating system structures'';
+2/1: ``experiences with processes and monitors in mesa'';
+	``an introduction to programming with threads'';
+
+2/6: ``the unix timesharing system'';
+2/8: ``pilot: an operating system for a personal computer'';
+
+2/13: '`virtual memory management in vax/vms'';
+``converting a swap-based system to do paging in an architecture lacking page-reference bits'';
+2/15: ``condor: utilizing idle workstation resources'';  guest lecture by professor miron livny.
+
+first assignment due.
+
+2/20:
+``the duality of memory and communication in the implementation of a multiprocessor operating system'';
+``the multics virtual memory: concepts and design'';
+2/22: ``working set past and present'';
+
+2/27: ``memory coherence in shared virtual memory systems'';
+2/29: ``an introduction to disk drive modeling'';
+``a fast file system for unix'';
+
+project proposal due.
+
+
+3/5: ``measurements of a distributed file system'';
+3/7: *``the design and implementation of a log-structured file system'';
+
+3/12: spring break;
+3/14: spring break;
+
+3/19: *``a case for redundant array of inexpensive disks (raid)'';
+3/21: ``grapevine:  an exercise in distributed computing'';
+
+3/26: ``implementing remote procedure calls'';
+3/28: ``the distributed v kernel and its performance for diskless workstations''
+
+4/2: ``design and implementation of the sun network filesystem'';
+
+interim report due.
+
+
+4/4: *``scale and performance in a distributed file system''; 
+
+4/9:  ``a method for obtaining digital signatures and public key cryptosystems'';
+4/11: ``kerberos: an authentication service for open network systems'';
+
+4/16:``authentication in distributed systems: theory and practice'';
+4/18: ``towards the design of secure systems'';
+
+4/23: ``unix operating system security''; ``security flaws in the hotjava web browser'';
+4/25: *``theads and input/output in the synthesis kernel'';
+
+4/30: ``a comparison between the mach and windows nt kernels'';
+5/2: ``extensibility, safety and performance in the spin operating system'';
+
+ project implementation done; prepare demo;
+
+
+5/7: project presentation;
+5/9: project presentation;
+
+5/10: 
+
+ project final report due.
+
+
+
+
+
+ cs 736 tentative schedule (spring 96)
+ cs 736 tentative schedule (spring 96)
+ cs 736 tentative schedule (spring 96)
+ cs 736 tentative schedule (spring 96)
+ cs 736 tentative schedule (spring 96)
+ cs 736 tentative schedule (spring 96)
+ cs 736 tentative schedule (spring 96)
+ cs 736 tentative schedule (spring 96)
+ cs 736 tentative schedule (spring 96)
+ cs 736 tentative schedule (spring 96)

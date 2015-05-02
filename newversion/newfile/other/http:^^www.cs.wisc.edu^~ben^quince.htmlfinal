@@ -1,0 +1,115 @@
+quince testing ground
+
+
+quince - the internet's ultimate wordgame
+[beta testers]
+[known problems]
+[rules of the game]
+
+
+
+ 
+
+
+
+
+welcome quince beta testers!
+
+this is a work in progress.  some features are obviously not
+implemented yet.  most notably, i haven't written the quince server;
+so what you see is just a dumb front-end.  please mail me if you find any bugs or have
+constructive criticism of any kind (other than to get a life!).
+thanks for your feedback,
+
+ben.
+
+
+beta-testers hall of fame
+the following folks have either found bugs or made helpful suggestions leading to improvements in the game: 
+	
+	daniel prince, chris lukas, felix teitelbaum
+	
+these quince heros will be credited on the "about" screen in the final version.
+
+
+known problems
+netscape 3.0 for unix
+	
+	 deletion from the word list is broken. 
+	
+explorer 3.0 for win95
+	
+	 there seem to be occasional white stripes across the board and the
+timer -- they're covered by the board/timer, but they show just a little
+at the sides.  hard to describe...  i couldn't figure out a pattern to
+when they appear and disappear. -dan prince
+	
+
+
+rules of the game
+	
+	 goal: find as many words on the board as you can in three minutes.
+	 valid words consist of a sequence of neighboring tiles from the board.
+	 the neighbors of a tile are the tiles bordering it in all directions - vertically, horizontally, and diagonally.
+	 a tile may not be re-used in spelling a word.
+	 words must be four letters or longer.
+	 if playing euclidian, edge tiles have fewer than eight neighbors.  
+	 if playing non-euclidian, the neighbors of an edge tile are considered to "wrap around" the board.
+	
+
+entering words
+	
+	 enter words either by dragging them out on the board or typing
+	  	  them into the text box below the board.
+    erroneously entered words can be deleted from the word list by selecting the mistake and pressing delete or backspace.
+	 when dragging out a word, you can back up by dragging over the tile just before the tail of your selection.
+	 when dragging out a word, wou can press and hold the shift key to disable selection; this is useful when selecting wrapped words in non-euclidian mode.
+	 clicking on the word list to the right of the screen displays the word on the board.
+	 clicking on the buttons beneath the board has the following effects:
+		
+		 " "-" - flips the board vertically 
+		 ">" - rotates the board clockwise
+		
+	
+
+sequence of play
+	
+	 when you first enter quince, a dialog box appears asking you to provide a name for yourself and select a language (english only at first).
+	 browse the channels of the quince server with the channel selector.
+	 when you find a game that you what to join, click on the "join" button.
+	 when that game enters a new round, you can begin playing.
+
+	 at the conclusion of a round, a window will appear that shows:
+		
+			 the words found by each player not found by any other player.
+			 all the words found by the quince server.
+			 words found by a player, but not by any other player or by the quince server are flagged as questionable.
+			 point summaries for all players.
+		
+	 you have 30 seconds to review the results of a round before the next round begins.
+	
+
+scoring
+	
+	 points are only awarded for words that you find that no other player found.
+	 1 point for a four-letter word
+	 2 points for a five-letter word
+	 3 points for a six-letter word
+	 etc...
+	
+
+
+
+
+
+
+quince testing ground
+quince testing ground
+quince testing ground
+quince testing ground
+quince testing ground
+quince testing ground
+quince testing ground
+quince testing ground
+quince testing ground
+quince testing ground

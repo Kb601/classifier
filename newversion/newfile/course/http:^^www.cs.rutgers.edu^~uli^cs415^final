@@ -1,0 +1,182 @@
+cs 415
+
+
+
+
+cs 415 - compilers
+
+description
+
+introduction to compiler construction (emphasis on compiler front ends).
+course contents include the following:  formal translation of programming 
+languages, program syntax and semantics.  finite state recognizers and 
+regular grammars.  context-free parsing techniques such as ll(k) and lr(k).  
+type checking, code generation, improvement, syntax-directed translation 
+schema.
+
+
+staff
+
+ulrich (uli) kremer (uli@cs.rutgers.edu) 
+     office: core 319 
+     office hours: monday 2-3 p.m. & wednesday 5-6 p.m.  
+ 
+ jun meng (junmeng@paul.rutgers.edu) 
+     office: hill 416 
+     office hours: wednesday 4-6 p.m. 
+
+
+syllabus
+
+news group
+
+please post questions regarding the projects and homeworks in
+news group "ru.nb.dcs.class.415".  
+you should read the news group at least every other day!  
+
+midterm
+
+there will be a midterm on wednesday, march 6. the midterm will
+be a closed book, in class exam of 1 hour and 20 minutes.  
+here is the  solution .
+
+final exam
+
+there will be a final exam on wednesday, may 1. the final will
+be a closed book, in class exam of 3 hours (8:00 p.m. - 11:00 p.m.).  
+ the grades for the final exam and the final overall course grades
+are posted on the 415 news group .
+
+lectures
+
+  monday and wednesday, 6:10--7:30 p.m., en-b120.
+
+
+ january 17, 1996 ---  introduction 
+ january 22, 1996 ---  organization of compilers 
+ january 24, 1996 ---  lexical analysis i 
+ january 29, 1996 ---  lexical analysis ii 
+ january 31, 1996 ---  syntax analysis: derivations, precedence, ambiguity 
+ february 5, 1996 ---  syntax analysis: 
+          top-down, predictive and recursive descent parsing
+ february 7, 1996 ---  syntax analysis: 
+          ll(1) parsing, first and follow sets
+ february 12, 1996 ---  syntax analysis: 
+          shift-reduce parsing, handle, viable prefix
+ february 14, 1996 ---  syntax analysis: 
+          lr(0) canonical collection, slr(1) parsing
+ february 19, 1996 ---  syntax analysis: 
+          lr(1) canonical collection, lr(1) parsing
+ february 21, 1996 ---  syntax analysis: 
+          lalr(1) parsing
+ february 26, 1996 ---   
+          operator precedence parsing, error recovery. attribute grammars
+ february 28, 1996 ---   
+          attribute grammars
+ march 4, 1996 ---   
+          type checking
+ march 18, 1996 ---   
+          symbol table organization
+ march 20, 1996 ---   
+          run-time environments 
+ march 25, 1996 ---   
+          access link, display, heap management
+ march 27, 1996 ---   
+          intermediate code generation: intermediate representations 
+ april 1, 1996 ---   
+          code generation i 
+ april 3, 1996 ---   
+          code generation ii 
+ april 8, 1996 ---   
+          code generation iii 
+ april 10, 1996 ---   
+          code generation iv 
+ april 15, 1996 ---   
+          code generation v and optimization 
+ april 17, 1996 ---   
+          code optimization 
+ april 22, 1996 ---   
+          data flow analysis i
+ april 24, 1996 ---   
+          data flow analysis ii
+ april 29, 1996 ---   
+          wrap-up
+
+
+recitation
+
+  section 1: wednesday, 7:40--8:35 p.m., en-b120.
+  section 2: wednesday, 9:10--10:05 p.m., en-b120. please contact
+                 jun (junmeng@paul) for possible rescheduling!
+
+
+homeworks
+
+
+    problem set 1  
+       due date: wednesday, february 7, after class
+    problem set 2  
+       due date: wednesday, february 21, after class
+    problem set 3  
+       due date: monday, march 4, after class 
+        sample solution  
+    problem set 4  
+       due date: monday, april 1, after class  
+    problem set 5  
+       due date: monday, april 22, after class  
+    problem set 6  
+       due date: monday, april 29, after class  
+        sample solution   
+
+
+projects
+
+  lexical analyzer using lex   
+      due date: midnight, february 12 
+      recommended references:
+      
+       man lex
+       man 1 flex
+       "lex & yacc", j.r. levine, t. mason, and d.brown, o'reilly &
+           associates, inc., 1992. on reserve in the reading room of the
+           science and engineering resource center
+       
+ basic parser using yacc  
+      due date: midnight, monday march 11 
+      recommended references:
+      
+       man yacc
+       man bison 
+       "lex & yacc", j.r. levine, t. mason, and d.brown, o'reilly &
+           associates, inc., 1992. on reserve in the reading room of the
+           science and engineering resource center
+       
+ type checker  
+      due date: midnight, friday april 5  
+ code generation  
+      due date: midnight, monday april 29  
+    
+     the spim simulator is described in the postscript
+         document /ug/s1/local/doc/spim/spim.ps
+     there are macintosh and pc versions of spim. please
+         see  http://www.cs.wisc.edu/~larus/spim.html for further 
+         information
+     
+
+
+acknowledgement
+this course has been based on courses taught by chau-wen tseng at
+the university of maryland and keith cooper at rice university.
+
+
+
+cs 415
+cs 415
+cs 415
+cs 415
+cs 415
+cs 415
+cs 415
+cs 415
+cs 415
+cs 415

@@ -1,0 +1,54 @@
+cs410  
+
+
+
+ tentative course schedule 
+ computer science 410  fall 1996 
+     
+
+ course text
+t. h. cormen, c. e. leiserson, and r. l. rivest, {\em introduction
+to algorithms.} mcgraw hill, 1990.
+textbook can be purchased at the campus store or triangle bookshop.
+the text unfortunately has a number of bugs and typos (especially
+older printings). you should use the text errata 
+(large ps file, close to 30 pages). 
+
+ tentative syllabus 
+the following syllabus will be refined as the course progresses.  periodic 
+announcements will be made in class, on the web, and on the homeworks of 
+required readings.  we will cover material from chapters 1-6 as we need them. 
+
+aug 28: intro, adt, o(.) notation 
+sept 3-10: hashing (clr 12, plus clr 11.2)
+sept 12-17: graphs (clr 23) 
+sept 19: spanning tree (clr 24) 
+sept 24-oct 1: heaps (clr 7) and huffman codes (clr 17.3) 
+oct 3-8: sorting (clr 9) 
+oct 10: prelim 1 
+oct 15: fall break 
+oct 17-19: binary search trees (clr 13) 
+oct 24: red-black trees (clr 14) 
+oct 29:  dynamic data structures (clr 15) 
+oct 31 - nov 5: union find (clr 22) 
+nov 7-12: lempel-ziv compression 
+nov 14: prelim 2 
+nov 19-26: shortest paths in graphs ?? (clr 25-26) 
+nov 28: thanksgiving break 
+dec 3: computational geometry ?? (clr 35)
+dec 5: conclusion ??
+
+dec 16: final
+
+  
+
+ cs410 
+ cs410 
+ cs410 
+ cs410 
+ cs410 
+ cs410 
+ cs410 
+ cs410 
+ cs410 
+ cs410

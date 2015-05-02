@@ -1,0 +1,139 @@
+wtutor
+
+
+
+
+wtutor
+
+
+the world wide web is a rich source of material that can be used for 
+educational purposes. advantages of reusing these existing materials
+are avoiding the 
+duplicated effort of creating new versions of material that is already 
+in existence, using up-to-date information, and letting the student see 
+the original source materials. in addition this approach permits tutorial 
+authors to focus on adding value by organizing, commenting on, and adding 
+to existing information.
+
+the world wide web provides a vast store of globally available information 
+from a variety of sources. government agencies such as the national 
+institute of health, nasa, and the smithsonian operate multiple web 
+servers that allow access to data, reports, art and analysis. most 
+universities and colleges have internet access and these institutions, 
+their departments, faculty, staff and students have set up 
+web servers to provide information about the schools and their research. 
+organizations such as cern make specifications and proposals available via 
+the web. businesses and individuals operate web sites for self-promotional 
+purposes or for love of a subject. all of these different resources can be 
+used to find materials for inclusion in tutorials.
+
+using existing materials from the www for educational purposes presents 
+a number of problems that must be dealt with. the first problem is the 
+filtering problem: with all the material out there on the web, how does 
+the student know which materials are relevant to the chosen subject area? 
+and of those relevant materials, which best present the subject at a 
+level appropriate for the student? once the set of appropriate materials 
+has been selected the student is confronted with the navigation problem: 
+given the set of appropriate materials, where should the student start? 
+in what order should the student view those materials? when is the student 
+finished?
+
+wtutor is a system that allows a tutorial author to create tutorials as 
+trails through www documents and include assessment points along the trail. 
+wtutor monitors the student’s progress through a tutorial and provides
+guidance to the student as well as feedback regarding the student’s 
+performance on the assessment points.
+
+there are four major components that make up the wtutor environment: the 
+wtutor program, the tmosaic program, a tutorial map and the world wide web.
+wtutor is an allegro common-lisp program which runs on a sun workstation. 
+wtutor interacts with tmosaic and the tutorial map. 
+
+tmosaic is a modified version of ncsa mosaic. tmosaic provides the
+interface to the world wide web; it is used to retrieve web documents 
+and display those documents to the student or tutorial author. a socket 
+and corresponding message protocol were added to ncsa mosaic so that
+wtutor could communicate with tmosaic. tmosaic notifies wtutor of events 
+such as retrieval of a url, submission of a form, and student requests
+such as next url. in turn, wtutor can pass requests to
+tmosaic such as load url.
+
+the tutorial map defines the tutorial to wtutor.
+logically, the tutorial map is a directed graph, where the nodes of the
+graph are urls and assessment points and the edges of the graph are
+precedence relationships between the nodes. wtutor uses the map to guide 
+the student through the tutorial. in the wtutor environment, the primary 
+role of the tutorial author is to create the tutorial map. the tutorial 
+map identifies all the urls within the tutorial, thereby eliminating the 
+filtering problem for the tutorial student. physically, the tutorial map 
+is stored as a text file in lisp syntax; wtutor reads in the map at the 
+student’s or author’s request.
+
+while the tutorial map eliminates the filtering problem for the student, 
+it does not solve the problem for the tutorial author. the author must 
+still find or create urls to include in the tutorial; for this task the 
+author can use tools such as the metacrawler to find urls that 
+may be appropriate. the author must still evaluate the candidates to 
+determine fitness for inclusion in the tutorial.
+
+the tutorial map is created online by the author. the tutorial author 
+can add or delete urls from the tutorial map using wtutor. the author 
+can either specify a fully qualified url, or retrieve the url using 
+tmosaic and then specify that that url should be added to the tutorial 
+map. the author also specifies precedence information in the tutorial 
+map. this precedence information is used by wtutor to determine the 
+sequence in which the urls and assessment points of the tutorial should 
+be viewed. to make it easier for the tutorial author to establish the 
+precedence relations between the nodes of the tutorial map, a group 
+feature is provided, so that the author can specify groups of urls 
+and then declare precedence between groups, between groups and individual
+urls, and between urls and groups.
+
+if desired, the author can require that certain urls be displayed 
+together; for example, a graphic image such as a map could be displayed 
+along with a commentary that describes a historical trade route that 
+can be found on the map. the author can also identify alternative urls; 
+that is, if url a and url b are alternatives, the student would not need 
+to view b if the student had already viewed a.
+
+wtutor uses the information it receives from tmosaic to track the 
+student’s progress through the tutorial map. whenever a url is retrieved, 
+tmosaic sends messages to wtutor specifying that the url has been 
+retrieved, and asking whether any of the links contained within the 
+url should be highlighted. wtutor specifies that a link to a url should 
+be highlighted when the url is included in the tutorial map and all 
+precedence requirements for that url have been met. the tutorial author 
+can specify the highlight  color to be used. as the student proceeds 
+through the tutorial, highlighted link displays will always indicate 
+good next choices to visit.
+
+if the student does not have a highlighted link on the currently 
+displayed link, the student can have wtutor select the next url to visit. 
+tmosaic has a tutor menu item, and one of the selections 
+under the tutor entry is a next option. 
+when the student selects the next 
+option, wtutor finds a url that is ready to visit. wtutor follows a set 
+of rules in searching for the next url. the overriding rule is that the 
+selected url must have all it’s precedents completed. wtutor looks first 
+for a consequent of the current url; if there are none that are acceptable 
+then consequents of the previous url visited are checked. if none of these 
+are acceptable, wtutor looks for urls within the same group as the current 
+node. finally, wtutor looks for any url within the map whose precedence 
+requirements have all been met. 
+
+if all urls within the tutorial map have been viewed, the student is 
+notified that the tutorial has been completed. the student is given 
+the option of starting a new tutorial.
+
+
+
+wtutor
+wtutor
+wtutor
+wtutor
+wtutor
+wtutor
+wtutor
+wtutor
+wtutor
+wtutor

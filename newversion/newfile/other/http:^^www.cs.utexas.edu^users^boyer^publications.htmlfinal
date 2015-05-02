@@ -1,0 +1,315 @@
+publications
+
+
+
+
+
+books:
+
+
+automated reasoning:  essays in honor of woody bledsoe.  (editor).
+kluwer academic, dordrecht, the netherlands, 1991. picture of woody.
+
+a computational logic handbook, with j s. moore.  academic press,
+new york, 1988.
+
+the correctness problem in computer science  (editor, with j s. moore). 
+academic press, london, 1981.
+
+a computational logic, with j s. moore.  academic press, new york, 1979. 
+
+
+
+articles:
+
+mechanized formal reasoning about programs and
+computing machines, with j strother moore, 1996 (to appear -- an odd
+phrase in this context).
+
+
+
+automated proofs of object code for a widely used
+microprocessor, with yuan yu, journal of the acm, january
+1996, vol. 43, no. 1, pp. 166-192.  (this is a major revision and
+extension of the paper "automated correctness proofs of machine code
+programs for a commercial microprocessor", see below.  the
+comprehensive treatment of this subject may be found in yuan yu's 700+
+page dissertation.)
+
+  
+
+woody bledsoe: his life and legacy, with michael ballantyne
+and larry hines, ai magazine, vol. 17, no. 1, spring 1996,
+pp. 7-20. picture of woody.
+
+ 
+
+
+the boyer-moore theorem prover and its interactive enhancement, with m. kaufmann
+and j s. moore, computers and mathematics with applications,
+vol. 29, no. 2, pp. 27-62, 1995. 
+
+
+automated correctness proofs of
+machine code programs for a commercial microprocessor, with yuan yu,
+in d. kapur, editor, automated deduction -- cade-11, lecture
+notes in computer science 607, springer-verlag, 1992, pp. 416-430.
+
+
+
+mjrty - a fast majority vote algorithm, with j s. moore, in robert s.
+boyer, editor, automated reasoning:  essays in honor of woody bledsoe.
+kluwer academic, dordrecht, the netherlands, 1991, pp. 105-117.
+
+
+a biographical sketch of w. w. bledsoe, with anne boyer, in robert s.
+boyer, editor, automated reasoning: essays in honor of woody bledsoe.
+kluwer academic, dordrecht, the netherlands, 1991, pp. 1-29.
+
+functional instantiation in first order logic, with d. goldschlag, m.
+kaufmann, and j moore, in v. lifschitz (editor), artificial
+intelligence and mathematical theory of computation:  papers in honor
+of john mccarthy. academic press, 1991, pp. 7-26.
+the  file fs.ps is a somewhat extended version of the published version
+because it contains some proofs that were omitted from the published
+version.
+
+
+
+a theorem prover for a computational logic, with j s. moore, keynote
+address, automated deduction -- cade-10, lecture notes in computer
+science 449, springer-verlag, 1990, pp. 1-15.
+
+
+the use of a formal simulator to verify a simple real time control
+program, with m. w. green and j s. moore.  in w. h. j. feijen, a. j.
+m. van gasteren, d. gries, and j. misra, editors, beauty is our
+business, springer-verlag, 1990, pp. 54-66.
+
+the efficient implementation of lattice operations, with h. ait-kaci,
+p. lincoln, and r. nasr.  association for computing machinery
+transactions on programming languages and systems, vol. 11, no. 1,
+pp. 115-146, january 1988.
+
+
+the addition of bounded quantification and partial functions to a
+computational logic and its theorem prover, with j s. moore, journal
+of automated reasoning, volume 4, pp. 117-172, 1988.
+
+integrating decision procedures into heuristic theorem provers:  a case
+study of linear arithmetic, with j s. moore.  machine
+intelligence 11, oxford university press, 1988, pp. 83-124.
+
+set theory in first order logic:  clauses for goedel's axioms, with e.
+lusk, w. mccune, r. overbeek, m. stickel, and l. wos, journal of
+automated reasoning, vol. 2, no. 3., pp. 287-327, 1986.
+
+
+program verification, with j s. moore.  automated reasoning, vol. 1,
+no. 1, 1985, pp. 17-23.
+
+a mechanical proof of the turing completeness of pure lisp, with j s.
+moore.  in w. w. bledsoe and d. w. loveland, editors, contemporary
+mathematics, volume 29, automated theorem proving:  after 25 years,
+american mathematical society, providence, rhode island, 1984, pp.
+132-168.
+
+proof-checking, theorem-proving, and program verification, with
+j s. moore.  in w. w. bledsoe and d. w. loveland, editors,
+contemporary mathematics, volume 29, automated theorem proving:
+after 25 years, american mathematical society, providence, rhode
+island, 1984, pp. 119-132.
+
+
+proof checking the rsa public key encryption algorithm, with
+j s. moore. american mathematical monthly, vol. 91, no. 3, march
+1984, pp. 181-189.
+
+
+a mechanical proof of the unsolvability of the halting problem, with
+j s. moore.  journal of the association for computing machinery, vol.
+31, no. 3, july 1984, pp.441-458.
+
+a verification condition generator for fortran, with j s. moore.  in 
+r. s. boyer and j s. moore, editors, the correctness problem in
+computer science, academic press, london, 1981, pp. 9-101.
+
+metafunctions:  proving them correct and using them efficiently as new
+proof procedures, with j s. moore.  in r. s. boyer and j s. moore,
+editors, the correctness problem in computer science, academic press,
+london, 1981, pp. 103-184.
+
+a lemma driven automatic theorem prover for recursive function theory,
+with j s. moore.  proceedings of the 5th international joint conference
+on artificial intelligence, pp. 511-519, 1977.
+
+a fast string searching algorithm, with j s. moore. communications of
+the association for computing machinery, vol. 20, no. 10, pp. 762-772,
+1977.
+
+primitive recursive program transformation, with j s. moore and r. e.
+shostak.  proceedings of the third association for computing machinery
+symposium on principles of programming languages, atlanta, 1976.
+
+select--a formal system for testing and debugging programs, with k. n.
+levitt and b. elspas.  proceedings of the international conference
+on reliable software, ieee catalogue number 75cho940-7csr, pp.
+234-245, 1975.
+
+proving theorems about lisp functions, with j s. moore.  journal of
+the association for computing machinery, vol. 22, no. 1, pp. 129-144,
+1975.
+
+the sharing of structure in theorem-proving programs, with j s. moore.
+in b. meltzer and d. michie, editors, machine intelligence, vol. 7,
+pp. 101-116, edinburgh university press, 1972.
+
+computer proofs of limit theorems, with w. w. bledsoe and w. h.
+henneman, artificial intelligence, vol. 3, no. 1, pp. 27-60, 1972.
+      
+
+
+
+other writing:
+
+let's
+name the building for nobel prize winner h. j. muller, op-ed piece,
+university of texas student newspaper daily texan, november
+17, 1995. 
+http://www.cs.utexas.edu/users/boyer/fp/flames.html.
+
+
+bledsoe funeral oration, october 7, 1995. 
+http://www.cs.utexas.edu/users/boyer/bledsoe-funeral-oration.html
+
+
+
+my views on undergraduate education in computer science, september,
+1995. 
+http://www.cs.utexas.edu/users/boyer/rigor-iv.ps.
+
+
+comments upon the document "america in the age of information," the
+strategic implementation plan of the committee on information and
+communications of the national science and technology council,
+june 27, 1995. 
+ftp://ftp.cs.utexas.edu/pub/boyer/cic.whitepaper
+
+
+
+a few minor remarks (on metafunctions), proceedings of the workshop on
+correctness and metatheoretic extensibility of automated reasoning
+systems, inria lorraine, nancy, france, 1994, p. 22.
+
+metafunctions in nqthm and acl2, with matt kaufmann and j moore,
+proceedings of the workshop on correctness and metatheoretic
+extensibility of automated reasoning systems, inria lorraine, nancy,
+france, 1994, pp. 16-18.
+
+a mechanically proof-checked encyclopedia of mathematics: should we
+build one?  can we?, proceedings of the 12th annual conference on
+automated deduction, springer-verlag lecture notes in computer science,
+number 814, 1994, p. 237.
+
+the preface to machine proofs in geometry: automated production of
+readable proofs for geometry theorems, shang-ching chou, xiao-shan
+gao, and jing-zhong zhang, world scientific, 1994, pp.  vii-viii.
+
+
+a formal specification of some user mode instructions for the motorola
+68020, with yuan yu, technical report tr-92-04, computer sciences
+department, university of texas at austin, austin, texas 78712, 1992.
+
+article in opposition to a multicultural curricular proposal,
+university of texas student newspaper daily texan,
+december, 1991.  
+
+http://www.cs.utexas.edu/users/boyer/multicult.html.
+
+response, biographical sketch, and photo on the occasion of
+receipt of the 1991 ams current award for automatic theorem proving,
+notices of the american mathematical society, vol. 38, no. 5, pp.
+407-408.
+
+the code for a computational logic, with j s. moore, technical report
+24, computational logic, inc., austin, texas, 1988.
+
+basic events for a computational logic, with j s. moore, technical
+report technical report 25, computational logic, inc., austin, texas
+1988.
+
+efficient unification and backtracking in a portable, c-based lisp, with
+w. schelter. mcc technical report ai-102-87, 1987.
+
+on adding some theorem proving techniques to lisp, with m. ballantyne
+and v. lifschitz.  mcc technical report aca-ai-271-87-q, 1987.
+rewrite rule compilation, mcc technical report ai-194-86-p, 1985.
+
+a prototype theorem-prover for a higher-order functional language,
+with m. kaufmann, burroughs austin research center, technical report
+arc 84-17, 1984.
+
+on the feasibility of mechanically verifying sasl programs, with m.
+kaufmann, burroughs austin research center, technical report arc
+84-16, 1984.
+
+the mechanical verification of a fortran square root program, with j
+s. moore. technical report, computer science laboratory report, sri
+international, 1981.
+
+a theorem-prover for recursive functions, with j s. moore. software
+engineering notes, association for computing machinery, vol. 5, no. 3,
+pp. 26-27, 1980.
+
+the fortran verification system, with j s. moore. software
+engineering notes, association for computing machinery, vol. 5, no.
+3, pp. 16-17, 1980.
+
+a theorem-prover for recursive functions:  a user's manual, with j s.
+moore.  technical report csl-91, computer science laboratory, sri
+international, 1979.
+
+a provably secure operating system:  the system, its applications, and
+proofs, with p. g. neumann, et al.  technical report csl-116, computer
+science laboratory, sri international, 1977.
+
+pretty-print.  technical report 64, department of computational logic,
+university of edinburgh, 1973.
+
+the 77-editor, with j s. moore and d. j. m. davies.  technical report 62,
+department of computational logic, university of edinburgh, 1973.
+
+locking: a restriction of resolution.  ph. d. thesis, mathematics
+department, university of texas, austin, 1971.
+
+
+software system:
+the boyer-moore theorem-proving system (also known as nqthm) may be
+obtained by anonymous ftp from internet site ftp.cli.com.  the most
+recent release of this program occurred in january, 1994.  to obtain a
+copy, fetch the file /pub/nqthm/nqthm-1992/readme and follow the
+directions therein.  the common lisp sources for the system are
+included in the release.  the most recent release includes many
+mechanically-checked theorems formulated by bevier, boyer, brock,
+bronstein, cowles, flatau, hunt, kaufmann, kunen, moore, nagayama,
+russinoff, shankar, talcott, wilding, yu, and others.  altogether, the
+the most recent release, including the examples and documentation,
+comprises approximately 15 megabytes.  running the theorem-prover on
+these examples generates approximately 140 megabytes of readable
+proofs.
+
+an alternative site for the sources is  here .
+
+
+
+back to boyer's web page.
+publications
+publications
+publications
+publications
+publications
+publications
+publications
+publications
+publications
+publications

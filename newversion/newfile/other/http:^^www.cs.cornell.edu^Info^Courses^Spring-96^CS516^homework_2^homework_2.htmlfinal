@@ -1,0 +1,94 @@
+homework 2
+homework 2
+  handed out: tue, feb 13th
+  due: part 1 on tue, feb 20th
+  part 2 on tue, feb 27th
+  
+  this assignment must be done in groups of two with a different partner than homework 1.hand in one solution per group (printed, not manuscript).
+  
+  the little problems below will get you started with writing split-c programs on the sp-2
+ 1  measure the logp parameters for "split-c/sp2"
+  write a program that determines the logp parameters for the various split-c remote access primitives. you should determine (produce a table):
+
+
+the processor overhead on the requesting side
+
+the processor overhead on the serving side
+
+the gap between successive requests
+
+the latency
+
+
+
+  for the following split-c primitives:
+
+
+  a.  read of an int
+
+  b.  write of an int
+
+  c.  get of an int
+
+  d.  put of an int
+
+  e.  store of an int
+
+
+
+  remember to always time chunks of code in a loop long enough to overcome the granularity and overhead of the clock.
+ 2  heat diffusion - a small split-c application
+  write a small split-c program that simulates the diffusion of heat on a surface of arbitrary shape. display the simulation in an x window.
+
+background
+  the dissipation of heat in an object is an example of a diffusive process, which is modeled by a differential equation which, if we assume the material is uniform takes the form:
+
+
+
+
+  where 
+is the temperature of the object at position x at time t.
+  in this problem set, we will look at one and two dimensional objects (wires and plates), but the generalization to 3-d is obvious.
+heat dissipation in a wire
+  for an infinite wire with an initial temperature distribution of 
+ it can be shown analytically that the temperature distribution at time t=0.25 is 
+
+
+  in order to discretize the problem, we first restict ourselves to a finite length of wire, say from x=-2 to x=2 and divide the wire into n sections of length dx = 4/n.  the temperature function u(x) becomes u[0...n], where we will let segment 0 be centered at x=-2 and segment n be centered at x=2, so segment n/2 is centered at x=0.
+  we will also have finite time steps of length dt.  as a convenient notation, we will write 
+to mean the temperature of the i-th segment after n time steps.  we may approximate the derivatives by
+
+
+
+
+  and then replace the differential equation by the ``finite difference equation'':
+
+
+
+  which allows us to immediately generate one time step from the previous one:
+
+
+ 2.1  sequential test
+  use the above scheme on our test problem, i.e., take 
+ and run until t = 0.25 holding u[0] = u[n] = 0 for all time.  compare the results to the analytical solution.  try it (on a workstation) for n=64, 128, 256, ... each time varying dt by orders of magnitude.  for example, with n=64 try dt = 0.01, 0.001, 0.0001, ... . hand in a plot of the analytical solution and your experimental one when n=64 and dt=0.001. this approximation scheme is not stable (i.e. the numerical solution will not converge to the true solution) when dt*n*n &gt; 8.  explain your experimental results using this fact.
+ 2.2  sequential program for 2-d heat diffusion
+  the generalization of the heat transfer formula for 2-d problems is (assuming dx=dy): write a program for your favorite workstation that simulates arbitrary shaped plates on a fixed 2-d grid. the easiest is if you use a bitmap editor to draw 2-d shapes and read that into your program. then allow the user to enter a "hot-spot" and start simulating. your program should display the progress of the simulation using x-windows. display every n-th time-step and allow the user to determine n. keep the display code simple - you're not doing this to win a graphical design contest. make your 2-d grid cover an area of x in [-2,2] and y in [-2,2].
+
+
+ 2.3  parallel 2-d heat diffusion
+  parallelize your heat diffusion code. you should "somehow" divide the 2-d grid among the processors and have each processor simulate its subgrid independently. you obviously need to worry about communicating the boudary regions. also, be sure to choose the grid size and time step wisely so that your solution will converge.
+  simulate the following shapes: a large disk with a hot spot in the center, a long skinny rectangle placed in the upper part of your 2-d workspace with a hot-spot anywhere, and a barbell with a hot spot in the center of one disk. in each case measure the mflops you achieve per processor. also measure the ratio between the busiest and the least busy processor.
+  note that the part you should parallelize is the actual computation. don't worry about the initialization or the x-windows display: do that on one processor. for the timings you probably need to turn the display output off (display the first and last time step so you can see that everything worked fine).
+  for 2.2 and 2.3, produce snapshots of your simulation for the three shapes defined above, with t=0, t=ft/4, t=(3/4)*ft, and t=ft (ft is the final time). for each shape, make sure you use the same grid size, time step, and ft for both the sequential and parallel simulation. please provide us with the url to a web page with the snapshots (with enough annotations so that we know which plot corresponds to which case). color printouts are strictly forbidden.
+
+
+homework 2
+homework 2
+homework 2
+homework 2
+homework 2
+homework 2
+homework 2
+homework 2
+homework 2
+homework 2

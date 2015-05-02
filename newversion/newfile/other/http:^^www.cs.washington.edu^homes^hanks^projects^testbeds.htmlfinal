@@ -1,0 +1,83 @@
+testbeds and evaluation
+
+
+
+
+planning testbeds and empirical evaluation of agents 
+
+
+       the truckworld testbed  is a challenging 
+       software environment to exercise your planning agent.  it 
+       allows you to model
+         
+           multiple agents that can communicate and cooperate
+           a rich set of objects that the agent can manipulate 
+           exogenous events
+           actions that fail randomly and in a state-dependent way
+           complex sensing and communication devices 
+           easy customization to your problem domain.
+         
+       the  
+                  truckworld beginner's guide  
+                 provides an overview of the 
+                 system's basic functionality, and tells you how to set up
+                 the system and run a simulation.
+           the truckworld code is available via anonymous ftp or 
+                by clicking 
+                  
+                    here,  (but send mail 
+                to  truckworld-request@cs.washington.edu  
+                if you use the code, so we can send you updates and 
+                bug fixes).
+         
+      the paper 
+          
+             benchmarks, testbeds, controlled experimentation and the design of 
+                  agent architectures 
+          is a broader overview of the issues involved with building good testbeds 
+          and evaluating an agent's performance.  this paper appeared in 
+          ai magazine  winter 1993, and is joint 
+         work with  
+               martha pollack 
+                and 
+              paul cohen. 
+         
+     
+
+
+ 
+hanks@cs.washington.edu
+ 
+
+
+
+
+
+testbeds and evaluation
+
+
+testbeds and evaluation
+
+
+testbeds and evaluation
+
+
+testbeds and evaluation
+
+
+testbeds and evaluation
+
+
+testbeds and evaluation
+
+
+testbeds and evaluation
+
+
+testbeds and evaluation
+
+
+testbeds and evaluation
+
+
+testbeds and evaluation

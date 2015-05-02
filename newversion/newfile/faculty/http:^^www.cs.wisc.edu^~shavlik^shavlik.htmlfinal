@@ -1,0 +1,234 @@
+jude w. shavlik's home page 
+
+
+
+
+  jude w. shavlik
+
+associate professor
+computer sciences department
+university of wisconsin
+1210 w. dayton st.
+madison, wi  53706-1685
+e-mail: shavlik@cs.wisc.edu
+telephone: (608) 262-7784
+fax: (608) 262-9777
+
+ph.d., university of illinois, urbana, 1988
+
+interests: machine learning, neural networks, artificial intelligence,
+informational retrieval, computational biology
+
+
+
+
+
+ table of contents 
+ 
+   
+          research summary
+   
+          phd students
+   
+          selected recent publications
+   
+          courses taught
+   
+          some interesting links
+ 
+  
+
+
+
+
+
+ research summary  
+
+we are primarily developing machine learning systems that combine the
+strengths of symbolic approaches to artificial intelligence with those of
+connectionist ai.  a major focus is improving the dialog between human
+teachers and machine learners.  traditionally, this interaction is limited to
+the teacher providing labelled training examples to the machine.  toward the
+goal of widening the ``communication pipeline'' between human and machine, we
+have been developing a language for providing, in a natural manner and at any
+time, general-purpose advice to a machine learner.  in our approach, the human
+advice-giver observes the behavior of the learner and occasionally makes
+suggestions, expressed in a simple language.  based on techniques developed in
+our work on knowledge-based neural networks, these instructions are inserted
+directly into learner.  subsequent connectionist (neural network) learning
+further integrates and refines the advice.
+
+
+currently, we are extending the language used to advise our learning algorithms, 
+studying new ways of incorporating this advice into neural networks,
+investigating the extraction of human-comprehensible rules from trained neural networks,
+and developing methods for choosing good representations for training examples.  
+we are also developing parallel algorithms, 
+on the department's condor system and our cm-5 computer,
+for machine learning and computational biology.
+
+
+shavlik (1992) 
+and (1996)
+provide an overview of our approach to knowledge-based neural networks.
+recent developments appear in the papers referenced on this page, as well
+as in the "home pages" of the students listed below.
+
+
+
+ phd students 
+
+ 
+        
+	carolyn allex
+   
+        kevin cherkauer
+   
+	mark craven (graduated september 1996)
+   
+        tina eliassi-rad
+  
+        eric gutstein (graduated june 1993)
+   
+	richard maclin (graduated august 1995)
+   
+	david opitz (graduated august 1995)
+  
+        geoffrey towell (graduated october 1991)
+ 
+
+
+ selected recent publications 
+
+click 
+here to see our recent titles and abstracts
+(you can also grab all our abstracts in one
+file  
+or  directly access
+our ftp directory of postscript versions of recent papers.
+ 
+
+ 
+
+   maclin, r. &amp; shavlik, j. w. (1996).
+       
+       creating advice-taking reinforcement learners.
+       machine learning, 22:1-3, 251-281.
+
+   craven, m. w. &amp; shavlik, j. w. (1996).
+       
+       extracting tree-structured representations of trained networks.
+       proceedings of the conference on neural information processing systems (nips8).
+
+   opitz, d. w. &amp; shavlik, j. w. (1996).
+       
+       generating accurate and diverse members of a neural-network ensemble.
+       proceedings of the conference on neural information processing systems (nips8).
+
+   cherkauer, k. j. &amp; shavlik, j. w. (1996).
+       
+       rapid quality estimation of neural network input representations.
+       proceedings of the conference on neural information processing systems (nips8).
+
+   opitz, d. w. &amp; shavlik, j. w. (1995).
+       
+       dynamically adding symbolically meaningful nodes to knowledge-based neural networks.
+       knowledge-based systems, 8:6, 301-311.
+
+   towell, g. g. &amp; shavlik, j. w. (1994).
+       
+       knowledge-based artificial neural networks.
+       artificial intelligence, 70:1-2, 119-165.
+
+   shavlik, j. w. (1994). 
+       
+       combining symbolic and neural learning.
+       machine learning, 14:3, 321-331.
+
+   towell, g. g. &amp; shavlik, j. w. (1993).
+       
+       the extraction of refined rules from knowledge-based neural networks.
+       machine learning, 13:1, 71-101.
+
+   maclin, r. &amp; shavlik, j. w. (1993).
+       
+       using knowledge-based neural networks to improve algorithms: 
+       refining the chou-fasman algorithm for protein folding.
+       machine learning, 11:2/3, 195-215.
+
+   scott. g. m., shavlik, j. w., &amp; ray, h. (1992).
+       refining pid controllers using neural networks.
+       neural computation, 4:5, 736-747.
+       (a 
+       nips4 version is on line.)
+
+   shavlik, j. w., towell, g. g., &amp; noordewier, m. o. (1992).
+       using neural networks to refine biological knowledge.
+       international journal of genome research, 1:1, 81-107.
+
+   shavlik, j. w., mooney, r. j., &amp; towell, g. g. (1991).
+       an experimental comparison of symbolic and connectionist learning algorithms.
+       machine learning, 6:2, 111-143.
+       (a 
+       version is on-line, but several figures are missing.)
+
+   shavlik, j. w. &amp; dietterich, t. d., eds., (1990).
+       readings in machine learning, morgan kaufmann, san mateo, ca.
+
+ 
+
+
+ courses recently taught 
+
+ 
+    
+        cs 540 - introduction to artificial intelligence (fall 1995)
+    
+        cs 838 - machine learning and information retrieval (fall 1995)
+    
+        cs 760 - machine learning (spring 1996)
+ 
+
+
+ some interesting links 
+
+ 
+    
+        u-wisc cs dept
+    
+        u-wisc ai group
+    
+        u-wisc machine learning group (my group)
+    
+        u-wisc computational biology research (includes some ml)
+   
+	u-wisc computational neuroscience research
+    
+	various local links of interest
+   
+        procs: workshop on agents that learn from other agents,
+	held at the 1995 international machine learning conference.
+ 
+
+
+
+last modified: fri jul  5 18:40:39 1996 by jude shavlik
+
+
+  shavlik@cs.wisc.edu
+
+
+
+
+
+
+ jude w. shavlik's home page 
+ jude w. shavlik's home page 
+ jude w. shavlik's home page 
+ jude w. shavlik's home page 
+ jude w. shavlik's home page 
+ jude w. shavlik's home page 
+ jude w. shavlik's home page 
+ jude w. shavlik's home page 
+ jude w. shavlik's home page 
+ jude w. shavlik's home page

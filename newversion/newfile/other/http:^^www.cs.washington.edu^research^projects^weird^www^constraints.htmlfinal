@@ -1,0 +1,317 @@
+uw constraint-based languages and systems
+
+
+
+uw constraint-based languages and systems
+
+welcome to the home page for constraints at 
+uw cse.
+
+  
+
+a constraint is a relation that should be satisfied; for example, that a line
+remain horizontal, that a resistor in an electrical circuit simulation
+obey ohm's law, or that the height of a bar in a bar chart be proportional
+to some number in an application program.  constraints have been used in a
+variety of languages and systems, particularly user interface toolkits,
+in planning and scheduling, and in simulation.
+
+
+
+our research is in several areas: 
+
+constraint imperative programming, in particular the 
+   kaleidoscope language
+constraint logic programming, in particular the hclp language scheme
+constraint hierarchies
+constraint solvers
+using constraints in user interface construction
+
+
+
+
+people
+
+faculty:
+
+
+
+alan borning,
+borning@cs.washington.edu
+
+
+
+current students:
+
+
+
+kirsten hildrum,
+hildrum@cs.washington.edu
+
+gus lopez,
+lopez@cs.washington.edu
+
+andy
+montgomery, montgmry@cs.washington.edu
+
+
+
+alumni:
+
+
+
+jeffrey berg
+
+scott bradley
+
+rob duisberg
+
+bjorn freeman-benson, bnfb@oti.com
+
+axel kramer
+
+john maloney
+
+amy martindale
+
+sean mcateer, smcateer@cs.washington.edu
+
+david nagy-farkas, davidnf@cs.washington.edu
+
+michael sannella, sannella@faline.bellcore.com
+
+paul williams
+
+molly ann wilson
+
+michael woolf
+
+
+
+
+papers
+
+the following list contains citations for recent papers.  click on a title
+to go to that paper's page, containing an abstract and a link to the
+postscript file.
+
+
+
+constraint imperative programming
+
+
+
+bjorn freeman-benson and alan borning, 
+ "the design and implementation of
+kaleidoscope'90, a constraint imperative programming language",
+proceedings of the ieee computer society 1992 international conference
+on computer languages, april 1992, pages 174-180.
+
+bjorn freeman-benson and alan borning,
+ "integrating constraints with an
+object-oriented language", proceedings of the 1992 european conference
+on object-oriented programming, june 1992, pages 268-286.
+
+gus lopez, bjorn freeman-benson, and alan borning, 
+ "kaleidoscope: a constraint imperative
+programming language", in constraint programming, b. mayoh,
+e. tougu, j. penjam (eds.), nato advanced science institute series, series
+f: computer and system sciences, vol 131, springer-verlag, 1994, pages
+313-329.
+
+gus lopez, bjorn freeman-benson, and alan borning,
+ "constraints and object
+identity", proceedings of the 1994 european conference on
+object-oriented programming, bologna, italy, july 1994, pages 260-279.
+
+gus lopez, bjorn freeman-benson, and alan borning,
+ "implementing constraint imperative
+programming languages: the kaleidoscope'93 virtual machine",
+proceedings of the 1994 acm conference on object-oriented programming
+systems, languages, and applications, portland, oregon, october 1994, pages
+259-271.
+
+
+
+
+
+
+
+hierarchical constraint logic programming
+
+
+
+alan borning, michael maher, amy martindale, and molly wilson,
+ "constraint hierarchies and logic
+programming", proceedings of the sixth international logic programming
+conference, lisbon, portugal, june 1989, pages 149-164.
+
+molly wilson and alan borning, 
+"extending hclp languages: nonmonotonicity and inter-hierarchy
+comparison", proceedings of the 1989 north american logic programming
+conference, cleveland, october 1989, pages 3-19.
+
+molly wilson and alan borning,  "hierarchical
+constraint logic programming", the journal of logic programming,
+special issue on constraint logic programming, vol. 16 nos. 3 & 4,
+july-august 1993, pages 227-318.
+
+molly ann wilson,  "hierarchical constraint
+logic programming", phd dissertation, april 1993.
+
+
+
+
+
+
+
+constraint solvers
+
+
+
+michael sannella,  "the skyblue
+constraint solver", uw tech report 92-07-02.
+
+michael sannella, john maloney, bjorn freeman-benson, and alan
+borning,  "multi-way versus one-way
+constraints in user interfaces: experience with the deltablue
+algorithm", software--practice and experience, vol. 23 no. 5, (may
+1993), pages 529-566.
+
+michael sannella,  "the skyblue
+constraint solver and its applications", vijay saraswat
+and pascal van hentenryck, editors, proceedings of the 1993 workshop on
+principles and practice of constraint programming, mit press, 1995, pages
+385-406.
+
+problem with skyblue and cycles.
+
+alan borning and bjorn n. freeman-benson, 
+ "the oti constraint solver: a constraint
+library for constructing interactive graphical user interfaces", 
+proceedings of the first international conference on
+principles and practice of constraint programming, september 1995,
+pages 624-628.
+
+alan borning, richard anderson, and bjorn freeman-benson, 
+ "indigo: a local propagation algorithm for
+inequality constraints", proceedings of the 1996 acm symposium on
+user interface software and technology, pages 129-136.  a companion
+technical report,  "the indigo algorithm", uw
+tech report 96-05-01, contains additional material (proofs of theorems and
+definitions of interval operations).
+
+
+
+
+
+
+
+
+
+
+theory of constraint hierarchies
+
+
+
+alan borning, bjorn freeman-benson, and molly wilson, 
+ "constraint hierarchies",
+lisp and symbolic computation, vol. 5 no. 3, (september 1992), pages
+223-270.
+
+
+
+
+
+
+
+constraints and user interfaces
+
+
+
+bjorn freeman-benson,  "converting an
+existing user interface to use constraints", proceedings of the
+1993 acm symposium on user interface software and technology, atlanta,
+georgia, november 1993, pages 207-215.
+
+michael sannella and alan borning, 
+"multi-garnet: integrating multi-way constraints with garnet", uw tech
+report 92-07-01.
+
+michael sannella,  "analyzing and
+debugging hierarchies of multi-way local propagation constraints", in
+alan borning (ed.), proceedings of the 1994 workshop on principles and
+practice of constraint programming, springer-verlag, lecture notes in
+computer science no. 874, pages 63-77.
+
+michael sannella,  "constraint
+satisfaction and debugging for interactive user interfaces", phd
+dissertation, august 1994.  revised version published as uw tech report
+94-09-10.
+
+michael sannella,  "skyblue: a
+multi-way local propagation constraint solver for user interface
+construction", in proceedings of the 1994 acm symposium on user
+interface software and technology, pages 137-146.
+
+
+
+
+funding
+
+this research is currently supported in part by two grants from the 
+national science foundation:
+"constraint-based languages and environments for building interactive
+systems", grant no. iri-9302249, interactive systems program, and
+"constraint imperative programming", grant no. ccr-9402551, programming
+languages and compilers program.  the work on constraint satisfaction
+algorithms and libraries is supported in part by 
+object technology international.
+
+
+
+
+other resources
+
+we also maintain an 
+anonymous ftp directory at uw on
+//ftp.cs.washington.edu/pub/constraints.  the 
+ code
+subdirectory contains source code for various constraint solvers and
+systems, including deltablue and skyblue.  all this code is public domain.
+the 
+ppcp94 subdirectory contains papers from the 1994 principles and
+practice of constraint programming workshop.  there is a
+
+papers subdirectory with research papers (but all of the
+papers are also listed in this www document, so don't bother).
+finally, there is a 
+
+drafts subdirectory, which sometimes contains preliminary drafts of
+papers.
+
+
+
+for more general information on constraints, and links to lots of
+interesting stuff, see the 
+constraints archive page.
+
+
+
+
+
+
+borning@cs.washington.edu 
+
+
+
+uw constraint-based languages and systems
+uw constraint-based languages and systems
+uw constraint-based languages and systems
+uw constraint-based languages and systems
+uw constraint-based languages and systems
+uw constraint-based languages and systems
+uw constraint-based languages and systems
+uw constraint-based languages and systems
+uw constraint-based languages and systems
+uw constraint-based languages and systems

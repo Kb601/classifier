@@ -1,0 +1,74 @@
+proxy sharing proxy server project
+the proxy sharing proxy server project
+
+the proxy sharing proxy server project is an investigation into the
+application of wide-area demand-driven replication techniques to
+sharing www resources.  the main difference between us and the competition
+is that our caching scheme is non-hierarchial.  so far we have a
+design paper,
+presented in may at the etacom 96 conference in portland, oregon.
+our implementation, based on the cern proxy server, is coming along.
+
+ personnel 
+
+clinton jeffery 
+samir das 
+garry bernal 
+shannon williams 
+
+ related work 
+
+interesting related research is being done at usc, where the
+ harvest cache and httd-accelerator 
+is being developed. another page with pointers to related work is located in
+england.  matt welsh
+has implemented a hierarchial proxy cache mechanism in only 600 lines of perl;
+his program is calld siva.
+
+an interesting paper that includes measurements of numerous pieces of
+information on the web can be found at
+
+
+world-wide-web related conferences include:
+
+
+
+1st
+
+2nd
+
+3rd
+
+4th
+
+5th
+
+6th (april 97)
+
+nsf workshop on www
+
+asia-pacific www95
+
+hypermedia95
+
+
+
+to look for other/newer conferences, check out the
+www consortium's
+conferences page.
+
+
+you are visitor number
+
+
+
+proxy sharing proxy server project
+proxy sharing proxy server project
+proxy sharing proxy server project
+proxy sharing proxy server project
+proxy sharing proxy server project
+proxy sharing proxy server project
+proxy sharing proxy server project
+proxy sharing proxy server project
+proxy sharing proxy server project
+proxy sharing proxy server project

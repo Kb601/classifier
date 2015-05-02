@@ -1,0 +1,89 @@
+home page for elizabeth varki 
+
+
+liz varki's homepage 
+
+i'm a ph.d. student in the 
+
+computer science department at
+ vanderbilt university,
+nashville, tennessee.
+my advisor is 
+
+dr. lawrence dowdy, and i am a member of the 
+ 
+performance evaluation group   which works in conjunction with
+oak ridge national lab
+(ornl) on the early evaluation
+of systems.
+i expect to defend my ph.d. by october-november 1996. 
+
+
+my research interests include modeling and performance
+evaluation of computer systems.
+my dissertation
+topic is in the area of performance modeling and prediction of parallel
+systems.  the title of the dissertation is: analysis of parallel
+systems with fork-join synchronization constraints.
+
+
+my dissertation work primarily consists of two distinct papers.
+the first paper presents an exact response time analysis of open and
+closed parallel systems with service times drawn from an
+exponential distribution. the analysis quantifies the recursive
+behavior of fork-join systems and helps to better understand
+the effect that parallelism has on system
+performance.  the methods used are classical queueing theory
+and performance evaluation techniques, and basic theory of
+stochastic processes.  a paper on this work will
+be submitted to the journal of acm later this month.  a preliminary
+paper on the mean response time analysis of 2-sibling fork-join
+systems appeared in mascots'96.
+
+
+the second paper presents an exact analysis of closed 
+fork-join systems and introduces a quick bounding technique for
+arbitrary fork-join systems. the bounding technique is similar to
+balanced job bounds for product-form networks.  for this paper, the
+methods used are earlier results on product-form networks
+and markov analysis.  this paper appeared in sigmetrics'96.
+
+
+i am also working on the solution set to performance supplement textbook,
+ solutions to p. s. to computer architecture (coming soon), jointly
+sponsored by cmg and acm/sigmetrics.   
+
+
+recent papers/publications include:
+
+ varki, e., dowdy, l.w., 
+analysis of balanced fork-join queueing networks , to appear in
+ sigmetrics '96, philadelphia, may, 1996.
+ varki, e., dowdy, l.w., 
+exact response time analysis of two server fork-join systems  , 
+, vanderbilt university, nashville, tn, 1995, tech report.
+(shorter version in  mascots '96, san jose, california,
+feburary, 1996.)
+
+
+
+ address : 
+  box 1679-b, school of engineering,
+   vanderbilt university,
+ nashville, tn 37235
+ e-mail : 
+  
+varki@vuse.vanderbilt.edu 
+ telephone : 
+ (615) 343-4404
+
+ home page for elizabeth varki 
+ home page for elizabeth varki 
+ home page for elizabeth varki 
+ home page for elizabeth varki 
+ home page for elizabeth varki 
+ home page for elizabeth varki 
+ home page for elizabeth varki 
+ home page for elizabeth varki 
+ home page for elizabeth varki 
+ home page for elizabeth varki

@@ -1,0 +1,37 @@
+feature selection via mathematical programming 
+feature selection via mathematical programming 
+ p. s. bradley,  o. l. mangasarian and  w. n. street
+mp-tr-95-21
+december 1995
+
+ the problem of discriminating between two finite point sets in $n$-dimensional feature space by a separating plane that utilizes as few of the features as possible, is formulated as a mathematical program with a parametric objective function and linear constraints. the step function that appears in the objective function can be approximated by a sigmoid or by a concave exponential on the nonnegative real line, or it can be treated exactly by considering the equivalent linear program with equilibrium constraints (lpec). computational tests of these three approaches on publicly available real-world databases have been carried out and compared with an adaptation of the optimal brain damage (obd) method for reducing neural network complexity.
+
+how to view this document
+
+
+display the whole document in one of the following formats.
+
+postscript
+ 87955 bytes. (compressed on disk, will be sent uncompressed)
+
+
+
+print or download all or selected pages.
+
+
+
+ you are granted permission for the non-commercial reproduction, distribution,display, and performance of this technical report in any format, but thispermission is only for a period of 45 (forty-five) days from the most recenttime that you verified that this technical report is still available fromthe computer science department of the university of wisconsin - madison underterms that include this permission.  all other rights are reserved by theauthor(s). 
+[ search
+ ]
+
+ncstrlthis server operates at uw madison computer sciences technical reports . send email to www@cs.wisc.edu 
+feature selection via mathematical programming 
+feature selection via mathematical programming 
+feature selection via mathematical programming 
+feature selection via mathematical programming 
+feature selection via mathematical programming 
+feature selection via mathematical programming 
+feature selection via mathematical programming 
+feature selection via mathematical programming 
+feature selection via mathematical programming 
+feature selection via mathematical programming

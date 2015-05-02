@@ -1,0 +1,452 @@
+paradyn project papers
+
+
+
+
+
+paradyn project papers
+
+
+the papers listed on this page have been produced by the paradyn project.
+
+you can retrieve a postscript copy of any of the papers listed by
+clicking on the paper's title.  for this to work automatically, you must have
+a postscript previewer on your system.
+in a few cases, the document is in html.
+
+
+
+
+the paradyn parallel performance measurement tools
+barton p. miller, mark d. callaghan, 
+jonathan m. cargille, jeffrey k. hollingsworth
+r. bruce irvin, karen l. karavanic,
+krishna kunchithapadam, and tia newhall.
+ieee computer 28, 11 (november 1995).
+special issue on performance evaluation tools for parallel and distributed 
+computer systems.
+
+note: this paper contains several color postscript pages.  it
+should print acceptably on b/w printers.
+
+
+paradyn is a performance measurement tool for parallel and distributed
+programs.
+paradyn uses several novel technologies so that it
+scales to long running programs (hours or days)
+and large (thousand node) systems,
+and automates much of the search for performance bottlenecks.
+it can provide precise performance data down to the procedure and
+statement level.
+
+paradyn is based on a dynamic notion of performance instrumentation and
+measurement.
+unmodified executable files are placed into execution and then
+performance instrumentation is inserted into the application
+program and modified during execution.
+the instrumentation is controlled by the performance consultant module,
+that automatically directs the placement of instrumentation.
+the performance consultant
+has a well-defined notion of performance bottlenecks and program
+structure, so that it can associate bottlenecks with specific causes and
+specific parts of a program.
+paradyn controls its instrumentation overhead by monitoring the cost of
+its data collection, limiting its instrumentation to a (user controllable)
+threshold.
+
+the instrumentation in paradyn can easily be configured to accept new
+operating system, hardware, and application specific performance data.
+it also provides an open interface for performance visualization,
+and a simple programming library to allow these visualizations to interface
+to paradyn.
+
+paradyn can gather and present performance data in terms of high-level
+parallel languages (such as data parallel fortran) and can measure programs
+on massively parallel computers, workstation clusters, and heterogeneous
+combinations of these systems.
+
+
+dynamic instrumentation api (proposed)
+jeffrey k. hollingsworth, barton p. miller
+(1996).
+
+
+an adaptive cost model for parallel program instrumentation
+jeffrey k. hollingsworth and barton p. miller.
+europar '96 (lyon, france, august 1996).
+
+software based instrumentation is frequently used to measure the
+performance of parallel and distributed programs.  however, using
+software instrumentation can introduce serious perturbation of the
+program being measured.  in this paper we present a new data collection
+cost system that provides programmers with feedback about the impact
+data collection is having on their application.  in addition, we introduce
+a technique that permits programmers to define the perturbation their
+application can tolerate and then we are able to regulate the amount of
+instrumentation to ensure that threshold is not exceeded.  we also
+describe an implementation of the cost model and presents results from
+using it to measure the instrumentation overhead for several real
+applications.
+
+
+
+dynamic program instrumentation for scalable performance tools
+jeffrey k. hollingsworth, barton p. miller, and jon cargille.
+shpcc (knoxville tn, may 1994)  
+
+in this paper, we present a new technique called dynamic
+instrumentation that provides efficient, scaleable, yet detailed
+data collection for large-scale parallel applications.  our
+approach is unique because it defers inserting any instrumentation
+until the application is in execution.  we can insert or change
+instrumentation at any time during execution.  instrumentation is
+inserted by modifying the application's binary image.  this permits
+us to insert only the instrumentation that is necessary for the
+current analysis being performed or visualization presented.  as a
+result, our technique collects several orders of magnitude less
+data than traditional data collection approaches.  we have
+implemented a prototype of our dynamic instrumentation on the
+thinking machines cm-5, and present results for several real
+applications.  in addition, we include recommendations to operating
+system designers, compiler writers, and computer architects about
+the features necessary to to permit efficient monitoring of
+large-scale parallel systems.
+
+dynamic control of performance monitoring on large scale 
+parallel systems
+jeffrey k. hollingsworth and barton p. miller.
+international conference on supercomputing (tokyo, july 19-23, 1993).
+
+performance monitoring of large scale parallel computers creates a
+dilemma: we need to collect detailed information to find performance
+bottlenecks, yet collecting all this data can introduce serious data
+collection bottlenecks.  at the same time, users are being inundated
+with volumes of complex graphs and tables that require a performance
+expert to interpret.  we present a new approach called the
+w cubed search model, that addresses both these problems by
+combining dynamic on-the-fly selection of what performance data to
+collect with decision support to assist users with the selection and
+presentation of performance data.  our goal is to provide users with
+answers to their performance questions and at the same time
+dramatically reduce the volume of performance data we need to collect.
+we present a case study describing how a prototype implementation of
+our technique was able to identify the bottlenecks in three real
+programs.  in addition, we were able to reduce the amount of
+performance data collected by a factor ranging from 13 to 700 compared
+to traditional sampling and trace based instrumentation techniques.
+finding bottlenecks in large-scale parallel programs
+jeffrey k. hollingsworth. ph.d. thesis, august 1994.
+
+note: this paper contains several color postscript pages.
+
+this thesis addresses the problem of trying to locate the source of
+performance bottlenecks in large-scale parallel and distributed
+applications.  performance monitoring creates a dilemma: identifying a
+bottleneck necessitates collecting detailed information, yet collecting
+all this data can introduce serious data collection bottlenecks.  at
+the same time, users are being inundated with volumes of complex graphs
+and tables that require a performance expert to interpret.  i have
+developed a new approach that addresses both these problems by
+combining dynamic on-the-fly selection of what performance data to
+collect with decision support to assist users with the selection and
+presentation of performance data.  the approach is called the w3 search
+model (pronounced w-cubed).  to make it possible to implement the w3
+search model, i have developed a new monitoring technique for parallel
+programs called dynamic instrumentation.  the premise of my work is
+that not only is it possible to do on-line performance debugging, but
+for large scale parallelism it is mandatory.
+
+the w3 search model closes the loop between data collection and
+analysis.  searching for a performance problem is an iterative process
+of refining the answers to three questions:  why is the application
+performing poorly, where is the bottleneck, and when does the problem
+occur.  to answer the why question, tests are conducted to identify the
+type of bottleneck (e.g., synchronization, i/o, computation).
+answering the where question isolates a performance bottleneck to a
+specific resource used by the program (e.g., a disk system, a
+synchronization variable, or a procedure).  answering when a problem
+occurs, tries to isolate a bottleneck to a specific phase of the
+program's execution.
+
+dynamic instrumentation differs from traditional data collection
+because it defers selecting what data to collect until the program is
+running.  this permits insertion and alteration of the instrumentation
+during program execution.  it also features a new type of data
+collection that combines the low data volume of sampling with the
+accuracy of tracing.  instrumentation to precisely count and time
+events is inserted by dynamically modifying the binary program.  these
+counters and timers are then periodically sampled to provide
+intermediate values to the w3 search model.  based on this intermediate
+data, changes are made in the instrumentation to collect more
+information to further isolate the bottleneck.
+
+i have built a prototype implementation of the w3 search model and of
+dynamic instrumentation.  the prototype runs on thinking machine's cm-5
+and a network of workstations running pvm.  in one study, the tools
+identified the bottlenecks in several real programs using two to three
+orders of magnitude less data than traditional techniques.  in another
+study, dynamic instrumentation was used to monitor long running
+programs and introduced less than 10% perturbation.  while the w3
+search model and dynamic instrumentation complement each other, they
+are also useful individually.  the w3 search model can be applied to
+existing post-mortem performance tools or even to simulated machines
+and environments.  dynamic instrumentation has be used to collect
+performance data for other uses including visualization.  the w3 search
+model and dynamic instrumentation are being incorporated into the
+paradyn performance tools.
+mapping performance data for high-level and data views of
+parallel program performance
+r. bruce irvin and barton p. miller.
+
+international conference on supercomputing (philadelphia, may 1996).
+
+note: this paper contains several color postscript pages.  it
+should print acceptably on b/w printers.
+
+
+programs written in high-level parallel languages need profiling
+tools that provide performance data in terms of the semantics of
+the high-level language. but high-level performance data can be
+incomplete when the cause of a performance problem cannot be
+explained in terms of the semantics of the language. we also need
+the ability to view the performance of the underlying mechanisms
+used by the language and correlate the underlying activity to the
+language source code. the key techniques for providing these
+performance views is the ability to map low-level performance
+data up to the language abstractions.
+
+we identify the various kinds of mapping information that needs
+to be gathered to support multiple views of performance data and
+describe how we can mine mapping information from the compiler
+and run-time environment. we also describe how we use this
+information to produce performance data at the higher levels, and
+how we present this data in terms of both the code and parallel
+data structures.
+
+we have developed an implementation of these mapping techniques
+for the data parallel cm fortran language running on the tmc cm-
+5. we have augmented the paradyn parallel performance tools with
+these mapping and high-level language facilities and used them to
+study several real data parallel fortran (cm fortran)
+applications. our mapping and high-level language techniques
+allowed us to quickly understand these applications and modify
+them to obtain significant performance improvements.
+mechanisms for mapping high-level parallel performance data
+r. bruce irvin and barton p. miller.
+
+icpp workshop on challenges for parallel processing (chicago, august 1996).
+
+note: this paper contains several color postscript pages.  it
+should print acceptably on b/w printers.
+
+
+a primary problem in the performance measurement of 
+high-level parallel programming languages is to map 
+low-level events to high-level programming constructs. 
+we discuss several aspects of this problem and presents 
+three methods with which performance tools can map 
+performance data and provide accurate performance 
+information to programmers. in particular, we discuss 
+static mapping, dynamic mapping, and a new technique 
+that uses a data structure called the set of active sentences.
+because each of these methods requires coopera
+tion between compilers and performance tools, we 
+describe the nature and amount of cooperation required. 
+the three mapping methods are orthogonal; we describe 
+how they should be combined in a complete tool. 
+although we concentrate on mapping upward through 
+layers of abstraction, our techniques are independent of 
+mapping direction.
+a performance tool for high-level parallel programming languages
+r. bruce irvin and barton p. miller.
+ifip wg10.3 working conference on programming environments for massively parallel distributed systems (ascona switzerland, april 1994)
+
+users of high-level parallel programming languages require accurate
+performance information that is relevant to their source code.
+furthermore, when their programs cause performance problems at the
+lowest levels of their hardware and software systems, programmers need
+to be able to peel back layers of abstraction to examine low-level
+problems while maintaining references to the high-level source code
+that ultimately caused the problem.  in this paper, we present nv, a
+model for the explanation of performance information for programs
+built on multiple levels of abstraction.  in nv, a level of
+abstraction includes a collection of nouns (code and data objects),
+verbs (activities), and performance information measured for the nouns
+and verbs.  performance information is mapped from level to level to
+maintain the relationships between low-level activities and high-level
+code, even when such relationships are implicit.
+
+we have used the nv model to build paramap, a performance tool for the
+cm fortran language that has, in practice, guided us to substantial
+improvements in real cm fortran applications.  we describe the design
+and implementation of our tool and show how its simple tabular and
+graphical performance displays helped us to find performance problems
+in two applications.  in each case, we found that performance
+information at all levels was most useful when related to parallel cm
+fortran arrays, and that we could subsequently reduce each
+application's execution time by more than half.
+
+
+integrated visualization of parallel program performance data
+karen l. karavanic, jussi myllymaki, miron livny, and barton p. miller.
+to appear in "environments and tools for parallel scientific computing,"
+siam press, j. dongarra and b. tourancheau, eds., 1996
+
+    performance tuning a parallel application involves integrating
+    performance data from many components of the system, including the
+    message passing library, performance monitoring tool, resource
+    manager, operating system, and the application itself. the current
+    practice of visualizing these data streams using a separate,
+    customized tool for each source is inconvenient from a usability
+    perspective, and there is no easy way to visualize the data in an
+    integrated fashion.  we demonstrate a solution to this problem using
+    devise, a generic visualization tool which is designed to allow an
+    arbitrary number of different but related data streams to be
+    integrated and explored visually in a flexible manner.  we display
+    data emanating from a variety of sources side by side in three case
+    studies.  first we interface the paradyn parallel performance tool and
+    devise, using two simple data export modules and paradyn's simple
+    visualization interface.  we show several devise/paradyn
+    visualizations which are useful for performance tuning parallel codes,
+    and which incorporate data from unix utilities and application output.
+    next we describe the visualization of trace data from a parallel
+    application running in a condor cluster of workstations. finally we
+    demonstrate the utility of devise visualizations in a study of condor
+    cluster activity.
+
+the paradyn parallel performance tools and pvm
+barton p. miller, jeffrey k. hollingsworth and mark d. callaghan.
+"environments and tools for parallel scientific computing",
+siam press, j. dongarra and b. tourancheau, eds., 1994
+
+paradyn is a performance tool for large-scale parallel applications.
+by using dynamic instrumentation and automating the search for bottlenecks,
+it can measure long running applications on production-sized data sets.
+paradyn has recently been ported to measure native pvm applications.
+
+programmers run their unmodified pvm application programs with paradyn.
+paradyn automatically inserts and modifies instrumentation during the
+execution of the application,
+systematically searching for the causes of performance problems.
+in most cases, paradyn can isolate major causes of performance problems,
+and the part of the program that is responsible the problem.
+
+paradyn currently runs on the thinking machine cm-5, sun workstations, and pvm
+(currently only on suns).
+it can measure heterogeneous programs across any of these platforms.
+
+this paper presents an overview of paradyn, describes the new facility in
+pvm that supports paradyn, and reports experience with pvm applications.
+
+optimizing array distributions in data-parallel programs
+krishna kunchithapadam and barton p. miller. 
+languages and compilers for parallel computing, 
+august 1994.
+
+data parallel programs are sensitive to the distribution of data across
+processor nodes.
+we formulate the reduction of inter-node communication as an
+optimization on a colored graph.
+we present a technique that records the run time inter-node communication caused
+by the movement of array data between nodes during execution and builds
+the colored graph, and provide a simple algorithm that optimizes the
+coloring of this graph to describe new data distributions that would
+result in less inter-node communication.
+from the distribution information, we write compiler pragmas to be used
+in the application program.
+
+using these techniques, we traced the execution of a real data-parallel
+application (written in cm fortran) and collected the array access
+information.
+we computed new distributions that should provide an overall reduction in
+program execution time.
+however, compiler optimizations and
+poor interfaces between the compiler and runtime systems counteracted any
+potential benefit from the new data layouts.
+in this context, we provide a set of recommendations for compiler
+writers that we think are needed to both write efficient programs and to
+build the next generation of tools for parallel systems.
+
+the techniques that we have developed form the basis for future work in
+monitoring array access patterns and generate on-the-fly
+redistributions of arrays.
+
+performance measurement tools for high-level parallel programming languages
+
+
+r. bruce irvin. ph.d. thesis, october 1995.
+
+note: this paper contains several color postscript pages.
+
+users of high-level parallel programming languages require accurate
+performance information that is relevant to their source code. furthermore,
+when their programs experience performance problems at the lowest levels of
+their hardware and software systems, programmers need to be able to peel
+back layers of abstraction to examine low-level problems while maintaining
+references to the high-level source code that ultimately caused the
+problem. this dissertation addresses the problems associated with providing
+useful performance data to users of high-level parallel programming
+languages. in particular it describes techniques for providing source-level
+performance data to programmers, for mapping performance data among
+multiple layers of abstraction, and for providing data-oriented views of
+performance.
+
+we present nv, a model for the explanation of performance information for
+high-level parallel language programs. in nv, a level of abstraction
+includes a collection of nouns (code and data objects), verbs (activities),
+and performance information measured for the nouns and verbs. performance
+information is mapped from level to level to maintain relationships between
+low-level activities and high-level code, even when such relationships are
+implicit.
+
+the nv model has helped us to implement support for performance measurement
+of high-level parallel language applications in two performance measurement
+tools (paramap and paradyn). we describe the design and implementation of
+these tools and show how they provide performance information for cm
+fortran programmers.
+
+finally, we present results of measurement studies in which we have used
+paramap and paradyn to improve the performance of a variety of real cm
+fortran applications running on cm-5 parallel computers. in each case, we
+found that overall performance trends could be observed at the source code
+level and that both data views and code views of performance were useful.
+we found that some performance problems could not be explained at the
+source code level. in these cases, we used the performance tools to examine
+lower levels of abstraction to find performance problems. we found that
+low-level information was most useful when related to source-level code
+structures and (especially) data structures. finally, we made relatively
+small changes to the applications' source code to achieve substantial
+performance improvements.
+
+
+integrating a debugger and a performance tool for steering
+krishna kunchithapadam
+and barton p. miller.
+
+steering is a performance optimization idiom applicable to many problem
+domains.
+it allows control and performance tuning to take place during program
+execution.
+steering emphasizes the optimization and control of the performance of
+a program using mechanisms that are external to the program.
+performance measurement tools and symbolic debuggers already independently
+provide some of the mechanisms needed to implement a steering tool.
+in this paper we describe a configuration that integrates a performance
+tool, paradyn, and a debugger to build a steering environment.
+
+the steering configuration allows fast prototyping of steering policies,
+and provides support for both interactive and automated steering.
+
+last modified:
+thu sep 26 13:07:15 cdt 1996
+
+paradyn project papers
+paradyn project papers
+paradyn project papers
+paradyn project papers
+paradyn project papers
+paradyn project papers
+paradyn project papers
+paradyn project papers
+paradyn project papers
+paradyn project papers

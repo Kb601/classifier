@@ -1,0 +1,120 @@
+my resume
+
+
+mishaal a. almashan
+
+ 
+[objective |
+education |
+coursework |
+research |
+skills/work experiance |
+awards/honors ]
+ 
+current address: 
+
+100 fairview square,  apt. 7d
+
+ithaca,  ny 14850
+
+(607) 256-0521
+
+email: mishaal@cs.cornell.edu
+
+url: http://www.cs.cornell.edu/home/mishaal/
+
+objective:
+	to obtain an entry level position in a company involved in the computer industry specializing in computer networks,  computer graphics,  or computer hardware in general.  i am interested in numerous fields including multimedia,  client/server applications, and operating system development.
+education:
+cornell university
+ithaca, ny
+1995-		
+		master's of engineering computer science
+		expected date of graduation: may 1996
+
+		worcester polytechnic institute
+		worcester,  ma
+		double major:
+1990-1994		1st  major
+		bachelor of science electrical engineering
+			concentration:  computer and electronics engineering
+
+
+
+1990-1995
+		2nd major
+			bachelor of science computer science
+			concentration:  hardware orientation / scientific applications
+			graduation date:  may, 1995 with honors
+cumulative gpa: 3.3
+concentration gpa: 3.5
+
+coursework:
+
+machine organization (assembly) vlsi i&ii software engineering
+techniques of programming/c++ analysis of algorithms numerical analysis
+computer architecturelogic circuitscomputer graphics
+finite automata
+
+graduate level:
+computer networksmultimedia
+artificial intelligenceoperating systems
+
+
+projects/research:
+march 1993
+interactive qualifying project:  virtual reality in education
+a study of the possible application of virtual reality as an aid to students.  an examination of practical and theoretical applications was presented.  built a pc-based virtual reality unit as a demonstration to students.			 (part of a two member team)
+grade received: a.
+may 1994
+major qualifying project (electrical engineering):  micromouse iii: the theseus project
+design and implement a sensor system for an autonomous robot designed to solve a maze in competition.  the system was based on infra-red detectors and shaft-encoders to determine the position of the robot.  the design had to be small yet efficient enough to be reliable.  since the project was made up of six students,  this was a very useful opportunity to  learn how to cooperate in a group and was an aid to understanding intercommunication in a project. (part of a six member team)
+grade received: b.
+may 1995
+major qualifying project (computer science): micromouse iii: the theseus project
+	a continuation of the above project.  continue to integrate the different parts of the project by redesigning the software that was developed in assembly and c.  extensive testing and debugging of the robot was required to achieve a competitive micromouse.
+grade received: a.
+fall 1995
+masters of engineering research: optimal video transmission
+this project will improve upon an  existing prioritization algorithm for bandwidth-constrained video transmission.  the object is to determine which frames of a video sequence to drop so as to optimize perceptual continuity of the received sequence.  the algorithm will be modified to take the rate of motion into account when prioritizing frames for transmission, so that frames with more motion are less likely to be dropped.  the results would probably be published to complement the paper already published discussing the optimal frame prioritization.  an extension to an existing contenious media playback system will also be implemented.
+still ongoing.
+
+skills/work experience:
+summer 1993		
+aerated concrete industries
+kuwait city,  kuwait
+junior engineer
+	developed a transactional budget program to organize daily financial transactions.  at the end of the month/quarter/year a summary report is automatically generated for the user.	
+	enhanced autocad functions to include specialized tools for the design team to use.  these functions were developed using lisp and incorporated into autocad.
+programming languages
+	c, c++, assembly (80x86/68000/68hc11), html, lisp(scheme) 
+operating systems
+	unix, windows, ms-dos, amigaos
+awards/honors:	
+
+	member of upsilon pi epsilon,  national computer science honor society
+	graduated with honors (worcester polytechnic institute,  worcester ma)
+	outstanding achievement award (ministry of higher education,  kuwait)
+
+activities/interests:
+	member boston computer society.  active member in bcs virtual reality group.
+	traveling (europe,  middle east,  us,  mexico)
+	languages:  arabic (fluent),  english (fluent),  french (not fluent)
+	water and snow skiing
+
+
+
+last modified: 04:00pm est, january 23, 1996
+
+
+
+my resume
+my resume
+my resume
+my resume
+my resume
+my resume
+my resume
+my resume
+my resume
+my resume

@@ -1,0 +1,98 @@
+computer architecture home page
+
+
+computer architecture
+v22.0436
+
+tuesday and thursday 1:20-2:35
+
+room 101, warren weaver hall
+
+
+professor allan gottlieb
+
+last update 21 nov.
+
+
+reaching me
+
+ e-mail (my preference, i read it often):
+gottlieb@nyu.edu
+
+ phone: (212) 998-3344
+ office: 715 broadway, tenth floor
+ office hours: 4-5 tuesdays and 3-4 thursdays
+
+
+recent news items
+
+extra office hours
+
+i will be in monday afternoon and tuesday morning.  no appointment
+needed.  i should be in by 1:30 monday 2 at the latest.  i should be
+in by 9am tuesday.  wed is unlikely (snow).  i will be in thursday
+morning.
+
+
+comments on the final
+
+the exam is today (thursday) 2pm -- 3:50pm.
+
+one good problem would be like what we did the last day of class.  the
+exam defines a new instruction (in class it was jmp), states the
+format of the instruction (for jmp it was 6-bit opcode 26-bit
+address), gives the semantics, and asks you to modify the datapath to
+include support for this function.  you would probably need to add one
+or more new control signals (for jmp the control signal was called
+jump).
+
+mano type questions will be something like 1/4 -- 1/3 of the test.
+
+i asked a bunch of homeworkwork questions from h&amp;p.  questions
+like those are fair game.
+
+here are answers to questions i received.
+
+> which chapters and sections of the book will be covered on the final?
+
+mano:
+we did chapters 1 and 2
+
+ph:
+we briefly did chapters 1-2 and assumed knowlege of chapters 3-4
+(except floating point).  
+we did chapter 7
+we did 4.1 -- 4.6
+we did 5.1 -- 5.3
+
+> also what chapters in the two books overlap? 
+
+the mano material is used in hp chapters 4,5, and 7
+
+
+recent assignments
+
+21 nov 4-25 4-30 4-31
+9 nov 7-20 7-21
+31 oct 7-2 7-15 7-16
+
+
+more information
+
+textbooks
+homework policy
+lab policy
+old assignments
+old news items
+
+
+computer architecture home page
+computer architecture home page
+computer architecture home page
+computer architecture home page
+computer architecture home page
+computer architecture home page
+computer architecture home page
+computer architecture home page
+computer architecture home page
+computer architecture home page

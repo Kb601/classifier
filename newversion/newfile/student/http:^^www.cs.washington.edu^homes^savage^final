@@ -1,0 +1,169 @@
+stefan savage
+
+ stefan savage
+     savage@cs.washington.edu
+
+
+
+     
+
+
+
+work: 
+
+     computer science & engineering department, 
+
+     university of washington, fr-35, 
+
+     seattle, wa 98195 usa 
+home: 
+4223 5th ave ne
+    seattle, wa 98105 usa 
+
+
+
+
+
+after sampling the rich post-industrial culture of modern pittsburgh
+for six years, i caught a ride with the 1993 bershad migration and i'm
+now a gradual student of the first rank here at uw.  my strong
+background in 19th and 20th century american history provides me with
+a firm, yet irrelevant, platform from which to "trash talk" my peers:
+"any fool can see that de tocqeuville's statement,
+'[americans] find it a tiresome inconvenience to exercise
+political rights which distract them from industry' is quite similar to
+current microprocessor architectural trends favoring the needs of
+application code over operating systems"
+
+
+i work with brian bershad  
+and the rest of the  merry band on
+an operating system project called spin. 
+
+projects
+
+spin
+spin is an extensible operating system omnifemtokernel which
+supports the dynamic adaptation of system interfaces and
+implementations through direct application control, while still
+maintaining system integrity and inter-application isolation. 
+
+
+things in writing
+
+spin papers
+
+ 
+     extensibility, safety and performance in the spin
+     operating system 
+      in  "proceedings of the 15th acm symposium on operating system
+     principles (sosp-15)", pp. 267-284, copper mountain, co,
+     december 1995.
+     slides from the talk.
+
+ 
+     language support for extensible operating systems
+      in  "proceedings of the first workshop on compiler
+     support for system software (wcsss)", tucson, az, feb 1996.
+
+ 
+     writing an operating system with modula-3
+      in  "proceedings of the first workshop on compiler
+     support for system software (wcsss)", tucson, az, feb 1996.
+
+ 
+     protection is a software issue
+      in  "proceedings of the fifth workshop on hot topics in
+     operating systems (hotos-v)", pp. 62-65, orcas island,
+     wa, may 1995.
+
+ 
+     some issues in the design of an extensible operating system
+     in "proceedings of the first usenix symposium on operating system
+     design and implementation (osdi-1)", p. 196, monterey, ca,
+     november 1994. (panel abstract) 
+      a longer (unpublished) version of the above
+           paper.  
+
+ 
+     spin - an extensible microkernel for application-specific
+         operating system services
+     in  "proceedings of the sixth sigops european workshop on
+          matching operating systems to application needs".
+     a version appeared in 
+        operating systems review, pp. 74-77,
+	january 1995, v 29, no 1. 
+
+
+ 
+  spin - an extensible microkernel for application-specific
+  operating system services
+  university of washington tech report uw-cse-94-03-03, march 1994.
+  
+
+afraid paper
+
+  
+  afraid -- a frequently redundant array of independent disks
+   in "proceedings of the 1996 winter usenix
+       technical conference", pp. 27--39, san diego, ca, january
+       1996. (best student paper) 
+       
+     slides from the talk.
+
+
+
+reservation papers
+
+ 
+  processor capacity reserves: operating system support for multimedia
+  applications
+   in  "proceedings of the first ieee international conference
+       on multimedia computing and systems", boston, ma, may 1994.
+
+ 
+  processor capacity reserves: an abstraction for managing processor usage
+   in  "proceedings of the fourth workshop on workstation
+       operating systems (wwos-iv)", pp. 129-134, napa, ca, october 
+       1993.
+
+ 
+  processor capacity reserves for multimedia operating systems
+  carnegie-mellon tech report cmu-cs-93-157, may 1993.
+
+
+ye old real-time mach paper
+
+ 
+  real-time mach timers: exporting time to the user
+  in "proceedings of the third usenix mach symposium",
+  pp. 111-118, santa fe, april 1993.
+slides from the talk.
+
+
+
+interests
+
+ music
+ hiking
+
+this web is under construction...
+
+
+
+
+
+
+
+
+
+stefan savage
+stefan savage
+stefan savage
+stefan savage
+stefan savage
+stefan savage
+stefan savage
+stefan savage
+stefan savage
+stefan savage

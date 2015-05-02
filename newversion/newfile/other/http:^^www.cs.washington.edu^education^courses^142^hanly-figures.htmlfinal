@@ -1,0 +1,46 @@
+cse/engr 142 textbook code
+
+
+
+cse/engr 142: computer programming i
+textbook code
+
+the sample c code appearing in most of the figures in the textbook
+  problem solving and program design in c,
+  second edition,
+  by jeri r. hanly and elliot b. koffman
+  (c. 1996, addison-wesley publishing company)
+are contained in the files 
+ here.
+
+each figure is in a separate file, and each chapter's files are in a
+separate directory.  
+note that most of these files are not pure c code, but also contain
+other information such as sample input/output from the program.
+this should be edited- or commented out before running the samples.
+
+
+
+
+
+
+cse142-webmaster@cs.washington.edu
+(last update: 
+  
+  09/28/95)
+)
+
+
+
+
+
+cse/engr 142 textbook code
+cse/engr 142 textbook code
+cse/engr 142 textbook code
+cse/engr 142 textbook code
+cse/engr 142 textbook code
+cse/engr 142 textbook code
+cse/engr 142 textbook code
+cse/engr 142 textbook code
+cse/engr 142 textbook code
+cse/engr 142 textbook code

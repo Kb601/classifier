@@ -1,0 +1,567 @@
+linguistic string project
+
+
+linguistic string project (lsp)
+
+
+courant institute of mathematical sciences
+251 mercer street
+new york, ny 10012
+tel. (212) 998-3097
+fax: (212) 995-4123
+email: sager@cs.nyu.edu
+
+
+publications
+
+
+
+ sager, n. (1967). syntactic analysis of natural language.
+advances in computers 8,
+153-188. academic press, ny.
+
+ sager, n. (1966). information reduction of texts by syntactic analysis.
+seminar on computational linguistics,
+1966 (a.w. pratt, a.h. roberts,
+k. lewis, eds.), pp. 46-56. division of computer science and technology,
+national institutes of health, bethesda, md. (phs publication no. 1716.)
+
+ salkoff, m., and sager, n. (1967). the elimination of grammatical
+restrictions in a string grammar of english.
+2eme conference internationale sur le traitement automatique des langues,
+grenoble,
+august 1967.
+
+ sager, n. (1970). the sublanguage method in string grammars.
+studies in language and linguistics,
+1970-1971 (r.w. ewton, jr. and j.
+ornstein, eds.), pp. 89-98. university of texas at el paso.
+
+ sager, n. (1972). a two-stage bnf specification of natural language.
+journal of cybernetics 2
+:3, 39-50.
+
+ sager, n. (1972). syntactic formatting of science information.
+afips conference proceedings 41,
+791-800. afips press, montvale,
+nj. reprinted in
+
+sublanguage: studies of language in restricted
+semantic domains
+
+(r. kittredge and j. lehrberger, eds.), walter
+de gruyter, berlin (1982), pp. 9-26.
+
+ sager, n. (1973). the string parser for scientific literature.
+in
+natural language processing
+(r. rustin, ed.), pp. 61-87.
+algorithmics press, ny.
+
+ grishman, r. (1973). implementation of the string parser of english.
+in
+natural language processing
+(r. rustin. ed.), pp. 89-109.
+algorithmics press, ny.
+
+ grishman, r., sager, n., raze (friedman), c., and bookchin, b. (1973). the
+linguistic string parser.
+afips conference proceedings 42,
+427-434. afips press, montvale, nj.
+
+ fitzpatrick, e., and sager, n. (1974). the lexical subclasses of the
+linguistic string parser.
+american journal of computational linguistics,
+no. 2.  (see also
+s.p.r.,
+item 9
+under reports.)
+
+ sager, n. (1975). sublanguage grammars in science information
+processing.
+journal of the american society for information science 26,
+10-16.
+
+ sager, n., and grishman, r. (1975). the restriction language for
+computer grammars of natural language.
+communications of the acm 18,
+390-400.
+
+ hirschman, l., grishman, r., and sager, n. (1975). grammatically-
+based automatic word class formation.
+information processing and management ll,
+39-57.
+
+ anderson, b., bross, i.d.j., and sager, n. (1975). grammatical
+compression in notes and records: analysis and computation.
+american journal of computational linguistics 2,
+no. 4.
+
+ sager, n. (1975). computerized discovery of semantic word classes
+in scientific fields. in directions in artificial intelligence:
+natural language processing,
+courant computer science report
+no. 7., 27-48. courant institute of mathematical sciences, new
+york university.
+
+ hobbs, j., and grishman, r. (1976). the automatic transformational
+analysis of english sentences: an implementation.
+international journal of computer mathematics,
+section a, vol. 5, pp. 267-283.
+
+ raze (friedman), c. (1976). a computational treatment of coordinate
+conjunctions.
+american journal of computational linguistics,
+no. 52.
+
+ hirschman, l., grishman, r., and sager, n. (1976). from text to
+structured information: automatic processing of medical reports.
+afips conference proceedings 45,
+267-275. afips press, montvale, nj.
+
+ sager, n. ( 1977). perspective paper: computational linguistics.
+in
+
+natural language in information science; perspectives and
+directives for research
+
+(d.e. walker, h. karlgren and m. kay, eds.),
+fid 551, 75-100. skriptor, stockholm.
+
+ hirschman, l., and grishman, r. (1977). fact retrieval from natural
+language medical records.
+ifip world conference series on medical informatics 2
+(d.b. shires and h. wolf, eds.), 247-251. north-
+holland, amsterdam.
+
+ sager, n. (1977). information structures in the language of science.
+in the many faces of information science,
+aaas selected symposium 3
+(e. c. weiss, ed.), 53-73. westview press, boulder, colorado.
+
+ sager, n., hirschman, l., grishman, r., and insolio, c. (1977).
+transforming medical records into a structured data base.  in d.
+waltz, natural language interfaces,
+acm-sigart newsletter,
+no. 61 (feb. 1977), 38-39.
+
+ insolio, c., and sager, n., parsing free narrative. unpublished paper.
+presented at annual meeting of association for computational
+linguistics, georgetown university, washington, dc, march 17, 1977.
+
+ sager, n., hirschman, l., grishman, r., and insolio, c. (1977).
+computer programs for natural language files. in information
+management in the 1980's,
+proceedings of the asis annual meeting 14.
+knowledge industry publications, white plains, ny.
+
+ sager, n. (1978). natural language analysis and processing. in the
+encyclopedia of computer science and technology
+(j. belzer, a.g.
+holzman and a. kent, eds.), vol. 11. pp. 152-169. marcel dekker, ny.
+(1983 edition available in paperback.)
+reprinted in
+subject and information analysis
+(e.d. dym, ed.), marcel dekker, ny, 1985.
+
+ sager, n., and lyman, m. (1978). computerized language processing:
+implications for health care evaluation.
+medical record news 49:3
+(june 1978), 20-30.
+
+ grishman, r., and hirschman, l. (1978). question answering from natural
+language medical data bases.
+artificial intelligence 11
+(1978), 25-43.
+
+ sager, n. (1978). natural language information formatting: the
+automatic conversion of texts to a structured data base. in
+advances in computers 17
+(m.c. yovits, ed.), 89-162. academic press, ny.
+
+ sager, n., hirschman, l., and lyman, m. (1978). computerized language
+processing for multiple use of narrative discharge summaries. in
+
+proceedings of the second annual symposium on computer applications
+in medical care
+
+(f.h. orthner, ed.), 330-343. ieee, new york.
+
+ hirschman, l., sager, n., and lyman, m. (1979). automatic application
+of health care criteria to narrative patient records.
+
+proceedings of the third annual symposium on computer
+applications in medical care
+
+(r.a. dunn, ed.), 105-113. ieee, new york.
+
+ sager, n. (1980). review of
+computational linguistics in medicine
+(w. schneider and a-l. sagvall hein, eds.), north-holland, ny,
+1977. in
+american journal of computational linguistics 6:1
+(jan.-mar. 1980), 44-7.
+
+ hirschman, l. (1981). retrieving time information from natural
+language texts.
+information retrieval research
+(r.n. oddy, s.e.
+robertson, c.j. van rijsbergen and p. williams, eds.), butterworths,
+london, 154-171.
+
+ hirschman, l., and sager, n. (1982). automatic information formatting
+of a medical sublanguage.
+
+sublanguage: studies of language in
+restricted semantic domains
+
+(r. kittredge and j. lehrberger, eds.).
+walter de gruyter, berlin, 1982, pp. 27-80.
+
+ sager, n. (1981).
+
+natural language information processing: a
+computer grammar of english and its applications.
+
+addison-wesley, reading, mass.
+
+ sager, n., tick, l., story, g., and hirschman, l. (1980). a codasyl-type
+schema for natural language medical records.
+
+proceedings of the fourth annual symposium on
+computer applications in medical care 2
+
+(j.t. o'neill, ed.), 1027-1033. ieee, new york.
+
+ hirschman, l., story, g., marsh, e., lyman, m., and sager, n. (1981).
+an experiment in automated health care evaluation from narrative
+medical records.
+computers and biomedical research 14:5 
+(oct. 1981), 447-463.
+
+ sager, n., bross, i.d.j., story, g., bastedo, p., marsh, e.
+and shedd, d. (1982). automatic encoding of clinical narrative.
+computers in biology and medicine 12:1 
+(1982), 43-56.
+
+ story, g., and hirschman, l. (1981). database design for natural
+language medical data.
+
+proceedings of the 14th annual hawaii
+international conference on system sciences iii.
+
+reprinted in
+journal of medical systems 6:1
+(1982), 77-88.
+
+ hirschman, l., and story, g. (1981). representing implicit and
+explicit time relations in narrative.
+
+proceedings of the 7th
+international joint conference on artificial intelligence
+(ijcai 81) 1,
+
+289-295.
+
+ sager, n. (1981). information structures in texts of a sublanguage.
+asis-81 conference proceedings.
+
+ sager, n., and grishman, r. (1982). research in computational
+linguistics at new york university.
+acm-sigart newsletter.
+special issue on natural language processing.
+
+ marsh, e., and sager, n. (1982). analysis and processing of compact
+texts.
+
+coling 82: proceedings of the ninth international conference on
+computational linguistics
+
+(j. horecky, ed.), 201-206. north-holland,
+amsterdam.
+
+ grishman, r., hirschman, l., and friedman, c. (1982).  natural language
+interfaces using limited semantic information.
+
+coling 82: proceedings
+of the ninth international conference on computational linguistics
+
+(j. horecky, ed.), 89-94.  north-holland, amsterdam.
+
+ sager, n., chi, e.c., tick, l.j., and lyman, m. (1982). relational
+database design for computer-analyzed medical narrative.
+
+proceedings of the
+sixth annual symposium on computer applications in medical care
+
+(b.i. blum, ed.), 797-804. ieee, new york.
+
+ marsh, e. (1983).  utilizing domain-specific information for processing
+compact text.
+
+proceedings of the conference on applied
+natural language processing,
+
+99-103.  association for computational linguistics, menlo park, ca.
+
+ grishman, r., hirschman, l., and friedman, c. (1983).  isolating domain
+dependencies in natural language interfaces.
+
+proceedings
+of the conference on applied natural language processing,
+
+46-53.  association for computational linguistics, menlo park, ca.
+
+ chi, e.c., sager, n., tick, l.j., and lyman, m. (1983).  relational
+database modeling of free-text medical narrative.
+medical informatics 8:3
+(1983), 209-223.  (special issue: new methods for the analysis
+of clinical data.) taylor & francis ltd, london.
+
+ lyman, m., chi, e.c., sager, n., tick, l.j., and story, g.a. (1983).
+automated case review of acute bacterial meningitis of childhood.
+in
+proceedings of medinfo 83,
+amsterdam, august 1983.
+
+ sager, n., and kosaka, m. (1983).  a database of literature organized
+by relations.
+
+proceedings of the 7th annual symposium on
+computer applications in medical care
+
+(scamc7) (r. dayhoff, ed.), 692-695.  ieee computer society,
+silver spring, md.
+
+ friedman, c., sager, n., chi, e.c., marsh, e., christenson, c., and
+lyman, m.s., md (1983).  computer structuring of free-text patient data.
+
+proceedings of the 7th annual symposium on computer
+applications in medical care
+
+(scamc7) (r. dayhoff, ed.), 688-691.  ieee computer society, silver spring, md.
+
+ sager, n., and wong, r., md (1983).  developing a database
+from free-text clinical data.
+journal of clinical computing xi:
+5 & 6 (1983), 184-194.
+
+ sager, n., tick, l.j., story, g., friedman, c., and christenson, c.
+(1983).  data model for natural language information.
+acm-sigart newsletter,
+no. 86 (oct. 83), special issue on a.i. and database research,
+p. 51.
+
+ white, c. (1983).  the linguistic string project dictionary for
+automatic text analysis.
+proceedings of the workshop on machine readable dictionaries,
+sri international, menlo park, ca.  (to be published.)
+
+ gordon, d., and sager, n. (1985). a method of measuring information in
+language, applied to medical texts.
+information processing & management 21:4
+(aug.85), 269-289.
+
+ wolff, s. (1984). the use of morphosemantic regularities in the medical
+vocabulary for automatic lexical coding.
+methods of information in medicine,
+23 (1984), 195-203.
+
+ sager, n. (1984). sublanguage: linguistic phenomenon, computational tool.
+in
+ analyzing language in restricted domains
+(r. grishman and r. kittredge, eds.), pp. 1-17.  lawrence erlbaum, 1986.
+
+ friedman, c. (1984). sublanguage text processing - application to
+medical narrative. in
+analyzing language in restricted domains
+(r. grishman and r. kittredge, eds.), pp. 85-102.
+lawrence erlbaum, 1986.
+
+ chi, e.c., friedman, c., sager, n., and lyman, m.s., m.d. (1985).
+processing free-text input to obtain a database of medical information.
+
+proceedings of the 8th annual acm-sigir conference on research and
+development in information retrieval,
+
+(june 1985),
+new york, association for computing machinery.
+
+ marsh, e., and friedman, c. (1985).  transporting the linguistic
+string project system from a medical to a navy domain.
+acm transactions on office information systems 3:2
+(april 1985), 121-140.
+
+ sager, n., chi, e.c., friedman, c., and lyman, m.s., md (1985).
+modeling natural language data for automatic creation of a database
+from free-text input.
+database engineering 8:3 (sept. 1985), 45-55.
+
+ sager, n. (1985). natural language processing in biomedical laboratory
+computing.
+frontiers of engineering and computing in health care--1985
+(j.c. lin and b.n. feinberg, eds.), vol. 1, 575-8.
+(proceedings of the 7th annual conference of the ieee/engineering in medicine and biology society,
+sept. 1985).
+mcgregor & werner, washington, dc.
+
+ chi, e.c., lyman, m.s., sager, n., friedman, c., and macleod, c. (1985).
+a database of computer-structured narrative: methods of computing complex
+relations.
+proceedings of the 9th annual symposium on computer applications in medical care
+(scamc9) (m.j. ackerman, ed.). ieee computer society press, washington, dc,
+pp. 221-226.
+
+ lyman, m.s., sager, n., friedman, c., and chi, e.c. (1985).
+computer-structured narrative in ambulatory care: its use in
+longitudinal review of clinical data.
+proceedings of the 9th annual symposium on computer applications in medical care 
+(scamc9) (m.j. ackerman, ed.).
+ieee computer society press, washington, dc, pp. 82-86.
+
+ london, j., wolff, s., and sager, n. (1985). the lsp lexicon for free-text
+information formatting: application to medical narrative.  workshop on
+the lexicon, parsing, and semantic interpretation, graduate center, city
+university of new york, jan. 1985.
+
+ sager, n., friedman, c., lyman, m.s., md, and members of the linguistic string project (1987).
+medical language processing: computer management of narrative data.
+addison-wesley, reading, ma.
+
+ sager, n. (1986). representing biomedical information via its linguistic
+structure.
+proceedings of the aamsi congress 86,
+vol. 4, pp. 278-281 (a.h. levy, md, and b.t. williams, md, eds.). american
+association for medical systems and informatics, washington, dc, 1986.
+
+ sager, n., friedman, c., lyman, m.s., md, chi, e.c., macleod, c., chen, s.,
+and johnson, s. (1986). the analysis and processing of clinical narrative.
+medinfo 86; proceedings of the fifth conference on medical informatics
+(r. salamon, b. blum, and m. jorgensen, eds.).
+elsevier science publishers b.v. (north holland), participants ed., part 2,
+pp. 1101-1105.
+
+ sager, n., mattick, p., jr., friedman, c.,and chi, e.c. (1989).
+information structures in survey instruments,
+proceedings of the section on survey research methods,
+american statistical association.
+
+ lyman, m.l. and sager, n.s. (1989)  the new york university experience
+in the computer processing of medical language, in computerized natural
+medical language processing, elsevier science publishers, north holland.
+
+ sager, n. (1989)  medical language processing: computer management of
+narrative data.  in
+computerized natural medical language processing,
+elsevier science publishers, north holland.
+
+ sager, n., lyman, m., tick, l.j., borst, f., nh&agraven, n.t., reveillard, c.,
+su,y., and scherrer, j-r. (1989)  adapting a medical language processor
+from english to french.
+medinfo89: proceedings of the sixth conference on medical informatics.
+elsevier science publishers b.f., north holland.
+
+ borst, f., sager, n., lyman, m., nh&agraven, n.t., tick, l.j., reveillard, c.,
+su, y., and scherrer, j-r. (1989)  cost containment and quality of care
+assessment:  by-product of a fully integrated his handling free text
+analysis of discharge summaries.  poster presentation medinfo89.
+
+ sager, n. (l989)  book review: garside, r., leech, g., and sampson, g.
+(eds.) the computational analysis of english:  a corpus-based approach.
+longman, london and new york (1987).
+information processing and management,
+25:no. 3, pp. 334-335.
+
+ lyman, m., sager, n., chi, e.c., tick, l.j., nh&agraven, n.t., su, y.,
+borst, f., and scherrer, j-r. (1989).  medical language processing for
+knowledge representation and retrievals.
+proceedings of the 13th annual symposium on computer applications
+in medical care.
+(scamc13) (l.c. kingsland, ed.). ieee computer society press, washington,
+d.c., pp. 548-553.
+
+  lyman, m. (1989)  applications of medical language processing:
+the new york university linguistic string project.  presentation of
+paper.  abstract:
+proceedings of the 52nd asis annual meeting.
+(j. katzer, g.b. newby, eds.).  published for the american society
+for information science by learned information, inc., medford,
+nj., p. 252.
+
+ borst, f., sager, n., nh&agraven, n.t., su, y., lyman, m., tick, l.j.,
+revillard, c., chi, e., and scherrer, j.r. (1989)  analyse automatique
+de comptes rendus d'hospitalisation.  in
+informatique et sant&eacute, informatique et gestion des unit&eacutes de soins,
+comptes rendus du colloque aim-if, paris,
+1989, degoulet, p., stephan, j-c., venot, a., et yvon, p-j, r&eacutedacteurs.
+paris, springer-verlag, pp 246-256.
+
+ nh&agraven, n.t., sager, n., lyman, m., tick, l.j., borst, f. and su, y.
+(1989)  a medical language processor for two indo-european languages.
+proceedings of the 13th annual symposium on computer application
+in medical care
+(scamc13) (l.c. kingsland, ed.).  ieee computer society press, washington,
+d.c., pp. 554-558.
+
+ sager, n. (1990)  computer analysis of sublanguage information structures,
+annals of ny academy of sciences.
+new york, the new york academy of sciences, vol 683, pp. 161-179.
+
+ lyman, m., sager, n., nh&agraven, n.t., tick, l.j., borst, f. and scherrer,
+j.r. (1991)  the application of natural-language processing to healthcare
+quality assessment
+medical decisioning making
+11, #4 suppl., pp.s65-s68.
+
+ borst, f., lyman, m.s., nh&agraven,n.t., tick, l.j., sager, n.,
+scherrer, j.-r., (1991)  textinfo: a tool for automatic determination of
+patient clinical profiles using text analysis,
+proceedings of the 15th annual symposium on computer applications
+of medical care (scamc15), mcgraw hill.
+
+ sager, n., lyman, m.s., tick, l.j., nh&agraven, n.t., borst, f., scherrer, j-r.,
+clinical knowledge bases from natural language patient documents,
+medinfo93: proceedings of the seventh conference on medical informatics,
+elsevier science publishers b.f., north holland.
+
+ sager, n., lyman, m.s., bucknall, c., nh&agraven, n.t., tick, l.j.,
+(1994)  natural language processing and the representation of clinical data,
+j. am. med. informatics soc.,
+vol. 1, no. 2, pp. 142-160.
+
+ sager, n., lyman, m.s., nh&agraven, n.t., tick, l.j. (1994).
+automatic encoding into snomed iii: a preliminary investigation,
+proc annu symp computer applications in medical care,
+jamia symp suppl 1994, 230-234.
+
+ sager, n., lyman, m.s., nh&agrave;n, n.t., tick, l.j. (1995).
+medical language processing: applications to patient data representation
+and automatic encoding.  methods of information in medicine
+(34):140-146.
+
+ sager, n., nh&agrave;n, n.t., lyman, m.s., tick, l.j. (1995).
+computer analysis of clinical narrative: why,
+how, what, when.  paper
+presented at the symposium on "language and voice technology in
+healthcare", medi working group of the bira (belgisch institut
+voor regeltechniek en automatisering). gent, belgium, feb 22,
+1995.
+
+ sager, n., nh&agraven, n.t., lyman, m.s., tick, l.j. (1996).
+medical language processing with sgml display.
+jamia: proceedings of the 1996 amia annual fall symposium
+ (washington, dc.  oct 26-30, 1996).  hanley & belfus. pp.
+547-551.
+
+
+
+linguistic string project
+linguistic string project
+linguistic string project
+linguistic string project
+linguistic string project
+linguistic string project
+linguistic string project
+linguistic string project
+linguistic string project
+linguistic string project

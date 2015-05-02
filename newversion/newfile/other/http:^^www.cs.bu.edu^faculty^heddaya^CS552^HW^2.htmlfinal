@@ -1,0 +1,177 @@
+bu cas cs 552: operating systems---homework
+		
+
+		
+		
+		
+bu
+cas
+		
+cs 552:
+		
+operating systems---
+fall'96---
+a. heddaya
+
+		
+		
+homework 2---due fri 96.09.20 (extended to mon 09.23)
+		
+ -->
+		[ as of
+1996.09.24
+		]
+		
+
+
+		
+		
+read and review any paper on operating systems from the following list
+   of publications.
+your review should be one page long, with one third of it being
+   devoted to a critique of the original paper.
+(see the  reviewing guidelines.)
+
+		
+   acm transactions on computer systems.
+		
+   proceedings of the acm symposium on operating systems principles
+   (available as special issues of operating systems review).
+		
+   acm transactions on
+   programming languages and systems.
+		
+   acm computing surveys.
+		
+   ieee transactions on software engineering.
+		
+   ieee transactions on computers.
+		
+   proceedings of the ieee international conference on distributed
+   computing systems.
+		
+
+		
+tanenbaum 2.1. 
+
+		
+tanenbaum 2.2.  (note: the definition in [tanenbaum 92,
+   p.34] is wrong, although the explanation is correct.)
+
+		
+
+
+		
+design the os for a special purpose computer that controls the various
+   components of a car.
+the system would consist of cpu, ram, multiple sensors (speed, gas
+   pedal position, brake pedal position, proximity to other objects on
+   the road, etc.), multiple actuators (fuel flow, fuel/air mixture,
+   brakes, transmission, etc.), and multiple displays (gauges of
+   various kinds).
+assume that you have a function controlcar that
+   implements one step of a successive approximation control
+   algorithm.
+given a set of sensor values, controlcar returns an
+   approximation of the actuator parameter values, but, if it is also
+   (optionally) given a previous approximation of its output for the
+   same input, it returns a better approximation.
+further assume that controlcar will be the only user
+   program running on your system, and that invoking it at the proper
+   times with the correct inputs will be the task of your special
+   purpose os.
+
+
+your os would have to observe the constraints imposed by the
+   physical properties of the various components of the car,
+   by driving convenience, and, most importantly, by the
+   necessity to maintain the safety of human passengers.
+the physical properties of the actuators dictate a maximum allowable
+   rate of change for the actuator values.
+(some of the physical properties of the system are handled by the
+   function controlcar, however the os still needs to
+   maintain basic constraints.)
+driving convenience includes such issues as the delay between
+   pressing on the gas pedal and the beginning of acceleration being
+   imperceptible (say 100ms).
+safety dictates that certain functions be more important than
+   others, and places time limits on the allowable response times.
+for example, when the driver depresses the brake pedal, the brakes
+   must be applied within 10ms, for example.
+
+
+a general requirement is that the os should use the best
+   approximations for the actuator values that can be obtained by
+   successive calls to controlcar without violating more
+   important requirements.
+
+
+the main design decision for your os will be whether to adopt a
+   software architecture based on polling or interrupts, or perhaps a
+   hybrid.
+
+
+as part of your design, you should specify:
+		
+		
+	a hardware configuration for an example system that can run your
+	   os.
+	you do not need to produce a full hardware design of a system,
+	  it suffices to draw a block diagram, and and point out any
+	  hardware features that your os requires.
+	
+		
+	formulate the constraints that your os will deal with
+	   (e.g., timing constraints and priority
+	   constraints), in terms of your system in (1).
+
+		
+	sketch the software structure of your os.
+	to do this you can use a variety of diagrams, such as block
+	   structure, control flow, data flow, and execution trace
+	   diagrams.
+	   
+		
+	briefly explain how your os works.
+	what would it take to substitute different implementations of
+	   controlcar?
+
+		
+		
+
+
+		[ created
+1996.09
+		.  maintained by abdelsalam heddaya]
+		
+		
+
+
+bu cas cs 552: operating systems---homework
+		
+
+bu cas cs 552: operating systems---homework
+		
+
+bu cas cs 552: operating systems---homework
+		
+
+bu cas cs 552: operating systems---homework
+		
+
+bu cas cs 552: operating systems---homework
+		
+
+bu cas cs 552: operating systems---homework
+		
+
+bu cas cs 552: operating systems---homework
+		
+
+bu cas cs 552: operating systems---homework
+		
+
+bu cas cs 552: operating systems---homework
+		
+
+bu cas cs 552: operating systems---homework

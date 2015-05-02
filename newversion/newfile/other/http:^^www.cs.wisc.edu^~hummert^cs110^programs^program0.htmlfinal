@@ -1,0 +1,133 @@
+cs110 program 0
+
+
+program 0
+program 0 is designed to give you practice editing, compiling, and executing
+a program.  before doing this assignment you may want to read our web
+page on 
+microsoft windows. you are also advised to go through the 
+ introductory tutorial of borland c++
+enter the following c++ program as it appears below, between the lines of 
+asterisks.  it will run as written, so you need not modify the program.
+
+please remember to put your name, login id (not your password!)
+and your course section number
+in the program documentation (comments at the top of the program).
+
+if you want to save yourself some typing, you can click
+here and then go to the "file" menu on
+netscape and do a "save as...".  this will let you save the program
+listed below without having to type it in.  you will still need edit
+the file to put in your name, etc.
+
+
+the program:
+
+
+*******************************************************************************
+
+/*
+name: [your name here]
+login: [your login id here]
+section: [your class section number here]
+
+this program computes the gross wages, income taxes, and net wages for
+an employee when given the pay rate and number of hours worked.
+
+*/
+
+#include &lt;iostream.h&gt;	// this file must be included to do input & output.
+
+main()
+{
+	int hours;		// number of hours worked in the week
+	float payrate;		// rate of pay in dollars per hour
+	float taxrate;		// income tax rate
+	float netwages;		// net pay for the week (pre-tax)
+	float taxes;		// amount paid in income tax
+	float grosswages;	// gross pay for the week (post-tax)
+
+	taxrate = .175;		// set the tax rate to 17.5%
+
+	cout > hours;
+
+	cout > payrate;
+
+	// compute the taxes and gross and net wages
+	netwages = hours * payrate;
+	taxes = netwages * taxrate;
+	grosswages = netwages - taxes;
+
+	// print out the net wages, taxes, and gross wages
+	cout 
+
+borland c++ 4.5 hints
+
+log into your account, and start borland c++ 4.5 which is found
+in the csapps program group.  make sure you are using 4.5 instead
+of 4.0 -- your csapps program group may contain both.  when you have
+borland up and running, you want to first create a file to write your 
+program in.  you click on file in the left corner of the screen, and 
+choose new within the menu that drops down.  an empty box will appear on
+your screen; this is where you will write your program.  you will want to 
+save your programs often.  the first time you save it, choose save as
+within the file menu.  this will ask you to name the file.  remember,
+since this will be a program file, the name must end with .cpp.  the 
+second time you save, you can just choose save, and it will be done
+automatically.  to access a file that you have previously saved to the disk, 
+simply choose open from the file menu and then let the computer 
+know what file you wish to access.
+
+once you have the program typed into the file window, and you have saved
+the program in case something unsavory happens, then you just need to press
+the little lightening bolt button near the top of the screen.  your program
+will be compiled, linked, and run.  if you mis-typed something, chances
+are you will get a syntax error.  go back to the program, check your typing,
+and when the mistake is found, change it and run the program again.
+
+when the program runs, it will create a window, and prompt you to enter
+a number of hours worked and an hourly rate of pay.  it will then compute
+the taxes and net and gross salaries using these numbers.
+you know that 
+the program has run to completion by the appearance of the word
+ inactive  at the top of the window. 
+
+turning in the assignment
+when you turn in programs, i am going to want you to bring a printed copy
+of the program to me at the beginning of class on the day it is due.  i am
+also going to want an electronic copy dropped into a secure area of the
+disk (see below for details).
+
+to print a copy of the program, go back to the file menu, and choose 
+print.  click on ok in the little window that appears.  the 
+pages will automatically be printed in the printer room across the hall 
+(room 1359).  you can determine which printer will do the printing by checking 
+out the check print queues icon in the administration folder.  
+(it may take a few seconds to show your name).
+
+to hand in an electronic copy of the program, you must use the 
+file manager program in the main group.  however, this
+ time you will be 
+dropping the program from your directory into a handin directory.  you can 
+locate the correct handin directory for you by first going to the r 
+drive, opening the handin folder, finding another folder marked 
+hummert and opening that, and then locating the final folder that 
+contains your login name.  you are to drop your program0.cpp file 
+into the folder with your name.
+
+even though this program is not graded, it is important that you turn the 
+electronic as well as a printed copy of the assignment in to me correctly (so i can make sure there are no problems).  
+
+
+
+
+cs110 program 0
+cs110 program 0
+cs110 program 0
+cs110 program 0
+cs110 program 0
+cs110 program 0
+cs110 program 0
+cs110 program 0
+cs110 program 0
+cs110 program 0

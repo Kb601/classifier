@@ -1,0 +1,551 @@
+an introduction to html
+
+
+
+an introduction to html
+written by kurt revis, modified by steven fought
+
+ this document is an introduction to html, the hypertext markup
+language. the vast majority of the documents that you have seen on
+the web have been written using html. 
+
+ html was intended to be a structural markup language.  in a traditional
+word processor or desktop publishing program you indicate how you want the
+different parts of your document look.  in a structural publishing system,
+you indicate what the different parts of your document are, and
+elsewhere, outside of the document, you indicate how each element should
+be shown to a user.  in the case of html, each browser decides how it will
+render the html elements.  the original developers of html wanted browsers
+to be developed on a wide variety of systems, so they kept it simple and 
+tried to avoid including elements that made assumptions about a web user's
+computer (such as the ability to display pictures).  the visually-oriented
+tags that are now in html were simply added into browsers by their developers,
+and have since become popular.
+
+ it is important to understand that html is designed to
+specify the structure of the document, and not its
+visual appearance, because while you might like for your 
+document to show up in 12-point times, double spaced, with 2 inch 
+margins on all sides, those kinds of decisions will be made not by 
+you, but by the person reading your document.
+
+
+tags
+
+ html files are just plain text, with tags mixed in for formatting.
+tags are used like this:
+
+&lt;h1&gt;operating systems&lt;/h1&gt;
+
+
+tags usually come in pairs called containers that surround 
+pieces of text. the tags themselves
+are made up of &lt;, the tag name, and &gt;. the first tag
+(&lt;h1&gt;) is called the start tag, the text inside
+("operating systems") is called the content, and the second tag
+(&lt;/h1&gt;) is called the end tag.
+
+ the &lt;h1&gt; tag signifies that the content text should be
+displayed as a header (the 1 means that it is at level 1, the
+largest). when viewed in the browser (netscape, lynx, or whatever), the
+above line will look like:
+
+operating systems
+
+although most tags work this way, some tags don't have end
+tags. for example, the &lt;p&gt; tag for specifying the
+beginning of a paragraph doesn't need a &lt;/p&gt; at the
+end of the paragraph.  we will discuss this tag (and others) later in
+this document.
+
+tag names are not case-sensitive, so &lt;h1&gt; and
+&lt;h1&gt; are equivalent.
+
+some tags may also have optional attributes, which modify the
+interpretation of the tag. for example, the &lt;img&gt; 
+tag, which tells the
+browser to display an image, can have a src attribute to 
+specify the image's
+name or an align atttribute to specify the alignment 
+compared to the
+surrounding text. with attributes, a tag might be used like this:
+
+
+&lt;img src="os.gif" align="top"&gt;
+
+
+
+structure of an html file
+
+all html files should follow this general format:
+
+
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;this is the title of the document.&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+this is the body, or main text, of the document.
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+
+
+
+ the first tag, &lt;html&gt;, indicates that the
+contents of the file are, in fact, in html format. it is a good idea
+to enclose the whole file in &lt;html&gt;&lt;/html&gt;,
+although it's not strictly required right now.  although your
+documents may be interpreted correctly by browsers currently in use, 
+this may change in the future.
+
+ each html file is split up into two parts: the header,
+marked by &lt;head&gt;&lt;/head&gt;, and the
+body, marked by &lt;body&gt;&lt;/body&gt;. (all
+text in the file should be enclosed within these tags.)
+
+
+
+the header specifies information about the document in
+general. usually, it's only used to specify the title with
+&lt;title&gt;&lt;/title&gt;.  this title is usually
+displayed at the top of the screen: for example, this document's title
+is "an introduction to html". (note that this does not
+automatically display the large line at the beginning: use
+&lt;h1&gt; for that.)
+
+
+the body is where the actual text of the document goes.
+
+
+
+note that in html, character and line spacing are unimportant. in
+the example above, i could have written (for example)
+
+
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;this is the title of the document.&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;this is the body, or main text, of the document.&lt;/body&gt;
+&lt;/html&gt;
+
+
+and gotten the same result.
+
+note that there are a huge number of documents on the web that
+are not written in "strict html". often, the &lt;head&gt; section will 
+be completely missing.  when mosaic became popular, ncsa's
+documentation, which does not stress proper construction, was
+what many people used to learn html. the emphasis was not on using html
+correctly, but on creating documents that looked good in mosaic,
+which is very forgiving of bad html.  the result is that many documents
+look good in mosaic and bad in many other browsers.  the same holds
+true for netscape and msie, which support and encourage a wide variety of
+features outside of the html spec.
+
+
+paragraphs and spaces
+
+one of the problems beginners have with html is that spaces, tabs, and
+newlines--known collectively as "white space"--are all equivalent. if i
+type
+
+         this    is a     test.
+
+or
+
+this is
+a
+    test.
+
+or
+
+this is a test.
+
+it will always be shown in the browser as:
+this is a test.
+
+ so just adding a blank line to your document will not start a
+new paragraph.  to make a paragraph, use the &lt;p&gt;
+tag at the beginning of the paragraph.  for example:
+
+
+&lt;p&gt; this is the first paragraph. it babbles on and on, never really going
+anywhere. 
+
+&lt;p&gt;
+the second paragraph, however, is a little more weird.
+it has some
+very short lines,
+for instance.
+there are also other lines that seem to go forever; in fact, they are rather long, extending for more than 80 characters, but decidedly finite in scope.
+also, it contains blank
+
+lines in the middle of itself.
+
+
+this html is rendered as:
+
+ this is the first paragraph. it babbles on and on, never really going
+anywhere. 
+
+
+the second paragraph, however, is a little more weird.
+it has some
+very short lines,
+for instance.
+there are also other lines that seem to go forever; in fact, they are rather long, extending for more than 80 characters, but decidedly finite in scope.
+also, it contains blank
+
+lines in the middle of itself.
+
+related to &lt;p&gt; are the &lt;br&gt; 
+and &lt;hr&gt; tags.
+&lt;br&gt; produces a line break, without the extra vertical
+space that &lt;p&gt; puts in. &lt;hr&gt; inserts
+a horizontal rule--a line extending across the page.
+
+
+section headings
+
+ the most common html tags are the section headings, like the
+&lt;h1&gt; tag we used earlier. in fact, there is a whole
+range of these tags, from &lt;h1&gt; for top-level
+headings to &lt;h6&gt; for the bottom. these tags tell the
+browser to use a different type size, indentation, or color.
+
+heading level 1 &lt;h1&gt;
+heading level 2 &lt;h2&gt;
+heading level 3 &lt;h3&gt;
+heading level 4 &lt;h4&gt;
+heading level 5 &lt;h5&gt;
+heading level 6 &lt;h6&gt;
+
+ these tags do not denote section numbers (as in "see chapter 3,
+section 4"), but section levels. you can, of course, use a section
+level tag more than once in a document.
+
+
+
+type styles
+
+
+html allows the use of a number of different type styles. the most useful
+are &lt;em&gt;, for adding emphasis like this,
+and &lt;strong&gt; for stronger emphasis.
+browsers may display the text in italics, in bold characters, underlined,
+in all capital letters, or with asterisks around it.
+
+ in general, it is best to use &lt;em&gt; and
+&lt;strong&gt;, since they give good results on all browsers.
+if you need to, however, you can use &lt;i&gt;, which produces
+italics, or &lt;b&gt; which produces bold text.
+
+
+there is also typewriter style, like this, produced with the
+&lt;tt&gt; tag.
+
+
+entities
+
+
+entities are names that start with &amp; and end
+with ; that represent characters which cannot normally
+be written in ascii, and characters used for markup. for example, 
+because the angle bracket characters are used in tags, to avoid ambiguities
+the codes &amp;lt; and &amp;gt; are used to 
+produce &lt; and &gt; respectively.
+similarly, the ampersand character '&amp;' is produced with 
+&amp;amp;.  the semicolon at the end of the code is necessary.
+
+
+other codes include &amp;quot; which produces the double-quote character
+&quot;. (i'm not sure why this code is necessary; i've never seen a browser
+get confused by the character " itself.) all of the characters in the
+iso-latin-1 set can also be expressed--cern provides a
+table
+of the codes. for example, to produce a u with an umlaut (&uuml;) the
+&amp;uuml; code is used.
+
+
+another useful structure is the html comment, produced with &lt;!-- and
+--&gt;. the contents of the comment should not be displayed by the browser.
+(however, some versions of mosaic are broken and still interpret tags within
+comments, so you can't comment out tags. this is unfortunate.) for example,
+the text
+this here &lt;!-- right here --&gt; is a comment.
+should appear as
+
+
+this here  is a comment.
+
+
+lists
+
+
+lists are a very useful construct in html. there are three types of lists:
+ordered, unordered, and descriptive.
+
+ ordered lists produce a list of numbered items. to make an ordered
+list, use the &lt;ol&gt; (ordered list) and
+&lt;li&gt; (list item) tags, like this:
+
+
+&lt;ol&gt;
+&lt;li&gt;get two slices of bread, peanut butter, and jelly.
+&lt;li&gt;spread jelly on one side of one slice of bread.
+&lt;li&gt;spread peanut butter on the other side of the other slice.
+&lt;li&gt;put the sandwich together and eat!
+&lt;/ol&gt;
+
+
+ the result is this:
+
+get two slices of bread, peanut butter, and jelly.
+spread jelly on one side of one slice of bread.
+spread peanut butter on the other side of the other slice.
+put the sandwich together and eat!
+
+
+as you can see, the items are automatically numbered in order.
+
+unordered lists are similar, but aren't numbered.  instead of 
+&lt;ol&gt; and &lt;/ol&gt;,
+use &lt;ul&gt; and &lt;/ul&gt;.  for example:
+
+
+   bread (two slices)
+   jelly
+   peanut butter
+
+
+
+ descriptive lists are a little different: they are used when
+giving lists of items and their descriptions, like in a dictionary.
+the tag for descriptive lists is, predictably, &lt;dl&gt;,
+and each item has a &lt;dt&gt; (term to be defined) and
+&lt;dd&gt; (definition) tag. the example should make the
+usage clear:
+
+
+&lt;dl&gt;
+&lt;dt&gt;this is the first term to be defined
+&lt;dd&gt;this is the definition of that term.
+&lt;dt&gt;piz-za \'pe^-t-se\
+&lt;dd&gt;an open pie made typically of thinly rolled bread dough
+    spread with a spiced mixture (as of tomatoes, cheese, and
+    ground meat) and baked
+&lt;/dl&gt;
+
+
+
+this is the first term to be defined
+this is the definition of that term.
+piz-za \'pe^-t-se\
+an open pie made typically of thinly rolled bread dough spread with
+     a spiced mixture (as of tomatoes, cheese, and ground meat) and baked
+
+
+
+ in all of the different kinds of lists, you are not limited to
+short items.  in fact, they can be as long as you want, and can even
+have multiple paragraphs.
+
+
+   this is an example of some really long items in a list. this text can
+       go on and on and on, for quite some time, really. you get the idea.
+       the next sentence will be a new paragraph, started with &lt;p&gt;.
+
+       surprising, eh? it's another paragraph, with blank space separating
+       it from the previous text, but still indented correctly.
+
+   this item has nothing to do with the previous item, though.
+
+
+
+
+pictures
+
+
+adding pictures to an html document is not difficult. the picture 
+itself must be in gif format, and have a filename that ends in .gif.
+if you have a file in some other format you can make a gif file using a
+utility such as xv or the pbm programs.
+
+ to include an image, use the &lt;img&gt; tag. the usage
+is a little different than the other tags we have seen so far. by
+itself, the &lt;img&gt; tag does nothing; you must use
+the src="" attribute in the tag to specify the name of
+the image.  inside the quotes of the src="", insert the 
+url of the image.
+
+an example:
+
+
+here is a picture of felix: &lt;img src="felix.gif"&gt;
+
+
+here is a picture of felix: 
+
+
+by default, the text was lined up with the bottom of the picture. by using the
+align=middle or align=top attributes, you can change
+this. for instance:
+
+
+felix is the center of all things:&lt;img src="felix.gif" align=middle&gt;
+
+
+felix is the center of all things:
+
+
+felix: &lt;img src="felix.gif" align=top&gt; on top of the world!
+
+
+felix:  on top of the world!
+
+
+another important attribute that you can add to &lt;img&gt;
+tags is alt="". if a browser is not capable of displaying
+graphics, it will instead show any text that you put inside the quotes.
+(lynx, a text-only browser, is an example.)
+if your page would be incomprehensible without the pictures, it is a very
+good idea to use this alternative.
+
+
+&lt;img src="felix.gif" alt="felix"&gt; was quite a skier.
+
+
+ was quite a skier.
+
+
+
+links
+
+ a full explanation of how to create links between documents is
+beyond the scope of this document. however, we can give a quick
+introduction.
+
+
+links, sometimes referred to as "anchors", are specified with the
+&lt;a&gt; tag. like the &lt;img&gt; tag,
+&lt;a&gt; does nothing by itself. the href=""
+attribute specifies the url that the link points to:
+
+
+if you click &lt;a href="link.html"&gt;here&lt;/a&gt;, you will see
+the file "link.html".
+
+
+
+if you click here, you will see the file "link.html".
+
+ as you can see, the text inside the &lt;a&gt; and
+&lt;/a&gt; tags is marked as a link.
+
+
+to create a link using a url, just put the url 
+in the href=""
+part of the anchor. for example, a link and its original html source:
+
+
+the uwcs home page.
+
+
+the &lt;a href="http://www.cs.wisc.edu/"&gt;uwcs home page&lt;/a&gt;.
+
+
+
+another attribute for &lt;a&gt; is the 
+name="" attribute.
+this attibute specifies that the text within the anchor should be
+associated with a name. other links may jump directly to that anchor by
+specifying theurl#name as a target. for example, i might
+surround the heading for chapter 3 of my book with the anchor
+&lt;a name="chapter3"&gt;chapter three&lt;/a&gt;
+
+then, from anywhere else in the document, i could provide a link to chapter 3
+by writing
+&lt;a href="#chapter3"&gt;jump to chapter 3&lt;/a&gt;
+
+
+if felix had a book with the url 
+http://www.cs.wisc.edu/~felix/book.html,
+any document could jump to chapter 3 of the book by specifying
+&lt;a href="http://www.cs.wisc.edu/~felix/book.html#chapter3"&gt;
+chapter 3 of felix's book&lt;/a&gt;
+
+
+
+other tags
+
+
+there are a number of other tags, more and less useful. a quick survey:
+
+
+ &lt;pre&gt;
+ preformatted text: rendered in a monospace font. unlike most html,
+     white space is significant. tags are still honored, though.
+     this style is useful for tables of information, since tabs work.
+
+ &lt;listing&gt;
+ similar to &lt;pre&gt;, but in a smaller size.
+     meant for program listings. supposedly, embedded tags are ignored.
+
+ &lt;blockquote&gt;
+ indented text, meant for long quotes from other material.
+
+ &lt;address&gt;
+ address formatting--different browsers give different results.
+     use the &lt;br&gt; code for multiple lines.
+
+
+
+some other tags are of not very useful, since no one seems to know
+exactly what they should be used for:
+
+
+ &lt;dfn&gt;
+ definition
+
+ &lt;cite&gt;
+ citation
+
+ &lt;code&gt;
+ html codes?
+
+ &lt;kbd&gt;
+ keys on a keyboard, like return.
+
+ &lt;samp&gt;
+ sample codes?
+
+ &lt;var&gt;
+ variable names
+
+
+
+
+other sources of information
+
+ by now, you should have a good idea of what html is all about, and
+you should be able to create your own html documents.
+if you want to see more, we have links to other more complete sources 
+of information here.  or, you might
+want to read some of our other documents.
+
+
+ 
+
+an introduction to html
+an introduction to html
+an introduction to html
+an introduction to html
+an introduction to html
+an introduction to html
+an introduction to html
+an introduction to html
+an introduction to html
+an introduction to html

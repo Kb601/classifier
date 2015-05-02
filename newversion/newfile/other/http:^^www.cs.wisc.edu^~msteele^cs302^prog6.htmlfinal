@@ -1,0 +1,279 @@
+cs 302 program 6
+
+
+
+
+
+cs 302 program 6
+section 10
+
+due date:  monday, november 11  (see 
+program 6 hand-in dates special information)
+
+  
+
+the phone service 1-800-doctors has decided to expand their business.
+in addition to their usual service of finding doctors, they will now find
+people dentists and hair dressers as well, and even make the appointments
+for them.  they need to be able to save all of this information, though,
+and everyone is sick and tired of writing stuff down on paper and killing
+trees.  obviously, the information needs to be stored in a computer.
+believe it or not, this is where you come in. 
+
+you need to write a program that will fill up to three appointments at the
+users request (doctor, dentist, hair).  for each appointment it should
+first ask the user if they want to make that particular appointment.  if
+they do, you should then ask for the relevent time information (month,
+day, hour, minute).  after all  appointments have been made, you should
+print out the user's appointments, with the time either in military or
+standard format (you should ask which they want for each).
+
+
+
+a typical run of the program would look something like this:
+
+
+
+do you want to make a doctor's appointment? y
+enter the month (1-12): 1
+enter the day of the month (1-30): 15
+enter the hour (0-23): 18
+enter the minute (0-59): 0
+
+do you want to make a dental appointment? n
+
+do you want to make a hair appointment? y
+enter the month (1-12): 3
+enter the day of the month (1-30): 13
+enter the hour (0-23): 13
+enter the minute (0-59): 13
+
+doctor's appointment:
+military (m) or standard (s) time? s
+---------------------------------------------------
+the appointment is on monday, january 15 at 6:00 pm.
+---------------------------------------------------
+
+hair appointment:
+military (m) or standard (s) time? m
+---------------------------------------------------
+the appointment is on wednesday, march 13 at 13:13.
+---------------------------------------------------
+
+
+
+
+
+there are lots of variables needed to store the information for an
+appointment.  they are as follows:
+
+the month: the month of the year (jan, feb, mar, ..., dec -- 
+	must be an enumerated type)
+the day of month: the day of the month (to make your life
+	easier, all months of the year will have 30 days, so this should
+	be an integer with legal values of 1-30)
+the day of week: the day of the week (mon, tue, ..., sun -- 
+	must be an enumerated type)
+the hour of day: the hour of the day (appointments are stored
+	in military time, so this will be an integer between 0 and 23
+	where the 0th hour is between midnight and 1 am)
+the minute of hour: the minute of the hour (this is an integer
+	between 0 and 59 -- this can not be 60!!!)
+filled: whether or not the data for this appointment has been
+	set (must be an enumerated boolean type)
+
+
+
+there are six variables in all.  since we are storing three different
+appointments, this would mean 18 variable declarations.  also, it would be
+nice if we could have our own set of functions just for appointments and
+be able to protect the appointment data from other parts of the program.
+the sane solution to these potential problems is to define and implement
+an appointment class.  we will then not only get away with only three
+declarations of appointment objects, but will have a nicely modularized
+program.
+
+
+as stated above, you should define an appointment class.  it must contain
+the six variables for storing the appointment information.  it should also
+contain the following functions:
+
+
+appointment (public)
+
+this is the constructor
+it should initialize filled to false to indicate that the
+	appointment has not been set yet 
+
+
+set_day (private)
+
+ this function will set the day of week variable based upon the
+	current month and day of month 
+you can assume that january 1 is a monday and that all months have
+	exactly 30 days
+since we are dealing with classes, this should not need to have any
+	formal parameters and should not need to return anything
+
+
+read_app (public)
+
+this function will fill all of the necessary appointment information 
+it should first prompt for and read in the month, day of
+	month, hour, and minute and make sure that they 
+	all have legitimate values
+the hour should be read in military format
+the month should be read in as an int and then type cast to the month
+	enumerated type
+it should then set the day of week (by calling set_day
+	-- thus, read_app should not prompt the user for the day
+	of the week)
+it should then set filled to indicate that the appointment has been set
+
+
+is_filled (public)
+
+should return true if the current object's appointment has been set
+	and false otherwise
+this function is necessary because the filled variable is private
+	and can not be accessed by the caller
+
+
+print_mil_time (private)
+
+this function will print the time in military (24 hour) format
+this should not require any parameters and does not need to return
+	anything
+
+
+print_stan_time (private)
+
+this function will print the time in standard (12 hour) format
+this should not require any parameters and does not need to return 
+	anything
+remember that midnight is 12am, noon is 12pm.
+
+
+write_app (public)
+
+this function will write out the appointment information
+it should ask if the user wants the time printed in military or
+	standard format and do appropriate error checking (you will
+	probably want a function to do this)
+it should then print out the day of week, the month, the
+	day of month
+the entire name of the month should be written, not just the 
+	number
+it should then print the time in the format the user requests (by
+	calling one of the two private time print functions)
+
+
+
+main should not be able to harm any of the class's data, so all variables
+int the class must be made private.  the constructor function, 
+appointment must be made public (this is a hard and fast rule of
+constructors).  also, the functions read_app, write_app,  and
+is_filled are all called by main and should be made public.  no
+other functions are needed outside the class and the remaining
+functions must therefore remain private.
+
+
+the main part should be relatively simple.  the first thing you need to do
+is declare three objects of type appointment.  for each appointment, you
+should prompt if the user wants to fill that particular appointment (e.g.
+doctor's). if so, call read_app to fill the necessary information.
+after this is done for all three appointments, you should print out each
+appointment that is set (this should be checked by calling   
+is_filled) in a manner similar to the example.
+
+suggestions/final notes
+notice that in both main and within one of the class functions, we have
+the need to read in a character for a yes/no type question and do error
+checking.  this is something that should be done within a function.
+
+when writing a class, it often looks messy to have all of your 
+preconditions and postconditions in the class definition.  what you
+can do instead is the following: 
+in the class definition, next to the prototypes for each member
+function, write a short description (a line or so) of the function.
+above the function definitions for each member function, write a 
+more detailed explanation of how the function works.  it might be a good
+idea to write formal preconditions and postconditions, but if you have
+a less formal description which still thoroughly describes what all of
+the parameters are, what the function returns, and what the function
+does, i'll accept that as well.
+
+
+as far as organizing your program, my suggestion is to have the enumerated
+types, the class definition, and any function prototypes near the top
+of the program, follwed by a divider, follwed by the main section
+of your code, followed by any auxiliary functions which are not class
+member functions, followed by another divider, followed by your
+class member function definitions.  by a "divider," i mean a comment
+something like this:
+
+
+/**********************************************************************
+ *                                                                    *
+ *              member functions for appointment class                *
+ *                                                                    *
+ **********************************************************************/
+
+or
+
+// ----------------------  appointment class  -------------------------
+// ----------------------  member functions   -------------------------
+
+or
+any other way you can come up with to visually separate one section of
+your program from another. 
+
+extra vertical space in addition to (not in place of) a dividing
+line is an excellent idea too.
+
+
+what to turn in
+as usual, i only want both the electronic submission and the printed copy of 
+your source code (the .cpp file).  also turn in a printed copy of at least
+one sample run of your program which demonstrates that your program works.
+
+
+
+
+ click here to
+return to the cs 302 section 10 projects page
+last modified wed nov 6, 1996 by mike steele (msteele@cs.wisc.edu)
+
+
+
+
+
+
+cs 302 program 6
+
+
+cs 302 program 6
+
+
+cs 302 program 6
+
+
+cs 302 program 6
+
+
+cs 302 program 6
+
+
+cs 302 program 6
+
+
+cs 302 program 6
+
+
+cs 302 program 6
+
+
+cs 302 program 6
+
+
+cs 302 program 6

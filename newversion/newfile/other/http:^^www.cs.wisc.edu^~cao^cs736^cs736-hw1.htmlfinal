@@ -1,0 +1,73 @@
+cs 736 assignment #1 (spring 96)
+
+
+
+ cs 736 assignment #1 (spring 96)
+
+here is an informal description of assignment #1.
+
+step 1: 
+download lmbench from here; 
+unpack it, /bin/sh each part;
+build the benchmark and run it, get results; 
+
+step 2: 
+read the benchmark source and documents;
+
+step 3: 
+build and run lmbench on a different operating system;
+
+step 4: 
+write your own routine measuring the following:
+
+how long does it take to do an integer add op?  (doesn't have
+   to be complicated; you can ignore pipeline or other hardware details.)
+how long does a null procedure call take?  vary the number of arguments passed;
+measure system call latency using three different system calls other than write;
+measure context switch overhead using semaphores, instead of pipes;
+measure signal handling cost (hint. you can use mprotect);
+measure page fault handling cost for zero-filled pages, instead of mmaped pages;
+measure file open/close, creation/deletion latency in directories containing
+	16, 64, 256 and 1024 files, on local file systems and afs or nfs file
+	systems;
+measure the latency of file read/write using different approaches:
+	. unix read/write system call;
+	. stream io library (i.e. stdio);
+	. mmap;
+   vary the size of each read/write.
+
+write a simulator for memory server using tcp/ip and udp/ip, in which the
+	the client send a request asking for certain buffer page, and the
+	server respond by sending out a page.  measure the latency of such
+	operations, for page sizes of 4k, 8k and 32k bytes.
+with two or more clients simultaneously asking for service from the
+    simulated memory server, measure the average response time of page requests.
+
+
+step 5:
+read the log-structured file system paper (rosenblum & ousterhout), 
+section 5.1, reproduce the microbenchmark results on sun os.
+
+bonus points:
+measure anythings that interests you, and report your results.
+
+
+
+what to submit:
+a brief description of what you measured, and how you did it;
+a list of your results; use graphs when appropriate;
+the benchmark routines, with a makefile showing how to build and run them.
+
+
+
+
+ cs 736 assignment #1 (spring 96)
+ cs 736 assignment #1 (spring 96)
+ cs 736 assignment #1 (spring 96)
+ cs 736 assignment #1 (spring 96)
+ cs 736 assignment #1 (spring 96)
+ cs 736 assignment #1 (spring 96)
+ cs 736 assignment #1 (spring 96)
+ cs 736 assignment #1 (spring 96)
+ cs 736 assignment #1 (spring 96)
+ cs 736 assignment #1 (spring 96)

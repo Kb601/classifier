@@ -1,0 +1,98 @@
+class projects
+
+
+
+class projects
+
+vlsi systems design 
+(cs 755)
+
+
+co-designed and simulated a chip implementing a directory controller for 
+a shared-memory multiprocessor.  the design was performed at gate and 
+standard-cell level, using the m gate-level-expression language and the 
+autologic logic-synthesis tool suite from mentor graphics.
+
+(with
+shubu mukherjee,
+subbarao palacharla,
+and
+steve reinhardt)
+
+
+uniprocessor computer architecture 
+(cs 752)
+
+
+evaluated the efficacy of the named-state register file (nsrf) from mit.
+essentially a cache for
+registers belonging to many different contexts, the nsrf was designed for
+a multithreaded parallel computer, replacing the fixed number of separate
+register files present in a typical multithreaded architecture.  in this
+project, we examined the utility of the nsrf for a uniprocessor
+running several unrelated contexts.  our simulation strategy 
+involved extracting the register references from a number of running
+programs and passing the references to a cache simulator.  evaluation 
+involved varying the number of contexts, time-slice length, nsrf size, 
+and nsrf associativity, and determining the resultant miss ratios.
+
+(with
+jignesh patel)
+
+
+parallel computer architecture
+(cs 757)
+
+
+measured the performance of various implementations of software 
+synchronization methods both for shared-memory multiprocessors (locks 
+and barriers) and for message-passing multicomputers (barriers only).
+evaluation involved measuring the performance of synchronization kernels
+on a sequent symmetry multiprocessor and on an intel ipsc/2 multicomputer.
+
+(with po-yung chang)
+
+
+parallel computing and computational science 
+(cs 838)
+
+
+parallelized the nas parallel benchmark applu, a computational-fluid-
+dynamics simulation code, porting it to data-parallel cm-fortran for the 
+cm-5 and porting it to the sequent symmetry.  evaluation involved running
+sequential and parallel versions of the code and measuring its speedup 
+for varying numbers of processors.
+
+(with james puthukattukaran and phil stephenson)
+
+
+database design
+(cs 564)
+
+
+implemented major components of a database management system given a 
+specification; components implemented included a paged-file layer, an 
+unordered-file layer, an access-methods layer (b-tree implementation), 
+and a front-end layer that interprets sql commands.
+
+(with olubunmi odumade)
+
+
+back to my home page
+
+
+ last updated: october 15, 1995
+
+
+
+
+class projects
+class projects
+class projects
+class projects
+class projects
+class projects
+class projects
+class projects
+class projects
+class projects

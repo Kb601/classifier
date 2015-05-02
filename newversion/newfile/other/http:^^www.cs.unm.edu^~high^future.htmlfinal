@@ -1,0 +1,78 @@
+future directions
+
+
+engines for emergent intelligence
+evolutionary techniques
+
+
+
+ 
+
+engines for emergent intelligence
+
+
+
+attempts to create machines exhibiting intelligent behavior can be roughly
+sorted along a continuum between symbolic artificial intelligence (sai) and
+connectionist artificial intelligence (cai).  
+symbolic ai is a
+top-down approach to the engineering of intelligent behavior.  
+the physical-symbol hypothesis of newell and simon
+(1972) suggests (correctly, i believe) that human
+thought can be fully described in terms of the manipulation of abstract
+symbols, embodied as states in the physical world.  the common 
+(mis)interpretation
+(incorrect, i believe) is that symbols are discrete entities like those
+found in computer programming languages (e.g. object = bird, color = blue).
+this is a bias due to both the computer scientist's special 
+perceptual system but also the basic human perceptual system.
+that mind has a physical basis is apparent.
+that this physical basis can be construed as a processing of physical
+symbols seems acceptable, but only if we allow a loose
+definition of the word "symbol."
+
+
+more...
+
+the importance of learning
+the brittle, unlearning nature of discrete symbols
+the learning power of connectionism
+
+
+the importance of structural composabiliy
+the uncomposability of connectionism
+
+
+the emergent synthetic alternative
+
+
+
+
+
+
+ 
+
+evolutionary techniques
+
+
+
+
+
+
+genetic algorithms versus artificial evolution,
+
+
+
+
+evolving complex computational systems,
+  
+  harvey's method for evolving neural networks (nn)
+  gruau's method for evolving nn construction programs
+  koza's genetic "programming" 
+  learning classifier systems
+  
+
+
+
+
+complex genotype to phenotype mappings

@@ -1,0 +1,470 @@
+cs 110 section 2 lecture notes - week 2
+
+
+
+
+ lecture notes - week 2
+
+
+
+
+   topic:
+   program structure.  constants and variables.  arithmetic expressions.  the assignment statement.  built-in functions.  unformatted input and output.  errors.
+
+   text:
+   chp. 2.1 - 2.8
+
+   notes:
+   
+
+   
+
+   
+   fortran line structure
+   
+
+   
+      fortran programs are composed of lines, with one statement per line.
+      each line has four sections:
+         
+            column 1 is the comment field.
+            columns 2-5 is the line label.
+            column 6 is the continuation marker.
+            columns 7-72 is the actual fortran statement.
+         
+
+         
+	 1 2 3 4 5 6 7 8 9 10 11 12 13 14 ... 72
+	+-+-------+-+---------------------------+
+	 c  label  +         statement
+	
+   
+
+   comment field
+   
+      comments are indicated by having a "c" (or "*") in column 1.
+      comments take up the whole line. everything on the line is ignored by the compiler.
+      comments explain what your program code is doing in plain english.
+      
+	 c compute the total cost from the
+	 c unit cost and quantity ordered
+	       totcst = untcst * quanty
+      
+   
+
+   continuation marker
+   
+      if a statement is too long to fit in the 72 columns then it can be split over two or more lines.
+      put a "+" in column 6 to indicate that the line is a continuation of the previous line.
+      
+	 c display the total cost
+	       print *, 'the total cost is',
+	      +          totcst, 'dollars'
+      
+   
+
+   fortran statements
+   
+      all your fortran statements must start in at least column 7 (helpful hint: change your tab setting to 6 characters).  do not write any fortran statements starting in columns 1 to 6.
+      right:
+      
+	  1 2 3 4 5 6 7 8 9 10 11 12 13 14 ... 72
+	 +---------+-+---------------------------+
+	              totcst = untcst * quanty
+      
+      wrong:
+      
+	  1 2 3 4 5 6 7 8 9 10 11 12 13 14 ... 72
+	 +---------+-+---------------------------+
+	  totcst = untcst * quanty
+      
+      anything past column 72 is ignored by the compiler.  if your lines are too long then split them over two lines with a continuation marker.
+   
+
+   
+
+   
+   fortran program structure
+   
+   
+      all fortran programs have the same overall structure:
+      
+	 program header
+	 variable declarations
+         main executable section
+         stop
+         end
+      
+   
+
+   program header
+   
+      gives the name of the program.
+         
+	      program enciph
+         
+   
+
+   stop
+   
+      tells the program to stop running and return to ms-dos.
+   
+
+   end
+   
+      tells the compiler that this is the last statement in the program and it should stop compiling.
+   
+
+   
+
+   
+   fortran variables
+   
+
+   variable names
+   
+      variables store important values that your program will use or hold intermediate results.
+      
+	     totcst = untcst * quanty
+      
+      variable names must start with a letter, contain only uppercase letters or digits, and no longer than six characters.
+      right:
+      
+	 totcst, quanty, index2
+      
+      wrong:
+      
+	 totalcost, 2b_or_not_2b
+      
+   
+
+   variable types
+   
+      you must explicitly specify the type of each variable; i.e. what sort of value it will store.
+      the most common variable types are:
+      
+         real - a real number with a decimal point and fractional part.
+         integer - a positive or negative integer number (no decimal places).
+         character - one or more characters (e.g. a word or name).
+      
+   
+
+   variable declarations
+   
+      specify the variable type followed by the variable name(s).
+      
+	      real totcst, untcst
+	      integer quanty
+	      integer index2
+      
+      for character variables you must also specify the maximum length of the character string (optional if just one character long).
+      
+	      character *9 name
+	      character char
+      
+      warning: if you don't explicitly specify the type of each variable then it will be declared a default type according to the i-n rule (see pg. 35). you must always explicitly declare every variable.
+   
+
+   constants
+   
+      if the value of a variable is known when you write the program and it never changes (e.g. pi) then turn it into a constant with the parameter statement.
+      
+	      real pi
+	      parameter (pi = 3.141593)
+      
+      a variable turned into a constant cannot be re-assigned a new value later on.
+      the parameter statement immediately follows the variable declaration.
+   
+
+   
+
+   
+   assignment statement
+   
+   
+      to store a value to a variable you have declared use the assignment statement.
+      
+	      variablename = expression
+      
+      the variable is always on the left-hand side of the assignment statement.
+      right:
+      
+	      totcst = untcst * 1.25
+      
+      wrong:
+      
+	      untcst * 1.25 = totcst
+      
+      the variable being assigned can also be part of the expression on the right-hand side.
+      
+	      count = count + 1
+      
+      first, the whole expression is evaluated to get the result, then the result is stored in the variable.
+      the assignment statement does not mean variable equals expression but rather variable gets-assigned-the-value-of expression.  this is a subtle but important difference.
+   
+
+   
+
+   
+   arithmetic expressions
+   
+
+   aritmetic operators
+   
+      fortran supports all the standard mathematical operators:
+      
+         * - multiplication
+         / - division
+         + - addition
+         - - subtraction
+         and also
+         ** - exponential (e.g. b^2 is written as b**2)
+      
+      example: translate the following quadratic equation into fortran
+      
+         2x^2 - 5x + 7 = y
+      
+      is written as
+      
+	      y = 2*x**2 - 5*x + 7
+      
+   
+
+   operator precedence
+   
+      operators are evaluated in order of their precedence.  if several operators have the same precedence then they are evaluated left-to-right.
+      
+         first: exponental **
+         second: multiplication * and division /
+         last: addition + and subtraction -
+      
+      to over-ride the default precedence use parenthesis (...)
+      
+	     b - c
+	 a = -----
+	     d - e
+      
+      right:
+      
+	      a = (b - c) / (d - e)
+      
+      wrong:
+      
+	      a = b - c / d - e
+      
+      exception: consecutive exponents are evaluated right-to-left. example:
+       
+          y = x^(z^2)
+       
+       can be written as
+       
+	  y = x**z**2
+       
+   
+
+   arithmetic functions
+   
+      fortran has many built-in arithmetic functions (see pg. 64 and appendix a):
+      
+        sqrt - square root
+        sin - sine root
+        cos - cosine
+        tan - tangent
+        exp - e^x
+        alog - natural logarithm
+        alog10 - logarithm base 10
+        nint - round a real number to nearest integer
+      
+      functions can be used in any arithmetic expression.
+      
+	      y = exp(4.5) + tan(x + 2*sqrt(x))
+      
+      the arguments of a function can be either values, variables or even arithmetic expressions and are enclosed in parentheses (...).
+      some functions have more than one argument separated by commas.
+      
+	      a = b + mod(c, 4)
+      
+   
+
+   type matching
+   
+      the type of an expression should match the type of the variable the result is going to be stored in.
+      
+	 integer-variable = integer-expression
+	 real-variable = real-expression
+      
+      if the types mismatch then the expression is automatically converted to match the type of the variable, truncating any decimal places if necessary.
+      
+	 real x
+	 integer i
+
+	 x = 6.6 * 1.6		(10.56)
+	 x = 6.6 / 1.6		(4.1256)
+	 i = 6.6 / 1.6		(10)
+	 i = 6.6 / 1.6		(4)
+      
+      for all the operators, if both the operands are type integer then the result is also type integer.  if either operand is type real then the result is type real.
+
+      warning: with division, if both the operands are type integer then the result is automatically truncated to an integer also!
+      
+	 2.0/3 = 0.66666
+	 2/3   = 0 (!)
+      
+      important:always check the argument and return types for functions so you know whether or not your results will be truncated.
+   
+
+   real numbers
+   
+      real numbers can be written in either decimal or scientific notation.
+      
+         decimal: 12.3	
+         scientific: 0.123e+2 (i.e. 0.1234*10^2)
+      
+      by default real numbers are printed in decimal notation.
+   
+
+   rounding errors
+   
+      numbers are stored inside the computer in binary format (i.e. as powers of 2)
+      
+         10 base 10 = 2^3 + 2^1 = 1010 base 2
+      
+      most fractions cannot be represented precisely in binary (e.g. 0.1) so instead the closest approximimation in base 2 is stored.  therefore, most real numbers are not stored precisely on any computer.
+      
+         0.1 * 10.0 does not equal 1.0 (e.g. = 0.999998)
+      
+      important: always use integer values and variables whenever possible because these are stored precisely. only use real values if you absolutely have to.
+   
+
+   character strings
+   
+      to assign a value to a character variable it must be either another character variable or a string enclosed in single apostrophes.
+      
+	      character *10 name1, name2
+
+	      name1 = 'john doe'
+	      name2 = name2
+      
+      the apostrophes are not stored in the variable.  to store an apostrophe inside and string type in two apostrophes.
+      
+	      name1 = 'john''s dog'			(john's dog)
+      
+      if the string is shorter than the variable then then variable is padded with blanks (denoted by a "#").
+      
+	      name1 = 'john doe'			(john doe##)
+      
+      if the string is longer than the variable then the excess characters are ignored; i.e. the string is truncated.
+      
+	      name1 = 'john doesnt'			(john doesn)
+      
+   
+
+   
+
+   
+   input and output
+   
+
+   unformatted output
+   
+      to display results on the screen use the print statement.
+      
+	      print *, totcst
+      
+      to print multiple items on the same line separate them by commas.
+      
+	      print *, x, ' plus ', y, ' equals ', x+y
+      
+      you can print values, variables, arithmetic expressions or character strings.
+      the next print statement prints on the next line, not on the end of the previous one.
+      always prompt the user before asking him/her to type something in. otherwise when they run your program they will not know that the computer is waiting for them to enter a value.
+      
+	      print *, 'please enter the cost of the item'
+	      read *, untcst
+      
+   
+
+   unformatted input
+   
+      to read in data entered at the keyboard by the user use the read statement.
+      
+	      read *, untcst
+      
+      you always read in a variable you are specifying where the value is to be stored.  you never read in expressions or literal values.
+      the user must press the enter or return key when he/she has finished entering in a line of data at the keyboard.
+      
+	 27enter
+      
+      to read in multiple values entered on the same line specify several variable separate by commas.
+      
+	      read *, day, month, year
+      
+      if the user enters multiple values on the same line he/she does not separate them by commas but uses spaces instead.
+      
+	 11  20  67enter
+      
+      the values the user types in must be entered in the same order and be the same type as the variables in the read statement.
+   
+
+   reading character strings
+   
+      when reading in character strings from the keyboard the user must surround them by apostrophes.
+      
+	 'gareth bestor'enter
+      
+      this may be undesirable and it can be avoided by using formatted input which we will discuss later (see program #0 for an example).
+   
+   types of errors
+   
+   syntax error: compile time problem. computer has no idea how to
+translate part of your program. misspelling words (starting the first line
+with problam instead of program, for example), using keywords (such as real)
+as variable name, nonsense characters on lines are common examples.
+   semantic error: compile time problem. lines can be translated
+individually, but it doesn't make sense with regard to the entire program. for
+example, typing implicit none and then trying to use a variable name not
+delcared yet.
+   run-time error: run-time problem. everything translates fine, but when
+running there are certain steps the computer itself cannot do. saying y = z/0,
+for example, is a legal statement but the computer cannot divide by 0. it will
+compile, but fail running when the program reached this point.
+   line-position error: can be any type of error, or none. occurs when
+line rules not obeyed. can result in many things; example, if we had
+
+read *,......ad nauseum,b,c
+
+and the b was on the 72nd column, rest of the line would be ignored, and
+you'd still have a legal statement (not reading in c may cause a problem later
+in the program, though). if the b was on the 71st column, however, then only
+the c would be ignored, and you'd have a syntax error (read cannot end with a
+comma). 
+   logical error: occurs at run-time (sort of). nothing wrong with the
+program, but it's not doing what you wanted. the computer is doing just what
+it's told, but you've written the program incorrectly. the hardest and most
+annoying to correct (and why it's important to have the algorithm correct in
+your head and on paper before you start typing it in)  
+   
+
+
+
+
+
+
+
+copyright &copy 1996 modified from gareth s. bestor (bestor@cs.wisc.edu).  last modified september 16, 1996.
+
+
+
+
+
+
+cs 110 section 2 lecture notes - week 2
+cs 110 section 2 lecture notes - week 2
+cs 110 section 2 lecture notes - week 2
+cs 110 section 2 lecture notes - week 2
+cs 110 section 2 lecture notes - week 2
+cs 110 section 2 lecture notes - week 2
+cs 110 section 2 lecture notes - week 2
+cs 110 section 2 lecture notes - week 2
+cs 110 section 2 lecture notes - week 2
+cs 110 section 2 lecture notes - week 2

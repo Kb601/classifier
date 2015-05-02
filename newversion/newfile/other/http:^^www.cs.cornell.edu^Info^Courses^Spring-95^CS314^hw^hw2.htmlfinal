@@ -1,0 +1,82 @@
+cs 314: homework number 2  
+
+
+
+
+ homework number 2 
+
+
+date assigned:   february 7, 1995
+date due:   february 14, 1995
+
+ to submit your answer 
+send an email message to cs314@cs.cornell.edu with the
+subject cs314 assignment 2 answers and the answers to the
+following questions. label each answer with the problem number and part
+(e.g., 1a, 1b, etc)
+
+problem 1 
+convert the following decimal numbers into the indicated bases:
+
+    a.  333 into binary
+    b.  1861 into binary
+    c.  1861 into hexadecimal
+    d.  275 into binary
+    e.  1336 into octal
+    f.  453 into octal
+    g.  577 into binary
+    h.  1713 into octal
+    i.  940 into hexadecimal
+    j.  63 into hexadecimal
+
+
+problem 2
+assume that the computer is initialized using the data given below.
+(all values are decimal).  for each of the following machine
+instructions, indicate what registers change (if any) and what value
+they receive, and/or what memory locations are changed and what value
+it receives. each question is independent of the others and starts
+with the initial values given above. if an instruction is illegal
+say so and indicate why. report all values in decimal. don't tell us
+what happens to the condition code bits.
+
+
+--------------------------------------
+address      value  address      value  
+0            10     10           -2     
+2            6      12           -4     
+4            4      14           -6     
+6            2      16           -10    
+8            0      18           -12    
+                                        
+register a0  6      register d0  20     
+register a1  10                         
+-----------------------------------------
+
+    instruction              what it does  
+a.  move.l #6,a0                           
+b.  move.w (a0)+,d0                        
+c.  asl.l #2,d0                            
+d.  muls.l #2,d0                           
+e.  move.w 4(a0),d0                        
+f.  add.l -15(a0,d0),d0                    
+g.  move.l -16(a1,d0),-(a0)                
+h.  divs.w #6,d0                           
+i.  andi #ff,sr                            
+-----------------------------------------
+
+
+
+
+
+
+ cs 314: homework number 2  
+ cs 314: homework number 2  
+ cs 314: homework number 2  
+ cs 314: homework number 2  
+ cs 314: homework number 2  
+ cs 314: homework number 2  
+ cs 314: homework number 2  
+ cs 314: homework number 2  
+ cs 314: homework number 2  
+ cs 314: homework number 2

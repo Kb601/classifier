@@ -1,0 +1,650 @@
+oceans: bibtex database 
+
+
+
+
+
+oceans bibtex database
+
+
+
+
+     publications of the oceans group
+
+     technical reports of the oceans group
+
+     publications referencing or referenced by the oceans group
+
+
+
+
+
+% 
+% publications of the oceans group 
+%
+
+@inproceedings{bestavros:95f,
+  author={azer bestavros and robert carter and mark crovella and
+                  carlos cunha and abdelsalam heddaya and sulaiman
+                  mirdad}, 
+  booktitle={ieee sdne'96: the second international workshop on
+                  services in distributed and networked environments}, 
+  title={application level document caching in the internet}, 
+  address={ whistler, british columbia}, 
+  month="june",
+  year=1995
+}
+
+@inproceedings{crovella:95b,
+  title={dynamic server selection in the internet},
+  author={mark crovella and robert carter},
+  booktitle={in proceedings of the third ieee workshop on the
+                  architecture and implementation of high 
+       performance communication subsystems (hpcs'95)},
+  month={august},
+  year=1995
+}
+
+@misc{bestavros:95r,
+  title={information dissemination and speculative service: two
+                  candidate functionalities for the middleware infrastructure},
+  author={azer bestavros}, 
+  note={sigcomm'95: workshop on middleware, cambridge, ma}, 
+  month={august},
+  year=1995
+}
+
+@misc{heddaya:95a,
+  title={wave: wide-area virtual environment for distributing
+                  published documents},  
+  author={abdelsalam heddaya and sulaiman mirdad}, 
+  note={sigcomm'95: workshop on middleware, cambridge, ma}, 
+  month={august},
+  year=1995
+}
+
+@inproceedings{bestavros:95o,
+  author={azer bestavros}, 
+  booktitle={proceedings of the acm/iasted/ismm international
+                  conference on distributed multimedia systems and
+                  applications}, 
+  title={demand-based data-dissemination in distributed multimedia
+                  systems}, 
+  address={stanford, ca}, 
+  month="august",
+  year=1995
+}
+
+@inproceedings{bestavros:95p,
+  author={azer bestavros}, 
+  booktitle={proceedings of spdp'95: the $7^{th}$ ieee symposium on parallel
+                  and distributed processing}, 
+  title={demand-based document dissemination to reduce traffic and
+                  balance load in distributed information systems}, 
+  address={san anotonio, texas}, 
+  month="october",
+  year=1995
+}
+
+@inproceedings{bestavros:95q,
+  author={azer bestavros}, 
+  booktitle={proceedings of cikm'95: the $4^{th}$ acm international
+                  conference on information and knowledge management}, 
+  title={using speculation to reduce server load and service time on
+                  the www}, 
+  address={baltimore, maryland}, 
+  month="november",
+  year=1995
+}
+
+@inproceedings{bestavros:96a,
+  author={azer bestavros}, 
+  booktitle={proceedings of icde'96: the 1996 international conference
+                  on data engineering}, 
+  title={speculative data dissemination and service to reduce server load,
+      network traffic and service time for distributed information systems}, 
+  address={new orleans, louisiana},
+  month={march}, 
+  year=1996
+}
+
+@inproceedings{crovella:96a,
+  author = "mark crovella and azer bestavros",
+  title = "self-similarity in world wide web traffic: evidence and
+           possible causes", 
+  booktitle = "proceedings of sigmetrics '96",
+  year  = "1996"
+}
+
+@inproceedings{bestavros:96h,
+ author = {azer bestavros}, 
+ title = {middleware support for data mining and knowledge discovery 
+             in large-scale distributed information systems}, 
+ booktitle = {sigmod'96 data mining workshop}, 
+ address = {montreal, canada}, 
+ month={june},
+ pages={(to appear)},
+ year=1996
+}
+
+@inproceedings{almeida:96a, 
+   author={virgilio almeida and azer bestavros and mark crovella and
+   adriana de oliveira}, 
+   title={{characterizing reference locality in the www}}, 
+   booktitle = {proceedings of pdis'96: the ieee conference on
+                  parallel and distributed information systems}, 
+ address = {miami beach, florida},
+ month={december},
+ year=1996
+}
+
+@article{bestavros:96p,
+  author={azer bestavros and carlos cunha}, 
+  title={{server-initiated document dissemination for the www}}, 
+  journal={ieee data engineering bulletin},
+  month={september}, 
+  year=1996
+}
+
+% 
+% technical reports of the oceans group 
+%
+
+@techreport{bestavros:95c,
+  author={azer bestavros and robert carter and mark crovella and
+                  carlos cunha and abdelsalam heddaya and suliman
+                  mirdad}, 
+  institution={boston university, cs dept},
+  number={tr-95-002},
+  address={boston, ma 02215},
+  title={application level document caching in the internet}, 
+  month="january",
+  year=1995
+}
+
+@techreport{bestavros:95e,
+  author={azer bestavros}, 
+  institution={boston university, cs dept},
+  number={tr-95-003},
+  address={boston, ma 02215},
+  title={demand-based document dissemination for the world wide web}, 
+  month="february",
+  year=1995
+}
+
+@techreport{cunha:95a,
+  author={carlos cunha and azer bestavros and mark crovella}, 
+  institution={boston university, cs dept},
+  number={tr-95-010},
+  address={boston, ma 02215},
+  title={characteristics of www client-based traces}, 
+  month="april",
+  year=1995
+}
+
+@techreport{bestavros:95g,
+  author={azer bestavros and carlos cunha}, 
+  institution={boston university, cs dept},
+  number={tr-95-011},
+  address={boston, ma 02215},
+  title={a prefetching protocol using client speculation for the www}, 
+  month="april",
+  year=1995
+}
+
+@techreport{bestavros:95h,
+  author={azer bestavros}, 
+  institution={boston university, cs dept},
+  number={tr-95-006},
+  address={boston, ma 02215},
+  title={using speculation to reduce server load and service time on
+                  the www}, 
+  month="april",
+  year=1995
+}
+
+
+@techreport{cai:95a,
+  author={patrick cai and azer bestavros}, 
+  institution={boston university, cs dept},
+  number={tr-95-012},
+  address={boston, ma 02215},
+  title={object-oriented animation on the world wide web}, 
+  month="may",
+  year=1995
+}
+
+
+@techreport{crovella:95a,
+  author={mark crovella and azer bestavros}, 
+  institution={boston university, cs dept},
+  number={tr-95-015},
+  address={boston, ma 02215},
+  title={explaining world wide web traffic self-similarity}, 
+  month="august",
+  year=1995
+}
+
+@techreport{bestavros:96l, 
+   author={virgilio almeida and azer bestavros and mark crovella and
+   adriana de oliveira}, 
+   title={{characterizing reference locality in the www}}, 
+   institution={boston university, computer science department}, 
+   number={bucs-tr-96-011},
+   month={june}, 
+   year=1996
+}
+
+
+%
+% publications referencing or referenced by the oceans group 
+%
+
+@techreport{danzig:93a,
+  author={peter danzig and richard hall and michael schwartz},
+  title={a case for cashing file objects inside internetworks}, 
+  institution="university of colorado at boulder",
+  number="cu-cs-642-93",
+  address={boulder, colorado 80309-430}, 
+  month={march},
+  year=1993
+
+}
+
+@inproceedings{liskov:92a,
+     author =       "barbara liskov and mark day and liuba shrira",
+     title =        "distributed object management in thor",
+     pages =        "1--15",
+     booktitle =    "proc.\ int.\ workshop on distributed object
+                    management",
+     year =         "1992",
+     address =      "edmonton ({c}anada)",
+     month =        aug,
+   }
+
+@misc{nsf:94a,
+  author="michael foster and robert jump",
+  title="{nsf solicitation 94-75}",
+  howpublished="stis database",
+  note="",
+  month="may",
+  year=1994
+}
+
+@techreport{gwertzman:94a,
+  author={james gwertzman and margo seltzer},
+  title={the case for geographical push-caching},
+  institution={harvard university, das},
+  number={hu tr-34-94 (excerpt)},
+  address={cambridge, ma 02138},
+  year=1994
+}
+
+@inproceedings{claffy:94a,
+  author={kimberly claffy and hans-werner braun}, 
+  title={web traffic characterization: an assessment of the impact of
+                  caching documents from ncsa's web server}, 
+  booktitle = {electronic proceedings of the second world wide web
+                  conference '94: mosaic and the web}, 
+  url = {http://www.ncsa.uiuc.edu/sdg/it94/proceedings/dday/claffy/main.html}, 
+  year=1994
+}
+
+@inproceedings{sedayao:94a,
+  author={jeff sedayao}, 
+  title={"mosaic will kill my network!" - studying network traffic
+           patterns of mosaic use}, 
+  booktitle = {electronic proceedings of the second world wide web
+                  conference '94: mosaic and the web}, 
+  url = {http://www.ncsa.uiuc.edu/sdg/it94/proceedings/dday/sedayao/mos_traf_paper.html},
+  year=1994
+}
+                  
+@inproceedings{pitkow:94a,
+  title={a simple yet robust caching algorithm based on dynamic access patterns},
+  author={jim pitkow and mimi recker},
+  booktitle = {electronic proceedings of the second world wide web
+                  conference '94: mosaic and the web}, 
+  url = {http://www.ncsa.uiuc.edu/sdg/it94/proceedings/dday/pitkow/caching.html},
+  year=1994
+}
+
+@inproceedings{padmanabhan:94a,
+  title={improving http latency}, 
+  author={venkata padmanabhan and jeffrey mogul}, 
+  booktitle = {electronic proceedings of the second world wide web
+                  conference '94: mosaic and the web}, 
+  url={http://www.ncsa.uiuc.edu/sdg/it94/proceedings/dday/mogul/httplatency.html},
+  year=1994
+}
+                  
+@misc{gwertzman:95a,
+  author={james gwertzman}, 
+  title={autonomous replication in wide area networks}, 
+  note={senior thesis, harvard university, das},
+  address={cambridge, ma 02138},
+  year=1995
+}
+
+@inproceedings{gwertzman:95b,
+  author={james gwertzman and margo seltzer},
+  title={the case for geographical push caching},
+  booktitle={in proceedings of hotos'95: the fifth ieee workshop on
+     hot topics in operating systems}, 
+  address={washington},
+  year=1995,
+  month={may},
+}
+
+@inproceedings{gwertzman:96a,
+  author={james gwertzman and margo seltzer},
+  title={world wide web cache consistency}, 
+  booktitle={in the proceedings of 
+    the 1996 usenix technical conference},
+  address={san diego, ca},
+  year=1996,
+  month={january},
+}
+
+
+@misc{worrell:94a,
+  author={k. worrell}, 
+  title={invalidation in large scale network object caches}, 
+  note={master's thesis, university of colorado, boulder},
+  year=1994
+}
+
+@inproceedings{cate:92a,
+  author = "v. cate",
+  title = "alex --- a global filesystem",
+  booktitle = "proceedings of the 1992 usenix file system workshop",
+  address={ann arbor, mi},
+  month={may},
+  year = "1992"
+}
+
+@article{satyanarayanan:90a,
+  author = "m. satyanarayanan and j. kistler and p. kumar and
+            m. okasaki and e. siegel and d. streere",
+  title = "coda: a highly available file system for distributed
+           workstation environments",
+  journal = "ieee transactions on computers",
+  year = "1990",
+  volume = "39",
+  number = "4",
+  month = "april"
+}
+
+@phdthesis{blaze:93a,
+  author = "matthew addison blaze",
+  title = "caching in large scale distributed file systems",
+  school = "princeton university",
+  year = "1993",
+  month = "january"
+}
+
+@inproceedings{standberg:85a,
+  author = "r. sandber and d. goldberg and s. kleiman and
+            d. walsh and b. lyon",
+  title = "design and implementation of the sun network file
+           system",
+  booktitle = "proceedings of usenix  summer conference",
+  year = "1985"
+}
+
+@article{morrisschrs:86a,
+    author      = "j.h. morris and m. satyanarayanan and m.h. conner
+                   and j.h. howard and d.s.h. rosenthal and f.d.
+                   smith",
+    title       = "andrew: a distributed personal computing
+                   environment",
+    journal     = "comm. acm",
+    volume      = "29",
+    number      = "3",
+    month       = "mar.",
+    year        = "1986",
+    pages       = "184--201"
+}                 
+
+
+@techreport{acharya:93a,
+  author =     "swarup acharya and stanley b. zdonik",
+  title =      "an efficient scheme for dynamic data replication",
+  institution =  "brown university",
+  year =       1993,
+  number =     "cs-93-43",
+  address =    "providence, rhode island 02912",
+  month =      "september"
+}
+
+@inproceedings{papadimitriou:94a,
+  author =     "christos h. papadimitriou and srinivas ramanathan and p.
+                venkat rangan", 
+  title  =     "information caching for delivery of personalized 
+                video programs on home entertainment channels",
+  booktitle =  "proceedings of the international confrence on multimedia
+                computing and systems",
+  year   =     1994,
+  month =      "may",
+  pages =      "214--223"
+}
+
+@inproceedings{muntz:92a,
+  author = "muntz, d. and honeyman, p.",
+  title =      "multi-level caching in distributed file systems or your
+                cache ain't nuthing but trash ",
+  pages = "305--313",
+  booktitle = "proceedings of the winter 1992 usenix",
+  year = "1992",
+  month = "january"
+}
+
+@inproceedings{dahlin:94a,
+  author =     "michael d. dahlin and randolph y. wang and thomas
+                e. anderson and dacid a. patterson",
+  title =      "cooperative caching: using remote client memory to
+                improve file system performance",
+  optvolume =          "",
+  optnumber =          "",
+  optseries =          "",
+  pages =      "267--280",
+  booktitle = "first symposium on operating systems design and
+                implementation (osdi)",
+  year =       "1994"
+}
+
+@inproceedings{arlitt:96a,
+  author={martin arlitt and carey williamson},
+  title={web server workload characterization: the search for
+    invariants}, 
+  booktitle={proceedings of acm sigmetrics'96},
+  adress={philadelphia, pa},
+  month={may},
+  year=1996
+}
+
+@inproceedings{lopez-ortiz:96a, 
+  author={a. lopez-ortiz and daniel m. german}, 
+  title={a multicollaborative push-caching http protocol for the www}, 
+  booktitle = {fifth world wide web 
+    conference (also technical report cs-96-12, dept. of
+    computer science, universtiy of waterloo, 1996.)}, 
+ month={january},
+ year=1996
+}
+
+@misc{deng:96c, 
+  author={shuang deng and dale veeneman}, 
+  title={a proposed {adsl} data traffic model}, 
+  note={adsl forum}, 
+  month="march",
+  year=1996
+}
+
+@inproceedings{deng:96d, 
+  author={shuang deng}, 
+  title={empirical model of www document arivals at access links}, 
+  booktitle={proceedings of the 1996 ieee international conference on
+                  communication}, 
+  month="june",
+  year=1996
+}
+
+
+@inproceedings{glassman:94a, 
+  title={a caching relay for the world wide web}, 
+  author={steven glassman}, 
+  booktitle={proceedings of the first interntional conference on the
+                  www}, 
+  url={http://www.research.digital.com/src/personal/steve_glassman/cachingtheweb/cachingtheweb.html}, 
+  year={1994}
+}
+
+@inproceedings{markatos:96a, 
+  title={main memory caching of web documents}, 
+  author={evangelos markatos}, 
+  booktitle={proceedings of the fifth interntional conference on the
+                  www}, 
+  year={1996}
+}
+
+@inproceedings{bolot:96a,
+  title={performance engineering of the world wide web: 
+         application to dimensioning and cache design}, 
+  author={jean-chrysostome bolot and philipp hoschka}, 
+  booktitle={proceedings of the fifth interntional conference on the
+                  www}, 
+  url = {http://www5conf.inria.fr/fich_html/papers/p44/overview.html}, 
+  address={paris, france},
+  year=1996
+}
+
+@unpublished{williams:96a,
+   author={stephen williams and marc abrams and charles r. standridge
+                  and ghaleb abdulla and edward a. fox},
+   title={removal policies in network caches for world-wide web
+                  documents },
+   note={http://ei.cs.vt.edu/~succeed/96waasf1/}, 
+   year=1996
+}
+
+@techreport{recker:94a,
+  author={mimi m. recker and james e. pitkow}, 
+  title={predicting document access in large, multimedia
+       repositories},
+  institution={georgia tech---graphics, visualization, and usability
+       center},  
+  url={ftp://ftp.gvu.gatech.edu/pub/gvu/tech-reports/94-35a.ps.z},
+  number={technical report vu-git-94-35}, 
+  month={august},
+  year=1994
+}
+
+@inproceedings{abrams:95a,
+  author={marc abrams and charles r. standridge
+                  and ghaleb abdulla and stephen williams and edward a. fox},
+  title={caching proxies: limitations and potentials}, 
+  booktitle={proceedings of the fourth interntional conference on the
+                  www}, 
+  url = {http://ei.cs.vt.edu/~succeed/www4/www4.html}, 
+  address={boston, ma}, 
+  month={december},
+  year=1995
+}
+
+@book{mandelbrot:83a,
+  author = "benoit b. mandelbrot",
+  title = "the fractal geometry of nature",
+  publisher = "w. h. freedman and co.",
+  year = "1983",
+  address = "new york"
+}
+
+@book{zipf:49a,
+  author = "g. k. zipf",
+  title = "human behavior and the principle of least-effort",
+  publisher = "addison-wesley",
+  year  = "1949",
+  address = "cambridge, ma",
+}
+
+@inproceedings{malpani:96a,
+  author={radhika malpani and jacob lorch and david berger}, 
+  title={making world wide web caching servers cooperate}, 
+  booktitle={proceedings of the fourth interntional conference on the
+		  www}, 
+  url = {http://www-plateau.cs.berkeley.edu/people/radhika/scale_new.html}, 
+  address={paris, france},
+  year=1996
+}
+
+@inproceedings{satyanaranayan:96a,
+  author={m. satyanaranayan and m. spasojevic}, 
+  title={{afs} and the {web}: competitors or collaborators}, 
+  booktitle={proceedings of sosp'96}, 
+  year=1996
+}
+
+@inproceedings{chankhunthod:96a, 
+  author={anawat chankhunthod and peter b. danzig and chuck neerdaels
+		  and michael f. schwartz and kurt j. worrell}, 
+  title={a hierarchical internet object cache},
+  booktitle={in the proceedings of 
+    the 1996 usenix technical conference},
+  address={san diego, ca},
+  year=1996,
+  url={http://excalibur.usc.edu/cache-html/cache.html},
+  month={january},
+}
+
+@inproceedings{baentsch:96a,
+  title={introducing application-level replication and naming into
+		  today's web},  
+  author={michael baentsch and georg molter and peter sturm},
+  booktitle={proceedings of the fifth interntional conference on the
+		  www}, 
+  url = {http://www5conf.inria.fr/fich_html/papers/p3/overview.html},
+  address={paris, france},
+  year=1996
+}
+
+@article{deng:96e, 
+  author={shuang deng, alan bugos, and p.m. hill}, 
+  title={design and evaluation of ethernet-based residential network}, 
+  journal={ieee journal on selected areas in communications}, 
+  year=1996
+}
+
+@misc{deng:96b, 
+  author={shuang deng and dale veeneman}, 
+  title={{adsl} data network dimensioning issues}, 
+  note={adsl forum}, 
+  month="march",
+  year=1996
+}
+
+@inproceedings{deng:96a, 
+  author={shuang deng and alan bugos}, 
+  title={access traffic model inferred from www servers}, 
+  booktitle={proceedings of the international conference on
+		  telecommunication systems}, 
+  month="march",
+  year="1996"
+}
+
+
+maintainer: a.bestavros
+created on: 1996.08.18
+updated on: 1996.08.18
+
+
+oceans: bibtex database
+oceans: bibtex database
+oceans: bibtex database
+oceans: bibtex database
+oceans: bibtex database
+oceans: bibtex database
+oceans: bibtex database
+oceans: bibtex database
+oceans: bibtex database
+oceans: bibtex database

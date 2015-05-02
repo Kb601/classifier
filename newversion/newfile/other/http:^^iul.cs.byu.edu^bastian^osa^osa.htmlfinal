@@ -1,0 +1,128 @@
+osa tutorial page
+
+
+object-oriented systems analysis (osa) tutorial
+ 
+this page is a tutorial for students of
+computer science 525 - software creation
+and other individuals wishing to learn the osa model.  systems analysis is defined as the study
+of a specific domain of interacting objects for the purpose of understanding and documenting their essential
+characteristics.  the key words used in this definition are
+
+ study
+ understanding
+ documenting
+
+osa is an object-oriented modelling technique under which the study, understanding and documenting of a system occur.
+the final osa documents contain the results of the study performed and convey the understaning gained by the systems
+analyst. 
+this document consists of a brief description of model-driven analysis, a discussion
+of the temporal logic of osa, and concludes with a summary of the different 
+components of an osa model instance. 
+
+
+model-driven analysis
+osa is a model-driven analysis technique.  there are three different levels in the osa model hierarchy
+
+ the meta-model
+ a model instance
+ a data instance
+
+the osa meta-model describes valid model instances.  a model instance is a model of a specific system such as an
+air traffic control system or a plant nursery database.  a data instance is a system that contains real world data.
+examples of data instances are the salt lake city international airport's air traffic control system and the cherry
+hill nursery's database.  an analogy to the osa model hierarchy in the programming language world is
+
+ data instance -&gt; c program
+ model instance -&gt; c compiler
+ meta-model -&gt; yacc description of c
+
+some programming languages, such as smalltalk, allow the programmer to access its meta-model.  modeling techniques that
+allow meta-model information at the model instance level are seamless.  osa is seamless because the analyst can
+access meta-model level information from a model instance.  also, the osa meta-model can be described as an osa model
+instance.  the power of this seamless property will be revealed throughout this tutorial. 
+
+model-driven analysis vs. method-driven analysis
+osa is model-driven in that it gives a meta-model for valid osa models.  the osa models in turn describe valid system
+data and behavior.  osa does not give a step-by-step procedure for analyzing and documenting a system.  instead, it
+allows the analyst to create a model of the system. 
+an example of the difference between a model and a method is the problem finding the way to a terminal in an airport.
+people can either ask a steward the way to a specific terminal and receive step-by-step instructions or look at an
+airport map.  the steward will tell a person to go down the breezeway, turn left at the cafeteria, go down the
+escalator, and then turn right.  however, if a person misread his ticket and arrived at the wrong terminal, then he
+will have to ask another steward how to get to the correct terminal. 
+in contrast, if a person looks at the airport map that gives an abstract view of the airport and a reference position
+with the "you are here" arrow, then a person will be able to find his way to his terminal.  if he misread the ticket
+he can recall in his mind where terminal f is in relation to terminal c and will be able find his way. 
+both model-driven and method-driven analysis techniques have their merits.  this tutorial will contain a hyperlink to
+the method-driven approach of osa in the future.  however, this tutorial is chiefly concerned with the model-driven
+approach and will describe that approach in detail. 
+
+temporal logic
+osa has temporal logic incorporated at the data instance level.  simply put, the data instance can change over time.
+at any given time t a certain object may be a part of the data instance of a particular model.  however, the
+object may not have been part of the data instance at a time prior to t and may not be part of the data instance
+at a time after t.  this reflects the temporal nature of data.  files in operating systems are created, used, and
+then deleted.  memory in programming languages is allocated, used, and then freed.  bank customers open checking accounts,
+deposit money, take out loans, cash checks, pay off loans, and close accounts.  temporal logic is a necessary part for any
+modelling technique that attempts to model real-world systems and data. 
+time in osa is defined to be the set of all non-negative integers.  hence, time 0 is when the system first begins
+operating.  the smallest increment of time is 1.  anything occuring in a smaller time increment is considered to be
+instantaneous.  if the data instance at time t is equal to the data instance at time t + 1, then the data
+instance was not changed during that time increment. 
+
+components of osa
+every model instance in osa consists of three component models.  these are
+
+ object relationship model (orm)
+ object behavior model (obm)
+ object interaction model (oim)
+ high-level components (hl)
+
+the object relationship model describes how different objects and object classes relate to
+one another.  people have names, airplanes have registry numbers, husbands are married to wives, leaves are parts of
+plants, and boys scouts earn merit badges.  all of these relationships are binary in nature.  other relationships involve
+more than two objects or classes. a person could take a trip on june 14 on flight 576 from salt lake international airport
+aboard aircraft na 16587 that leaves at 7:55 am mst and arrives in chicago at 10:20 am cst.  such complex relationships are
+a part of nearly every system and the object relationship model allows the analyst to keep
+tabs on how objects are related to one another. 
+the object behavior model allows the analyst to construct an
+abstract computation machine called a state net that models the behavior of objects in a particular object set.
+a state net is a non-deterministic machine that allows multiple threads to be processed.  hence, an object can
+have one or more states activated at any one time.  a thread can change states by passing through transitions.
+a transition consists of a trigger and an action.  common triggers are switch activations, key presses,
+mouse clicks, receiving a message, or a change in some conditional value.  for example, when a person reaches the age of 13,
+that person becomes a teenager.  this could be a transition between the child state and the teenager state. the trigger would
+be the condition that person's age is greater than or equal to 13.  when a trigger is true, an object can also initiate an
+action associated with a particular state transition.  when a key is pressed the corresponding action to the trigger is that a
+character is echoed on the screen. trigger and actions allow objects to be able to react to input and generate output. 
+the object interaction model allows the analyst to model interaction and communication between
+objects of various classes.  a person can talk to another person, an employee can complain to his or her boss, and a client can
+request a service or data from a server.  all these interactions can be easily modeled in the object
+interaction model.  an interaction between two object sets has a name, a list objects that are sent from the source
+to the destination and another list of object returned to the sender by the receiver.  in its basic form an interaction originates
+in an action of an object set's state net and influences the triggers of another object set's state net.  however, it can also be
+used as a general high-level communication model in order to keep track of which object sets influence one another. 
+large projects modeled in osa tend to become very large and confusing.  in order to combat this problem, 
+high-level components have been developed.  high-level
+components abstract arbitrarily large portions of information in the osa diagram.  high-level components exist for objects, object
+sets, relationship sets, states, transitions, and interactions.  high-level components are very useful when a quick overview of a
+system is needed, or when a clear understanding of the system being modeled can be achieved through further abstraction.  if i were
+to model a kitchen, i would have such high-level objects as the oven, the microwave, the refrigerator, the sink, and the cupboards
+among other things.  within these high-level objects, their parts, behaviors, and interactions would be modeled.  however, it would
+be easy to see the main parts of the kitchen along with their primary functions.
+
+
+
+
+
+osa tutorial page
+osa tutorial page
+osa tutorial page
+osa tutorial page
+osa tutorial page
+osa tutorial page
+osa tutorial page
+osa tutorial page
+osa tutorial page
+osa tutorial page

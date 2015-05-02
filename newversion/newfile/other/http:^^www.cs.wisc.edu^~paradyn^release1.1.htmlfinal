@@ -1,0 +1,119 @@
+paradyn release 1.1 information
+
+
+
+
+    release 1.1 information
+
+summary
+
+release 1.1 is a binary (executable) and a source release of the paradyn
+parallel performance tools.  it is available via ftp from:
+
+
+ftp://grilled.cs.wisc.edu/paradyn/
+
+
+
+if you want to be notified of future releases of paradyn, please send mail
+to paradyn@cs.wisc.edu and let us know.
+
+here are the answers to some common questions:
+
+how do i get a copy of paradyn?
+paradyn's installation guide (a compressed postscript file) is
+the first item you will want to obtain.  to get it, you can go to the
+ftp site listed above and grab doc/install.ps.gz.  or, you can
+simply click here.
+the installation guide will tell you everything you need to know to
+obtain the paradyn distribution.
+note that most files are compressed using gnu zip (.gz suffix).
+if you do not have access to gunzip, then we can provide you with
+files compressed using compress (.z suffix); just send us
+an email.
+
+what does the release cost?
+for research uses, there is no charge.
+we define "research use" to mean you may
+freely use it inside your organization for whatever purposes you see fit.
+our source code release is also freely available for research uses.
+
+you may not
+re-distribute paradyn in any form (including derivatives),
+electronic or otherwise, to any other organization or entity without our
+permission.
+
+full details of allowable uses of paradyn are described in the license file
+contained in the "paradyn" and "paradyn/src" directories.
+
+what is a commercial use?
+
+we define "commericial use" of paradyn to be one in which you re-distribute
+paradyn in binary or source code form.
+such an arrangement requires a signed license agreeement.
+please contact us for the details.
+
+what do i do if it doesn't work?
+if you have any problems with installing or running paradyn,
+feel free to contact us at
+paradyn@cs.wisc.edu.
+we will try to respond promptly.
+
+we also appreciate feedback from you on ease of installation and use.
+
+what if i find a bug in paradyn?
+
+your report of bugs will help to improve future releases.
+please report bugs to
+paradyn@cs.wisc.edu.
+we will work on fixes or try to provide you with a "work around".
+you will typically get a response in no more than 1-2 working days
+(and working days for us often includes weekends!).
+
+
+our lawyers tell us to say this (pay attention!)
+we provide the paradyn parallel performance tools (below described as
+paradyn") on an
+as is
+basis, and do not warrant its validity or performance.
+we reserve the right to update, modify, or discontinue this software
+at any time.
+we shall have no obligation to supply such updates or modifications
+or any other form of support to you.
+
+all warranties, including without limitation, any warranty of merchantability
+or fitness for a particular purpose, are hereby excluded.
+
+
+by your use of paradyn, you
+understand and agree that we (or any other person or entity
+with proprietary rights in paradyn) are under no
+obligation to provide either maintenance services, update services, notices
+of latent defects, or correction of defects for paradyn.
+
+even if advised of the possibility of such damages, under no circumstances
+shall we (or any other person or entity with proprietary rights in the
+software licensed hereunder) be liable to you or any third party for
+direct, indirect, or consequential damages of any character regardless of
+type of action, including, without limitation, loss of profits, loss of use,
+loss of good will, or computer failure or malfunction.
+you agree to indemnify us
+(and any other person or entity with proprietary rights in the software
+licensed hereunder)
+for any and all liability it may incur to third parties resulting from
+your use of paradyn.
+
+last modified:
+thu sep 26 12:06:36 cdt 1996
+
+
+paradyn release 1.1 information
+paradyn release 1.1 information
+paradyn release 1.1 information
+paradyn release 1.1 information
+paradyn release 1.1 information
+paradyn release 1.1 information
+paradyn release 1.1 information
+paradyn release 1.1 information
+paradyn release 1.1 information
+paradyn release 1.1 information

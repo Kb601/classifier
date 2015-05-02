@@ -1,0 +1,37 @@
+breast cancer diagnosis and prognosis via linear programming 
+breast cancer diagnosis and prognosis via linear programming 
+ olvi l. mangasarian,  w. nick street and  william h. wolberg
+mp-tr-94-10
+december 1994
+
+ two medical applications of linear programming are described in this paper. specifically, linear-programming-based machine learning techniques are used to increase the accuracy and objectivity of breast cancer diagnosis and prognosis. the first application to breast cancer diagnosis utilizes characteristics of individual cells, obtained from a minimally invasive fine needle aspirate, to discriminate benign from malignant breast lumps. this allows an accurate diagnosis without the need for a surgical biopsy. the diagnostic system in current operation at university of wisconsin hospitals was trained on samples from 569 patients and has had 100\% chronological correctness in diagnosing 131 subsequent patients. the second application, recently put into clinical practice, is a method that constructs a surface that predicts when breast cancer is likely to recur in patients that have had their cancers excised. this gives the physician and the patient better information with which to plan treatment, and may eliminate the need for a prognostic surgical procedure. the novel feature of the predictive approach is the ability to handle cases for which cancer has not recurred (censored data) as well as cases for which cancer has recurred at a specific time. the prognostic system has an expected error of 13.9 to 18.3 months, which is better than prognosis correctness by other available techniques.
+
+how to view this document
+
+
+display the whole document in one of the following formats.
+
+postscript
+ 123595 bytes. (compressed on disk, will be sent uncompressed)
+
+
+
+print or download all or selected pages.
+
+
+
+ you are granted permission for the non-commercial reproduction, distribution,display, and performance of this technical report in any format, but thispermission is only for a period of 45 (forty-five) days from the most recenttime that you verified that this technical report is still available fromthe computer science department of the university of wisconsin - madison underterms that include this permission.  all other rights are reserved by theauthor(s). 
+[ search
+ ]
+
+ncstrlthis server operates at uw madison computer sciences technical reports . send email to www@cs.wisc.edu 
+breast cancer diagnosis and prognosis via linear programming 
+breast cancer diagnosis and prognosis via linear programming 
+breast cancer diagnosis and prognosis via linear programming 
+breast cancer diagnosis and prognosis via linear programming 
+breast cancer diagnosis and prognosis via linear programming 
+breast cancer diagnosis and prognosis via linear programming 
+breast cancer diagnosis and prognosis via linear programming 
+breast cancer diagnosis and prognosis via linear programming 
+breast cancer diagnosis and prognosis via linear programming 
+breast cancer diagnosis and prognosis via linear programming

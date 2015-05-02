@@ -1,0 +1,107 @@
+practical data sheet
+
+
+w. derrick weathersby
+ practical data sheet
+
+i have many years of software development experience on platforms ranging
+from ibm mainframe computers (4341, 3090) running mvs/tso, vm/cms to
+risc workstations and personal computers hosting unix (aix, ultrix, osf/1,
+linux, bsdi), nt, os/2, dos and windows.  additionally, i've developed
+significant web applications including an online transaction management
+system, a distributed document server and more.  
+
+take a look at my resume in postscript form.
+
+here are a list of my signifcant projects or amassed experiences over the
+last decade.
+
+shared x-server project
+i led a team of developers in building a distributed, user interface to
+control the sharing of x applications.  the project centered around a
+shared x-server we developed under aix 3.2 on ibm rs/6000 boxes.  the
+x-server enabled multiple clients to share the interface of arbitrary
+x applications with out being re-written.  the user interface was also
+a distributed, shared application since it had to reflect the changing
+state of the x-server and the entire system (shared session) as a whole.
+
+the interesting challenges were asynchronously changing the state of all
+clients in a session, allowing clients to synchronously change the state
+of the session, "cloning" the user interface for a late arriving client,
+and defining the interface to intuitively display the session state and the
+other participating clients.
+
+useful skills
+
+ languages:  the entire project was designed in c++
+ x:  xwindows, xt intrinsics, motif
+ os: aix internals, signals, sockets (udp and tcp), network programming
+ misc: developed a user interface prototype generator
+
+
+data parallel array langauge and compiler
+this project was begun in 1993 as a result of the thesis work done by
+dr. calvin lin under the direction of professor larry snyder.  larry
+has spent many of his research cycles on parallel computation and bringing
+the field up to the level of sequential computation.  he started by
+defining a realistic machine model for parallel computers that captured 
+the salient features having influence on the performance of the machines.
+his machine model is called cta or candidate type architecture.  
+larry contended that in order to achieve peak performance on parallel
+machines, applications had to be written to perform well on the cta.
+basically, this said that the cta is a general architecture that programmers
+can utilize when developing and estimating performance of their applications.
+further, the compiler writers could use the model to generate better
+code.  calvin demonstrated that applications following the cta had 
+better predictive qualities in terms of performance and, in fact, would
+perform equivalently relative to similar applications for any machine
+implementing the cta.
+
+following the machine model, the orca language (orca-c)
+was conceived to help the
+programmers abstract the notions of the cta.
+calvin's work was done by hand translating c code to orca-c.
+orca-c defined three levels of abstraction to assist the programmer: x, y
+and z.  the x level specified task parallelism, the z level encompassed
+data parallelism and the y level defined the distribution of data (to
+realize the parallelism).  zpl stands for z programming level and as the
+name implies, its purpose was to fulfill the data parallel level of
+abstraction.  
+
+zpl was designed with two major goals:  efficiency and portability.  these
+goals often conflict, but have been brought together in matrimony given
+the design methodology of the language.  basically, the language initially
+started out with features that could be compiled effectively and the
+language idioms only included ones with the "highest" degree of parallelism.
+after all, the language was being targeted for one level of a three
+level abstraction; therefore, there was no pressure for completeness (the
+x level would offer this completeness since task parallelism is much more
+general than data parallelism).  in any event, the language grew 
+carefully with much deliberation with full features.  zpl is now a
+fully functioning 
+language and compiler.
+
+useful skills
+i've worked on many of the internals of the compiler, including 
+interprocedural analysis (aliases, statically determining index sets --
+zpl allows index to be inherited through a runtime region stack),
+code generation and ast traversal and minipulation routines.
+
+however, my research has focused on the collective communication routines
+such as broadcasts, scans and reduces. 
+
+
+
+
+
+
+practical data sheet
+practical data sheet
+practical data sheet
+practical data sheet
+practical data sheet
+practical data sheet
+practical data sheet
+practical data sheet
+practical data sheet
+practical data sheet

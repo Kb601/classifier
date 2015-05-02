@@ -1,0 +1,99 @@
+cse 415  prog. assignment 2
+
+
+
+
+cse 415      programming project #2     due noon, friday, april 26.
+                                        (use "turnin" as directed).
+
+
+        we discussed the following lisp program in class:
+
+(defun d (e x)
+        (cond (( atom e) (cond  ((equal e x)  1 )  ( t  0) ))
+
+                ((or (equal (op e)  '+ ) (equal (op e) '-))
+                `( ,(op e) ,(d  (arg1 e) x)  ,(d  (arg2 e) x)))
+
+                ((equal (op e )  '*)
+                        `(+ (* ,(arg1 e) ,(d (arg2 e) x) )
+                           (* ,(arg2 e) ,(d (arg1 e) x )))
+                                                        )))
+
+        this function allows only the operators, +, -, and *
+
+        add to the function, so that the operators, / and exp will be
+        included. note that exp is restricted so that the exponent is
+        an integer.
+
+        run the function, with the call:
+
+                (d  '(/  (+  (exp  x  2)  2)  (*  5  x) )    'x  )        
+
+	then write a function,  simplify ( e ) which will operate on
+	the output of the d function and simplify the result, using only
+	the following simplifications (where u is any expression or
+	subexpression in the output of d).  :
+
+	(*  u  0)  ->  0	(*  0  u)  ->  0
+
+	(exp  u  1)  ->  u	(*  u  1)  ->  u
+
+	(*  1  u)  ->  u	(+  0  u)  ->  u
+
+	(+  u  0)  ->  u	(-  u  0)  ->  u
+
+	(exp  u  1)  ->  u	(exp  u  0)  ->  1
+
+	[note that more obvious simplifications could be made, but
+	you should deal only with those above. eg do not include 
+	the case, (-  0  u)  or (+  1  3)  -> 4, etc. ]
+
+
+	run your functions with the call, (simplify (d  e)),
+	where e is the expression given in the above call of d.
+
+	use trace for both the d and simplify functions, so that your
+	output will show the arguments passed and the values returned
+	on each recursive call.
+
+	note: here are the handy functions to extract the operator and
+	arguements from an expression:
+
+	(defun op (e)
+  	  (first e))
+	(defun arg1 (e)
+  	  (second e))
+	(defun arg2 (e)
+  	  (third e))
+
+
+
+cse 415  prog. assignment 2
+
+
+cse 415  prog. assignment 2
+
+
+cse 415  prog. assignment 2
+
+
+cse 415  prog. assignment 2
+
+
+cse 415  prog. assignment 2
+
+
+cse 415  prog. assignment 2
+
+
+cse 415  prog. assignment 2
+
+
+cse 415  prog. assignment 2
+
+
+cse 415  prog. assignment 2
+
+
+cse 415  prog. assignment 2

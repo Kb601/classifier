@@ -1,0 +1,123 @@
+faculty research interests : sam toueg  sam toueg 
+
+
+     
+
+
+
+
+
+
+
+
+
+professor
+ph.d., princeton university, 1979
+
+research interests
+
+my research interests include distributed computing, fault-tolerance
+and real-time.  i work on methodologies, paradigms, and algorithms for
+fault-tolerant distributed systems, in both message-passing and
+shared-memory  systems.  my long-term goal is to bridge the gap
+between  theoretical results and the need for efficient and practical
+solutions.
+
+in collaboration with
+tushar chandra
+and 
+prasad jayanti, 
+two ph.d.
+computer science students, we continued our work on
+unreliable failure
+detectors for message-passing systems,
+and on wait-free objects for shared-memory systems.
+
+a fundamental result of fault-tolerant distributed computing
+states that the consensus problem cannot be solved (with a
+deterministic  algorithm) in asynchronous systems.  this impossibility
+result  is due to the inherent difficulty of determining whether a
+process  has crashed (or is merely very slow) in such a system.  in
+our work,  we were able to determine exactly how much information
+about  failures is necessary and sufficient to solve consensus.  we
+first  showed one can use w, an unreliable failure detector that can
+make an  infinite number of mistakes, to solve consensus in systems
+with a  majority of correct processes.  we then proved that to solve
+consensus, any failure detector has to provide at least as much
+information about  failures as w.  thus, w is the weakest failure
+detector for solving  consensus in asynchronous systems with a
+majority of correct  processes.  we are now exploring the practicality
+of  implementing w,  and of applications that rely on w for their
+correctness.
+
+a concurrent system consists of processes communicating via shared
+objects.   a shared object is wait-free if each process that accesses
+this  object is guaranteed to get a response even if all the other
+processes  crash.  we are now exploring wait-free hierarchies of
+object types, where each object (type) is assigned to a level that
+corresponds to its  ability in implementing other wait-free objects.
+in particular,  prasad jayanti has shown that a well-known hierarchy
+(herlihy's)  is not robust:  informally, in this hierarchy there is an
+object at level  2 that can be used to implement wait-free objects at
+any  level.  we  are now exploring the question of whether
+robust wait-free hierarchies exist.
+
+selected publications
+
+ bracha, g., and s. toueg.
+asynchronous consensus and broadcast protocols.
+ journal of the acm, vol. 32, 10, 1985, 824-840.
+
+ srikanth, t. k., and s. toueg.
+optimal clock synchronization.
+ journal of the acm, vol. 34, 3, 1987, 626-645.
+
+ el abbadi, a., and s. toueg.
+maintaining availability in partitioned replicated databases.
+ acm transactions on database systems, vol. 14, 2, 1989, 264-290.
+
+ neiger, g., and s. toueg.
+automatically increasing the fault-tolerance of distributed algorithms.
+ journal of algorithms, vol. 11, 3, 1990, 374-419.
+
+ chandra, t., and s. toueg.
+unreliable failure
+detectors for asynchronous systems.
+  proceedings 10th acm symposium on principles of distributed computing
+.
+august 1991, montreal, canada, 257-272.
+
+ chandra, t.,
+v. hadzilacos
+ and s. toueg.
+the weakest failure detector
+for solving consensus.
+  proceedings 11th acm symposium on principles of distributed computing
+ ,
+august 1992, vancouver, canada, 147-158.
+
+jayanti, p.,
+chandra, t.,
+and s. toueg.
+
+fault-tolerant wait-free shared objects.
+  proceedings 33rd ieee symposium on foundations of computer science,
+october 1992, pittsburgh, pennsylvania, 157-166.
+
+ neiger, g., and s. toueg.
+simulating synchronized clocks and common knowledge in distributed systems.
+ journal of the acm, vol. 40, 2, 1993, 334-367.
+
+
+
+
+ faculty research interests : sam toueg 
+ faculty research interests : sam toueg 
+ faculty research interests : sam toueg 
+ faculty research interests : sam toueg 
+ faculty research interests : sam toueg 
+ faculty research interests : sam toueg 
+ faculty research interests : sam toueg 
+ faculty research interests : sam toueg 
+ faculty research interests : sam toueg 
+ faculty research interests : sam toueg

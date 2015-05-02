@@ -1,0 +1,49 @@
+175
+175 computer graphics
+fall, 1996
+
+
+   course description
+   syllabus
+  t.a.:
+	our t.a. is
+	eric reuss,
+	who is a graduate student in computer science,
+	you can email him at
+	ereuss@cs.tufts.edu
+  assignments
+  
+	  how to submit your programs
+	  assignment 1 - due oct. 21
+	  assignment 2 - due nov. 5, 10 p.m.
+	  assignment 3 - due nov. 19, 10 p.m.
+	  assignment 4 - due dec. 3, 10 p.m.
+  
+  srgp information
+  
+	documentation [postscript]
+	man page, just lists all subroutine calls [postscript] or type: man -l /nfs/res/hci/srgp/doc/srgp.3
+	shell script to compile srgp programs
+	example program try.c
+  
+  sphigs information
+  
+	documentation [postscript]
+	man page, just lists all subroutine calls [postscript] or type: man -l /nfs/res/hci/sphigs/doc/sphigs.3
+	shell script to compile sphigs programs
+	example program house.c
+	screendump of house.c example program
+  
+  more info on hci program at tufts
+
+
+175
+175
+175
+175
+175
+175
+175
+175
+175
+175

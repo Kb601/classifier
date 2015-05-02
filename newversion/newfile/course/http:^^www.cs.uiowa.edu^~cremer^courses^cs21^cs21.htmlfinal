@@ -1,0 +1,325 @@
+22c:21 home page
+
+
+
+
+ 22c:21 algorithms and data structures --- spring 1996
+
+
+mwf 1:30, jessup hall 221
+
+ professor: jim cremer, 201n maclean, e-mail: cremer@cs.uiowa.edu, office hours: 2:30-3:30 t, 10:30-11:30 f, or by appointment 
+
+ ta: jun tu, 255d mcbride, jun@cs.uiowa.edu, office hours: 3:30-4:30 w, 1:30-2:30 th
+
+
+ what's new (last updated monday, 5/13/96) 
+
+
+ complete scores for the semester and the mapping from scores to
+course letter grades are available in the grades
+section. to see or pick up your graded final, please stop by my
+office.
+
+
+
+
+ homework assignments
+ scores and grades
+ goals, content, and schedule
+ textbook and supplemental books
+ requirements and grading
+ late assignment policy
+ policy on collaboration
+ prerequisites
+ note on language for programming assignements
+  homework solutions, useful code, sample exams, etc.
+
+
+
+
+ prerequisites 
+22c:17, 22c:18, and 22c:19 (or permission of instructor)
+
+
+
+ course goals, content, and schedule
+
+
+
+the aim of the course is to gain experience with the major paradigms and data 
+structures used in creating algorithms, and with basic methods for analyzing 
+the time and space requirements of programs. we will cover most of the textbook.
+the tentative schedule is:
+
+
+  week 1              intro and ch 1 (math background, induction, recursion)
+  week 2              ch 2 (algorithm analysis notation and techniques), a bit of 7.6 and 10.2
+  week 3              quick review of ch3, ch 4 (trees)
+  week 4              ch 5 (hashing)
+  weeks 4 and 5       ch 6 (priority queues)
+  week 6              ch 7 (sorting)
+  week 7 (february 28)     exam 1,in class
+  weeks 7 and 8       ch 8 (disjoint sets)
+  weeks 8 and 9       ch 9 (graphs)
+  week 10             spring break
+  week 11             ch 9 (graphs), including a bit extra on decidability, tractability, complexity
+  weeks 12 and 13     ch 10 (algorithm techniques), including greedy methods, dynamic
+                          programming, more divide-and-conquer
+  week 14 (april 17)  exam 2, in class
+  week 15             ch 10.5 backtracking search/games (tentative)
+  week 16             ch 11 (amortized analysis)
+  may 10 (friday)     final exam, 9:45 a.m.          
+
+
+
+
+
+ textbook
+
+ weiss,  data structures and algorithm analysis, benjamin-cummings, second edition, 1995.
+
+
+ supplemental books (on reserve in math library) 
+
+ cormen, leiserson, and rivest,  introduction to algorithms, mcgraw-hill, 1990 
+ aho, hopcroft, and ullman,  data structures and algorithms, addison-wesley, 1983
+
+
+
+
+ requirements and grading
+
+
+course grades will be based on ten (or so) homework sets, two
+midterm exams, and the final exam.  there will be some small
+programming assignments.  programming problems will usually be given
+as part of regular written homework assignments; there will not be a
+separate grading category for programming assignments.  class
+participation and effort may be taken into account in determining grades in
+borderline situations.  the components will be weighted roughly as
+follows:
+
+		homeworks assignments         35%
+		midterm exams                 20% each
+		final exam                    25%
+
+
+
+
+
+ late assignment policy
+
+
+all assignments are due at the beginning of class.  in other cases,
+assignments turned in within 24 hours will receive a 20% penalty, and
+those turned in 24 to 48 hours late will receive a 50% penalty.
+(exception --- each student may turn in one homework assignment up to
+two days late with no penalty.)  regrade requests must be made within
+one week of when the assignments are returned in class.
+
+
+
+ policy on collaboration
+
+
+homework and programming assignments should be done alone.  it is 
+reasonable to discuss general approaches to problem solution or 
+algorithm design with other students but the bulk of the work 
+must be done alone.  working out details, sharing in the write-up 
+or sharing or copying code will be treated as a violation of the 
+academic integrity rules.
+
+
+  note on language for progamming assignments 
+
+program source code in the book is in pascal.  however, for course 
+programming assignments, you will be free to use your choice of pascal, c, or 
+c++ (or another language if approved by the instructor).
+
+
+
+ homework assignments
+
+
+
+ homework 8 (html version).
+     homework 8 (postscript version).
+ official test data for homework 8 (must turn in 
+runs of your program on these files):
+wordlist1,
+wordlist2,
+wordlist3
+
+some other test data for homework 8:
+extra-wordlist1,
+extra-wordlist2,
+extra-wordlist3
+ homework 7 (html version).
+     homework 7 (postscript version).
+ homework 6 (html version).
+     homework 6 (postscript version).
+ official test data for homework 6 (must turn in 
+runs of your program on these files):
+circuit1,
+circuit2,
+circuit3, 
+circuit4 
+path1,
+path2,
+path3
+
+some other test data for homework 6:
+testdata11,
+testdata2,
+testdata3 
+testdata4,
+testdata5,
+testdata6
+ homework 5 (html version).
+     homework 5 (postscript version).
+ homework 4 (html version).
+     homework 4 (postscript version).
+ homework 3 (html version).
+     homework 3 (postscript version).
+ homework 2 (html version).
+     homework 2 (postscript version).
+ homework 1 (postscript file).
+for those who can't view or print postscript, here's
+an html (the basic www language) version 
+homework 1. 
+
+
+
+
+
+ scores and grades
+
+
+
+ course grades: 
+
+      total score:
+          > 460                    a+
+      415 - 459                    a
+      400 - 414                    a-
+      390 - 399                    b+
+      385 - 389                    b
+      370 - 379                    b-
+      350 - 369                    c+
+      320 - 349                    c
+      270 - 319                    c-
+      250 - 269                    d
+                 
+ complete homework and exam scores, including final. 
+sorted by id number. (plain text file) 
+  complete homework and exam scores, including final.
+sorted by total score. (plain text file) 
+ final exam data. median: 87.  mean: 87.  high 115. 
+
+      score range           number of people
+          > 110                    2
+      101 - 110                    6
+       91 - 100                    4
+       81 -  90                    9
+       71 -  80                   10
+         
+ exam 2 data. median: 72.  mean: 71.9.  high 97. 
+
+      score range           number of people
+          > 95                     2
+       81 - 90                     7
+       71 - 80                    11 
+       61 - 70                     9
+         
+ exam 1 data. median: 80/81.  mean: 76.0.  high 98. 
+
+      score range           number of people
+          > 90                     5
+       81 - 90                    13
+       71 - 80                     7
+       61 - 70                     2
+         
+
+
+
+
+ homework solutions, useful code, and miscellaneous stuff
+
+
+
+ homework 8 solutions (html version).
+     homework 8 solutions (postscript version). 
+ c++ code for question 2 on homework 8.  code is not commented and does
+not quite meet the specifications for question 2 (it reads the input interactively
+rather than from a file, handles only single character "words", and prints
+the tree in preorder rather than level order), but the important part, the 
+one that fills in the table used to calculate the optimal binary search tree,
+is as it should be.  
+there are two ascii files - obst.h
+and obst.c.
+ exam 2 solutions (html version).
+     exam 2 solutions (postscript version). 
+ homework 7 solutions (html version).
+     homework 7 solutions (postscript version). 
+ homework 6 solutions (html version).
+     homework 6 solutions (postscript version). 
+ homework 5 solutions (html version).
+     homework 5 solutions (postscript version). 
+ homework 4 solutions (html version).
+     homework 4 solutions (postscript version). 
+ sample exam that might help you see the style of questions you'll get
+on exam 1 (wed., feb. 28).   the exam was given at about this point in 
+the course during the fall semester, 1993.  the document here contains
+two extra questions that were not actually used on the exam. 
+sample exam in html
+sample exam in postscript
+ homework 3 solutions (html version).
+     homework 3 solutions (postscript version).
+  implementation of heap routines in c++
+maybe useful for last question on homework 4.  pascal code is available
+via ftp site listed in beginning of textbook.
+ homework 2 solutions (html version).
+     homework 2 solutions (postscript version). 
+     for code for the majority problem of homework 2, see the item below.
+ c implementations of solution to majority problem of homework 2.
+     linear-time recursive divide-and-conquer method 
+     maj-by-d-and-c.c, very short simple linear-time scanning method
+      maj-by-scan.c.  code to help generate
+     test data for the majority problem - 
+     gen-maj-test-data.c.  a number of test data files are contained
+     in the directory  etc/maj-test-data.
+     files:   etc/maj-test-data/maj-data-1,
+      etc/maj-test-data/maj-data-2,
+      etc/maj-test-data/maj-data-3,
+      etc/maj-test-data/maj-data-8,
+      etc/maj-test-data/maj-data-16,
+      etc/maj-test-data/maj-data-100,
+      etc/maj-test-data/maj-data-1000a,
+      etc/maj-test-data/maj-data-1000b,
+      etc/maj-test-data/maj-data-1000c,
+      etc/maj-test-data/maj-data-1000d.
+
+     source code is basic c.  only tested on silicon graphics workstation
+     runing irix (silicon graphics' unix).  the two majority implementations
+     should compile fine on other machines/compilers (e.g. just 
+     use cc -o maj-by-scan maj-by-scan.c).  the gen-maj-test-data.c code
+     contains a call to drand48, which is, i'd guess is a unix specific
+     random number generator.  it should be easy to change the code to 
+     run elsewhere, however.
+ homework 1 solutions (html version).
+     homework 1 solutions (postscript version).
+
+
+
+
+22c:21 home page
+22c:21 home page
+22c:21 home page
+22c:21 home page
+22c:21 home page
+22c:21 home page
+22c:21 home page
+22c:21 home page
+22c:21 home page
+22c:21 home page

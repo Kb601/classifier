@@ -1,0 +1,183 @@
+cs 302 section 70 - quiz 2
+
+
+
+
+quiz #2
+
+
+
+suppose we have a set s of n elements. also, suppose we wish to put some of these elements into a list l. our list l is a k-permutation of the set s if
+
+a) l has size k
+b) every element in l is distinct.
+
+for example: s = {0,1,2,3,4,5,6,7,8,9}. a 3-permutation of s is a 3 digit number where no two digits are the same (345 for example). 344, however, would not be a permutation, since the last two digits are the same.
+the mathematical formula for the number of k-permutations when s is size n is
+
+n * (n-1) * (n-2) * (n-3) * ... * (n-k+1)
+
+a) write a do/end do (not a while loop) to calculate this number. assume n and k are initialized already.
+
+there are several ways to do it; here's one way:
+
+
+answer = 1
+do i = n, n-k+1 ,-1
+   answer = answer*i
+end do
+
+a different way is by counting up
+
+answer = 1
+do i=0,k-1
+   answer = answer*(n-i)
+end do
+
+note that this goes to k-1 because (n-k+1) = (n-(k-1)), so i must start at
+0 and end at k-1.
+
+
+b) write a do while/end do loop to do the same. make the same assumptions as in pt a).
+
+i'll just do the parallel do while loop to the first example in pt a):
+
+
+answer = 1
+i = n
+do while(i .ge. n-k+1)
+   answer = answer*i
+   i = i-1
+end do
+
+
+
+ what's wrong with these three code fragments? (both problems are logicalerrors)
+a)
+
+        print *,'space shuttle ready to launch'
+	print *,'begin countdown at what number?'
+	read *,n
+	do i=n,1
+	  print *,'t minus',i
+	end do
+	print *,'blastoff!'
+
+
+
+loop wants to count down, needs a -1 on the end
+should be do i=n,1,-1
+
+b)
+
+	print *,'when you were born, the president was '
+	if (age .ge. 4) then
+	   print *,'bill clinton'
+	else if (age .ge. 8) then
+	   print *,'george bush'
+	else if (age .ge. 16) then
+	   print *,'ronald reagan'
+	else if (age .ge. 20) then
+	   print *,'jimmy carter'
+	else if (age .ge. 22) then
+	   print *,'gerald ford'
+	else if (age .ge. 28) then
+	   print *,'richard nixon'
+	else
+	   print *,'whew! older than i am!'
+	end if
+
+
+
+
+these should all be .le.
+otherwise, for anyone older or equal to 4, (age .ge. 4) will be
+.true., so it'll always print bill clinton.
+
+c)
+
+	logical done
+        done = .true.
+	do while(.not. done)
+	   print *,'enter a zero'
+	   read *,a
+	   if (a .eq. 0)
+	     done = .true.
+	   else
+	     done = .false.
+             print *,'you did not listen'
+	   end if
+	end do
+	print *,'good, you entered a zero'
+
+
+
+
+the loop will run only while .not. done is .true., i.e. only while
+done is .false., so done must be set to .false., not set to .true., at
+the top of the program.
+
+consider the following subroutine:
+
+
+c	adds or subtracts 1 from value and reports
+c	if operation was carried out
+	subroutine addsub1(oper,value,done)
+
+	character*3 oper
+	integer value
+	logical done
+
+	if (oper .eq. 'add') then
+		value = value + 1
+		done = .true.
+	else if (oper .eq. 'sub') then
+		value = value - 1
+		done = .true.
+	else
+		done = .false.
+	end if
+	
+	return
+	end
+
+
+which arguments are
+a) input arguments only 
+
+oper
+oper is used by the function, but not assigned to. so the value from the main program is used, hence it is an input argument.
+
+b) output arguments only 
+
+done
+the value of done is never used (i.e. found on the right hand side of an expression), so no old value from the main program is used, so this is not an input argument. done is, however, assigned to, so that value gets passed out of the function, back to the main program, hence it's an output argument. 
+
+c) both input and output arguments
+
+value
+the old value of value is used on the right hand side of value = value + 1
+(i.e. the value of value from the main program). the left hand side now has the new value of value, to be passed back to the main program. so value is both an input argument *and* an output argument.
+
+
+
+
+
+
+
+
+copyright &copy 1996 jeff lampert (tick@cs.wisc.edu).  last modified september 23, 1996.
+
+
+
+
+cs 302 section 70 - quiz 2
+cs 302 section 70 - quiz 2
+cs 302 section 70 - quiz 2
+cs 302 section 70 - quiz 2
+cs 302 section 70 - quiz 2
+cs 302 section 70 - quiz 2
+cs 302 section 70 - quiz 2
+cs 302 section 70 - quiz 2
+cs 302 section 70 - quiz 2
+cs 302 section 70 - quiz 2

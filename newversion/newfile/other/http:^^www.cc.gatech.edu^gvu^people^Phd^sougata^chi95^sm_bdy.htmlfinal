@@ -1,0 +1,494 @@
+visualizing complex hypermedia networks through multiple hierarchical views
+
+
+
+visualizing complex hypermedia networks through multiple hierarchical views
+
+
+sougata mukherjea, james d. foley, scott hudson
+
+
+graphics, visualization &amp; usability center
+college of computing 
+georgia institute of technology
+e-mail: sougata@cc.gatech.edu, foley@cc.gatech.edu, hudson@cc.gatech.edu
+
+
+ 
+
+ abstract:
+our work concerns visualizing the information space of hypermedia systems using
+multiple hierarchical views. although overview diagrams are useful for helping the user to
+navigate in a hypermedia system, for any real-world system they become too complicated 
+and large to be really useful. this is because these diagrams represent complex network 
+structures which are very difficult to visualize and comprehend. on the other hand, 
+effective visualizations of hierarchies have been developed. our strategy is to provide
+the user with different hierarchies, each giving a different perspective to the underlying
+information space to help the user better comprehend the information. we propose an 
+algorithm based on content and structural analysis to form hierarchies from hypermedia 
+networks. the algorithm is automatic but can be guided by the user. the multiple 
+hierarchies can be visualized in various ways. we give examples of the implementation of 
+the algorithm on two hypermedia systems.
+ keywords:
+ hypermedia, overview diagrams, information visualization, hierarchization.
+
+
+ introduction 
+overview diagrams are one of the best tools for orientation and navigation in hypermedia 
+documents [17]. by presenting a map of the underlying 
+information space, they allow the users to see where they are, what other information is 
+available and how to access the other information.  however, for any real-world hypermedia
+system with many nodes and links, the overview diagrams represent large complex network 
+structures. they are generally shown as 2d or 3d graphs and comprehending such large 
+complex graphs is extremely difficult. the layout of graphs is also a very difficult 
+problem  [1]. other attempts to visualize networks such as 
+semnet [3], have not been very successful.
+
+in [13], parunak notes that: "the insight for hypermedia is
+that a hyperbase structured as a set of distinguishable hierarchies will offer 
+navigational and other cognitive benefits that an equally complex system of 
+undifferentiated links does not, even if the union of all the hierarchies is not itself 
+hierarchical." neuwirth et al. [12] also observed that the 
+ability to view knowledge from different perspectives is important. thus, if different 
+hierarchies, each of which gives a different perspective to the underlying information can
+be formed, the user would be able to comprehend the information better. it should be also 
+noted that unlike networks some very effective ways of visualizing hierarchies have been 
+developed. examples are treemaps [7] and 
+cone trees [15].
+
+this paper proposes an algorithm for forming hierarchies from hypermedia graphs. it uses
+both structural and content analysis to identify the hierarchies. the structural analysis
+looks at the structure of the graph while the content analysis looks at the contents of 
+the nodes. (note that the content analysis assumes a database-oriented hypermedia system
+where the nodes are described with attributes). although our algorithm is automatic, 
+forming the "best" possible hierarchy representing the graph, the user can guide the 
+process so that hierarchies giving different perspectives to the underlying information 
+can be formed. these hierarchies can be visualized in different ways.
+section 2 presents our hierarchization process. section 3 shows the implementation of 
+the algorithm in the navigational view builder, a system we are building for 
+visualizing the information space of hypermedia systems 
+[10], [11]. this section
+discusses the application of the algorithm on a demo automobile database and a section of 
+the world-wide web. section 4 discusses how the hierarchies can be transformed to
+other forms of data organizations. section 5 talks about the related work while section 6 
+is the conclusion.
+
+the hierarchization process
+new data structure
+for our hierarchization process we use a data structure which we call the pre-tree.
+a pre-tree is an intermediate between a graph and a tree. it has a node called the 
+root which does not have any parent node. however, unlike a real tree, all its 
+descendants need not be trees themselves - they may be any arbitrary graph. these
+descendants thus form a list of graphs and are called branches. however, there is
+one restriction - nodes from different branches cannot have links between them. an
+example pre-tree is shown in figure 1. note that pre-tree is another data structure like 
+multi-trees [4] - it is not as complex as a graph 
+but not as simple as a tree. also note that although the term ``pre-tree'' has not been 
+used before, this data structure has a long history in top-down clustering techniques 
+[5]. top-down clustering would often be halted when new 
+divisions were not auspicious, leaving a final structure which is essentially a pre-tree.
+
+ figure 1: 
+an example pre-tree. it has a root node which does not have any parent. the
+descendants of the root node are graphs. however, none of these graphs have any links
+between them. our hierarchization algorithm tries to identify the best pre-tree to 
+represent the given graph. the final tree is formed by calling the algorithm recursively
+for the branches.
+
+hierarchization algorithm
+the algorithm tries to identify a suitable pre-tree from a given graph. thus a root node 
+is identified and the other nodes are partitioned into branches. this root node forms the 
+root of the final hierarchy. the algorithm is recursively called for each of the branches 
+and the trees formed by these recursive calls become children of the root of the final 
+hierarchy. the recursion stops if a branch has very few nodes or the required depth of the
+final tree has been reached. it may also happen that for certain branches, no suitable
+pre-trees can be formed. in these cases, the nodes of the branches become children of the 
+parent of the branch. (this case generally occurs for branches with very few nodes). 
+for identifying potential pre-trees both content and structural analysis are used.
+
+ content analysis: 
+
+for content analysis, for each attribute, the nodes of the graph are partitioned into 
+branches based on the attribute values by content-based clustering. the 
+clustering algorithm is explained in [11]. if too many or 
+too few branches are formed, the attribute is not suitable for forming a pre-tree. 
+otherwise a new pre-tree is formed with these branches. the root of the pre-tree is a 
+cluster representing all the nodes of the graph.
+
+ structural analysis: 
+
+a pre-tree is formed for nodes in the graph which can reach all other nodes. these nodes 
+are designated as the roots of the pre-trees. the branches are the branches of the 
+spanning tree formed by doing a breadth-first search from the designated root node. (a
+detailed analysis is omitted for the purpose of brevity. the algorithm is explained with
+examples in the next section).
+
+both content and structural analysis can identify several potential pre-trees. a 
+metric is used to rank these pre-trees. the metric consists of the following 
+submetrics:
+
+ information lost in the formation of the pre-tree: when the nodes are partitioned 
+for forming the branches, all links joining nodes in different branches are removed. thus 
+valuable information is lost and a submetric calculates the ratio of the number of links 
+remaining in the branches to the total number of links in the original graph to rank the 
+pre-trees in order of the least amount of information lost.
+ "treeness" of the branches: since our overall objective is to form trees, it is
+advantageous if the branches of the pre-tree are already close to trees. if all the
+branches only consisted of trees, there would be a total of  n - c  links where 
+n is the total number of nodes in the branches and c is the number of
+connected components.  thus a submetric which calculates the ratio (n-c)/l
+where l is the total number of links is an indication of the "treeness" of the branches.
+ "goodness" of the root: for a structural pre-tree the goodness of the root is 
+determined by the sum of the distances of the shortest path from the root to all other 
+nodes. a "good" root will reach all other nodes by following only a few links so that 
+the resulting tree is not very deep. a deep tree is not desirable since it will force the
+user to follow a long and tedious path to reach some information. for content analysis the
+goodness of the root is determined by the relevance of the attribute. (for example, for an
+automobile database, the manufacturer of the cars is a more relevant attribute than the 
+number of doors of the cars).
+
+each submetric returns a number between 0 and 1. the overall metric is calculated by a
+weighted sum of the submetrics where the weight is determined by the relative importance 
+of the submetrics.
+
+
+the role of the user
+by default, the entire process would be automatically forming the "best" hierarchical 
+form for the original graph. however, the user can guide the process both during the 
+translation of the graph to a tree and during the visualization of the tree.
+
+ translation phase:
+
+ the users can control the various variables that are used in the translation 
+process. for example, they can control the variable which specifies the maximum possible
+depth of the tree (the recursion stops when this depth is reached).
+ the user can control the relative importance of the various submetrics in the 
+overall metric that is used to rank a given pre-tree. for example the user can specify 
+that the "goodness" of a root is not a useful criteria for judging pre-trees. the user
+can also assign different weights to different link types to influence the submetric 
+calculating the amount of information lost.
+ the algorithm generally selects the best possible pre-tree at each level.  however, 
+the user can choose the pre-tree instead. the user is shown the possible pre-trees that 
+can be selected ranked by the metric and the user can choose one of them. the user can 
+specify to what level of the hierarchy the pre-trees would be chosen. by choosing 
+different pre-trees during different runnings of the algorithm, different hierarchies, 
+giving different perspectives to the data can be formed. 
+
+ visualization phase:
+
+ besides a 2d tree, the hierarchy can also be visualized as cone trees, treemaps
+or as a table of contents of a book (which is formed by listing the nodes in the order of
+a depth-first search).
+ different visual attributes can be bound to information attributes in the views. 
+this is an extension of the work reported in [10].
+
+
+
+implementation
+the algorithm has been implemented in the navigational view builder, a system for forming 
+overview diagrams of hypermedia systems. figure 2 represents an overview diagram of an 
+automobile database. there are a lot of interconnected nodes showing, for example, textual
+information about the cars, images of the cars, tv advertisements and audio of previous 
+buyers' comments. there are also links to other cars with similar price and other models 
+by the same manufacturer. from this complex network a hierarchy can be formed 
+automatically. the top-level root of this tree and its children are shown in the left hand
+screen of figure 3. in this case, the attribute price was used to form the 
+initial partitioning and the root represents a cluster for all the nodes.
+
+ figure 2: 
+an overview diagram of an automobile database. the diagram is very difficult
+to comprehend.
+
+ figure 3: 
+the left hand screen shows the default tree formed for the automobile database. the 
+top-level partitioning is by the attribute price. the right hand screen shows 
+the tree formed if the top-level partitioning is done by the attribute country.
+
+the user can form different hierarchies by selecting other pre-trees. for example, if the 
+user wanted to select the pre-tree at the initial level, the dialog box shown in 
+figure 4 pops up. if the user wants to partition based on the attribute country, 
+the tree shown in the right hand screen in figure 3 is formed. in this figure some of the 
+children represents clusters for countries. for example the node labeled japan represents 
+all the japanese cars and its children are shown in the left hand screen of figure 5. here
+the partitioning is done by the attribute manufacturer. for some other countries 
+the nodes in the cluster formed a tree. in these cases the roots of the tree were 
+identified by structural analysis and they became the children of the overall root. thus 
+for sweden, saab-info is the root of the tree for all nodes related to swedish cars.  its 
+children are shown in the right hand screen of figure 5. 
+
+ figure 4: 
+at each level various pre-trees can be used. a metric ranks these pre-trees. by default 
+the pre-tree with the best metric is selected. however, the user can select others using 
+the above menu.
+
+ figure 5: 
+examples of content and structural analysis for forming pre-trees. the left hand
+screen represents the nodes for japan. the root is a cluster representing all japanese 
+cars. the nodes are partitioned by the attribute manufacturer. the right hand 
+screen is for swedish cars. these nodes form a tree with the node saab-info as the root.
+
+figure 6 shows a 3d tree view of this hierarchy. in this view, the colors of the nodes 
+represent various countries and the colors of the links represent link types. various 
+zooming and filtering operations that are mentioned in 
+[15] are possible for this 3d tree. moreover, smooth 
+animation is used so that the view changes are not abrupt and allow the user to see the 
+changes easily. (note that the implementation is done using c++, motif and open inventor 
+[18].)
+
+ figure 6: 
+a 3d tree view of a hierarchy of the automobile database. initial partitioning by the
+attribute  country. node colors represent different countries and the link colors
+different link types.
+
+forming hierarchies in the world-wide web
+let us now look at an example from perhaps the most popular hypermedia system, the
+world-wide web. for input to the navigational view builder, information was 
+automatically extracted from the www about the various files, their authors, their links 
+to other files and other information by parsing the html documents using the method 
+described in [14]. figure 7 shows an unstructured overview 
+diagram of the www pages about the research activities at the graphics visualization 
+&amp; usability (gvu) center at georgia tech. 
+(url: http/::/www.gatech.edu/gvu/gvutop.html) obviously, this information is very complicated. 
+
+ figure 7: 
+an overview diagram of the world-wide web pages about the research activities at gvu. it 
+indicates clearly why traditional overview diagrams are useless for real-world hypermedia systems.
+
+the left hand screen of figure 8 shows the top level of the hierarchy automatically 
+created for the data by the system. the file research.html which lists the 
+various research activities of the gvu center is the root. it has branches to the major 
+research area as well as to gvutop.html, a file containing general information 
+about gvu. the right hand side of figure 8 shows a view of a section of this hierarchy 
+where the nodes are listed as a table of content of a book.
+
+ figure 8: 
+the left hand screen shows the top level of the default hierarchy formed for the
+gvu www pages.  research.html is the root and the major research areas are shown.
+the right hand screen shows a book view of a portion of this hierarchy showing research in
+software visualization.
+
+a major drawback of the world-wide web is that very few useful semantic attributes are
+defined for the pages. to create some other meaningful hierarchies, attributes like the 
+topic of the page (whether it is a research page or a personal page, etc.) were inserted 
+manually. (efforts are underway to incorporate metadata into www and hopefully in the near
+future we can extract all useful information from the www automatically.) the left hand 
+screen of figure 9 represents a treemap view of a hierarchy formed when the initial 
+partitioning is done by the topic of the page. the colors are used to represent the kind 
+of users who created the pages. green is used to represent phd students and the color 
+plate indicates that the phd students are the primary authors of the pages. 
+
+ figure 9: 
+the left hand scree shows a treemap view of a hierarchy of the gvu www pages. initial
+partitioning is by the attribute  topic . colors represent different types of
+authors. the selected node is  visdebug.html . the corresponding www page is
+shown on the right.
+
+multiple hierarchies, each giving a different perspective to the underlying information
+space can be formed. if a user selects a node in one view, its positions in the other 
+views are also highlighted. thus, these views help the user in comprehending the data. it 
+should be also noted that the user can go directly to the corresponding www page for the 
+selected node.  thus in the treemap view, the node visdebug.html is highlighted. 
+the corresponding www page is shown on the right hand screen of figure 9.
+
+ generating other views
+once a hierarchy is formed from the original graph structure, the hierarchy can be 
+transformed to other data organizations as well. visualizations can be formed for these 
+data organizations also. for example, if the original partitioning for forming the 
+hierarchy was done by a quantitative attribute, a linear structure sorted by that 
+attribute can be formed from the subtrees of the root node. 
+
+figure 10 represents a perspective wall [9] view of a 
+linear arrangement of the gvu www pages sorted by the last modification times of the 
+files. from the hierarchy whose initial partitioning was by the attribute 
+last-modified-time, the files were divided into partitions based on the time when
+they were last modified. these partitions were arranged on walls. only some walls are in 
+the focus at a given time. the user can easily control the walls which are in focus 
+through a scrollbar. similarly, for the automobile database a perspective wall view can be
+formed where the cars are sorted by the attribute price.
+
+ figure 10: 
+a perspective wall view showing a linear arrangement of the files based on the last 
+modification time. the different walls show files which were last modified in different 
+time frames. only some walls are in the focus at a given time.
+
+other views can also be generated. for example, a tabular view showing information like 
+average price, mileage, etc. for various car models and also such useful statistics for 
+different manufacturers of the cars can be formed  by a depth-first traversal of the 
+hierarchical structure whose partitionings are done by the attributes 
+manufacturer and car-model.
+
+related work
+our structural analysis is similar to that described in [2]
+for identifying hierarchies from hypermedia structures. although using just structural 
+analysis to identify hierarchies works for hypertext systems with simpler underlying 
+structures, identifying meaningful hierarchies by structural analysis alone is difficult 
+for real-world systems. content analysis is also essential as is evident from the paper. 
+[6] describes a method to linearize complex hyper-networked
+nodes to facilitate browsing using a book metaphor. however, this work also uses structural analysis only. 
+this paper is also related to systems that deal with graphical presentation of 
+information automatically or semi-automatically. examples include apt 
+[8] and sage [16]. however,
+our information domain is different from these systems - these systems deal with highly 
+structured information. the views that we want to develop are also different. the previous
+systems generally produced bar diagrams, scatter plots and such graph views.
+
+conclusion
+one of the best ways to comprehend a large complicated information structure is to form
+multiple simpler structures each highlighting different aspects of the original
+structure. our work tries to use this philosophy to make a complex hypermedia system
+understandable to the user. we believe that by forming various effective views of the 
+underlying space, we would allow the user to better understand the complex information. 
+we give examples of the hierarchization process from two complicated hypermedia systems to
+illustrate our point. these examples show that our algorithm was able to extract 
+meaningful hierarchies which gave better insights into the complex information spaces.future work is planned along the following directions:
+
+ visualizing larger databases: although a  detailed complexity analysis is 
+beyond the scope of this paper, it can be shown that the major bottleneck of the algorithm
+is the structural analysis to identify roots. [2] uses an 
+ algorithm to identify roots. on the other hand we use
+a  algorithm to identify roots (by calling the 
+breadth-first search for each node). although in the worst case l = 
+, on average l = 
+ and our algorithm will perform better. for the www 
+database with about 400 nodes and 800 links our algorithm took about 7 seconds on a sgi 
+reality engine. although this is acceptable, we will face problems for larger databases. 
+we are investigating ways to enhance the performance by improving the efficiency of the 
+code and using probabilistic algorithms to identify roots.  moreover, even cone trees and 
+treemaps are not able to visualize larger databases effectively. new visualization techniques are needed.
+ usability studies: a limitation of our system is that no evaluation of how 
+useful our views really are have been done so far. we plan to do serious usability studies
+in the near future. these studies may give us new insights that will help to improve our system.
+
+
+acknowledgement
+this work is supported by grants from digital equipment corporation, bell south
+enterprises, inc. and emory university system of health care, atlanta, georgia as part of 
+the hypermedia interface for multimedia databases project. we would also like to thank
+the reviewers of this paper for their useful comments.
+
+references
+
+1
+g. battista, p. eades, r. tamassia, and i. tollis.
+algorithms for drawing graphs: an annotated bibliography.
+technical report, brown university, june 1993.
+
+2
+r. botafogo, e. rivlin, and b. shneiderman.
+structural analysis of hypertexts: identifying hierarchies and
+  useful metrics.
+acm transactions on office information systems, 10(2):142-180,
+  1992.
+
+3
+k. fairchild, s. poltrok, and g. furnas.
+semnet: three-dimensional graphic representations of large knowledge
+  bases.
+in r. guindon, editor, cognitive science and its applications
+  for human-computer interaction. lawrence erlbaum, 1988.
+
+4
+g. furnas and j. zacks.
+multitrees: enriching and reusing hierarchical structures.
+in proceedings of the acm sigchi '94 conference on human factors
+  in computing systems, pages 330-336, boston, ma, april 1994.
+
+5
+j. hartigan.
+clustering algorithms.
+john wiley and sons, 1975.
+
+6
+s. ichimura and y. matsushita.
+another dimension to hypermedia access.
+in proceedings of hypertext '93 conference, pages 63-72,
+  seattle, wa, november 1993.
+
+7
+b. johnson and b. shneiderman.
+treemaps: a space-filling approach to the visualization of
+  hierarchical information.
+in proceedings of ieee visualization '91 conference, pages
+  284-291, san diego, ca, october 1991.
+
+8
+j. mackinlay.
+automating the design of graphical presentation of relational
+  information.
+acm transactions on graphics, 5(2):110-141, april 1986.
+
+9
+j. d. mackinlay, s. card, and g. robertson.
+perspective wall: detail and context smoothly integrated.
+in proceedings of the acm sigchi '91 conference on human factors
+  in computing systems, pages 173-179, new orleans, la, april 1991.
+
+10
+s. mukherjea and j. foley.
+navigational view builder: a tool for building navigational views of
+  information spaces.
+in acm sigchi '94 conference companion, pages 289-290, boston,
+  ma, april 1994.
+
+11
+s. mukherjea, j. foley, and s. hudson.
+interactive clustering for navigating in hypermedia systems.
+in proceedings of the acm european conference of hypermedia
+  technology, pages 136-144, edinburgh, scotland, september 1994.
+
+12
+c. neuwirth, d. kauffer, r. chimera, and g. terilyn.
+the notes program: a hypertext application for writing from source
+  texts.
+in proceedings of hypertext '87 conference, pages 121-135,
+  chapel hill, nc, november 1987.
+
+13
+h. parunak.
+hypermedia topologies and user navigation.
+in proceedings of hypertext '89 conference, pages 43-50,
+  pittsburgh, pa, november 1989.
+
+14
+j. pitkow and k. bharat.
+webviz: a tool for world-wide web access log visualization.
+in proceedings of the first international world-wide web
+  conference, geneva, switzerland, may 1994.
+
+15
+g. g. robertson, j. d. mackinlay, and s. card.
+cone trees: animated 3d visualizations of hierarchical information.
+in proceedings of the acm sigchi '91 conference on human factors
+  in computing systems, pages 189-194, new orleans, la, april 1991.
+
+16
+s. roth, j. kolojejchick, j. mattis, and j. goldstein.
+interactive graphic design using automatic presentation knowledge.
+in proceedings of the acm sigchi '94 conference on human factors
+  in computing systems, pages 112-117, boston, ma, april 1994.
+
+17
+k. utting and n. yankelovich.
+context and orientation in hypermedia networks.
+acm transactions on office information systems, 7(1):58-84,
+  1989.
+
+18
+j. wernecke.
+the inventor mentor: programming object-oriented 3d graphics
+  with open inventor.
+addison-wesley publishing company, 1994.
+
+
+
+
+visualizing complex hypermedia networks through multiple hierarchical views
+visualizing complex hypermedia networks through multiple hierarchical views
+visualizing complex hypermedia networks through multiple hierarchical views
+visualizing complex hypermedia networks through multiple hierarchical views
+visualizing complex hypermedia networks through multiple hierarchical views
+visualizing complex hypermedia networks through multiple hierarchical views
+visualizing complex hypermedia networks through multiple hierarchical views
+visualizing complex hypermedia networks through multiple hierarchical views
+visualizing complex hypermedia networks through multiple hierarchical views
+visualizing complex hypermedia networks through multiple hierarchical views

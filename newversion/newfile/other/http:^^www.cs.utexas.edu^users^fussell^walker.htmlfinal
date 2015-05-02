@@ -1,0 +1,42 @@
+compiling the walker demo program 
+
+
+
+ compiling the walker demo program 
+
+
+
+to compile the walker demo program in the lab, do the following.  copy
+the contents of the directory
+/p/src/mesa-1.2.8/glut-3.0/progs/demos/walker to a directory under
+your home directory.  change the name of imakefile.class to imakefile
+in your directory.  execute the command "xmkmf" followed by the
+commands "make clean" and "make" in your directory.  this should
+result in the creation of the executable "walker" in your directory,
+which should run on any of the lab machines.  please note that if you
+have previously copied the walker code, you should do this again
+anyway, since i have made a small change to walker.c to fix a bug in
+solaris that causes the cset filenames to be misread.  this bug also
+shows up on the department suns running solaris, but not on aix or
+linux machines.
+
+
+
+don't forget to 
+"export ld_library_path=$ld_library_path:/p/lib"
+or
+"setenv ld_library_path $ld_library_path:/p/lib"
+before you try to run "walker."
+
+ 
+
+ compiling the walker demo program 
+ compiling the walker demo program 
+ compiling the walker demo program 
+ compiling the walker demo program 
+ compiling the walker demo program 
+ compiling the walker demo program 
+ compiling the walker demo program 
+ compiling the walker demo program 
+ compiling the walker demo program 
+ compiling the walker demo program

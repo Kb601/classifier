@@ -1,0 +1,354 @@
+jim lipton hypermedia plan file
+
+jim lipton
+(well, this isn't me, but i'll get a picture on here eventually...)
+
+
+asst. prof. of computer science, dept. of mathematics, wesleyan university. 
+
+
+
+
+email:
+
+lipton@wesleyan.edu
+
+phone: +1 (203) 685-2188
+fax: +1 (203) 685-2571
+
+
+
+see if i'm logged in:
+click 
+here to 'finger' me in the cs dept.
+
+cv
+
+research topics
+
+
+relational programming, categories and logic programming,
+intuitionistic semantics, constructive set theory, linear logic.
+
+
+
+
+currently available papers/manuscripts
+
+
+
+
+   "a new framework for declarative programming" (with  peter
+      freyd and stacy finkelstein) 
+      
+      dist96-nfdp.ps 
+
+       
+      dist96-nfdp.dvi 
+
+
+      categorical syntax and semantics for
+      logic programming, used to give a new treatment to weak
+      hereditarily harrop logic programming with constraints.
+      submitted to tcs.
+      
+  
+"logic programming in tau categories"
+(with peter freyd and stacy finkelstein) 
+ .ps  file,
+  expanded version of a paper in proc. computer science logic '94,
+  lncs 933, springer.
+
+
+
+"some intuitions behind realizability
+semantics for intuitionistic logic: tableaux and lauchli
+countermodels", ( with michael o'donnell) 
+  to appear in the annals of pure and applied logic. 
+
+postscriptfile,
+ dvi file.
+
+
+"realizability, settheory and term extraction", from
+  cahiers du centre logique de l'universite catholique de louvain, 1995.
+  .dvi  file.
+  .ps  file.
+
+
+"provability in tbll: a decision procedure" (with j. chirimar),
+ 1993  expanded version of  a csl '91 paper, lncs 626, springer.
+  .dvi  file,
+  .ps  file.
+
+
+
+"combinatory logic programming:computing in relation calculi"(with p. broome)
+  
+.dvi 
+file,
+  
+.ps 
+file. revised version of  paper in 
+   proc. int. logic programming symposium (ilps '94), ithaca, mit press
+
+
+
+
+"a relational realizability model of intuitionistic  logic"
+(with michael o'donnell) 
+     .dvi  file,
+      .ps  file,
+ mscs-94, slovakia, in lncs, springer.  
+
+
+
+
+
+  all my files
+  available via anonymous ftp  
+
+
+onr grant
+
+info on the project: 
+
+"computing with relations"
+
+
+
+
+other wesleyan home pages
+
+
+
+ 
+wesleyan university 
+
+
+    wesleyan staff phone list
+
+information
+    technology services at wesleyan
+
+    other servers at wesleyan (including wadi student net)
+
+    university libraries
+click here to connect to the ctw online catalog  right now. 
+card catalog,
+    online catalog and
+    other
+    databases
+
+
+
+other home pages of interest
+
+
+
+
+  
+       hypatia:
+      a directory of research workers in computer science
+      and pure mathematics,
+      and a library of their
+      papers. 
+
+  
+
+cis at penn:  department of computer and information science
+  
+university of cambridge computer lab
+
+  
+university of pisa (di.unipi.it)
+department of computer science
+  
+  university of pisa
+      logic programming group.
+lambda-prolog
+home page
+  
+ clip: computational logic,
+      implementation, and parallelism lab
+      polytechnic university of madrid.
+  
+oxford computing lab 
+home page
+ 
+     linear logic home page at sri international. 
+ 
+     american mathematical society home page.  
+
+ isaac newton institute
+for mathematical sciences.
+
+laboratoire de mathematiques discretes, marseille-luminy 
+
+front door to
+cs at cmu.
+
+ inria's home page.
+
+
+
+
+
+    the lp newsletter archive.
+ springer-verlag archive
+ 
+     computer science bibliography glimpse server
+
+ 
+     mathematical literature on the web. 
+
+ isaac newton institute
+for mathematical sciences.(gopher)
+
+
+ annual ieee symposia on
+     logic in computer science.
+
+
+    a collection of computer science bibliographies in bibtex format.
+    
+
+
+researchers in programming language theory, design, and implementation.
+
+              
+    
+    logic conference listing
+
+
+some anonymous ftp directories
+
+
+ 
+penn logic and computation group
+
+
+stanford theory group
+
+
+edinburgh cs department
+
+
+imperial cs department 
+
+
+paris vii equipe de logique 
+
+
+pisa cs department
+
+
+dec src
+
+
+
+some internet resources in computing
+
+= computing research organization.  has lots of stuff of interest to
+potential grad studentss, in particular a link to a nrc study ranking 108
+schools in 20 different areas.
+
+
+= a link via princeton, to lots of cs depts
+
+
+
+some internet resources in logic programming
+
+the
+    world wide web virtual library: logic programmingvirtual
+	library computing languages ai . logic programming . 
+...
+
+ --- [568] http://www.comlab.ox.ac.uk/archive/logic-prog.html (32k)
+
+
+logic programming
+    and artificial intelligence group of the kuleuvenlogic
+	programming and artificial intelligence research group at the
+	k.u. leuven . welcome to the www page of the lpai (logic
+	programming and artificial intelligence) research group at the
+	department of computer science at the katholieke  
+...
+
+ --- [567] http://www.cs.kuleuven.ac.be/~lpai/ (2k)
+
+
+
+
+
+welcome to the logic
+    programming section, department of computing, imperial
+	college. this is a world wide web server. it provides local
+	section information as well as information from servers around
+	the world. our server is situated on
+	laotzu.doc.ic.ac.uk. . logic programming 
+...
+
+ --- [566] http://laotzu.doc.ic.ac.uk/ (3k)
+
+
+
+    the association for logic programming - alp
+
+
+other interesting pages
+
+ read about limitations of freedom of speech on the internet
+www page. and what you 
+can do about it.  
+
+the us congress
+has passed sweeping legislation that will restrict speech on online
+networks throughout the country. what you see, read, and write in
+public will be curtailed because of this legislation.
+
+
+    some quotes taken from the student net at wesleyan...
+
+  
+
+       "more computing sins are committed in the name of efficiency (without necessarily achieving it) than for any other single
+       reason - including blind stupidity."
+
+ w.a. wulf 
+  
+
+       "we should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil."
+  
+
+      donald knuth
+
+       
+  "the best is the enemy of the good."
+ 
+            voltaire
+      
+
+
+  
+wesleyan university 
+
+
+return to the wesleyan home
+ page at any time by clicking on the wesleyan shield.
+
+
+
+
+
+jim lipton hypermedia plan file
+jim lipton hypermedia plan file
+jim lipton hypermedia plan file
+jim lipton hypermedia plan file
+jim lipton hypermedia plan file
+jim lipton hypermedia plan file
+jim lipton hypermedia plan file
+jim lipton hypermedia plan file
+jim lipton hypermedia plan file
+jim lipton hypermedia plan file

@@ -1,0 +1,211 @@
+publications
+
+
+publications
+
+
+my work falls into three general categories:
+
+complex data types in databases: my thesis
+dealt with the issue of how to extend database systems to provide
+support for data that is logically sequential. this work is currently
+being extended to handle all kinds of complex data types through
+a new paradigm called enhanced-adts.
+query processing and optimization:
+this work studied issues in relational query processing
+and optimization (though some of it can be applied to 
+non-relational databases as well). much of this research was
+done at or in collaboration with, and with the support 
+of the ibm almaden research center.
+the coral project:
+coral is a deductive database system developed at the
+university of wisconsin. it combines a powerful declarative 
+logic-based query language with a relational database.
+for more information on the coral project, 
+click here .
+
+
+complex databases
+
+refereed publications
+
+
+
+
+
+  the case for enhanced abstract data types
+
+  praveen seshadri, miron livny and raghu ramakrishnan.
+  submitted to sigmod 97.
+
+
+
+
+
+
+  the design and implementation of a sequence database system.
+
+  praveen seshadri, miron livny and raghu ramakrishnan.
+  proceedings of the twenty second international conference on very large databases(vldb),september 1996. ( longer
+submitted version )
+
+
+
+
+
+
+seq: a model for sequence databases.
+
+praveen seshadri, miron livny and raghu ramakrishnan.
+proceedings of the ieee conference on data engineering, march 1995.
+
+
+
+
+
+  sequence query processing.
+
+  praveen seshadri, miron livny and raghu ramakrishnan.
+  proceedings of the acm sigmod conference on data management,may 1994.
+
+
+
+query processing and optimization
+
+refereed publications
+
+
+
+
+
+cost-based optimization for magic: algebra and implementation.
+
+praveen seshadri, joseph hellerstein, raghu ramakrishnan, hamid pirahesh, t.y. cliff leung, divesh srivastava, peter j. stuckey, s. sudarshan.
+sigmod 1996 (click here for longer version).
+
+
+
+
+
+decorrelating complex queries. 
+
+praveen seshadri, hamid pirahesh and t.y. cliff leung.
+proceedings of the ieee conference on data engineering, february 1996.
+(click here for longer version)
+
+
+
+
+
+generalized partial indexes.
+
+praveen seshadri and arun swami.
+proceedings of the ieee conference on data engineering, march 1995.
+
+other publications
+
+
+
+
+system for optimizing correlated sql queries in a relational database using magic decorrelation.
+
+praveen seshadri, hamid pirahesh and t.y.cliff leung.
+u.s. patent application, ibm ref: am9-94-057 (also available
+as ibm almaden research report).
+
+
+
+
+
+filter-joins: cost-based optimization for magic sets.
+
+praveen seshadri, joseph hellerstein, raghu ramakrishnan.
+university of wisconsin technical report 95-1273, 1995.
+
+
+
+the coral project
+
+refereed publications
+
+
+
+
+
+the coral deductive system.
+
+raghu ramakrishnan, divesh srivastava, s.sudarshan, and praveen seshadri.
+the vldb journal, special issue on prototypes of deductive database systems,
+1994.
+
+
+
+
+
+coral++: adding object-orientation to a logic database language.
+
+divesh srivastava, raghu ramakrishnan, praveen seshadri and s.sudarshan.
+proceedings of the nineteenth international conference on very large databases(vldb),september 1993.
+
+
+
+
+
+implementation of the coral deductive database system.
+
+raghu ramakrishnan, divesh srivastava, s.sudarshan, and praveen seshadri.
+proceedings of the acm sigmod conference on data management,may 1993.
+
+
+
+
+
+explaining program evaluation in deductive systems.
+
+tarun arora, william roth, raghu ramakrishnan, praveen seshadri, and divesh srivastava.
+proceedings of the international conference on deductive and object-oriented databases (dood), 1993.
+
+other publications
+
+
+
+
+
+the coral user manual - a tutorial introduction to coral.
+
+raghu ramakrishnan, praveen seshadri, divesh srivastava, and s.sudarshan.
+
+
+
+
+
+
+ 
+publications
+
+ 
+publications
+
+ 
+publications
+
+ 
+publications
+
+ 
+publications
+
+ 
+publications
+
+ 
+publications
+
+ 
+publications
+
+ 
+publications
+
+ 
+publications

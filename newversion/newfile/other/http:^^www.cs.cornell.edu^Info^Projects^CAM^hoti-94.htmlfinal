@@ -1,0 +1,395 @@
+low-latency communication over atm networks
+using active messages
+low-latency communication over atm networks
+using active messages
+
+
+thorsten von eicken, veena avula, anindya basu, and vineet buch
+
+department of computer science
+cornell university
+ithaca, ny14850
+
+abstract
+recent developments in communication architectures for parallel
+machines have made significant progress and reduced the communication
+overheads and latencies by over an order of magnitude as compared to
+earlier proposals. this paper examines whether these techniques can
+carry over to clusters of workstations connected by an atm network even
+though clusters use standard operating system software, are equipped
+with network interfaces optimized for stream communication, do not
+allow direct protected user-level access to the network, and use
+networks without reliable transmission or flow control.
+
+in a
+first part, this paper describes the differences in communication
+characteristics between clusters of workstations built from standard
+hardware and software components and state-of-the-art multiprocessors.
+the lack of flow control and of operating system coordination affects
+the communication layer design significantly and requires larger
+buffers at each end than on multiprocessors. a second part evaluates a
+prototype implementation of the low-latency active messages
+communication model on a sun workstation cluster interconnected by an
+atm network. measurements show application-to-application latencies of
+about 20 microseconds for small messages which is roughly comparable to
+the active messages implementation on the thinking machines cm-5
+multiprocessor.
+
+
+table of contents
+
+1  introduction
+2  technical issues
+3  ssam: a sparcstation active messages
+prototype
+4  comparison to other approaches
+5  conclusions
+6  bibliography
+
+
+
+1  introduction
+the shift from slow
+broadcast-based local area networks to high bandwidth switched network
+architectures is making the use of clusters of workstations(1) as platforms for parallel processing
+more and more attractive. while a number of software packages [5,6] already support parallel processing
+on today's workstations and networks, the communication performance is
+over two orders of magnitude inferior to state-of-the art
+multiprocessors(2). as a result, only
+embarassingly parallel applications (i.e., parallel applications that
+essentially never communicate) can make use of such environments.
+networking technologies such as atm[1] offer the opportunity to close the
+gap: for example, atm cells are roughly the same size as messages on
+multiprocessors, it takes only a few microseconds to send or receive a
+cell, atm switches can be configured to p
+from a purely technical point of view, the gap between clusters of
+workstations and multiprocessors is certainly closing and the
+distinction between the two types of systems is becoming blurred.
+differences remain: in particular, the design and construction of
+multiprocessors allows better integration of all the components because
+they can be designed to fit together. in addition, the sharing of
+physical components such as power supplies, cooling and cabinets has
+the potential to reduce cost and to allow denser packaging. while the
+debate over the significance of these technological differences is
+still open, it is becoming clear that the two approaches will yield
+qualitatively similar hardware systems. indeed, it is possible to take
+a cluster of workstations and load system software making it look
+almost identical to a multiprocessor. this means that a continuous
+spectrum of platforms spanning the entire range from workstations on an
+ethernet to state-of-the-art multiprocessors can become available, and
+tha
+from a pragmatic point of view, however, significant differences are
+likely to remain. the most important attraction in using a cluster of
+workstations instead of a multiprocessor lies in the off-the-shelf
+availability of all its major hardware and software components. this
+means that all the components are readily available, they are familiar,
+and their cost is lower because of economies of scale leveraged across
+the entire workstation user community. thus, even if from a technical
+point of view there is a continuous spectrum between clusters and
+multiprocessors, the use of off-the-shelf components in clusters will
+maintain differences.
+in fact, the use of standard components in clusters raises the question
+whether these can be reasonably used for parallel processing. recent
+advances in multiprocessor communication performance are principally
+due to a tighter integration of programming models, compilers,
+operating system functions, and hardware primitives. it is not clear
+whether these advances can be carried over to clusters or whether the
+use of standard components is squarely at odds with achieving the level
+of integration required to enable modern parallel programming models.
+specifically, new communication architectures such as distributed
+shared memory, explicit remote memory access, and active messages
+reduced the costs from hundreds to thousands of microseconds to just a
+few dozen precisely through the integration of all system components.
+these new communication architectures are designed such that network
+interfaces can implement common primitives directly in hardware, they
+allow the operating system to be moved out of the critica this paper
+examines whether the techniques developed to improve communication
+performance in multiprocessors, in particular, active messages, can be
+carried over to clusters of workstations with standard networks and
+mostly standard system software. this paper assumes the current state
+of the art technology in which clusters using atm networks differ from
+multiprocessors in three major aspects(4):
+
+
+clusters use standard operating system software which implies less coordination among individual nodes, in particular with respect to process scheduling and address translation,
+
+atm networks do not provide the reliable delivery and flow control that are taken for granted in multiprocessor networks, and
+
+network interfaces for workstations optimize stream communication (e.g., tcp/ip) and are less well integrated into the overall architecture (e.g., connect to the i/o bus instead of the memory bus).
+
+
+
+in comparing communication on clusters and multiprocessors this paper makes two major contributions:
+
+
+first, it analyzes, in section 2, the implications that the differences between clusters and multiprocessors have on the design of communication layers similar to those used in multiprocessors, and
+
+second, it describes, in section 3, the design of an active messages prototype implementation on a collection of sun workstations interconnected by an atm network which yields application-to-application latencies on the order of 20us.
+
+
+
+the use of active messages in workstation clusters is briefly contrasted to other approaches in section 4 and section 5 concludes the paper.
+2  technical issues
+collections of workstations have been used in many different forms to run large applications. in order to establish a basis for comparison to multiprocessors, this paper limits itself to consider only collections of workstations (called clusters) which consist of a homogeneous set of machines, dedicated to run parallel applications, located in close proximity (such as in the same machine room), and interconnected by an atm network. such a cluster can be employed in a large variety of settings. the cluster could simply provide high-performance compute service for a user community to run large parallel applications.
+a more typical setting would be as computational resource in a distributed application. one such example, the stormcast weather monitoring system in norway, runs on a very large collection of machines spread across a large portion of the country, but uses a cluster of a few dozen workstations in a machine room (without high speed network in this case) to run compute-intensive weather prediction models and to emit storm warnings. the availability of low-latency communication among these workstations would enable the use of parallel programming languages and of more powerful parallel algorithms, both of which require a closer coupling among processors than is possible today.
+concentrating on the compute cluster offers the largest potential for improvement because the latency over the long-haul links is dominated by speed-of-light and network congestion issues and because the wide area communication is comparatively better served by today's distributed computing software. note that this paper does not argue that running concurrent applications in a heterogeneous environment, across large distances, and on workstations that happen to be sitting idle is not an interesting design point (it in fact has been used successfully), but that the set of communication issues occurring in such a context cannot be compared to those in a multiprocessor.
+given that the applications for clusters considered here exhibit characteristics similar to those on multiprocessors, the programming models used would be comparable, if not identical, to those popular for parallel computing. this includes various forms of message passing (e.g., send/receive, pvm), of shared memory (e.g., cache coherent shared memory, remote reads and writes, explicit global memory), and of parallel object oriented languages (e.g., numerous c++ extensions).
+on parallel machines several proposed communication architectures have achieved the low overheads, low latencies, and high bandwidths that are required for high performance implementations of the above programming models. in particular, cache coherent shared memory, remote reads and writes, and active messages offer round-trip communication within a few hundred instruction times, so that frequent communication on a fine granularity (such as on an object by object or cache line basis) remains compatible with high performance. in these settings, the overhead of communication, that is, the time spent by the processor initiating communication, is essentially the cost of pushing message data into the network interface at the sending end and pulling it out at the receiving end. virtually no cycles are spent in any protocol handling as all reliability and flow control are handled in hardware. the operating system need not be involved in every communication operation because the network interface hardware can enforce protection boundaries across the network.
+the above communication architectures cannot be moved in a straightforward manner from multiprocessors to clusters of workstations with atm networks because of three major differences between the two: atm networks offer neither reliable delivery nor flow control, atm network interfaces provide no support for protected user-level access to the network, and the workstation operating systems do not coordinate process scheduling or address translation globally. coping with these differences poses major technical challenges and may eventually require the integration of some multiprocessor-specific features into the clusters. the following three subsections present the nature of these differences in more detail and discuss the resulting issues.
+2.1  reliability and flow control in the network
+in multiprocessor networks, flow control is implemented in hardware on a link-by-link basis. whenever the input buffer of a router fills up, the output of the up-stream router is disabled to prevent buffer overflow. the flow control thus has the effect of blocking messages in the network and eventually, as the back-pressure propagates, the sending nodes are prevented from injecting further messages. this mechanism guarantees that messages are never dropped due to buffer space limitations within the network or at the receiving end. in addition, the electrical characteristics of the network are designed to ensure very low error rates, such that the use of a simple error detection and correction mechanism (implemented in hardware) can offer the same reliability within the network as is typical of the processing nodes themselves.
+in contrast, an atm network does not provide any form of flow control and does not offer reliable delivery. instead, higher protocol layers must detect cell loss or corruption and cause their retransmission. while this partitioning of responsibilities may be acceptable in the case of stream-based communication (e.g., tcp/ip, video, audio) it is questionable in a parallel computing setting.
+the flow control and the error detection and correction in multiprocessor networks serve to cover four causes of message loss: buffer overflow in the receiving software, buffer overflow in the receiving network interface, buffer overflow within the network, and message corruption due to hardware errors. in an atm network, simple window based end-to-end flow control schemes and a per-message crc (as used in aal-5) can cover the first and last cases(5) of cell loss. in addition, preventing buffer overflow in the receiving network interface can be achieved by ensuring that the rate at which cells can be moved from the interface into main memory is at least as large as the maximal cell arrival rate. preventing buffer overflow within the network, however, is not realistically possible using end-to-end flow control. this is particularly a problem in a parallel computing setting in which all nodes tend to communicate with all other nodes in both highly regular and irregular patterns at unpredictable intervals. the degree of contention within the network therefore cannot be measured or predicted with any accuracy by either the sender or the receiver and communication patterns which result in high contention will result in high cell loss rates causing extensive retransmissions.
+traditional flow control schemes used in stream-based communication avoid fruitless retransmission storms by dynamically reducing the transmission rate on connections which experience high cell loss rates. this works in these settings because, following the law of large numbers, contention in a wide area network does not tend to vary instantaneously and therefore the degree of contention observed in the recent past is a good predictor for contention in the near future.
+as an illustration of the difficulties in a parallel computing setting, consider the implementation of a parallel sort. the most efficient parallel sort algorithms [3] are based on an alternation of local sorts on the nodes and permutation phases in which all nodes exchange data with all other nodes. these permutation phases serve to move the elements to be sorted &quot;towards&quot; their correct position, the communication patterns observed are highly dynamic and their characteristics depend to a large degree on the input data. if at any point the attempted data rate into a given node exceeds the link rate, then the output buffers at up-stream switches will start filling up. because the communication patterns change very rapidly (essentially with every cell), it is futile to attempt to predict contention, and given the all-to-all communication pattern, the probability of internal contention among seemingly unrelated connections is high.
+beyond the problems caused by contention and the resulting retransmissions, the lack of reliable delivery guarantee in atm networks imposes a certain overhead on the communication primitives. specifically, the sender must keep a copy of each cell sent until a corresponding acknowledgment is received, in case the cell must be retransmitted. this means that messages cannot be transferred directly between processor registers and the network interface (as is possible on the cm-5 [12]), rather, a memory copy must be made as well.
+2.2  user-level access to the network interface
+recently, multiprocessor communication architectures have achieved a significant reduction of the communication overhead by eliminating the operating system from the critical path. in order not to compromise security, the network interface must offer some form of protection mechanism. in shared memory models, the memory management unit is extended to map remote memory into the local virtual user address space such that the operating system can enforce security by managing the address translation tables. message-based network interfaces contain a node address translation table which maps the user's virtual node numbers onto the physical node address space. again, the operating system enforces security by controlling the address translation, thereby preventing a process from sending a message to an arbitrary node. the current generation of message based network interfaces only control the destination node address and therefore require that all processes of a parallel program run at the same time. the next generation adds the sending process id to each message allowing the receiving network interface to discriminate between messages destined for the currently running process, that can retrieve these message directly, and messages for dormant processes, which must be queued (typically by the operating system) for later retrieval.
+in contrast, the network interfaces available for workstations do not yet incorporate any form of protection mechanism. instead, the operating system must be involved in the sending and reception of every message. the connection based nature of atm networks would principally allow the design of a protection mechanism to limit the virtual circuits a user process has access to (the operating system would still control virtual circuit set-up). but because the architecture of the networking layers in current operating systems does not seem to be set-up to allow user-level network interface access, it appears unlikely that network interfaces with these features will become commonplace soon. the challenge in any high-performance communication layer for clusters is, thus, to minimize the path through the kernel by judiciously coordinating the user-kernel interactions.
+2.3  coordination of system software across all communicating nodes
+in almost all communication architectures the message reception logic is the critical performance bottleneck. in order to be able to handle incoming messages at full network bandwidth, the processing required for each arriving message must be minimized carefully. the trick used in multiprocessor systems to ensure rapid message handling is to constrain the sender to only send messages which are easy to handle.
+in shared memory systems this is done by coordinating the address translation tables among all processing nodes such that the originating node can translate the virtual memory address of a remote access and directly place the corresponding physical memory address into the message. the set of communication primitives is small and fixed (e.g., read and write) and by forcing the sender to perform the complicated part of a remote memory access (namely the protection checks and the address translation) the handling of a request is relatively simple to implement(6). if the virtual address were sent, the receiving node could discover that the requested virtual memory location had been paged out to disk with the result that the handling of the message would become rather involved.
+in active messages on multiprocessors the scheduling of processes is assumed to be coordinated among all nodes such that communicating processes execute simultaneously on their respective nodes. this guarantees that messages can be handled immediately on arrival by the destination process itself. in order to accomplish this, the sender of an active message specifies a user-level handler at the destination whose role it is to extract the message from the network and integrate it into the ongoing computation. the handler can also implement a simple remote service and send a reply active message back. however, in order to prevent deadlock the communication patterns are limited to requests and replies, e.g., a handler of a reply message is not allowed to send any further messages. an implementation of active messages typically reserves the first word of each message for the handler address, and the handler at the receiving end is dispatched immediately on message arrival to dispose of the message. the fact that the message layer can call upon the handlers to deal with messages in fifo order simplifies the buffering considerably over that required by more traditional message passing models such as pvm, mpi, or nx. these models allow processes to consume messages in arbitrary order and at arbitrary times forcing the communication architecture to implement very general buffer and message matching mechanisms at high cost.
+in clusters the fact that the operating systems of the individual nodes are not nearly as coordinated contradicts the assumption that messages can always be consumed quickly upon arrival. in the case of active messages the destination process might have been suspended and cannot run the handler, and in a shared memory model the memory location requested might not be mapped. although exact coordination is not possible without major changes to the operating system core, an implementation of either communication model is likely to be able to perform some coordination among nodes on its own and to influence the local operating system accordingly. this may allow the communication layer to assume that in the common case everything works out fine, but it must be able to handle the difficult cases as well.
+2.4  summary
+even though superficially a cluster of workstations appears the be technically comparable to a multiprocessor, the reality is that key characteristics are different and cause significant implementation difficulties: the very comparable raw hardware link bandwidths, bisection bandwidths, and routing latencies conceal the lack in clusters of flow control, reliability, user-level network access, and operating system coordination.
+these shortcomings will inevitably result in lower communication performance; their quantitative effect on performance is evaluated in the next section which presents a prototype implementation of active messages on a cluster of sun workstations. however, the lack of flow-control in atm networks poses a fundamental problem: can catastrophic performance degradation occur due to significant cell loss in particular communication patterns?
+3  ssam: a sparcstation active messages prototype
+the ssam prototype implements the critical parts of an active messages communication architecture on a cluster of sparcstations connected by an atm network. the primary goal is to evaluate whether it is possible to provide a parallel programming environment on the cluster that is comparable to those found on multiprocessors. the prototype is primarily concerned with providing performance at par with parallel machines, while addressing the handicaps of atm networks that have been identified in the previous section. in particular:
+
+
+the prototype provides reliable communication to evaluate the cost of performing the necessary flow-control and error checking in software,
+
+it minimizes the kernel intervention to determine the cost of providing protection in software, and
+
+the buffering is designed to tolerate arbitrary context switching on the nodes.
+
+
+
+at this time only a limited experimental set-up (described below) is available such that the prototype cannot provide information neither on how cell losses due to contention within the network affect performance, nor on how the scheduling of processes can be coordinated to improve the overall performance of parallel applications.
+3.1  active messages communication architecture
+the active messages communication architecture [4] offers simple, general purpose communication primitives as a thin veneer over the raw hardware. it is intended to serve as a substrate for building libraries that provide higher-level communication abstractions and for generating communication code directly from a parallel-language compiler. unlike most communication layers, it is not intended for direct use by application programmers and really provides lower-level services from which communication libraries and run-time systems can be built.
+the basic communication primitive is a message with an associated small amount of computation (in the form of a handler) at the receiving end. typically the first word of an active message points to the handler for that message. on message arrival, the computation on the node is interrupted and the handler is executed. the role of the handler is to get the message out of the network, by integrating it into the ongoing computation and/or by sending a reply message back. the buffering and scheduling provided by active messages are extremely primitive and thereby fast: the only buffering is that involved in actual transport and the only scheduling is that required to activate the handler. this is sufficient to support many higher-level abstractions and more general buffering and scheduling can be easily constructed in layers above active messages when needed. this minimalist approach avoids paying a performance penalty for unneeded functionality.
+in order to prevent deadlock and livelock, active message restricts communication patterns to requests and replies, i.e., the handler of a request message is only allowed to send a reply message and a reply handler is not allowed to send further replies.
+3.1.1  ssam functionality
+the current implementation is geared towards the sending of small messages which fit into the payload of a single atm cell. eight of the 48 available bytes of payload in an atm cell are used by ssam to hold flow-control information (16 bits), the handler address (32 bits), and an aal3/4 compatible checksum (16 bits). the remaining 40 bytes hold the active message data.
+the c header file for the interface to ssam is shown in figure 1. to send a request active message, the user places the message data into a per-connection buffer provided by ssam and calls ssam_10 with a connection identifier and the remote handler address. ssam_10 adds the flow-control information and traps to the kernel to have the message injected into the network. it also polls the receiver and processes incoming messages. at the receiving end, the network is polled by ssam_10 or ssam_poll (the latter only polls the network) and all messages accumulated in the receive fifo are moved into a buffer. ssam then calls the appropriate handler for each message, passing as arguments the originating connection identifier, the address of the buffer holding the message, and the address of a buffer for a reply message. the handler processes the message and may send a reply message back by placing the data in the buffer provided and returning the address of the reply handler (or null if no reply is to be sent).
+figure 1:  c interface for sparcstation active messages
+
+the current prototype does not use interrupts, instead, the network is polled every time a message is sent. this means that as long as a process is sending messages it will also handle incoming ones. an explicit polling function is provided for program parts which do not communicate. using interrupts is planned but not implemented yet.
+3.1.2  example: implementing a remote read with ssam
+the sample implementation of a split-phase remote double-word read is shown in figure 2. the readdouble function increments a counter of outstanding reads, formats a request active message with the address to be read as well as information for the reply, and sends the message. the readdouble_h handler fetches the remote location and sends a reply back to the readdouble_rh reply handler which stores the data into memory and decrements the counter. the originating processor waits for the completion of the read by busy-waiting on the counter at the end of readdouble. a split-phase read could be constructed easily by exposing the counter to the caller, who could proceed with computation after initiating the read and only wait on the counter when the data is required.
+figure 2:  sample remote read implementation using ssam
+
+3.2  experimental set-up
+the experimental set-up used to evaluate the performance of the prototype ssam implementation consists of a 60mhz sparcstation-20 and a 25mhz sparcstation-1+ running sunos 4.1. the two machines are connected via fore systems sba-100 atm interfaces using a 140mb/s taxi fiber. the interfaces are located on the sbus (a 32-bit i/o bus running at 20 or 25mhz) and provide a 36-cell deep output fifo as well as a 292-cell input fifo. to send a cell the processor stores 56 bytes into the memory-mapped output fifo and to receive a cell it reads 56 bytes from the input fifo. a register in the interface indicates the number of cells available in the input fifo.
+note that the network interface used is much simpler and closer to multiprocessor nis than most second-generation atm interfaces available today. the only function performed in hardware, beyond simply moving cells onto/off the fiber, is checksum generation and checking for the atm header and an aal3/4 compatible payload. in particular, no dma or segmentation and reassembly of multi-cell packets is provided.
+3.3  ssam implementation
+the implementation of the sparcstation atm active messages layer consists of two parts: a device driver which is dynamically loaded into the kernel and a user-level library to be linked with applications using ssam. the driver implements standard functionality to open and close the atm device and it provides two paths to send and receive cells. the fast path described here consists of three trap instructions which lead directly to code for sending and receiving individual atm cells. the traps are relatively generic and all functionality specific to active messages is in the user-level library which also performs the flow-control and buffer management. a conventional read/write system call interface is provided for comparison purposes and allows to send and receive cells using a &quot;pure&quot; device driver approach.
+the traps to send and receive cells consist of carefully crafted assembly language routines. each routine is small (28 and 43 instructions for the send and receive traps, respectively) and uses available registers carefully. the register usage is simplified by the sparc architecture's use of a circular register file, which provides a clean 8-register window for the trap. by interfacing from the program to the traps via a function call, arguments can be passed and another 8 registers become available to the trap.
+the following paragraphs describe the critical parts of the ssam implementation in more detail.
+3.3.1  flow-control
+a simple sliding window flow control scheme is used to prevent overrun of the receive buffers and to detect cell losses. the window size is dimensioned to allow close to full bandwidth communication among pairs of processors. 
+in order to implement the flow control for a window of size w, each process pre-allocates memory to hold 4w cells per every other process with which it communicates. the algorithm to send a request message polls the receiver until a free window slot is available and then injects the cell into the network, saving it in one of the buffers as well in case it has to be retransmitted. upon receipt of a request message, the message layer moves the cell into a buffer and, as soon as the corresponding process is running, calls the active message handler. if the handler issues a reply, it is sent and a copy is held in a buffer. if the handler does not generate a reply, an explicit acknowledgment is sent. upon receipt of the reply or acknowledgment, the buffer holding the original request message can be reused. note how the distinction between requests and replies made in active messages allows acknowledgments to be piggy-backed onto replies.
+the recovery scheme used in case of lost or duplicate cells is standard, except that the reception of duplicate request messages may indicate lost replies which have to be retransmitted. it is important to realize that this flow control mechanism does not really attempt to minimize message losses due to congestion within the network: the lack of flow-control in atm networks effectively precludes any simple congestion avoidance scheme. until larger test-beds become available and the atm community agrees on how routers should handle buffer overflows it seems futile to invest in more sophisticated flow-control mechanisms. nevertheless, the bursty nature of parallel computing communication patterns are likely to require some solution before the performance characteristics of an atm network become as robust as those of as multiprocessor networks.
+3.3.2  user-kernel interface and buffer management
+the streamlining of the user-kernel interface is the most important factor contributing to the performance of ssam. in the prototype, the kernel preallocates all buffers for a process when the device is opened. the pages are then pinned to prevent page-outs and are mapped (using mmap) into the processes' address space. after every message send, the user-level library chooses a buffer for the next message and places a pointer in an exported variable. the application program moves the message data into that buffer and passes the connection id and the handler address to ssam which finishes formatting the cell (adding the flow control and handler) and traps to the kernel. the trap passes the message offset within the buffer area and the connection id in registers to the kernel. protection is ensured with simple masks to limit the connection id and offset ranges. a lookup maps the current process and connection ids to a virtual circuit. the kernel finally moves the cell into the output fifo.
+at the receiving end, the read-atm kernel trap delivers a batch of incoming cells into a pre-determined shared memory buffer. the number of cells received is returned in a register. for each cell the kernel performs four tasks: it loads the first half of the cell into registers, uses the vci to index into a table to obtain the address of the appropriate processes' input buffer, moves the full cell into that buffer, and checks the integrity of the cell using three flag bits set by the ni in the last byte. upon return from the trap, the ssam library loops through all received cells checking the flow-control information, calling the appropriate handlers for request and reply messages, and sending explicit acknowledgments when needed.
+3.4  ssam performance
+the following paragraphs describe performance measurements of ssam made with a number of synthetic benchmarks. the following terminology is used: overhead consists of the processor cycles spent preparing to send or receive a message, latency is the time from which a message send routine is called to the time the message is handled at the remote end, and bandwidth is the rate at which user data is transferred. the performance goal for ssam is the fiber rate of 140mbit/s which transmits a cell every 3.14us (53+2 bytes) for an atm payload bandwidth of 15.2mb/s(7).
+3.4.1  atm traps
+a detailed cost breakdown for the operations occurring in each of the traps to send and receive cells is shown in table 1. the two timing columns refer to measurements taken on the sparcstation 1+ and on the sparcstation 20, respectively. the times have been obtained by measuring repeated executions of each trap with gettimeofday which uses a microsecond-accurate clock and takes 9.5us on the ss-20. the time break-down for each trap was measured by commenting appropriate instructions out and is somewhat approximate due to the pipeline overlap occurring between successive instructions.
+
+table 1: cost breakdown for traps to send and receive cells. 
+---------------------------------------------------------
+operation                                 ss-20   ss-1+    
+---------------------------------------------------------
+write trap                                                 
+                  trap+rett               0.44us  2.03us   
+                  check pid and con       0.05us  0.49us   
+                  nection id                               
+                  addt'l kernel ovhd      0.05us  0.50us   
+                  load cell to push       0.13us  3.87us   
+                  push cell to ni         2.05us  3.17us   
+                  total                   2.72us  10.11us  
+read trap                                                  
+                  trap+rett               0.44us  2.03us   
+                  check cell count        0.81us  1.08us   
+                  addt'l kernel ovhd      0.18us  0.80us   
+                  per cell pull from ni   4.27us  3.68us   
+                  per cell demux          0.09us  0.23us   
+                  per cell store away     0.17us  3.50us   
+                  total for 1 cell        5.87us  11.32us  
+                  per cell total for 16   4.61us  8.08us   
+                  cells                                    
+write_read trap                                            
+                  total, 0 cells read     3.7us   11.2us   
+                  total, 1 cell read      8.2us   21.4us   
+null system call                          6.9us   40us     
+                                                           
+---------------------------------------------------------
+
+the write trap cost is broken down into 5 parts: the cost of the trap and return, the protection checks, overhead for fetching addresses, loading the cell into registers, and pushing the cell into the network interface. the ss-20 numbers show clearly that the fiber can be saturated by sending a cell at a time from user level. it also indicates that the majority of the cost (75%) lies in the access to the network interface across the sbus. the cost of the trap itself is surprisingly low, even though it is the second largest item. in fact, it could be reduced slightly as the current implementation adds a level of indirection in the trap dispatch to simplify the dynamic loading of the device driver.(8)
+the read trap is itemized similarly: the cost to trap and return, fetching the device register with the count of available cells, additional overhead for setting-up addresses, loading the cell from the network interface, demultiplexing among processes, and storing the cell away. the total cost shows a trap which receives a single cell, as well as the per-cell cost for a trap which receives 16 cells. here again the access to the device dominates due to the fact that each double-word load incurs the full latency of an sbus access. the total time of 4.61us on the ss-20 falls short of the fiber's cell time and will limit the achievable bandwidth to at most 68% of the fiber.
+the write-read trap first sends a cell and then receives a chunk of cells. this amortizes the cost of the trap across both functions and overlaps checking the cell count slightly with sending. the last item in the table shows the cost of a null system call for comparison purposes (a write to file descriptor -1 was used). it is clear that a system call approach would yield performance far inferior to the traps and would achieve only a fraction of the fiber bandwidth.
+3.4.2  atm read/write system calls
+in addition to the direct traps, the device driver allows cells to be sent and received using traditional read and write system calls on the device file descriptor. at this time this conventional path is provided for comparison purposes only and the read and write entry points into the device driver are limited to sending and receiving single cells. multi-cell reads and writes could be supported easily. the read and write entry points perform the following operations:
+
+
+check for the appropriateness of the file descriptor,
+
+transfer data between user space and an internal buffer using uiomove, and
+
+transfer data between the internal buffer and the fifos of the network interface.
+
+
+
+the internal buffer is used because the data cannot be transferred directly between user space and the device using uiomove due to the fact that the device fifos are only word addressable. the use of an internal buffer also allows double-word accesses to the device fifos, which improves the access times considerably.
+table 2 shows the costs for the various parts of the read and write system calls. the &quot;syscall overhead&quot; entries reflect the time taken for a read (respectively write) system call with an empty read (write) device driver routine. this measures the kernel overhead associated with these system calls. the &quot;check fd, do uiomove&quot; entry reflects the time spent in checking the validity of the file descriptor and performing the uiomove. in the case of a read, it also includes the time to check the device register holding the number of cells available in the input fifo. the &quot;push/pull cell&quot; entries reflect the time spent to transfer the contents of one cell between the internal buffer and the device fifos. the &quot;write&quot; and &quot;read 1 cell&quot; totals reflect the cost of the full system call, while the &quot;read 0 cells&quot; entry is the time taken for an unsuccessful poll which includes the system call overhead, the file descriptor checks, and the reading of the receive-ready register.
+
+table 2: cost of sending and receiving cells using read and write system 
+		calls.
+-----------------------------------------------------------
+operation                                     ss-20   ss-1+  
+-----------------------------------------------------------
+write system call                                            
+                   syscall overhead           22.6us  100us  
+                   check fd, do uiomove       3.4us   16us   
+                   push cell into ni          2.2us   8us    
+                   write total                28.2us  124us  
+read system call                                             
+                   syscall overhead           22.1us  99us   
+                   pull cell from ni          5.0us   13us   
+                   check fd and recv ready,   7.0us   25us   
+                   do uiomove                                
+                   read total for 1 cell      34.1us  137us  
+                   read total for 0 cells     28.8us  113us  
+                                                             
+-----------------------------------------------------------
+
+the timings show clearly that the overhead of the read/write system call interface is prohibitive for small messages. for larger messages, however, it may well be a viable choice and it is more portable than the traps.
+3.4.3  ssam
+measurements of the active messages layer built on the cell send and receive traps are shown in table 3. in all cases one word of the active message payload carries data and the handlers simply return. the send request uses a write-read-trap and adds a little over 1us of overhead (on the ss-20) for cell formatting and flow-control. the handling times are all roughly the cost of a read-trap (reading 16 cells per trap) plus again a little over 1us for the flow control and handler dispatch. if a reply is sent that adds the time of a write-trap.
+
+table 3: cost breakdown for sparcstation active messages. 
+---------------------------------------
+operation                  ss-20  ss-1+  
+---------------------------------------
+send request               5.0us  15us   
+handle request, no reply   5.6us  15us   
+sent                                     
+handle request and send    7.7us  25us   
+reply                                    
+handle ack                 5.0us  11us   
+handle reply               5.2us  12us   
+                                         
+---------------------------------------
+
+the measurements show that supporting only single-cell active messages is not optimal. longer messages are required to achieve peak bulk transfer rates: the one-cell-at-a-time prototype can yield up to 5.6mb/s. a simpler interface for shorter messages (e.g., with only 16 bytes of payload) might well be useful as well to accelerate the small requests and acknowledgments that are often found in higher-level protocols. unfortunately, given that the trap cost is dominated by the network interface access time and that the sba-100 requires all 56 bytes of a cell to be transferred by the processor, it is unlikely that a significant benefit can be realized.
+3.4.4  split-c
+while a full implementation of split-c [2] is still in progress, timings of the remote memory access primitives show that the round-trip time for a remote read of 32 double-word aligned bytes takes 32us on the ss-20 and a one-way remote store takes 22us for the same payload.(9) remote accesses with smaller payloads are not noticeably cheaper. a bulk write implemented with the current ssam layer transfers 5.5mbytes/s, but experiments show that, using long messages, this could be improved to 9mbytes/s by using the full atm payload and simplifying the handling slightly.
+3.5  unresolved issues
+the current ssam prototype has no influence on the kernel's process scheduling. given the current buffering scheme the ssam layer operation is not influenced by which process is running. the performance of applications, however, is likely to be highly influenced by the scheduling. how to best influence the scheduler in a semi-portable fashion requires further investigation. the most promising approach appears to be to use real-time thread scheduling priorities, such as are available in solaris 2.
+the amount of memory allocated by the ssam prototype is somewhat excessive and, in fact, for simplicity, the current prototype uses twice as many buffers as strictly necessary. for example, assuming that a flow-control window of 32 cells is used, the kernel allocates and pins 8kbytes of memory per process per connection. on a 64-node cluster with 10 parallel applications running, this represents 5mb of memory per processor.
+the number of preallocated buffers could be reduced without affecting peak bulk transfer rates by adjusting the flow control window size dynamically. the idea is that the first cell of a long message contain a flag which requests a larger window size from the receiver; a few extra buffers would be allocated for this purpose. the receiver grants the larger window to one sender at a time using the first acknowledgment cell of the bulk transfer. the larger window size remains in effect until the end of the long message. this scheme has two benefits: the request for a larger window is overlapped with the first few cells of the long message, and the receiver can prevent too many senders from transferring large data blocks simultaneously, which would be sub-optimal for the cache. however, fundamentally, it appears that memory (or, alternatively, low performance) is the price to pay for having neither flow-control in the network nor coordinated process scheduling.
+a more subtle problem having to do with the atm payload alignment used by the sba-100 interface will surface in the future: the 53 bytes of an atm cell are padded by the sba-100 to 56 bytes and the 48-byte payload starts with the 6th byte, i.e., it is only half-word aligned. the effect is that bulk transfer payload formats designed with the sba-100 in mind (and supporting double-word moves of data between memory and the sba-100) will clash with other network interfaces which double-word align the atm payload.
+3.6  summary
+the prototype active messages implementation on a sparcstation atm cluster provides a preliminary demonstration that this communication architecture developed for multiprocessors can be adapted to the peculiarities of the workstation cluster. the performance achieved is roughly comparable to that of a multiprocessor such as the cm-5 (where the one-way latency is roughly 6us), but it is clear that without a network interface closer to the processor the performance gap cannot be closed.
+the time taken by the flow-control and protection in software is surprisingly low (at least in comparison with the network interface access times). the cost, in effect, has been shifted to large pre-allocated and pinned buffers. while the prototype's memory usage is somewhat excessive, other schemes with comparable performance will also require large buffers.
+overall, ssam's speed comes from a careful integration of all layers, from the language level to the kernel traps. the key issues are avoiding copies by having the application place the data directly where the kernel picks it up to move it into the device and by passing only easy to check information to the kernel (in particular not pass an arbitrary virtual address).
+4  comparison to other approaches
+the atm network communication layer most directly comparable to ssam is the remote memory access model proposed by thekkath et. al. [10,11]. the implementation is very similar to ssam in that it uses traps for reserved opcodes in the mips instruction set to implement remote read and write instructions.(10)
+the major difference between the two models is that the remote memory operations separate data and control transfer while active messages unifies them. with remote memory accesses data can be transferred to user memory by the kernel without the corresponding process having to run. but the model used does not allow remote reads and writes to the full address space of a process. rather, each communicating process must allocate special communication memory segments which are pinned by the operating system just as the buffers used by ssam are. the communication segments are more flexible than ssam's buffers in that they can directly hold data structures (limited by the fact that the segments are pinned).
+the advantage of ssam over the remote memory accesses is the coupling of data and control: each message causes a small amount of user code to be executed, which allows data to be scattered into complex data structures and the scheduling of computation to be directly influenced by the arrival of data. in the remote memory access model a limited control transfer is offered through per-segment notification flags in order to to cause a file descriptor to become ready.
+finally, ssam provides a reliable transport mechanism while the remote memory access primitives are unreliable and do not provide flow-control.
+table 4 compares the performance of the two approaches: thekkath's implementation uses two decstation 5000 interconnected by a turbochannel version of the same fore-100 atm interface used for ssam and performs a little worse than ssam for data transfer and significantly worse for control transfer. the remote reads and writes are directly comparable in that they transfer the same payload per cell.
+
+table 4: comparison of ssam to remote memory accesses between 2 decstation 
+		5000sover atm [11]. 
+------------------------------------
+operation        ssam     remote      
+                          mem access  
+------------------------------------
+read latency     32us     45us        
+write latency    22us     30us        
+addt'l control   none     260us       
+transfer ovhd                         
+block write      5.5mb/s  4.4mb/s     
+                                      
+                                      
+------------------------------------
+
+the performance of more traditional communication layers over an atm network has been evaluated by lin et. al. [7] and shows over two orders of magnitude higher communication latencies than ssam offers. table 5 summarizes the best round-trip latencies and one-way bandwidths attained on sun 4/690's and sparcstation 2's connected by fore sba-100 interfaces without switch. the millisecond scale reflects the costs of the traditional networking architecture used by these layers, although it is not clear why fore's aal/5 api is slower than the read/write system call interface described in 3.4.2. note that a tcp/ip implementation with a well-optimized fast-path should yield sub-millisecond latencies.
+
+table 5: performance of traditional communication layers on sun4/690s and 
+		sparcstation2s over atm [7]. 
+-------------------------------------------
+communication layer  round-trip
+  peak       
+                     latency      bandwidth  
+-------------------------------------------
+fore aal/5 api       1.7ms        4mb/s      
+bsd tcp/ip sockets   3.9ms        2mb/s      
+pvm over tcp/ip      5.4ms        1.5mb/s    
+sun rpc              3.9ms        1.6mb/s    
+                                             
+                                             
+-------------------------------------------
+
+5  conclusions
+the emergence of high-bandwidth low-latency networks is making the use of clusters of workstations attractive for parallel computing style applications. from a technical point of view a continuous spectrum of systems can be conceived, ranging from collections of ethernet-based workstations to tightly integrated custom multiprocessors. however, this paper argues that clusters will be characterized by the use of off-the-shelf components, which will handicap them with respect to multiprocessors in which hardware and software are customized to allow a tighter integration of the network into the overall architecture.
+the use of standard components, and in particular, of atm networking technology, results in three major disadvantages of clusters with respect to multiprocessors: (i) atm networks do not offer reliable delivery or flow control, (ii) the current network interfaces are not well integrated into the workstation architecture, and (iii) the operating systems on the nodes of a cluster do not coordinate process scheduling or address translations.
+the prototype implementation of the active messages communication model described in this paper achieves two orders of magnitude better performance than traditional networking layers. table 6 shows that the resulting communication latencies and bandwidths are in the same ball-park as on state-of-the-art multiprocessors. key to the success are the use of large memory buffers and the careful design of a lean user-kernel interface. the major obstacle towards closing the remaining performance gap is the slow access to the network interface across the i/o bus, and reducing the buffer memory usage requires coordination of process scheduling across nodes. while taking care of flow control in software does not dominate performance in this study, the behavior of atm networks under parallel computing communication loads remains an open question.
+
+table 6: comparison of ssam's performance with that of recent parallel 
+		machines.
+----------------------------------------
+machine           peak
+      round-trip
+  
+                  bandwidth  latency      
+----------------------------------------
+sp-1 + mpl/p [9]  8.3mb/     56us         
+                  s                       
+paragon + nx [8]  73mb/s     44us         
+cm-5 + active     10mb/s     12us         
+mesg [4]                                  
+ss-20 cluster +   5.6mb/     32us         
+ssam              s                       
+----------------------------------------
+
+6  bibliography
+[1]  ccitt. recommendation i.150: b-isdn atm functional characteristics. (revised version), geneva: itu 1992.
+[2]  d. e. culler, a. dusseau, s. c. goldstein, a. krishnamurthy, s. lumetta, t. von eicken, and k. yelick. introduction to split-c. in proc. of supercomputing '93.
+[3]  d. e. culler, a. dusseau, r. martin, k. e. schauser. fast parallel sorting: from logp to split-c. in proc. of wppp '93, july 93.
+[4]  t. von eicken, d. e. culler, s. c. goldstein, and k. e. schauser. active messages: a mechanism for integrated communication and computation. in proc. of the 19th isca, pages 256-266, may 1992.
+[5]  a. geist, a. beguelin, j. dongarra, w. jiang, r. manchek, and v. sunderam. pvm 3.0 user's guide and reference manual. oak ridge national laboratory, technical report ornl/tm-12187, february 1993.
+[6]  k. li and p. hudak. memory coherence in shared virtual memory systems. acm transactions on computer systems, 7(4):321-359, november 1989.
+[7]  m. lin, j. hsieh, d. h. c. du, j. p. thomas, and j. a. macdonald. distributed network computing over local atm networks. ieee journal on selected areas in communications, special issue on atm lans, to appear, 1995.
+[8]  p. pierce and g. regnier. the paragon implementation of the nx message passing interface. in proc. of shpcc `94, may 1994.
+[9]  c. b. stunkel, d. g. shea, d. g. grice, p. h. hochschild, and m. tsao. the sp1 high-performance switch. in proc. of shpcc `94, may 1994.
+[10]  c. a. thekkath, h. m. levy, and e. d. lazowska. efficient support for multicomputing on atm networks. university of washington, technical report 93-04-03, april 1993.
+[11]  c. a. thekkath, h. m. levy, and e. d. lazowska. separating data and control transfer in distributed operating systems. in proc. of the 6th int'l conf. on asplos, to appear, october 1994.
+[12]  thinking machines corporation, cambridge, massachusetts. connection machine cm-5, technical summary, november 1992.
+footnotes(1)the term cluster is used here to refer to collections of workstation-class machines interconnected by a low-latency high-bandwidth network.(2)this paper focuses exclusively on scalable multiprocessor architectures and specifically excludes bus-based shared-memory multiprocessors.(3)current atm switches have latencies about an order of magnitude higher than comparable multiprocessor networks, however, this difference does not seem to be inherent in atm networks, at least not for local area switches.(4)a discussion of differences in fault isolation characteristics is beyond the scope of this paper.(5)although some transmission media may cause burst errors which are beyond the correction capabilities of most crc codes.(6)cache coherent shared memory stretch this characterization given that the cache in the receiving node essentially performs another address translation which may miss and require additional communication with other nodes to complete the request.(7)all bandwidths are measured in megabytes per second.(8)the kernel write-protects the trap vectors after boot-up. the ssam prototype uses a permanently loaded trap which performs an indirect jump via a kernel variable to allow simple dynamic driver loading.(9)note that in a more realistic setting a fore asx-100 switch will add roughly 10us of latency to the write time and 20us to the round-trip read time [7].(10)one could easily describe the traps employed by ssam as additional emulated communication instructions. 
+
+low-latency communication over atm networks
+using active messages
+low-latency communication over atm networks
+using active messages
+low-latency communication over atm networks
+using active messages
+low-latency communication over atm networks
+using active messages
+low-latency communication over atm networks
+using active messages
+low-latency communication over atm networks
+using active messages
+low-latency communication over atm networks
+using active messages
+low-latency communication over atm networks
+using active messages
+low-latency communication over atm networks
+using active messages
+low-latency communication over atm networks
+using active messages

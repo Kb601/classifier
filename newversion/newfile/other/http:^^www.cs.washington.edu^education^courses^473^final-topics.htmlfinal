@@ -1,0 +1,130 @@
+cse 473 topics for final exam
+
+
+cse 473 topic list for the final exam
+ 
+
+
+
+
+
+common lisp: evaluation of s-expressions involving
+
+   cons, list, append, let, first, rest, +, *, null, =,
+   setf, apply, quote, defun, if, progn, lambda
+
+
+production systems and pattern matching
+
+   unordered and ordered production systems
+   discrimination nets
+
+
+knowledge representation
+
+   isa hierarchies and partial orders
+   propositional calculus
+   truth tables, rules of inference
+   predicate calculus
+    well-formed formulas
+    semantics: interpretations and models
+    quantification and representation of unique existence
+
+
+state-space search
+
+   computing the size of the state space for the painted squares puzzle
+   iterative formulation of depth-first search
+   breadth-first search, best-first search, uniform-cost search
+   a* search algorithm, with f'(n) = g'(n) + h'(n)
+   genetic search
+
+
+logical reasoning
+
+   proofs in the propositional calculus by 
+    perfect induction
+   resolution in the propositional calculus
+   satisfiability, tautology and contradiction in
+    the propositional calculus
+   predicate calculus literals and clauses
+   reduction to clause form
+   unification, most general unifiers
+   predicate calculus resolution
+   satisfiability, tautology and contradiction in
+    the predicate calculus
+
+
+probabilistic reasoning
+
+   bayes rule
+   odds
+
+
+commonsense reasoning
+
+   case-based reasoning approach to problem solving
+   distance functions and distance metrics
+
+
+planning
+
+   difference between world space and plan space
+   iterative-deepening depth-first search
+
+
+learning
+
+   learning as improvement as measured by a function of merit, etc.
+   concept synthesis in theory formation, example of prime numbers in am
+
+
+natural-language understanding
+
+   levels of nlu from acoustic to pragmatic
+   semantic grammar
+
+
+vision
+
+   edge detection with the roberts cross operator
+   representing contours with chain codes
+   hough transform (how it works and its main formula)
+   medial axis transform ("skeleton")
+   ramer's algorithm for polygonal approximation
+   guzman's method for labelling a line drawing of blocks
+
+
+neural networks
+
+   perceptrons
+   fundamental training theorem for perceptrons
+
+
+
+
+
+
+
+
+
+
+
+
+tanimoto@cs.washington.edu
+
+
+
+
+
+
+cse 473 topics for final exam
+cse 473 topics for final exam
+cse 473 topics for final exam
+cse 473 topics for final exam
+cse 473 topics for final exam
+cse 473 topics for final exam
+cse 473 topics for final exam
+cse 473 topics for final exam
+cse 473 topics for final exam
+cse 473 topics for final exam

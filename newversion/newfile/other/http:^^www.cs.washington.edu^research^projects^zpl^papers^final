@@ -1,0 +1,236 @@
+zpl papers and manuals
+
+
+
+
+ zpl papers and manuals
+
+
+
+zpl-specific papers and manuals
+
+language description papers
+
+
+
+
+zpl: an array sublanguage (august, 1993)
+introduction to the zpl language.  very old and somewhat out of date.
+
+
+
+a zpl programming guide (july, 1996)
+ an intuitive introduction to the language that walks through several
+scientific programming examples. 
+
+
+
+zpl language reference manual (draft) (june, 1996)
+the most complete description of the language (includes an index).
+
+
+
+
+implementation papers
+
+
+
+
+factor-join: a unique approach to compiling array languages for parallel machines (may 1996)
+a framework for compiling array languages.
+
+
+the implementation of a machine-independent array language (november, 1995)
+implementation of zpl.
+
+
+
+
+benchmark performance evaluation papers
+
+
+
+
+
+
+zpl vs. hpf: a comparison of performance and programming style (may, 1995)
+compares zpl and hpf using a set of nas, nasa and genesis benchmark 
+programs.
+
+
+
+simple performance results in zpl (august, 1994)
+performance comparisons against hand-coded programs.
+
+
+
+
+real-world applications of zpl
+
+
+
+
+
+
+a portable parallel n-body solver (1995)
+ describes how zpl is used to solve n-body solver.
+
+
+
+the portable parallel implementation of two novel mathematical biology
+algorithms in zpl (july, 1995)
+ describes how zpl is used to solve two mathematical biology problems.
+
+
+
+
+
+
+ foundations of zpl
+ machine model papers 
+
+
+
+
+
+
+
+type architecture, shared memory and the corollary of modest potential (1986)
+ discusses the need for accurate abstract machine models when
+     developing efficient algorithms.  introduces the cta abstract machine
+     model.
+
+
+
+
+
+
+programming models -- shared- vs. nonshared-memory models
+
+
+
+
+
+a comparison of programming models for shared memory multiprocessors (1990)
+ 
+empirical comparison of how the shared memory and non-shared memory
+programming models effect the performance of programs on shared memory
+multiprocessors.
+
+
+
+a comparison of shared and nonshared memory models of parallel computation (1991)
+ 
+theoretical comparison of the shared memory and non-shared memory
+programming models and their influence on parallel algorithm performance.
+
+
+
+on the influence of programming models on shared memory computer performance (1992)
+ 
+experimental comparsion of shared memory and non-shared memory programming
+models for three machines and two applications (lu decomposition and water).
+
+
+
+
+
+
+programming models -- abstractions and a-zpl (formerly orca c)
+
+
+
+
+
+
+scalable abstractions for parallel programming (1990)
+ 
+introduces the notion of ensembles that provides scalability.
+
+
+
+a flexible communication abstraction for nonshared memory parallel computing
+ (november, 1990)
+ 
+introduces the notion of port ensembles that separates the 
+specification of communication from computation.
+
+
+
+abstractions for portable, scalable parallel programming (december, 1993)
+ 
+extensive discussion of the phase abstractions programming model.
+
+
+
+foundations of practical parallel programming languages  (1993)
+ 
+describes the relation between zpl and orca c, and describes the underlying
+models for these languages.
+
+
+
+a portable implementation of simple (1991)
+ 
+detailed description of how the simple cfd benchmark is written in orca c.
+
+
+
+
+optimized interprocessor communication
+
+
+
+
+quantifying the effects of communication optimizations (may 1996)
+an evaluation of communication optimizations.
+
+
+ironman: an architecture independent communication interface for parallel computers (march 1996)
+a machine-independent interface for custom interprocessor communication.
+
+
+
+
+miscellany
+
+
+
+
+
+
+accommodating polymorphic data decompositions in explicitly parallel
+programs (april, 1994)
+ why message passing libraries alone are not sufficient for portability.
+
+
+
+
+
+
+ 
+
+ 
+
+[
+zpl | 
+uw cse |
+uw
+]
+
+zpl-info@cs.washington.edu
+
+
+
+
+
+zpl papers and manuals
+zpl papers and manuals
+zpl papers and manuals
+zpl papers and manuals
+zpl papers and manuals
+zpl papers and manuals
+zpl papers and manuals
+zpl papers and manuals
+zpl papers and manuals
+zpl papers and manuals

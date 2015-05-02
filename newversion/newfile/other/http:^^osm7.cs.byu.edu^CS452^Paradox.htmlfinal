@@ -1,0 +1,293 @@
+paradox qbe tutorial
+1. introduction 
+query by example (qbe) is a query language, which is used by borland's
+paradox database management system, and explained in section 4.2 in
+korth and silberschatz's "database system concepts" (the course textbook).
+the instructions included in this tutorial are based on paradox 4.5 for 
+ms-dos and paradox 1.0 for windows.  there are some differences between 
+the ms-dos and the windows versions, but they will be clearly pointed out.
+
+2. start up
+paradox runs on the ibm pc-compatibles in the open lab (2205 tmcb).  there 
+are two versions of paradox available in the labs.
+
+
+ms-dos:
+  paradox can be found under the c:\paradox directory.  after entering the 
+paradox directory, you can run paradox by typing paradox at the prompt.  (hint:
+the dos version displays important function keys and actions they perform at 
+the bottom row of the screen.  these function keys can be of great help when 
+you're not sure what to do next.)  working with the ms-dos version is faster
+and is probably best for simple tasks.
+windows:
+paradox can be found under the c:\pdoxwin directory.  there is a 
+paradox group window with icons to click on.  click on the icon entitled pad  
+the user interface, menu design, and online help are available.  also, qbe 
+queries can be stored on disk for later retrieval.  however, it runs at typical
+"windoze" speed, slower than the dos version.
+
+
+3.  creating tables 
+in this section, we will show how to create relations (tables) and add tuples 
+to relations in paradox.
+
+the following sql command creates the table (relation scheme) students:
+
+ create table students (
+	name 		char (10) 	primary key, 
+	sid 		number 		primary key, 
+	address 	char (20));
+
+
+a similar concept is followed in paradox's method for creating tables:  
+
+
+identify the attributes and their data types, and the key attributes
+(if any).
+give the table relation scheme a name.
+
+3.a  creating relation schemes in paradox 
+windows
+1. select file/new/table from the menu bar, i.e., file
+followed by new and then by table.
+2. the table type is paradox for windows (the default)
+3. enter the following:
+
+the field name,
+the type (a = alphanumeric,
+s = short number (integer),
+and d = date with the format mm/dd/yy),
+the size (for alphanumeric types only).
+specify whether or not it is a key attribute.
+all key attributes must be at 
+the top of the field list.  in the student example, if sid and name are the 
+combined primary key, they should be listed as the first two fields.  to specify
+that the field is a key or part of a key, press any key on the keyboard while
+in this column, or click the mouse button on this column while the cursor is
+positioned in the column.
+
+4. click on the save as...
+button and enter the name of the file.  all tables
+are automatically given the ".db" file extension if an extension is not
+specified.  it is recommended to use the default extension.
+
+
+ms-dos
+1. select from the menu bar create
+2. enter the name of the table to be created.
+3. similar to step 3 in the windows version, enter the field name 
+and the field type. data types are the same in dos as in windows.  
+however, the data type, size, and key attribute area all entered in the "field
+type" column.  hence, if an attribute is (part of) a primary key of an 
+alphanumeric type with a size of 10 characters, the "field type" is
+"a10*".
+4. press f2 (doit!) to save the table.
+note:  paradox requires the key fields to come first. 
+
+3.b  adding tuples to a table 
+windows 
+
+1. select file/open/table from the menu bar.
+2. pick the table you want to insert data into.
+3. select table/edit/data from the menu bar or press 
+f9.
+4. enter the data in the appropriate columns.
+5. when finished entering data, select table/end/edit or press 
+f9.  the table with the new values is automatically saved 
+when an edit session is ended.
+
+
+ms-dos
+
+if the table to be edited is not present on the desktop:
+1. select modify/edit form the menu bar.
+2. enter the name of the table to edit.
+3. insert the data in the appropriate columns.
+4. press f2 (doit!) to save the table.
+
+
+if the table is already visible on the desktop, then there is no need to re-
+open the table.  just click on the table and press f9 to allow editing of
+the table and hit f2 to save modifications made to the table.
+
+
+4. building queries
+
+building queries in qbe on paradox is similar to the ones given in the textbook
+with some exceptions which will be discussed in this section.
+
+4.a  bringing up skeleton tables 
+
+before a qbe query can be built, the skeleton tables for each relation involved
+in the query must be selected:
+windows
+1. select file/new/query from the menu bar
+2. a window will appear with the names of available tables.  select the 
+table involved in the query.
+3. if there are other tables involved in the query, select
+query/add table... 
+from the menu bar to select more tables involved in the query.
+4. repeat step #3 for each table you wish to query on.
+ms-dos
+1. select ask from the menu bar and enter the names of the
+tables involved in the query.
+2. repeat this for all tables involved in the query.
+
+
+4.b  performing projections
+windows and ms-dos
+
+1. select the table containing the attributes on which you want to project.
+if the table is already on the desktop, click anywhere on the table;
+otherwise, open it.
+2. using the arrow keys on the keyboard or the mouse, select an attribute 
+field on which you want to project.
+3. hit the f6 key or click on the little white box in the field
+and a check will appear in the field.
+to remove the check, hit the f6 key in that field again.
+4. repeat steps 1-3 for any other fields on which you want to project.
+
+
+4.c  performing selections
+windows and ms-dos
+
+1. select the table containing the attributes on which you want to select.
+if the table is already on the desktop, click anywhere on the table;
+otherwise, open it.
+2. select the attribute fields using the arrow keys or the mouse.
+3. enter the comparison operator followed by the comparing value (either 
+a constant or another variable).
+
+
+valid relational comparison operators include &gt;, &lt;, &gt;=, &lt;=, not,
+and the optional =.
+
+
+4.d  performing joins 
+windows and ms-dos
+
+1. select a table to be joined.
+if the table is already on the desktop, click anywhere on the table;
+otherwise, open it.
+2. select an attribute field to be joined.
+3. enter a variable into the field.  variables must be preceded by an 
+underscore, "_". in windows, the variable will appear in red and 
+the underscore is not shown.
+4. repeat steps 1 - 3 for the other tables whose attributes you want to
+join.
+
+
+4.e  performing set queries
+
+qbe uses the set command with no or every in the attribute field to 
+perform such queries as find the employee who makes more money than 
+all others, or find the customer who has ordered none of the 
+books. for this type of query we will need to first create a set of tuples for 
+comparison and compare the set to another table; we then perform
+other selections and projections after grouping as explained in
+the following example.
+
+
+suppose we wish to find all employees who work for all of departments.
+
+
+first we 
+need to create a set of all the departments by dno in the department location 
+table.  to do this, we follow the steps below:
+
+select the dep_loc table.
+type set into the field under the table name.
+select the field dno to be grouped as a set of tuples.
+enter the variable _dno into the field.
+now we need to compare this set of dno's with the departments in the 
+employee table to find all of the employees who work in all (or none of the) 
+departments.  to do this, we continue as follows:
+select the employee table.
+select the field dno in the employee table to compare with the set.
+enter every into the field followed by the variable _dno.
+we now have the following query specification (where p. represents the
+check mark).  the first table establishes the set of dno's, and the second
+table prints the names of employees associated with every dno in the set.
+
+
+
+
+
+
+=== dep_loc ===== dep_name ===== dno ===
+ set          |              | _dno    |
+========================================
+
+
+=== employee ===== name ===== emp_no ===== dno ======
+               | p.       |            | every _dno |
+=====================================================
+
+
+
+
+
+
+
+the set comparison operators are only, no, every, and exactly.
+
+
+only: the values in the group contain only members 
+of the defined set.  for example: which customers have
+ordered only one book in the travel series?
+
+
+no: no values in the group are in the defined set.  for example:
+which patients on ward 12 haven't exhibited any symptom 
+seen in the patients on ward 6?
+
+
+every: the values in the group include all members of the defined set.
+for example: which students have taken all the courses required for a 
+major in chemistry?
+
+
+exactly: the values in the group exactly match the 
+members of the defined set (combines only and every).  for example:
+which customers have ordered all the books in the travel 
+series and no others?
+
+
+4.f  performing multiple sub-queries on the same table.
+
+each table skeleton has multiple horizontal lines where you can perform 
+multiple sub-queries on that table.  after entering the first query in a table,
+use 
+the arrow to move to the next line to perform a second sub-query.  this can be 
+repeated for more queries on that same table.  suppose, for example, that we 
+want to query all employees who are not supervised by a compute scientist.  
+this would involve two queries on the employee relation:  one to select all 
+computer scientists that are supervisors and another to compare each 
+employee with that set of computer scientists that are supervisors.  the 
+following query demonstrates how the employee table can be used twice in a 
+query.
+
+
+
+=== emp === emp_no === sup_no === degree ==============
+         | _eno     |          | not computer science |
+         | p.       | _eno     |                      |
+=======================================================
+
+
+
+4.g executing and saving queries
+windows
+
+1. if the query is not on the desktop,
+i.e., needs to be read in from a file, click on file/open/query
+in the menu bar and select the qbe file to be opened.
+2. to execute the query on the desktop, select query/run
+from the menu bar.
+
+
+ms-dos
+
+1. queries cannot be loaded and saved and, hence, queries must be built on 
+the desktop.
+2. press f2 (doit!) to execute the chosen query.

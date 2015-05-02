@@ -1,0 +1,64 @@
+finding clusters quickly in parallel
+
+
+
+
+
+
+
+                 
+ next:  introduction
+  
+
+finding clusters quickly in parallel
+ 
+brendan mumey  
+ department of computer science 
+ university of washington, seattle, wa 98195, usa 
+  brendan@cs.washington.edu  
+january 27, 1995
+
+abstract:
+this report describes the implementation of a new parallel algorithm
+for finding clusters point sets of euclidean space.
+a new solution to a special case of the  bichromatic closest pairs
+problem is used by the algorithm.
+the implementation was done in an environment
+for distributed tree computations on the kendall square research ksr-2
+multiprocessor.
+
+
+ 
+ 
+  introduction
+  the algorithm
+ 
+  the comparison-pair subroutine
+  parallelization issues
+ 
+  implementation and performance
+  conclusions
+ references
+  analysis of the comparison-pair subroutine
+ 
+  three dimensions
+ 
+    about this document ... 
+
+ 
+
+brendan mumey 
+mon sep  4 09:59:57 pdt 1995
+
+
+
+finding clusters quickly in parallel
+finding clusters quickly in parallel
+finding clusters quickly in parallel
+finding clusters quickly in parallel
+finding clusters quickly in parallel
+finding clusters quickly in parallel
+finding clusters quickly in parallel
+finding clusters quickly in parallel
+finding clusters quickly in parallel
+finding clusters quickly in parallel

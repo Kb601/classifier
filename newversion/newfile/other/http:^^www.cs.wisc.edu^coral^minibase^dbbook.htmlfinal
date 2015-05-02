@@ -1,0 +1,113 @@
+database management systems
+
+
+
+
+
+
+
+
+database management systems
+  by raghu ramakrishnan
+
+available now in a beta-edition (isbn 0-07-052522-6).
+
+
+this book covers the fundamentals of modern database management
+systems, in particular relational database systems.  it is intended as a
+text that can be used in an introductory database course for undergraduates,
+although it contains enough material to support a second course as well.
+the 
+minibase
+relational dbms software has been developed in conjunction with this book,
+and is intended to support a variety of hands-on course projects.
+the book can be used, optionally with the accompanying software, in
+two distinct kinds of courses:
+
+(1)  a course that aims to present the
+principles that underlie database systems, with a practical
+focus but without any implementation assignments.
+for such a course, the software can be used to create a variety 
+of exercises and experiments that involve no programming.
+
+(2)  a course that has a strong systems emphasis and assumes that students
+have good programming skills in c and c++.  in this case, the software
+can be used as the basis for implementation projects in which
+students are asked to implement various parts of a relational dbms.
+several central modules in the project
+software (e.g., heap files, buffer manager, b+ trees, hash indexes,
+various join methods, concurrency control and recovery algorithms)
+are described in sufficient detail in the text to enable
+students to implement them, given the (c++) class interfaces.
+
+database management systems is published by the
+college division
+of the
+ mcgraw-hill companies,
+and is available in a beta edition (isbn 0-07-052522-6)
+for fall 96 and spring 97.  the
+first edition is expected to be available by summer 1997.  the book 
+and the 
+software have both been class-tested at wisconsin
+for several semesters, and will be class-tested at several other
+schools in fall 96 and spring 97.  
+
+
+
+
+additional information:
+
+table of contents 
+
+organization of the book 
+
+errata and clarifications
+
+minibase software
+
+supporting materials 
+figures in xfig and postscript formats,
+lecture transparencies in ms powerpoint and postscript formats and
+solutions to exercises are available to instructors.  
+
+if you have further questions,
+contact
+eric munson at mcgraw-hill (emunson@mgh.com) or raghu ramakrishnan 
+at wisconsin.  if you are an instructor, you can request a 
+sample copy.
+if you are using the book and have found bugs or typos, or want to comment
+on the presentation or content, please 
+send me mail.
+
+
+
+
+july 12, 1996
+
+
+
+ raghu ramakrishnan 
+
+[raghu@cs.wisc.edu]
+
+
+
+
+
+
+
+
+
+
+
+
+database management systems
+database management systems
+database management systems
+database management systems
+database management systems
+database management systems
+database management systems
+database management systems
+database management systems
+database management systems

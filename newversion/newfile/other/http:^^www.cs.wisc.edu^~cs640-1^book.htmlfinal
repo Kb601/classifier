@@ -1,0 +1,40 @@
+network programming references
+
+
+
+bibliography
+
+  richard stevens unix network programming
+  (from comp.unix.* faq) **** highly recommended ****
+     
+     an excellent book on programming network softwares.
+     the source codes and errata list are obtainable by anonymous ftp
+     from ftp.uu.net (in /published/books) ...
+
+  douglas e. comer and david l. stevens 
+      internetworking with tcp/ip volume iii (bsd socket version)
+  this book may be useful to your course project.  it describes various
+      kinds of client/server design.
+
+
+
+
+last changed: august 27, 1994 by kacheong poon
+
+poon@cs.wisc.edu
+
+ 
+
+
+
+
+network programming references
+network programming references
+network programming references
+network programming references
+network programming references
+network programming references
+network programming references
+network programming references
+network programming references
+network programming references

@@ -1,0 +1,207 @@
+cis 425 principle of programming languages
+
+
+
+
+cis425: principle of programming languages
+
+
+ 
+
+   instructor and gtf
+   textbook and packets
+   grade policy
+   exams
+   course objetives
+   schedule
+   announcements
+   lectures
+   assignments
+
+
+
+instructor and gtf
+
+
+
+ instructor: zena ariola, room 305, x6-4448, ariola@cs, http://www.cs.uoregon.edu/~ariola
+office hours: 11-12 uh or by-appointment
+
+ gtf: yong xiao, room 230, x6-1383, xiao@cs.
+ office hours: 13-14 m, 14:30-15:30w or by-appointment
+
+ tutorial hours:17-18u, des200
+
+
+
+
+
+textbook and packets
+
+
+
+ textbook: programming languages, concepts and constructs, by ravi sethi, addison-wesley, 1995.
+
+ packets: 1. introduction to standard ml; 2. lecture notes
+
+
+
+
+
+grading policy:
+
+
+
+written assignments (6) will account for 30% of the grade.  
+the midterm will count 30%, the final examination 40%.
+problem sets are to be solved in groups of two or three,
+and due in class (one copy per group)  on the day indicated on the
+problem set handout.
+		       
+
+
+
+
+midterm and final exams
+
+
+
+ midterm exam: nov. 7, 9:30am, esslinger 107.
+
+ final exam: dec. 9, 10:15am, willamette hall 110.
+
+
+
+
+course objectives:
+
+
+
+the main goal of this course is to introduce you
+to the different aspects of programming languages,
+including their features, type systems, programming style, and
+implementation. we will consider
+th traditional programming languages,
+such as c and pascal, and more recent languages, such
+as, ml and java.  you will not become an expert programmer in
+the languages taught in this class. however, you will
+gain the necessary skills to understand the impact of
+language features on both the implementation and
+the abstractions they provide.
+for example, you will be able to understand why java has gained so
+much interest in both the academic and industrial arena.
+
+we will cover different programming paradigms. each paradigm provides
+a different way to solve a problem.
+as part of the assignments you will
+be required to program in c++, ml and prolog.
+
+more specifically, the topics covered are:
+
+
+ compilation vs interpretation: advantages and disadvantages
+in terms of speed of execution and memory space.
+overview of the structure of a compiler.
+ syntax:  what are the legal expressions. concepts:
+context free grammars - bnf grammars - parse trees and
+ambiguity - abstract syntax trees - lexical analyzer -
+parser
+
+ imperative programming (cobol, fortran,c, pascal, ada): this
+is the closest model to the machine architecture. concepts:
+side-effects - types (static and dynamic, weak and strong) - 
+scope (static and dynamic) - parameter passing techniques 
+(call-by-value, call-by-refence, call-by-value-result, call-by-name) - 
+aliasing - block-structured languages - 
+run-time structures ( stacks vs heap) - garbage collection
+ object-oriented programming (c++, java, eiffel): 
+support for programming in-the-lage. concepts:
+abstraction - encapsulation - information hiding - inheritance -
+subtyping
+
+ functional programming (scheme,ml,haskell,miranda,id,gopher):
+based on mathematics which gives a theoretical foundation.
+concepts:
+strict vs non-strict functions -
+higher-order functions -
+currying -
+lazy vs eager evaluation -
+innermost vs outermost evaluation -
+type inference - type checking -  overloading - coercion - polymorphism -
+pattern matching
+
+ logic programming (prolog):
+important as database query languages.
+concept:
+relations vs functions -
+facts and rules - goals - unification - backtracking - cuts
+
+
+if time allows us we will also study the current techniques for
+specifying the semantics (i.e. the meaning) of a programming language.
+you need to master these techniques if you want to
+reason about properties of your programs.
+
+
+
+
+
+schedule
+
+
+ introduction 
+	
+	 tuesday 10/1, introduction, ch. 1 
+	 thursday 10/3, compilers vs interpreter, ch. 2-3.3 
+	 tuesday 10/8, syntactic structure
+	
+
+ imperative programming 
+	
+	 thursday 10/10, control abstraction, data abstraction, ch. 3, 4 
+	 tuesday 10/15, types
+	 thursday 10/17, parameter passing techniques, ch. 5
+	 tuesday 10/22, storage management
+	 thursday 10/24, scope rules
+	
+
+ object-oriented programming 
+	
+	 tuesday 10/29, abstraction, ch. 6
+	 thursday 10/31, encapsulation, ch. 7 - except 7.7
+	 tuesday 11/5, information hiding
+	 thursday 11/7, java
+	
+
+ functional programming 
+	
+	 tuesday 11/12, features of functional languages, ch. 8
+	 thursday 11/14, typed language: ml, ch. 9 - packet 1.
+	 tuesday 11/19, polymorphism in ml, types and exceptions
+	 thursday 11/21, untyped language: scheme, ch. 10
+	 tuesday 11/26, data same as programs
+	
+
+ logic programming 
+	
+	 tuesday 12/3, logic + control, ch. 11
+	 thursday 12/5, prolog
+	
+
+
+
+
+
+maintainer of this page: yong xiaoemail: xiao@cs.uoregon.edu
+
+
+cis 425 principle of programming languages
+cis 425 principle of programming languages
+cis 425 principle of programming languages
+cis 425 principle of programming languages
+cis 425 principle of programming languages
+cis 425 principle of programming languages
+cis 425 principle of programming languages
+cis 425 principle of programming languages
+cis 425 principle of programming languages
+cis 425 principle of programming languages

@@ -1,0 +1,85 @@
+notes on unity
+
+the following is a list of the notes on unity that are available
+electronically, all are in compressed (conforming) postscript.
+these files are for non commercial redistribution only. they may not be
+altered in any form without permission from the authors.
+
+mail comments or questions to psp-request@cs.utexas.edu 
+
+ 
+  general
+conjunction and disjunction rules for  unless j. misra   9/14/88
+
+    a theorem about dynamic acyclic graphs   j. misra   9/13/88
+    a
+composition theorem about fixed points    j. misra   9/14/88
+    a
+theorem relating  leads-to and  unless   j. misra   12/20/88 
+ 
+progress--safety--safety   j. misra   4/20/89 
+     leads-to and program union   a. singh   6/20/89
+  on
+strengthening the guard   a. singh   6/20/89 
+ 
+functions preserved by  unless/ leads-to   j. misra   6/16/89
+
+ 
+proving  unless properties by parts   j. misra   6/19/89 
+ 
+monotonicity, stability and constants   j. misra   12/16/89
+
+ 
+the importance of ensuring    j. misra   1/11/90
+    phase synchronization   j. misra   1/31/90
+    a family of 2-process mutual exclusion algorithms   j. misra   2/8/90
+ 
+soundness of the substitution axiom    j. misra   3/2/90
+ 
+auxiliary variables   j. misra   7/10/90 
+ 
+proving progress for program sequencing   j. misra   7/10/90 
+ 
+preserving progress under program composition   j. misra   7/17/90 
+ 
+a specialization of  detects   j. misra   7/17/90 
+ 
+more on strengthening the guard   j. misra   7/17/90 
+   examples of program construction using unity   e. knapp   10/29/90
+    stable conjunction   j. misra   10/31/90
+    a
+correction on note 13   a. dappert-farquhar   12/90 
+   three definitions of  leads-to for unity   j. pachl   12/3/90 (this note is currently unavailable)
+   on a notion of completeness for the  leads-to   j.r. rao   7/15/91 (this note is currently unavailable)
+ 
+completion theorem revisited   j. misra   7/26/91 
+ 
+using prefix computation to add   j . misra   8/8/91
+ 
+methodological hints about constructing  unless properties   j.
+misra   12/19/91 
+    a program-composition theorem involving fixed-point   j. misra   12/19/91 (this note subsumes note 03.)
+   a
+generalization of the completion theorem   j. misra   12/20/91 
+ 
+more on  detects and  trails   j. misra   12/20/91 
+ 
+how to reason with strong-fairness and no-fairness   j. misra   7/2/92 
+ 
+proof of a real-time mutual-exclusion algorithm   john allen carruth &
+j misra  9/10/92 
+ 
+proving convergence of a hopfield neural network   m. m. muller 
+   examples of program construction using unity   e. knapp (unnumbered)
+
+
+notes on unity
+notes on unity
+notes on unity
+notes on unity
+notes on unity
+notes on unity
+notes on unity
+notes on unity
+notes on unity
+notes on unity

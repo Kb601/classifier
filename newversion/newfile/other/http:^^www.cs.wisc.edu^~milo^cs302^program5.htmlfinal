@@ -1,0 +1,152 @@
+program 5 - cs 302 fall 1996 - section 4
+
+
+
+
+  cs 302
+  fall 1996 - section 4
+ 
+algebraic language programming in c++
+instructor: 
+  milo m. martin 
+  (milo@cs.wisc.edu)
+
+
+program 5
+due wednesday, october 30, 1996 
+
+
+objective: give the student practice with switch
+statements and for loops.
+
+program description
+
+
+you've been asked by a group of school teachers to help their geometry
+classes learn shapes.  they want to reinforce the ideas of different
+shapes to their students.  to accomplish this, they would like a
+program that displays a number of different shapes and that allows the
+students to enter the size of the shape as well.  each shape is to be
+printed to the screen using '*' characters, and should be completely
+filled in.  listed below is a description of how they would like the
+program to run, as well as some examples of the different shapes.  
+
+your program should have two layers of menus, all implemented with a
+switch statement.  the main menu consists of
+a request for either a 4-sided shape menu, a 3-sided shape menu, or to
+quit.  the second layer of menus consists of the two separate shape
+menus.  
+      
+
+the 4-sided shape menu should present 5 choices: draw
+one of four 4-sided shapes (square, rectangle, parallelogram, diamond)
+or to return back to the main menu.
+
+ a square is a 4-sided shape that has a height the same length
+as its width with right angles between adjacent sides.
+
+a rectangle is a 4-sided shape that may have different lengths for
+the height and width, but still has right angles between adjacent
+sides.
+
+a parallelogram is a 4-sided shape with opposite sides parallel
+and of equal length.  for this assignment, we are assuming that the
+requested parallelograms have angles of 45 and 135 degrees only.
+
+a diamond is represented as a 4-sided shape with each side equal
+in length with the corners pointing up/down and left/right.
+
+
+
+the following are examples of the four 4-sided shapes:
+
+
+*****      *******          ********        *
+*****      *******         ********        ***
+*****      *******        ********        *****
+*****      *******       ********          ***
+*****      *******      ********            *
+
+
+each shape is respectively, a square with sides of length 5, a
+rectangle with sides of height 5 and width 7, a parallelogram with
+height 5 and width 8, and a diamond with sides of length 3.  
+
+after a shape is selected, your program should request for the lengths
+of the shapes sides.  note that some shapes require only one length
+(square and diamond) and others require two lengths.  
+
+the 3-sided shape menu should present 5 choices: draw
+one of four 3-sided shapes (all of which are right isosceles
+triangles) or to return back to the main menu.
+
+
+a right isosceles triangle has two sides of equal length joined at a right angle.
+
+
+the following are examples of the four 3-sided shapes:
+
+
+    *      *          *****      *****
+   **      **         ****        ****
+  ***      ***        ***          ***
+ ****      ****       **            **
+*****      *****      *              *
+
+
+notice that these are examples of the four types of triangles each
+with sides of length 5.  in addition, we can name the types by where
+the right angle is in relation to the triangle.  above we have
+lower-right, lower-left, upper-left, and upper-right triangles,
+respectively.  
+
+after a shape is selected, your program should request the length of
+the triangle's sides.  note that the length is that belonging to the
+sides of equal length, so only one length is needed.  
+
+the drawing of all shapes (3 and 4-sided) should be implemented using
+for loops. each of the eight shapes should have a
+corresponding function (e.g. void draw_diamond(int length);
+.)  however, the body of a function may include a call to another
+function; you might want to consider doing this for similar shapes.
+
+
+once the shape has been drawn, the program should remain at the
+current shape menu, for requesting of additional shapes.  
+
+the following error checks must be implemented to receive full credit:
+
+any improper responses during menu selection should result in the user being notified and the menu being presented again.
+valid lengths for all shapes are integer values between 1 and 15 inclusive.
+
+
+what to turn in
+once you have your program working you should:
+
+print out a copy of each of the eight possible shapes.
+print out a copy of your c++ source code.  
+submit an electronic copy of your source code and
+executable as described in the project 1 directions.
+
+
+
+
+
+created by 
+  dave eggleston,
+  rob muenzenberger, and
+  mike steele.
+
+
+
+
+program 5 - cs 302 fall 1996 - section 4
+program 5 - cs 302 fall 1996 - section 4
+program 5 - cs 302 fall 1996 - section 4
+program 5 - cs 302 fall 1996 - section 4
+program 5 - cs 302 fall 1996 - section 4
+program 5 - cs 302 fall 1996 - section 4
+program 5 - cs 302 fall 1996 - section 4
+program 5 - cs 302 fall 1996 - section 4
+program 5 - cs 302 fall 1996 - section 4
+program 5 - cs 302 fall 1996 - section 4

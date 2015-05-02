@@ -1,0 +1,113 @@
+email
+  
+  
+  
+
+email
+
+this information applies to the pc eudora email software in the 1370 lab. 
+you access this through an icon labeled email in the 
+networking folder.
+if you have problems with your computer science email, you should
+contact your ta or the computer systems lab.
+our email service provider is not the same as the campus
+wiscworld email service, so doit won't be able to help you
+with any email problems.  you can, however, mail to any internet
+address from the cs accounts, including wiscworld and cae accounts.
+
+
+
+information on this page includes:
+	
+	starting the email application
+	saving an email message
+	sending an existing file through email
+	changing your email password
+	forwarding your email
+	
+
+starting the email application
+
+in the "networking" folder in the program manager, double-click on the
+application labelled "email".
+your initial "mail" password is the same as your initial network password.
+changing the network password, however, does not 
+
+change your mail password.
+
+
+saving an email message
+
+if you're using the email software in the 1370 lab, select from the 
+file menu the item save as. a dialog should appear.
+
+if you're saving the message to be an input file, uncheck the items
+guess paragraphs and include headers if they're checked.
+
+click on the drives pop-up menu underneath the list of files to 
+change the drive to u:, so that the file will be saved in your workspace.
+if desired, change the u: directory by double-clicking on the directory
+icons in the directories list. (to move out of the current directory,
+click on the topmost directory icon.)
+
+finally, press the okay button.
+
+sending files through email
+
+	while in the course you may find it useful to email a c++ source file
+or other files to your instructor. 
+	after you've started the email application, create a 
+new message. enter the intended recipient's address and
+a subject.
+	next, select from the message menu the item 
+attach document. in the dialog that appears, select the
+document you wish to send.
+	next, you must click off the text->doc button shown in the
+icon bar. if you don't do this, your instructor will receive an unreadable
+file.
+	finally, you can press the send button.
+
+changing your email password
+	in the "networking" folder, double-click on the "change password" icon.
+you'll be asked for your name and password again. from here, you can
+change your email password.
+
+note, that if you put in the wrong password too many times, you will
+be locked out of your account for a little while for security reasons.
+
+note: the change password option in eudora does
+not work on our system.
+
+
+
+forwarding your mail
+unfortunately, the "automatic mail forward" program does not yet
+work.  if you want your email to be forwarded automatically, please
+send email to lab@cs.wisc.edu or
+go to the 
+computer systems lab
+(on the second floor) during regular
+business hours.
+
+
+
+&lt; 
+ 	cs302 home page &gt;
+
+
+last modified: wed sep 13 16:41:02 1995 by james basney
+
+
+  
+
+
+email
+email
+email
+email
+email
+email
+email
+email
+email
+email

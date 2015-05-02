@@ -1,0 +1,53 @@
+cse 378 class slides
+
+
+
+cse 378:  machine organization and assembly language programming
+autumn 1996
+class slides
+
+
+here are copies of the transparencies used in class
+
+
+
+
+  general introduction
+  mips -isa part 1
+  mips -isa part 2
+  mips -instruction encoding
+  procedure call and return protocol
+  spim program for recursive factorial
+  performance of computer systems
+  evolution of isa's
+  simple datapath implementation
+  simple control unit
+  multiple cycle implementation
+  intro. to microprogramming
+  intro. to pipelining
+  pipelining hazards
+  introduction to caches
+  cache performance
+  introduction to virtual memory
+  virtual memory implementation
+  input/output
+  a few words on networks
+ 
+
+
+
+baer@cs.washington.edu        (last update: 12/09/96)
+
+
+
+
+cse 378 class slides
+cse 378 class slides
+cse 378 class slides
+cse 378 class slides
+cse 378 class slides
+cse 378 class slides
+cse 378 class slides
+cse 378 class slides
+cse 378 class slides
+cse 378 class slides

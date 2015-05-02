@@ -1,0 +1,431 @@
+fortran d95 compiler overview
+
+
+
+
+
+
+
+
+
+
+ fortran d95 compiler overview
+
+
+
+
+project leaders:
+john mellor-crummey 
+and vikram adve
+
+participants:
+zoran budimlic, 
+alan carle,
+kevin cureton, 
+gil hansen, 
+ken kennedy,
+charles koelbel, 
+bo lu, 
+collin mccurdy,
+nat mcintosh,
+dejan mircevski,
+nenad nedeljkovic, 
+mike paleczny, 
+ajay sethi, 
+yoshiki seo,
+lisa thomas, 
+lei zhou
+
+
+
+
+
+parallel compiler and tools group
+center for research on parallel computation
+rice university
+
+
+
+group mission: 
+develop integrated compiler and tools to support effective machine-independent parallel programming
+
+
+
+
+
+
+contents:
+	
+	 compiler goals
+	 fortran d95 language
+	 fortran d95 compiler organization
+	 compiled examples
+	
+
+
+
+
+
+
+
+  compiler goals
+
+serve as an extensible platform for experimental research on compilation
+techniques and programming tools for full applications, including:
+
+ unified treatment of regular and irregular problems
+ global strategies for computation partitioning
+ parallelism-enhancing and latency-hiding transformations
+ whole-program compilation and interprocedural transformations
+ code generation strategies that approach hand-tuned performance
+ architecture-independent compilation based on machine models
+ message-passing, shared-memory, and hybrid communication models
+ optimization in the presence of resource constraints
+ programming tools that fully support abstract, high-level, programming models
+
+
+
+
+
+
+
+
+
+  
+fortran d95 language
+
+
+fortran d95 is designed to support research on
+data-parallel programming in high performance fortran (hpf) and to
+explore extensions that would broaden hpf's applicability or enhance
+performance.
+
+ 
+features
+ fortran 77 + fortran 90 array syntax + forall + allocate
+ high performance fortran (hpf) data mapping directives for regular problems
+ align, distribute, realign, redistribute, template, processors
+
+ independent, and on_home value-based data-mapping directives to support irregular problems
+ experimental support (under development) for
+ parallel input/output, including out-of-core array management
+ complex data structures 
+ structured use of task parallelism
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+fortran d95 compiler organization
+
+
+                                front end
+
+                                
+
+
+ parallelism         preliminary communication placement
+                                
+
+    and                  computation partitioning
+communication                
+
+  placement              communication refinement
+
+                                
+
+
+                             code generation
+
+
+
+
+
+
+
+
+
+
+
+
+  
+front end
+
+
+purpose: interpret hpf directives and compute directives affecting 
+each statement and reference
+
+directive processing
+ semantic analysis of directives in program
+ infer canonical synthetic layout directives for 
+all program variables unmentioned in program directives
+ intraprocedural flow-sensitive propagation of 
+(re)align, (re)distribute to statements and array references
+
+
+limitations (november 1995)
+ no interprocedural propagation of layout information
+
+
+
+
+
+
+
+
+
+
+  
+preliminary communication placement
+
+
+purpose:
+provide feedback to the computation partitioner about where
+(conservatively) communication might be needed
+
+strategy 
+ conservatively assume all references to non-replicated variables
+may need communication 
+
+hoist communication for a reference to the outermost loop level possible while
+respecting data dependences on the reference or its subscripts
+ conservatively prevent communication from being hoisted out of 
+``non-do-loop'' iterative constructs 
+
+
+limitations (november 1995)
+ placement independent of resource constraints
+ no support for pipelining communication to achieve partial parallelism 
+ lacks dataflow placement optimization to
+ eliminate partial redundancies 
+ hide communication latency
+
+ no inspector placement for irregular data accesses
+
+
+
+
+
+
+
+
+
+ 
+ 
+computation partitioning selection
+ 
+
+
+purpose:
+a framework to evaluate and select from several computation partitioning
+alternatives, not restricted to the owner-computes rule.
+
+approach: explicitly enumerate candidate partitioning
+choices and use explicit cost estimation to select the best partitioning.
+
+ enumerate candidate cp choices for a loop nest (or set of loop nests)
+[example]
+ refine communication information for each candidate cp
+ estimate performance of each candidate cp:
+     load-balance (unimplemented)
+     communication overhead 
+    
+ propagate computation partitionings to do, if, statements, and
+      computations involving only privatizable variables.
+
+
+limitations (november 1995)
+
+ load balance is not considered
+ ignores message coalescing across loop nests
+ communication cost estimates are very simplistic
+ requires constant loop bounds (but simplistic handling of symbolics
+     will be straightforward)
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+communication refinement
+
+
+purpose:
+given a computation partition choice, cp, compute a projection of
+the conservatively placed communication w.r.t. cp:
+     [example]
+
+ eliminate communication for references local to that cp
+ eliminate redundant communication by coalescing
+ determine communication pattern
+ perform message coalescing optimization
+
+
+limitations (november 1995)
+
+ assume one single reaching layout per reference
+ conservative unless single processors statement,
+perfect alignment, and same number of distributed dimensions
+ communication pattern recognition is somewhat limited
+ dataflow analysis for eliminating partial redundancies and
+latency hiding not yet fully in place
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+code generation 
+
+
+principal functionality
+
+[source for running example]
+
+computation partitioning transformations:
+	
+	 reduce loop bounds and insert guards where necessary
+
+[example]
+	 separate loop iterations that might access non-local values
+	     to minimize overhead from runtime locality checks
+
+[example]
+	
+communication generation and storage management:
+	
+	 compute data sets to send/recv between processor pairs
+	 generate code to pack/unpack buffers and send/recv data
+
+[example]
+	 generate run-time dynamic storage management to cope with dynamic layouts
+
+[example]
+	 localize and linearize subscripts
+
+[example]
+	
+
+
+
+
+
+
+
+
+current strategy
+
+
+except for storage management, all the code generation tasks require
+heavy manipulation of integer sets, especially for compiling regular
+applications for distributed-memory machines. examples:
+
+ data to send or recieve for a particular reference, given its
+computation partition
+ a processor's loop iterations that access local or non-local data
+
+current implementation uses the omega library (university of maryland):
+
+(+)
+ arbitrary integer sets
+(+)
+ rich language for mappings between sets
+(+)
+ almost complete set of operations on sets and mappings:
+		(union, intersection, difference, inverse, composition)
+(+)
+ good code-generation and optimization
+(-)
+ code generation is slow
+(-)
+ limited support for symbolics
+
+
+limitations (november 1995) 
+ run-time resolution guards currently handle only one or 
+all processors per dynamic statement instance
+ lack library support for dynamic remapping
+ current localization and linearization strategy produces
+general, but slow code.
+
+
+
+
+
+
+
+
+ 
+ 
+compiled examples
+
+ simple 1d shift kernel
+[hpf]
+[f77+mpi]
+ jacobi iteration 
+[hpf]
+[f77+mpi]
+ livermore 18 explicit hydrodynamics kernel 
+[hpf]
+[f77+mpi]
+
+
+non owner-computes partitioning fragment
+
+
+
+
+
+
+
+
+
+
+
+
+
+http://www.cs.rice.edu/~mpal/sc95/index.html
+
+
+
+
+
+
+
+fortran d95 compiler overview
+fortran d95 compiler overview
+fortran d95 compiler overview
+fortran d95 compiler overview
+fortran d95 compiler overview
+fortran d95 compiler overview
+fortran d95 compiler overview
+fortran d95 compiler overview
+fortran d95 compiler overview
+fortran d95 compiler overview

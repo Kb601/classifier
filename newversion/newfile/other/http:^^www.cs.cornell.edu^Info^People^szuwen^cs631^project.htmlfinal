@@ -1,0 +1,209 @@
+sound editor
+
+sound editor
+
+szu-wen (steven) huang, 
+jing (vince) li, ting-chun janet liu
+
+
+
+
+introduction
+this project aims to implement a sampling resolution-independent digital
+audio engineering tool that can be used to create moderately complex
+special effects.  the project should sport an easy-to-use and fairly 
+portable interface across various unix/x platforms.  the program should
+work reasonably well on all kinds of audio samples, from low-fidelity
+voice to cd quality music.  ideally, this program should be able to
+utilize commonly-available hardware features such as mono/stereo audio
+playback and recording.
+
+
+deliverables
+
+working software
+technical documentation
+
+
+milestones
+
+algorithms research
+hardware support and standards research
+user interface in tcl/tk and c
+time domain functions
+frequency domain related mathematics research
+frequency domain functions
+
+
+general operations
+playback
+
+the program should be able to playback the samples being edited for
+previewing purposes.  this function does not aim to interface with a
+device capable of production-quality audio synthesis.
+
+pause
+
+the program should be able to stop in the middle of a playback.
+
+rewind
+
+the program should be able to return to a certain sample earlier in
+time and resume playback from there.
+
+fast forward
+
+the program should be able to skip ahead to a certain sample later in
+time and resume playback from there.
+
+seek
+
+the program should be able to start playback at any certain sample in
+the entire sound file, indexed by either playing time (seconds) or
+sample number.
+
+record (optional)
+
+if hardware support permits, this program should be able to digitize
+samples from an external audio source.  in general, however, this
+program should assume that samples are digitized by another dedicated
+platform because of quality considerations.
+
+volume control
+
+this program should have the ability to adjust the output volume of
+the playback function appropriately.  if possible, a decibel notation
+should be employed instead of arbitrary volume levels such as 1 to 10.
+
+balance (optional)
+
+this program should be able to adjust the ratio between playback output
+of the left and right channels on stereo hardware.
+
+file operations (optional)
+
+currently, the sun audio format (.au) is deemed most appropriate for
+reasons of portability and ease of programming.  if time permits, support
+should be provided to output resulting samples in the microsoft windows
+wave (.wav) format, creative labs voice (.voc) format, and others.
+
+
+monitors
+the following functions do not alter the input samples in any way, but
+display them in a manner that might be visually useful (and pretty) to
+the audio engineer.
+
+raw waveform
+
+the program should be able to display the pulse-code modulation (pcm)
+format digitized samples as a waveform in time domain.  multiple files
+can be open at the same time to allow simple edit operations such as
+cut, copy, paste, and some others that users
+of commercial software would come to expect.
+
+spectrum
+
+the program should display a frequency spectrum synchronized with the
+playback to show the distribution of frequencies.  right now, we are
+split between the conventional boombox style of discrete frequency
+ranges and quantized intensity levels (dancing led bars), or a more
+"scientific" high-resolution spectrum display possible only on video
+monitors.  suggestions are welcome.
+
+time/frequency/amplitude histogram
+
+the program should display a time domain frequency/amplitude graph such
+that time progresses along the x-axis (towards the right side), frequency
+ranges are plotted along the z-axis ("in" and "out"), and amplitude
+plotted along the y-axis (going up).  this display would be useful in
+visualizing amplitude distributions over time.
+
+
+time domain operations
+these functions modify the input waveform in the time domain, and do not
+require a fast fourier transform (fft) or its inverse to operate.
+all time domain operations can be performed on the entire file or some
+selected subset.  these operations should be resolution-independent.
+
+echo
+
+this function digitally simulates an echo.  it will be implemented by mixing
+several copies of the sample in decreasing strength with a corresponding
+shift in time
+
+fade
+
+these two function incrementally increase or decrease volume over a range
+in time.
+
+mix
+
+this function is the digital simulation of mixing two input sources together,
+and will be implemented with some form of weighted averaging of the samples.
+
+backmasking
+
+this function reverses the waveform in time, such that the last input will
+become the first input, and vice versa.  this function is useful in including
+satanic messages into rock songs advocating suicide.
+
+silence
+
+this function creates a range of silence.
+
+amplitude scaling
+
+this function is used to modify the amplitude of a range of samples to
+effect an increase or decrease in volume.
+
+resampling
+
+this function allows an input waveform to be upsampled to a higher
+sampling frequency or downsampled to a lower.  upsampling is probably
+accomplished by interpolation, and downsampling by tossing away samples.
+
+
+frequency domain operations
+the following operations require processing in the frequency domain.
+
+pitch scaling
+
+this function can be used to effect a pitch shifting without affecting
+playback speed, useful in making people talk like chipmunks.
+
+graphic equalizer
+
+this function can be used to enhance or inhibit certain frequency ranges,
+for example, to reduce noise.  two proposals are being reviewed here, the
+first being the traditional boombox graphic equalizer with sliders, or
+a free-form tool that will automatically curve-fit certain selected points
+and modify the spectrum accordingly.  suggestions welcome.
+
+addition and subtraction
+
+this function allows the addition or subtraction of a spectrum with
+another.  this is possibly useful in noise elimination.
+
+morphing
+
+this function can be used to transform one spectrum into another
+incrementally over time.
+
+
+
+last updated: december 7, 1995
+maintained by: steven,
+vince, and
+janet.
+
+
+sound editor
+sound editor
+sound editor
+sound editor
+sound editor
+sound editor
+sound editor
+sound editor
+sound editor
+sound editor

@@ -1,0 +1,138 @@
+tian zhang's home page 
+
+
+
+  
+tian zhang 
+
+
+ general information 
+
+
+
+ph.d. student and research assistant
+advisor: prof.  raghu ramakrishnan and prof.  miron livny (joint)
+major concentrations: database, artificial intelligence, compiler
+minor: financial investment and banking
+
+office: room 7358
+ computer sciences dept.
+ univ. of wisconsin - madison
+ madison ,  wisconsin  53706-1685
+
+
+e-mail:  zhang@cs.wisc.edu
+office telephone:        (608) 262-6623
+home telephone+fax+ans : (608) 238-7168
+department fax:          (608) 262-9777
+
+
+ research interests
+
+
+there is a growing need for exploratory analysis of very large datasets 
+to discover useful patterns, and data mining is the new territory 
+developed for this purpose. 
+i am very interested in designing new efficient data mining algorithms or
+tools for very large databases by integrating the techniques of 
+databases, artificial intelligence and statistics. 
+
+
+my ph.d thesis topic is on clustering and density
+analysis of very large datasets. that is, given a very large 
+multi-dimensional dataset, and a limited amount of resources 
+(e.g., running time and memory), design and implement algorithms 
+to efficiently and accurately (1) identify the sparse and crowded regions 
+(clustering analysis), (2) estimate the density function of the overall 
+data distribution (density analysis). they are very important and practical 
+branches of data mining, and can be applied to many domains such as, data
+classification, image compression and pattern recognition.  
+
+
+ recent research project 
+
+
+ birch: an efficient data clustering and density analysis system for very large databases.
+
+ 
+
+ selected publications 
+
+
+ data clustering system birch and its applications (tian zhang, raghu ramakrishnan, miron livny),
+submitted to data mining and knowledge discovery journal, june, 1996, u.s.a.
+
+
+
+ birch: an efficient data clustering method for very large databases (tian zhang, raghu ramakrishnan, miron livny),
+in proc. of acm sigmod int'l conf. on data management,
+june 1996, canada.
+
+
+
+ interactive classification of very large datasets with birch (tian zhang, raghu ramakrishnan, miron livny),
+in proc. of workshop on research issues on data mining and knowledge
+discovery (in cooperation with acm-sigmod'96), june 1996, canada.
+
+
+
+ fast density and probability estimations using cf-kernel method for very large databases
+(miron livny, raghu ramakrishnan, tian zhang),
+technical report, july, 1996.
+
+
+
+motion planning of multi-joint robotic arm with topological dimension
+reduction method
+(bo zhang, ling zhang, tian zhang),
+in proc. of 11th. int'l joint conference on artificial intelligence
+(ijcai'89), aug. 1989, u.s.a.
+
+
+
+a findpath algorithm for a manipulator by finite division of configuration space
+(bo zhang, jianwei zhang, ling zhang, and tian zhang),
+in robotics and manufacturing: recent trends in research, education,
+and applications: proc's of int'l symposium on robotics and
+manufacturing: research, education, and applications, v.2, 1988, u.s.a.
+
+
+
+motion planning for robots with topological dimension reduction method
+(bo zhang, tian zhang, jianwei zhang, and ling zhang),
+in journal of computer science and technology, v.5, no.1, jan. 1990, p.r.c.
+
+
+
+finding collision-free paths for mobile robots
+(tian zhang, and bo zhang),
+in proc. of 1st. int'l symposium for young computer professionals,
+aug. 1989, beijing, p.r.c.
+
+
+ relevant links 
+
+
+  technical documents
+  journals, conferences, organizations
+  beijing, china
+  other interests
+
+
+
+ last updated: sep. 26, 1996 
+
+
+
+
+
+ tian zhang's home page 
+ tian zhang's home page 
+ tian zhang's home page 
+ tian zhang's home page 
+ tian zhang's home page 
+ tian zhang's home page 
+ tian zhang's home page 
+ tian zhang's home page 
+ tian zhang's home page 
+ tian zhang's home page

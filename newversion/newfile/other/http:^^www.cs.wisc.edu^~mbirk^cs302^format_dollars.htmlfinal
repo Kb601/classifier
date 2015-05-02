@@ -1,0 +1,122 @@
+formatting dollar amounts in program 2
+
+
+
+
+formatting dollar amounts in program 2
+
+you might be wondering how to line up the dollar amounts for program 2 so
+that everything looks nice like the example output.  this involves two
+steps:
+
+
+
+
+   telling the computer to print floating-point nuumbers
+       using exactly two decimal places
+   making the dollar amounts line up at their decimal point
+
+
+
+
+the necessary material is described on pages 51 and 232 of the
+savitch text (pages 65-66 of perry & levin).  however, i'll explain
+here just what you need to know for the assignment.
+
+
+
+consider this silly little program:
+
+
+
+
+#include &lt;iostream.h&gt;
+
+int main ()
+{
+    double amount_deposited = 100.0;
+    double cash_received    = 9.71;
+    cout &lt;&lt; "amount deposited: $" &lt;&lt; amount_deposited &lt;&lt; endl;
+    cout &lt;&lt; "cash received:    $" &lt;&lt; cash_received &lt;&lt; endl;
+    cout &lt;&lt; "net deposit:      $" &lt;&lt; (amount_deposited - cash_received) &lt;&lt; endl;
+    return 0;
+}
+
+
+
+
+when run, it produces the following output:
+
+
+ 
+
+amount deposited: $100
+cash recieved:    $9.71
+net deposit:      $90.29
+
+
+
+
+but what we want is something more like this:
+
+
+
+
+amount deposited: $ 100.00
+cash recieved:    $   9.71
+net deposit:      $  90.29
+
+
+
+
+we can modify the above program to achieve this:
+
+
+
+
+#include &lt;iostream.h&gt;
+#include &lt;iomanip.h&gt;
+
+int main ()
+{
+    // force two decimal places (see p. 51 of savitch text)
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
+
+    double amount_deposited = 100.0;
+    double cash_received    = 9.71;
+
+    // the "setw(7)" below causes the next thing printed to
+    // have a width of seven
+    cout &lt;&lt; "amount deposited: $"
+         &lt;&lt; setw(7) &lt;&lt; amount_deposited &lt;&lt; endl;
+    cout &lt;&lt; "cash received:    $"
+         &lt;&lt; setw(7) &lt;&lt; cash_received &lt;&lt; endl;
+    cout &lt;&lt; "net deposit:      $"
+         &lt;&lt; setw(7) &lt;&lt; (amount_deposited - cash_received) &lt;&lt; endl;
+    return 0;
+}
+
+
+
+
+note the extra #include&lt;iomanip.h&gt; directive at the top of the
+program.  this is necessary to use setw.
+
+
+mbirk@cs.wisc.edu
+
+
+
+
+formatting dollar amounts in program 2
+formatting dollar amounts in program 2
+formatting dollar amounts in program 2
+formatting dollar amounts in program 2
+formatting dollar amounts in program 2
+formatting dollar amounts in program 2
+formatting dollar amounts in program 2
+formatting dollar amounts in program 2
+formatting dollar amounts in program 2
+formatting dollar amounts in program 2

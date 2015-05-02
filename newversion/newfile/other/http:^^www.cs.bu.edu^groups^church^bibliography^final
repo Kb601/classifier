@@ -1,0 +1,965 @@
+the church project: a functional language using intersection types
+
+
+
+
+
+
+the  church project bibliography
+
+this bibliography is a compilation of books and papers
+that are relevant to the project.  much of this bibliography
+is derived from the www publication directories
+of existing ml projects.  these directories include:
+
+
+the fox project.
+
+project crystal.
+
+andrew appel's 
+home page.
+
+the
+ml kit.
+
+a selective snapshot of the above
+projects was taken on august 21, 1995.
+
+the  sml mailing list archive has some interesting discussions
+on various aspects of sml.
+
+
+ type theory 
+
+
+
+
+
+r. harper and j. mitchell.
+
+on the type structure of standard ml.
+trans. programming languages and systems, 15(2):211--252,
+apr. 1993.
+
+
+limits and disadvantages of the ml type system
+and universal-quantifier polymorphism
+
+
+
+
+a.j. kfoury and j.b. wells.
+a direct algorithm for type inference in the rank-2 
+fragment of the second-order lambda calculus.
+in proc. 1994 acm conf. lisp and functional programming.
+an earlier version was 
+
+b.u. c.s. technical report 93-017.
+
+
+a.j. kfoury, j. tiuryn, and p. urzyczyn.
+an analysis of ml typability.
+j. acm, 41(2), mar. 1994.
+
+
+a.j. kfoury, j. tiuryn, and p. urzyczyn.
+type reconstruction in the presence of polymorphic recursion.
+trans. programming languages and systems, 15(2), apr. 1993.
+
+
+j.b. wells.
+typability and type checking in the second-order lambda calculus
+are equivalent and undecidable.
+in proc. 9th ann. ieee symp. logic in computer science, 1994.
+
+
+a.j. kfoury and j.b. wells.
+
+adding polymorphic abstraction to ml.
+technical report 94-006, comp. sci. dept., boston univ., 1994.
+
+
+l. jategaonkar.
+ml with extended pattern matching and subtypes.
+master's thesis, mit, 1989.
+
+
+j.c. mitchell, s. meldal, and n. madhav.
+
+an extension of standard ml modules with subtyping and inheritance.
+in proc. 18th acm symp. on principles of programming languages,
+pp. 270--278, jan. 1991.
+
+
+various people,
+ extract on recursive types  from the
+93 mailing list archive. (reads from bottom to top.)
+
+
+
+benefits of rank-2 intersection types
+
+
+
+
+t. jim.
+
+what are principal typings and what are they good for?.
+technical report mit/lcs/tm-532, mit, 1995.
+
+
+t. jim.
+rank-2 type systems and recursive definitions.
+technical report mit/lcs/tm-531, mit, 1995.
+
+
+
+
+general background on intersection types
+
+
+
+
+f. cardone and m. coppo.
+two extensions of curry's type inference system.
+in p. odifreddi, ed., logic and computer science.
+academic press, 1990.
+
+
+s. van bakel.
+complete restrictions of the intersection type discipline.
+theoretical computer science, 102(1), aug. 1992.
+
+
+s. van bakel.
+intersection type disciplines in lambda calculus and
+applicative term rewriting systems.
+ph.d. thesis, mathematisch centrum, amsterdam, 1993.
+
+
+t. jim.
+a forthcoming technical report on higher-rank intersection types.
+
+
+
+background on subtyping
+
+
+
+
+j.c. mitchell.
+type inference with simple subtypes.
+j. functional programming, 1(3):245--286, 1991.
+
+
+j. mitchell.
+polymorphic type inference and containment.
+information and computation, 76(2/3), feb./mar. 1988.
+
+
+g. longo, k. milsted, and s. soloviev.
+a logic of subtyping.
+proc. 10th ann. ieee symp. logic in computer science, 1995.
+
+
+
+
+ applications of intersection types 
+
+
+
+
+j.c. reynolds.
+preliminary design of the programming language forsythe.
+technical report cmu-cs-88-159, carnegie mellon university, june 1988.
+
+
+t. freeman.
+
+refinement types for ml.
+ph.d. dissertation, carnegie mellon university, 1994.
+
+
+a.b. compagnoni and b.c. pierce.
+
+multiple inheritance via intersection types.
+to appear in mscs.  earlier versions appeared as
+edinburgh report ecs-lfcs-93-275 and k.u.n. report 93-18.  
+
+
+b.c. pierce.
+
+intersection types and bounded polymorphism.
+to appear in
+mscs.
+an
+
+earlier version
+appeared in proc. typed lambda calculus and applications,
+mar. 1993.
+
+
+
+ general reading on ml 
+
+
+
+l.c. paulson.
+ml for the working programmer.
+cambridge university press, 1991.  (reprinted in 1993.)
+
+
+j.d. ullman. 
+elements of ml programming.
+prentice-hall, 1994.
+
+
+r. milner, m. tofte, and r. harper.
+the definition of standard ml.
+mit press.
+
+
+r. milner, m. tofte, and r. harper.
+commentary on the definition of standard ml.
+mit press.
+
+
+d. macqueen.
+
+
+reflections on standard ml.
+springer-verlag, 1992.  lncs.
+
+
+the ml 2000 group.
+the ml 2000 manifesto.
+unpublished draft, 1992.
+
+
+a.w. appel.
+
+a critique of standard ml.
+technical report tr-364-92, princeton university, dec. 1991.
+appeared in j. functional programming, 3(4):391-430, 1993.
+
+
+r. harper and p. lee.
+
+advanced languages for systems software: the fox project in 1994.
+technical report cmu-cs-fox-94-01, 1994.
+
+
+
+ language features 
+
+this (incomplete) section contains references to papers on features of
+ml that have been problematic in one way or another for the ml type system.
+
+ module systems 
+
+
+
+
+x. leroy.
+
+a syntactic theory of type generativity and sharing.
+to appear in j. functional programming, 1995.
+
+
+this paper presents a purely syntactic account of type generativity and
+sharing -- two key mechanisms in the standard ml module system -- and
+shows its equivalence with the traditional stamp-based description of
+these mechanisms.  this syntactic description recasts the standard ml
+module system in a more abstract, type-theoretic framework.
+
+
+
+s.k. biswas.
+
+higher-order functors with transparent signatures.
+in proceedings 22nd acm sigplan-sigact symposium on
+principles of programming languages, pp. 154--163,  jan. 1995.
+
+
+d. macqueen and m. tofte.
+
+a semantics for higher-order functors.
+in proc. european symposium on programming, 1994.
+
+
+x. leroy.
+
+applicative functors and fully transparent higher-order modules.
+in proc. principles of programming languages, 1995.
+
+
+
+we present a variant of the standard ml module system where parameterized
+abstract types (i.e. functors returning generative types) map provably
+equal arguments to compatible abstract types, instead of generating
+distinct types at each application as in standard ml.  this extension
+solves the full transparency problem (how to give syntactic signatures for
+higher-order functors that express exactly their propagation of type
+equations), and also provides better support for non-closed code
+fragments.
+
+
+
+r. harper, m. lillibridge.
+
+a type-theoretic approach to higher-order modules with sharing.
+technical report cmu-cs-fox-93-04, 1993.
+a version appeared in proc. 21st ann. acm sigact-sigplan symp. principles
+of programming languages, jan. 1994.
+
+
+
+ separate compilation 
+
+
+
+
+z. shao and a.w. appel.
+
+smartest recompilation.
+technical report cs-tr-395-92, princeton univ., 1992.
+appeared in 
+proc. 20th acm symp. principles of programming languages,
+jan. 1993.
+
+
+x. leroy.
+
+manifest types, modules, and separate compilation.
+in proc. principles of programming languages, 1994.
+
+
+this paper presents a variant of the sml module system that
+introduces a strict distinction between abstract types and
+manifest types (types whose definitions are part of the module
+specification), while retaining most of the expressive power
+of the sml module system.  the resulting module system
+provides much better support for separate compilation. 
+
+
+
+r. harper, p. lee, f. pfenning, and e. rollins.
+
+incremental recompilation for standard ml of new jersey.
+technical report cmu-cs-fox-94-02, 1994.
+
+
+
+ record types 
+
+
+
+      didier rémy.
+
+      records and variants as a natural extension of ml.
+      in "theoretical  aspects of object-oriented programming:   types,
+      semantics and language design".  mit press, april 1994.
+      carl a. gunter and john c. mitchell.
+
+      we describe an extension of ml with  records where inheritance is
+      given  by ml   generic  polymorphism.  all common  operations  on
+      records but  concatenation are supported,    in particular the  free
+      extension of records.  other  operations such as renaming  of fields
+      are added.  the solution relies on an extension  of ml, where the
+      language of types is sorted  and considered modulo equations, and on
+      a record extension of types.  the solution is simple and modular and
+      the type inference algorithm is efficient in practice. (bibtex reference.)
+
+
+
+      didier rémy.
+      
+        typing record concatenation for free.
+      inria research report 1739, 1992.
+
+      we show that any functional language with record extension possesses
+      record concatenation  for free.  we exhibit  a translation  from the
+      latter into the former.  we obtain a type system for a language with
+      record concatenation  by composing the translation with typechecking
+      in a language with   record extension.  we apply   this method to  a
+      version  of ml with record extension   and obtain an extension of
+      ml with either asymmetric or symmetric concatenation.  the latter
+      extension is simple,  flexible  and   has  a very  efficient    type
+      inference  algorithm  in  practice.   concatenation   together  with
+      removal of fields  needs  one  more   construct than  extension   of
+      records.   it can  be added  to   the version of  ml with  record
+      extension.  however, many   typed languages with record  cannot type
+      such a construct.  the method still  applies to them, producing type
+      systems for record concatenation without  removal of fields.  object
+      systems   also  benefit of the   encoding  which shows that multiple
+      inheritance does not  actually require the  concatenation of records
+      but only their extension. (bibtex reference.)
+
+
+
+     didier rémy. "a case study of typechecking with constrained types:
+    typing record concatenation".    unpublished draft.
+    presented at the workshop on advances in type systems
+    for computing at the newton institute, cambridge, u.k. august 
+    1995. 
+    you may view the abstract,
+    the bibtex reference, 
+    or the dvi file. 
+    
+
+
+ imperative features 
+
+
+
+
+    a generalization of exceptions and control in ml"
+    (joint work with carl a. gunter and jon g. riecke)
+    presented at  fpca 95, san diego. 
+
+    you may view the abstract,
+    the bibtex reference, 
+    or the dvi file. 
+    you may also retreive the code of the appendix)
+
+
+
+    carl a. gunter, didier rémy, jon g. riecke.
+
+    prompting ml.
+    unpublished draft, january 1995.
+
+    we add functional continuations and prompts to a language with an
+    ml-style type system.  the operators significantly extend and
+    simplify the control operators in sml/nj, and can be themselves
+    used to implement (simple) exceptions.  we prove that well-typed
+    terms never produce run-time type errors and give a module for
+    implementing them in the latest version of sml/nj.
+    (the code of the appendix is avalaible here)
+
+ (bibtex reference.)
+
+
+
+r. harper, b.f. duba, and d. macqueen.
+typing first-class continuations in ml.
+j. functional programming, 3(4):465--484, oct. 1993.
+
+
+r. harper.
+ 
+a simplified account of polymorphic references.
+information processing letters, 51:201--206, 1994.
+
+
+k. yi.
+
+compile-time detection of uncaught exceptions in standard ml programs.
+in proc. symp. static analysis, 1994.
+
+
+
+ dynamic types 
+
+
+
+
+m. abadi, l. cardelli, b.c. pierce, and d. remy.
+
+dynamic typing in polymorphic languages.
+1994.
+
+
+
+x. leroy and m. mauny.
+
+dynamics in ml.
+j. functional programming, 3(4), 1993.
+
+    objects with dynamic types allow the integration of operations
+    that essentially require run-time type-checking into
+    statically-typed languages. this article presents two
+    extensions of the ml language with dynamics, based on our work
+    on the caml implementation of ml, and discusses their
+    usefulness. the main novelty of this work is the combination
+    of dynamics with polymorphism. 
+
+
+
+f. henglein.
+
+dynamic typing: syntax and proof theory.
+in science of computer programming, 1993.
+
+
+
+
+f. henglein and j. j&oslash;rgensen.
+
+formally optimal boxing.
+in proceedings 21st acm sigplan-sigact symposium on
+  principles of programming languages, pages 213-226.
+
+
+
+
+ overloading 
+
+
+
+
+
+philip wadler and stephen blott.
+how to make ad-hoc polymorphism less ad hoc.
+in proceedings 16st acm sigplan-sigact symposium on
+principles of programming languages, pages 60-76.
+
+
+
+mark p. jones.
+qualified types: theory and practice.
+cambridge university press, november 1994.
+
+
+
+mark p. jones.
+simplifying and improving qualified types.
+in proceedings 1995 conference on functional
+programming and computer architecture, pages
+160-169.
+
+
+
+stefan kaes.
+typing in the presence of overloading, subtyping, and recursive types.
+in proceedings 1992 conference on lisp and functional
+  programming, pages 193-204.
+
+
+
+martin odersky, philip wadler, and martin wehr.
+a second look at overloading.
+in proceedings 1995 conference on functional
+programming and computer architecture, pages 135-146.
+
+
+
+geoffrey s. smith.
+principal type schemes for functional programs with overloading and subtyping.
+science of computer programming, 23:197-226, 1994.
+
+
+ miscelaneous features 
+
+
+
+
+e. biagioni.
+
+sequence types for functional languages.
+technical report cmu-cs-fox-95-06, 1995.
+
+
+
+ compiler architecture 
+
+
+
+
+a.w. appel.
+compiling with continuations.
+cambridge university press, 1992.
+
+
+s.l. peyton-jones.
+the implementation of functional programming languages.
+
+
+z. shao.
+
+compiling standard ml for efficient execution on modern machines.
+ph.d. dissertation,
+dept. computer science, princeton univ.,
+nov. 1994.
+
+
+r. kelsey.
+
+a correspondence between continuation passing style
+and static single assignment.
+unpublished, jan. 1995.
+
+
+a.w. appel and d.b. macqueen.
+
+standard ml of new jersey.
+technical report cs-tr-329-91, princeton univ., 1991.
+appeared in third int'l symp. programming language implementation
+and logic programming, vol. 528 of lncs, pp. 1--13.
+springer-verlag, aug. 1991.
+
+
+z. shao and a.w. appel.
+a type-based
+compiler for standard ml.
+cs-tr-487-95, princeton university,
+march 28, 1995.
+appears in
+proc. 1995 acm conf. on programming language design and implementation,
+(sigplan notices, 30(6)), pp. 116--129, june 1995.
+
+
+amr sabry.
+
+the essence of compiling with continuations.
+in proc. programming language design and implementation, 1993.
+
+
+x. leroy.
+
+the zinc experiment, an economical implementation of the ml language.
+technical report 117, inria, 1990.
+
+
+this report details the design and implementation of the zinc
+system.  this is an experimental implementation of the ml
+language, which has later evolved in the caml light system.
+this system is strongly oriented toward separate compilation
+and the production of small, standalone programs; type safety
+is ensured by a modula-2-like module system.  zinc uses
+simple, portable techniques, such as bytecode interpretation;
+a sophisticated execution model helps counterbalance the
+interpretation overhead. 
+
+
+
+n. bj&oslash;rner.
+minimal typing derivations.
+in record 1994 acm sigplan workshop on ml and its applications.
+
+
+
+ program representation, optimization and analysis 
+
+
+
+
+a.w. appel and t. jim.
+
+continuation-passing, closure-passing style.
+appeared in proc. 16th acm symp. principles of programming
+languages, pp. 293--302, jan. 1989.
+
+
+z. shao and a.w. appel.
+
+space-efficient closure representations.
+technical report cs-tr-454-94, princeton univ., 1994.
+appeared in proc. 1994 acm conf. lisp and functional
+programming, june 1994.
+
+
+y. minamide, g. morrisett, and r. harper.
+
+typed closure conversion, 
+technical report cmu-cs-fox-95-05, 1995.
+
+
+r. cytron, j. ferrante, b.k. rosen, m.n. wegman, and f.k. zadeck.
+efficiently computing static single assignment form and the control
+dependence graph.
+trans. programming languages and systems, 13(4):451--490,
+oct. 1991.
+
+
+c. hall.
+using hindley-milner type inference to optimize list representation.
+in proc. 1994 acm conf. lisp and functional programming.
+
+
+z. shao, j.h. reppy, and a.w. appel.
+
+unrolling lists.
+technical report cs-tr-453-94,
+princeton univ., 1994.
+appeared in
+proc. 1994 acm conf. on lisp and functional programming,
+june 1994.
+
+
+
+ control and data flow analysis 
+
+
+
+
+n. heintz.
+
+set based analysis of ml programs
+technical report cmu-cs-fox-93-03, 1993.
+
+
+c. colby and p. lee.
+
+trace-based program analysis.
+technical report cmu-cs-fox-95-04, 1995.
+see also the
+
+slides for a talk
+about trace-based analysis.
+
+
+
+
+f henglein and c mossin.
+polymorphic binding-time analysis.
+ in proceedings of european symposium on programming (
+d  sannella, ed.), pp.&#32;287-301. volume&#32;788 of lecture notes in computer science. springer-verlag. april, 1994.
+keywords: binding time analysis, polymorphism, polymorphic recursion
+summary: a polymorphic binding time analysis with polymorphic
+ recursion is proposed as an alternative to polyvariant binding time analysis.
+ the type system is proven to have the principal typing property, and the
+ analysis is proven to be correct and partially complete (unfolding a
+ definition cannot improve the results of the analysis).
+pointers:
+dvi.z.
+
+
+
+
+a. sabry and m. felleisen.
+
+is continuation passing useful for data-flow analysis?.
+technical report, rice univ., 1994.
+
+another version appears in
+proc. programming language design and implementation, 1994.
+
+
+
+ register allocation 
+
+
+
+
+a.w. appel and z. shao.
+
+callee-save registers in continuation-passing style.
+technical report cs-tr-326-91, princeton univ., 1991.
+appeared in lisp and symbolic computation, 5:189--219, 1992.
+
+
+p. briggs, k.d. cooper, and l. torczon.
+improvements to graph coloring register allocation.
+trans. programming languages and systems,
+16(3):428--455, may 1994.
+
+
+l. george and a.w. appel.
+
+iterated register coalescing.
+technical report cs-tr-498-95, princeton univ., aug. 1995.
+
+
+
+boxing
+
+
+
+
+x. leroy.
+
+unboxed objects and polymorphic typing.
+in proc. principles of programming languages, 1992.
+
+
+this paper presents a program transformation that allows
+languages with polymorphic typing (e.g. ml) to be implemented
+with unboxed, multi-word data representations, more efficient
+than the conventional boxed representations.  the
+transformation introduces coercions between various
+representations, based on a typing derivation.  a prototype ml
+compiler utilizing this transformation demonstrates important
+speedups.
+
+
+
+
+fritz henglein and jasper j&oslash;rgensen.
+
+formally optimal boxing.
+in proceedings 21st acm sigplan-sigact symposium on
+principles of programming languages, pages 213-226.
+
+
+
+r. harper and g. morrisett.
+
+compiling polymorphism using intensional type analysis.
+technical report cmu-cs-fox-94-07, 1994.
+
+
+
+ run-time systems 
+
+
+
+
+m. tofte and j.-p. talpin.
+implementation of the typed call-by-value lambda-calculus 
+using a stack  of regions.
+in proc. 21st ann. acm sigplan-sigact symp.
+principles of programming languages, 1994. 
+ 
+
+aiken, et. al.
+ 
+better static memory management: improving region-based analysis of 
+higher-order languages.
+in proc. programming language design and implementation, 1995.
+also available as an expanded, 52-page
+technical report.
+
+
+m.j.r. goncalves and a.w. appel.
+
+cache performance of fast-allocating programs.
+in proc. 7th int'l conf. functional programming and computer 
+architecture, pp. 293--305.
+acm press, june 1995.
+
+
+andrew w. appel.
+a runtime system.
+lisp and symbolic computation, 3:343-380, 1990.
+
+
+a.w. appel and z. shao.
+
+an empirical and analytic study of stack vs. heap cost
+for languages with closures.
+technical report cs-tr-450-94, princeton univ., mar. 8, 1994.
+a
+
+revised version to appear in j. functional programming.
+
+
+d. tarditi, a. diwan, and e. moss.
+
+memory subsystem performance of programs using copying garbage
+collection.
+technical report cmu-cs-fox-93-06, 1993.
+appeared in proc. 21st ann.
+acm sigact-sigplan symp. principles of programming
+languages.
+
+
+d. tarditi, a. diwan, and e. moss.
+
+memory subsystem performance of programs with intensive heap
+allocation.
+technical report cmu-cs-fox-93-07, 1993.
+
+
+p. fradet.
+collecting more garbage.
+in proc. 1994 acm conf. lisp and functional programming.
+
+
+a.w. appel.
+
+runtime tags aren't necessary.
+technical report cs-tr-142-88, princeton univ., mar. 1988.
+appeared in lisp and symbolic computation, 19(7):703--705,
+july 1989.
+
+
+
+ miscellaneous compiler related papers 
+
+
+
+
+andrew w. appel.
+
+axiomatic bootstrapping: a guide for compiler hackers.
+technical report cs-tr-451-94, princeton univ., 
+mar. 9, 1994.
+appeared in 
+record 1994 acm sigplan workshop on ml and its applications.
+a 
+revised version with diagrams
+appears in trans. programming languages and systems,
+16(6):1699--1718, nov. 1994.
+
+
+r. harper, p. lee, f. pfenning, and e. rollins.
+a compilation manager for standard ml of new jersey.
+in record 1994 acm sigplan workshop on ml and its applications.
+(probably closely related to the other paper by the same group of 4.)
+
+
+n. haines, e. biagioni, r. harper, and b.g. milnes.
+
+note on conditional compilation in standard ml.
+technical report cmu-cs-fox-93-02, 1993.
+
+
+d. tarditi, p. lee, and a. acharya.
+
+no assembly required: compiling standard ml to c.
+letters on programming languages and systems, june 1992.
+
+
+
+ correct and optimal lambda-calculus evaluation 
+
+  
+    gonthier, abadi and l&eacute;vy.
+	
+	  the geometry of optimal lambda reduction.
+    gonthier, abadi and l&eacute;vy.
+	
+	  linear logic without boxes.
+    lawall and mairson.
+	
+	  optimality and inefficiency:
+		what isn't a cost model of the lambda calculus?.
+    lawall and mairson.
+	
+	  on the global dynamics of optimal graph reduction.
+  
+
+
+
+
+
+the church project: a functional language using intersection types
+
+
+the church project: a functional language using intersection types
+
+
+the church project: a functional language using intersection types
+
+
+the church project: a functional language using intersection types
+
+
+the church project: a functional language using intersection types
+
+
+the church project: a functional language using intersection types
+
+
+the church project: a functional language using intersection types
+
+
+the church project: a functional language using intersection types
+
+
+the church project: a functional language using intersection types
+
+
+the church project: a functional language using intersection types

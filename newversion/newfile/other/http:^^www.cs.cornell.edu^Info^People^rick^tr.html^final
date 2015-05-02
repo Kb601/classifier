@@ -1,0 +1,55 @@
+online tech reports
+
+online papers
+
+(richard s. palmer)
+
+
+
+ 
+
+ imacs-94 --  physical elements:
+using chains and cell complexes to solve multiple domain pde problems
+ a brief description of how  has been used to
+encode a lax-wendroff approximation to the 1d euler equations of fluid
+flow.
+
+ tr94-1406 --  chain models
+and finite element analysis  shows how  is a "programming
+language for fem," by developing a three page executable encoding of a
+finite element approximation to plane stress using quadratic shape
+functions defined over triangles.
+
+tr93-1375 --  chain models of
+physical behavior for engineering analysis and design  suggests
+that because computers have a preeminent role in engineering analysis
+today, computation needs to be explicitly addressed in
+mathematical models of engineering systems, and proposes a methodology
+for doing this based on algebraic topological concepts.
+
+tr92-1246 --  simlab:
+automatically creating physical systems simulators 
+
+describes a computer environment for creation lumped model simulators
+from high level specifications.
+
+asme-wam92 -- 
+1992 asme winter annual meeting simlab paper 
+
+a later version of tr92-1246 that includes examples from electrical
+circuits, rigid body dynamics, etc.
+
+
+
+ rick palmer / rick@cs.cornell.edu 
+
+ online tech reports
+ online tech reports
+ online tech reports
+ online tech reports
+ online tech reports
+ online tech reports
+ online tech reports
+ online tech reports
+ online tech reports
+ online tech reports

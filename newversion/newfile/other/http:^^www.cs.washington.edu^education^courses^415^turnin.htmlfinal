@@ -1,0 +1,87 @@
+cse 415 - turnin instructions
+
+
+
+turnin instructions for final project
+
+for the final project, if you are writing a lisp program, please turn
+it in as normal.  note, that since the project is due on the day of
+the final, i would like you to turn in a paper copy of the project as
+well.  whatever kind of project you do, i would like for you to hand
+in the electronic version in the same general format.  at the begining
+put your name.  then instrcutions of how to run it (please be clear
+and explicit).  if it is appropriate, include smaple output.  all of
+the previous things should be commented out wiht ';' if lisp, or with
+/* */ if in c.  then in the file, please include the program itself.
+
+if the sample output is too large to reasonably fit in the file with
+the code, or if the program is in multiple file, you may submit a
+folder (or a directory) if you wish.
+in this case, please name the directory as you have named programs in
+the past.  ie.
+
+
+	~c415/submit.sh redstone.final.project
+
+
+or something that begins with your last name.  the submit program will
+work for submitting directories.  as always, if you are submitting a
+file with code mixed with non-code, please make it so i can execute
+it.
+
+
+
+for unix submissions
+
+please submit your file using a script in ~c415:
+
+
+% ~c415/submit.sh redstone.final.cl
+file  redstone.final.cl  deposited in turnin folder.
+
+
+the turnin program only submits one item, and should not return any errors.
+please mail me if any occur.  it should only say file has been deposited if
+there are no errors.
+
+macintosh submissions
+
+this is assuming you have 'mounted' the class folder.  open up the
+classfolder.  inside you will see a folder called dropfolder.  simple
+drag the file or folder you wish to submit to the dropfolder.
+
+
+
+
+
+
+
+
+cse 415 - turnin instructions
+
+
+cse 415 - turnin instructions
+
+
+cse 415 - turnin instructions
+
+
+cse 415 - turnin instructions
+
+
+cse 415 - turnin instructions
+
+
+cse 415 - turnin instructions
+
+
+cse 415 - turnin instructions
+
+
+cse 415 - turnin instructions
+
+
+cse 415 - turnin instructions
+
+
+cse 415 - turnin instructions

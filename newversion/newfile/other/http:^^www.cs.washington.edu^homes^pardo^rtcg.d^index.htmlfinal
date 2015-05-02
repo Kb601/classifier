@@ -1,0 +1,539 @@
+runtime code generation (rtcg)  
+
+
+runtime code generation (rtcg)
+
+terms
+
+runtime code generation (rtcg) is a general name
+for structured techniques that change a program's instruction space
+while the program is running.
+there are a variety of other common, overlapping names,
+such as ``dynamic compilation'' and ``self-modifying code'';
+there are also a variety of other less-polite names.
+
+
+	``friends don't let friends use smc'' -- email .signature
+
+
+the term "demand-driven compilation" is narrower than rtcg.
+it typically means that some or all parts of the language translation
+process are performed on a unit of code when that unit is invoked.
+demand-driven compilation may be contrasted with runtime code
+generation that is performed speculatively; with demand-driven dynamic
+linking in which the address space is modified without "compilation";
+and self-modifying code in which a code unit is updated by itself
+which, necessarily, is after the unit has been invoked.
+
+the term dynamic compilation is also narrower,
+typically encompassing code that is generated dynamically
+but which does not self-modify.
+dynamic compilation is most often applied to systems using
+general-purpose in-core code generators
+and performing code generation over sophisticated inputs
+(e.g., expressions, rather than simple values)
+or over dynamically-loaded source code or pseudocode.
+(beware that the term ``dynamic compilation'' is nowadays often(?)
+used also to mean ``a compilation of literary works which is done on
+an ongoing and/or incremental basis'',
+e.g. here.)
+
+dynamic linking adds code to the instruction space of the
+program.
+the code is typically generated using a code generator that is outside
+of the program.
+the ``new code'' may have been generated on demand for the
+application;
+dynamically-linked code is also used to implement
+language-independent enhancement and extension, to elilminate
+machine-dependencies from binaries, and to reduce the size of
+binaries.
+(unfortunately, the term is also sometimes used to describe
+``building hypermedia connections on an ongoing or incremental
+basis''.)
+
+the term runtime compilation is often used to describe
+loop parallelization that is done at runtime
+and which performs no code generation.
+the idea of runtime compilation
+is that loop-carried data dependencies for,
+e.g., ``x[i] = y[i+2] + z[i-5]''
+can be discovered by a static compiler,
+but that,
+e.g., ``x[a[i]] = y[a[i+2]] + z[a[i-5]]''
+cannot.
+the system thus examines the values of a at runtime,
+and performs parallelization at runtime, based on the values.
+the system thus ``compiles'' information at runtime but
+performs no code generation.
+write
+to shun-tak leung (shuntak@cs.washington.edu)
+for more information.
+
+instruction-space modification is a general term,
+including any topic that changes bits in an instruction space,
+whether the change comes from inside the application or from
+outside.
+
+just-in-time comiplation (jit) is the general idea that some
+steps of compilation may be deferred until the code is invoked.
+at the moment (1996)
+most systems that use "jit" by name are systems
+that use dynamic compilation to get good performance from a portable
+(machine and/or os-independent) program representation.
+typically, the unit of translation is a loadable unit, or smaller;
+for example, modules, procedures, statements, etc.,
+and the input is some virtual machine byte code
+rather than source text, trees, etc.
+jit is used to refer to code generation at dynamic link time as well
+as invocation time.
+in contrast, many other systems perform compilation "just in time"
+but with the goal of fine-tuning machine-dependent code, etc.
+a more preceise (but longer) name for "classical" jit is probably
+something like:
+"demand-driven specialization to processor architecture
+at the [module|procedure|...] level".
+
+
+the term self-modifying code or smc also refers to rtcg
+but it is harder to pin down because
+there are many interpretations of ``modify''
+and so many ways to pronounce ``self''.
+``modification'' may mean that an instruction is executed,
+manipulated in place, and then executed again;
+it may mean that a region of memory is reused,
+and holds several instructions over its lifetime;
+or, it may mean that the instruction space changes,
+even if no part of it is reused.
+as for the problem with ``self'', adam kao phrased it nicely:
+
+
+what i'm trying to say is, what constitutes ``self'' and ``other''
+depends on your point of view.
+...
+try this simple exercise.
+point a finger at your belly-button.
+poke.
+you poked yourself.
+your finger didn't poke itself.
+
+
+some various sensible interpretations include:
+(a) instructions that manipulate themselves;
+(b) instructions that manipulate other instructions in the same basic
+block;
+(c) instructions from one source code module manipuate other
+instructions in the same module
+(d) instructions in one module manipulte instructions
+that are created on behalf of that module;
+(e) instructions in one address space manipulate other instructions in
+the same address space;
+(f) instructions in one protection somain mainpulate other
+instructions in the same protection domain
+(g) instructions being used to solve onen problem manipulate
+instructions that are also used to solve the same problem.
+
+the terms code and data are used here in a limited
+sense.
+``code'' is used to refer to native machine code that is executable
+except that it may live in a data space instead of a code space.
+``data'' is used to refer to all other state, including bits in an
+instruction space that are not executable (e.g. are not well-formed
+instructions) and things that will be manipulted to become code but
+which are not yet executable native machine code.
+these definitions are limited because a more general definition of
+``code'' defines it relative to some engine of execution.
+in particular, ``code'' in a more general sense might include virtual
+machine code instructions, source text, etc.
+and might also include data values that are used to affect processor
+execution in specific ways.
+
+
+
+pardo's rtcg stuff
+
+
+a case for runtime code generation.
+        self-modifying code considered harmless.
+a portable interface for
+		on-the-fly instruction space modification.
+        a uniform interface to update the instruction cache asap
+        when changing the instruction space of a running program.
+evaluating runtime-compiled
+		value-specific optimizations. 
+        dynamically optimizing around the values of variables
+        can make even highly-tuned programs run faster.
+faster dynamic linking for sparc
+		v8 and system v.4. 
+        how to make dynamic linking faster
+        and how to do dynamic relinking.
+fast data breakpoints.
+        yet another way to implement data breakpoints in a debugger.
+	uses rtcg.
+shade:
+		a fast instruction-set simulator for execution profiling.
+        a fast extensible cross-machine simulator that collects all
+        sorts of tracing information.
+	it's implemented using rtcg.
+	see also the
+	simulators
+		home page.
+
+
+
+mail
+	archive
+of postings to the rtcg mailing list.
+
+
+
+other rtcg stuff
+
+apertos
+	reflective operating system using "dynamic compilation" for ???
+batos:
+	everything is viewed as source code that's being edited.
+	on invocation, there's a ``freeze'' and compilation.
+cecil.
+	cecil code is statically compiled,
+	but uses dynamically-compiled
+	pics.
+michael blair's
+	paper on
+	improving scheme program performance
+		through heuristic redundant predicate
+		evaluation using pac learning techniques
+		(gzip'ped postscript(tm))
+colusa doesn't say it very loudly,
+	but they use a dynamic compiler.
+	see omniware.
+	(has the link expired?  here's a
+	local copy
+	of the paper.)
+concert
+	used to use (and may again someday use) dynamic compilation in order
+	to transform general-purpose ``remote method invocation'' into
+	a local procedure call.
+	see, in particular,
+	uiuc dcs tr r-93-1815
+core wars
+dawson engler
+	is working on general-purpose code generators
+	for runtime code generation,
+	including dcg
+	(postscript(tm) paper)
+	and `c
+	(postscript(tm) paper)
+for supporting
+	generics
+hakmem:
+	see
+	
+	item #172:
+	a self-modifying sequence that, in just three instructions
+	(including the procedure return) removes a cons cell from a
+	free list, fills it with the car and cdr values and,
+	if needed, calls the garbage collector.
+	(duplicated here)
+	item #179:
+	a dynamically-compiled string matcher that implements the kmp
+	searching algorithm, is clearly linear, and which appeared
+	at least five years before kmp!
+	(duplicated here)
+	
+gill's 1951 edsac debugger:
+	used a variety of patching techniques to instrument and
+	debug programs.
+java
+	uses secure bytecodes to move code from
+	machine to machine.
+	someday, those bytecodes may be
+	dynamically compiled.
+	for example, softway's
+	guava
+	vm.
+	for more on moving code across protection boundaries, see
+	mobile code.
+juice
+	is a java-to-c translator.  it's part of "sumatra", below.
+phil koopman
+	likes rthwg (runtime hardware generation).
+	
+lightweight
+	languages for interactive graphics
+	(spot@cs.cmu.edu)
+mark leone
+	is working on specialized runtime code generators,
+	achieving costs as low as 6 cycles per generated instruction
+	(see here).
+mudos
+	(see here)
+	uses
+	dynamic compilation
+	of the lpc extension language,
+	in order to minimize the interpretation overhead.
+paw
+perl uses
+	``runtime compilation''
+	of patterns (to vcode), and
+	dynamic loading
+	(more)
+portable 
+	runtime code generation in c.
+	(has the link expired?  here's a
+	local copy).
+todd proebsting
+	is working on rtcg, including dcg
+	(postscript(tm) paper)
+prolog uses assert and retract to add and delete
+	code from a program.
+	if you're using compiled prolog, then changing the program means
+	(a) switching to interpretive execution,
+	(b) recompiling the whole program or
+	(c) performing
+	incremental analysis
+	in order to limit the scope of recompilation.
+proof-carrying
+	code for code motion across protection boundaries.
+scout
+sel-hpc
+	has a compilers and interpreters archive that includes
+	rtcg
+	and
+	dynamic linking.
+self
+	(alternate site)
+of compiled c, c++, etc.
+	in order to improve embeddability and extensibility.
+simulatorsoften use dynamic-cross compilation and other such techniques.
+spin,
+	supporting vso and dynamic linking of kernel extensions.
+	including
+	here
+	and
+	here
+sumatra
+	is a project to explore issues about efficient execution of mobile code.
+switchware:
+	making the network interface programmable.
+	(there is also a
+	postscript paper.)
+synthetix,
+	a follow-on to synthesis.
+tandem
+	databases.
+uw rtcg
+transit
+	suggests ``computational quasistatics'' --
+	profile feedback to an online optimizer.
+	
+	quasistatic if-then-else
+	smart compilers references
+	reinventing computing?
+	
+the
+	vienna
+		abstract machine
+	uses incremental compilation.
+
+
+dynamic linking
+
+
+caching to
+	improve the performance of dynamic linking
+	(see also
+	here
+cache kernel
+	uses dynamically-loaded application-specific kernel modules.
+chameleon
+	is a tcp/ip layer for windows, implemented as a
+	dll.
+	likewise,
+	here.
+clips
+	uses dynamic linking
+compression dll
+dylan
+	uses dynamic linking
+dld is a
+	dynamic linker provided with linux.
+fast turnaround edit-compile-debug with incremental compilation
+	and dynamic linking.
+	
+	allegro common lisp
+	prolog
+		(sni prolog version 3, in particular)
+	software refinery
+	
+interoperating
+documents
+	use dynamic linking
+	(see also under here).
+elf
+	vs. a.out dynamic linking
+gnu's hurd uses
+	dynamic linking
+hypertext
+	using dynamic linking
+kaleida's scriptx
+	uses dynamic linking.
+	
+	i'm implementing a dynamic linker for a programming language
+	similar to dylan.  (the language is scriptx, see
+	http://www.kaleida.com/
+	for more information about it.)  it uses a module system that
+	is almost identical to dylan's module system.
+	a module can export variables to publish interfaces,
+	and it can use other modules to gain access to their published
+	interfaces.  modules can be saved from a compilation
+	environment into a persistent store with the variables defined
+	within them, and later loaded into a runtime environment.
+	
+	eb@kaleida.com (eric benson) in
+	comp.compilers article 28 july 1995.
+language extensions
+	use dynamic linking
+	(see also
+	here)
+microsoft windows has a dynamic linker interface that
+	requires the use of far pointers
+multics,
+	multics,
+opendoc
+	and
+	details
+os/2 uses
+	dynamic linking
+perl also uses
+	dynamic linking
+ptolemy
+	uses dynamic linking.
+the rochelle caller id adapter
+	uses dynamic linking
+rochester cs uses dynamic linking, e.g.
+	here
+	and
+	here
+bradley schmerl
+	is interested in dynamic linking.
+tcl
+	seems to use dynamic linking
+winsock uses
+	dynamic lnking.
+	so does
+	pathway access
+	for os/2.
+w3a uses
+	dynamic linking
+	for extensible www browsing,
+	as does
+	cybermap.
+the book
+	object
+	oriented programming under windows a practical handbook
+	by stephen morris
+	seems to talk about dynamic linking.
+this
+		patent
+	uses it.
+some os's provide dynamic linking as a system service
+	
+		linux
+		microsoft windows
+		osf/1
+		sunos
+	
+some applications support multiple extension languages via dynamic
+	linking.
+	in part, this falls under the heading of using dynamic linking
+	because ``it's got a clean interface''.
+	
+	tcl
+	
+some applications seem to use dynamic linking just because it's
+	got a clean interface and/or minimizes the size of the final
+	executable.
+	some of the above plus
+	
+	m.4
+		expert system;
+	numerical c
+		dynamic link library,
+	ham radio database,
+	dynacomm/elite
+		3270 emulation/connection library
+	dec telephone controller
+	
+some libraries are provided as dynamically-linked libraries
+	so that system a can export libraries to a generic application b
+	and b can link in the libraries to operate on the data
+	provided by a.
+	
+	xor
+		external object representation
+	the
+		cool edit system,
+		which uses
+		file filters
+		for
+		audio editing
+	wind/u
+		for providing data exchange between programs on unix platforms,
+		as in microsft windows platforms.
+	
+for
+		interpreting
+	visual basic programs.
+ibm som
+	allowing inter-language object calls.
+	the toolkit for creating class libraries and instances.
+	uses dll to allow new releases of system libraries w/o
+	recompiling applications.
+metu
+	uses a
+	"dynamic function linker",
+	for an o-o database.
+
+
+not rtcg but related
+
+software
+		fault isolation:
+	disallows rtcg, but could have easily been extended to use
+	it provided it was performed using a well-structured interface
+	such as
+	``a portable interface for
+		on-the-fly instruction space modification''.
+self-modifying
+		communication protocols
+	for multi-agent communication systems.
+	contact:
+	gerard a. w.
+		vreeswijk
+	(`vreeswyk@cs.rulimburg.nl').
+self-reproducing perl
+	courtesey
+	dan boyd
+	(boyd@cs.buffalo.edu).
+
+
+
+
+
+pardo@cs.washington.edu
+
+
+
+
+
+ runtime code generation (rtcg) 
+ runtime code generation (rtcg) 
+ runtime code generation (rtcg) 
+ runtime code generation (rtcg) 
+ runtime code generation (rtcg) 
+ runtime code generation (rtcg) 
+ runtime code generation (rtcg) 
+ runtime code generation (rtcg) 
+ runtime code generation (rtcg) 
+ runtime code generation (rtcg)

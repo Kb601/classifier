@@ -1,0 +1,117 @@
+quiz 4 - cs 302 fall 1996 - section 4
+
+
+
+
+  cs 302
+  fall 1996 - section 4
+ 
+quiz 4 (take home)
+due monday, november 11, 1996 
+
+
+this quiz is a ``take home'' assignment that counts the same as an
+in-class quiz.  like an in-class quiz, this should be all of your own
+work, though you are welcome to use your text and/or a computer to
+assist you in this assignment.  your answers may be written out by
+hand, or preferably, typed.
+
+
+   (5 points) write a function called display that takes
+two parameters: an array of characters and an integer for size of the
+array.  the function should write the first n characters of the array
+to cout, where n is the size parameter that was passed into
+the function.  (precondition: the size passed in will not be longer
+than the actual size of the array.) 
+
+   (5 points) write a function called num_equal that
+takes three parameters: two arrays of integers and an integer variable
+for the number of valid entries in the array (in most cases just the
+size of the array).  the function should return the number of pairs of
+integers that are the same.  for example, if the function was passed
+two arrays {1, 2, 3, 4} and {2, 2, 3, 5}, and size 4, the function
+would return 2.  (precondition: the size passed in will not be longer
+than the actual size of either array.) 
+
+   (8 points) design and implement a quizscores class.  this
+class will be used to read in and average quiz scores.  all quiz
+scores are integers from the range 0-20.  you will need the following
+private variables:
+    
+       an array of integers to hold the scores.  declare this to
+contain at least 100 elements.
+       an integer to keep track of how many quiz scores you read
+in.
+    
+you will need the following public methods:
+    
+       a constructor which takes a single ifstream as a
+parameter and reads the data from that file.  the first integer in the
+data file is the number of quiz scores.  the rest of the file contains
+n integer quiz scores, where n is the first integer in the file.  the
+data should be read from the file and stored in the private array
+variable, and also set the integer that keeps track of the number of
+scores entered.  if the number of scores in the file is greater than
+the size of the array to hold the scores, give an error message and
+exit(1) the program.
+    an average method which takes no parameters and
+returns the average quiz score, a double.
+    a getnumber method which returns the number of quiz
+scores read in.
+     
+
+   (2 points) modify your quizscores class by adding another
+public method that will produce a histogram of the results.  the
+method should take a single ofstream as a parameter and write
+to that stream a histogram of the quiz results.  to do this you will
+need a local array variable with 21 elements (0-20 is 21 possible
+scores).  use this array to count how many time each score occurs in
+the file.  for example, if the quiz scores were 10, 15, 15, 15, 15, 18, 18, 20, the following should be displayed:
+
+ 0: 
+ 1:
+ 2:
+ 3:
+ 4:
+ 5:
+ 6:
+ 7:
+ 8:
+ 9:
+10:*
+11:
+12:
+13:
+14:
+15:****
+16:
+17:
+18:**
+19:
+20:*
+
+
+(note: this question is only two points due to the extra time it will
+take to complete, if you can not finish this or can't figure it out,
+the most you can lose on this problem is only two points.)
+
+
+
+
+
+
+
+
+
+
+
+quiz 4 - cs 302 fall 1996 - section 4
+quiz 4 - cs 302 fall 1996 - section 4
+quiz 4 - cs 302 fall 1996 - section 4
+quiz 4 - cs 302 fall 1996 - section 4
+quiz 4 - cs 302 fall 1996 - section 4
+quiz 4 - cs 302 fall 1996 - section 4
+quiz 4 - cs 302 fall 1996 - section 4
+quiz 4 - cs 302 fall 1996 - section 4
+quiz 4 - cs 302 fall 1996 - section 4
+quiz 4 - cs 302 fall 1996 - section 4

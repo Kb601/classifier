@@ -1,0 +1,126 @@
+persistent programming languages:  the best of both
+  worlds
+
+
+
+
+
+
+
+                 
+ next: contents
+  
+ persistent programming languages:  the best of both
+  worlds
+ rex jakobovits
+ department of computer science
+and engineering, fr-35  university of washington  seattle,
+washington 98195
+rough draft
+
+abstract:
+the integration of databases and programming langauges is being
+  motivated from two directions.  the database community requires a
+  more flexible and powerful way of modeling the world, whereas the
+  programming language community wants the convenience of a reliable,
+  efficient means of enabling entities to persist between program
+  invocations.  traditionally, the query facilities provided to
+  database users are not computationally complete, precluding
+  arbitrarily complex processing of data.  furthermore, they support
+  only primitive data types, making them inappropriate for modeling
+  certain real world applications.  processing must be done off-line
+  in a host language, but translation between the database and the
+  language results in an impedence mismatch problem.  one solution is
+  to extend an existing programming language with the notion of
+  persistence, enabling it to seamlessly interact with the storage
+  manager.  this paper is a survey of such efforts and the issues
+  involved, focusing primarily on persistent object-oriented
+  languages.
+
+ 
+ 
+ contents
+  integrating databases and programming languages
+ 
+  the programming language perspective
+  the database perspective
+ 
+  overcoming the impedence mismatch problem
+ 
+  milestones in persistent programming langauge development
+ 
+  comparison to relational databases
+  case study: two object-oriented databases
+ 
+  transparent persistence
+  declarative query facility
+  collections and iterators
+  constraints
+ 
+  active databases: triggers
+ 
+  once-only triggers
+  perpetual triggers
+  intra-object vs. inter-object triggers
+  eager vs. lazy computation
+  triggers and constraints in other systems
+ 
+  misc. features of object-oriented database systems
+ 
+  mandatory features
+  optional features
+  swizzling
+  referential integrity
+  versioning
+ 
+  other object-oriented systems
+ 
+  beta
+  procol
+ 
+  constraint-based imperative languages
+ 
+  constraints and object identity
+  kaleidoscope
+  adding transactions to kaleidoscope
+  techniques for integration: summary
+ 
+  persistent prolog: motivation and issues
+ 
+  expert systems
+  why prolog could use persistence
+  database interface for prolog
+  translation between sql and prolog
+  meta-translation
+  mimer: a back end to prolog
+ 
+ references
+    about this document ... 
+
+ 
+
+rex jakobovits 
+tue nov 14 02:57:45 pst 1995
+
+
+
+persistent programming languages:  the best of both
+  worlds
+persistent programming languages:  the best of both
+  worlds
+persistent programming languages:  the best of both
+  worlds
+persistent programming languages:  the best of both
+  worlds
+persistent programming languages:  the best of both
+  worlds
+persistent programming languages:  the best of both
+  worlds
+persistent programming languages:  the best of both
+  worlds
+persistent programming languages:  the best of both
+  worlds
+persistent programming languages:  the best of both
+  worlds
+persistent programming languages:  the best of both
+  worlds

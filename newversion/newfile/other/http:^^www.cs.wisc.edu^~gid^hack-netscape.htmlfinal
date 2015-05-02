@@ -1,0 +1,69 @@
+minor netscape hacks
+
+
+
+
+
+
+
+ making netscape do neat tricks
+
+
+note: i think this only works on mozilla 1.x.
+
+ try replacing the string /jwz/ with
+~gid/ in your netscape binary.  then reload this page
+and watch the animation when the page loads. (the animation is the thing in
+the upper right corner that does stuff when data's being transferred
+and whatnot).  use a binary editor to change the strings in the
+executable program.  emacs works fine, if you have it; try m-x
+binary-overwrite-mode to help avoid typing too many characters.
+enjoy watching the compass spin round and round.
+
+
+this reminds me of a joke: 
+
+
+ what's red and green and goes round and round?
+
+
+a frog in the blender.
+
+ hmmmm.  if you look at jwz's homepage, the
+animation still becomes the compass, even with netscape 2.x.  there must
+be a way to make this work for normal pages, but it's probably more
+complicated than changing an ascii string in the binary.  pull out those
+debuggers, folks.
+
+
+
+
+
+minor netscape hacks
+
+
+minor netscape hacks
+
+
+minor netscape hacks
+
+
+minor netscape hacks
+
+
+minor netscape hacks
+
+
+minor netscape hacks
+
+
+minor netscape hacks
+
+
+minor netscape hacks
+
+
+minor netscape hacks
+
+
+minor netscape hacks

@@ -1,0 +1,76 @@
+professor ran libeskind-hadas' research page
+
+
+	
+  research interests  
+
+my research addresses the problem of fault-tolerance in
+distributed memory parallel computers or  multicomputers.   while 
+multicomputers have a number of attractive features, one difficulty
+in these systems is that of computing in the presence of faults.
+this problem is particularly acute in massively parallel architectures
+employing very large numbers of nodes.
+
+
+the objective of this research is to develop practical algorithms
+for fault-tolerant unicast and multicast 
+routing in wormhole-routed multicomputers.  in addition, we seek
+to obtain tight theoretical bounds on the number of faults that can
+be tolerated with a given set of resources.
+in particular, my students and i are developing efficient
+fault-tolerant adaptive routing algorithms for the  mesh and torus
+topologies.  several  technical
+reports and papers describing recent results are available in postscript.
+
+
+a number of harvey mudd students have taken an active role in 
+this research project.  they are eli brandt ('95), tom hehre
+('96), kevin watkins ('97), andrew hutchings ('98), and mark reyes ('98).
+
+
+tom hehre and kevin watkins developed
+the  mesh architecture routing simulator (mars). 
+mars is an event-driven
+simulation package for studying wormhole-routed meshes.
+mars is implemented in c++ and has an x-windows-based graphical
+user interface that allows visualization of network traffic and
+other network characteristics.  
+mars allows easy definition of router architectures, routing
+algorithms, and selection policies.
+virtual channels are implemented
+with demand-based multiplexing and the number of internal channels
+and other router characteristics are user-definable.
+a number of router and channel latency parameters are also
+user-definable in order to facilitate fair comparisons between 
+algorithms based on different routing models.
+an example of the mars interface is shown below.
+
+
+
+
+
+
+
+
+last modified august 13, 1996 by hadas@cs.hmc.edu
+
+
+
+
+
+
+
+
+
+
+
+professor ran libeskind-hadas' research page
+professor ran libeskind-hadas' research page
+professor ran libeskind-hadas' research page
+professor ran libeskind-hadas' research page
+professor ran libeskind-hadas' research page
+professor ran libeskind-hadas' research page
+professor ran libeskind-hadas' research page
+professor ran libeskind-hadas' research page
+professor ran libeskind-hadas' research page
+professor ran libeskind-hadas' research page

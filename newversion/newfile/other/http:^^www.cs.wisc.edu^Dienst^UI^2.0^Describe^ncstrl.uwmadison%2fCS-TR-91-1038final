@@ -1,0 +1,34 @@
+multi-procedure program integration 
+multi-procedure program integration 
+ david w. binkley
+cs-tr-91-1038
+august 1991
+
+ the magnitude and complexity of existing and future software systems heightens the need for tools that assist programmers with the task of maintaining and developing software. one recurring problem that arises in system development is the need to reconcile multiple divergent lines of program development. when solved by hand, this reconciliation or integration process is often tedious and error prone. a better solution is the use of a \fiprogram integration tool\fp\(ema tool that takes as input several variants of a @base@ program, automatically determines the changes in each variant with respect to the @base@ program, and incorporates these changes, along with the portion of the @base@ program preserved in all the variants, into a merged program.
+
+how to view this document
+
+
+display the whole document in one of the following formats.
+
+html
+ 1054 bytes.
+
+
+
+
+ you are granted permission for the non-commercial reproduction, distribution,display, and performance of this technical report in any format, but thispermission is only for a period of 45 (forty-five) days from the most recenttime that you verified that this technical report is still available fromthe computer science department of the university of wisconsin - madison underterms that include this permission.  all other rights are reserved by theauthor(s). 
+[ search
+ ]
+
+ncstrlthis server operates at uw madison computer sciences technical reports . send email to www@cs.wisc.edu 
+multi-procedure program integration 
+multi-procedure program integration 
+multi-procedure program integration 
+multi-procedure program integration 
+multi-procedure program integration 
+multi-procedure program integration 
+multi-procedure program integration 
+multi-procedure program integration 
+multi-procedure program integration 
+multi-procedure program integration

@@ -1,0 +1,857 @@
+computer sciences courses
+
+
+
+
+
+
+
+ computer sciences courses
+
+general information about courses
+
+courses numbered 399 and below may be taken for undergraduate credit only.
+courses numbered 400 through 699 may be taken by either undergraduate or
+graduate students.  courses numbered 700 or above are intended only for
+graduate students.  undergraduates are allowed to take courses numbered 700 or
+above, but only if permission is obtained from the dean's office.
+
+courses offered less than once every two years are marked as ``infrequently
+offered;'' students should not count on taking these classes when planning
+their schedules.  
+tentative timetables for upcoming semesters
+are available.
+
+world-wide web pages for the 
+current semester's offerings
+of many computer sciences courses are available.
+additional information about many cross-listed courses
+can be found via the 
+college of engineering's
+and the
+department of mathematics'
+www home pages.
+
+&#160;
+110 introduction to computer programming 1 cr.
+
+this course is designed to give engineering students an introduction to a
+computer programming language, such as fortran or c. it will cover elementary
+concepts such as variable type, control structures, loops, and arrays.
+prereq:&nbsp;advanced high school mathematics.  open to fr.
+&#160;
+132 using computers 4 cr.
+
+introduction to use of computers. some programs in basic, but emphasis on
+productivity tools such as word processing, spreadsheets, graphics, and
+telecommunications.  consideration of societal impacts of computers.  not
+intended for computer sciences majors.  prereq:&nbsp;minimum mathematical
+competency (two years of high school math).  open to fr.
+&#160;
+302 algebraic language programming 3 cr.
+
+construction of algorithms; problem solving; instruction and experience in the
+use of at least one procedure-oriented language (e.g., pascal or fortran);
+survey of other such languages, advanced programming techniques.  
+prereq:&nbsp;advanced high school mathematical preparation or some college work in
+mathematics, statistics or logic; or consent of instructor.  open to fr.
+&#160;
+310 problem solving using computers 3 cr.
+
+gives engineering students an introduction to computer and analytical skills to
+use in their subsequent course work and professional development. discusses
+several methods of using computers to solve problems, including elementary
+fortran and c programming techniques, the use of spreadsheets, symbolic
+manipulation languages, and software packages. techniques will be illustrated
+using sample problems drawn from elementary engineering. emphasis on
+introduction of algorithms with the use of specific tools to illustrate the
+methods.
+prereq:&nbsp;math&nbsp;222 and an elementary knowledge of fortran or c or pascal.
+&#160;
+352 digital systems fundamentals 4 cr. (also ece)
+
+logic components, boolean algebra, combinational logic analysis and synthesis,
+synchronous and asynchronous sequential logic analysis and design, digital
+subsystems, computer organization and design.  prereq:&nbsp;cs&nbsp;302 or
+equivalent. not open to students with egr classification.
+&#160;
+354 machine organization and basic systems 4 cr. (also ece)
+
+an introduction to current system structures of control, communication,
+memories, processors and i-o devices.  projects involve detailed study and use
+of a specific small computer hardware and software system.  prereq:&nbsp;cs&nbsp;302 or
+consent of instructor.  open to fr.
+&#160;
+364 introduction to database management systems 3 cr.
+
+design, use, and application of database management systems.  role of a database
+management system as a corporate decision-making tool.  the entity-relationship
+and relational data models for database design.  file structures, data
+independence, integrity, privacy, security, application development, and the
+role of the database administrator.  students use several database management
+systems.  students may not receive credit for both cs&nbsp;364 and&nbsp;564.
+prereq:&nbsp;cs&nbsp;302 or consent of instructor.
+&#160;
+367 introduction to data structures 3 cr.
+
+study of data structures - specification, application and implementation.
+stacks, queues, trees and other important structures.  application to garbage
+collection, dynamic storage allocation, sorting and searching, symbol tables,
+and arithmetic expressions.  emphasis on development and analysis of efficient
+algorithms, including use of structured programming methodology.
+prereq:&nbsp;cs&nbsp;302; pascal or equivalent.
+&#160;
+371 technology of computer-based business systems 3 cr. (also bus)
+
+overview of computers, their attendant technology, and the implications of
+this technology for large-scale, computer-based information systems.  topics
+include hardware, system software, program development, files, and data
+communications.  prereq:&nbsp;bus&nbsp;370 and cs&nbsp;367, or equivalent
+experience with consent of instructor.
+&#160;
+412 introduction to numerical methods 3 cr.
+
+interpolation, solution of linear and nonlinear systems of equations,
+approximate integration and differentiation, numerical solution of ordinary
+differential equations.  prereq:&nbsp;math&nbsp;223,
+cs&nbsp;302, or equivalent and knowledge of matrix algebra. 
+&#160;
+425 introduction to combinatorial optimization 3 cr. (also math &amp; ie)
+
+exact and heuristic methods for key combinatorial optimization problems such
+as: shortest path, maximum flow problems, and the traveling salesman problem.
+techniques include problem-specific methods and general approaches such as
+branch-and-bound, genetic algorithms, simulated annealing, and neural
+networks. prereq:&nbsp;math&nbsp;221 or cs&nbsp;302 or consent of instructor.
+&#160;
+458 computer graphics 3 cr. 
+(also me &amp; ece)
+
+principles of computational geometry and computer graphics and their
+application; homogeneous coordinates, projective geometry, 3-d curve and
+surface representations; data structures and geometric databases, wire-frame
+and solid geometric representations; graphic i/o device characteristics and
+cost considerations.  programming exercises and projects based on
+applications.  prereq:&nbsp;cs&nbsp;302 and math&nbsp;320 or&nbsp;340, or consent of instructor.
+&#160;
+460 artificial intelligence programming languages and tools 3 cr.
+
+symbolic computation; lisp programming; prolog programming; knowledge
+representation languages based on logic, objects, frames, rules; symbolic
+pattern matching; automatic inferencing and reasoning techniques;
+special-purpose languages and computer architectures for artificial
+intelligence applications.  prereq:&nbsp;cs&nbsp;367.
+(infrequently offered.)
+&#160;
+475 introduction to combinatorics 3 cr. (also math&nbsp;&amp; stat)
+
+problems of enumeration, distribution and arrangement.  inclusion-exclusion
+principle.  generating functions and linear recurrence relations.
+combinatorial identities.  graph coloring problems.  finite designs.  systems
+of distinct representatives and matching problems in graphs.  potential
+applications in the social, biological, and physical sciences.  puzzles.
+emphasis on problem solving.  prereq:&nbsp;math&nbsp;320 or 340 and consent of
+instructor.
+&#160;
+509 mathematics for computer science 3 cr.
+
+program correctness and termination, invariants, pre- and post-conditions,
+axiomatic semantics.  representing time and space requirements of programs by
+summations, recurrences, and generating functions.  exact and asymptotic
+solutions.  analysis of algorithms for sorting, searching, and data structure
+traversal.  prereq:&nbsp;cs&nbsp;367 and math&nbsp;222, or consent of instructor.
+(infrequently offered.)
+&#160;
+513 numerical linear algebra 3 cr. (also math)
+
+direct and iterative solution of linear and nonlinear systems and of
+eigenproblems.  lu and symmetric lu factorization.  complexity, stability, and
+conditioning.  nonlinear systems. iterative methods for linear
+systems. qr-factorization and least squares. eigenproblems: local and global
+methods.  prereq:&nbsp;math&nbsp;340 or equivalent; cs&nbsp;302 or equivalent.
+&#160;
+514 numerical analysis 3 cr. (also math)
+
+polynomial forms, divided differences.  polynomial interpolation.  polynomial
+approximation: uniform approximation and chebyshev polynomials, least-squares
+approximation and orthogonal polynomials.  splines, b-splines and spline
+approximation.  numerical differentiation and integration.  numerical methods
+for solving initial and boundary value problems for ordinary differential
+equations.  prereq:&nbsp;math&nbsp;340 or equivalent; cs&nbsp;302 or equivalent.
+&#160;
+520 introduction to theoretical computer science 3 cr.
+
+survey of the basic concepts of theory, including context-free and
+context-sensitive languages, regular sets, finite and pushdown automata,
+turing machines, undecidable problems, complexity with respect to time and
+space, np-completeness, and reducibilities.  prereq:&nbsp;cs&nbsp;367 and math&nbsp;222, or
+consent of instructor.
+&#160;
+525 linear programming methods 3 cr. (also ie, math, &amp; stat)
+
+real linear algebra over polyhedral cones, theorems of the alternative for
+matrices.  formulation of linear programs.  duality theory and solvability.
+the simplex method and related methods for efficient computer solution.
+perturbation and sensitivity analysis.  applications and extensions, such as
+game theory, linear economic models and quadratic programming.  
+prereq:&nbsp;math&nbsp;443 or 320 or 340 or consent of instructor.
+&#160;
+526 advanced linear programming 4 cr. ugrad, 3 cr. grad (also ie)
+
+review of linear programming. polynomial time methods for linear
+programming. quadratic programs and linear complementarity problems and
+related solution techniques. solution sets and their continuity
+properties. error bounds for linear inequalities and programs. parallel
+algorithms for linear and quadratic programs.  prereq:&nbsp;cs&nbsp;525 or equivalent,
+cs&nbsp;302 or equivalent, or consent of instructor.
+(infrequently offered.)
+&#160;
+532 theory and applications of pattern recognition 3 cr. 
+(also ece &amp; me)
+
+pattern recognition systems and components; decision theories and
+classification; discriminant functions; supervised and unsupervised training;
+clustering; feature extraction and dimensional reduction; sequential and
+hierarchical classification; applications of training, feature extraction, and
+decision rules to engineering problems.  prereq:&nbsp;ece 430 or math&nbsp;431 or
+consent of instructor.
+&#160;
+533 image processing 3 cr. 
+(also ece)
+
+mathematical representation of continuous and digital images; models of image
+degradation; picture enhancement, restoration, segmentation, and coding;
+pattern recognition, tomography.  prereq:&nbsp;ece 330 and&nbsp;333 or consent of
+instructor.
+&#160;
+536 introduction to programming languages and compilers4 cr. ugrad, 3 cr. grad.
+
+introduction to the theory and practice of compiler design.  comparison of
+features of several programming languages and their implications for
+implementation techniques.  several programming projects required.  
+prereq:&nbsp;cs&nbsp;367 and either cs&nbsp;354 
+or&nbsp;552.
+&#160;
+537 introduction to operating systems 4 cr. ugrad, 3 cr. grad.
+
+input-output hardware, interrupt handling, properties of magnetic tapes, discs
+and drums, associative memories and virtual address translation techniques.
+batch processing, time sharing and real-time systems, scheduling resource
+allocation, modular software systems, performance measurement and system
+evaluation.  prereq:&nbsp;cs&nbsp;367 and&nbsp;354.
+&#160;
+538 introduction to the theory and design of programming languages 3 cr.
+
+design and theory of programming languages: procedural, object-oriented,
+functional and logic paradigms.  serial and concurrent programming.  execution
+models and formal specification techniques.  prereq:&nbsp;cs&nbsp;354
+and&nbsp;367.
+&#160;
+540 introduction to artificial intelligence 4 cr. ugrad, 3 cr. grad.
+
+principles of knowledge-based search techniques; automatic deduction;
+knowledge representation using predicate logic, semantic networks,
+connectionist networks, frames, rules; applications in problem solving, expert
+systems, game playing, vision, natural language understanding, learning,
+robotics; lisp programming.  prereq:&nbsp;cs&nbsp;367.
+&#160;
+545 natural language and the computer 3 cr.
+
+the course covers basic techniques and tools in natural language processing:
+generative grammars, parsing, dictionary construction, semantic networks,
+generation of text from a knowledge base, natural language interfaces, and
+machine translation.  prereq:&nbsp;cs&nbsp;536 or&nbsp;537
+or&nbsp;564 or consent of instructor.
+&#160;
+547 computer systems modeling fundamentals 3 cr.
+
+an introduction to basic tools and applications for modeling and analysis of
+computer systems.  fundamentals of network flow graphs, graph models of
+computation and stochastic models of computer system performance.  network
+delay analysis and capacity planning, reachability analysis for deadlock
+detection in distributed systems, markov chains, elementary queueing theory,
+basic concepts of queueing network models and associated analyses.  
+prereq:&nbsp;math&nbsp;223, cs&nbsp;367 and&nbsp;354.
+&#160;
+550 computers and society 3 cr. (also social studies)
+
+the effect of scientific and technological change on social and economic
+organization.  historical examples.  comparison, with these examples, of the
+computer and its effect.  consideration of possible uses of computer systems,
+social change which they would influence, and the choices they present.
+prereq:&nbsp;junior standing.
+(infrequently offered.)
+&#160;
+552 introduction to computer architecture 3 cr.
+
+the design of computer systems and components.  processor design, instruction
+set design, and addressing; control structures and microprogramming; memory
+management, caches, and memory hierarchies; interrupts and i/o structures.
+prereq:&nbsp;ece/cs&nbsp;352 and cs/ece&nbsp;354;
+co-req:&nbsp;cs&nbsp;367.
+&#160;
+558 introduction to computational geometry 3 cr. (also me and ie)
+
+introduction to fundamental geometric computations and algorithms, and their
+use for solving engineering and scientific problems.  computer representations
+of simple geometric objects and paradigms for algorithm design.  applications
+from areas of engineering analysis, design and manufacturing, biology,
+statistics, and other sciences.
+prereq:&nbsp;cs&nbsp;367 or equivalent, 
+math 223 or equivalent, or consent of instructor.
+&#160;
+562 expert systems: design and implementation 3 cr.
+
+design of expert knowledge bases: choice of appropriate representation,
+knowledge base structure, connection with databases.  knowledge acquisition:
+possible knowledge sources, logical analysis and formalization, consistency
+and adequate checking.  inference engine construction and tailoring: choice
+and control of inferencing strategies, handling uncertain knowledge, achieving
+efficiency.  display and dialog design.  implementation of explanation
+capabilities.  evaluation of knowledge engineering environments and languages.
+prereq:&nbsp;cs&nbsp;460 or&nbsp;540.
+(infrequently offered.)
+&#160;
+564 database management systems: design and implementation4 cr. ugrad, 3 cr. grad.
+
+what a database management system is; different data models currently used to
+structure the logical view of the database: relational, hierarchical, and
+network.  hands-on experience with relational and network-based database
+systems.  implementation techniques for database systems.  file organization,
+query processing, concurrency control, rollback and recovery, integrity and
+consistency, and view implementation.  prereq:&nbsp;cs&nbsp;367
+and&nbsp;354.
+&#160;
+577 introduction to algorithms 3 cr.
+
+survey of important and useful algorithms for sorting, searching,
+pattern-matching, graph manipulation, geometry, and cryptography.  paradigms
+for algorithm design. techniques for efficient implementation.  prereq:&nbsp;cs&nbsp;367
+and math&nbsp;222, or consent of instructor.
+&#160;
+638 undergraduate topics in computing 3 cr.
+
+prereq:&nbsp;consent of instructor.
+&#160;
+640 introduction to computer networks 3 cr.
+
+architecture and components of computer communications networks; protocol
+concepts and standards; osi reference model; network/protocol architecture
+examples: internet, iso/ccitt, sna, decnet, public data networks;
+local area networks-gateways, internetworking, transport and application
+protocols.  prereq:&nbsp;cs&nbsp;537.
+&#160;&#160;
+681-682 senior honors thesis 3 cr. per sem.
+
+prereq:&nbsp;honors candidacy and consent of instructor.
+&#160;&#160;
+691-692 senior thesis 2-3 cr. per sem.
+
+(a year's course must be taken to get credit.)  prereq:&nbsp;consent of instructor.
+&#160;
+699 directed study 1-6 cr.
+
+prereq:&nbsp;junior or senior standing and consent of instructor.
+&#160;
+701 programming languages and compilers 3 cr.
+
+design and implementation of compilers for modern programming languages.
+emphasis on tools for compiler construction.  prereq:&nbsp;cs&nbsp;536.
+&#160;
+702 compiler construction 3 cr.
+
+techniques for the implementation of compilers for sophisticated programming
+languages.  prereq:&nbsp;cs&nbsp;536; co-req: cs&nbsp;701
+or consent of instructor.  (infrequently offered.)
+&#160;
+703 advanced topics in programming languages and compilers 3 cr.
+
+advanced topics in compiling and programming languages design.  advanced
+parsing techniques; automatic syntactic error correction; local and global
+code optimization; attribute grammars; programming language design issues
+(data and control abstractions, specification and verification of high level
+languages).  prereq:&nbsp;cs&nbsp;701.
+&#160;
+704 principles of programming languages  3 cr.
+
+introduction to principles of advanced programming languages and
+programming-language theory.  topics include: lambda-calculus, functional
+languages, polymorphic functions, type inference, structural induction, lazy
+evaluation, operational semantics, denotational semantics, and axiomatic
+semantics.  prereq:&nbsp;cs&nbsp;536 or consent of instructor.
+&#160;
+709 mathematical techniques for analysis of algorithms 3 cr.
+
+techniques for quantitative analysis of algorithms.  charging arguments,
+amortization, probabilistic methods.  adversary and information lower bounds.
+use of methods from combinatorics, complex analysis, and asymptotics in
+obtaining precise analyses of quicksort, chained hashing, and other
+algorithms.  prereq:&nbsp;cs&nbsp;577, knowledge of complex variables at the level of
+math&nbsp;321.
+(infrequently offered.)
+&#160;
+712 finite difference methods 3 cr.
+
+development of finite difference methods for initial and boundary value
+problems for hyperbolic, parabolic, and elliptic partial differential
+equations.  analysis of accuracy and stability of difference schemes.  direct
+and iterative methods for solving elliptic difference schemes.  applications
+from science and engineering.  prereq:&nbsp;cs&nbsp;302,
+412, math&nbsp;419 or equivalent, or consent of instructor.
+&#160;
+713 numerical analysis of differential equations 3 cr.
+
+analysis of numerical methods for ordinary differential equations.  single
+step and multistep methods.  stiff equations.  introduction to galerkin
+methods; collocation, least squares, etc.  analysis of methods for the
+solution of large sparse systems of boundary value problems. prereq:&nbsp;graduate
+standing and consent of instructor.
+&#160;&#160;
+717(-718) numerical functional analysis 3 cr. per sem. (also math)
+
+fundamentals of normed spaces and linear operators; analysis of nonlinear
+operators; existence of, and iterative methods for, solutions of linear and
+nonlinear operator equations, error estimation; variational theory and
+minimization problems; monotonicity theory.  development of abstract tools and
+application of them to the general analysis of numerical methods for such
+problems as differential and integral equations.
+prereq:&nbsp;cs&nbsp;513, 514 and math&nbsp;223 or consent
+of instructor.  (cs&nbsp;718 is infrequently offered.)
+&#160;
+719 network flows 3 cr. (also ie)
+
+optimization problems and techniques for networks, including single and
+multi-commodity network flow, critical path, and facilities location problems.
+the theory of totally unimodular matrices and its relationship to network
+optimization.  prereq:&nbsp;cs&nbsp;525 or consent of instructor.
+&#160;
+720 integer programming 3 cr. (also ie)
+
+formulation of integer programming problems and the characterization of
+optimization problems representable as integer and mixed-integer programs.
+the degree of difficulty of classes of integer programs and its relation to
+the structure of their feasible sets.  optimality conditions.
+branch-and-bound, cutting plane, and decomposition methods for obtaining
+solutions or approximating solutions. prereq:&nbsp;cs&nbsp;525 or consent of instructor.
+&#160;
+723 dynamic programming and associated topics 3 cr. (also ie)
+
+a generalized optimization model; discrete and continuous state spaces;
+deterministic and stochastic transition functions.  multistage decision
+processes.  functional equations and successive approximation in function and
+policy spaces.  relationship to linear programming and acyclic networks.
+markovian decision processes.  solution methods and computational problems.
+associated topics and applications such as calculus of variations; feedback
+control processes; and optimal trajectories, inventory and maintenance
+policies, and stopping rules.  prereq:&nbsp;cs&nbsp;525 or ie&nbsp;623;
+math&nbsp;521 or cs&nbsp;726; math&nbsp;431 and computer programming, or
+consent of instructor.  (infrequently offered.)
+&#160;
+726 nonlinear programming theory and applications 3 cr. (also ie &amp; stat)
+
+separation theorems and other properties of convex sets in finite-dimensional
+spaces.  formulation of nonlinear programming problems.  saddle-point
+(lagrangian) optimality criteria for convex nonlinear programs.  duality
+theorems for convex programs.  first, and second-order kuhn-tucker
+stationary-point theory for differentiable non-convex programs.  perturbation
+and sensitivity analysis.  applications and extensions.  prereq:&nbsp;familiarity
+with basic mathematical analysis (e.g., math&nbsp;521) and either math.&nbsp;443 or&nbsp;320,
+or consent of instructor.
+&#160;
+727 advanced nonlinear programming 3 cr. (also ie)
+
+conjugate convex functions and fenchel-rockafellar duality. monotone operators
+and subdifferentials. advanced methods for nonconvex problems, such as
+variational principles, generalized gradients, degree and index arguments, and
+multivalued ordinary differential equations. applications to economics and
+operations research.  prereq:&nbsp;cs&nbsp;726 or consent of instructor.
+&#160;
+730 nonlinear programming algorithms 3 cr. (also ie)
+
+rigorous description, and convergence proofs of various nonlinear programming
+algorithms.  emphasis on algorithms that are important, can be proved to
+converge and are practical.  unification of classes of algorithms and
+convergence rates.  each student will code and test one of the algorithms
+described in the course.  prereq:&nbsp;consent of instructor.
+&#160;
+731 advanced artificial intelligence 3 cr.
+
+learning and hypothesis formation; knowledge acquisition; deductive and
+inductive inference systems; reasoning techniques involving time, nonmonotonic
+reasoning, spatial reasoning, truth maintenance systems; planning strategies.
+prereq:&nbsp;cs&nbsp;540.
+(infrequently offered.)
+&#160;
+732 topics in artificial intelligence 3 cr.
+
+advanced topics in artificial intelligence.  a variable content course which
+may be repeated any number of times for credit.  prereq:&nbsp;consent of
+instructor.
+(infrequently offered.)
+&#160;
+733 computational methods for large sparse systems 3 cr. (also math &amp; ece)
+
+sparse matrices in engineering and science.  sparsity preservation. numerical
+error control.  transversal algorithms, tarjan's algorithm, tinney's
+algorithms, minimum degree, banding, nested dissection, frontal methods.
+linear and nonlinear equation solving.  compensation. sparse vector methods.
+iterative methods. ode and pde applications.  prereq:&nbsp;cs&nbsp;367
+and&nbsp;412, or consent of instructor.
+&#160;
+736 advanced operating systems 3 cr.
+
+advanced topics in operating systems, including process communication,
+resource allocation, multiprocess and network operating systems, kernel
+philosophies, fault-tolerant systems, virtual machines, high-level language
+systems, verifiability and proof techniques.  prereq:&nbsp;cs&nbsp;537 or consent of
+instructor.
+&#160;
+737 computer system performance evaluation and modeling 3 cr.
+
+statistical techniques of computer system performance evaluation and
+measurement.  system selection and tuning strategies.  deterministic and
+probabilistic models of process scheduling and resource allocation.  analytic
+and simulation models of computer systems.  systematic study of system
+architectures. prereq:&nbsp;math&nbsp;222, cs&nbsp;537
+or&nbsp;736, or consent of instructor.
+&#160;
+739 distributed systems 3 cr.
+
+basic concepts, distributed programming; distributed file systems; atomic
+actions; fault tolerance, transactions, program &amp; data replication, recovery;
+distributed machine architectures; security and authentication; load balancing
+and process migration; distributed debugging; distributed performance
+measurement; distributed simulation techniques; distributed applications;
+correctness considerations and proof systems.  prereq:&nbsp;cs&nbsp;736 or consent of
+instructor. (infrequently offered.)
+&#160;
+740 advanced computer networks 3 cr.
+
+advanced topics in computer communications networks: congestion and flow
+control; routing; rate-based protocols; high-speed interfaces and
+technologies; metropolitan area networks; fast packet switching technologies;
+advanced applications; network services: name service, authentication,
+resource location. prereq:&nbsp;cs&nbsp;640.
+&#160;
+747 advanced computer systems analysis techniques 3 cr.
+
+advanced analytical modeling techniques for performance analysis of computer
+systems, including discrete-parameter (embedded) markov chains, m/g/1 queues,
+stochastic petri nets, queueing networks, renewal theory, and sample path
+analysis.  application areas include high performance computer architectures,
+databases, and operating system resource allocation policies.  prereq:&nbsp;cs&nbsp;547
+or consent of instructor.
+&#160;
+750 real-time computing systems 3cr. (also ece)
+
+introduction to the unique issues in the design and analysis of computer
+systems for real-time applications.  hardware and software support for
+guaranteeing timeliness with and without failures.  resource management,
+time-constrained communication, scheduling and imprecise computations,
+real-time kernels and case studies. prereq:&nbsp;cs&nbsp;552
+and&nbsp;537 or consent of instructor.
+&#160;
+752 advanced computer architecture 3 cr. (also ece)
+
+advanced techniques of computer design.  parallel processing and pipelining;
+multiprocessors, multi-computers and networks; high performance machines and
+special purpose processors; data flow architecture.  prereq:&nbsp;ece/cs&nbsp;552 and
+cs&nbsp;537.
+&#160;
+755 vlsi systems design 3 cr. (also ece)
+
+overview of mos devices and circuits; introduction to integrated circuit
+fabrication; topological design of data flow and control; interactive graphics
+layout; circuit simulation; system timing; organizational and architectural
+considerations; alternative implementation approaches; design project.
+prereq:&nbsp;ece&nbsp;340, ece/cs&nbsp;352, and cs/ece&nbsp;552
+or consent of instructor.
+&#160;
+756 computer-aided design for vlsi 3 cr. (also ece)
+
+broad introduction to computer-aided design tools for vlsi, emphasizing
+implementation algorithms and data structures.  topics covered: design styles,
+layout editors, symbolic compaction, module generators, placement and routing,
+automatic synthesis, design-rule checking, circuit extraction, simulation and
+verification.  prereq:&nbsp;cs&nbsp;367, good programming skills,
+cs&nbsp;352; cs&nbsp;755 strongly recommended.
+(infrequently offered.)
+&#160;
+757 advanced computer architecture 3 cr. (also ece)
+
+parallel algorithms, principles of parallelism detection and vectorizing
+compilers, interconnection networks, simd/mimd machines, processor
+synchronization, data coherence, multis, dataflow machines, special purpose
+processors.  prereq:&nbsp;cs&nbsp;752 or consent of instructor.
+&#160;
+760 machine learning 3 cr.
+
+computational approaches to learning: including inductive inference,
+explanation-based learning, analogical learning, connectionism, and formal
+models.  what it means to learn.  algorithms for learning.  comparison and
+evaluation of learning algorithms.  cognitive modeling and relevant
+psychological results. prereq:&nbsp;cs&nbsp;540.
+&#160;
+761 deduction and problem solving by computer 3 cr.
+
+study and evaluation of programs that use automated deduction to solve
+problems.  variants of prolog, such as constraint logic programming, parallel
+prologs, and deductive database systems.  resolution theorem provers.
+verification systems, such as the boyer-moore prover.
+prereq:&nbsp;cs&nbsp;540.
+&#160;
+762 deduction and problem solving by computer 3 cr.
+
+critical study and evaluation of programs and of man-computer interactive
+systems that play games such as chess, bridge, and go; solve problems and
+puzzles; and prove theorems in various mathematical domains.  different kinds
+of languages, including natural language, usable for problem formulation and
+for solution planning and testing.  prereq:&nbsp;cs&nbsp;540 or consent
+of instructor.  (infrequently offered.)
+&#160;
+764 topics in database management systems 3 cr.
+
+implementation of database management systems, the impact of new technology on
+database management systems, back-end database computers, distributed database
+management systems, concurrency control and query execution in both
+distributed and centralized systems, implementation of multiple user views,
+roll-back and recovery mechanisms, database translation.
+prereq:&nbsp;cs&nbsp;564, 537,
+and&nbsp;536 or consent of instructor.
+&#160;
+765 perceptual recognition 3 cr.
+
+high-level perceptual processing by computer; recognition of complex objects
+and scenes; advanced computer vision systems; relation to the living visual
+system; algorithm-structured multi-computer architectures for perception;
+binocular and multi-modal vision; recognition and tracking of moving objects;
+learning in perceptual systems; perceptual-motor control of robots.  
+prereq:&nbsp;cs&nbsp;731 or consent of instructor.
+(infrequently offered.)
+&#160;
+766 computer vision 3 cr.
+
+fundamentals of image analysis and computer vision; image acquisition and
+geometry; image enhancement; recovery of physical scene characteristics;
+shape-from techniques; segmentation and perceptual organization;
+representation and description of two-dimensional and three-dimensional
+objects; shape analysis; texture analysis; goal-directed and model-based
+systems; parallel algorithms and special-purpose architectures.  
+prereq:&nbsp;cs&nbsp;540.
+&#160;
+767 graph theory 3 cr.
+
+theory of graphs, including adjacency and incidence matrices, planarity,
+hamiltonian circuits, euler's formula, directed graphs, and trees.  the
+efficiency of the known algorithms for performing various operations on
+graphs.  prereq:&nbsp;cs&nbsp;367 and either cs&nbsp;475 
+or&nbsp;577, or consent of instructor.  (infrequently offered.)
+&#160;
+771 computational linguistics 3 cr. (also ling)
+
+tools, techniques and literature of computational linguistics with
+applications in artificial intelligence and cognitive science.  topics include
+syntactic and semantic parsing, natural language understanding, text
+generation, machine translation, and speech recognition and production.
+prereq:&nbsp;cs&nbsp;540 or&nbsp;545 or linguistics&nbsp;530 or
+consent of instructor.
+&#160;&#160;
+773-774 problems in computational linguistics 3 cr. per sem. (also ling)
+
+current research in computational linguistics, coupled with original directed
+research.  prereq:&nbsp;cs&nbsp;545 or&nbsp;771 or consent
+of instructor.  (infrequently offered.)
+&#160;
+780 robot motion planning 3 cr. 
+(also ece &amp; me)
+
+a unified view on geometric, algorithmic, and computational
+issues of automatic motion planning of motion for mobile robots
+and arm manipulators in a complex environment. planning with
+complete information - configuration space, connectivity graphs,
+computational complexity; with partial information - algorithm
+convergence, topological issues. effect of system kinematics.
+relation between sensing media and algorithm efficiency.
+prereq:&nbsp;math&nbsp;340 or equivalent and consent of instructor.
+&#160;
+784 data models and languages 3 cr.
+
+study of database programming languages. topics include: logic based
+languages, embedded query languages, object-oriented languages.  there will be
+coverage of types, persistence, inheritance, object identity, data models,
+implementation issues, and case studies of actual systems and
+languages. prereq:&nbsp;cs&nbsp;564 and&nbsp;536 or consent
+of instructor.
+&#160;
+787 advanced algorithms and data structures 3 cr.
+
+algorithms for graph manipulation, geometry, matrix multiplication, string
+processing, information retrieval, etc.  mathematical models and analyses.
+lower bounds.  probabilistic, distributed, and parallel algorithms.  advanced
+data structures.  prereq:&nbsp;cs&nbsp;577 or&nbsp;509.
+&#160;
+790 master's thesis 1-9 cr.
+
+for students writing a master's thesis or project.
+prereq:&nbsp;master's candidate.
+&#160;
+799 master's research 1-9 cr.
+
+for pre-master's students doing research projects.
+prereq:&nbsp;master's candidate.
+&#160;
+810 models and formalisms for computation 3 cr.
+
+models of computation, turing machines, recursive functions, church's thesis,
+undecidable problems, degrees of unsolvability.  denotational semantics, logic
+of programs.  applications to automata, formal languages, program
+verification, programming languages, and complexity.  prereq:&nbsp;cs&nbsp;520.
+&#160;
+812 arithmetic algorithms 3 cr.
+
+design, implementation, and analysis of algorithms for exact arithmetic on
+arbitrarily large integers, gaussian integers and rational numbers.
+algorithms for modular arithmetic and internal arithmetic.  algorithms for
+integer greatest common divisor calculation and factorization.  classical and
+modern algorithms. prereq:&nbsp;math&nbsp;541 and cs&nbsp;367, 
+or consent of instructor.
+(infrequently offered.)
+&#160;&#160;
+813-814 algebraic algorithms 3 cr. per sem. (also math)
+
+algorithms for arithmetic operations on multivariate polynomials with
+integral, rational and finite field coefficients.  polynomials remainder
+sequences and subresultants.  algorithms for multivariate polynomial resultant
+and greatest common divisor calculation.  arithmetic operations on
+multivariate rational functions.  algorithms for exact linear algebra of
+systems with polynomial coefficients.  exact calculation of the real and
+complex zeros of polynomials.  algorithms for factorization of polynomials
+into irreducibles.  calculations with real algebraic numbers.  quantifier
+elimination for real closed fields.  operations on formal power series.
+prereq:&nbsp;cs&nbsp;812 and math&nbsp;541-542, or consent of instructor.
+(infrequently offered.)
+&#160;
+815 transcendental function algorithms 3 cr. (also math)
+
+formalism for function class representations; canonical and normal forms;
+diophantine sets and relation to recursively enumerable sets; richardson's
+theorem; lindemann theorems; canonical and normal form algorithms; fundamental
+operations on polynomials and rational functions with gaussian integer
+coefficients; fundamental operations on various subclasses of the elementary
+transcendental functions; indefinite integration of rational functions;
+differential fields; liouville integration theory; risch integration
+algorithm. prereq:&nbsp;cs&nbsp;814 or consent of instructor.
+(infrequently offered.)
+&#160;
+820 theory of automata and formal languages 3 cr.
+
+advanced treatment of results concerning finite automata, regular sets,
+context-free and context-sensitive languages, turing machines.  extensions of
+the models to multi-head, multi-tape, and probabilistic machines.  comparison
+of models.  applications to programming language design.  prereq:&nbsp;cs&nbsp;520.
+&#160;
+830 abstract and concrete complexity theory 3 cr.
+
+study of computation with limited resources (time, space, etc.).  complexity
+hierarchies, structure of p, np, pspace, co-np.  strong np-completeness,
+isomorphism completeness, relativized complexity.  abstract complexity,
+probabilistic complexity.  lower bounds, time-space tradeoffs, pebbling,
+alternation. prereq:&nbsp;cs&nbsp;520.
+(infrequently offered.)
+&#160;
+837 topics in numerical analysis 3 cr. (also math)
+
+topic selected from advanced areas.  a variable content course which may be
+repeated any number of times for credit.  prereq:&nbsp;consent of instructor.
+(infrequently offered.)
+&#160;
+838 topics in computing 3 cr.
+
+topics selected from advanced areas.  a variable content course which may be
+repeated any number of times for credit.  prereq:&nbsp;consent of instructor.
+(infrequently offered.)
+&#160;
+880 topics in theoretical computer science 3 cr.
+
+advanced topics in algorithms, complexity, and models of computation,
+discussed in a seminar format.  the exact topic varies.  prereq:&nbsp;consent of
+instructor.
+(infrequently offered.)
+&#160;&#160;
+881-882 numerical methods for ordinary differential equations3 cr. per sem. (also math)
+
+initial-value problems and boundary value problems for systems of nonlinear
+ordinary differential equations; convergence and stability of computational
+procedures; some topics chosen from the design of general computer programs,
+variational problems.  prereq:&nbsp;cs&nbsp;514 and math&nbsp;417, or consent of instructor.
+(infrequently offered.)
+&#160;&#160;
+883-884 numerical methods for partial differential equations3 cr. per sem. (also math)
+
+initial-value problems for systems of partial differential equations; boundary
+value problems, stability and convergence; iterative methods; applications to
+the classical problems of mathematical
+physics. prereq:&nbsp;cs&nbsp;712 and&nbsp;717, or consent
+of instructor.  (infrequently offered.)
+&#160;
+885 matrix theory in numerical analysis 3 cr. (also math)
+
+methods for determining exclusion and inclusion regions for the eigenvalues of
+an nxn matrix.  variational methods for eigenvalues.  the qr and lr
+algorithms.  the perron-frobenius theory of positive matrices.  error analysis
+of numerical methods for computations in linear algebra.  prereq:&nbsp;cs&nbsp;717 or
+consent of instructor.
+(infrequently offered.)
+&#160;
+887 approximation theory 3 cr. (also math)
+
+interpolation and approximation by means of interpolation; uniform
+approximation; best approximation; approximation in normed linear spaces;
+spline functions; orthogonal polynomials; degree of approximation;
+computational procedures.  prereq:&nbsp;consent of instructor.
+&#160;
+899 pre-dissertator research 1-9 cr.
+
+prereq:&nbsp;post-master's, pre-dissertator status.
+&#160;
+990 dissertation 1-6 cr.
+
+prereq:&nbsp;dissertator status.
+&#160;
+999 independent study and research 1-6 cr.
+
+prereq:&nbsp;dissertator status.
+
+non-credit seminars
+
+the nine research areas in the department each run an advanced, non-credit
+seminar where graduate students, visitors, and faculty members from within and
+outside the department present their latest research or discuss recently
+published papers.  these seminars give graduate students the opportunity to
+learn about current research problems and to get valuable feedback on their
+own research.
+
+also, each fall the department runs a distinguished lecturer series where 6-8
+leading researchers in a subfield of computer science visit.
+the visitors give two lectures - one to a general computer science audience
+and a second, more specialized, talk targeted toward researchers in the given
+subfield. recent topics have been programming languages, computing theory,
+operating systems, and machine learning.
+
+ 
+
+this page was automatically created.  send comments to ferris@cs.wisc.edu
+
+
+
+
+computer sciences courses
+computer sciences courses
+computer sciences courses
+computer sciences courses
+computer sciences courses
+computer sciences courses
+computer sciences courses
+computer sciences courses
+computer sciences courses
+computer sciences courses

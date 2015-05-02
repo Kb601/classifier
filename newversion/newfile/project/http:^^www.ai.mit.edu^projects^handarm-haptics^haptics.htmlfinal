@@ -1,0 +1,99 @@
+haptics
+
+
+
+
+haptics
+
+
+
+the haptics group at the mit
+artificial intelligence lab conducts research in a wide variety of
+topics related to touch perception and feedback including the development
+of devices to effect haptic stimulation and software to render the sensations
+of touch.  the group is headed
+by dr. kenneth
+salisbury.
+another group headed up by ken is the
+vision
+and touch guided manipulation group. 
+
+the people in the haptics group are: 
+
+
+   brian anthony
+   donald green
+   craig latimer
+   akhil madhani 
+   thomas massie
+   derek schulte
+   nick swarup (graduated)
+   chris tarr
+   criag zilles (graduated)
+
+
+
+
+one of our first developments was the phantom haptic interface (distributed by
+sensable devices, inc.): 
+
+touching is believing
+
+
+
+
+
+the phantom represents a new generation of computer input devices. more than
+just another passive, 3d mouse, the phantom allows users to actually feel
+virtual objects. unlike buzzing tactile stimulators, the phantom actively
+exerts an external force on the user's finger tip - creating the illusion of
+interactions with solid virtual objects. smoothe spheres, flat walls, sharp
+corners, and even texture can be convincingly conveyed to the human haptic
+sytem using the device. this is not a bulky exoskelatal device - one simply
+inserts his or her finger tip into the phantom and interacts with the virtual
+environment. 
+
+
+
+high fidelity
+
+the phantom contains 3 motors which control the x, y, and z forces exerted on
+the user's finger tip. mounted on each motor is an optical encoder to
+determine the x, y, and z position of the user's finger tip. the torque from
+the motors is transmitted through a proprietary cable transmission to a stiff,
+light-weight linkage. at the end of this linkage is a passive, 3 degree of
+freedom gimbal attached to a thimble. the passive gimbal allows the thimble to
+rotate so that a user's finger tip may assume any comfortable orientation. the
+user's finger tip can then be modelled as a point or frictionless sphere
+within the virtual world. the device has low friction, low inertia, and no
+unbalanced weight so movements through free virtual space are unimpeded. 
+
+
+
+versatility
+
+the phantom is best described as a universal force-reflecting interface. in
+fact, a stylus can be substituted for the thimble. a user can then manipulate
+the stylus to control the tip of a virtual pencil or paint brush. users can
+actually feel the tip of the stylus touch virtual surfaces. the phantom can be
+used as a high precision force-reflecting master for teleoperation or as a 3
+dof input device for cad. artists can mold clay within the computer and
+surgeons can practice procedures on virtual patients.
+
+
+
+special-effects@ai.mit.edu
+
+
+ 
+
+haptics
+haptics
+haptics
+haptics
+haptics
+haptics
+haptics
+haptics
+haptics
+haptics

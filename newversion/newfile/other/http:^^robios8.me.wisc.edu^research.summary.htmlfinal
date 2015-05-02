@@ -1,0 +1,58 @@
+uw-madison robotics lab research summary
+
+
+ uw-madison robotics lab research summary 
+
+
+our research activities lie at the intersection of intelligence and motion. 
+we are interested in analysis and design of systems, both in humans and in 
+machines, that lie behind one of the most complex behavioral functions found 
+in nature - sensing-based motion planning. how does one combine sensing, 
+spatial reasoning, prior experience, and the sense of goal to produce 
+purposeful motion in a complex, uncertain, and time-changing environment? 
+by its nature, this is multi-disciplinary research: members of the lab include
+researchers from engineering, computer science, mathematics, psychology.
+
+in the area of robotics, our projects cover mobile robots, manipulators, 
+and human-guided teleoperated systems; different types of sensing, from a 
+simple sonar to vision to whole-body sensing; various kinematic systems 
+including highly redundant structures like snakes and multi-finger wrists; 
+static and dynamic systems. in the cognitive science area, we study human 
+skills in motion planning, with the purpose of developing (a) hybrid 
+machinery in which human and machine intelligences are utilized together 
+in a synergistic manner, and (b) virtual human-centered interactive 
+computer systems.
+
+our research can be divided into three groups: 
+
+   theory and algorithms; 
+   graphics simulation/animation; 
+   experimental work. 
+
+our theoretical tools come from geometry, topology, and control theory. we 
+have shown that, in spite of the formidable complexity and uncertainties of 
+the robot environment, even simple sensory feedback is often sufficient to 
+guarantee purposeful collision-free motion. our computer graphics projects 
+concentrate on visualization and animation of motion. our experimental work, 
+which is carried out both here at uw and with industry, focuses on hardware 
+prototypes of sensor-based motion planning systems. one example here is our
+whole-sensitive arm manipulator project: the system's strong capacity for
+spatial reasoning (often exceeding that of humans) is made possible by 
+sensitive skin that includes many hundreds of proximity sensors and
+covers the arm's whole body, similar to human skin.
+
+the gist of our research is perhaps best expressed in a project where a 
+professional ballerina dances with a robot arm manipulator. it is a naturally 
+symmetric act - one partner can turn her/his/its back to the other and expect 
+a friendly half-learned, half-improvized motion. they can count on each other.
+
+uw-madison robotics lab research summary
+uw-madison robotics lab research summary
+uw-madison robotics lab research summary
+uw-madison robotics lab research summary
+uw-madison robotics lab research summary
+uw-madison robotics lab research summary
+uw-madison robotics lab research summary
+uw-madison robotics lab research summary
+uw-madison robotics lab research summary
+uw-madison robotics lab research summary

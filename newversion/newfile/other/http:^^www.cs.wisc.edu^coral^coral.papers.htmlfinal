@@ -1,0 +1,209 @@
+coral database project - papers
+
+
+
+publications related to the coral project 
+
+
+contents:
+
+
+ the coral language, implementation and features 
+ optimization techniques used in coral 
+ survey papers 
+ coral applications 
+ miscellaneous 
+
+
+all files are less than 300 kb in size except as noted.
+
+
+
+descriptions of the coral language, implementation
+     and features
+
+ the coral deductive system 
+
+raghu ramakrishnan, divesh srivastava, s. sudarshan and praveen seshadri,
+the vldb journal, special issue on prototypes of deductive database systems.
+
+ available here.  (775 kb)
+
+
+ coral++: adding object-orientation to a logic database language 
+
+raghu ramakrishnan, divesh srivastava, s. sudarshan and praveen seshadri,
+proceedings of the international conference on very large databases, 1993.
+
+ available here.  (525 kb)
+
+
+ implementation of the coral deductive database system 
+
+raghu ramakrishnan, divesh srivastava, s. sudarshan and praveen seshadri,
+proceedings of the acm sigmod conference on management of data, 1993.
+
+ available here. 
+
+
+ the coral user manual - a tutorial introduction to coral 
+
+raghu ramakrishnan, praveen seshadri, divesh srivastava and s. sudarshan,
+unpublished.
+
+ available here.  (1100 kb)
+
+
+ coral - control, relations and logic 
+
+raghu ramakrishnan, divesh srivastava and s. sudarshan,
+proceedings of the international conference on very large databases, 1992.
+
+ available here. 
+
+
+ coral - a database programming language 
+
+raghu ramakrishnan, per bothner, divesh srivastava and s. sudarshan,
+proceedings of the naclp `90 workshop on deductive databases, 1990.
+
+ available as report tr-cs-90-14,  department of computing and. and
+information sciences, kansas state university. (350 kb) 
+
+
+
+optimization techniques used in coral
+
+
+ magic templates: a spellbinding approach to logic programs 
+
+r. ramakrishnan,
+journal of logic programming, vol. 11, no. 3, oct. 1991, pp. 189-216.
+
+ available here. 
+
+
+ on the power of magic 
+
+c. beeri and r. ramakrishnan,
+journal of logic programming, vol. 10, no. 3, april 1991, pp. 255-300.
+
+ available here.  (360 kb)
+
+
+ rule ordering in bottom-up fixpoint evaluation of logic programs 
+
+raghu ramakrishnan, divesh srivastava and s. sudarshan,
+ieee transactions on knowledge and data engineering, 1994.
+
+ available here.  (880 kb)
+
+
+ optimizations of bottom-up evaluation with non-ground terms 
+
+s. sudarshan and raghu ramakrishnan,
+proceedings of the international logic programming symposium, 1993.
+
+ available here. 
+
+
+ controlling the search in bottom-up evaluation 
+
+raghu ramakrishnan, divesh srivastava and s. sudarshan,
+proceedings of the joint international conference and symposium on
+logic programming, 1992
+
+ available here. 
+
+
+ aggregation and relevance in deductive databases 
+
+s. sudarshan and raghu ramakrishnan,
+proceedings of the international conference on very large databases, 1991.
+
+ available here. 
+
+
+ top-down vs. bottom-up revisited 
+
+raghu ramakrishnan and s. sudarshan,
+proceedings of the international logic programming symposium, 1991.
+
+ available here. 
+
+
+
+survey papers
+
+
+ efficient bottom-up evaluation of logic programs 
+
+raghu ramakrishnan, divesh srivastava and s. sudarshan,
+the state of the art in computer systems and software engineering, 1992.
+
+ available here.  (310kb)
+
+
+
+coral applications
+
+
+ explaining program execution in deductive systems 
+
+tarun arora, raghu ramakrishnan, william g. roth, praveen seshadri
+     and divesh srivastava,
+proceedings of the third international conference on deductive
+     and object-oriented databases, 1993.
+
+ available here.  (520 kb)
+
+
+ mimsy: a system for analyzing time series data in the
+     stock market domain 
+
+william g. roth, raghu ramakrishnan and praveen seshadri,
+proceedings of the ilps `93 workshop on applications of deductive systems, 1993.
+
+ available as report tr-cs-1182,.  department of computer sciences,
+university of wisconsin, madison. (360 kb)
+
+
+ mimsy: a system for analyzing time series data in the
+     stock market domain 
+
+william g. roth,
+m.s. thesis, 1993.
+
+ available here.  (1490 kb)
+
+
+
+miscellaneous
+
+
+ parallelism in logic programs 
+
+raghu ramakrishnan,
+annals of mathematics and artifical intelligence, special issue on
+    deductive databases. 
+
+ available here.  (560 kb)
+
+
+
+
+return to the  coral home page. 
+
+
+
+
+coral database project - papers
+coral database project - papers
+coral database project - papers
+coral database project - papers
+coral database project - papers
+coral database project - papers
+coral database project - papers
+coral database project - papers
+coral database project - papers
+coral database project - papers

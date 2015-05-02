@@ -1,0 +1,50 @@
+cse 321 assignment #5
+
+
+cse 321 assignment #5autumn 1996
+due: friday, november 1, 1996.
+
+
+
+
+reading assignment: read handout on induction proofs for recursively defined
+sets and sections 4.1-4.4 of the text.
+the following problems are from the third edition of the text.
+ 
+
+practice problems: page 210, problem 31;
+ problems: 
+
+ page 209, problem 4.
+ page 209, problem 10.
+ give a recursive definition of the set of strings over alphabet
+a={a,b} that have an even number of a's.  (you don't need to prove that it is
+correct.)
+ define a set of strings s by:
+ 
+ 1 is in s
+ if x is in s and y is in s then the string x0y is in s
+ (and no other strings are in s)
+
+give a recursive proof that every string in s has exactly one more 1 than it
+has 0's.
+ page 241, problems 8, 12, and 20
+ page 242, problem 42.  (a restriction to 8 character variable names 
+is one reason why the names of all those unix commands are so obscure.)
+ (bonus) page 242, problem 48.  (they just mean one column of the
+truth table.)
+ (bonus) page 249, problem 20.  
+
+
+
+
+cse 321 assignment #5
+cse 321 assignment #5
+cse 321 assignment #5
+cse 321 assignment #5
+cse 321 assignment #5
+cse 321 assignment #5
+cse 321 assignment #5
+cse 321 assignment #5
+cse 321 assignment #5
+cse 321 assignment #5

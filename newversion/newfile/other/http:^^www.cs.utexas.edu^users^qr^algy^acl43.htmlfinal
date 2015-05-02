@@ -1,0 +1,79 @@
+running allegro cl v4.3
+
+
+
+ how to load and run allegro common lisp (v4.3)
+
+these instructions pertain to the installation at the university
+of texas but, except for the file paths, should also be applicable
+to other installations.
+
+
+
+
+setup
+allegro common lisp v4.3 is available on both the ibm machines running
+aix and the sun machines running solaris.  the setup for both machines
+is exactly the same.
+
+if you want to run lisp from the unix shell, type acl.
+the binary is in the directory /lusr/bin.
+
+however, the best way to run lisp is as a subprocess of emacs.
+to do this you need to make some changes to your ".emacs"
+file and to your lisp initialization file, ".clinit.cl".
+
+setting up your unix environment
+
+put /lusr/bin in your path variable.
+
+setting up the ".emacs" file
+add the following lines to the file (by the way, "fi" stands for
+"franz incorporated"):
+
+
+(setq load-path (cons "/lusr/lib/franz/acl4.3/home/emacs/fi" load-path))
+(autoload 'fi:common-lisp "fi-site-init" "" t)
+(setq fi:common-lisp-image-name "acl")
+
+
+setting up the ".clinit.cl" file
+at the end of the file, place the line:
+
+
+(start-emacs-lisp-interface)
+
+
+the documentation claims that the emacs-lisp interface starts automatically, but i
+find that it doesn't.
+
+starting lisp
+do the command:  m-x fi:common-lisp
+
+
+
+
+running allegro common lisp
+the acl shell accepts a set of commands.  for example, :ld  loads
+a file.
+here is a list of acl commands.  also,
+the allegro emacs-lisp interface defines a set of emacs commands to manipulate
+files and program components.  type ctrl-h m in a lisp mode buffer
+to list the available commands.
+
+[algernon home]
+
+
+this page was created by
+micheal hewett
+
+running allegro cl v4.3
+running allegro cl v4.3
+running allegro cl v4.3
+running allegro cl v4.3
+running allegro cl v4.3
+running allegro cl v4.3
+running allegro cl v4.3
+running allegro cl v4.3
+running allegro cl v4.3
+running allegro cl v4.3

@@ -1,0 +1,1809 @@
+cse 421 bboard/mail log
+
+
+
+
+cse 421 formal models
+    bboard/mail log
+
+    winter 1996
+
+
+this page contains a log of all email sent to the cse421 class
+mailing list cse421@cs.  we will use this list for
+announcements of general interest to the class.  students should
+also feel free to use it to ask questions, post information, or
+initiate discussions  of general interest to the class.  of course,
+questions or comments that don't seem of general interest can be
+directed to the ta (aberman@cs) or instructors
+(ruzzo@cs or tompa@cs), instead.  
+  
+following usual internet conventions, administrative requests
+concerning the mailing list itself, such as add/delete/address
+change requests, should be addressed to cse421-request@cs.
+
+index of messages
+(latest message friday, 15-mar-96 14:49:40 pst.)
+
+
+ 5 jan 96 ruzzo@cs ______ cse421 mailing list
+ 8 jan 96 eallen@cs _____ study group
+ 8 jan 96 eallen@cs _____ re: study group
+ 8 jan 96 ruzzo@cs ______ homework #1 bugs &amp; clarifications.
+ 8 jan 96 yihchun@u _____ re: homework #1 bugs &amp; clarifications.
+ 9 jan 96 tompa@cs ______ hw1, problem 3
+ 9 jan 96 tompa@cs ______ re: hw1, problem 3
+12 jan 96 ruzzo@cs ______ hw#2
+12 jan 96 aberman@cs ____ ta office hours
+12 jan 96 aberman@cs ____ office hours conflict/change
+18 jan 96 joeh@cs _______ 421 book
+20 jan 96 ruzzo@cs ______ sorting animations
+22 jan 96 ruzzo@cs ______ re: hw questions...
+22 jan 96 ruzzo@cs ______ reading assignment
+22 jan 96 tompa@cs ______ further reading
+23 jan 96 ruzzo@cs ______ problem 8.4-4
+23 jan 96 tompa@cs ______ proofs of correctness
+24 jan 96 aberman@hobbes  proof tips
+24 jan 96 ruzzo@cs ______ expected time for insertion sort
+25 jan 96 ruzzo@cs ______ re: (cse421) problems using induction to
+25 jan 96 tompa@cs ______ re: (cse421) problems using induction to
+29 jan 96 tompa@cs ______ cse 421 lecture cancelled today
+31 jan 96 tompa@cs ______ more on the (in)efficiency of the select
+ 1 feb 96 eallen@cs _____ problem 5
+ 1 feb 96 michael@u _____ tutors for 421?
+ 1 feb 96 wbarrett@cs ___ so how bad is it, really?
+ 2 feb 96 tompa@cs ______ hw4, problem 2
+ 2 feb 96 tompa@cs ______ elephant humor
+ 2 feb 96 tompa@cs ______ hw4, problem 5
+ 4 feb 96 claym@wolf ____ does problem 3 suck or am i just dense?
+ 4 feb 96 tompa@cs ______ hw4, problem 3
+ 7 feb 96 ruzzo@cs ______ wednesday office hour canceled
+ 8 feb 96 tompa@cs ______ hw5, problem 2(a)
+ 8 feb 96 aberman@cs ____ average homework grades
+ 9 feb 96 ruzzo@cs ______ office hours
+ 9 feb 96 tompa@cs ______ cocke, kasami, younger algorithm
+ 9 feb 96 ogan@cs _______  mailing list
+11 feb 96 dgodon@u ______ re: cocke, kasami, younger algorithm
+12 feb 96 tompa@cs ______ hw5, problem 3a
+12 feb 96 tompa@cs ______ next reading assignment
+12 feb 96 aberman@hobbes  average for hw#4
+14 feb 96 aberman@cs ____ mistake in homework grading
+19 feb 96 tompa@cs ______ hw6 on the web
+22 feb 96 aberman@hobbes  office hours *cancelled* this monday and
+22 feb 96 tompa@cs ______ hw6, #2 (warning: this message contains 
+25 feb 96 eallen@cs _____ last problem
+25 feb 96 ruzzo@cs ______ re: last problem
+26 feb 96 tompa@cs ______ last problem
+26 feb 96 claym@cs ______ re: hw6, #2 (warning: this message conta
+26 feb 96 tompa@cs ______ &quot;describe an algorithm&quot;
+26 feb 96 tompa@cs ______ space
+26 feb 96 tompa@cs ______ hw6, #4
+ 3 mar 96 tompa@cs ______ details on chapter 36 reading assignment
+ 3 mar 96 ruzzo@cs ______ 24-1(a)
+ 3 mar 96 ruzzo@cs ______ re: 24-1(a)
+ 3 mar 96 ruzzo@cs ______ hw7, 17.2-4
+ 4 mar 96 ruzzo@cs ______ homework revision
+ 4 mar 96 ruzzo@cs ______ office hour change
+ 5 mar 96 ruzzo@cs ______ re: hw 7, 17-2.2  (***caution; hint belo
+ 6 mar 96 tompa@cs ______ evaluations friday
+ 7 mar 96 tompa@cs ______ hw8 (just kidding)
+ 8 mar 96 aberman@hobbes  office hours during finals week
+13 mar 96 roske@cs ______ re: hw8 (just kidding)
+13 mar 96 jshill@u ______ re: hw8 (just kidding)
+13 mar 96 tompa@cs ______ hw8 sketchy solutions
+13 mar 96 tompa@cs ______ hw7
+13 mar 96 tompa@cs ______ problem 36.1-4
+13 mar 96 eallen@cs _____ np
+14 mar 96 aberman@hobbes  hw7
+15 mar 96 tompa@cs ______ hw7 and final exam pickup
+
+
+
+
+
+
+messages
+
+date: 5 jan 1996 17:21 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: cse421 mailing list
+
+
+we have established a mailing list, cse421@cs, for class information
+and discussion.  initial email addresses are taken from the
+registrar's 1st day class list, hence are all &quot;...@u&quot; addresses.
+please set up mail forwarding from that account if you don't
+normally read mail there.  mail sent to the list is also
+automatically logged to the course web,
+http://www.cs.washington.edu/education/courses/421
+
+send mail to cse421-request@cs to be added to or removed from the
+list.
+date: mon, 8 jan 1996 09:53:10 -0800 (pst)
+from: eva marie allen &lt;eallen@wolf.cs.washington.edu&gt;
+to: cse421@cs
+subject: study group
+
+
+hi everyone,
+
+several people have started a study group, and want to invite others to 
+join.  the meetings times thus far are monday and friday, 8:30 to 10:30.  
+early?  yes.  but then, painful times call for painful hours.  :)
+
+eva
+date: mon, 8 jan 1996 13:39:01 -0800 (pst)
+from: eva marie allen &lt;eallen@wolf.cs.washington.edu&gt;
+to: cele couch &lt;cele@grizzly.cs.washington.edu&gt;
+cc: cse421@cs
+subject: re: study group
+
+
+on mon, 8 jan 1996, cele couch wrote:
+
+&gt; where do you guys meet?  the lounge?
+&gt; 
+&gt; 
+yes, so far in the undergrad lounge.  
+
+eva
+date: 8 jan 1996 17:01 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: homework #1 bugs &amp; clarifications.
+
+
+1. pg 15 1.3-3:  assume n = 2^ k for some integer k&gt;=0.
+
+3. pg 37 2.2-2:  assume the domain of t(n) is the set of integers n
+    &gt;= 2.  (a careful reading of the definitions seems to show the
+    &quot;if&quot; direction is false otherwise.)
+
+4. pg 37 2.2-3:  &quot;equation (2.9)&quot; just means the last of the 7
+    equations.
+
+5. pg 37 2.2-8: use the recurrence (2.13) and induction.  you may
+    not use equation (2.15) (or problem 2.2-7).
+date: mon, 8 jan 1996 22:12:17 -0800 (pst)
+from: yih-chun hu &lt;yihchun@u.washington.edu&gt;
+to: larry ruzzo &lt;ruzzo@cs.washington.edu&gt;
+cc: cse421@cs.washington.edu
+subject: re: homework #1 bugs &amp; clarifications.
+
+
+
+on 8 jan 1996, larry ruzzo wrote:
+
+&gt; 3. pg 37 2.2-2:  assume the domain of t(n) is the set of integers n
+&gt;     &gt;= 2.  (a careful reading of the definitions seems to show the
+&gt;     &quot;if&quot; direction is false otherwise.)
+
+the definition given on page 26 of the big book of knowledge seems to 
+indicate that the function 0 (the constant function with value zero) is in 
+o(n), thus there exists a k such that 0 is in o(n^k). it therefore 
+follows that the function t(n) = 0 should be in n^{o(1)} (if the 
+corrected version of the problem is correct). however, one should note 
+that this is not the case when n &gt;= 2. (proof: suppose there exists 
+function g(x) st n^g(x) = 0 for all n &gt;= 2. then g(n) gives us a 
+base n logarithm of zero.) it therefore follows that either 0 is not in 
+o(n^k) [contradiction of definition on page 26] or it is possible to take 
+logarithms of zero.
+
+
++---- yih-chun hu (finger:yihchun@cs.washington.edu) ----------------------+
+| http://www.cs.washington.edu/homes/yihchun     yihchun@cs.washington.edu |
+| http://weber.u.washington.edu/~yihchun         yihchun@u.washington.edu  |
++--------------------------------------------------------------------------+
+
+to: yih-chun hu &lt;yihchun@u.washington.edu&gt;
+cc: cse421@cs.washington.edu
+subject: hw1, problem 3
+date: tue, 09 jan 1996 15:55:33 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+thanks for pointing out this further problem with n^{o(1)}.  i believe you are
+right, that if t(n) = 0 for any value of n (say, n=3), then there is no
+function g(n) in o(1) such that 0 = t(3) = 3 ^ {g(3)}.
+
+for this problem, then, it's o.k. to assume that t(n) &gt; 0 for all n.
+
+sorry that the problem has yet another bug.
+
+------- forwarded message
+
+date:    mon, 08 jan 1996 22:12:17 -0800
+from:    yih-chun hu &lt;yihchun@u.washington.edu&gt;
+to:      larry ruzzo &lt;ruzzo@cs.washington.edu&gt;
+cc:      cse421@cs.washington.edu
+subject: re: homework #1 bugs &amp; clarifications.
+
+
+on 8 jan 1996, larry ruzzo wrote:
+
+&gt; 3. pg 37 2.2-2:  assume the domain of t(n) is the set of integers n
+&gt;     &gt;= 2.  (a careful reading of the definitions seems to show the
+&gt;     &quot;if&quot; direction is false otherwise.)
+
+the definition given on page 26 of the big book of knowledge seems to 
+indicate that the function 0 (the constant function with value zero) is in 
+o(n), thus there exists a k such that 0 is in o(n^k). it therefore 
+follows that the function t(n) = 0 should be in n^{o(1)} (if the 
+corrected version of the problem is correct). however, one should note 
+that this is not the case when n &gt;= 2. (proof: suppose there exists 
+function g(x) st n^g(x) = 0 for all n &gt;= 2. then g(n) gives us a 
+base n logarithm of zero.) it therefore follows that either 0 is not in 
+o(n^k) [contradiction of definition on page 26] or it is possible to take 
+logarithms of zero.
+
+
++---- yih-chun hu (finger:yihchun@cs.washington.edu) ----------------------+
+| http://www.cs.washington.edu/homes/yihchun     yihchun@cs.washington.edu |
+| http://weber.u.washington.edu/~yihchun         yihchun@u.washington.edu  |
++--------------------------------------------------------------------------+
+
+
+------- end of forwarded message
+
+to: yih-chun hu &lt;yihchun@u.washington.edu&gt;
+cc: cse421@cs.washington.edu
+subject: re: hw1, problem 3
+date: tue, 09 jan 1996 16:16:01 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+you're right again: i was thinking of t(n) as mapping integers to integers,
+which isn't necessarily the case.  so make the assumption t(n) &gt;= 1 for all n. 
+
+------- forwarded message
+
+date:    tue, 09 jan 1996 16:00:25 -0800
+from:    yih-chun hu &lt;yihchun@u.washington.edu&gt;
+to:      martin tompa &lt;tompa@cs.washington.edu&gt;
+cc:      ruzzo@cs.washington.edu
+subject: re: hw1, problem 3
+
+
+is this fix sufficient? if i have t(n) = 0.5, we will have a negative g(n).
+but then the negative g(n) is not in o(h(n)) for any function h(n) by 
+definition of o(h(n)).
+
+on tue, 9 jan 1996, martin tompa wrote:
+
+&gt; 
+&gt; thanks for pointing out this further problem with n^{o(1)}.  i believe you ar
+e
+&gt; right, that if t(n) = 0 for any value of n (say, n=3), then there is no
+&gt; function g(n) in o(1) such that 0 = t(3) = 3 ^ {g(3)}.
+&gt; 
+&gt; for this problem, then, it's o.k. to assume that t(n) &gt; 0 for all n.
+&gt; 
+&gt; sorry that the problem has yet another bug.
+&gt; 
+&gt; ------- forwarded message
+&gt; 
+&gt; date:    mon, 08 jan 1996 22:12:17 -0800
+&gt; from:    yih-chun hu &lt;yihchun@u.washington.edu&gt;
+&gt; to:      larry ruzzo &lt;ruzzo@cs.washington.edu&gt;
+&gt; cc:      cse421@cs.washington.edu
+&gt; subject: re: homework #1 bugs &amp; clarifications.
+&gt; 
+&gt; 
+&gt; on 8 jan 1996, larry ruzzo wrote:
+&gt; 
+&gt; &gt; 3. pg 37 2.2-2:  assume the domain of t(n) is the set of integers n
+&gt; &gt;     &gt;= 2.  (a careful reading of the definitions seems to show the
+&gt; &gt;     &quot;if&quot; direction is false otherwise.)
+&gt; 
+&gt; the definition given on page 26 of the big book of knowledge seems to 
+&gt; indicate that the function 0 (the constant function with value zero) is in 
+&gt; o(n), thus there exists a k such that 0 is in o(n^k). it therefore 
+&gt; follows that the function t(n) = 0 should be in n^{o(1)} (if the 
+&gt; corrected version of the problem is correct). however, one should note 
+&gt; that this is not the case when n &gt;= 2. (proof: suppose there exists 
+&gt; function g(x) st n^g(x) = 0 for all n &gt;= 2. then g(n) gives us a 
+&gt; base n logarithm of zero.) it therefore follows that either 0 is not in 
+&gt; o(n^k) [contradiction of definition on page 26] or it is possible to take 
+&gt; logarithms of zero.
+&gt; 
+&gt; 
+&gt; +---- yih-chun hu (finger:yihchun@cs.washington.edu) ----------------------+
+&gt; | http://www.cs.washington.edu/homes/yihchun     yihchun@cs.washington.edu |
+&gt; | http://weber.u.washington.edu/~yihchun         yihchun@u.washington.edu  |
+&gt; +--------------------------------------------------------------------------+
+&gt; 
+&gt; 
+&gt; ------- end of forwarded message
+&gt; 
+&gt; 
+
++---- yih-chun hu (finger:yihchun@cs.washington.edu) ----------------------+
+| http://www.cs.washington.edu/homes/yihchun     yihchun@cs.washington.edu |
+| http://weber.u.washington.edu/~yihchun         yihchun@u.washington.edu  |
++--------------------------------------------------------------------------+
+
+
+------- end of forwarded message
+
+date: 12 jan 1996 04:21 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: hw#2
+
+
+hw#2 will be passed out in class today, and is also on the web, for
+those of you who want to get a start on it this morning. 
+to: cse421@cs
+subject: ta office hours
+date: fri, 12 jan 1996 11:07:34 pst
+from: andrew berman &lt;aberman@paintbrush.cs.washington.edu&gt;
+
+
+
+i have scheduled office hours for monday and tuesday, 9:30-10:30 am
+in room 326a.
+
+andy
+
+
+
+
+_______________________________________________________________________________
+|    andrew p. berman     |dept. of computer science, university of washington|
+|aberman@cs.washington.edu|  http://www.cs.washington.edu/homes/aberman       |
+|_________________________|___________________________________________________|
+
+to: cse421@cs
+subject: office hours conflict/change
+date: fri, 12 jan 1996 12:04:18 pst
+from: andrew berman &lt;aberman@paintbrush.cs.washington.edu&gt;
+
+
+
+i've just been alerted that my monday morning office hours conflicts with
+a class which many students may be taking. henceforth, my monday office hours
+are from 11:30 to 12:20.
+
+new schedule:  monday 11:30-12:30, tuesday 9:30-10:30
+
+
+andy
+
+
+
+_______________________________________________________________________________
+|    andrew p. berman     |dept. of computer science, university of washington|
+|aberman@cs.washington.edu|  http://www.cs.washington.edu/homes/aberman       |
+|_________________________|___________________________________________________|
+
+date: thu, 18 jan 1996 14:11:51 -0800 (pst)
+from: joseph heitzeberg &lt;joeh@wolf.cs.washington.edu&gt;
+to: cse421@wolf.cs.washington.edu
+subject: 421 book
+
+
+421 -
+
+  i forgot my 421 book in sieg 326 today, did anyone happen to see it?  
+if so please let me know, i'de really appreciate it (because it's so 
+ex$pen$ive)
+
+thanks,
+joe heitzeberg
+date: 20 jan 1996 18:30 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: sorting animations
+
+
+if any of you happen to have access to a web browser supporting java
+applets, you might enjoy seeing their sorting demo applet:
+http://java.sun.com/applets/applets/sortdemo/example1.html
+date: 22 jan 1996 07:39 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: re: hw questions...
+
+
+  &gt; when the book asks for us to 'argue' something does it want a formal 
+  &gt; proof or does it want a intuitive explanation?  i'm specifically 
+  &gt; referring to the first two questions. 
+
+i take &quot;argue&quot; and &quot;prove&quot; to be synonymous.
+
+on problem 8.4-4, the requested analysis is the analysis of the
+expected (average) time for randomized quicksort (i.e., quicksort
+with random selection of pivot), modified as suggested in the
+problem.  we'll give partial credit for correct analysis of
+worst-case time of this variant of *deterministic* quicksort with
+exact (linear time) median.  using a recursion tree to analyze the
+recurrence might be easiest in this case.
+date: 22 jan 1996 15:11 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: reading assignment
+
+
+here's an updated reading assignment, for material up to and
+including today's lecture.  (you'll get a hardcopy of this with your
+next homework assignment.)
+
+    \begin{itemize}
+        \item ch. 3 (summations): we've seen examples of most of
+	    the techniques in this chapter by now.  this would
+	    be a good time to read it if you haven't already.
+        \item ch. 4 (recurrences): ditto, except you may skip 4.4.
+        \item ch. 8 (quicksort): read all of it.
+    \end{itemize}
+to: cse421@geoduck
+subject: further reading
+date: mon, 22 jan 1996 15:31:13 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+wednesday we'll dive into chapter 10.  read the whole chapter, concentrating
+on 10.3.
+
+the remaining divide-and-conquer algorithm that was on the syllabus is the
+fast fourier transform, from chapter 32.  we will skip this for the moment,
+and possibly return to it later in the quarter.  
+
+so the next topic after chapter 10 is chapter 16 (following the syllabus).
+date: 23 jan 1996 14:30 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: problem 8.4-4
+
+
+a student pointed out that many of you looked at a version of
+quicksort in 326 that switched to doing insertion sort when the
+problem size was less than some small k, so in total you'll do at
+least n/k insertion sorts on small subproblems of size at most k.
+although related, this is not the version that you are to analyze in
+8.4-4.  rather than switching to insertion sort at the bottom of the
+recursion, 8.4-4 says do nothing when the subproblems are of size
+&lt;=k; just return, leaving that subproblem unsorted.  patch up all of
+these small unsorted subproblems with one global insertion sort at
+the end.  [this has a slight advantage in practice, since you only
+setup &amp; run the insertion-sort loops once, rather than n/k times.]
+to: cse421@geoduck
+subject: proofs of correctness
+date: tue, 23 jan 1996 15:00:43 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+a student asked for suggestions or models of how to do proofs of correctness
+of algorithms.  in particular &quot;stooge sort&quot; and quicksort' on the homework ask
+for correctness proofs.  
+
+in both of these cases, the fact that a problem is being reduced to smaller
+problems (either by recursion or by iteration) suggests a proof by induction
+on the size of the problem.  using induction, i think you can come up with a
+reasonably rigorous proof in each case.  
+
+in the case of quicksort', there are at least two ways of applying induction:
+you can either appeal to the induction hypothesis once per iteration (for the
+recursive call), or you can have exactly two appeals to the induction
+hypothesis (one for the first recursive call, and one for what's accomplished
+together by all iterations after the first).  
+date: wed, 24 jan 1996 11:57:33 -0800
+from: aberman@hobbes (andrew berman)
+to: cse421@hobbes
+
+
+proof tips: cse 421
+
+here are some tips to writing good readable proofs.  this document is not a 
+complete guide to proofwriting (we'd like to one of those for ourselves). we
+hope, however, that this document will help people who are a little unsure of
+what a good proof looks like.
+
+
+1) proofs are communications:
+a proof is not an abstract mathematical construct.  it is a very
+concrete and specific communication.  specifically, you
+are communicating to others that they should believe something.  most
+of the points in this note follow from this paradigm.
+
+
+2)  include commentary
+sometimes students get the idea that if it isn't an equation,  it shouldn't be
+in the proof.  that's not true.  while a comment doesn't substitute for a 
+logical inference, it can help the reader understand what logical inference
+you are using.  
+
+
+3) organization 
+a good proof will be easy to read and understand.  organization helps.  think
+of the proof as a path for the reader to follow. tell the reader what the goals
+or subgoals are, and then show the reader how these goals are reached.
+here's a simple example:
+
+  to prove that x = z, we will first show that x = y, and then we will
+  show y=z. 
+    1) we show that x = y by induction
+	 ....
+    2) we now show that y = z by contradiction....
+
+  since x = y from (1) and y = z from (2), by transitivity, x = z.
+
+
+4) label things:
+if you are going to use a standard method such as induction, you must use the
+conventions of the method.  in an inductive proof, that includes labeling the
+base case, inductive hypothesis and inductive steps as such.  
+
+
+5)  don't use the &quot;reduction to 1=1&quot; strategy.
+strategies such as induction are useful because there is a guarantee that if
+you use the strategy correctly then you will wind up with a correct proof. one
+strategy sometimes used to prove x=y is to start off with x=y and reduce the
+equation to something trivially correct, such as 1=1.  this strategy is invalid
+because it does not offer the guarantee that using it correctly results in a
+proof. for example:
+
+                1 = -1
+                1^2 = (-1)^2
+                1 = 1   qed
+
+the squaring step is not reversible which is why this doesn't work.  yet the 
+strategy does not flag this problem.  if you are thinking in these terms, try 
+starting from 1=1 and deducing x=y.  then you are using the valid strategy of
+starting with something true and using legitimate mathematical operations which
+maintain truthfulness.
+
+
+7) look at boundary cases:
+is what you are saying true for n=0? how about n=1? what about as n-&gt;inf? what
+about negative or non-integer n? several problems of this sort cropped up in
+question 2.2-2, and will probably crop up in later problems as well.  if you
+see something like this, you can ask us about it, or, you can state that you
+are limiting your domain to positive n, or integer n, or something like that.
+it's far better to limit the scope of your proof than to write something false. 
+
+8) don't skip steps:
+it can be hard to know how much detail you should put down,
+but here's some examples of how to reduce one equation to another:
+
+	too little:
+		[2^(k+1)]/2 = n
+		k log (2) = log(n)
+	        k	  = log(n)
+
+	minimimally acceptable:
+		[2^(k+1)]/2 = n
+		2^(k)	  = n
+		k	  = log(n)
+	better:
+		[2^(k+1)]/2]= n
+		2^(k)	  = n
+		log(2^(k))=log(n) [base 2]
+		k	  = log(n)
+
+note that the first two examples have the same number of lines.  however,
+the first one had a leap between the first two lines which would force
+the reader to puzzle over it for a while.  in general, limit each new line
+to one mathematical operation.
+
+
+9) try to keep it compact:
+part of clarity is compactness.  if your proof starts to meander and look more
+like an essay, try rewriting it in fewer sentences. if you can't rewrite it and
+it still meanders, perhaps you're missing some key element.  compactness is not
+in conflict with point (8) as long as you remember that clarity is the overall
+goal.  either too much or too little verbiage can be detrimental.
+
+
+10) a note about inductive proofs:
+	i noticed that some people don't use the correct base case.
+consider the statement of the first problem:
+	t(n) = 2 if n=2
+	     = 2t(n/2) + n if n &gt; 2 
+	prove that t(n) = n log n.
+
+the base case is n=2, not n=4.  i think perhaps since n=2 is listed separately
+in the description of t(n), people may be worried that the induction &quot;might not
+work&quot; that far.  but it does--that's the whole point of having the base case
+and of listing it separately in the original description. in general, try to
+make the proofs as encompassing as possible.
+date: 24 jan 1996 15:06 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: expected time for insertion sort
+
+
+andy poins out that as part of the answer to  8.4-4 on page 167, you
+seemingly have to prove something about the expected case running
+time for insertion sort.  that's correct, but it turns out that a
+simple upper bound on the worst-case running time is all you need,
+so this isn't too hard.  in other words, unlike the quicksort part,
+you do not need to  try to set up or solve a recurrence for the
+expected time of the insertion part.
+date: 25 jan 1996 00:41 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: re: (cse421) problems using induction to prove correctness
+
+
+
+  &gt; i'm having difficulty making the leap from base case and inductive hyp. 
+  &gt; to the inductive step for the case when n+1.  in other words, i can 
+  &gt; convince myself that stoogesort works for length 1 or three, and assume 
+  &gt; that it works for length n, but i just don't see anyway to reason about 
+  &gt; sorting length n+1.  
+  &gt; 
+  &gt; are there any hints you could offer or am i approaching this wrong?
+
+approach sounds right.  
+
+hint one: forget (temporarily) that it's recursion/induction;
+generally all you should need to assume about what goes on in the
+recursive calls is that they sort; you shouldn't need to ever know
+how they sort.  (that's the beauty of induction...)  
+
+hint two: work from some examples.  what happens if the input is
+already sorted?  what happens if the input is reverse-sorted?  what
+happens if it's sorted but some particular 2 elements are out of
+order?  can you argue in general that the smallest element ends up in
+position 1? the 5th smallest in position 5?  the largest in position
+n?  turning in scattered examples like these won't get full credit;
+that's not the point.  but hopefully they will help you understand
+what the algorithm is doing so that you can generalize from these
+specific examples to a comprehensive correctness argument.
+to: cse421@geoduck
+subject: re: (cse421) problems using induction to prove correctness
+date: thu, 25 jan 1996 18:11:05 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+another possible stumbling block that may be causing this kind of problem is
+using the wrong form of induction.  (just a guess from the way the question
+below was worded.) you don't want to proceed from n to n+1, but rather from
+about 2n/3 to n.  this suggests using the strong form of induction rather than
+ordinary induction.
+
+------- forwarded message
+
+  &gt; date:    25 jan 1996 00:41:00 -0800
+  &gt; from:    larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+  &gt; to:      cse421@cs
+  &gt; subject: re: (cse421) problems using induction to prove correctness
+  &gt; 
+  &gt; 
+  &gt;   &gt; i'm having difficulty making the leap from base case and inductive hyp.
+ 
+  &gt;   &gt; to the inductive step for the case when n+1.  in other words, i can 
+  &gt;   &gt; convince myself that stoogesort works for length 1 or three, and assume
+ 
+  &gt;   &gt; that it works for length n, but i just don't see anyway to reason about
+ 
+  &gt;   &gt; sorting length n+1.  
+  &gt;   &gt; 
+  &gt;   &gt; are there any hints you could offer or am i approaching this wrong?
+  &gt; 
+  &gt; approach sounds right.  
+  &gt; 
+  &gt; hint one: forget (temporarily) that it's recursion/induction;
+  &gt; generally all you should need to assume about what goes on in the
+  &gt; recursive calls is that they sort; you shouldn't need to ever know
+  &gt; how they sort.  (that's the beauty of induction...)  
+  &gt; 
+  &gt; hint two: work from some examples.  what happens if the input is
+  &gt; already sorted?  what happens if the input is reverse-sorted?  what
+  &gt; happens if it's sorted but some particular 2 elements are out of
+  &gt; order?  can you argue in general that the smallest element ends up in
+  &gt; position 1? the 5th smallest in position 5?  the largest in position
+  &gt; n?  turning in scattered examples like these won't get full credit;
+  &gt; that's not the point.  but hopefully they will help you understand
+  &gt; what the algorithm is doing so that you can generalize from these
+  &gt; specific examples to a comprehensive correctness argument.
+
+------- end of forwarded message
+to: cse421@geoduck
+cc: receptionist@cs.washington.edu
+subject: cse 421 lecture cancelled today
+date: mon, 29 jan 1996 10:01:30 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+because of the icy roads and what i hear is low student attendance on
+campus today, i'm cancelling lecture and my office hour today.  i
+apologize to those of you who struggled to get to campus.  see you on
+wednesday, i hope.
+
+to: cse421@geoduck
+subject: more on the (in)efficiency of the selection algorithm
+date: wed, 31 jan 1996 15:41:49 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+i was somewhat dismayed in lecture today about the fact that the linear time
+selection algorithm only seemed to use fewer comparisons than sorting when n &gt;
+2 ^ (80d) = 2 ^ 240.  this is obviously totally impractical.  (i hope you
+realized that when i said we wouldn't be doing any useful algorithms in this
+class, i was being facetious.  although the stress is on elegant algorithms
+with good theoretical analyses, we wouldn't be doing much good if they or
+their techniques weren't also useful in practice.  for most of the algorithms
+we cover, i hope you will find them practical as well as elegant.)
+
+i gave the analysis more thought, and with some care you can get the constant
+down from 240 to nearly 24.  this comes from two sources:
+
+(1) a careful analysis shows that d = 2.4 -- the overhead is 1.4n for sorting
+the blocks of size 5, and n+1 for partitioning about x.
+
+(2) as yih-chun suggested, raising the basis of the recurrence beyond 80 pays
+off.  remember that, in determining the constant c, i had an expression that
+was 80d when n=80 and decreased monotonically to 10d in the limit?  by raising
+the basis, you can get as close to 10d as you like, and it doesn't happen too
+slowly.  of course, raising the basis also affects d, so there's a tradeoff.
+
+putting these together, we end up with an algorithm whose number of
+comparisons is slightly more than 10dn = 24n.  
+
+the good news is that 24n is a respectable running time, much better than the
+conservative 240n derived in class.  the bad news is that this still only
+beats mergesort when n &gt; 2^24 &gt; 10^7.  but this says more about how very
+efficient an nlogn time algorithm is, rather than how inefficient a 24n time
+algorithm is.  for instance, this 24n time selection algorithm would beat
+insertion sort (in number of comparisons) when n &gt; 48.
+
+using blocks of size 15 and more clever tricks, the original 1972 paper by
+blum, floyd, pratt, rivest, and tarjan provided an upper bound of 5.43n
+comparisons.  the best upper bound to date is 3n comparisons, by scho&quot;nhage,
+paterson, and pippenger (1976), using quite different techniques.  the best
+lower bound to date for the median problem is 2n comparisons, by bent and john
+(1985).  
+date: thu, 1 feb 1996 14:41:14 -0800 (pst)
+from: eva marie allen &lt;eallen@wolf.cs.washington.edu&gt;
+to: algorithms &lt;cse421@cs.washington.edu&gt;
+subject: problem 5
+
+
+hi,
+
+the longer i spend on this homework, the more i feel like i need to go 
+back to kindergarten.
+
+the definition of median is the ceiling(n+1/2) largest element.  
+correct?  doesn't this mean that any of the elements of an 
+array are the median, since they all have the same value?  the weighted 
+median, on the other hand is very specific.  is this how i should see 
+this problem?
+
+thanks,
+
+eva
+date: thu, 1 feb 1996 17:28:44 -0800 (pst)
+from: michael baker &lt;michael@u.washington.edu&gt;
+to: cse421@cs.washington.edu
+subject: tutors for 421?
+
+
+
+because of work and a bout with sickness, i've fallen drastically behind
+in this course and am at the point where i should either drop it or find a
+tutor.  not being much of a quitter and this being my last quarter at the
+u, i'd prefer the latter case. 
+
+anyone out there willing to do some tutoring for 421?  willing to pay 
+well.  drop me a line via e-mail.  thanks in advance.
+
+michael
+
+michael baker  ---  michael@u.washington.edu  ---  michaelb@cs.washington.edu
+
+come in from the cold, i'll owe you my heart,             
+   be my shelter and refuge for the night.           fields of the nephilim
+      love of my life, pour your light,               (paradise regained)
+  on the faith i can feel, make it real....               
+
+date: thu, 1 feb 1996 17:50:47 -0800 (pst)
+from: wade barrett &lt;wbarrett@wolf.cs.washington.edu&gt;
+to: cse421@wolf.cs.washington.edu
+subject: so how bad is it, really?
+
+
+i did a bunch of number-crunching on my $5.00 (if that) calculator to try 
+to figure out when (for what value of n) the dazzlingly linear-time 
+select algorithm really does its job with fewer comparisons than simply 
+n*lg(n) sorting the n elements and indexing the one you want.
+
+        here's the formula i crunched:     for what value of n is:
+
+|n/5| lg |n/5|  +  (7n/10 + 6) lg (7n/10 + 6)  +  2.4 n   &lt;   n*lg(n)   ?
+
+        here's why:
+
+one of our recent homework problems suggested a sorting algorithm that 
+quicksorted n elements (recursively) until the size of the subproblem was 
+less than k for some k.  the inequality i wrote above implicitly assumes 
+that for the value of n being tested, i will compare the n*lg(n) sort (on 
+the right) with a non-recursive version of select.  in other words, see 
+if it pays off to go through the select routine just once.  i submit that 
+the smallest value of n that makes the above inequality true is exactly 
+the crossover point (counting the number of comparisons) at which one 
+should benefit from using the select routine instead of sorting all n 
+elements.
+
+        details of the formula:
+
+1.4n                        ...  sort the |n/5| baby groups of 5 each
+|n/5| lg |n/5|              ...  sort the medians of the |n/5| groups
+n                           ...  partition the n elements about the x
+(7n/10 + 6) lg (7n/10 + 6)  ...  sort the group containing the median
+
+the 1.4n comes from the fact that 5 elements can be sorted with 7 
+comparisons, giving 7 * |n/5| = 1.4n comparisons.  (in fact, the ceiling 
+can be dropped since the leftover (m = 1, 2, 3, or 4) elements always 
+require less than 1.4*m comparisons to sort.)
+
+
+        here's the answer:
+
+by somewhere around n = 60,000, it requires less comparisons to use the 
+select algorithm than to sort the whole array.  (better value, anybody?)
+
+so i conclude that the selection problem should be solved by:
+--&gt;  sorting and indexing if n &lt; 60000,
+--&gt;  calling select      if n &gt;= 60000.
+note that this method should be the guide for recursive calls as well.
+
+
+        if the above is correct, then it isn't at all as bad as we 
+thought.  we actually could use this algorithm beneficially for 
+reasonably large n.  (however, note that this analysis only compares 
+the numbers of *comparisons* used by the two methods.  relative 
+differences in the amount of other work the algorithms need to do could 
+shift the tradeoff point quite a bit in either direction.  i think it 
+would be great if somebody in the class would actually test this out.  
+are we in fact doing anything practically worthwhile here (other than 
+mutilating our brains) ??
+
+
+on wed, 31 jan 1996, martin tompa wrote:
+
+&gt; 
+&gt; i was somewhat dismayed in lecture today about the fact that the linear time
+&gt; selection algorithm only seemed to use fewer comparisons than sorting when n &gt;
+&gt; 2 ^ (80d) = 2 ^ 240.  this is obviously totally impractical.  (i hope you
+&gt; realized that when i said we wouldn't be doing any useful algorithms in this
+&gt; class, i was being facetious.  although the stress is on elegant algorithms
+&gt; with good theoretical analyses, we wouldn't be doing much good if they or
+&gt; their techniques weren't also useful in practice.  for most of the algorithms
+&gt; we cover, i hope you will find them practical as well as elegant.)
+&gt; 
+&gt; i gave the analysis more thought, and with some care you can get the constant
+&gt; down from 240 to nearly 24.  this comes from two sources:
+&gt; 
+&gt; (1) a careful analysis shows that d = 2.4 -- the overhead is 1.4n for sorting
+&gt; the blocks of size 5, and n+1 for partitioning about x.
+&gt; 
+&gt; (2) as yih-chun suggested, raising the basis of the recurrence beyond 80 pays
+&gt; off.  remember that, in determining the constant c, i had an expression that
+&gt; was 80d when n=80 and decreased monotonically to 10d in the limit?  by raising
+&gt; the basis, you can get as close to 10d as you like, and it doesn't happen too
+&gt; slowly.  of course, raising the basis also affects d, so there's a tradeoff.
+&gt; 
+&gt; putting these together, we end up with an algorithm whose number of
+&gt; comparisons is slightly more than 10dn = 24n.  
+&gt; 
+&gt; the good news is that 24n is a respectable running time, much better than the
+&gt; conservative 240n derived in class.  the bad news is that this still only
+&gt; beats mergesort when n &gt; 2^24 &gt; 10^7.  but this says more about how very
+&gt; efficient an nlogn time algorithm is, rather than how inefficient a 24n time
+&gt; algorithm is.  for instance, this 24n time selection algorithm would beat
+&gt; insertion sort (in number of comparisons) when n &gt; 48.
+&gt; 
+&gt; using blocks of size 15 and more clever tricks, the original 1972 paper by
+&gt; blum, floyd, pratt, rivest, and tarjan provided an upper bound of 5.43n
+&gt; comparisons.  the best upper bound to date is 3n comparisons, by scho&quot;nhage,
+&gt; paterson, and pippenger (1976), using quite different techniques.  the best
+&gt; lower bound to date for the median problem is 2n comparisons, by bent and john
+&gt; (1985).  
+&gt; 
+
+to: cse421@geoduck
+subject: hw4, problem 2
+date: fri, 02 feb 1996 08:52:55 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+problem 2 is quite a bit easier than most other problems we ask, so don't look
+desperately for a &quot;trick&quot; if you solved it easily.  however, if you're solving
+it recursively, you're not doing it nearly as efficiently (or as simply) as
+you could.
+
+to: cs421@geoduck
+subject: elephant humor
+date: fri, 02 feb 1996 09:01:35 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+this was a small part of one of those very long jokes that you can't wait to
+get to the end of.  
+
+&gt;&gt;computer scientists hunt elephants by exercising algorithm a:
+&gt;&gt;      1. go to africa.
+&gt;&gt;      2. start at the cape of good hope.
+&gt;&gt;      3. work northward in an orderly manner, traversing the continent
+&gt;&gt;         alternately east and west.
+&gt;&gt;      4. during each traverse pass,
+&gt;&gt;            a. catch each animal seen.
+&gt;&gt;            b. compare each animal caught to a known elephant.
+&gt;&gt;            c. stop when a match is detected.
+&gt;&gt;
+&gt;&gt;experienced computer programmers modify algorithm a by placing a known
+&gt;&gt;elephant in cairo to ensure that the algorithm will terminate.
+to: cse421@geoduck
+subject: hw4, problem 5
+date: fri, 02 feb 1996 16:39:35 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+the book talks about the weighted median, but a few students pointed out that
+it may not be unique, for instance, if w1 = 1/6, w2 = 2/6, and w3 = 3/6.  it's
+not too hard to prove that there will either be 1 or 2 weighted medians.  if
+there happen to be two, let's agree that the weighted median is the larger of
+those two, to agree with the way we've disambiguated the ordinary median in
+the case when there are an even number of elements.
+date: sun, 4 feb 1996 13:13:20 -0800
+from: claym@wolf (michael clay)
+to: cse421@cs.washington.edu
+subject: does problem 3 suck or am i just dense?
+cc: claym@wolf
+
+
+seems like most of the homework is straightforward, albeit a bit
+beyond lengthy, except problem 3.
+
+all my attempts at a solution to #3 so far are convoluted and seem to run
+in o(lg**2 n) time.  i must be missing something, either obvious or obscure.
+any hints that would steer me in the right direction without totally
+giving away the solution would be greatly appreciated.
+
+thanks,
+	michael (claym@wolf.cs.washington.edu)
+	(but post your answers to cs421 distribution.)
+to: cse421@geoduck
+subject: hw4, problem 3
+date: sun, 04 feb 1996 14:16:37 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+given that you're after an o(log n) solution, something to shoot for
+is to throw away about half the problem every constant number of
+steps.  
+
+personally, i didn't find problem 5 straightforward, and i know some
+students are having trouble with problem 1.
+
+------- forwarded message
+
+date:    sun, 04 feb 1996 13:13:20 -0800
+from:    claym@wolf (michael clay)
+to:      cse421@cs.washington.edu
+cc:      claym@wolf
+subject: does problem 3 suck or am i just dense?
+
+seems like most of the homework is straightforward, albeit a bit
+beyond lengthy, except problem 3.
+
+all my attempts at a solution to #3 so far are convoluted and seem to run
+in o(lg**2 n) time.  i must be missing something, either obvious or obscure.
+any hints that would steer me in the right direction without totally
+giving away the solution would be greatly appreciated.
+
+thanks,
+	michael (claym@wolf.cs.washington.edu)
+	(but post your answers to cs421 distribution.)
+
+------- end of forwarded message
+
+date: 7 feb 1996 11:55 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: wednesday office hour canceled
+
+
+i have to cancel my office hour today.  i'll try to be available
+tomorrow or friday to compensate; details later.
+to: cse421@geoduck
+subject: hw5, problem 2(a)
+date: thu, 08 feb 1996 11:05:56 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+a student pointed out that we didn't discuss ties in the greedy method, that
+is, what the method does when pqr = qrs.  to disambiguate the problem, you may
+assume in part (a) that pqr &lt; qrs, and just give the necessary and sufficient
+conditions assuming this inequality is true.  this ensures that there are no
+ties, and also eliminates the need to discuss the completely dual case when
+pqr &gt; qrs.  in part (b), make sure you choose values that satisfy pqr &lt; qrs.  
+date: thu, 8 feb 1996 14:51:23 -0800
+from: aberman (andrew p. berman)
+to: cse421
+subject: average homework grades
+
+
+
+i have not included the grades of some people whom i suspect have dropped
+the course.  i also only included the grades for homeworks submitted.  so
+these averages (like all averages) must be taken with a grain of salt.
+
+hw1:  19 out of 25
+hw2:  22 out of 25
+hw3:  22 out of 30
+
+andy
+
+
+
+
+
+date: 9 feb 1996 08:55 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: office hours
+
+
+to make up for my canceled office hour wednesday, i'll be available
+intermittently today for questions.  i'm tied up from 12:30 - 2:00,
+and need to be in and out a bit during the rest of the day, but will
+be happy to answer questions if i'm in.
+to: cse421@geoduck
+subject: cocke, kasami, younger algorithm
+date: fri, 09 feb 1996 12:04:07 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+i mentioned in class that there is another dynamic programming algorithm that
+is extremely similar in form to the one we are looking at now for matrix chain
+product and polygon triangulation.  it is a cubic algorithm for testing
+context-free language membership.  if you are interested in seeing it, there
+is a postscript writeup in the following url:
+
+  http://www.cs.washington.edu/education/courses/322/94a/cky.ps
+
+i have a feeling that there should be some unification of that problem and
+polygon triangulation, just because of the similarity of these algorithms, but
+i have not discovered it.  if you have ideas along these lines, i'd love to
+hear them.
+date: fri, 9 feb 1996 16:17:50 -0800 (pst)
+from: robert oganyan &lt;ogan@grizzly.cs.washington.edu&gt;
+to: cse421@grizzly.cs.washington.edu
+subject:  mailing list
+
+
+
+please remove me from the mailing list
+
+robert
+
+date: sun, 11 feb 1996 16:41:38 -0800 (pst)
+from: &quot;d. godon&quot; &lt;dgodon@u.washington.edu&gt;
+to: martin tompa &lt;tompa@cs.washington.edu&gt;
+cc: cse421@geoduck.cs.washington.edu
+subject: re: cocke, kasami, younger algorithm
+
+
+
+on problem 3a, can we assume k is an integer?  if not, it would seem part 
+a and b are the same.
+
+thanks
+to: cse421@geoduck
+subject: hw5, problem 3a
+date: mon, 12 feb 1996 08:52:02 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+yes, you should assume k is an integer.
+
+------- forwarded message
+
+date:    sun, 11 feb 1996 16:41:38 -0800
+from:    &quot;d. godon&quot; &lt;dgodon@u.washington.edu&gt;
+to:      martin tompa &lt;tompa@cs.washington.edu&gt;
+cc:      cse421@geoduck.cs.washington.edu
+subject: re: cocke, kasami, younger algorithm
+
+
+on problem 3a, can we assume k is an integer?  if not, it would seem part 
+a and b are the same.
+
+thanks
+
+------- end of forwarded message
+
+to: cse421@geoduck
+subject: next reading assignment
+date: mon, 12 feb 1996 10:56:07 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+read the introduction to chapter 26, and all of section 26.2.
+date: mon, 12 feb 1996 12:40:26 -0800
+from: aberman@hobbes (andrew berman)
+to: cse421@hobbes
+subject: average for hw#4
+
+
+
+40
+
+andy
+to: cse421@paintbrush.cs.washington.edu
+subject: mistake in homework grading
+date: wed, 14 feb 1996 09:41:25 pst
+from: andrew berman &lt;aberman@paintbrush.cs.washington.edu&gt;
+
+
+
+
+hw#4 (the one we just gave back)
+
+problem 10-1 largest i numbers in sorted order:
+
+i took off credit for those who gave the answer n lg n.
+both n lg n and n lg n + i are legitimate answers---n lg n is actually
+the better answer.
+
+what *is* still wrong is claiming 'i' is a constant--you won't get any
+points back if you did that. 
+
+however, if you wrote n lg n but did not claim 'i' was a constant, please
+bring your homework in either to friday's class or to my office hours
+to get credit for your answer.
+
+andy
+
+_______________________________________________________________________________
+|    andrew p. berman     |dept. of computer science, university of washington|
+|aberman@cs.washington.edu|  http://www.cs.washington.edu/homes/aberman       |
+|_________________________|___________________________________________________|
+
+to: cse421@geoduck
+subject: hw6 on the web
+date: mon, 19 feb 1996 22:58:06 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+hw6 will be handed out in wednesday's lecture, due a week later.  it
+is on the web, if you want to get a headstart.
+
+date: thu, 22 feb 1996 08:20:09 -0800
+from: aberman@hobbes (andrew berman)
+to: cse421@hobbes
+subject: office hours *cancelled* this monday and tuesday
+
+
+
+sorry, but i'm gonna be out for a week starting today and lasting until
+next thursday.
+
+andy
+to: cse421@geoduck
+subject: hw6, #2 (warning: this message contains a hint.)
+date: thu, 22 feb 1996 14:07:45 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+one student, stuck on problem 2, asked for an idea of how to start.  think
+about finding the edit distance between the prefixes x[1..i] and y[1..j].
+date: sun, 25 feb 1996 09:57:56 -0800 (pst)
+from: eva marie allen &lt;eallen@wolf.cs.washington.edu&gt;
+to: algorithms &lt;cse421@cs.washington.edu&gt;
+subject: last problem
+
+
+i have a problem.  i need to prove that warshall' algorithm works, and i 
+don't believe it does.  it we need to take the min of d(i,j) and d(i,k) + 
+d(k,j), well, if d(i,j) is zero, and the sum of the rest is positive, 
+then the min is zero.  right?  so i can easily see creating an all zero 
+matrix.  the implication of the algorithm is that if d(i,j) is 1, then 
+either d(i,k) or d(k,j) is one.  i do not find this to be true.  the book 
+says it is true, so i assume that i am looking at this the wrong way.  
+how does this work?
+
+thanks,
+
+eva
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+eva marie allen                      |  though it cost all you have, get 
+eallen@cs.washington.edu             |  understanding.  esteem her, and she
+uw computer science department       |  will exalt you; embrace her, and she
+in the beautiful city of seattle     |  will honor you.              solomon
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+        only 182 days until my wedding! (8/25/96)
+
+date: 25 feb 1996 13:12 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: eva marie allen &lt;eallen@wolf.cs.washington.edu&gt;
+subject: re: last problem
+cc: algorithms &lt;cse421@cs.washington.edu&gt;
+
+
+  &gt; ... we need to take the min of d(i,j) and d(i,k) + 
+  &gt; d(k,j), well, if d(i,j) is zero, and the sum of the rest is positive, 
+  &gt; then the min is zero.  right?  so i can easily see creating an all zero 
+  &gt; matrix.  the implication of the algorithm is that if d(i,j) is 1, then 
+  &gt; either d(i,k) or d(k,j) is one.  i do not find this to be true.  the book 
+  &gt; says it is true, so i assume that i am looking at this the wrong way.  
+    ^^^^
+    where?
+
+edge weights/distances can be positive, negative or zero.  zero
+means a free trip from point i to point j; if that's cheaper than
+going via kansas city, then that's what you should do.  e.g., bus
+fares between stops  in downtown seattle would give a matrix full of
+zero's.  [note that in the transitive closure algorithm on the same
+page, zero means no path from i to j, but it's not computed the same
+way.]
+to: cse421@geoduck
+subject: last problem
+date: mon, 26 feb 1996 09:29:39 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+to amplify on larry's answer a bit, floyd's algorithm (for shortest paths) and
+warshall's algorithm (for transitive closure) are very similar in spirit, but
+not at all identical.
+
+  &quot;it we need to take the min of d(i,j) and d(i,k) + 
+   d(k,j), well, if d(i,j) is zero, and the sum of the rest is positive, 
+   then the min is zero.  right?  so i can easily see creating an all zero
+   matrix.&quot;   
+
+this is a statement about the shortest paths algorithm.  what it says is that,
+once d(i,j) is zero, it will never go positive again.  (actually, this is true
+more generally: no matter what value d(i,j) has, it will never later
+increase.)  but it doesn't follow from this that the algorithm will
+necessarily create an all zero matrix.  in general, it won't.
+
+  &quot;the implication of the algorithm is that if d(i,j) is 1, then 
+   either d(i,k) or d(k,j) is one.  
+
+this is a statement about the transitive closure algorithm, although it should
+say &quot;if d(i,j) changes from 0 to 1, then either d(i,k) or d(k,j) is one.&quot;  in
+class we never talked about the transitive closure (warshall's) variant.
+date: mon, 26 feb 1996 10:16:23 -0800 (pst)
+from: michael clay &lt;claym@wolf.cs.washington.edu&gt;
+to: martin tompa &lt;tompa@cs.washington.edu&gt;
+cc: cse421@geoduck.cs.washington.edu
+subject: re: hw6, #2 (warning: this message contains a hint.)
+
+
+where the text says &quot;describe an algorithm&quot;,
+how detailed a description are we supposed to
+give?  please specify _exactly_ what you do
+and do not expect in the description.
+
+thanks,
+	michael (claym@wolf.cs.washington.edu)
+to: cse421@geoduck
+subject: &quot;describe an algorithm&quot;
+date: mon, 26 feb 1996 10:24:10 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+ideally this should be done in the style of the textbook: a precise algorithm
+described in pseudocode (see e.g. matrix-chain-order or lcs-length), plus a
+short english description of how the algorithm works in general and any tricky
+portions of it in particular.  if correctness of your algorithm isn't obvious,
+part of this description should convince the reader of its correctness.
+
+------- forwarded message
+
+date:    mon, 26 feb 1996 10:16:23 -0800
+from:    michael clay &lt;claym@wolf.cs.washington.edu&gt;
+to:      martin tompa &lt;tompa@cs.washington.edu&gt;
+cc:      cse421@geoduck.cs.washington.edu
+subject: re: hw6, #2 (warning: this message contains a hint.)
+
+where the text says &quot;describe an algorithm&quot;,
+how detailed a description are we supposed to
+give?  please specify _exactly_ what you do
+and do not expect in the description.
+
+thanks,
+	michael (claym@wolf.cs.washington.edu)
+
+------- end of forwarded message
+
+to: cse421
+subject: space
+date: mon, 26 feb 1996 23:17:43 pst
+from: martin tompa &lt;tompa@june.cs.washington.edu&gt;
+
+
+
+a student asked how to measure the space required by an algorithm.
+
+generally, the space is the maximum number of words of memory needed
+by the algorithm at any one time.  most dynamic programming algorithms
+need much more space than the space used by the inputs and outputs.
+for instance, matrix-chain-order needs space theta(n^2) for the m and
+s tables, even though the input and output only take up theta(n)
+space.
+
+to: cse421
+subject: hw6, #4
+date: mon, 26 feb 1996 23:56:02 pst
+from: martin tompa &lt;tompa@june.cs.washington.edu&gt;
+
+
+
+on problem 4 of the homework sheet, i gave the following useful bit of
+advice:
+
+&quot;note that what is computed in line 6 during iteration k is not
+exactly the value d_{ij}^(k).&quot;
+
+one of the students has convinced me that this advice is ... uh
+... err ... not, strictly speaking, exactly, completely true.
+
+but no matter: if you believe the advice, you will be led to the proof
+that i had in mind.  if you don't believe the advice, you will be led
+to the proof this student came up with.
+
+this is what is so great about teaching: no matter how often you teach
+one of these classical results, each time you learn something new
+about it, often from students.
+to: cse421@geoduck
+subject: details on chapter 36 reading assignment
+date: sun, 03 mar 1996 14:44:14 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+you should read the whole chapter, but you can skim the following
+parts:
+
+from lemma 36.1 to the end of section 36.1
+the proofs of theorems 36.9 and 36.10
+
+the main technical meat that we want to cover is in section 36.5, but
+you need some of the motivation and definitions from earlier in the
+chapter to make sense of this.  on a first reading, i would strongly
+recommend delaying the reading from lemma 36.5 to the end of section
+36.3 until you've finished the chapter.  these are important results
+and proofs, but you will have trouble understanding them until you get
+more experience with reducibilities in section 36.5.
+
+date: 3 mar 1996 21:03 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: 24-1(a)
+
+
+  &gt; please define a second best minimum spanning tree: suppose there are 
+  &gt; two msts-- does one qualify as a 2'nd best? or do you want to see the 
+  &gt; one with the second-smallest distinct weight?
+
+i'm willing to credit a good solution to the problem under either
+interpretation.  howeverm, i think the book intended, and i think it
+will be easier to prove, the first interpretation: if there happen
+to be several spanning trees with weight equal to the minimum, then
+t can be any of them, and any of the others can be taken as the &quot;2nd
+best&quot;.
+date: 3 mar 1996 21:33 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+subject: re: 24-1(a)
+to: cse421@cs
+
+
+ps: in line with the previous message, you should change &quot;the
+second-best&quot; to &quot;a second-best&quot; in part (c), in the case where the
+second-best is not unique.
+date: 3 mar 1996 21:36 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: hw7, 17.2-4
+
+
+
+  &gt; could i make the assumption that the longest distance possible between 
+  &gt; two gas stations is n miles, the same miles as the professor's car can run 
+  &gt; with a full tank of gas?  
+
+yes, you may assume there is no section of road longer than n miles
+without a gas station.
+date: 4 mar 1996 11:44 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: homework revision
+
+
+problem 24-1(a) is trickier than i had first realized.  it's a good
+test of your understanding of min spanning trees, and not beyond
+what i think you can do, but the assignment seems meaty enough
+without it.  so i'm making part (a) extra credit.  parts (b) and (c)
+are still required, and of course you can use the result stated in
+part (a)  even if you don't prove it.
+
+****** warning:  hint follows *******
+
+
+
+in case you want a start on the extra credit part, here's a hint  -- 
+
+
+
+
+
+
+
+
+let t1 be a min spanning tree.
+let t2 be a 2nd best spanning tree with as many edges in common with
+t1 as possible.
+date: 4 mar 1996 18:20 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: office hour change
+
+
+unfortunately, i will be unavailable during my normal office hour,
+2:30-3:30 tomorrow, tuesday 3/5.  however, i should be in most of
+the morning, and from 1:30 to 2:30.  sorry for the inconvenience.
+date: 5 mar 1996 10:59 pst
+from: larry ruzzo &lt;ruzzo@quinault.cs.washington.edu&gt;
+to: cse421@cs
+subject: re: hw 7, 17-2.2  (***caution; hint below***)
+
+
+
+  &gt; 	i am have some trouble coming up with an algorithm that runs in 
+  &gt; o(nw) for this problem.  i can see using variations of floyd-warshall or 
+  &gt; matrix chain order, but these seem to take o(n**3).  i haven't been able 
+  &gt; to come up with a variation of longest common subsequence that works.  is 
+  &gt; there something i am missing?
+
+(***caution; hint below***)
+
+the key issue with dynamic programming is that an optimal solution
+to the problem can be built out of optimal solutions to related
+smaller problems.  the smaller problems often arise by fixing in
+various ways some of the choices that ultimately must be made.
+e.g., in matrix parenthesization, there was a choice as to where the
+outermost parentheses go, and assuming they go at position k,
+certain subproblems arise.  you don't know k, but can consider all
+possibilities.  in the string edit problem you did for homework,
+there's a choice as to the last edit operation used to build the
+output string from the input string, and assuming it was, say, a
+copy, then a certain subproblem  arises; assuming it was a twiddle,
+a different subproblem arises, etc.  again, you don't know which is
+the right choice to make for the last operation, so you consider
+them all.  lcs is similar.  
+
+what are the choices in knapsack?  if you fix one, does it give rise
+to a smaller knapsack-like problem?  which choice should you fix?
+how many ways are there to fix it?  can you tell what the right
+choice is?  if not, can you consider all possibilities in some
+systematic way?
+
+if you're stuck, i always recommend playing with some examples.
+make up some simple instances of the problem with 1 object; what's
+it's solution?  vary w; how does the solution change?  add another
+object or 3, etc.  there's of course some danger that your examples
+will be too simple or too specialized or that you will leap to the 
+wrong conclusion from them, but that's what proofs are for, and
+concrete examples often help crystalize your thinking.
+to: cse421@geoduck
+subject: evaluations friday
+date: wed, 06 mar 1996 13:50:08 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+don't forget your #2 pencils on friday.  we'll take the last 10 minutes of
+class to do student evaluations.
+to: cse421@geoduck
+subject: hw8 (just kidding)
+date: thu, 07 mar 1996 17:19:16 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+here are some exercises on chapter 36 to help you study for the final.  you
+don't need to turn these in.
+
+p. 923, 36.1-1
+p. 924, 36.1-4
+p. 929, 36.2-5
+p. 938, 36.3-1
+p. 960, 36.5-1
+date: fri, 8 mar 1996 15:03:37 -0800
+from: aberman@hobbes (andrew berman)
+to: cse421@hobbes
+subject: office hours during finals week
+
+
+
+i will be holding office hours in 326 from 11:30-1:30 on monday.
+
+andy
+date: wed, 13 mar 1996 12:55:48 -0800 (pst)
+from: larry roske &lt;roske@lynx.cs.washington.edu&gt;
+to: martin tompa &lt;tompa@cs.washington.edu&gt;
+cc: cse421@geoduck.cs.washington.edu
+subject: re: hw8 (just kidding)
+
+
+will problems like those suggested for ch. 36 be on the
+final, and if so would it be possible to get solutions
+to the suggested problems via email?
+
+thanks,
+
+--larry
+
+
+on thu, 7 mar 1996, martin tompa wrote:
+
+&gt; 
+&gt; here are some exercises on chapter 36 to help you study for the final.  you
+&gt; don't need to turn these in.
+&gt; 
+&gt; p. 923, 36.1-1
+&gt; p. 924, 36.1-4
+&gt; p. 929, 36.2-5
+&gt; p. 938, 36.3-1
+&gt; p. 960, 36.5-1
+&gt; 
+date: wed, 13 mar 1996 13:08:36 -0800 (pst)
+from: jack hill &lt;jshill@u.washington.edu&gt;
+to: larry roske &lt;roske@cs.washington.edu&gt;
+cc: martin tompa &lt;tompa@cs.washington.edu&gt;, cse421@geoduck.cs.washington.edu
+subject: re: hw8 (just kidding)
+
+
+
+  i would also appreciate solutions for the chapter 36 problems, 
+especially if they are along the lines of those that we'll see on the final.
+
+just wanted to let you know that more than one person was interested!
+
+thanks, 
+  jack scott hill
+  jshill@cs
+
+
+on wed, 13 mar 1996, larry roske wrote:
+
+&gt; will problems like those suggested for ch. 36 be on the
+&gt; final, and if so would it be possible to get solutions
+&gt; to the suggested problems via email?
+&gt; 
+&gt; thanks,
+&gt; 
+&gt; --larry
+&gt; 
+&gt; 
+&gt; on thu, 7 mar 1996, martin tompa wrote:
+&gt; 
+&gt; &gt; 
+&gt; &gt; here are some exercises on chapter 36 to help you study for the final.  you
+&gt; &gt; don't need to turn these in.
+&gt; &gt; 
+&gt; &gt; p. 923, 36.1-1
+&gt; &gt; p. 924, 36.1-4
+&gt; &gt; p. 929, 36.2-5
+&gt; &gt; p. 938, 36.3-1
+&gt; &gt; p. 960, 36.5-1
+&gt; &gt; 
+&gt; 
+to: cse421@geoduck
+subject: hw8 sketchy solutions
+date: wed, 13 mar 1996 14:17:40 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+yes, the intent of hw8 was to give you an idea of the type of problem you
+should be able to answer on the final tomorrow.
+
+because this request comes so late, there isn't time to write up and broadcast
+detailed solutions.  what i can do at this point is try to outline the key
+ideas in the solutions, leaving the details for you to work out.
+
+36.1-1: one direction of this is easy.  for the harder direction, use a binary
+search on the parameter k.  
+
+36.1-4: the instructions you received for hw7 gave the key issue for this
+problem.  if w is input in binary (as usual), then nw is exponential in the
+length of this binary encoding.
+
+36.2-5: look at the definition of np on page 927.  to determine if x is in l,
+try all possible values of y up to length |x|^c.  there are about 2^{|x|^c+1}
+such strings.
+
+36.3-1: let f1 be the reduction function for the reduction from l1 to l2, and
+f2 be the reduction function from l2 to l3.  then the composition f2 o f1
+reduces l1 to l3.  you have to argue that this composition runs in polynomial
+time, which is done as in the proof of lemma 36.3.
+
+36.5-1: there are two parts to this proof.  
+
+a. (the problem is in np.)  in addition to g1=(v1,e1) and g2=(v2,e2), the
+verification algorithm takes a function f: v1 -&gt; v2.  the algorithm checks
+that f is total (i.e., defined on all vertices of v1), an injection (i.e.,
+one-one), and that {u,v} in v1 implies {f(u),f(v)} in v2.  you must show that
+all this can be done in polynomial time.
+
+b. (the problem is np-hard.  here's a reduction from clique.)  given a graph g
+and an integer k for which you want to know if g has a k-clique, construct
+g2=g and g1 = a k-clique.  you must show that these can be constructed from g
+and k in polynomial time, and that g has a k-clique iff g1 is a subgraph of
+g2. 
+
+
+------- forwarded message
+
+date:    wed, 13 mar 1996 12:55:48 -0800
+from:    larry roske &lt;roske@lynx.cs.washington.edu&gt;
+to:      martin tompa &lt;tompa@cs.washington.edu&gt;
+cc:      cse421@geoduck.cs.washington.edu
+subject: re: hw8 (just kidding)
+
+will problems like those suggested for ch. 36 be on the
+final, and if so would it be possible to get solutions
+to the suggested problems via email?
+
+thanks,
+
+- --larry
+
+
+on thu, 7 mar 1996, martin tompa wrote:
+
+&gt; 
+&gt; here are some exercises on chapter 36 to help you study for the final.  you
+&gt; don't need to turn these in.
+&gt; 
+&gt; p. 923, 36.1-1
+&gt; p. 924, 36.1-4
+&gt; p. 929, 36.2-5
+&gt; p. 938, 36.3-1
+&gt; p. 960, 36.5-1
+&gt; 
+
+------- end of forwarded message
+
+to: cse421@geoduck
+subject: hw7
+date: wed, 13 mar 1996 15:16:08 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+andy doesn't quite have your hw7's graded, so you'll have to look at the
+solutions he prepared if you want to see how to solve them.  hopefully you can
+pick up your graded hw7 at the exam tomorrow.  sorry we couldn't get them back
+to you sooner.
+
+
+to: cse421@geoduck
+subject: problem 36.1-4
+date: wed, 13 mar 1996 15:26:46 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+no, that's not it.  it's really even simpler.  the input to the problem
+consists of the n weights and values, plus w written in binary.  imagine that
+n is small, and the weights and w are large; let's forget about the values of
+the objects for this discussion.  now the size of the input is o(n log w),
+since there are n+1 weights (including w itself), each of length at most log
+w.  but the running time is nw, which is not polynomial in n log w.  in fact,
+if n is a constant and w is allowed to vary, then nw is exponential in n log
+w, because w is exponential in log w.
+
+------- forwarded message
+
+date:    wed, 13 mar 1996 15:01:21 -0800
+to:      tompa@cs
+subject: problem 36.1-4
+
+
+i have a question regarding 36.1-4:
+
+if w is input in binary, then nw is exponential in the
+length of this binary encoding.
+
+is this because there are 2^n possible combinations of
+n items to consider, and therefore the capacity of w,
+if unrestricted, could be of a size that is exponential
+in n?
+
+
+------- end of forwarded message
+
+date: wed, 13 mar 1996 19:42:28 -0800 (pst)
+from: eva marie allen &lt;eallen@wolf.cs.washington.edu&gt;
+to: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;,
+        x says y means z &lt;ruzzo@cs.washington.edu&gt;,
+        algorithms &lt;cse421@cs.washington.edu&gt;
+subject: np
+
+
+i was wondering how much weight np completeness carried on this final.  i 
+am reading the material, and could easily spend all night on it.  
+
+eva
+
+date: thu, 14 mar 1996 13:47:23 -0800
+from: aberman@hobbes (andrew berman)
+to: cse421@hobbes
+subject: hw7
+
+
+
+
+i'll place them in a box in room 326 tomorrow morning.
+andy
+to: cse421@geoduck
+subject: hw7 and final exam pickup
+date: fri, 15 mar 1996 14:49:25 pst
+from: martin tompa &lt;tompa@geoduck.cs.washington.edu&gt;
+
+
+
+rather than putting hw7 in a box for pickup, we've decided to make both it and
+the final exams available together.  on monday, you can pick these up from
+larry's office, sieg 415.
+
+
+
+
+
+
+{ ruzzo | tompa | aberman } @cs.washington.edu	
+(last update: 
+   
+  01/05/96)
+
+
+
+
+cse 421 bboard/mail log
+
+cse 421 bboard/mail log
+
+cse 421 bboard/mail log
+
+cse 421 bboard/mail log
+
+cse 421 bboard/mail log
+
+cse 421 bboard/mail log
+
+cse 421 bboard/mail log
+
+cse 421 bboard/mail log
+
+cse 421 bboard/mail log
+
+cse 421 bboard/mail log

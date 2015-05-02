@@ -1,0 +1,107 @@
+don padgett
+
+
+
+
+
+
+
+
+don padgett
+
+ 
+
+dissertation research
+
+i am working with professor j.c. browne on the design and
+implementation of device control software (a.k.a. device drivers).  
+we are investigating the creation of a domain-specific 
+programming environment for constructing this class of 
+software.
+
+
+the focus of our work thus far has been on language and compiler 
+technologies.  we have devised a prototype domain-specific language for 
+specifying device control softare called vdl (virtual device language).  
+this language contains various features for reducing the effort 
+required to construct this class of software.  a reference manual
+for vdl is currently being constructed.  a  
+postscript draft  of the manual is available for viewing.  
+example vdl specifications are also available for viewing.
+
+
+vdl specifications for the 8253 counter component are available in 
+the following files:
+
+  c8253.pcn  (physical component interface file) 
+  c8253.vcm  (virtual component implementation file) 
+  c8253.vcx  (virtual component export file) 
+  c8253.vcn  (virtual component interface file) 
+
+
+vdl specifications for the pc-lpm-16 multifunction i/o device are 
+available in the following files:
+
+  lpm.pdn  (physical device interface file) 
+  lpm.vdm  (virtual device implementation file) 
+  lpm.vdx  (virtual device export file) 
+  lpm.vdn  (virtual device interface file) 
+
+
+ transparencies  used in a recent presentation 
+are also available for viewing.  they were created using microsoft powerpoint
+version 7.0b for windows 95.
+
+
+ 
+
+to contact me
+
+
+email   padgett@cs.utexas.edu
+
+postal	department of computer sciences 
+	tay 2.124, ut austin
+	austin tx 78712 usa
+
+fax	+1 512.471.8885
+
+
+
+
+
+
+
+
+
+
+
+
+don padgett
+
+
+don padgett
+
+
+don padgett
+
+
+don padgett
+
+
+don padgett
+
+
+don padgett
+
+
+don padgett
+
+
+don padgett
+
+
+don padgett
+
+
+don padgett

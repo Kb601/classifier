@@ -1,0 +1,111 @@
+suggested robotlab m.eng projects  
+suggested robotlab m.eng projects  
+
+ robotics
+
+ wireless robotics-get rosemary to communicate with the sun workstations using the wireless radio modem, with wireless video (using a cheap box which
+sends an analog video signal over radio (like tv)). hook this up to
+the atm video source and build an application of realtime vision
+tracking/etc. with rosemary as the host. (matt)
+
+ visual robot navigation-an extension to tom's project:
+mapmaking with visual cues. can use ideas from (1), but the robot
+walks around, and, using depth and position information produces a map
+of the world, uses it to navigate. (matt) [tom's project: a set of navigational becons were created for the robots]
+
+ video processing and machine vision
+
+
+ automatic storyboarding - use the dissolve detector code to
+automate generation of movie storyboards, possible outputing html
+pages that show the story board.  (justin and ramin)
+
+ parallelization of the mpeg encoder write a 'real-time'
+(or at least very fast) mpeg encoder using the atm cluster/sp2 and atm
+video source.  jon swartz and brian smith were interested in this. (matt)
+
+ port split-c to windows nt. this could prove to be
+non-trivial, as many aspects of the smp design rely on a unix process
+environment, in particular elf, and shared memory. use of nt features
+such as threads won't work. (matt and justin v.)
+
+ parallel rivl.  providing split-c/active messages support
+for rivl. we'd like rivl to be the general framework for going image
+computation, display, applications building, etc.  (it should help
+productivity a lot if we have an easy way for people to experiment and
+visualize vision algorithms, instead of writing crufty c programs.)
+this project would provide fine-grain data parallel processing support
+for the rivl architecture, basically by (a) porting various rivl
+image-processing primitives to split-c (for automatic parallelization)
+and (b) allowing users to write new rivl primitives in split-c for
+linking into the system. the easiest way to do all of this, i think:
+port rivl itself to split-c (should be easy) and make existing rivl
+behaviour a subset of the "split-rivl" (that is, local processing on
+one machine). (matt)
+
+  effects of compression what (empirical) effects do various compression algorithms have on common vision algorithms. (justin and ramin)
+
+  edge clustering develop algorithm for clustering of
+edges that represent a single object. (justin and ramin)
+
+  adobe photoshop plug-ins(nawaaz)
+
+
+ 
+
+ algorithms 
+
+ optimizationcreate an environment
+for the automatic optimization of highly iterative image
+transformation algorithms using the m4 macro language and perl
+scripts.  write m4 macros to automatically produce c-code according to
+some set of parameters (like how many times to unroll a loop) and the
+write a perl script to compile the set of programs and determine which
+is the fastest by timing the transformation on some set of images.
+this would greatly speed the production of optimized code for a given
+machine.  i have examples started of this idea for the rank transform.
+
+ search-based compilation
+   modelling compilation as a search problem on a system with constraints :
+the system will consist of
+	 a set of processors
+	 a set of memories
+	 an interconnect network
+	 a set of constraints
+		 number of processors
+		 size of memory
+		 which processor can access which memories in a cycle
+		 ordering imposed by the operations to be performed.
+		 etc.
+
+
+the code to be parellised will be tight loops and hence small. 
+the idea is to search the space of complied code to find the optimal one.
+this is most probably np complete, but speed is not the essence here.(nawaaz)
+
+ performance simulations the simulation is with respect
+to the algorithms we are interested in.  the many aspects that can be
+simulated are : a) cache -- implement and study cache accesses on
+various algorithms.  here we assume a single processor.  b) shared
+memory multiprocesssors -- simulate and study the effect of bus
+bandwidth, memory architecture , cache coherence on the system (with
+repect to alogrithms like correlation etc) (nawaaz)
+
+
+ dsps implementation / compilation / code generation for
+dsp chips (mpv?) : this is more specific then  search-based
+compilation. just to get an idea of what the chips are really
+capable of.
+
+ 
+
+suggested robotlab m.eng projects 
+suggested robotlab m.eng projects 
+suggested robotlab m.eng projects 
+suggested robotlab m.eng projects 
+suggested robotlab m.eng projects 
+suggested robotlab m.eng projects 
+suggested robotlab m.eng projects 
+suggested robotlab m.eng projects 
+suggested robotlab m.eng projects 
+suggested robotlab m.eng projects

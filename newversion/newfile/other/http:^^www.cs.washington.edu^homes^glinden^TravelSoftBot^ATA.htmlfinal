@@ -1,0 +1,167 @@
+automated travel assistant
+
+
+
+
+
+
+
+
+
+
+
+the automated travel assistant is a current research project
+by the 
+
+artificial intelligence group in the
+
+department of computer science and engineering
+
+at the
+
+university of washington.
+the automated travel assistant is being developed in
+cooperation with the 
+
+internet travel network
+and the american airlines 
+
+sabre group.
+
+real time airline flight data is generously being provided by itn.
+
+
+
+
+
+
+ata models the dialogue between a travel agent and client.
+the system minimizes the amount of information initialized specified
+by the user, offers several example flights from the large space of
+potential flights, and assists the user in iteratively refining his
+expressed preferences until an optimal flight is found.
+
+future enhancements include offering advice and recommending
+alternative flight itineraries, enhancements to the ui for specifying
+preferences, and a more sophisticated model of the cost and value of
+information.
+
+
+
+
+
+
+
+
+instructions
+
+walkthrough
+
+
+the applet takes approximately one minute to load.  queries typically take
+approximately 2-5 minutes to hit the database, processes the trips, and
+display the results.
+
+
+
+
+
+
+
+
+you're not java capable!  sorry, no cool applets for you.
+
+
+
+
+
+
+
+
+
+
+
+under construction...
+
+
+
+
+
+
+this applet is a prototype of the system.  the interaction with the
+system is currently limited to modifying the price and airline
+constraints at the trip level and price, airline, and airport
+constraints at the flight level.  
+keep an eye on this place.  changes
+should be happening rapidly.
+
+
+
+
+
+
+ 
+
+greg
+linden 
+
+	glinden@cs.washington.edu
+
+
+steve hanks
+
+	hanks@cs.washington.edu
+
+last modified:  8/1/96
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+...and a gamelan staff pick!
+
+
+
+
+
+
+
+
+
+automated travel assistant
+
+
+automated travel assistant
+
+
+automated travel assistant
+
+
+automated travel assistant
+
+
+automated travel assistant
+
+
+automated travel assistant
+
+
+automated travel assistant
+
+
+automated travel assistant
+
+
+automated travel assistant
+
+
+automated travel assistant

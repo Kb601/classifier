@@ -1,0 +1,121 @@
+lorie m. liebrock's home page
+
+
+
+lorie m. liebrock, ph. d.
+ assoc. (1982), delta community college
+ b.s. (1985), m.s. (1988), michigan technological university
+ m.s. (1992), ph.d. (1994), rice university
+
+
+lorie liebrock's research interests are in using problem topology during
+compilation. in particular, the use of topology to automate data distribution 
+and to allow application of regular application optimizations to partially 
+regular problems.
+
+she has developed algorithms for automatic distribution of irregularly coupled 
+regular mesh (a.k.a. composite grid or multiblock) problems, e.g., aircraft 
+aerodynamics and water-cooled nuclear reactor simulations, via the use of 
+problem topology. 
+for use with these automatic distribution algorithms, she has developed 
+a program template and a set of style guidelines for
+these applications that allow automatic transformation of an application
+code with no notion of data distribution into a standard high performance 
+fortran program with complete distribution specification.
+
+dr. liebrock is a member of acm, ieee, and ieee computer.
+
+
+
+ office
+ in michigan most of the time, call:
+ (906) 337-4205      office phone
+ (906) 337-5817      fax or if office phone is busy
+
+ postal
+ liebrock-hicks research
+ 2315 county rd. 
+ calumet, mi 49913
+
+ machine cs.rice.edu
+(click here to finger me)
+
+
+
+
+vitae
+
+ 
+  
+  resume.
+ 
+  
+  presentations.
+ 
+  
+  publications.
+
+
+
+
+
+publications available electronically
+
+ l.m. liebrock and d.l. hicks and k.w. kennedy and j.j. dongarra.
+  
+  using problem and algorithm topology in parallelization.
+  technical report, august 1991.
+ l.m. liebrock and k. kennedy.
+  parallelization of linearized applications in fortran d.
+  proceedings of international parallel processing symposium,
+     april 1994.
+     (a more complete 
+  
+     technical report is also available.) 
+ l.m. liebrock and k. kennedy.
+  
+  modeling parallel computation.
+  technical report, september 1994.
+ l.m. liebrock and k. kennedy.
+  
+  automatic data distribution of large meshes in coupled grid problems.
+  technical report, september 1994.
+ l.m. liebrock and k. kennedy.
+  
+  automatic data distribution of small meshes in coupled grid problems.
+  technical report, september 1994.
+ l.m. liebrock.
+  
+  using problem topology in parallelization.
+  technical report, september 1994.
+
+
+
+
+links
+
+
+
+rice university home page
+computer science department home page
+the center for research in parallel computation
+the d system home page
+liebrock-hicks research home page
+
+
+
+
+lorie@cs.rice.edu
+http://www.cs.rice.edu/~lorie
+
+
+lorie m. liebrock's home page
+lorie m. liebrock's home page
+lorie m. liebrock's home page
+lorie m. liebrock's home page
+lorie m. liebrock's home page
+lorie m. liebrock's home page
+lorie m. liebrock's home page
+lorie m. liebrock's home page
+lorie m. liebrock's home page
+lorie m. liebrock's home page

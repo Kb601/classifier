@@ -1,0 +1,1781 @@
+$header: /u/g/l/glew/public/html/rcs/coding-standards.html,v 1.2 1995/06/22 08:43:54 glew exp $
+
+
+
+p6 c coding standards 
+
+
+p6 c coding standards 
+
+
+
+december 13, 1991
+
+p6 architecture group
+
+r. wilkinson
+
+
+
+history
+early drafts - december 19, 1990; january 11, 1991
+
+first release - january 29, 1991
+
+second release - december 13, 1991
+rev. 2.0
+
+converted to html by a. glew thu jun 22 1995
+
+
+introduction
+
+this document details the standards to be followed when writing c code.
+it is expected to be followed by all c programmers
+in the workgroup computing division - portland.
+by promulgating these standards,
+we hope to address software issues related to readability and maintainability.
+by conforming to a common layout,
+it will be significantly easier for members within the group
+to navigate within one another's code.
+by not having to adjust to different coding formats,
+we remove a significant impediment to reading the code of others.
+in addition,
+the existence of some elements, such as standard function headers,
+will be an aid to others (and quite possibly the authors)
+in understanding what the program is doing.
+
+
+since even the simplest programs can take on lives of their own,
+it is recommended that these standards be followed from the earliest point
+of program inception.
+the relatively small overhead incurred initially
+will be more than repaid over the life of the program.
+it should also be noted that code reviews
+are intended to be part of our development methodology,
+and code is expected to conform to these standards to pass review.
+
+
+while it is doubtful that everyone will be in agreement
+with all of the standards presented,
+it is expected that they will be followed nonetheless.
+in all cases,
+good reasons exist for all of the standards in this document.
+the general intent is that within (and beyond) the context of these standards,
+code should be easily readable and understandable
+by any semi-c-literate programmer.
+this pertains not only to the format (and legibility) of c programs,
+but to the existence and helpfulness of comments within the code as well.
+
+
+program order
+
+the ordering of sections within programs will be as follows:
+
+
+	the intel copyright notice.
+				
+		the rcs id declaration.
+				
+&ltoverview&gt		an overview of the file contents.
+				
+&ltincludes&gt		any file inclusions.  only definition files
+(".h") should be included.
+
+&ltdefines&gt		macro/constant definitions.
+				
+typedef/struct	any type or structure definitions.
+				
+&ltexterns&gt		any external object definitions.  use with caution.
+				
+&ltglobals&gt		all global variable declarations.
+				
+&ltstatics&gt		all static variable declarations.
+				
+&ltforwards&gt		all forward function declarations.
+				
+&ltfunctions&gt	all function declarations (including "main").
+				
+		rcs "log" information.
+
+
+these are discussed below.
+
+
+&ltcopyright&gt
+to protect intel's intellectual property,
+every file should have a copyright notice of the form:
+
+/* copyright intel corporation, 1990, 1991. */
+
+each year of development should be represented.
+
+&ltrcs_id&gt
+rcs header information should go at the beginning of all files.
+this should be of the form:
+
+	#ifndef lint
+	static char	*rcsid = "$header: /u/g/l/glew/public/html/rcs/coding-standards.html,v 1.2 1995/06/22 08:43:54 glew exp $";
+	#endif
+
+
+
+in the case of header files,
+the form (for a header file called chapeau.h) should be:
+
+	#ifndef lint
+	static char	*rcsid_chapeau_h = "$header: /u/g/l/glew/public/html/rcs/coding-standards.html,v 1.2 1995/06/22 08:43:54 glew exp $";
+	#endif
+
+
+&ltoverview&gt
+this section is a (block) comment
+that should contain a general overview of the file's contents.
+what functionality does the file provide,
+how does it relate to other files (if part of a larger program),
+what are the major entry points, etc.,
+are all appropriate questions to answer here.
+
+&ltincludes&gt
+this section contains the "#include"s
+of any necessary header files.
+
+&ltdefines&gt
+this section contains any necessary "#define"s.
+
+typedef/struct:>
+this section contains all typedef
+and/or struct definitions specified in the file.
+
+&ltexterns&gt>
+this section contains all extern
+declarations specified in the file.
+
+&ltglobals&gt
+this section contains all global variable declarations
+with external visibility.
+
+&ltstatics&gt
+this section contains all global variable
+declarations with restricted static (local) visibility.
+
+&ltforwards&gt
+this section contains all necessary
+"forward" function/procedure declarations.
+(these are routines which are referenced
+before their actual implementation is specified.)
+
+&ltfunctions&gt
+this section contains the "body" of the code.
+all routines (including main()) are placed here.
+
+&ltrcs_log&gt
+rcs log information should be placed
+at the end of all files.
+this should be of the form:
+
+	/*
+	 * $log: coding-standards.html,v $
+	 * revision 1.2  1995/06/22 08:43:54  glew
+	 * *** empty log message ***
+	 *
+	 */
+
+
+
+
+particularly in those cases where they are extensive,
+macro, constant, type, and structure definitions
+may be more effectively placed in a separate ".h" file.
+
+header files
+
+to avoid the potential problems caused by nested header files,
+the body of header files should be designed for conditional inclusion.
+the format of a header file called toupee.h is given below.
+note the (required) use of the leading and trailing underscores.
+
+	#ifndef _toupee_h_
+	#define _toupee_h_
+		:
+	&ltfile body&gt
+		:
+	#endif /* _toupee_h_ */
+
+
+irrespective of the above format,
+header files should not include variable declarations.
+
+the use of the facilities provided in the header file, p6system.h,
+is strongly encouraged.
+a copy (as of december 13, 1991) has been included in appendix a.
+the file currently lives in ~p6/arch/src/util.
+
+names
+
+the use of capital letters in names is not a matter of choice.
+all #defines should have all letters capitalized.
+this includes the definitions of both constants and macros.
+all elements of an enumerated type should have the first letter capitalized
+and all other letters lower case.
+all other names should consist entirely of lower case letters.
+use of extraneous capital letters outside the bounds specified here
+require very strong justifications.
+
+
+names should be chosen to be reasonably descriptive.
+underscores ("_") should be used as separators.
+names of the form getcacheindex (or getcacheindex) are not acceptable.
+if lengthening a name increases clarity and/or understandability,
+the more descriptive name should be chosen.
+if this results in longer names, so be it.
+(clearly we're assuming some bounds of reason.
+using "i", "j", and "k",
+for indices in a "for" statement
+is pretty straightforward,
+while using "the_five_bits_for_encoding_the_register_or_an_immediate_value"
+is obvious insanity.)
+
+
+names that should be avoided are:
+
+
+names that might conflict with standard library names.
+
+names that differ only in case (e.g. foo and foo and foo).
+
+names that might look like each other (e.g. x_1st and x_lst 
+
+[x_"one"st and x_"el"st]).
+
+names that override declarations at a higher level.
+
+
+procedures names should reflect what they do.
+function names should reflect what they return.
+for functions returning only true/false values,
+a predicate form is recommended (e.g. is_queue_empty(ready_queue_ptr),
+is_ford(car)).
+
+
+strong encouragement is given to naming variables
+and parameters that are pointers
+in some manner that makes note of this quality.
+some suggestions are:
+
+
+black_table_ptr
+
+head_p
+
+tailp
+
+filepp	(pointer to a pointer)
+
+proc_ad	(for you 960 freaks - not recommended)
+
+
+types, variables, and routines that stand a good chance of being used
+outside the file in which they are contained (via "include")
+should have their names prefixed with some string
+that will aid in finding them.
+some examples would be 'btb_...'
+for popular "branch target buffer" entities
+and 'dfa_...' for items from the
+"data flow analyzer"
+that may experience a wider audience.
+
+macros
+
+macros provide a convenient mechanism for textual substitution.
+as a result of this, it is easy to introduce subtle bugs
+with the undisciplined use of macros.
+in the interests of avoiding such problems,
+the following restrictions are mandated.
+
+
+macro routines should have all elements passed explicitly
+and should have parentheses around their usage in the definition.
+the use of local and global variables within macros is discouraged.
+macros of the form:
+
+	#define calc(i, j)	i + j * k - l
+
+are in express violation of this standard.
+the appropriate form should be:
+
+	#define calc(i, j, k, l)	((i) + (j) * (k) - (l))
+
+
+
+if a macro consists of multiple statements,
+they should be enclosed in curly brackets ("{" and "}")
+and should
+not
+be ended with a semicolon (";").
+
+
+in the interests of avoiding potential side effects,
+it is recommended that macros be written in such a way as to evaluate
+their parameters only once.
+
+declaration standard
+
+this section describes the allowable forms of declarations.
+unless mentioned in this section,
+other forms of declarations should be avoided.
+(function declarations are described in a separate section.)
+
+
+for emumerations, the proper forms are:
+
+typedef enum { first, second, third } type_name;
+		/*
+		 * this form is acceptable if it fits easily on a single line
+		 * and the elements are self-explanatory.
+		 */
+
+
+typedef enum {
+	first,	/* pertinent comment.  (not required.) */
+	second,	/* pertinent comment.  (not required.) */
+	third	/* pertinent comment.  (not required.) */
+} type_name;
+		/*
+		 * this form should be used if the definition will not fit on
+		 * a single line or if individual elements require explanation.
+		 */
+
+
+typedef enum {
+	first,	second,	third,	fourth,	fifth,
+	sixth,	seventh,	eighth,	ninth,	tenth,
+	eleventh,	twelfth,	thirteenth
+} type_name;
+		/*
+		 * this form should be used for large numbers of
+		 * self-descriptive elements.
+		 */
+
+
+typedef enum {
+	first  = initializer1,
+	second = initializer2,
+	third  = initializer3
+} type_name;
+
+
+
+
+for structures, the proper forms are:
+
+
+typedef struct {
+	type_name1	field_name1;  /* purpose/usage */
+	type_name2	field_name2;
+		/*
+		 * particularly long and detailed explanation of the purpose/usage
+		 * of this field using remarkably long words and referencing dull,
+		 * dry tomes better left buried in the crypt from which they were
+		 * unearthed rather than be forced out into the light of day.
+		 */
+	type_name3	field_name3;  /* purpose/usage */
+} type_name;
+
+
+typedef struct {
+	unsigned	field_name1	: 16;  /* purpose/usage */
+	unsigned	field_name2	: 8;   /* purpose/usage */
+	unsigned				: 2;   /* why unused? */
+	unsigned	field_name3	: 4;
+		/* particularly long comment regarding purpose/usage */
+	unsigned	field_name4	: 2;   /* purpose/usage */
+} type_name;
+
+
+
+
+and, of course, for simple declarations:
+
+
+type_name	id;		/* purpose/usage */
+
+type_name	id_1,
+		id_2;
+
+type_name	id_1 = init,
+		id_2 = init;
+
+
+in the case of pointer declarations,
+the asterisk should be associated with the variable name,
+not the pointer type.
+to illustrate, the following is wrong:
+
+				int*	index_ptr;		/* wrong */
+
+rather, the proper form is:
+
+				int	*index_ptr;		/* right */
+
+
+whether the asterisk is lined-up at the standard "tab" indentation level
+or unindented by one space is a matter of programmer choice.
+to illustrate, both of the following are acceptable:
+
+	bool	is_ready;
+	int  *next_widget;	/* unindented */
+	char	id;
+
+
+and:
+
+
+	bool	is_ready;
+	int	*next_widget;	/* lined-up */
+	char	id;
+
+
+at no time should the fact that the compiler assigns enumeration values
+in a particular manner be used in a program.
+rather than do this,
+explicit values should be associated with the elements in the declaration.
+
+
+the use of bit fields to minimize storage usage
+(as opposed to mapping hardware structures)
+is strongly discouraged.
+
+
+unless truly obvious,
+comments should be included with each element of a structure.
+
+
+in variable declarations,
+there should be only one identifier on a line.
+multiple identifiers and/or multiple identifier assignments on a line
+are not acceptable unless they are intimately related,
+and even then they are not encouraged.
+
+
+numerical constants should not be coded directly.
+instead the "#define" facility should be used.
+constants declared explicitly "long"
+should use a capital "l".
+it is too easy to confuse letters and digits if this rule is not followed
+(i.e. 2l [2-el] looks too much like 21 [twenty-one]).
+
+
+for external arrays, repeat the array bounds declarations.
+since (given the preceding paragraph)
+any fixed limit should be "#define"-ed,
+there should be no problem with maintainability.
+
+
+never default "int" declarations, whether functions or parameters.
+
+
+the generous use of the keyword "static"
+on global functions and variables is encouraged
+to restrict their visibility outside the file.
+global accessiblity of variables is discouraged without good reasons.
+conversely,
+the use of local "extern" declarations
+within functions is actively discouraged without strong justification.
+
+
+in general, it is a poor idea to employ local declarations
+that override declarations at higher levels.
+
+
+particularly in the case of structs,
+types and instances of types should not combined in the same declaration.
+to illustrate, the following is not acceptable.
+
+
+	struct windmill {
+		int	num_sails;
+		int	usage;
+		int	style;
+	} don_quixote;				/* wrong */
+
+
+
+
+rather, it should be:
+
+
+	struct windmill {
+		int	num_sails;
+		int	usage;
+		int	style;
+	};
+
+	struct windmill	don_quixote;	/* right */
+
+
+expressions
+
+it has been said that there is little one can do about the problems
+caused by side effects in parameters
+except to avoid side effects in expressions.
+these are commendable words and should be adhered to rigorously.
+remember that the "++" and "--" operators are also
+assignment operators and thus do produce side effects.
+
+
+conditional expressions (a ? b : c),
+are not intuitive,
+can be confusing (particularly nested conditional expressions),
+and should be avoided.
+where appropriate, the approved form is:
+
+	(condition ? true_return_val : false_return_val)
+
+where the parentheses and the spaces around the "?"
+and ":" are mandatory.
+in addition,
+if any portion of the expression is other than a simple expression,
+parentheses around the offending section are encouraged.
+
+
+expressions that span multiple lines should be split before an operator,
+preferably at the lowest-precedence operator near the break.
+
+
+when using negation (!) in conditional expressions,
+it is recommended that the expression to be operated upon
+be enclosed in parentheses
+to improve readability and remove any ambiguities that might arise.
+
+
+the use of left-shift and right-shift operators
+should be reserved for bit operations.
+their use for multiplication, division,
+and exponentiation is strongly discouraged.
+(besides, most intelligent compilers will recognize the arithmetic cases
+and produce shift code for them, anyway.)
+
+
+assignment statements and initializations
+
+there is a time and place for embedded assignment statements, but rarely.
+in general they should be avoided.
+the primary acceptable instance is in conditional statements
+to check for special conditions.
+the two best examples are:
+
+	if ((obj_ptr = malloc(elem_num, elem_size) == null) {
+		
+	}
+
+
+and:
+
+
+	while ((c = getchar()) != eof) {
+		
+	}
+
+remember, an embedded assignment statement is a form of side effect
+(and that "x++" and "x--"
+are also assignment statements.)
+
+
+unless a local variable is going to be used very shortly after it is declared,
+it is recommended its initialization be performed at its point of first use
+rather than where it is declared.
+global variables should be initialized where declared.
+if this is not convenient (e.g. large arrays),
+they should be initialized in a dedicated initialization routine.
+in the case of dynamic initialization of structure variables,
+initialize the fields in the order in which they are defined.
+to illustrate:
+
+	typedef struct {
+		int	maker;
+		int	model;
+		int	year;
+		int	color;
+	} car;
+
+
+	car	my_car;
+
+	my_car.maker = porsche;
+	my_car.model = most_expensive;
+	my_car.year  = this_year;
+	my_car.color = red;
+
+
+since we live in an imperfect world,
+do not assume that uninitialized variables
+will be set to zero by the compiler.
+while this might be the case,
+resist the temptation to succumb to this assumption.
+if the initial value of a variable makes a difference,
+initialize it explicitly.
+
+
+along these lines,
+remember that that memory allocated by malloc()
+will not be zeroed.
+if it is important to have dynamically allocated memory zeroed
+(usually a good idea), calloc() should be used.
+(with respect to dynamic memory allocations,
+the reader is referred to the "safer" versions of these routines
+discussed in the p6 system header file appendix.)
+
+
+simple statements
+
+for the purpose of the ensuing discussions,
+we wish to define what we mean by a "simple" statement.
+a simple statement is one of three possibilities:
+
+
+
+it is either a simple assignment:
+
+
+		a = x[i];
+
+
+	or
+
+
+		a = f(x);
+
+
+a simple increment:
+
+
+		i++;
+
+
+	or
+
+
+		m = m + n;
+
+
+or a function call:
+
+
+		f(a, b, c);
+
+
+
+it is doubtful that:
+
+
+		*z[t] = f(x[f1(i)], f2(y[j] + n), k * r(s));
+
+
+could be considered a simple statement.
+
+
+
+
+conditional statements
+
+the form of conditional statements is as follows:
+
+	if (condition)
+		simple_then_statement;
+
+
+or (preferable)
+
+
+	if (condition) {
+		then_statements;
+	}
+
+
+with an  else  part:
+	if (condition)
+		simple_then_statement;
+	else
+		simple_else_statement;
+
+
+or
+
+
+	if (condition) {
+		then_statement(s);
+	} else {
+		else_statement(s);
+	}
+
+
+
+
+for complex conditions:
+
+
+	if (    condition_1
+	    && (condition_2 | | condition_3)
+	    &&  condition_4) {
+		then_statements;
+	} else {
+		else_statements;
+	}
+
+
+
+
+for nested if's, the proper form is:
+
+
+	if (condition1) {
+		statements;
+	} else if (condition2) {
+		statements;
+	} else if (condition3) {
+		statements;
+	} else {
+		statements;
+	}
+
+
+
+
+for nested control structures (including nested "if" statements), compound statements are required.
+to illustrate, the following is not allowed:
+
+
+	if (condition1)
+		while (condition2) {
+			statements;
+		}
+	else
+		else_statement;		/* wrong */
+
+
+
+
+rather, the approved form is:
+
+
+	if (condition1) {
+		while (condition2) {
+			statements;
+		}
+	} else {
+		else_statement;		/* right */
+	}
+
+
+
+
+the use of compound statements is recommended to avoid ambiguity.  the following is not acceptable:
+
+
+	if (condition1)
+		if (condition2)
+			simple_then_statement;	/* wrong */
+	else
+		simple_else_statement;
+
+
+
+
+it is better to use either
+
+
+	if (condition1) {
+		if (condition2)
+			simple_then_statement;
+	} else {
+		simple_else_statement;
+	}
+
+
+or
+	if (condition1) {
+		if (condition2) {
+			simple_then_statement;
+		} else {
+			simple_else_statement;
+		}
+	}
+
+(depending upon what was intended.)
+
+
+the only time brackets are not required on all parts
+of a conditional statement
+is when all parts of the conditional statement are simple statements
+(as defined above in the simple statements section).
+in other words,
+if any part of a conditional statement is a compound statement
+(for whatever reason),
+then all parts must be compound.
+
+
+in general, the use of compound statements {}
+is encouraged as an aid to readability and maintainability.
+
+
+iterative statements
+
+iterative statements should be of the form:
+
+	while (condition) {
+		statements;
+	}
+
+
+or
+
+
+	do {
+		statements;
+	} while (condition);
+
+
+or
+
+
+	for (i = initial; condition; next) {
+		statements;
+	}
+
+
+
+
+for infinite loops, the recommended form is:
+
+
+	while (true) {		/* (if true has been defined nonzero.) */
+		statements;
+	}
+
+
+or
+
+
+	while (1) {
+		statements;
+	}
+
+
+if there is only a single, simple statement to be executed,
+the brackets {} are not required but are encouraged.
+in any event,
+the statement to be executed must be on a line of its own.
+
+
+if an iterative statement has a null (empty) body,
+it should use an empty compound statement containing a comment
+verifying its emptiness.
+
+	/* find where strings differ. */
+	while (*str1++ == *str2++) {
+		/* void */
+	}
+
+
+the use of the "continue" statement is not encouraged.
+when used, it should be commented explicitly and,
+if possible, used early in the loop body.
+in addition,
+appropriate comments should added to make it easy to determine
+its target.
+
+
+compound (bracketed) statements
+
+as mentioned earlier,
+there is no requirement to use brackets {} in iterative statements
+if there is only a single, "simple" statement to be executed.
+the same was said to be true for conditional statements,
+with the added proviso that if any statement in the conditional statement
+was compound,
+then all statements were required to be compound.
+
+
+in these cases,
+although the brackets are not required
+they are strongly recommended as an aid to maintainability.
+to illustrate this, consider the following calculation of ackermann function values:
+
+
+	x[0] = 1;
+	x[1] = 1;
+	for (i = 2 ; i 
+
+should we later decide to sum the values as we go along, we might unwittingly add:
+
+	x[0] = 1;
+	x[1] = 1;
+	sum = 2;				/* new code. */
+	for (i = 2 ; i 
+here, although the indentation might make it look right,
+sum is only calculated after the for loop
+and would end up with the value, 2 + ackermann(limit).
+while we all know better than to do something stupid like this,
+its occurrence (by others, of course) is all too frequent.
+thus the recommended form of the initial construct is:
+
+
+	x[0] = 1;
+	x[1] = 1;
+	for (i = 2 ; i 
+this removes any possibility of ambiguity
+and reduces the chance of error with later enhancements/modifications.
+
+switch statements
+
+switch statements should have the following form:
+
+	switch (selector) {
+	    case first:
+	    case the_second:
+	        statements;
+	        break;
+
+	    case third:
+	        statements;
+	        break;
+
+	    case dont_care_1:
+	    case dont_care_2:
+	        break;
+
+	    default:
+	        fatal("unexpected selector in 'procedure_name'");
+	}
+
+switch statements are the only departure from the "standard" indentation.
+as will be mentioned in the indentation and spacing section,
+the standard indentation is 8 spaces (one 8-space tab stop).
+in switch statements,
+the 'case's are indented 4 spaces from the 'switch'
+and the statements are indented 8 spaces (one tab) from the 'switch'.
+
+
+the last case of the statement should be followed by an explicit break,
+even if it is the last choice in the statement.
+this prevents potential oversight problems
+when the switch statement is added to at a later time.
+if the last choice in the switch statement is default,
+it does not require a break.
+
+
+in the case of enumerated types,
+each element of the enumeration must have a "case"
+in the switch statement.
+in addition, a "default" must exist as the last choice
+and must contain an indication that an error has occurred.
+
+
+if the statements in a particular 'case' do not end with a 'break'
+(thereby continuing control in the following 'case'),
+a bold comment should exist to indicate and explain the situation.
+in addition,
+it is recommended that a 'lint' style comment of the form
+/*fallthrough*/ be placed where a break might otherwise be.
+to illustrate:
+
+	/* print numeric value. */
+	switch (num->type) {
+	    case signed_int:
+	        putchar(num->negative ? "-" : "+");	/* place the sign. */
+	        /*fallthrough*/
+
+	    case unsigned_int:
+	        printf("%d", num->int_value);		/* now print the value. */
+	        break;
+
+	    case floating_pt:
+	        printf("%lf", num->fp_value);
+	        break;
+
+	    default:
+	        warning("unknown num->type encountered.");
+	}
+
+
+
+function standard
+
+the proper form of a function declaration is as follows:
+
+/*
+ * function_name
+ *
+ *function:
+ * interface specification.  purpose of routine.  expected usage.
+ * pertinent comments regarding return values.
+ *
+ *params:
+ * discussion of parameters.  assumptions made about parameters, if any.
+ * this section is necessary only if there is something more meaningful to be said
+ * about the parameters that is not contained in their comments.
+ *
+ *logic:
+ * internal operation and structure.  algorithm description.
+ *
+ *assumptions:
+ * assumptions made that affect the correct functioning of the routine.
+ *
+ *note:
+ * any special caveats, concerns, or special cautions.
+ *
+ *returns:
+ * information regarding the possible return values.
+ */
+
+return_type
+function_name(param1, param2)
+param_type param1;		/* purpose.  expected values. */
+param_type param2;		/* out:  (if modified.)  purpose.  expected values. */
+{
+	type1 variable1,	/* purpose of variable.  description of use. */
+	        variable_the_second_of_this_type;
+				/*
+				 * purpose and description of this second variable.
+				 * as much detail as necessary to make sense to others.
+				 */
+	type2 variable_3;	/* comment as above. */
+
+	code body;
+
+}/*** end function_name() ***/
+
+
+
+while portions of the function's comment header may be omitted
+if they have no meaningful content,
+minimum necessities are the function_name and the function: sections.
+
+
+each function parameter must be declared on a separate line.
+declarations of multiple parameters of the same type on the same line
+is expressly forbidden, no matter how intimately related the parameters may be.
+
+
+although c assumes that a function
+without a specified type returns an int,
+this construct should never be used.
+all functions should have either an explicit return type or void
+(for "no return value").
+if a function is specified as void,
+it should never be used as an expression.
+if a function is specified with an explicit return type,
+it should never be used as a statement.
+if the returned value is of no interest,
+it is recommended that it be cast in the form:
+
+	(void) f(x);
+
+
+or
+
+
+	dont_care = f(x);
+
+
+indentation and spacing
+
+with the specific exceptions mentioned earlier
+in the section on switch statements,
+the standard unit of indentation is an 8-space tab (or 8 spaces).
+use of tabs is encouraged,
+but tab stops must be, without exception, 8 spaces.
+(due to the idiosyncrasies of text formatters,
+tabs [or 8 spaces] may not be translated to paper accurately
+for the examples in this document.
+assume indentation levels of 8 spaces if that appears to be the intent.)
+
+
+every reasonable effort should be made
+to limit line lengths to 80 characters.
+this improves the readability when looking at listings
+or when viewing on standard (limited) alpha-numeric terminals.
+while program understandability should not be compromised to meet this goal,
+code which consistently breaks the 80 column barrier
+may need to be justified before a higher court.
+
+
+one of the primary purposes of spaces in a program is to enhance readability.
+to this end, the use of horizontal and vertical spacing is encouraged.
+as an aid to the uncertain reader, the following recommendations are provided:
+
+
+
+at least three blank lines between routines.
+
+
+one space after a comma.
+
+
+spaces around all assignment operators (=, +=, -=, etc.).
+
+
+one space on either side of a binary operator
+(except for "." and "->").
+
+
+no spaces between an identifier and "++" or "--".
+
+
+no space between a function name and its left paren.
+
+
+no extraneous spaces at the end of a line.
+
+
+comments
+
+comments are a vital and necessary aid to program understanding.
+as this is one of our expressed goals, they are strongly encouraged.
+it should be noted that this insistence on comments in the code
+is not so much to help the original developer
+(though they may prove useful in that regard),
+as to support others who may become
+involved with the code at some later date.
+whether next week, next month, or next year,
+someone (potentially less brilliant) will need to understand the code
+without the benefit of the developer's assistance.
+this is the audience towards which comments should be directed.
+
+
+comments of the form:
+
+	/*
+	 * 
+	 */
+
+are especially encouraged.
+whenever the closing delimiter (*/)
+is not on the same line as the opener (/*),
+it must be lined up with the opener (as above).
+in addition, comments of the form:
+
+	/*
+	 *  */
+
+
+or
+
+
+	/* 
+	 */
+
+
+or
+
+
+	/* 
+	 * 
+	 */
+
+are expressly forbidden.
+
+
+comments that refer to code that follows the comment
+should be at the same indentation level as the code that follows.
+comments that directly refer to code just preceding the comments
+should be indented one level from the indentation level of the preceding code.
+to illustrate:
+
+
+	/* now get the next free index. */
+	index = get_free_index(x_ptr);
+		/* this returns either a free index or zero if there are none. */
+
+
+in addition to the normal "good sense" commenting,
+offensive code should be justified with profuse comments.
+
+
+as aids to readability, comprehension, and organization,
+comment "banners" acceptable by the code review committee are permitted
+(though not required).
+some popular choices by those attached to this approach include:
+
+
+
+/******************************************************************************/
+/**************************** function declarations ***************************/
+/******************************************************************************/
+
+
+
+or
+
+
+/**************************** variable declarations ***************************/
+
+
+
+or
+
+
+/***********************/
+/******  globals  ******/
+/***********************/
+
+
+a ^l (control-l) can be helpful in formatting output.
+it causes a page-feed,
+so subsequent text starts at the top of a new page.
+if used, the ^l should be on a line by itself.
+at no time should it be considered acceptable to substitute
+a ^l for blank lines between functions.
+
+miscellaneous
+
+as an aid to promoting good programming practice,
+the use of the notorious "goto"s, "setjmp()"s,
+and "longjmp()"s
+are outlawed.
+in order to employ such a construct,
+it must be conclusively proven that to do otherwise
+results in impossibly convoluted code.
+
+
+pointer arithmetic is potentially dangerous and should be used with care.
+it goes without saying that c permits a wide latitude in pointer operations.
+however, the fact that the language provides the means to hang oneself
+does not necessarily mean that that is the thing to do.
+code will be far more readable and maintainable if such constructs are avoided.
+while it is true that usage of the form:
+
+	c = char_ptr++;
+
+may be reasonable,
+usage of the form:
+
+	c = (char1_ptr - char2_ptr);
+
+is a bad idea at best.
+rather than risk needless obfuscation,
+it is recommended that all but the simplest pointer arithmetic
+be avoided if at all possible.
+where its use is necessary,
+the presence of explanatory comments is very strongly advocated.
+
+
+pointers should be compared to null
+(from a header file such as stdio.h) rather than 0.
+
+
+code that depends upon the order of evaluation of expressions is not acceptable.
+examples of such things are:
+
+	a[i] = b[i++];			/* bad! */
+
+
+and
+
+
+	x = f(a[i], i++);			/* more bad! */
+
+these come under the province of side effects and should be avoided
+(as discussed in the section, expressions).
+
+
+in all cases,
+code should be written to be as readable and understandable as possible
+to someone with a moderate understanding of c and programming,
+and a reasonable understanding of the program in question.
+where subtleties of c are necessary,
+they should be commented clearly
+so as to be readily understandable by any c programmer.
+where particularly involved or complex code is required,
+comments should be copiously strewn about to promote better understanding.
+at no time should code be written whose correct understanding
+depends upon the detailed knowledge of the workings of a particular compiler.
+
+
+certain character strings have been reserved for use
+under only certain conditions.
+they serve as flags to alert us to circumstances
+that may require special attention.
+these reserved strings are expected to be used in comments
+to indicate particular situations.
+their description and usage is as follows:
+
+
+tbd - this "flag" is used to indicate items
+that require later definition.
+it stands for to be defined (or determined).
+the ensuing comment should provide more particulars.
+
+nyi - this "flag" is used to indicate items that have been defined
+and are now awaiting implementation.
+it stands for not yet implemented.
+the ensuing comment should provide more particulars.
+
+machdep - this "flag" is used to indicate the existence of an explicit
+machine dependency in the code.
+again, the ensuing comment should provide more particulars.
+
+bug: - this "flag" is used to indicate the existence of a bug of some form.
+it should be followed immediately in the comment (on the same line)
+with one of the keywords incomplete, untested, or wrong,
+to indicate its type along with a more descriptive comment if appropriate.
+if none of the keywords is applicable,
+some other descriptive word should be used
+along with a more extensive comment.
+
+
+machine dependent code should be avoided as much as possible.
+where absolutely necessary,
+it should be localized in routines in a separate file if at all possible.
+in all cases,
+extensive comments are the order of the day.
+
+
+the use of conditional compilation facilities is discouraged wherever possible.
+when necessary,
+it is recommended that it be localized in
+header files and a separate "machine-dependent" code file.
+
+
+structure overlays
+(casting one structure pointer type to a different structure pointer type)
+should be avoided at all costs.
+for those rare cases where they are absolutely necessary,
+it is advised that they be localized
+in a separate "machine-dependent" file with copious comments.
+
+
+avoid the use of unnecessary global variables.
+
+
+the "include"ing of "name.c" files (code files)
+is strongly discouraged.
+
+
+where disagreements arise,
+the code review committee will have the final word
+on the extent to which code is readable and understandable.
+the request by a code review member for more (useful) comments
+will be evidence that such comments are necessary.
+anyone responsible for coding in a manner at odds with these standards
+under the assumption that a) no one will be reading their code,
+or b) it will never go through code review (for whatever reasons),
+or c) they just don't care,
+will be suspended by their toes and shot at dawn.
+
+
+use of 'indent'
+
+it is possible to use the program, indent,
+to provide formatting of a file that
+roughly
+conforms
+to these coding standards (with some incompatible differences).
+to accomplish this, run:
+
+	indent in_file -npro -nip -nfc1 -cli0.5 -c0 -i8
+
+this will save the old version of the file in in_file.bak
+and place the newly-formatted version in in_file
+(or you can specify an explicit out_file after in_file).
+unfortunately, it does not handle formatting of comments correctly in all cases.
+in specific,
+comments of the form:
+
+/* very boring comment that goes beyond the end of the line (length = 76) */
+
+will get reformatted to be:
+
+	/* very boring comment that goes beyond the end of the line
+	 * (length = 76) */
+
+in direct violation of the comment standard.
+what this means is that
+after running indent on a file,
+it is still necessary to go through the file and edit it
+to ensure that it conforms to the coding standards.
+
+use of 'lint'
+
+it is important to remember that c takes the point of view
+that programmers know what they're doing.
+luckily for the programmers,
+tools have been developed which aid them in helping ensure
+that what they did was what they intended.
+one of the more useful tools along these lines is lint.
+the lint command checks c code for coding and syntax errors,
+and for inefficient or non-portable code.
+this includes such things as detection of unused
+(or potential problems with)
+variables and functions,
+type mismatches,
+possible errors in flow control,
+and legal constructions that may not be what were intended.
+the details of lint's operation differ from machine to machine,
+so the reader is referred to the "man" page for lint
+for more particulars on this command.
+
+example
+
+the following is an example intended to demonstrate some of the above standards.
+
+/*
+ * is_cache_hit
+ *
+ *function:
+ * this routine determines whether a memory reference is a cache hit.  if it is,
+ * "*index_p" will be changed to refer to the appropriate element in the cache and
+ * true will be returned.  if not, "*index_p" will be modified to refer to the
+ * element in the cache to be replaced and false will be returned.
+ *
+ *logic:
+ * the appropriate cache is selected.  based upon the type of the cache, the cache
+ * is searched to determine if the address in question ("mem_addr") is present.
+ * if so, that cache index is the one to return to the caller (via index_p).
+ * if not, the cache index to be returned to the user (for potential modification)
+ * is determined, again, based upon the cache type.
+ *
+ *assumptions:
+ * assumes the selected cache is configured.
+ *
+ *note:
+ * special circumstances/cautions.
+ * only direct-mapped and fully-associative caches are currently supported.
+ * unspecified results will be returned when an unsupported cache type is specified.
+ *
+ *returns:
+ * true  - element is in the cache.
+ * false - element is not in the cache.
+ */
+
+bool
+is_cache_hit(mem_addr, index_p, selector, knobs)
+mo_addr mem_addr;		/* memory address */
+int     *index_p;		/* out - pointer to cache index for hit or replacement */
+int     selector;		/* selects the cache in question (instruction or data) */
+knobs_t knobs;			/* system configuration parameters/constraints (ptr) */
+{
+        int             index;   /* used for local index computations. */
+        dfa_cache_elem  *cache;  /* cache pointer. */
+
+        /* select the cache to be used. */
+        cache = &dfa_cache[selector][0];
+                /*
+                 * we direct our cache pointer at the first element of the desired cache.
+                 * we can now simply reference it using "cache".
+                 */
+
+        /* determine the cache type and operate accordingly. */
+        switch (knobs->cache_type[selector]) {
+
+            case direct_map:
+                index = mem_addr & cache_index_mask[selector];
+                if (    cache[index].valid
+                    && (cache[index].tab == mem_addr)) {
+                        /* this is a hit! */
+                        *index_p = index;
+                        return true;
+                } else {
+                        /* this is a miss! */
+                        *index_p = index;
+                        return false;
+                }
+                break;
+
+            case associative:
+            case fully_associative:
+                /* step through cache looking for match. */
+                for ( index = 0; index cache_size[selector] ; index ++) {
+                        if (    cache[index].valid
+                            && (cache[index].tab == mem_addr)) {
+                                /* this is a hit! */
+                                *index_p = index;
+                                return true;
+                        }
+                }
+                /* no match found.  we have a miss!  find a free index. */
+                *index_p = get_lru_index(selector, knobs);
+                return false;
+                break;
+
+            case set_associative:
+            case set_associative_4:
+            case set_associative_8:
+                if (debug > 1)
+                        warning("unimplemented cache type in 'is_cache_hit()'");
+                break;
+
+            default:
+                fatal("unexpected default in 'is_cache_hit()'");
+        }
+}/*** end is_cache_hit() ***/
+
+
+ appendix: p6 system header file 
+
+the following is a listing of the p6system.h header file
+as of december 13, 1991.
+for the most accurate rendition of this file,
+the reader is referred to ~p6/arch/include
+where the most current copy should be available.
+
+
+/* copyright intel corporation, 1991. */
+
+#ifndef lint
+static char *rcsid_p6system_h = "$header: /u/g/l/glew/public/html/rcs/coding-standards.html,v 1.2 1995/06/22 08:43:54 glew exp $";
+#endif
+
+
+/*
+ * /p6/arch/include/p6system.h
+ *
+ * p6 standard c header file
+ *
+ * this file contains definitions that should be useful in c programming
+ * throughout the p6 project.
+ *
+ * the recommended use of each definition or declaration given below is
+ * documented, and should be respected so as to improve the readability of
+ * your c code.  (i.e. don't use something contained herein in a way that is
+ * not documented, because it will tend to obscure your code from other p6
+ * members.
+ * 
+ */
+
+
+#ifndef _p6system_h_
+#define _p6system_h_
+
+
+/*
+ * standard truth values
+ *
+ * realize that because c declares all non-zero values to be "true", you
+ * should never write code like "if (a == true)".  the recommended code would
+ * instead simply read "if (a)".
+ *
+ * direct comparison with false is acceptable, though, because
+ * "if (a == false)" both conveys its intended meaning, and doesn't have the
+ * got-yas of the comparisons with true.
+ *
+ * also try to be conscience of the different between false and null.  false
+ * denotes a boolean value, whereas null is a pointer value.  don't compare
+ * pointers with false; use null instead.  similarly, use false if you're
+ * testing a boolean.
+ * 
+ */
+
+#ifndef true
+#define true 1
+#endif
+#ifndef false
+#define false 0
+#endif
+
+
+/*
+ * standard "boolean" type.
+ *
+ * although c has little concept of an actual "boolean" type (true/false),
+ * variables that are, in fact, booleans are best indicated as such
+ * by the use of such a type.  to that end, the type is provided here.
+ *
+ */
+
+typedef int	bool;
+
+
+/*
+ * ansi c compatible function prototyping...
+ *
+ * ansi c compilers will perform type checking on arguments passed to
+ * functions when a function prototype for that function is provided
+ * (presumably in a header file).  unfortunately, k&r c compilers (i.e. the
+ * olders ones) consider ansi function prototypes to be syntax errors.  this
+ * macro is designed to deal with this.
+ *
+ * currently, c compilers which understand function prototypes are available
+ * on the rs/6000 as xlc and c89, on the suns and vaxes as gcc.
+ *
+ * ansi c prototypes and a k&r declaration for the libc function strncpy
+ * follow:
+ *
+ *	/ * ansi c function prototype * /
+ *	extern char *strncpy(char *, char *, unsigned);
+ *
+ *	/ * alternate ansi c function prototype * /
+ *	extern char *strncpy(char *dst, char *src, unsigned max_length);
+ *
+ *	/ * k&r function prototype * /
+ *	extern char *strncpy();
+ *
+ * ansi c compilers will accept any of the above three syntaxes.  the second
+ * is considered to be a more descriptive prototype, and its use is
+ * encouraged.
+ *
+ * the problem is that k&r compilers still exist, and we want to be able to
+ * compile our programs on them.  the macro give below uses the ansi c declared
+ * preprocessor symbol __stdc__ to detect whether the compiler can understand
+ * function prototypes or not.  if __stdc__ is not declared, then the
+ * prototype is omitted.
+ *
+ * an example of how to use this macro is given below:
+ *
+ *****
+ * usage
+ *****
+ *
+ *	/ * recommended declaration for libc's strncpy * /
+ *	extern char *strncpy args((char *dst, char *src, unsigned max_length));
+ *
+ * notice the double set of parentheses.  these are required.
+ *
+ * if __stdc__ is defined (which is done automatically by ansi c compilers),
+ * then this expands to:
+ *
+ *	extern char *strncpy (char *dst, char *src, unsigned max_length);
+ *
+ * otherwise, it expands to:
+ *
+ *	extern char *strncpy ();
+ *
+ * this gives us the functionality we want, which is that, given an ansi c
+ * compiler, we will get argument type checking, but our code will still work
+ * on older k&r compilers.
+ */
+
+#ifndef args
+#ifdef __stdc__
+#define args(x) x
+#else
+#define args(x) ()
+#endif
+#endif args
+
+
+/*
+ * assertions
+ *
+ * it is common and useful programming practice to add assertions to your
+ * code, so that events which are either unexpected or unhandled by the
+ * current code will be trapped, rather than quietly creating bugs further
+ * along the line.
+ *
+ * p6 code should use the following macro when coding such assertions, thus
+ * allowing for a single, uniform mechanism.  (unfortunately, nearly every
+ * machine implements its own version of assertions, thus necessitating us to
+ * use own so as to get a uniform interface.)
+ *
+ * p6 assertions are coded as follows:
+ *
+ *****
+ * usage
+ *****
+ *
+ *	/ * foo should never be greater than 7 * /
+ *	assert(foo stdio.h
+ *	#define debug
+ *	#include p6system.h
+ *	#undef debugf_out
+ *	#define debugf_out stdout
+ *
+ * debugf outputs its messages conditional on another preprocessor symbol,
+ * debugf_cond.  to be able to turn debugging messages on and off at runtime:
+ *
+ *	#define debug
+ *	#include p6system.h
+ *	#undef debugf_cond
+ *	int debugvar = 0;	 / * defaults to no debugging messages * /
+ *	#define debugf_cond debugvar
+ *
+ * then, debugging output is conditional on the variable debugvar.
+ *
+ * the macro omitdebugf is similar to omitassert, above.  it expands to
+ * nothing, making it easy to "comment out" a debug message.
+ *
+ * giving credit where credit is due, nearly all of these ideas are stolen
+ * directly from andy glew's standard debug.h file.
+ */
+ 
+#ifdef debug
+
+#define debugf(args) { \
+	if (debugf_cond) { \
+		_p6_assert_setup(1, debugf_out, __file__, __line__); \
+		_p6_assert args ; \
+	} \
+}
+
+#else /* not debug */
+
+#define debugf(args)
+
+#endif /* debug */
+
+#define debugf_out 0
+#define debugf_cond 1
+
+#define omitdebugf(args)
+
+
+/*
+ * standard "safe" versions of malloc, realloc, and calloc
+ *
+ * typically, programmers either clutter their code with checks for a null
+ * return value after every call to malloc, or they omit such checks
+ * altogether.  these routines are available in the p6 library, and should be
+ * used as general replacements to malloc and family.  this routines do the
+ * null themselves.  they guarantee to return a valid pointer for the amount
+ * of memory requested.  if the underlying malloc() etc actually failed to
+ * return the memory (i.e. returned null), these routines exit with a message
+ * to stderr explaining the situation (via an assert, for above), rather than
+ * returning.
+ * 
+ * these functions are defined in /p6/arch/lib/{p6hosttype}/libp6.a.  this
+ * library can be linked with the cc  command line arguments
+ * "-l/p6/arch/lib/`p6hosttype`" and "-lp6".
+ *
+ * using these routines simply eliminates the error checking from the
+ * programmer's code, thus improving readability.
+ *
+ */
+
+extern char *xmalloc args((unsigned size));
+extern char *xrealloc args((char *pointer, unsigned size));
+extern char *xcalloc args((unsigned nelem, unsigned elsize));
+
+#endif /* ifndef _p6system_h_ */
+
+
+
+
+p6 c coding standards 
+
+
+p6 c coding standards 
+
+
+p6 c coding standards 
+
+
+p6 c coding standards 
+
+
+p6 c coding standards 
+
+
+p6 c coding standards 
+
+
+p6 c coding standards 
+
+
+p6 c coding standards 
+
+
+p6 c coding standards 
+
+
+p6 c coding standards

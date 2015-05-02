@@ -1,0 +1,58 @@
+qmg project 
+
+
+
+ qmg: mesh generation and related software 
+
+the qmg package does finite element mesh generation in two and
+three dimensions.  
+the package includes geometric modeling software, the mesh generator itself, and a
+finite element solver.  the software is written primarily in c++ and
+matlab.  the qmg package is written by s. vavasis.  the mesh generator
+is based on an algorithm due to s. mitchell and s. vavasis.
+
+please select a topic from the following list.
+
+
+an overview and example of the qmg package
+installation instructions
+geometric objects and datatypes
+the mesh generator
+the finite element package
+reference on each command
+future expansion plans
+
+
+several people provided very useful advice to the author in the
+development qmg; please see the acknowledgements.
+
+
+this documentation is written by stephen a. vavasis and is
+copyright (c) 1995 by cornell university.
+permission to reproduce this documentation is granted provided this
+notice remains attached.  there is no warranty of any kind on
+this software or its documentation.  see the accompanying file
+'copyright' for a full statement of the copyright.
+
+
+ back to vavasis's home page. 
+
+
+qmg-home.html,v 1.1.1.1 1995/05/05 01:15:55 vavasis exp
+
+
+
+stephen a. vavasis, computer science department, cornell university,
+ithaca, ny 14853, vavasis@cs.cornell.edu
+
+
+ qmg project 
+ qmg project 
+ qmg project 
+ qmg project 
+ qmg project 
+ qmg project 
+ qmg project 
+ qmg project 
+ qmg project 
+ qmg project

@@ -1,0 +1,101 @@
+cs611:  homework assignments
+
+
+ cs611:  semantics of programming languages
+
+homeworks:
+
+ homework 0 (dvi file)
+
+ to solve this homework you need some ml definitions found in 
+     (the misnamed) hw1defs.sml.
+     the ml examples from class are also available in 
+     examples.sml, as well as a 
+     postscript version of the homework.
+ there is now a solution online, as well
+     as some tests.
+
+ homework 1 (dvi file)
+
+ the second homework.  this one features proofs as well as ml hacking.
+     there is also a postscript version 
+     of the assignment writeup.
+ there is now an ml solution online, as well
+     as solutions (dvi) to the proofs (also
+     available in postscript).
+ note: the test cases used to grade
+     your solutions are also online.
+
+ homework 2 (dvi file)
+
+ the third homework.  proofs and ml hacking again, now with types!
+     there is also a postscript version. 
+ there is now a solution (dvi) to the proofs 
+     online (also available in postscript).
+ there is also an ml solution to the programming
+     part online.
+ finally there is a parser and evaluator based
+     on the solution online.  the ml-lex and 
+     ml-yacc parser source is available for those
+     interested.
+
+ homework 3 (dvi file)
+
+ the fourth homework.  now it's only proofs, all exercises from gunter.
+     there is also a postscript version. 
+ there is now a solution (dvi) 
+     online (also available in postscript).
+
+ homework 4 (dvi file)
+
+ the fifth homework.  implementing the polymorphic lambda calculus, and
+     a lemma showing the soundness of the predicative model with respect to
+     type-beta reduction.
+ for those who don't want to type in the example code there is a 
+     text-only version of the homework.
+ there is now an ml solution online, as well
+     as the test cases used to grade your
+     submissions.
+ there is now a proof solution (dvi) 
+     online (also available in postscript).
+
+ homework 5 (dvi file)
+
+ the sixth homework.  implementations and proofs of unification and
+     type inference.
+     there is also a postscript version. 
+ for those who don't want to type in the example code there is a 
+     text-only version of the homework.
+ the ml solution is online, as well
+     as the test cases.
+ the solution (dvi) to the proofs is
+     online (also in postscript).
+
+ homework 6 (dvi file)
+
+ the seventh homework.  proofs on posets, cpos, continuous functions etc.
+     there is also a postscript version. 
+
+ assignment 0 (postscript)
+
+ the eight homework.  programming exercises and axiomatic semantics 
+     exercises and proofs.
+
+
+
+
+back to the cs611 homepage.
+
+
+
+
+cs611:  homework assignments
+cs611:  homework assignments
+cs611:  homework assignments
+cs611:  homework assignments
+cs611:  homework assignments
+cs611:  homework assignments
+cs611:  homework assignments
+cs611:  homework assignments
+cs611:  homework assignments
+cs611:  homework assignments

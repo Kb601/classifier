@@ -1,0 +1,124 @@
+a306 - retail store
+project
+
+the retail store project
+due at midnight on tuesday/wednesday, april 30/may 1
+
+
+as our main project for the semester, we are implementing
+a system to manage the sales and inventory data for a retail
+store. this page will serve as a jumping-off point for
+information pertaining to all aspects of the project. here
+you will find links to the results of our analysis and design
+discussions, descriptions of the assignments through which we
+will implement the system, and shared code and implementation
+hints.
+
+how to turn in your project
+
+ sometime before the deadline, type
+~jsobel/a306/final-handin to turn in your work.  you will
+be prompted for a list of file names.  list all the files you have
+written for the project, including your makefile.  if you
+run the final-handin program more than once, i will ignore all the
+handins except for the last one.  
+
+analysis and design: preliminary results
+
+below you will find a list of the classes that we have
+chosen (so far) to model the activity in a retail store. the
+name of each class is a link to more information about that
+class (such as the variables used to represent the state of
+instances of the class and the methods used to implement the
+behavior the those instances).
+
+
+
+person 
+
+customer 
+
+employee 
+
+inventory 
+
+item 
+
+tender 
+
+transaction 
+
+transactionelement 
+
+sale 
+
+return 
+
+store 
+
+company 
+
+
+
+assignments
+
+
+implement the person class and the
+     customer class.
+implement the tender classes.
+implement the transaction class and the
+     tranactionelement classes. 
+write a main driver program for the retail store.
+
+
+code and other helpful resources
+all links to code in the following list are really only for
+reference.  you can just include the header from
+~jsobel/a306/include and link with -la306 to
+use the extra classes below.
+
+
+
+a sample program demonstrating the use
+of the item and inventory classes.
+
+memmanaged classes: how to
+create classes with automatic memory management.
+
+employee.h and employee.cc: already written!
+
+c++ macros:useful for saving
+time and typing effort.
+ currency.h and currency.cc
+ percentage.h and percentage.cc
+ date.h and date.cc
+ datetime.h and datetime.cc
+ time.h and time.cc
+ shift.h and shift.cc
+ idcode.h
+ ssn.h
+
+
+
+
+
+a306 - retail store
+project
+a306 - retail store
+project
+a306 - retail store
+project
+a306 - retail store
+project
+a306 - retail store
+project
+a306 - retail store
+project
+a306 - retail store
+project
+a306 - retail store
+project
+a306 - retail store
+project
+a306 - retail store
+project

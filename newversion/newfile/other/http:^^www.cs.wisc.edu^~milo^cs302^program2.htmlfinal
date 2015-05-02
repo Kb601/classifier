@@ -1,0 +1,132 @@
+title - cs 302 fall 1996 - section 4
+
+
+
+
+  cs 302
+  fall 1996 - section 4
+ 
+algebraic language programming in c++
+instructor: 
+  milo m. martin 
+  (milo@cs.wisc.edu)
+
+
+program 2
+due wednesday, september 25, 1996 
+
+
+in program 2, you are a computer programmer who has been hired by
+a local restaurant to write a program for a new computer which will
+replace an old cash register.  
+
+
+the restaurant only has four items on the menu.  you may pick what those
+items are and set prices for them (each item must have a different price).
+you need to keep a running total of what is ordered and keep looping until
+the cash register operator asks the program to print out the total bill.
+also, you need to keep track of how many of each item are purchased and
+display them in the final bill.  be creative with the name
+of your restaurant, what sorts of food your restaurant offers, and what
+the prices are (ie, make up your own... don't just copy mine!).
+
+
+here is an example of what your menu might look like.  the formatting
+does not need to be exactly like this, but all dollar amounts must be
+formatted to 2 decimal places.
+
+ 	 the hamburger shack
+	 -------------------------------
+	 a.  hamburger            $1.00
+	 b.  cheeseburger         $1.20
+	 c.  double cheeseburger  $2.40
+	 d.  bacon cheeseburger   $2.00
+
+	 current subtotal:  $0.00
+	 enter your selection -->
+
+
+
+at this point, the cash register operator might press "a" (or, s/he 
+might press "a".  your program should do the same thing either way).
+you should add the cost of item a to the running subtotal and ask
+the operator if they are ready to print the final bill (the operator
+will enter "y", "y", "n", or "n" as an answer).  if the
+operator is not ready to print the bill yet, redisplay the menu 
+with the updated subtotal:
+
+	enter your selection -->  a
+
+	new subtotal is $1.00
+	would you like to print the bill now (y or n)?  n
+
+ 	the hamburger shack
+	-------------------------------
+	[...print your choices again...]
+
+	current subtotal: $1.00
+	enter your selection --> 
+
+
+
+when the operator says that, yes, s/he would like to print out a
+final bill, your program should print out an itemized list of what
+was ordered (and the total cost for each item), the subtotal, the
+sales tax (use 5% for sales tax), and the total (subtotal +
+sales tax).  for example:
+
+	[...]
+	would you like to print the bill now (y or n)?  y
+
+	customer bill
+	-------------
+	1 hamburger	      $1.00
+	2 cheeseburger	      $2.40
+	1 bacon cheeseburger  $2.00
+			     ------
+	subtotal              $5.40
+	sales tax             $0.27
+                             ======
+	amount due            $5.67
+
+
+
+notice that two cheeseburgers were ordered in this example, so the
+cost is listed as 2 times $1.20, or $2.40.  also notice that since
+no double cheeseburgers were ordered, they are not mentioned on
+the bill (it does not say "0 double cheeseburger").  the
+program should stop executing after the final bill is printed.
+
+
+what to turn in
+
+once you have your program working, use the print capabilities of the
+borland output window (click on the upper left square in the output window
+and then select "print") to a create a printout of output which
+demonstrates all of the features of your program.  your output printout
+should at least demonstrate ordering one of some item, ordering more than
+one of some item, and not ordering any of a third item.  submit print-outs
+of both your source code and your output and an electronic copy of your
+source code and executable file as before. 
+
+
+
+created by
+mike steele
+, milo martin
+& jeremy stenglein
+
+
+
+
+
+title - cs 302 fall 1996 - section 4
+title - cs 302 fall 1996 - section 4
+title - cs 302 fall 1996 - section 4
+title - cs 302 fall 1996 - section 4
+title - cs 302 fall 1996 - section 4
+title - cs 302 fall 1996 - section 4
+title - cs 302 fall 1996 - section 4
+title - cs 302 fall 1996 - section 4
+title - cs 302 fall 1996 - section 4
+title - cs 302 fall 1996 - section 4

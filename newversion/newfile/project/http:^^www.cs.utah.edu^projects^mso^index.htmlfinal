@@ -1,0 +1,95 @@
+mach shared objects
+
+
+
+
+the mach shared objects project
+
+
+
+principal faculty: gary lindstrom
+
+affiliated faculty: robert r.  kessler,
+john carter,
+mark swanson,
+robert mecklenburg
+
+
+nature of work
+
+the mach shared objects project is an effort to apply object-oriented
+techniques to the problems of operating systems interface and
+implementation, language implementations, and storage techniques.
+these areas are covered by a variety of software components and
+theoretical groundwork which operate in concert to enhance existing
+technonogies.
+
+
+
+     omos -
+	 an object/meta-object server
+
+     omos is an active object server which manages executable
+	 programs and their components as a set of composable objects.
+	 besides replacing the traditional services of a linker, omos
+	 is able to provide dynamic object loading, shared libraries,
+	 program analysis, and custom application construction.
+
+     the object manager
+
+     the object manager provides a centralized service for
+	 storing, retrieving, and naming object instances and the
+	 meta-objects.  this provides the services commonly attributed
+	 to a persistent object data manager.
+
+     a general object-oriented
+	 framework for interface expression
+
+     goofie is a meta-object generator capable of creating
+	 portable object descriptions.  these meta-objects are used to
+	 store and retrieve objects, marshal and unmarshal arguments
+	 to function calls and provide a ``platform'' for univeral
+	 polymorphism in the c++ programming language.
+
+
+funding
+
+mso is funded under the 
+persistent object bases
+program of the
+
+software and intelligent systems office
+of  arpa.
+
+quarterly report
+
+here is our latest onr project summary and
+quarterly report.
+
+publications
+
+here is a 
+complete list of mso project publications.
+
+
+
+ 
+
+department of computer science, university of utah
+ 
+gary@cs.utah.edu
+last modified wed sep 14 1994
+	 
+
+
+
+mach shared objects
+mach shared objects
+mach shared objects
+mach shared objects
+mach shared objects
+mach shared objects
+mach shared objects
+mach shared objects
+mach shared objects
+mach shared objects

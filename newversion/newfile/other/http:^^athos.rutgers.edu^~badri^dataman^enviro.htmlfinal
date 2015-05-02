@@ -1,0 +1,71 @@
+dataman lab configuration
+
+
+
+
+
+  dataman lab configuration  
+
+
+
+the dataman lab is a part of department of computer science, 
+rutgers university. the description of hardware equipment and 
+the software being used for research in mobile computing is 
+given below: 
+
+ hardware 
+
+we use 386/486 pc-ats running at 33 mhz for wireless base stations.
+these machines are connected to the rutgers lcsr network via
+ethernet. these machines are also equipped with 2 mbps ncr wavelan-at
+cards for wireless communication. wavelan is an indoor wireless lan
+which uses spread spectrum technology in the 900mhz ism band. csma/ca 
+is used for the media access protocol which provides ethernet like 
+interface to the higher layers. the range for wavelan radio 
+transmission is between 100-800 ft depending upon the office environment. 
+we currently have three base stations with overlapping reception areas
+although non-overlapped cells can be simulated by configuring each base
+station to use different mac layer network id for radio transmission. 
+
+the mobile hosts currently have two different configurations. one
+type is hp vectra 486 pc-ats running at 66 mhz which do not have any
+ethernet (wired network) connection. these use wavelan-at cards to 
+communicate with other mobile hosts and base station that are within
+the hearing distance. the other type is toshiba t1950 series 486 
+laptops running at 40 mhz. these use pcmcia wavelan cards for wireless
+communication which are similar in operation to the wavelan-at cards.
+the laptops do not have any ethernet connection either. 
+
+ operating system 
+
+all the mobile hosts (mhs) and the base stations or the mobile support
+routers (msrs) run mach 3.0 micro kernel (mk84) and ux server (ux40)
+which is similar to 4.3 bsd tahoe release. the msrs use mobile ip
+protocol from columbia university to provide a virtual mobile subnet
+consisting of multiple cells so that the mhs can move across these
+wireless cells without having to change their ip address. the msrs
+and the mhs also run the msrmicp and mhmicp programs respectively
+which take care of beaconing and registration (mobile internetworking
+control protocol) for mobile ip. 
+
+
+
+last modified: august 1, 1996 
+julio cesar navas 
+(navas@cs.rutgers.edu)
+
+
+
+
+
+
+dataman lab configuration
+dataman lab configuration
+dataman lab configuration
+dataman lab configuration
+dataman lab configuration
+dataman lab configuration
+dataman lab configuration
+dataman lab configuration
+dataman lab configuration
+dataman lab configuration

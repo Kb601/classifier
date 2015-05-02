@@ -1,0 +1,157 @@
+coupling and cohesion
+
+
+
+
+
+
+coupling and cohesion
+
+coupling
+
+an indication of the strength of interconnections between program units. 
+
+highly coupled have program units dependent on each other.  loosely coupled
+are made up of units that are independent or almost independent. 
+
+modules are independent if they can function completely without the presence of
+the other.  obviously, can't have modules completely independent of each other.
+must interact so that can produce desired outputs.  the more connections
+between modules, the more dependent they are in the sense that more info
+about one modules is required to understand the other module. 
+
+three factors: number of interfaces, complexity of interfaces, type of
+info flow along interfaces. 
+
+want to minimize number of interfaces between modules, minimize the
+complexity of each interface, and control the type of info flow.  an interface 
+of a module is used to pass information to and from other modules. 
+
+in general, modules tightly coupled if they use shared variables or if 
+they exchange control info. 
+
+loose coupling if info held within a unit and interface with other units
+via parameter lists.  tight coupling if shared global data. 
+
+if need only one field of a record, don't pass entire record.  keep interface
+as simple and small as possible. 
+
+two types of info flow: data or control.   
+
+
+  passing or receiving back control info means that the action of the
+module will depend on this control info, which makes it difficult to
+understand the module.
+  interfaces with only data communication result in lowest degree of
+coupling, followed by interfaces that only transfer control data.  highest if
+data is hybrid.
+
+
+ranked highest to lowest:
+
+ content coupling: if one directly references the contents of the other. 
+
+when one module modifies local data values or instructions in another
+module. (can happen in assembly language) 
+
+if one refers to local data in another module. 
+
+if one branches into a local label of another. 
+
+ common coupling: access to global data. 
+
+modules bound together by global data structures. 
+
+ control coupling: passing control flags (as parameters or globals) so
+that one module controls the sequence of processing steps in another module. 
+
+ stamp coupling: similar to common coupling except that global variables
+are shared selectively among routines that require the data.  e.g., packages
+in ada.  more desirable than common coupling because fewer modules will have
+to be modified if a shared data structure is modified.  pass entire data
+structure but need only parts of it. 
+
+ data coupling: use of parameter lists to pass data items between routines.
+
+
+
+
+
+cohesion
+
+measure of how well module fits together.   
+
+a component should implement a single logical function or single logical 
+entity.  all the parts should contribute to the implementation. 
+
+many levels of cohesion: 
+
+
+ coincidental cohesion: the parts of a component are not related but
+simply bundled into a single component. 
+
+      harder to understand and not reusable. 
+
+ logical association: similar functions such as input, error handling,
+etc. put together.  functions fall in same logical class.  may pass a
+flag to determine which ones executed. 
+
+     interface difficult to understand.  code for more than one function may be
+     intertwined, leading to severe maintenance problems.  difficult to reuse 
+
+ temporal cohesion: all of statements activated at a single time, such
+as start up or shut down, are brought together.  initialization, clean up. 
+
+     functions weakly related to one another, but more strongly related to
+     functions in other modules so may need to change lots of modules when
+     do maintenance. 
+
+ procedural cohesion: a single control sequence, e.g., a loop or sequence
+of decision statements.  often cuts across functional lines.  may contain
+only part of a complete function or parts of several functions. 
+
+     functions still weakly connected, and again unlikely to be reusable in
+     another product. 
+
+ communicational cohesion: operate on same input data or produce same
+output data.  may be performing more than one function.  generally acceptable
+if alternate structures with higher cohesion cannot be easily identified. 
+
+     still problems with reusability. 
+
+ sequential cohesion: output from one part serves as input for another
+part.  may contain several functions or parts of different functions. 
+
+ informational cohesion: performs a number of functions, each with its own
+entry point, with independent code for each function, all performed on same
+data structure.  different than logical cohesion because functions not 
+intertwined.   
+
+ functional cohesion: each part necessary for execution of a single
+function.  e.g., compute square root or sort the array. 
+
+usually reusable in other contexts.  maintenance easier. 
+
+ type cohesion: modules that support a data abstraction. 
+
+not strictly a linear scale.  functional much stronger than rest while first
+two much weaker than others.  often many levels may be applicable when
+considering two elements of a module.  cohesion of module considered as
+highest level of cohesion that is applicable to all elements in the module.
+
+
+
+
+ adam carlson
+
+
+coupling and cohesion
+coupling and cohesion
+coupling and cohesion
+coupling and cohesion
+coupling and cohesion
+coupling and cohesion
+coupling and cohesion
+coupling and cohesion
+coupling and cohesion
+coupling and cohesion

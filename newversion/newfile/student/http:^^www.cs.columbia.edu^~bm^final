@@ -1,0 +1,158 @@
+blair macintyre's home page
+
+
+
+
+
+
+blair macintyre
+blair macintyre -->
+
+
+graduate student,
+graphics and user interfaces lab,
+ cs department, 
+ columbia university
+
+
+
+ 
+
+
+columbia road runners club
+i'm also helping out with the columbia road runners club.  if you want to
+check out what we are up to, go to our home page.
+
+personal information
+
+   how to reach me
+   papers
+
+
+
+	
+doctoral research: 
+	interaction and information presentation in augemented reality
+
+my research is done within the context of the computer graphics lab research in augmented reality.
+	
+augmented reality is a form of virtual reality that uses see-through
+displays to enhance the world will computer generated material. when
+combined with more traditional palm, tablet and wall sized displays, a
+powerful augmented computing environment emerges in which two and
+three dimensional information can be presented to a user
+simultaneously on a combination of two and three dimensional
+displays. this gives us a wider variety of interaction techniques
+and ways of organizing information. the simple techniques used for
+window management in two dimensional graphical user interfaces, that
+rely on the user to manual arrange windows, will not extend well into
+this environment. more powerful, automated environment management
+techniques are required. we are investigating one approach to solving
+this problem, using a combination of expert system and
+constraint-based techniques.
+
+we are building a testbed (coterie) for fast prototyping of distributed virtual
+environment systems that supports multiple simultaneous users
+interacting in environments with many heterogenous displays and input
+devices. the testbed is designed around a multi-threaded, modular,
+object oriented programming model and supports fully transparent
+distributed communications via both client-server and fully replicated
+distributed objects. by building applications as groups of cooperating
+threads, a single programming model can be used for both single and
+multiprocess programs. both interpretted (obliq) and compiled
+(modula-3)
+languages are simultaneously available to the application programmer.
+
+an important component of this testbed is a high-level, distribted
+graphics library. by making the library objects directly
+distributable, programmers operate on the scene graphs directly,
+allowing complex distributed graphical applications to be created in a
+straightforward manner.
+
+finaly, we are building a number of applications using this testbed and
+environment management to both demonstrate their utility and point
+the way towards future research.
+
+
+
+talks
+
+here are the slides from a short,
+     informal talk i gave during our phd student informal talks series
+     this summer. 
+here are the slides from a 
+     the talk i gave at uist'96.
+
+
+
+
+the 3d hardware accelerator faq part 1 and
+     part 2 
+(last updated: tue mar 19 19:23:27 est 1996) 
+this is the faq i'm maintaining of 3d accelerators for pcs.  my particular
+interest is in finding pci-based cards that can drive stereo, see-through
+head-mounted displays (of the sort i'm modelling at the top of this page).
+for now, the faq is slanted in that direction, but that will change.
+
+
+
+misc
+
+
+some mirrors of the info-mac archives
+
+
+my netscape bookmarks
+
+
+webmaker docs
+
+a video camera  in our lab.  probably looking at
+     an nt screensaver right now.  eventually, this will be a fully interactive augmented reality application, that you will be able to control over the net.  check back in early july. 
+
+
+
+
+proselytization
+i'm using modula-3 for my research right now, because i believe it's
+the best language that i have available on all the architectures i
+need to use.  for more information, take a look at the online
+documentation.  i'm also using obliq, an interpretted language built
+on top of modula-3.
+
+
+ 
+
+ includes the language definition, pointers to implementations, a faq
+	and other useful information. 
+ 
+
+
+obliq is a lexically-scoped untyped language that supports distributed
+object-oriented computation. an obliq computation may involve multiple
+threads of control within an address space, multiple address spaces
+on a machine, heterogeneous machines over a local network, and multiple
+networks over the internet. objects are local to a site, while computation
+can roam over the network. the distributed computation mechanism
+is based on modula-3 network objects.  
+
+
+
+
+
+
+
+bm@cs.columbia.edu
+
+
+
+blair macintyre's home page
+blair macintyre's home page
+blair macintyre's home page
+blair macintyre's home page
+blair macintyre's home page
+blair macintyre's home page
+blair macintyre's home page
+blair macintyre's home page
+blair macintyre's home page
+blair macintyre's home page

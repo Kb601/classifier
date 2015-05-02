@@ -1,0 +1,188 @@
+cse 451 - autumn 1995: syllabus
+
+
+
+
+
+			   cse 451
+	    introduction tooperating systems
+			 autumn 1996
+
+				 
+
+		       course admin
+
+
+
+
+instructor: 
+  brian bershad 
+(cse451-instructor@cs.washington.edu) 
+
+
+lecture
+mwf 11:30 - 12:20 in low 102
+
+office hours
+tba
+
+
+
+
+
+
+
+
+
+
+
+
+teaching assistant
+sung-eun choi
+(cse451-ta@cs.washington.edu)  
+
+
+
+
+
+sections
+a: thursdays 12:30 - 1:20 in low 217
+    b: thursdays 1:30 - 2:30 in low 118
+office hours
+w 12:30 - 1:20 in sieg 326a
+
+
+
+please send mail to majordomo@cs with
+subscribe cse451 in the body of the message to subscribe to
+the course mailing list.  
+
+
+texts
+
+  operating system concepts  (4th edition) by silberschatz
+   and galvin
+ also known as the dinosaur book.  
+currently available in the bookstore.  a pretty common book, so you
+may be able to pick up a used copy without a lot of trouble.
+
+you might also want to pick up a book on c that suits your tastes.
+
+ 
+ 
+i will try to make several copies of the main textbook available for loan 
+in the engineering library.
+
+
+computer accounts
+you should have an account on the cse instructional machines (lynx, wolf, 
+grizzly). if you do not, see the cse main office for a form.
+
+
+
+computer software
+
+you'll need to know how to use several pieces of software in this class.
+
+ the unix operating system shell.
+ mail, grep, ls, etc.
+
+
+ the web
+
+ you already know enough about the web to have gotten to this
+point.  
+
+everyone in this class should set up their own home page if they
+haven't done so already.  the details of getting that page linked into
+the class web will be announced shortly.
+
+ programming utilities.
+
+ you'll need to know how to use tools like the c compiler, make,
+  and a debugger (either dbx or gdb) in order to do the programming
+  assignment.  you'll also need to become facile with an editor; i
+  recommend you use emacs.  you're be on your own for using these
+tools; we'll not be spending any time in lecture on them.
+
+
+
+grading
+
+your course grade will consist of four components:
+
+ projects (30%)
+ quizzes (5%)
+ your midterm score (20%)
+ your final exam score (40%)
+ course participation (5%)
+
+
+ 
+ 
+the midterms and
+the final exams will draw material from the homeworks, so it is
+criticial that you understand them.
+
+turning stuff in late
+
+please don't.  we will not accept late turnins.
+
+is there room for me in this class?
+
+i don't know.  if you don't currently have an entry code, you should
+file a petition for entry with the front office.  please do not come
+to me to ask for a signature on this, as i can only redirect your
+request to the front office.  if, at the end of the entry period,
+there are fewer students remaining enrolled than the maximum
+enrollment of this course, then some of the petitions will be granted.
+
+why not just take everybody?
+
+i'd like to admit everybody who wants to take this class, but i'm
+unfortunately bound by certain resource constraints. these include:
+available seating, computing resources and grading resources.  
+
+
+if you're not admitted into the course this term, then you will need
+to take the course another quarter.
+
+
+
+the reasonable person principle
+
+this principle (which applies throughout this course) simply states
+that a reasonable request made in a reasonable fashion shall
+be reasonably handled by reasonable persons.  
+
+ sung and i are both reasonable persons, and we expect that
+everyone else involved in this class is as well.
+
+a word of warning on cheating
+
+please don't.  concern about cheating creates an unpleasant
+environment for everyone.  i don't do a lot to prevent cheating, since
+preventative measures have huge costs and low return. my policy on
+cheating is simple: if i discover that it has occurred, you fail the
+assignment, and possibly the course.
+
+
+
+
+
+cse451-webmaster@cs.washington.edu
+
+
+
+
+
+cse 451 - autumn 1995: syllabus
+cse 451 - autumn 1995: syllabus
+cse 451 - autumn 1995: syllabus
+cse 451 - autumn 1995: syllabus
+cse 451 - autumn 1995: syllabus
+cse 451 - autumn 1995: syllabus
+cse 451 - autumn 1995: syllabus
+cse 451 - autumn 1995: syllabus
+cse 451 - autumn 1995: syllabus
+cse 451 - autumn 1995: syllabus

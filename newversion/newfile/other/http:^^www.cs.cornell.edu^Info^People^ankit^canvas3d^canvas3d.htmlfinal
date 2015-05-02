@@ -1,0 +1,34 @@
+canvas3d
+
+canvas3d
+canvas3d is a toolkit for interactive, platform-independent development of high-performance 3d graphics in multimedia and virtual-reality applications. canvas3d is an extension package to the tcl/tk scripting language. graphics rendering for the microsoft windows environment is implemented over the  microsoft direct3d immediate-mode. canvas3d is designed to develop fast 3d graphics applications for low-end desktop computers. it provides an user-interface for easy, interactive development of graphical environments, such as games, virtual reality video conferencing, virtual seminar rooms, etc. canvas3d can be embedded into x systems-like gui as well as scripted to provide near real-time animation. this toolkit is intended to work in any (or without any) hardware accelerator available for graphics support. 
+
+canvas3d has been developed as a research project by the multimedia research group project zeno at  cornell university's department of computer science.
+
+an introduction to tcl/tk and directx
+
+tcl/tk is a programming system developed by john ousterhout at the university of california, berkeley, (and now at the sun microsystems lab) which is easy to use, and which has very useful graphical interface facilities. tcl(tool command language) is the basic embeddable scripting language, while tk(toolkit) is a graphical user interface toolkit based on tcl for constructing motif-like widgets. tcl/tk has been implemented over almost all the existing platforms. also, it provides a core c library to develop extension features to the toolkit.
+
+microsoft directx software development kit provides a set of apis that provides the developers with the resources needed to design high-performance, real-time applications, such as the next generation of computer games and multimedia applications. direct3d is an api that provides advanced 3d-graphics software solutions for typical desktop-computers.direct3d provides a high-level retained-mode interface that allows applications to easily implement a complete 3d graphical system, and a low-level immediate-mode interface that applications can use to take control over the rendering pipeline as well as the 3d accelerator hardware.
+
+manual
+canvas3d commandsthe interpreter and script commands to implement 3d graphics.
+ge librarythe graphics engine library of c functions which extends the use of direct3d.
+
+
+
+
+
+
+
+
+canvas3d
+canvas3d
+canvas3d
+canvas3d
+canvas3d
+canvas3d
+canvas3d
+canvas3d
+canvas3d
+canvas3d

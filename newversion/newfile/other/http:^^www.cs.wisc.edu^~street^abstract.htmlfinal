@@ -1,0 +1,71 @@
+abstract of nick street's thesis 
+
+
+
+
+ cancer diagnosis and prognosis via 
+linear-programming-based machine learning 
+
+w. nick street
+under the supervision of professor olvi l. mangasarian
+at the university of wisconsin-madison
+
+
+the purpose of this research is twofold.  the first purpose is the
+development of 
+machine learning methods based on linear programming.  
+these advances come in the form of both novel learning algorithms and
+generalization-improvement approaches that are applicable to a wide
+range of learning algorithms.
+the second aim is the application of these algorithms, along with
+ideas from 
+the fields of statistics and image processing, to problems arising in
+the diagnosis and treatment of breast cancer.  
+the first chapter provides background into the relevant areas of
+research, most importantly machine learning and
+breast cancer diagnosis and prognosis, and describes previous work
+that has united the two fields.
+
+the first major contribution of this research is an
+automated cytological analysis system that we call xcyt.  this
+system includes a partially automatic image segmentation
+facility for isolating cell nuclei from a digital image.
+xcyt allows computation of various size, shape and texture
+features of these nuclei.  a linear separator distinguishes benign
+cases from malignant cases based on 569 training examples.  xcyt
+also provides an estimate of the probability of malignancy for each
+case.  the xcyt system is currently in use at the university of
+wisconsin hospitals.
+
+we also address the problem of cancer prognosis, that is, determining
+when a cancer is likely to recur.  a new learning method, the
+recurrence surface approximation (rsa), is introduced for predicting
+the time of recurrence.  this procedure uses linear programming to
+predict recurrence from right-censored input data.  various extensions
+and variations of rsa are also explored, including a separation-based
+procedure that we call implicit rsa (irsa).
+
+the topic of improving the generalization of a learning system is
+first addressed in the context of rsa, where we introduce a 
+procedure for choosing the most relevant input features for
+use the the predictive model.  the final two chapters also describe
+generalization-enhancement methods.  the first is mock generalization,
+which incorporates a tuning set into the optimization process.  the
+second is banded approximation, which explicitly defines a tolerance
+band around the predictive surface in order to avoid overfitting the
+training data.
+
+
+
+
+
+ abstract of nick street's thesis 
+ abstract of nick street's thesis 
+ abstract of nick street's thesis 
+ abstract of nick street's thesis 
+ abstract of nick street's thesis 
+ abstract of nick street's thesis 
+ abstract of nick street's thesis 
+ abstract of nick street's thesis 
+ abstract of nick street's thesis 
+ abstract of nick street's thesis

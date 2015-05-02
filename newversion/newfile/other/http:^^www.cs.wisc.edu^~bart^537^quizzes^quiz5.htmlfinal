@@ -1,0 +1,101 @@
+cs 537 - quiz #5
+
+
+
+
+
+
+university of wisconsin-madison
+
+computer sciences department
+
+
+
+
+cs 537
+
+spring 1996 
+bart miller
+
+
+quiz #5
+
+wednesday, march 6
+
+
+
+scheduling and synchronization
+for each of the following statements, indicate whether you think it is
+probably true (t) or probably false (f).
+then give a brief (one sentence) reason.
+there is not necessarily a single correct answer to each question, so
+your one sentence explanation is the most important part of your answer.
+
+
+small time slices always improve the average response time of a system.
+
+
+ probably false:
+small time slices will sometimes improve the average response
+of the system.
+if the slice is too small, the context switching time will start to
+dominate the useful computation time and everything (including response
+time) will suffer.
+
+
+monitors are more powerful than semaphores, because monitors automatically
+provide mutual exclusion.
+
+
+probably false:
+while monitors are usually more convenient to use, they are not more
+powerful.
+since you can simulate semaphores with monitors, monitors are at least
+as powerful as semaphores.
+(of course, you know that you can also simulate monitors with semaphores,
+so they actually are of equal power.)
+
+
+process control blocks (pcbs) must be stored in the operating
+system kernel, where no process can access them.
+
+
+probably true:
+pcbs must be in a protected part of the memory.
+if users (processes) were allowed to access the pcb, they could change scheduling
+priorities and perhaps access other processes' memory in an unintended manor.
+
+
+shortest job first (sjf) or shortest completion time first (sctf)
+scheduling is difficult to build on a real operating system.
+
+
+probably true:
+sctf scheduling requires knowledge of how much time a process is going to
+take.
+this requires future knowledge.
+you might require a user to specify the maximum amount of time that
+a process could run (and kill it if it exceeds this amount), then use a
+variant on sctf.
+
+
+
+
+
+last modified:
+wed mar  6 10:39:11 cst 1996
+by
+bart
+
+
+
+cs 537 - quiz #5
+cs 537 - quiz #5
+cs 537 - quiz #5
+cs 537 - quiz #5
+cs 537 - quiz #5
+cs 537 - quiz #5
+cs 537 - quiz #5
+cs 537 - quiz #5
+cs 537 - quiz #5
+cs 537 - quiz #5

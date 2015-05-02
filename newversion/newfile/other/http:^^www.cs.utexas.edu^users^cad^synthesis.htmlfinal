@@ -1,0 +1,161 @@
+architectural and logic synthesis 
+
+architectural and logic synthesis
+
+
+
+the abstracts of papers by members of this group in the above area are 
+listed below. please use the email addresses at the end of each
+abstract to get further details.
+
+
+
+
+y.p. chen and d.f. wong
+ on retiming for fpga logic module minimization. in
+proceedings of the ieee international conference on computer design,
+october 1994. 
+
+
+we consider the problem of minimizing the number of logic 
+modules for  actel 2  or actel 3 sequential circuits.
+we make use of the fact that if a flip-flop is the only destination 
+of its driving combinational block, then both the flip-flop and the 
+combinational block can be put in a sequential module.  retiming technique is
+applied to minimize the number of registers that can not be merged with 
+combinational blocks.  we formulate the problem as
+an integer linear program.  we show that the constraint matrix of the integer
+program is totally unimodular.  as a result, we can solve our logic
+module minimization problem optimally by solving the linear relaxation 
+of the integer program.
+
+contact: yaoping@cs.utexas.edu
+
+ honghua yang and d. f. wong.
+ edge-map: optimal performance driven technology mapping for
+                 iterative lut based fpga designs. in
+proceedings of the ieee international conference on 
+       computer-aided design, nov. 1994. 
+
+
+we consider the problem of performance driven lookup-table (lut) based 
+technology mapping for fpgas using a general delay model.  in the general 
+delay model, each interconnection edge has a weight representing the delay
+of the interconnection.  this model is particularly useful when combined with
+an iterative re-technology mapping process where the actual delays of the
+placed and routed circuit are fed-back to the technology mapping phase to
+improve the mapping based on the more realistic delay estimation.
+well known technology mappers such as flowmap and chortle-d only minimize
+the number of levels in the technology mapped circuit and hence are not
+suitable for such an iterative re-technology mapping process.
+recently, mathur and liu  studied the performance driven
+technology mapping problem using the general delay model and presented
+an effective heuristic algorithm for the problem. in this paper,
+we present an efficient technology mapping algorithm that achieves 
+provably optimal delay in the technology mapped circuit using the general 
+delay model.  our algorithm is a non-trivial generalization of flowmap.
+a key problem in our algorithm is to compute a k-feasible network cut
+such that the circuit delay on every cut edge is upper-bounded by a specific 
+value.  we implemented our algorithm in a lut based fpga technology mapping 
+package called edge-map, and tested edge-map on a set of benchmark circuits.
+
+
+contact: yanghh@cs.utexas.edu
+
+ yung-ming fang and d.f. wong.
+ simultaneous functional-unit binding and floorplanning.
+ proceedings of the ieee international conference on
+       computer-aided design, november 1994. 
+
+
+as device feature size decreases,
+interconnection delay becomes the dominating factor of system performance.
+thus it is important that accurate physical information is used
+during high level synthesis.
+in this paper, we consider the problem of
+simultaneously performing functional-unit binding and floorplanning.
+experimental results indicate that
+our approach to combine binding and floorplanning is superior to
+the traditional approach of separating the two tasks.
+
+
+contact: fang@cerc.utexas.edu
+
+
+ shashidhar thakur, d.f. wong, shankar krishnamoorthy, and p. moceyunas.
+delay minimal decomposition of multiplexers in technology mapping
+ international workshop on logic synthesis, may 1995. 
+
+
+technology mapping requires the unmapped
+logic network to be represented in terms of base
+functions. technology decomposition is the step that
+transforms arbitrary networks to this form. typically such
+decomposition schemes ignore the fact that certain circuit
+elements can be mapped more efficiently by treating them
+separately during decomposition. multiplexers are in one such
+category of circuit elements. they appear very naturally in
+circuits, in the form of datapath elements, and as a result of
+synthesis of case statements in hdl specifications of
+control logic. mapping them using multiplexers in technology
+libraries has many advantages. in this paper, we 
+give an algorithm for
+optimally decomposing multiplexers, so as to minimize the
+delay of the network.  we present the results of mapping 
+networks, decomposed by such a scheme, to actel2 and lsi_10k
+libraries, which are rich in multiplexers. experimental
+results indicate that the quality of the mapped circuits,
+measured in terms of area, delay, and routability, is
+greatly improved,
+when compared to a huffman tree based and-or decomposition
+scheme.
+
+
+contact: thakur@cs.utexas.edu
+
+shashidhar thakur and d.f. wong.
+simultaneous area and delay minimum k-lut
+mapping for k-exact networks
+international conference on computer design, october 1995.
+
+we address the technology mapping problem for 
+lookup table fpgas. the area minimization problem, for mapping
+k-bounded networks, consisting of nodes with 
+at most k inputs, using k-input lookup tables, is known to
+be np-complete for
+k>=5. the complexity was unknown for k=2,3, and 4. the
+corresponding delay minimization problem (under the constant
+delay model) was solved in
+polynomial time by the flow-map algorithm, for
+arbitrary values of k. we study the class of k-bounded networks,
+where all nodes have exactly k inputs. we call such
+networks k-exact. we give a
+characterization of mapping solutions for such
+networks. this leads to a polynomial time algorithm for
+computing the simultaneous area and delay minimum mapping
+for such networks 
+using k-input lookup tables. we 
+also show that the 
+flow-map algorithm minimizes the area of the mapped network
+as well, for k-exact networks. we then show that for
+k=2 the mapping solution 
+for a 2-bounded network, minimizing the area and delay
+simultaneously, can be easily obtained from that of a 2-exact
+network derived from it by eliminating single input
+nodes. thus the area minimization problem 
+for 2-input lookup tables can be solved in polynomial time,
+resolving an open problem.
+
+contact: thakur@cs.utexas.edu
+
+
+ architectural and logic synthesis 
+ architectural and logic synthesis 
+ architectural and logic synthesis 
+ architectural and logic synthesis 
+ architectural and logic synthesis 
+ architectural and logic synthesis 
+ architectural and logic synthesis 
+ architectural and logic synthesis 
+ architectural and logic synthesis 
+ architectural and logic synthesis

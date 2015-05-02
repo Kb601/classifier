@@ -1,0 +1,181 @@
+agustin gonzalez-tuchmann
+811 poe dr., las cruces, n.m. 88001
+(505) 646-6229 (work), (505) 521-1356 (home), (505) 521-1356 (fax),
+agonzale@cs.nmsu.edu (internet)
+february 1995
+
+
+
+education
+
+
+new mexico state university
+las cruces, n.m.
+ph.d. candidate in computer science
+expected date of graduation: spring 1995
+area of research: datalog programs applied to databases that satisfy 
+functional dependencies:
+datalog is a declarative query language based on first order logic. a 
+datalog program is a query whose input is a relational database and whose 
+output is another database. datalog programs are more expressive than 
+relational queries since they can express recursive queries (for instance, 
+the transitive closure problem is expressible in datalog). my research 
+focused on how to efficiently process recursive datalog programs, and 
+how constraints in the input to a datalog program affect constraints in the 
+output. results obtained in datalog research can be applied to extend 
+existing relational database managers.
+instituto tecnologico y de estudios superiores de monterrey
+monterrey, n.l.
+master of science in computer science. december 1990
+thesis: "information systems representation using a semantic data 
+model''
+description of research: existing modeling techniques are weak in terms 
+of representing behavior of systems. in this work, a graphical technique 
+based on semantic modeling is proposed: the semantic model with 
+transactions (smt). smt allows for the graphical specification of 
+objects related to a particular domain. from this specification code can be 
+generated to support the basic behavioral aspects of the system, such as 
+inserts, deletes, and updates. a prototype of smt was written using 
+c.
+university of california
+berkeley, ca.
+bachelor of arts in physics, march 1982
+
+
+
+
+special skills
+
+
+college level teaching experience
+computer languages: c, c++, objectpal, qbe, sql, xbase
+designing and implementing relational databases
+experience in development of complex computer systems (200,000+ lines 
+c code, 25 people project)
+good writing and communication skills
+native spanish speaker
+object-oriented analysis and design
+operating systems: unix, ms-windows, ms-dos
+sales experience
+
+
+
+professional interests
+
+
+my professional interests are: applying existing technology, education, 
+and research and development of new areas in database technology. in 
+particular, i would like to apply my knowledge on databases and object 
+oriented programming to information systems development. also, i would 
+like to participate in the development of new database models, or help 
+make existing systems more usable and expressive. also, i would like to 
+work as a consultant to help end users fully exploit existing database 
+technology.
+
+
+professional experience
+
+
+new mexico state university
+las cruces, n.m.
+research assistant
+research in deductive databases
+developed a general purpose class library for c++. it contained general 
+purpose classes such as a string class, a class for boolean types, and 
+several template-based container classes such as lists and sets. also 
+developed a class library for manipulating logic programs. it contained 
+classes for logic objects such as programs, rules, atoms, predicates, etc. 
+these libraries were used in the implementation and testing of 
+transformation algorithms for datalog programs. they were also used as 
+teaching aids.
+instructor of c and c++
+january 1991 to date
+universidad autonoma de cd. juarez
+ciudad juarez, chih. mexico.
+consultant
+participated in a departmental project to build a fully automated, real-time 
+production line. headed the software part of the project. the software was 
+to be built using object-oriented techniques for the front end (developed 
+using c++ under ms-windows) and a back end database. trained other 
+participants in object-oriented programming using c++.
+august 1994 to january 1995
+universidad autonoma de cd. juarez
+ciudad juarez, chih. mexico.
+consultant
+taught a c++ training course aimed at professional developers.
+summer 1994
+
+
+
+instituto tecnológico y de estudios superiores de monterrey
+monterrey, n.l.
+research assistant. researched and developed a nested-relation database 
+management system with a graphical interface. the dbms was written in 
+c for ms-windows. the final system had over 200,000 lines of c code 
+and more than 20 persons were participating at a given time. headed the 
+development of the graphical editor (over 15,000 lines of c code), the 
+module that allows for visual integration and flow of control of the other 
+objects in the system (such as forms, reports, and scripts).
+january 1989 to december 1990
+instituto tecnológico y de estudios superiores de monterrey
+monterrey, n.l.
+mathematics teacher
+taught introductory calculus courses
+august 1988 to december 1988
+b.c.s. méxico, s.a. de c.v.
+la paz, b.c.s.
+owner
+designed and developed information systems for personal computers. sold 
+hardware and software. designed and implemented a multi-user system for 
+control of patients (records and accounts) in an orthodontic clinic. the 
+system is still in use and is being adapted to run under windows. headed 
+the deployment (as a consultant) of accounting, inventory, and financial 
+analysis systems in several companies
+january 1986 to august 1988
+microcontrol digital, s.a. de c.v.
+la paz, b.c.s.
+manager
+sold hardware and software for personal computers
+november 1984 to december 1985
+universidad autónoma de baja california sur
+la paz, b.c.s.
+mathematics and computer science teacher
+taught calculus, physics, and introduction to computers
+january 1983 to january 1985
+
+
+technical publications 
+
+
+gonzález-tuchmann, a., h. j. hernández  "testing implication of fds in 
+linear programs", nmsu-cstr-9420, department of computer science, 
+new mexico state university, las cruces, n.m. 88003-0001, 1994.
+hernández, h., gonzález-tuchmann, a. "uniform equivalence of datalog 
+programs under functional dependencies", nmsu-tr-92-cs-22, 
+department of computer science, new mexico state university, las 
+cruces, n.m. 88003-0001, 1992.
+gonzalez, a. "el proyecto gema", in transferencia, revista del 
+programa de graduados del itesm, january 1990.
+gonzalez, a., "la desintegración del protón", in panorama, 
+revista de la universidad autónoma de bcs, august 1983.
+
+
+professional associations
+
+
+member of the acm since 1991
+
+
+awards
+
+at&amp t bell laboratories (denver co).
+hispanic employees scholarship recipient for spring 1992.
+first place in the international contest: "desarrollo y complementación 
+binacional de empresas de tecnología avanzada", in "foro de intercambio 
+técnico-comercial usa-méxico". san antonio, texas, january 
+1990.
+
+
+
+go back to the
+cs department's home page.

@@ -1,0 +1,88 @@
+search
+
+
+
+
+search (using glimpse)
+
+you can search the contents of all of my personal web pages
+rooted at http://www.cs.wisc.edu/~krisna/ using
+agrep-style regular expressions.
+
+you can provide search predicates using the entry form provided below.
+the result of the search is a single page containing pointers to all
+pages which match the search predicates provided.  be sure to escape
+any metacharacters in your search predicates as appropriate.
+
+
+
+search form
+
+
+
+search predicate: 
+
+: case-insensitive matches.
+: show matching lines.
+
+
+
+
+
+
+
+
+miscellaneous information
+
+this section is for those who are interested in the details of the
+search procedure.
+
+the agrep-style searching is done an a pre-built index (which
+is updated periodically).  indices are built and searched using the
+glimpse toolkit.
+by default, matches are case-sensitive and the lines that match the
+search predicate are not shown in the output.
+
+enabling the output of matching lines produces a cluttered display,
+but may sometimes help in narrowing down the search if too many pages
+match the predicate.  an attempt is made to highlight the predicate in
+the matched lines but this is not guaranteed to be always successful
+(for reasons too mundane to go into).
+
+problems?
+
+remember to escape meta-characters.  this is very important.  the search
+script feeds your predicate to glimpse as is.  any errors from
+glimpse are quietly ignored.
+
+the search-indices are currently built on dehtmlized pages.  this means
+that a search predicate will not match html keywords unless the actual
+contents of the page would also produce such a match.  however, if you
+enable match output, html tags will also be displayed (this is done in
+order to make the searching as fast as possible).
+
+comments are welcome.
+
+
+
+[ krishna kunchithapadam
+]
+
+
+
+last modified tue mar 12 07:06:24 cst 1996 by
+kk.
+
+
+
+
+search
+search
+search
+search
+search
+search
+search
+search
+search
+search

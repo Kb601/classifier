@@ -1,0 +1,73 @@
+a powerful clone overlap test for restriction fragment mapping
+
+
+
+
+
+
+
+                 
+ next:  introduction
+  
+ a powerful clone overlap test for restriction fragment mapping
+ 
+brendan mumey  
+ department of computer science 
+ university of washington, seattle, wa 98195, usa 
+  brendan@cs.washington.edu   
+ key words: physical mapping, statistical inference, 
+ probabilistic reasoning, cluster analysis
+
+
+abstract:
+this paper addresses a computational biology problem which
+is to decide whether two clones (segments of a genome)
+overlap based on their  multiple complete digest (mcd) fingerprint.
+the problem arises in the context of building a physical map
+of a genome, an important step in the human genome project.
+the main result is an overlap test which is
+argued to be powerful in a stochastic model of the process
+in the sense of admitting the lowest false negative rate for a given rate
+of false positives.  initial experiments show that it yields about
+20% fewer false negatives for a given rate of false positives than
+a commonly used test.  this is likely to improve the success of
+the subsequent mapping stages.
+
+ 
+ 
+  introduction
+  a stochastic model of mcd fingerprinting
+  the  a posteriori probability of overlap
+ 
+  estimating 
+  estimating 
+ 
+  the proposed overlap test
+  comparison with a currently used test
+  open problems and future work
+ references
+  proof of lemma 1
+ 
+  an initial inequality
+  bounds on 
+  discrepancy between  and 
+ 
+    about this document ... 
+
+ 
+
+brendan mumey 
+mon aug 12 16:18:30 pdt 1996
+
+
+
+a powerful clone overlap test for restriction fragment mapping
+a powerful clone overlap test for restriction fragment mapping
+a powerful clone overlap test for restriction fragment mapping
+a powerful clone overlap test for restriction fragment mapping
+a powerful clone overlap test for restriction fragment mapping
+a powerful clone overlap test for restriction fragment mapping
+a powerful clone overlap test for restriction fragment mapping
+a powerful clone overlap test for restriction fragment mapping
+a powerful clone overlap test for restriction fragment mapping
+a powerful clone overlap test for restriction fragment mapping

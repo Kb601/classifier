@@ -1,0 +1,121 @@
+qpt 
+
+
+
+ qpt:  a quick program profiling and tracing system 
+
+
+qpt is an exact and efficient program profiler and tracing system.  it
+rewrites a program's executable file (a.out) by inserting code to
+record the execution frequency or sequence of every basic block
+(straight-line sequence of instructions) or control-flow edge.  from
+this information, another program qpt_stats can calculate the
+execution cost of procedures in the program.  unlike the unix tools
+prof and gprof, qpt records exact execution frequency, not a
+statistical sample.  when tracing a program, qpt produces a trace
+regeneration program that reads the highly compressed trace file and
+regenerates a full program trace.
+
+
+when profiling, qpt operates in two modes.  in "slow" mode, it places
+a counter in each basic block in a program--in the same manner as the
+mips tool pixie.  in "quick" mode, qpt places counters on an
+infrequently-executed subset of the edges in the program's
+control-flow graph.  this placement can reduce the cost of profiling
+by 3--4 times.  since there is no such thing as a free lunch, quick
+profiling requires more program analysis and consequently slows qpt
+and qpt_stats.  the additional cost to instrument a program and report
+results, however, is small and is quickly gained back when profiling
+long-running programs.
+
+
+like other systems such as pixie, qpt can rewrite an executable file to
+record the sequence of instruction and data references.  however, qpt uses
+abstract execution to reduces the overhead of tracing to 2--6 times a
+program's untraced execution cost.  qpt also records a number of semantics
+events--such as loop entry and iteration, function entry and exit, and
+memory allocation and deallocation--that other systems do not identify.
+
+
+
+the original version of this program, qpt, is obsolete and has not been
+maintained for several years.  at that time, it ran under dec's ultrix on a
+decstation (mips processor) and sun's sunos 4.1.2 on a sparcstation.
+
+
+qpt2, the new version of qpt, is build on
+
+eel,
+
+a library for editing executable files.  eel currently runs on sparc-based
+machines (sunos and solaris), though other ports in progress.  the
+machine-specific code in eel and qpt2 is collected in a few files.  porting
+to a new machine requires a couple months of effort.
+
+ documentation 
+
+
+the algorithms in qpt are described in:
+thomas ball and james r. larus, "optimally profiling and tracing
+programs," acm transactions on programming languages and systems
+(toplas), vol. 16, no. 4, july 1994, pp. 1319-1360.
+
+
+abstract execution is described in:
+james r. larus, "abstract execution: a technique for efficiently
+tracing programs", software practices & experience, v20, n12,
+december 1990, pp 1241-1258.
+
+
+qpt is described in:
+james r. larus, "efficient program tracing," ieee computer, 26, 5,
+may 1993, pp 52-61.
+
+
+ applications 
+
+david wood has develop a cache profiler called cprof that uses traces
+from qpt to report the cache misses caused by statements in a program.
+cprof is available as part of warts.
+
+ obtaining qpt 
+
+qpt is available as part of  warts.
+
+
+qpt and qpt2 are distributed with the full source and a small amount of
+documentation.  qpt and qpt2 are copyrighted by me and is distributed under
+the terms of the warts license.  a copy of the license is available on
+ftp.cs.wisc.edu in 
+~ftp/pub/warts/license.ps, or can be obtained by contacting me at the
+address below.
+
+
+james larus
+computer sciences department 
+1210 west dayton street 
+university of wisconsin 
+madison, wi 53706 
+
+larus@cs.wisc.edu 
+(608) 262-9519
+
+
+
+last modified: may 14 1996 by james larus
+
+  larus@cs.wisc.edu
+
+
+
+
+ qpt 
+ qpt 
+ qpt 
+ qpt 
+ qpt 
+ qpt 
+ qpt 
+ qpt 
+ qpt 
+ qpt

@@ -1,0 +1,138 @@
+cornellopoly home page
+
+
+
+
+cornellopoly....... by 
+mulva inc.
+
+
+
+
+
+
+jeffrey m. moore
+
+jmm@cs
+
+
+
+william w. lee
+
+wwlee@cs
+
+
+
+scott p. dawson
+
+spdawson@cs
+
+
+
+
+
+
+
+our work is no longer beta...here's the
+alpha release!
+
+
+
+here's our 
+final presentations slides, along with 
+a screen-shot of the game.
+
+
+
+...and just what is this madness???
+
+we have implemented an online version of the popular parker
+brother's board game monopoly, adapted to reflect the trends and
+geography of the cornell community.  our implementation has obvious
+variations from the traditional version in order to 
+illustrate many of the concepts inherent in the distributed systems paradigm. 
+for more information, refer to the project design &
+specification document. 
+
+the game is played over the internet, requiring a java interpreter
+running either on solaris or windowsnt.  it is not be as graphically
+advanced as the commercial cdrom version by any stretch of the
+imagination.  however, enhancements such as real-time updates of
+fluctuating interest rates and inflation heightens the excitement
+of game play.  an exposition of the  modified
+rules  outlines these enhancements.  it is our intent to
+illustrate distributed programming concepts by way of this
+entertaining media. 
+
+...and what do we learn from this?
+
+a new language, object oriented design, and distributed systems are the three
+areas of computer science that we exploited for this project.
+we utilized object oriented design skills for the data structures of the program.
+we also see how theory meets practice in a practical distributed system. 
+
+...and how does it tie in with distributed systems?
+
+this game is server-less.  all player correspondence is done via
+message passing.  we learned concepts of various broadcast algorithms,
+support of fault tolerance, and methods of mimicking real-time behavior
+in a distributed system.
+
+
+...and how do we measure success?
+unlike dean witter, we don't measure success one invester at a time.
+if two or more players play, completing the game according to the
+rules, then we are in business of contributing "cornellopoly" to the
+expanding population of java applications on the internet. 
+
+...and finally, how are we progressing?
+
+week of 2/12 : progress report
+week of 2/19 : progress report
+week of 2/26 : progress report
+week of 3/04 : progress report	
+week of 3/25 : beta release
+
+
+
+mulva - name of jerry seinfeld's girlfriend which rhymes with a
+part of the female anatomy.
+courtesy of the "junior mint" episode of 
+seinfeld.
+
+
+visitors since march 25th, 1996
+
+
+
+
+
+
+cornellopoly home page
+
+
+cornellopoly home page
+
+
+cornellopoly home page
+
+
+cornellopoly home page
+
+
+cornellopoly home page
+
+
+cornellopoly home page
+
+
+cornellopoly home page
+
+
+cornellopoly home page
+
+
+cornellopoly home page
+
+
+cornellopoly home page

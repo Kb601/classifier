@@ -1,0 +1,748 @@
+papers on qualitative reasoning 
+   
+
+
+
+
+
+papers on qualitative reasoning 
+
+
+overviews 
+
+
+bibliographies 
+
+
+qualitative simulation 
+
+
+the basic idea 
+
+protocol analysis 
+
+methods for tractable simulation 
+
+trajectory constraints for qsim (teqsim) 
+
+time-scale abstraction 
+
+qualitative phase space 
+
+comparative analysis 
+
+
+semi-quantitative reasoning 
+
+
+q2 
+
+q3 
+
+nsim 
+
+
+qsim and temporal logic model-checking 
+
+building qualitative models 
+
+
+cc 
+
+qpc 
+
+misq 
+
+
+applying qualitative reasoning 
+
+
+monitoring continuous systems: mimic. 
+
+diagnosis of continuous systems. 
+
+space shuttle reaction control system. 
+
+design, purpose, and teleological reasoning.
+
+
+integrating spatial and dynamic reasoning.
+
+
+heterogeneous control. 
+
+
+
+
+
+
+overviews 
+
+the qr book is now the definitive presentation of the qsim approach
+to qualitative reasoning. the papers it supercedes are indicated below.
+
+
+
+b. j. kuipers. 1994. qualitative reasoning:
+modeling and simulation with incomplete knowledge. cambridge,
+ma: mit press. 
+
+
+the two aij papers are from a special retrospective issue, reflecting
+on the status of research in this area. 
+
+
+b. j. kuipers. reasoning
+with qualitative models. 1993. artificial intelligence 59:
+125-132. 
+
+b. j. kuipers. qualitative
+simulation: then and now. 1993. artificial intelligence
+59: 133-140. 
+
+
+
+
+
+bibliographies 
+
+
+a complete
+bibliography of qsim papers. (as of 12-94) 
+
+
+
+
+
+qualitative simulation 
+
+
+
+
+the basic idea 
+
+
+b. j. kuipers. 1984. commonsense reasoning about causality: deriving
+behavior from structure. artificial intelligence 24: 169-203.
+
+
+reprinted in d. g. bobrow (ed.), qualitative reasoning about physical
+systems. new york: north-holland, 1984. paperback publication by mit
+press, cambridge, ma, 1985. 
+
+b. j. kuipers. 1986. qualitative
+simulation. artificial intelligence 29: 289 - 338, 1986.
+
+(the ftp copy is missing five figures.) 
+
+reprinted in d. s. weld &amp; j. de kleer (eds.), readings in qualitative
+reasoning about physical systems, los altos, ca: morgan kaufmann, 1990.
+
+
+[superceded by qr book, chapters 3, 4, 5.]
+
+
+
+each of these papers was among the top 25 most-cited papers in the first
+50 volumes of the artificial intelligence journal, hence the two
+aij 1993 retrospectives. 
+
+
+
+
+protocol analysis 
+
+
+b. j. kuipers and j. p. kassirer. 1984. causal
+reasoning in medicine: analysis of a protocol. cognitive science
+8: 363-385. 
+
+reprinted in a. kidd (ed.), knowledge acquisition for expert systems,
+new york: plenum, 1987. 
+
+b. j. kuipers, a. j. moskowitz, and j. p. kassirer. 1988. critical
+decisions under uncertainty: representation and structure. cognitive
+science 12: 177-210, 1988. 
+
+reprinted in g. shafer and j. pearl (eds.), readings in uncertain
+reasoning, san mateo, ca: morgan kaufmann publishers, 1990. 
+
+
+
+
+
+methods for tractable simulation 
+
+
+b. j. kuipers, c. chiu, d. t. dalle molle &amp; d. r. throop. 1991.
+higher-order
+derivative constraints in qualitative simulation. artificial
+intelligence 51: 343-379. 
+
+[superceded by qr book, chapter 10.] 
+
+clancy, daniel j. and kuipers, benjamin j. behavior
+abstraction for tractable simulation. proceedings from the seventh
+international workshop on qualitative reasoning, may 1993.
+
+describes two techniques for reducing intractable branching in qualitative
+simulations. chatter box abstraction eliminates chatter by performing a
+focused envisionment while behavior aggregation eliminations event occurrence
+branching. 
+
+d. clancy and b. kuipers. 1994. model
+decomposition and simulation. in working papers of the eighth
+international workshop on qualitative reasoning about physical systems
+(qr-94), nara, japan. 
+
+describes a simulation technique that uses a cross between a state-based
+representation and a history-based representation. models are decomposed
+into components and then each component is simulated separately. temporal
+correlations between variables within different components is eliminated
+thus reducing many irrelevant distinctions within the behavioral description.
+
+
+richard s. mallory, bruce w. porter, and benjamin j. kuipers. 1996.
+comprehending
+complex behavior graphs through abstraction. in working papers
+of the tenth international workshop on qualitative reasoning (qr-96),
+fallen leaf lake, california. 
+
+lance tokuda. 1996. managing
+occurrence branching in qualitative simulation. in proceedings
+of the national conference on artificial intelligence (aaai-96), aaai/mit
+press, 1996. 
+
+
+
+
+
+trajectory constraints for qsim 
+
+
+pierre fouche &amp; benjamin kuipers. 1992. reasoning about energy
+in qualitative simulation. ieee transactions on systems, man, and
+cybernetics 22(1): 47-63. 
+
+[superceded by qr book, chapter 11.] 
+
+teqsim papers (contact clancy@cs.utexas.edu or giorgio@dimi.uniud.it
+if you have any questions)
+
+
+published:
+
+note: the qr96 paper is the most comprehensive reference describing
+the use of teqsim to address specific tasks. the manuscript &quot;focusing
+qualitative simulation using temporal logic&quot; is an extension of the
+paper published in time-96. this paper provides a detailed description
+of the syntax and semantics of the temporal logic along with a formal description
+of the model checking algorithm with soundness and completeness theorms.
+
+giorgio brajnik and daniel j. clancy. 1996. guiding
+and refining simulation using temporal logic. third international
+workshop on temporal representation and reasoning (time'96), 1996.
+
+[abstract] 
+
+giorgio brajnik and daniel j. clancy. 1996. temporal
+constraints on trajectories in qualitative simulation. in working
+papers of the tenth international workshop on qualitative reasoning (qr-96),
+fallen leaf lake, california. 
+
+[abstract] 
+
+giorgio brajnik and daniel j. clancy. 1996. temporal
+constraints on trajectories in qualitative simulation. in proceedings
+of the national conference on artificial intelligence (aaai-96), aaai/mit
+press, 1996. 
+
+[abstract] 
+
+manuscripts:
+
+giorgio brajnik and daniel j. clancy. 1997. control
+of hybrid systems using qualitative simulation . submitted for publication
+to international workshop on hybrid and real-time systems (hart-97).
+
+[abstract] 
+
+giorgio brajnik and daniel j. clancy. 1997. focusing
+qualitative simulation using temporal logic:theoretical foundations
+submitted for publication to the annals of mathematics and artificial intelligence.
+
+[abstract] 
+
+
+
+
+
+
+time-scale abstraction 
+
+
+b. j. kuipers. 1987. abstraction
+by time-scale in qualitative simulation. in proceedings of the
+national conference on artificial intelligence (aaai-87). los altos,
+ca: morgan kaufman. 
+(the ftp copy is missing two figures.) 
+
+reprinted in d. s. weld &amp; j. de kleer (eds.), readings in qualitative
+reasoning about physical systems, los altos, ca: morgan kaufmann, 1990.
+
+
+[superceded by qr book, chapter 12.] 
+
+jeff rickel and bruce porter. 1994. automated
+modeling for answering prediction questions: selecting the time scale and
+system boundary. in proceedings of the national conference on
+artificial intelligence (aaai-94), aaai/mit press, 1994. 
+
+jeff w. rickel. 1995. automated
+modeling of complex systems to answer prediction questions. doctoral
+dissertation, department of computer sciences, the university of texas
+at austin. 
+
+
+
+
+
+qualitative phase space 
+
+
+w. w. lee &amp; b. j. kuipers. 1988. non-intersection
+of trajectories in qualitative phase space: a global constraint for qualitative
+simulation. in proceedings of the national conference on artificial
+intelligence (aaai-88). los altos, ca: morgan kaufmann, 1988. 
+
+reprinted in d. s. weld &amp; j. de kleer (eds.), readings in qualitative
+reasoning about physical systems, los altos, ca: morgan kaufmann, 1990.
+
+
+[superceded by qr book, chapter 11.] 
+
+w. w. lee &amp; b. kuipers. 1993. a
+qualitative method to construct phase portraits. proceedings
+of the national conference on artificial intelligence (aaai-93), aaai/mit
+press, 1993.
+
+[superceded by qr book, chapter 11.] 
+
+(
+figure 1, figure
+2a, and figure
+2b were not incorporated into the postscript file for this paper, so
+they appear in auxiliary files.) 
+
+
+
+
+
+comparative analysis 
+
+
+c. chiu &amp; b. j. kuipers. 1992. comparative
+analysis and qualitative integral representations. in boi faltings
+and peter struss (eds.), recent advances in qualitative physics,
+mit press, 1992. 
+
+
+
+
+
+semi-quantitative reasoning 
+
+
+
+
+q2 
+
+
+b. j. kuipers &amp; d. berleant. 1988. using incomplete quantitative
+knowledge in qualitative reasoning. in proceedings of the national
+conference on artificial intelligence (aaai-88). los altos, ca: morgan
+kaufman, 1988. 
+
+[superceded by qr book, chapter 9.] 
+
+
+
+
+
+q3 
+
+
+j. daniel berleant. 1991. the
+use of partial quantitative knowledge with qualitative reasoning.
+university of texas at austin, artificial intelligence laboratory, technical
+report ai 91-163. (doctoral dissertation, department of computer sciences.)
+  
+
+d. berleant &amp; b. kuipers. 1992. qualitative-numeric
+simulation with q3. in boi faltings and peter struss (eds.), recent
+advances in qualitative physics, mit press, 1992. 
+(the ftp file is missing several figures.)   
+
+
+
+
+
+nsim and sqsim 
+
+
+h. kay &amp; b. kuipers. 1993. numerical
+behavior envelopes for qualitative simulation. proceedings of
+the national conference on artificial intelligence (aaai-93), aaai/mit
+press, 1993.   
+
+h. kay &amp; l. h. ungar. 1993. deriving
+monotonic function envelopes from observations. in working papers
+of the seventh international workshop on qualitative reasoning about physical
+systems (qr'93), orcas island, washington.   
+
+herbert kay. 1996. sqsim:
+a simulator for imprecise ode models. university of texas artificial
+intelligence laboratory tr ai96-247, march 1996. 
+[abstract]   
+
+  herbert kay.  1996.  
+
+refining imprecise models and their behaviors.
+doctoral dissertation, department of computer sciences, the university of texas
+at austin, december 1996. 
+[abstract]   
+
+
+
+
+
+
+
+qsim and temporal logic model-checking 
+
+this body of work treats the behavior graph output by qsim as a temporal
+model, and applies a model-checking algorithm to prove statements in temporal
+logic. 
+
+
+b. j. kuipers and b. shults. 1994. reasoning
+in logic about continuous systems. in j. doyle, e. sandewall, and
+p. torasso, editors, principles of knowledge representation and reasoning:
+proceedings of the fourth international conference (kr94), morgan kaufmann,
+san mateo, ca. 
+[abstract]
+
+benjamin shults. 1996. toward
+a reformalization of qsim. university of texas artificial intelligence
+laboratory tr ai96-245, january 1996. 
+[abstract]
+
+benjamin shults and benjamin kuipers. 1997. 
+proving properties of continuous systems: qualitative simulation and
+temporal logic.  
+artificial intelligence journal, 1997.  
+[abstract]
+
+
+
+
+
+
+building qualitative models 
+
+
+cc 
+
+
+david w. franke and daniel dvorak. 1989. component-connection models.
+model-based reasoning workshop, ijcai-89, detroit, michigan, august 1989.
+
+
+[superceded by qr book, chapter 13.] 
+
+
+
+
+
+qpc 
+
+
+j. m. crawford, a. farquhar, b. j. kuipers. 1990. qpc:
+a compiler from physical models into qualitative differential equations.
+proceedings of the national conference on artificial intelligence (aaai-90),
+aaai/mit press, 1990. 
+
+revised version in boi faltings and peter struss (eds.), recent advances
+in qualitative physics, mit press, 1992. 
+
+[superceded by qr book, chapter 14.] 
+
+adam farquhar. 1993. automated
+modeling of physical systems in the presence of incomplete knowledge.
+university of texas at austin, artificial intelligence laboratory, technical
+report ai 93-207. (doctoral dissertation, department of computer sciences.)
+
+
+adam farquhar. 1994. a
+qualitative physics compiler. in proceedings of the national
+conference on artificial intelligence (aaai-94), aaai/mit press, 1994.
+
+
+adam farquhar and giorgio brajnik. 1994. a
+semi-quantitative physics compiler. in working papers of the
+international workshop on qualitative reasoning (qr-94), 1994. 
+
+b. falkenhainer, a. farquhar, d. bobrow, r. fikes, k. forbus, t. gruber,
+y. iwasaki, and b. kuipers. 1994. cml:
+a compositional modeling language. stanford university, technical
+report ksl-94-16. 
+
+jeff rickel and bruce porter. 1994. automated
+modeling for answering prediction questions: selecting the time scale and
+system boundary. in proceedings of the national conference on
+artificial intelligence (aaai-94), aaai/mit press, 1994. 
+
+jeff w. rickel. 1995. automated
+modeling of complex systems to answer prediction questions. doctoral
+dissertation, department of computer sciences, the university of texas
+at austin. (available as technical report ai95-234.) 
+
+
+
+
+
+misq 
+
+
+bradley l. richards, ina kraan and benjamin j. kuipers. 1992. automatic
+abduction of qualitative models. proceedings of the national
+conference on artificial intelligence (aaai-92), aaai/mit press, 1992.
+
+
+s. ramachandran, r. j. mooney &amp; b. j. kuipers. 1994. learning
+qualitative models for systems with multiple operating regions.
+in working papers of the eighth international workshop on qualitative
+reasoning about physical systems (qr-94), nara, japan. 
+
+
+
+
+
+applying qualitative reasoning 
+
+
+
+
+monitoring continuous systems 
+
+
+charles perrow. 1984. normal accidents: living with high-risk technologies.
+new york: basic books. (this book motivates the mimic approach to system
+monitoring.) 
+
+daniel l. dvorak. 1987. expert
+systems for monitoring and control. university of texas at austin,
+artificial intelligence laboratory, technical report ai 87-55. (literature
+review.)
+
+d. dvorak &amp; b. j. kuipers. 1989. model-based
+monitoring of dynamic systems. in proceedings of the eleventh
+international joint conference on artificial intelligence (ijcai-89).
+los altos, ca: morgan kaufman. 
+
+daniel dvorak &amp; benjamin kuipers. 1991. process
+monitoring and diagnosis: a model-based approach. ieee expert
+6(3): 67-74, june 1991. 
+
+herbert kay. 1991. monitoring
+and diagnosis of multitank flows using qualitative reasoning. (master's
+thesis, department of computer sciences, the university of texas at austin.)
+
+
+daniel l. dvorak. 1992. monitoring
+and diagnosis of continuous dynamic systems using semiquantitative simulation.
+university of texas at austin, artificial intelligence laboratory, technical
+report ai 92-170. (doctoral dissertation, department of computer sciences.)
+
+this report provides the definitive description of the mimic monitoring
+system. 
+
+
+
+
+
+diagnosis of continuous systems 
+
+
+david throop. 1991. model-based
+diagnosis of complex, continuous mechanisms. doctoral dissertation,
+department of computer sciences, university of texas at austin, austin,
+texas. august 1991. 
+
+hwee tou ng. 1991. model-based,
+multiple fault diagnosis of time-varying, continuous physical devices.
+ieee expert 6(6): 38-43, december 1991. 
+
+siddarth subramanian and raymond j. mooney. 1994. multiple-fault
+diagnosis using general qualitative models with fault modes. in
+working papers of the fifth international workshop on principles of
+diagnosis, 1994. 
+
+siddarth subramanian and raymond j. mooney. 1996. qualitative
+multiple-fault diagnosis of continuous dynamic systems using behavioral
+modes. in proceedings of the national conference on artificial
+intelligence (aaai-96), aaai/mit press, 1996. 
+
+
+
+
+
+the space shuttle reaction control system (rcs)
+
+
+the following models are steps toward building qualitative models of
+large-scale, realistic, mechanisms. 
+
+
+herbert kay. 1992. a
+qualitative model of the space shuttle reaction control system.
+university of texas at austin, artificial intelligence laboratory technical
+report ai92-188. 
+
+takashi watanabe and benjamin kuipers. 1994. component
+connection models of reaction control system. manuscript, january
+1994. 
+
+this document presents a qualitative model of the space shuttle reaction
+control system expressed within the component-connection ontology. the
+model is based on the previous qsim model developed by herbert kay [1992].
+
+
+
+
+
+
+design, purpose, and teleological reasoning
+
+
+
+david w. franke. 1989. representing and acquiring teleological descriptions.
+model-based reasoning workshop, ijcai-89, detroit, michigan, august 1989.
+
+
+david w. franke. 1991. deriving and using descriptions of purpose.
+ieee expert, april 1991, pp. 41-47. 
+
+david w. franke. 1992. a
+theory of teleology. doctoral dissertation, computer science department,
+university of texas at austin, may 1992. (available as tr ai93-201.) 
+
+
+
+
+
+integrating spatial and dynamic reasoning
+
+
+
+david throop. 1989. spatial unification: qualitative spatial reasoning
+about steady-state mechanisms. university of texas at austin, artificial
+intelligence laboratory tr ai89-95, 1989. 
+
+raman rajagopalan and benjamin kuipers. 1994. qualitative
+spatial reasoning about objects in motion: application to physics problem
+solving. proceedings tenth ieee conference on artificial intelligence
+for applications (caia-94), san antonio, tx, march 1994. 
+
+raman rajagopalan. 1994. a
+model for integrated qualitative spatial and dynamic reasoning about physical
+systems. in proceedings of the national conference on artificial
+intelligence (aaai-94), aaai/mit press, 1994. 
+
+raman rajagopalan. 1995. qualitative
+reasoning about dynamic change in the spatial properties of a physical
+system. doctoral dissertation, department of computer sciences,
+the university of texas at austin. (available as tr ai95-241.) 
+
+
+qualitative spatial representation
+
+
+rajagopalan, r. 1993. a
+model of spatial position based on extremal points. proceedings
+acm workshop on advances in geographic information systems, arlington,
+va, november 1993. 
+discussion of representation for spatial reasoning. 
+
+rajagopalan, r. 1994. on
+shape abstractions for qualitative spatial reasoning. working
+notes of the aaai workshop on spatial and temporal reasoning, aaai-94,
+seattle, wa, 1994. 
+further descriptions of spatial representation. emphasis on comparison
+with other methods. 
+
+rajagopalan, r. and b. kuipers. 1994. the
+figure understander: a system for integrating text and diagram input to
+a knowledge base. proceedings seventh international conference
+on industrial and engineering applications of artificial intelligence and
+expert systems (iea/aie-94), austin, tx, may 1994. 
+details of implemented system for integrating graphical and text input
+to a knowledge base. 
+
+rajagopalan, r. 1994. integrating
+text and graphical input to a knowledge base. working note of
+the aaai workshop on integration of natural language and vision processing,
+aaai-94, seattle, wa, 1994. 
+further extensions of work on integrating diagrammatic and text input to
+a knowledge base. 
+
+raman rajagopalan. 1995. picture
+semantics for integrating text and diagram input. artificial
+intelligence review 10(3-4). special issue on integration of
+natural language and vision processing, recent advances volume. 
+
+
+
+
+
+
+heterogeneous control 
+
+
+benjamin kuipers &amp; karl astrom. 1991. the
+composition of heterogeneous control laws. in proceedings of
+the american control conference, 1991, p.630-636. 
+
+abstract 
+
+reprinted in abraham kandel &amp; gideon langholz (eds.), fuzzy control
+systems, crc press, 1993, pp. 243-261. 
+reprinted in r. r. yager &amp; l. a. zadeh (eds.), fuzzy sets, neural
+networks and soft computing, van nostrand reinhold, new york, 1994,
+pp. 45-62. 
+
+b. j. kuipers and k. astrom. 1994. the
+composition and validation of heterogeneous control laws. automatica
+30(2): 233--249. 
+
+abstract 
+
+
+
+[qr home] 
+
+bjk
+
+
+
+
+papers on qualitative reasoning 
+papers on qualitative reasoning 
+papers on qualitative reasoning 
+papers on qualitative reasoning 
+papers on qualitative reasoning 
+papers on qualitative reasoning 
+papers on qualitative reasoning 
+papers on qualitative reasoning 
+papers on qualitative reasoning 
+papers on qualitative reasoning

@@ -1,0 +1,174 @@
+cs 736 - advanced operating systems - fall 1996
+
+
+
+
+
+
+university of wisconsin-madison
+
+computer sciences department
+
+
+
+
+cs 736
+
+fall 1996 
+bart miller
+
+
+cs 736: advanced operating systems
+
+
+
+
+paper assignment #1
+(due: wednesday, september 25)
+
+
+
+description
+the goal of this assignment is to think about and describe the memory
+management facility of a new and powerful computer.
+you will use the ideas that you have read about, and apply these to a
+different environment.
+
+the computer that you are thinking about will have some
+interesting characteristics.
+first, it will be a multiprocessor, with 1-16 cpu's.
+there will be many cpu's sharing the same memory (see figure below).
+this computer will support parallel programs consisting of many processes
+cooperating in a single computation.
+parallel programs will share memory to communicate and use a mechanism such
+as semaphores, spin-locks, or monitors to synchronize.
+second, it will have a large physical memory.
+it will be common to see machines with 256 megabytes (or more) of ram, with
+4-16 kb page frames.
+these large memories will be useful in supporting applications in ai, graphics,
+vision, cad, and databases.
+
+remember:
+large page frames and physical memory
+and
+lots of sharing.
+
+you are to describe how the working set concept can help to efficiently
+allocate the memory and cpu's in this workstation design.
+there are two areas that you will address.
+first, how can you use the concept of working set to efficiently execute
+parallel programs.
+for example, we might have a simple producer/consumer pair of processes.
+how can we schedule the cpu's and memory to make this program execute well?
+what about more complex computations made up of many processes?
+what about the competition between several parallel programs for resources?
+how do we define resource demand and balance set?
+how do you define the last referenced time for a page shared by many
+processes?
+
+second, how does the large address space affect resource scheduling?
+is memory scheduling a dead issue?
+do applications with extremely large memory demands change the way we allocate
+memory?
+what about the cost of gathering scheduling information and storing tables?
+
+you paper will make design decisions that may require data about the type of
+programs that will run on the workstation and how these programs will behave.
+you should describe what information you need and
+how you will go about collecting the information to
+make these design decisions.
+you should also describe how you will verify these decisions and how you will
+set the parameters of the various policies that you design.
+
+as you are thinking about your design, you should think about the
+goal and features of previous systems.
+which of these goals are no longer important?
+what are the significant differences of this new computer from ones that we
+have read about?
+you will, of course, want to consider what goals are still important.
+can you use solutions from the past or will you satisfy these goals in new
+ways?
+
+
+
+
+
+
+
+constraints
+
+the paper should be at most 6 pages, 10 point font, double-spaced,
+single-sided and 1 inch margins.
+the paper must contain the following parts:
+
+title:
+
+the title should be descriptive and fit in one line across the page.
+interesting titles are acceptable, but avoid overly cute ones.
+abstract:
+
+this is the paper in brief.
+it is 
+not
+a description of the paper.
+it should state the basic contents and conclusions of the paper.
+it is an advertisement that will draw the reader to your paper, without
+being misleading.
+it should be complete enough to understand what will be covered in the paper.
+avoid phrases such as "the paper describes...."
+this is a technical paper and not a mystery novel; don't be afraid of giving
+away the ending.
+body:
+
+this is the main part of the paper.
+it should include an introduction that prepares the reader for the
+remainder of the paper.
+assume that the reader is knowledgeable about working set and operating
+systems.
+the introduction should motivate the rest of the discussion and outline
+the approach.
+the main part of the paper should be split into reasonable sections.
+the last part of the body is the conclusion.
+this is a discussion of what the reader should have learned from the
+paper.
+you can repeat things stated earlier in the paper, but only to the extent
+that they contribute to the final discussion.
+references:
+
+you must cite each paper that you have referenced.
+this section appears at the end of the paper.
+figures:
+
+a paper without figures, graphs, or diagrams is boring.
+a rule of thumb is one figure for each 3 or 4 pages.
+these figures should (typically) take up only a small portion of
+a page.
+your paper must have figures.
+
+
+do not redescribe the assignment; address the issues described above.
+the paper must be written using correct english  grammar.
+there should be no spelling mistakes.
+a paper that is difficult to read or has poor grammar
+will be returned ungraded.
+remember the word of the day: pithy.
+
+
+
+last modified:
+mon sep  9 13:40:25 cdt 1996
+by
+bart
+
+
+
+cs 736 - advanced operating systems - fall 1996
+cs 736 - advanced operating systems - fall 1996
+cs 736 - advanced operating systems - fall 1996
+cs 736 - advanced operating systems - fall 1996
+cs 736 - advanced operating systems - fall 1996
+cs 736 - advanced operating systems - fall 1996
+cs 736 - advanced operating systems - fall 1996
+cs 736 - advanced operating systems - fall 1996
+cs 736 - advanced operating systems - fall 1996
+cs 736 - advanced operating systems - fall 1996

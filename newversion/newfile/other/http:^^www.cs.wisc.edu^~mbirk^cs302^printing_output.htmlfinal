@@ -1,0 +1,160 @@
+printing output from outside the lab 
+
+
+
+ printing output from outside the lab 
+
+i've had several people ask me about printing the output for their program
+on a compiler that doesn't support the handy "print" option in the
+output window.  if you're trying to do the homeworks from someplace other
+than the lab, and you can't get the output to go the printer, here's my
+advice:
+
+ printing from a unix system 
+
+if you're on a unix system (probably using g++ or cc), use the "script"
+command if you have it.  it copies all input and output of the program
+to a file called "typescript" ... then you can simply print the file.
+here is an example:
+
+
+
+
+/usr/home/jdoe# g++ -o prog1 prog1.cpp
+/usr/home/jdoe# script
+script started, file is typescript
+/usr/home/jdoe# prog1
+welcome to john doe's program ...
+ ... etc ...
+/usr/home/jdoe# exit
+script done, file is typescript
+/usr/home/jdoe# lpr -pmylaser typescript
+
+
+
+
+warning: if you use the script command, don't forget to type exit when you
+are done!  and don't "nest" script commands.
+
+ printing from a dos (non-windows) system 
+
+if you're on a dos system (not running windows), you can redirect the output
+of your program to a file.  for example, if you've compiled your program
+into an executable called prog1.exe, you can redirect the output to
+a file "output.txt" using the following dos command:
+
+
+   prog1 >output.txt
+
+
+also, you can "append" the output of your program to a previous run with
+two greater-than signs:
+
+
+   prog1 >>output.txt
+
+
+
+
+this has two disadvantages, however.  first, since the output is going to
+a file, you can't see it on the screen!  so you have to "know" what the
+expected input is beforehand.  second, the input you type is not redirected
+to the file.  thus you need to modify your program to "echo" the input
+so that it appears in the file too.  for example:
+
+
+
+
+#include &lt;iostream.h&gt;
+
+int main ()
+{
+   int num_apples;
+   cout &lt;&lt; "how many apples do you want?";
+   cin &gt;&gt; num_apples;
+   cout &lt;&lt; num_apples &lt;&lt; endl; // echo input for redirection
+   return 0;
+}
+
+
+ printing on any system 
+
+if you're printing from any other system that doesn't have a "print output"
+command or doesn't support redirection, you can use the following techinque.
+this should work on any system: windows, mac, unix, etc.
+
+
+
+the idea is to modify the program so that all the output goes to a file
+instead of a screen.  thus this method suffers the same problems as the
+dos method above: output is not displayed on the screen (i.e. you can't
+see the prompts) and input is not redirected to the file (thus you have
+to echo the input in your program).  for example, consider the following
+program:
+
+
+
+
+#include &lt;iostream.h&gt;
+
+int main ()
+{
+   int num_apples;
+   cout &lt;&lt; "how many apples do you want?";
+   cin &gt;&gt; num_apples;
+   return 0;
+}
+
+
+
+
+to make this program's input and output go to a file named "output.txt",
+we could modify it like this (note the extra #include directive):
+
+
+#include &lt;iostream.h&gt;
+#include &lt;fstream.h&gt;
+
+int main ()
+{
+   ofstream fout = "output.txt";  // open a file for writing
+   cout = fout;                   // redirect cout to the file
+
+   int num_apples;
+   cout &lt;&lt; "how many apples do you want?";
+   cin &gt;&gt; num_apples;
+   cout &lt;&lt; num_apples &lt;&lt; endl;    // echo input for redirection
+   return 0;
+}
+
+
+
+
+once you have the program's output saved in a file, you can use almost
+any means to print that file out.  under windows you can use the notepad,
+for example.
+
+ if all else fails 
+
+if, for some reason, all of the above methods fail for you (the last one
+_should_ work), you will have to print the output from the vectra lab.
+put the source code on a floppy disk, go to the lab, compile the program,
+and print the output.
+
+
+
+mbirk@cs.wisc.edu
+
+
+
+
+ printing output from outside the lab 
+ printing output from outside the lab 
+ printing output from outside the lab 
+ printing output from outside the lab 
+ printing output from outside the lab 
+ printing output from outside the lab 
+ printing output from outside the lab 
+ printing output from outside the lab 
+ printing output from outside the lab 
+ printing output from outside the lab

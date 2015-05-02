@@ -1,0 +1,65 @@
+constraint hierarchies
+
+
+
+constraint hierarchies
+
+
+
+authors: alan borning, bjorn freeman-benson, and molly wilson
+
+
+
+lisp and symbolic computation, vol. 5 no. 3, (september 1992),
+pages 223-270.
+
+
+
+reprinted in constraint programming, b. mayoh, e.  tougu, j.
+penjam (eds.), nato advanced science institute series, series f: computer
+and system sciences, vol 131, springer-verlag, 1994, pages 75-115.
+
+
+
+
+abstract
+
+constraints allow programmers and users to state declaratively a relation
+that should be maintained, rather than requiring them to write procedures
+to maintain the relation themselves.  they are thus useful in such
+applications as programming languages, user interface toolkits, and
+simulation packages.  in many situations, it is desirable to be able to
+state both required and preferential constraints.  the
+required constraints must hold.  since the other constraints are merely
+preferences, the system should try to satisfy them if possible, but no
+error condition arises if it cannot.  a constraint hierarchy
+consists of a set of constraints, each labeled as either required or
+preferred at some strength.  an arbitrary number of different strengths is
+allowed.  in the discussion of a theory of constraint hierarchies, we
+present alternate ways of selecting among competing possible solutions, and
+prove a number of propositions about the relations among these
+alternatives.  we then outline algorithms for satisfying constraint
+hierarchies, and ways in which we have used constraint hierarchies in a
+number of programming languages and systems.
+
+
+
+
+
+click 
+here to get the postscript file.
+
+
+
+return to constraints home page
+
+constraint hierarchies
+constraint hierarchies
+constraint hierarchies
+constraint hierarchies
+constraint hierarchies
+constraint hierarchies
+constraint hierarchies
+constraint hierarchies
+constraint hierarchies
+constraint hierarchies

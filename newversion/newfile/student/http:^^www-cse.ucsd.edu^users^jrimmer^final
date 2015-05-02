@@ -1,0 +1,200 @@
+rimbo, aka jimmy rimmer
+   
+
+
+
+
+
+jimmy rimmer, aka rimbo 
+
+
+
+updated last: 11/21/96
+
+
+i fear the denver
+broncos.
+
+more appropriately, i fear john
+elway.
+
+
+well, well, well...how about those longhorns? it would appear that mackovic,
+formerly known as the &quot;iceman,&quot; has stepped up and decided to
+lead the team with a little bit of emotion. maybe we do have a chance to
+get slaughtered by either colorado or nebraska in the big 12 championship...
+
+there are three sections to this page: my undergraduate thesis,
+a few sound modules i've written, and a list of links
+through which i can share some of my interests.
+
+
+
+
+my undergraduate thesis:
+
+&quot;a knowledge-based approach for generating transitions between
+musical themes by computer in real time&quot; or something like that
+
+
+basically, it's an attempt to take two musical themes, and have the
+computer generate a musical transition between them. 
+
+i'm fortunate that i had the chance to make all my mistakes in undergraduate
+school...i think i'll get my chance to do a thesis correctly now that i'm
+a ph.d. student at ucsd. there are a few major flaws with this, and i think
+i ought to let y'all know what they are before you dive in and download
+these two files. 
+
+
+the paper is almost totally lacking proper research. honestly, i tried
+to find similar works, but could not find them. on the other hand, i could
+have looked harder for books on chord theory and come up with a good generalized
+list of rules instead of the ones i invented in the last minute. 
+
+also, along with the lack of research, the paper has a very poorly
+designed &quot;related works&quot; section. i had very little idea what
+was expected of me because i put this part off until the last nanosecond.
+
+
+the two parts above give the paper sort of a &quot;lone ranger&quot;
+type of feel, which was not my intention at all. in fact, i owe quite a
+lot to the renaissance guys (tran and daredevil) for making the pmode/w
+header the executable uses, and to mikmak of hardcode for the mikmod routines
+i used. 
+
+finally, as you'll probably read, i only got 2/3 of the way done. there's
+simply no excuse for that.
+
+
+so, anyway, here it is.
+a zipped postscript
+version of the actual paper.
+source
+code, sample song, and dos executable, zipped.
+the source code compiles just fine with pmode/w and watcom c/c++ 10.6
+given the included makefile. the executable requires the sample song to
+be in the same directory with it, and also requires a soundcard. most soundcards
+work--all soundcards that mikmod supports, this supports, including the
+gravis ultrasound, soundblaster 16, and a half dozen others. 
+
+
+my tracked music.
+
+here are some songs i've done in (close to) the order i did them...all
+are in either s3m or xm format.
+
+if you don't already have a player for these, download: cubic
+player if you normally use dos, mod4win
+(shareware) if you use windows 95, or if you happen to be a linux user,
+i recommend mikmod
+2.09b.
+
+
+i am in considerable
+pain. funk. my first tracked tune ever. put me in the ranks
+of the not-so-elite &quot;animaniacs trackers' club&quot; along with luv
+kohli and raymond singing wolf (or kitsune, or raymond blackwolf, or whatever
+name he's going by nowadays). 
+
+three minutes
+past midnight. industrial. ahhh, such a marvelous waste of channels!
+this has some of the better samples of the lot. i still like it, even after
+all of these years.... 
+
+the bird, the
+fountain, and the temple. demo-music. this was originally an
+fm s3m, but i converted it to an xm. (it sounded better as an fm tune--tragically,
+i lost the original.) 
+
+seizure.
+industrial. my first phluid release. i still am not too fond of
+this one, but there are a shockingly great number of people who really
+love this song. you decide. 
+
+pain ii.
+dance. the song accused of sounding like &quot;my sharona.&quot;
+it was actually inspired by &quot;gimme some lovin'&quot; by steve winwood's
+old band (i forget their name.) 
+
+quartet.
+classical. a chiptune. i like the oboe patch for the gus--you get
+12 samples for the price of 9k. 
+
+chiptune.
+chip. got second place in one of the original 20-minute chiptune
+compos. 
+
+the bells
+of zhakanh. ambient/pop. this is the first song i've tracked
+to come close to the quality of my midi work. some people don't like the
+dissonant harmonies in this one. i think this one rocks all of the rest,
+personally. 
+
+insanity.
+industrial/art-music. this song was the last song i released on
+a phluid music pack. i didn't like it at first, because it was hastily
+completed; however, i'm beginning to realize that it takes my music in
+a direction i'd really like to go. when listening to it, imagine someone
+who has flipped out going from mood to mood to unsanitary mood... 
+
+3 themes.
+no style. the example song from my thesis, but with transitions
+written by me. designed for scientific reasons, not aesthetics. hornet
+gave this song a rating of *+, which is their way of saying &quot;why did
+you even bother?&quot;
+
+hyperactif.
+dance/acid. a re-worked version of my naid multichannel music competition
+entry. it's a lot better now than what i released to the compo. it still
+sucks.
+
+
+the three songs which most people seem to like of these are seizure,
+pain ii, and insanity. if you're limited in time and space, you probably
+can't go very wrong with those three. my personal favorite is the bells
+of zhakanh.
+
+and more stuff to come... 
+a few fav'rite links.
+the lurker's
+guide to babylon 5.
+&quot;what, babylon 5?!?!?!? why should i watch babylon 5? isn't
+it just a star trek ripoff?&quot; no, and here's why: it's a five-year
+story, with rich detail. fortunately, for those of us who are truly
+addicted, the show won't be over after five years--there will be a spinoff
+series carried by tnt.
+the #trax homepage. #trax can be
+found on the server irc.demoscene.org.
+the ensoniq vfx home
+page.
+the ultimate longhorn site. for
+people, like me, who are homesick longhorns.
+
+
+
+to contact me, write to rimbo@cs.ucsd.edu.
+
+back to the cs department
+homepage.
+
+the cs department at the university of california
+at san diego, ucsd, the uc system, the state of california, the united
+states of america, and pretty much all of humanity has no responsibility
+for this page or my actions. so if you want to sue somebody about something
+i've said, you're going to have to sue my poor ass. you will get
+satisfaction, but i'm afraid that i'm quite short on money.
+
+
+
+
+rimbo, aka jimmy rimmer
+rimbo, aka jimmy rimmer
+rimbo, aka jimmy rimmer
+rimbo, aka jimmy rimmer
+rimbo, aka jimmy rimmer
+rimbo, aka jimmy rimmer
+rimbo, aka jimmy rimmer
+rimbo, aka jimmy rimmer
+rimbo, aka jimmy rimmer
+rimbo, aka jimmy rimmer

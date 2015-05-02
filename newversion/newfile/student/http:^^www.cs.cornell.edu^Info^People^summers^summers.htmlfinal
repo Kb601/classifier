@@ -1,0 +1,104 @@
+kristen summers 
+
+
+
+
+ kristen summers 
+ phd student, cornell university 
+ summers@cs.cornell.edu 
+5132 upson hall 
+607-255-5577
+
+ research interests  
+
+i work with the 
+information capture and access
+research group on document analysis.  my
+long-term goal is to provide support for
+sophisticated electronic document manipulation
+tools for indexing, browsing, linking, etc.
+
+my primary interest is in discovering logical
+structure in arbitrary electronic documents.
+the goal is to take an electronic document
+representation as input and return a hierarchy
+of logical pieces of the document as output.
+for example, given a scanned-in or postscript
+version of a technical report, i would like to
+be able to divide it into sections, paragraphs, etc.
+similarly, in a business letter, the address headings,
+body, and closing should be identifiable.
+
+this problem has two primary components:  
+segmentation
+(dividing the document into logical pieces) and
+classification
+(categorizing the pieces).
+it also raises the questions of evaluation
+(previous work differs in descriptions of the correct hierarchy), 
+types of logical structures,
+and theoretical limitations.
+
+the task is relevant to two of bruce croft's
+top 10
+research issues for information retrieval
+(in the 
+november
+1995 issue of d-lib magazine):
+number 5, "interfaces and browsing," and number 3,
+"efficient, flexible, indexing and retrieval."  determining
+logical structure enables flexible, hierarchical browsing; doing so
+in a general way supports system flexibility and handling of
+multiple document types.
+
+ papers 
+
+
+using non-textual cues for electronic 
+document browsing
+co-authored with daniela rus.
+in digital libraries:  current issues, 
+nabil r. adam, bharat k. bhargava, and yelena yesha, editors.
+chapter 9, pp. 129 - 162.  lecture notes in computer science series.
+springer-verlag, 1995.
+versions in:
+	
+	"geometric algorithms and experiments for automated document structuring,"
+	mathematical and computer modelling, forthcoming.
+	"using 
+	white space for automated document structuring,"
+	cornell university computer science technical report tr 94-1452.
+	proceedings of the workshop on the principles of 
+	document processing, seeheim, 1994.  (podp '94)
+	
+
+
+toward a taxonomy of logical document structures
+
+electronic publishing and the information superhighway:
+proceedings of the dartmouth institute for advanced graduate studies,
+pp. 124 - 133, boston, may 1995.
+
+donald b. johnson memorial dags scholar
+award for the best student paper, co-recipient.
+
+
+near-wordless document structure 
+classification 
+proceedings of the international conference on document analysis
+and recognition, pp. 426 - 456, montr&eacute;al, august 1995.
+
+
+
+
+
+ kristen summers 
+ kristen summers 
+ kristen summers 
+ kristen summers 
+ kristen summers 
+ kristen summers 
+ kristen summers 
+ kristen summers 
+ kristen summers 
+ kristen summers

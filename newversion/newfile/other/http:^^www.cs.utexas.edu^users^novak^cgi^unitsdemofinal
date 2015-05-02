@@ -1,0 +1,57 @@
+unit conversion demo
+conversion of units of measurement
+
+this is a demonstration of a program that converts between different units
+of measurement, or combinations of units.  it can also simplify
+expressions of units.
+
+a units expression is a unit name, such as meter,
+a number such as 2.5, a product of two or more unit expressions
+(* expr1 ... exprn),
+or a quotient of two unit expressions (/ expr1 expr2).
+common abbreviations such as ft are allowed.
+
+an example is (/ (* atto parsec) (* micro fortnight)).
+
+when the program is started, a window is created containing a command menu
+and input and output areas.  click the appropriate menu items to run
+the demo.
+
+ 
+   
+       ftp directory for software and documentation.
+  
+       conversion of units of measurement'' paper.
+ 
+
+
+
+instructions
+
+
+	you must be logged in to a host running x windows.
+	type   xhost + www.cs.utexas.edu   (exactly as shown
+        at left) in a window on that host
+	to allow this server to write to your display.
+	enter your x display name here if needed; you may need to change
+        what is shown in the box to your x display name.  for example,
+         myterminal.cs.utexas.edu:0.0  
+	
+	click  to start the demo.
+
+
+
+gordon s. novak jr.
+
+
+
+unit conversion demo
+unit conversion demo
+unit conversion demo
+unit conversion demo
+unit conversion demo
+unit conversion demo
+unit conversion demo
+unit conversion demo
+unit conversion demo
+unit conversion demo

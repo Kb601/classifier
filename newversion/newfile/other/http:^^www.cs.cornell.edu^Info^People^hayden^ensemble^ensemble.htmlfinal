@@ -1,0 +1,84 @@
+ensemble 
+
+ 
+
+ the ensemble distributed communication system 
+
+
+ensemble is the next generation of the horus group
+communication toolkit, also developed at  cornell
+university. visit the horus page for more information about horus, papers on
+group communication, and pointers to other sites with related information.
+
+language support note that the current distribution primarily provides
+support for applications developed in the ml programming language.  however,
+interfaces to several other languages are under developlment and will be made
+available soon.  (you can check out our roadmap for future
+development to see what our plans are.)
+
+ml: ensemble is implemented in the objective caml programming language (a
+dialect of ml).  the use of ml supports a variety of optimizations that enable
+ensemble to achieve communication latencies an order of magnitude faster than horus
+(although the current distribution does not enable these optimizations).
+
+c: ensemble supports an interface to c, a prototype appears in the current
+distribution.  this interface is being expanded upon to provide complete support for
+c applications.
+
+c++: also under development are two c++ interfaces: the  horus object
+tools (hot) interface, and 
+electra  (a corba object request broker interface).
+
+java: finally, work is being to interface ensemble to java and to wrap ensemble
+as a netscape plug-in.
+
+
+building applications with ensemble for an application builder, ensemble
+provides a library of protocols that can be used for quickly building complex
+distributed applications.  an application registers 10 or so event handlers with
+ensemble, and then the ensemble protocols handle the details of reliably sending and
+receiving messages, transferring state, implementing security, detecting failures,
+and managing reconfigurations in the system.
+
+a research tool for a distributed systems researcher, ensemble is a highly
+modular and reconfigurable toolkit.  the high-level protocols provided to
+applications are really stacks of tiny protocol "layers."  these protocol layers each
+implement several simple properties: they are composed to provide sets of high-level
+properties, such as total ordering, security, virtual synchrony, etc....  individual
+layers can be modified or rebuilt to experiment with new properties or change the
+performance characteristics of the system.  this makes ensemble a very flexible
+platform on which to do research.
+
+other information
+
+
+
+general information about ensemble.
+
+find out more about horus
+
+our roadmap for future development of ensemble.
+
+transfer the distribution (after reading the license
+agreement).
+
+peruse the tutorial.
+
+stay in touch with us through the horus+ensemble 
+mailing list.
+
+
+mark hayden
+
+
+
+ ensemble 
+ ensemble 
+ ensemble 
+ ensemble 
+ ensemble 
+ ensemble 
+ ensemble 
+ ensemble 
+ ensemble 
+ ensemble

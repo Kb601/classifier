@@ -1,0 +1,85 @@
+concert software release
+
+
+
+
+concert software release
+
+
+the concert system is available on a variety of  parallel platforms.  compiler runs on
+recent sparc machines, and the compiler requires at least 32mb of ram
+to run the compiler comfortably; more memory will help
+performance when compiling large programs.  we are currently
+supporting only a single configuration of the concert system.  in
+order to make concert work on your system, you must have the
+following:
+
+
+ sparcstation 4,5,10, or 20 with 32+ mb of memory
+ gnu's g++ compiler version 2.7.2
+ gnu's gmake, a make program is used to build concert
+executables, so you cannot compile programs without it.  any version of
+gmake should work fine.
+ gnu emacs version 18 or 19.  emacs is required to run the concert 
+debugger and the emacs interface to the concert compiler and emulator.
+
+
+see the concert system release
+notice for more information.  all of these programs are freely
+available from numerous anonymous ftp sites; if you do not have one or
+more of them, use archie to find the ftp site nearest you.  if you
+don't know how to use archie, clicking here will connect you to the
+main gnu software server, prep.ai.mit.edu.
+  
+
+
+the concert system is publicly available from the concurrent system
+architecture group at the university of illinois.  it will come as a tar file,
+and can be installed simply by untarring it.  the software is not in
+the public domain; it is offered freely for use in education and research.
+  
+
+
+to obtain the current release of concert software, click on the button
+below.  the release is over 19mb, even in compressed form, so it may
+take a while to download. 4.0 is the newest version of concert, supporting
+our new langauge icc++. the compiler in concert 4.0 has been tuned for
+icc++, and so the 3.0 compiler is more robust for concurrent aggregates. 
+  
+
+
+
+concert 4.0 software distribution
+
+  
+
+
+
+concert 3.0 software distribution
+
+  
+
+to comply with the gnu's copyleft on the gdb software, the 
+source to our modifications of gdb is available.
+
+
+
+back to csag home page
+
+last updated 3 november 1995
+
+webmaster
+
+
+
+
+concert software release
+concert software release
+concert software release
+concert software release
+concert software release
+concert software release
+concert software release
+concert software release
+concert software release
+concert software release

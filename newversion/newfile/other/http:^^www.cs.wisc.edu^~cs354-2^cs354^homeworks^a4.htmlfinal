@@ -1,0 +1,177 @@
+assignment 4
+
+
+
+ assignment 4
+
+homework due wednesday, october 16, at the beginning of class.
+sal program due monday, october 21, before 5pm.
+mal program due monday, october 28, before 5pm.
+
+program
+purpose
+this program is intended to provide understanding in the area of data
+structures.  it also gives programming practice in mips assembly language
+code (mal).
+program statement
+the program graphs integer solutions for some points on a line specified
+by the user.
+a line can be specified by the equation ax + by = c.
+the solutions to this equation specify a line on a cartesian coordinate
+system.
+the program will have the user enter values for variables a, b, and c.
+it will then find all integer solutions to the equation where both x and y
+are greater than or equal to -5 and less than or equal to +5.
+
+we will restrict the user entered values (a, b, and c) to be greater than
+-10 and less than +10 to simplify the code that does input.
+
+use an 11 x 11 array of bytes to hold all the points on the grid.
+to find integers solutions, test each point to see if it solves the
+equation.
+where a solution is found, mark the solution within the array that
+represents the grid.  the last step in the program is to print out the
+grid.
+
+sample program run:
+
+
+enter a, b, and c: 1 1 3
+
+   x |
+    x|
+     x
+     |x
+     | x
+-----|--x--
+     |   x
+     |    x
+     |
+     |
+     |
+
+
+
+another sample program run:
+
+
+enter a, b, and c: 2 -1 -1
+
+     | x
+     |
+     |x
+     |
+     x  
+-----------
+    x|
+     |
+   x |
+     |
+  x  |
+
+
+
+requirements
+
+write this program twice.  the first time, write the program in sal.
+then translate the sal code to mal.  the sal version is due one week before
+the mal version is due.
+the user input is restricted in form to make the code easier to write.
+the user enters 3 integers, all on one line, separated by space characters.
+an end of line character (ascii character '\n') directly follows the third
+integer.  each integer is allowed to be positive or negative.
+negative values have a '-' character immediately preceding them.
+if there is no '-' character, then the integer is positive.
+use only the sal/mal getc instruction for reading user input.
+the magnitude of the integers is restricted to be less than 10.  no error
+checking need be done on the user input.
+write the program such that it runs once, and then exits. do not incorporate a loop to execute the program more than once.
+since part of the goal of this programming assignment is to gain
+experience using arrays, the program must use a two dimensional array
+to store the solutions to the equation for a line.
+comment your program appropriately.
+for the mal version, make sure that all instructions in the program
+are part of the mal instruction set.
+this means that all operands of arithmetic and logical instructions
+will be in registers.
+points will be deducted if sal instructions or code are included in the
+mal version of the program.
+for the mal version, you will want to learn to use a different
+user interface to the simulator.
+the user interface to sim is graphical -- it gives much more
+information than simp.
+note that sim and simp are scripts that run the
+same simulator; the difference is the user interface presented.
+the user interface that goes with sim shows register values,
+and it easily allows single stepping through code.
+for detailed information, read the document listed under "simulator help"
+on the cs354 home page.
+
+handing in the program
+
+turn in your sal program (the sal source code)
+only once by running the script
+handin4s program4s.s
+where program4s.s
+is the name of the file containing the sal program.
+the handin4s script submits your program for you.
+no printout will be turned in.
+
+turn in your mal program (the mal source code)
+only once by running the script
+handin4m program4m.s
+where program4m.s
+is the name of the file containing the mal program.
+the handin4m script submits your program for you.
+no printout will be turned in.
+
+
+
+
+homework
+
+
+(10 points) show all work in obtaining the result of the following floating
+point multiplication.
+the representation is ieee single precision, except that the mantissa
+field of the representation contains only 6 bits.
+use round to nearest for any rounding.
+
+
+         s   e         f (shortened)
+         0  10001000  111011
+      x  1  10000011  110100
+      -----------------------
+
+
+
+(5 points) the fifth element of an array of integers declared with
+
+
+int_array:  .word   0:18
+
+
+is located at address 0x0400aa00.  what address (in the data section)
+would the the sal instruction
+
+
+move  m[int_array], -1
+
+
+access?
+
+
+
+
+
+
+assignment 4
+assignment 4
+assignment 4
+assignment 4
+assignment 4
+assignment 4
+assignment 4
+assignment 4
+assignment 4
+assignment 4

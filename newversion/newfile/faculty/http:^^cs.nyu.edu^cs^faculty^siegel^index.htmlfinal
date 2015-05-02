@@ -1,0 +1,140 @@
+alan siegel
+
+
+
+
+alan siegel
+associate professor, computer science dept
+ alan siegel@cs.nyu.edu
+
+
+
+
+department of computer science
+
+
+courant institute of mathematical sciences
+
+new york university
+
+
+
+
+mail address
+      courant inst. of math. sciences, rm 413
+      251 mercer st.
+      new york, ny 10012, u.s.a.
+
+
+phones
+      212.998.3122 (voice)   212.995.4121 (fax)
+
+
+email
+      alan siegel@cs.nyu.edu
+
+
+
+
+topics
+
+
+soda 95 paperpostscript
+
+
+
+
+
+tr684 
+ a. siegel,
+"on universal classes of extremely random constant time hash functions
+and their time-space tradeoff",
+apr. 1995
+
+
+abstract: 
+a family of functions f that map [0,n]->[0,n], is said to be h-wise independent
+if any h points in [0,n] have an image, for randomly selected f in f, that is
+uniformly distributed.  this paper gives both probabilistic and explicit
+randomized constructions of (n**epsilon)-wise independent functions, for
+epsilon
+this paper also establishes a tight tradeoff in the number of random seeds that
+must be precomputed for a random function that runs in time t and is h-wise
+independent.
+
+ 
+
+tr685 
+ a. siegel,
+"toward a usable theory of chernoff bounds for heterogeneous and partially
+dependent random variables",
+apr. 1995
+
+
+abstract:
+let x be a sum of real valued random variables and have a bounded mean e[x].
+the generic chernoff-hoeffding estimate for large deviations of x is:
+p{x-e[x]>=a}=0}exp(-y(a+e[x]))e[exp(y x)], which applies with a>=0
+to random variables with very small tails.  at issue is how to use this method
+to attain sharp and useful estimates. we present a number of chernoff-hoeffding
+bounds for sums of random variables that may have a variety of dependent
+relationships and that may be heterogeneously distributed.
+
+
+
+tr686 
+ j. schmidt, a. siegel,
+"double hashing is computable and randomizable with universal hash functions",
+apr. 1995
+
+
+abstract:
+universal hash functions that exhibit (c log n)-wise independence are shown to
+give a performance in double hashing and virtually any reasonable
+generalization of double hashing that has an expected probe count of
+1/(1-alpha) + epsilon for the insertion of the (alpha n)-th item into a table
+of size n, for any fixed alpha  0.  this performance is within
+epsilon of optimal.  these results are derived from a novel formulation that
+overestimates the expected probe count by underestimating the presence of
+partial items already inserted into the hash table, and from a sharp analysis
+of the underlying stochastic structures formed by colliding items.
+
+ 
+
+tr687 
+ a. siegel, j. schmidt,
+"closed hashing is computable and optimally randomizable with universal
+ hash functions",
+apr. 1995
+
+
+abstract:
+universal hash functions that exhibit (c log n)-wise independence are shown to
+give a performance in double hashing, uniform hashing and virtually anyreasonable generalization of double hashing that has an expected probe count of
+1/(1-alpha)+o(1/n) for the insertion of the (alpha n)-th item into a table of
+size n, for any fixed alpha 
+analogous bounds are attained for the expected r-th moment of the probe count,
+for any fixed r, and linear probing is also shown to achieve a performance
+with universal hash functions that is equivalent to the fully random case.
+
+
+
+nyu tech reportshypertext
+
+
+
+
+
+
+
+
+alan siegel
+alan siegel
+alan siegel
+alan siegel
+alan siegel
+alan siegel
+alan siegel
+alan siegel
+alan siegel
+alan siegel

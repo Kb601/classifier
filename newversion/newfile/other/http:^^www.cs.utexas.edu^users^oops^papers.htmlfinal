@@ -1,0 +1,325 @@
+oops group publications
+
+
+
+
+oops group publications
+
+
+
+  sheetal v. kakkad, mark s. johnstone, and
+paul r. wilson. portable runtime type
+description for conventional compilers.  submitted to
+usenix '97.
+
+
+
+many useful language extensions and support libraries require knowledge of
+the layout of fields within objects at runtime.  examples include orthogonal
+persistent object stores, garbage collectors, data structure picklers, 
+parameter marshalling schemes, etc.
+
+for clean and efficient implementation as libraries, these systems require
+knowledge of the actual layouts of data objects, which is unavailable in
+most traditionally-compiled and linked programming languages, such as c, c++,
+and ada.
+
+we present a facility for runtime type description, or
+rttd, which extracts the low-level layout information from debug output of
+conventional compilers, and makes it available to user programs.  we describe
+the basic strategies of the system, and present details of our interface for
+c++.  we also sketch some extensions we have implemented, including special
+treatment of c++'s virtual function table pointers.
+
+our implementation is freely available via anonymous ftp.
+
+
+
+
+postscript
+ (136kb)
+
+
+  michael neely. an analysis of the
+effects of memory allocation policy on storage fragmentation.
+master's thesis, the university of texas at austin, may 1996.  
+
+
+the study of dynamic memory allocation has been dominated by
+measurement of performance of allocators with random input streams of
+requests. this study introduces a new methodology that separates the
+issue of policy from implementation and focuses on the effects of
+placement policy on fragmentation.  it studies the effects of policy
+decisions such as object placement, splitting, and coalescing, on
+storage fragmentation. a useful and accurate measurement of
+fragmentation is presented that is based on the amount of waste at the
+point of peak memory usage. we have attempted to pick a representative
+set of allocators from the space of reasonable combinations of known
+policies. the allocators are used in memory allocation simulations to
+determine their respective fragmentation.
+
+our results show that the best fit (fifo, lifo or address-ordered) and
+address-ordered first fit policies yield the lowest fragmentation on
+average (14%), and that the overheads associated with these allocators
+are the largest source of wasted memory. we also explain how best fit
+can be implemented efficiently. a representative set of real program
+allocation traces is used in the simulations, and compared with
+randomized traces, to show that the application's patterns of
+allocation are an important factor in the allocator's performance and
+that studies based on synthetic traces are fundamentally flawed.
+
+
+
+
+compressed postscript
+ (184kb)
+
+
+  paul r. wilson, mark s. johnstone, michael
+neely, and david boles. dynamic storage allocation:
+a survey and critical review. in international workshop on 
+memory management, kinross, scotland, uk, september 1995.  
+
+
+dynamic memory allocation has been a fundamental part of most computer
+systems since roughly 1960, and memory allocation is widely
+considered to be either a solved problem or an insoluble one.
+in this survey, we describe a variety of memory allocator designs
+and point out issues relevant to their design and evaluation.  we
+then chronologically survey most of the literature on allocators between
+1961 and 1995.  (scores of papers are discussed, in varying detail,
+and over 150 references are given.)
+
+we argue that allocator designs have been unduly restricted by
+an emphasis on mechanism, rather than policy, while the latter is
+more important;  higher-level strategic issues are still
+more important, but have not been given much attention.
+
+most theoretical analyses and empirical allocator evaluations to date 
+have relied on very strong assumptions of randomness and independence, 
+but real program behavior exhibits important regularities that must be
+exploited if allocators are to perform well in practice.
+
+
+
+
+postscript
+ (923kb)
+
+
+  paul r. wilson, sheetal kakkad, and
+shubhendu s. mukherjee. anomalies and adaptation in the analysis
+and development of prefetching policies.  journal of systems
+and software, 27(2):147-153, november 1994. 
+technical communication. 
+
+
+in "analysis and development of demand prepaging policies,"
+horspool and huberman show that it is possible to
+design prefetching memory policies that preserve a "stack"
+inclusion property, much like lru, allowing them to simulate
+these policies for all sizes of memory in a single pass through
+a reference trace.  we believe that the details of horspool and
+huberman's algorithms introduce unexpected anomalous properties,
+however.  in particular, their policies are not properly
+timescale relative--events occuring on a timescale
+that should only matter to
+some sizes of memory adversely affect replacement decisions
+for memories of very different sizes.  slight changes to the
+algorithms can restore timescale relativity and make them much
+better-behaved.  in addition, we would like to point out that
+horspool and huberman's algorithms actually simulate adaptive
+policies, which may explain some of their unexpectedly positive
+results.  this view suggests that properly timescale-relative
+inclusion-preserving policies can be used to systematically
+evaluate adaptive memory management schemes.
+
+
+
+
+postscript
+ (123kb)
+
+
+  paul r. wilson and mark s. johnstone.
+real-time non-copying garbage collection. position paper for
+the  1993 acm oopsla workshop on memory management and garbage
+collection, washington d.c., september 1993. 
+
+
+
+postscript
+ (102kb)
+
+
+  paul r. wilson. uniprocessor garbage
+collection techniques. in international workshop on memory
+management, st. malo, france, september 1992. (the proceedings
+has been published as springer-verlag lecture notes in computer
+science no. 637).  
+
+
+we survey basic garbage collection algorithms, and variations such as
+incremental and generational collection.  the basic algorithms include
+reference counting, mark-sweep, mark-compact, copying, and treadmill
+collection. incremental techniques can keep garbage collection
+pause times short, by interleaving small amounts of collection work
+with program execution.  generational schemes improve efficiency and
+locality by garbage collecting a smaller area more often, while
+exploiting typical lifetime characteristics to avoid undue overhead
+from long-lived objects.
+
+
+
+
+postscript
+ (379kb)
+
+
+  paul r. wilson. uniprocessor garbage
+collection techniques. draft of much expanded version of the above
+paper. in revision (accepted for acm computing surveys). 
+
+
+we survery basic garbage collection algorithms, and variations such as
+incremental and generational collection; we then discuss low-level
+implementation considerations and relationships between storage
+management systems, languages, and compilers. throughout, we attempt
+to present a unified view based on abstract traversal strategies,
+addressing issues of conservatism, opportunism, and immediacy of
+reclamation; we also point out a variety of implemetation details that
+are likely to have significant impact on the performance.
+
+
+
+
+postscript
+ (764kb)
+
+
+  paul r. wilson and sheetal v. kakkad. pointer
+swizzling at page fault time: efficiently and compatibly supporting
+huge address spaces on standard hardware. in international
+workshop on object orientation in operating systems, pages
+364-377, paris, france, september 1992. 
+
+
+pointer swizzling at page fault time is a novel address translation
+mechanism that exploits conventional address translation hardware.  it
+can support huge address spaces efficiently without long hardware
+addresses; such large address spaces are attractive for persistent
+object stores, distributed shared memories, and shared address space
+operating systems.  this swizzling scheme can be used to provide data
+compatibility across machines with different word sizes, and even to
+provide binary code compatibility across machines with different
+hardware address sizes.
+
+pointers are translated ("swizzled") from a long format to a shorter
+hardware-supported format at page fault time.  no extra hardware is
+required, and no continual software overhead is incurred by presence
+checks or indirection of pointers.  this pagewise technique exploits
+temporal and spatial locality in much the same way as a normal virtual
+memory; this gives it many desirable performance characteristics,
+especially given the trend toward larger main memories.  it is easy to
+implement using common compilers and operating systems.
+
+
+
+
+postscript
+ (279kb)
+
+
+  vivek singhal, sheetal kakkad, and paul wilson.
+ texas: an efficient, portable persistent store. in 
+persistent object systems: proceedings of the fifth international
+workshop on persistent object systems, pages 11-33, san
+miniato, italy, september 1992. 
+
+
+texas is a persistent storage system for c++, providing high
+performance while emphasizing simplicity, modularity and portability.
+a key component of the design is the use of pointer swizzling at page
+fault time, which exploits existing virtual memory features to
+implement large address spaces efficiently on stock hardware, with
+little or no change to existing compilers. long pointers are used to
+implement an enormous address space, but are transparently converted
+to the hardware-supported pointer format when pages are loaded into
+virtual memory.
+
+runtime type descriptors and slightly modified heap allocation
+routines support pagewise pointer swizzling by allowing objects
+and their pointer fields to be identified within pages.  if compiler
+support for runtime type identification is not available, a simple
+preprocessor can be used to generate type descriptors.
+
+this address translation is largely independent of issues of data
+caching, sharing, and checkpointing; it employs operating systems'
+existing virtual memories for caching, and a simple and flexible
+log-structured storage manager to improve checkpointing performance.
+
+pagewise virtual memory protections are also used to detect writes for
+logging purposes, without requiring any changes to compiled code.
+this may degrade checkpointing performance for small transactions with
+poor locality of writes, but page diffing and sub-page logging promise
+to keep performance competitive with finer-grained checkpointing
+schemes.
+
+texas presents a simple programming interface; an application creates
+persistent object by simply allocating them on the persistent heap.
+in addition, the implementation is relatively small, and is easy to
+incorporate into existing applications. the log-structured storage
+module easily supports advanced extensions such as compressed storage,
+versioning, and adaptive reorganization.
+
+
+
+
+postscript
+ (271kb)
+
+
+
+  paul r. wilson, michael s. lam, and thomas g.
+moher.  caching considerations for generational garbage collection. 
+ 1992 acm symposium on lisp and functional programming,
+san francisco, california, june 1992. 
+
+
+
+postscript
+ (237kb)
+
+
+
+
+
+
+more papers, a bibliography on heap management, and the  source code for
+texas persistent store are available via anonymous ftp at 
+ftp.cs.utexas.edu:/pub/garbage. the 
+ readme 
+file lists all the available material including subdirectories which
+contain collected papers from the 
+1991 and 
+1993 oopsla 
+garbage collection and memory management workshops.
+
+
+
+sheetal v. kakkad
+
+
+
+
+
+oops group publications
+oops group publications
+oops group publications
+oops group publications
+oops group publications
+oops group publications
+oops group publications
+oops group publications
+oops group publications
+oops group publications

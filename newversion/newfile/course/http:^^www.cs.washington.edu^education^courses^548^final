@@ -1,0 +1,108 @@
+cse 548 home page (w 96)
+
+
+
+
+
+
+
+cse 548: computer systems architecture
+winter 1996 
+
+
+instructor
+susan
+	eggers
+ 
+	, eggers@cs.washington.edu, sieg 308, 543-2118 
+	office hours: tuth 11 - 12
+
+
+
+ta
+joshua redstone
+
+	, redstone@cs.washington.edu, sieg 233, 543-7798 
+	office hours: m 2:30 - 3:20, w 4:00 - 4:50 in sieg 326a
+
+
+
+
+ course information
+
+  course overview (postscript)
+  schedule (continuously updated) (postscript)
+  lecture notes
+  problem sets
+  previous tests
+  architecture history (postscript)
+  specmark ratings (postscript)
+
+
+
+ 
+other information 
+
+   tools
+	
+  	   
+		shade - an instuction set simulator for the sparc v8
+  	   
+		atom - a system for building analysis tools on the
+			alpha 21064
+	   
+		tullsen's 21164 simulator - an execution-driven,
+		instruction-level simulator that simulates a superscalar 
+		architecture very close to the 21164.
+
+	   etch - a binary rewriter to 
+			analyze pentium code.
+
+	   
+			alpha hardware monitors
+	   multiflow - compiler for the alpha
+  	   
+		pixie - just user's manual from 1991(postscript)
+	   dinero - a 'uniprocessor cache simulator'
+	
+   local machines
+	
+	   alphas
+	   pentiums
+	   powerpcs
+	   sparcs
+	
+   applications
+	 
+	   multiprocessor
+	   uniprocessor
+		
+		   spec benchmarks
+		
+	
+
+
+
+ 
+other neat pages
+
+   cpu info center - info on current/future processors
+
+
+
+
+
+
+
+
+
+cse 548 home page (w 96)
+cse 548 home page (w 96)
+cse 548 home page (w 96)
+cse 548 home page (w 96)
+cse 548 home page (w 96)
+cse 548 home page (w 96)
+cse 548 home page (w 96)
+cse 548 home page (w 96)
+cse 548 home page (w 96)
+cse 548 home page (w 96)

@@ -1,0 +1,96 @@
+image and video transition fx for rivl
+image and video transition fx for rivl
+jose-luis fernandez, valerie j. ohm and amith yamasani
+16 october 1995
+
+
+
+1. overview
+
+rivl is a language extension to tcl/tk for manipulating images and video
+sequences. it comes with a set of primitives such as fade, rotate, overlay,
+etc. the purpose of this project is to extend the set of primitives and use
+them for creating complex transitional effects between two images or video
+sequences. 
+
+
+2. deliverables
+
+
+
+a set of primitives to create transitional effects between two images or on one image
+by creating a sequence of intermediate images. effects would include flip, deform, 
+squish, peel, fold-up, melt, bounce-squish, morph(?).
+
+the same transitional effects on video sequences. 
+
+
+3. milestones
+
+
+study the implementation of rivl and understand the internal representation of 
+     images and video sequences. 
+work on some of the simpler transitional effects such as flip, melt and peel.
+    get these effects working on a single image and on transition between two images. 
+the algorithms will be modified to work on video sequences.
+implementation of the other effects like fold-up, squish and deform to work on both
+    images and video sequences.
+test the functions extensively and optimize them for maximum speed.
+if time permits - create a simple interface to accept points on two images and use 
+    the points as references for the morphing of one image to the other. 
+documentation - parts of which could be done concurrently with the coding and testing.
+
+
+4. technical overview
+
+the effects
+
+
+flip: this is basically a shearing operation with a fixed line on either of the two axes.
+the parameters would be the position and orientation of the fulcrum, the image, and the angle
+through which to flip the image. in the case of flipping video, the frames would be processed
+one by one with the angle increasing gradually.
+
+melt: the image seems to melt into a liquid and flow down out of sight. this would involve
+generating a random smooth wave and shearing the image with the wave. the wave would also 
+have to change in shape gradually so that it doesn't look like a curtain falling.
+
+fold-up: this effect simulates the folding up of a piece of paper over and over again. how 
+the image is to be folded can be determined by parameters to the function. the image can be 
+folded as an opaque piece of paper or as a transparent one.
+
+peel: this is a real cool effect - like peeling off a sheet of paper placed over another one.
+even a video sequence can be "peeled" off to expose another sequence. the direction of peeling
+can be specified as a parameter. this effect could be extended to rolling it away like a scroll. 
+
+squish: squishing an image would cause it to get compressed with a bulge in the middle. bounce-squish is a variant of this where the squishing is a little springy. this involves shearing the image unevenly, applying a sine function to the shear and gradually increasing the amplitude of the sine
+wave.
+
+
+deform: deforming an image would involve squeezing a rectangular image into a nonrectangular 
+area which could be a quadrilateral or an oval. first the image would be resized in both dimensions
+to fit the bounding rectangle of the destination shape and then it would be sheared to fit the actual
+shape. 
+
+in most of these effects, as one video sequence gets transformed, the next sequence fills the
+background. 
+
+
+
+
+
+
+
+
+
+
+image and video transition fx for rivl
+image and video transition fx for rivl
+image and video transition fx for rivl
+image and video transition fx for rivl
+image and video transition fx for rivl
+image and video transition fx for rivl
+image and video transition fx for rivl
+image and video transition fx for rivl
+image and video transition fx for rivl
+image and video transition fx for rivl

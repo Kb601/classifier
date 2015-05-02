@@ -1,0 +1,96 @@
+probabilistic temporal reasoning
+
+
+
+
+probabilistic temporal reasoning
+
+developing models of temporal reasoning (essentially, 
+reasoning about dynamical systems) is just about as old as ai
+itself, and has been tackled using monotonic and non-monotonic
+logical frameworks, and more recently using probabilistic models.
+
+ 
+
+we are working on a probabilistic model that particularly addresses
+issues concerning endogenous change---situations in which 
+the system changes state but not as a result of exogenous forces 
+applied to the system.    in our domain---medical prediction, diagnosis, 
+and treatment decisions---an exogenous event would be a planned 
+treatment or test, and an endogenous event would be something like 
+internal bleeding causing vital signs to destabilize.   we are working
+on models that can be easily assessed from a human expert.
+
+ 
+
+another goal of the project is to understand the difference between 
+the way statisticians and computer scientists have approached the 
+problem of temporal reasoning, and to say something interesting 
+about causality in the process.
+
+ 
+other members of the team are:
+
+ craig aumann, 
+      department of statistics,
+      university of washington
+ jonathan gavrin, 
+     
+         department of anesthesiology, 
+     university of washington
+ david madigan, 
+      department of statistics,
+      university of washington
+
+
+
+
+paper references:
+
+  hanks, steve,  david madigan, jonathan gavrin
+
+
+probabilistic temporal reasoning with endogenous change
+
+
+proceedings uncertainty in ai 1995.
+
+
+
+
+ 
+hanks@cs.washington.edu
+ 
+
+
+
+
+
+probabilistic temporal reasoning
+
+
+probabilistic temporal reasoning
+
+
+probabilistic temporal reasoning
+
+
+probabilistic temporal reasoning
+
+
+probabilistic temporal reasoning
+
+
+probabilistic temporal reasoning
+
+
+probabilistic temporal reasoning
+
+
+probabilistic temporal reasoning
+
+
+probabilistic temporal reasoning
+
+
+probabilistic temporal reasoning

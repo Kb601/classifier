@@ -1,0 +1,84 @@
+an overview of the hermes project
+
+
+
+
+
+     
+
+
+
+an overview of the hermes project
+
+
+hermes is a system for semantically integrating different and possibly 
+heterogeneous
+information sources and reasoning systems. this is accomplished
+by executing programs, called  mediators,
+written in the hermes system.
+mediators, first proposed by wiederhold, are guidelines of how 
+information from different sources will be combined and integrated.
+hermes system is based on the theory of hybrid knowledge bases, due
+to lu, nerode and subrahmanian. in this framework, external information
+sources are abstracted as domains which execute certain functions
+with pre-specified input and output type. these domains are
+accessed in mediators using a logic-based declarative language.
+this language is based on annotated logics, due to kifer and
+subrahmanian, and it provides a powerfull and extensible programming
+environment. the system also provides a uniform environment for
+the easy addition of new external sources to existing mediators.
+the system currently runs on
+sun sparc stations (under unix), as well as on the ibm-pc platform
+under dos/windows 3.1. a graphical user interface has been built on
+both platforms.
+
+
+
+
+
+  
+hermes - the complete architecture
+ this is the html version of a paper which has recently been 
+submitted for publication. it contains the complete description of the 
+architecture and the current status of the project.
+
+
+
+
+ back to the hermes homepage.
+
+send comments to kemal@cs.umd.edu
+or candan@cs.umd.edu
+
+
+
+
+
+an overview of the hermes project
+
+
+an overview of the hermes project
+
+
+an overview of the hermes project
+
+
+an overview of the hermes project
+
+
+an overview of the hermes project
+
+
+an overview of the hermes project
+
+
+an overview of the hermes project
+
+
+an overview of the hermes project
+
+
+an overview of the hermes project
+
+
+an overview of the hermes project

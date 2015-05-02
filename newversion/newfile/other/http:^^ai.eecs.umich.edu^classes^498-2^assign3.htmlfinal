@@ -1,0 +1,138 @@
+eecs 498-2 assignment 3
+
+
+eecs 498-2: assignment 3
+program an arcade game
+assigned: september 13, 1996
+due date: october 4, 1996
+
+
+
+for assignment 3 you get to take your first crack at actually
+programming a game.  we will provide you with code (which we'll call
+the arcade package) which handles most of the low level messy stuff
+(such as selecting the video mode, setting up a back buffer and page
+flipping).  you have to design a (fairly) simple arcade game, draw the
+graphics and program the inner workings of your game.  you have three
+weeks to create a working arcade game, so design and software
+engineer carefully to make sure you are done.  we expect a game on the
+order of centipede.
+
+grading criteria
+
+your grade on assignment 3 will be based on 4 factors:
+
+ 
+ is the game fully fuctional?  
+ the most important thing that we're looking for is a working
+game.  if the game is almost but not quite finished or still contains
+bugs your grade will suffer.  when you design your
+game make sure you can finish the project within the three week time
+frame.  create a schedule and stick to it.
+
+ is the game nontrivial?
+ you won't get a good grade if your final game is just pong with
+different colors and a bigger paddle.  your game doesn't have to be
+original (i.e. a clone of a classic arcade game is fine) but it should
+be something you are proud to hand in.
+
+ is the game well designed?
+ we talked about designing a game and some of the design sins that
+are commonly made.  make sure you show us that you were paying
+attention in class and learned something.
+
+ is your code well structured and commented?
+ we will be looking at your code and the easier it is to read and
+follow the better mood we will be in when it comes time to decide on a
+grade.
+
+
+tools
+
+to do this assignment you will need to use a c/c++ compiler (such as
+borland c++ 4.2 which is available on caen machines), the arcade package (which is available on the class
+webpage), and a paint program (such as the windows paint program also
+available on caen machines).
+
+
+ c/c++ compiler
+ the borland c/c++ compiler is available on caen machines and
+should work well for this project.  make sure when you create a
+project you set the platform to dos (standard) and the target model to
+large.  if necessary we may have an evening session to introduce people
+to the compiler and the arcade package.
+
+ the arcade package
+ this code has been written specifically for this assignment.  it
+handles all of the low level stuff that is such a pain in game
+programming.  on the class website you will find a simple pong program
+which was written with the arcade package.  all you have to do is
+replace the pong code with your game.
+
+notes on the arcade package:
+
+ the arcade package is written in c and c++.
+ on wednesday half of the lecture will be an introduction to the
+arcade package.  please try to look the code over (and perhaps compile
+the pong program) as this will be an excellent change to ask
+questions.
+ your game will be limited to 320 by 200 pixels and 256 colors.
+ the arcade package is somewhat object oriented.  you will be
+creating game objects (i.e. paddles and balls in pong) and for each
+object writing a number of functions which update the position of the
+object (update), handle collisions with other objects (you_hit), and
+draw the object (draw).  in addition you will get input from the mouse
+or the keyboard.
+
+
+ paint program
+ you will have to create graphics for each of your game objects.
+you can use any paint program which creates pcx files.  the paint
+program in windows is appropriate as is the shareware program paint
+shop pro.
+
+
+what you hand in
+
+three weeks from today (which is october 4th) you will hand in the
+following items.
+
+ a floppy disk with your game executable.
+ printouts of all your code.
+ a manual for your game.
+ a write-up containing an explanation of your code (what the data
+structures are and how the program is organized) and anything special
+that you would like to point out to the grader.
+
+we will then begin the grueling task of playing all your games.
+
+additional notes
+
+
+
+ if you have questions about the arcade package please bring them
+up in class or email them to both vanlent@umich.edu and
+mikeott@umich.edu.
+
+ if bugs are found in the arcade package we will announce them in
+class and on the class webpage.  if you are having a problem please
+check the webpage before emailing for help.
+
+ half of class on wednesday will be devoted to explaining the
+arcade package.  please don't miss this class.  if you are absolutely
+unable to make it we might be able to set up an appointment to cover
+the material.
+
+
+
+
+eecs 498-2 assignment 3
+eecs 498-2 assignment 3
+eecs 498-2 assignment 3
+eecs 498-2 assignment 3
+eecs 498-2 assignment 3
+eecs 498-2 assignment 3
+eecs 498-2 assignment 3
+eecs 498-2 assignment 3
+eecs 498-2 assignment 3
+eecs 498-2 assignment 3

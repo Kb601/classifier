@@ -1,0 +1,56 @@
+the dolphin speedup-learning system 
+
+dolphin  
+
+
+dolphin is a system which combines inductive logic programming
+(i.e. foil) and explanation-based learning (i.e. ebg) to learn
+search-control rules for eliminating backtracking in prolog
+programs. 
+
+the dolphin prolog code is available via 
+anonymous ftp.
+see the readme file here for details.
+
+pointers to papers on dolphin can be found on our speedup-learning research page.
+below is the standard reference (click on the open book image). 
+
+
+
+
+
+  combining foil and ebg to speed-up logic programs   
+
+john m. zelle and raymond j. mooney  
+
+ proceedings of the thirteenth international joint conference on artificial
+intelligence, pp. 1106-111, chambery, france, 1993. (ijcai-93) 
+
+
+this paper presents an algorithm that combines traditional ebl
+techniques and recent developments in inductive logic programming to
+learn effective clause selection rules for prolog programs.  when
+these control rules are incorporated into the original program,
+significant speed-up may be achieved.  the algorithm is shown to be an
+improvement over competing ebl approaches in several domains.
+additionally, the algorithm is capable of automatically transforming
+some intractable algorithms into ones that run in polynomial time.
+
+
+
+
+
+
+
+estlin@cs.utexas.edu
+
+the dolphin speedup-learning system 
+the dolphin speedup-learning system 
+the dolphin speedup-learning system 
+the dolphin speedup-learning system 
+the dolphin speedup-learning system 
+the dolphin speedup-learning system 
+the dolphin speedup-learning system 
+the dolphin speedup-learning system 
+the dolphin speedup-learning system 
+the dolphin speedup-learning system

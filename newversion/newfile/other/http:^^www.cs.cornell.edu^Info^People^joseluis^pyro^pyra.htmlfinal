@@ -1,0 +1,49 @@
+pyramania home page
+
+
+pyramania 3d. space adventure
+
+
+
+introduction
+pyramania is a "spaceship battle game" developed as a project for the course cs501 at cornell university by :
+
+   jose luis fernandez
+   samuel kan 
+   todd peskin 
+   amith yamasani 
+
+it is a "wireframe" 3d simulation with options to display "solid" 3d objects.
+
+programming languages utilized
+pyramania was developed using c++ for the internal structure of the program and tcl/tk for the user interface.
+
+ features 
+
+
+   "3d wireframe" graphics
+
+   "3d solid graphics" mode 
+
+
+   radar for locating enemies and tanks 
+   lasser 
+
+
+ objective 
+
+the user must get all the "rotating combustible tanks" in the scenary. he has a radar to locate the enemies and tanks and a lasser to shoot the enemy spaceships.
+he must complete the mission before the timer counter will expire.
+
+
+
+ pyramania home page
+ pyramania home page
+ pyramania home page
+ pyramania home page
+ pyramania home page
+ pyramania home page
+ pyramania home page
+ pyramania home page
+ pyramania home page
+ pyramania home page

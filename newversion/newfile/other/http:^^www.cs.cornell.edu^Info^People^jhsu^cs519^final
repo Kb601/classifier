@@ -1,0 +1,55 @@
+course project
+
+
+course project information
+
+
+ security reference library
+   has whitepapers on authetication (s/key).  also has a faq on security issues.
+ livingston radius
+   whitepaper on radius (remote authentication dial-in user service
+ security dynamics white papers
+   has papers on network security, internet security and kerberos.
+ five paces
+   looks like a white paper with some stuff on electronic commerce.
+ 
+ computers, information technology, and the law
+   links to laws (1) and articles (many) concerning legal issues.
+
+
+
+financial transactions would have the following needs:
+security on an unsecure network.
+gut reaction would be that for any sort of financial transactions, data
+encryption and user authetication are the first and foremost concerns.
+on user authentication, adequate encryption would presumably allow for less
+robust authetication.  otherwise, an s/key or snk (like they use for cs
+firewall) are definitely necessary due to the lack of security in the data
+transmission.
+
+fault-tolerant systems
+transactions can not be halted because one server is down. 
+we need to make sure that transaction reports to the banks or whatever
+central database we are using filter out duplicates and all the standard
+mutual exclusion things so that transactions aren't missed.
+
+guaranteed response time
+or something resembling a guaranteed response time on an ip network.
+having to wait 2-3 minutes for a transaction or having your packets
+dropped and timedout won't cut it for electronic commerce.
+
+
+back to top
+
+
+
+course project
+course project
+course project
+course project
+course project
+course project
+course project
+course project
+course project
+course project

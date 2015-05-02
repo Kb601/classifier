@@ -1,0 +1,56 @@
+cs512:  handouts
+
+
+ cs 512:  advanced language implementation handouts
+
+handouts:
+
+ course overview (dvi file)
+ introduction to sml, r. harper (postscript file)
+ interpreting the lambda-calculus in sml (dvi file)
+
+ (homework:  due friday.  ignore problem 5.)
+ (sample solution to the programming problems.)
+
+ avoiding the overheads of substitution (dvi file)
+ lambda:  a lambda-calculus based intermediate language (dvi file)
+ conventional optimization of lambda (dvi file)
+ assignment 2:  simple optimization of lambda (dvi file)
+ some related optimization documents:
+
+ making lambda calculus smaller, faster, a. appel and trevor jim.
+ 
+	unrolling recursions saves space, a. appel.
+
+ closure conversion of lambda (dvi file)
+ 
+abstract models of memory management, g. morrisett, m. felleisen, r. harper
+ uniprocessor garbage collection techniques, p. wilson
+ assignment 3: optimization, closure conversion, and gc (dvi file)
+ a simple copying collector (sml code)
+ introduction to advanced control constructs (dvi file)
+ operational semantics for advanced control constructs (dvi file)
+ implementing evaluation contexts (dvi file)
+ assignment 4:  closure conversion (take 2) and garbage collection(dvi file)
+ adding threads to standard ml, e. cooper and g. morrisett (postscript)
+ a portable multiprocessing interface for standard ml of new jersey,g. morrisett and a. tolmach (postscript)
+ cml: a higher-order concurrent language,j.h. reppy (postscript)
+ assignment 5: fun with threads and modules(dvi file)
+
+
+
+
+back to the cs512 homepage.
+
+
+
+cs512:  handouts
+cs512:  handouts
+cs512:  handouts
+cs512:  handouts
+cs512:  handouts
+cs512:  handouts
+cs512:  handouts
+cs512:  handouts
+cs512:  handouts
+cs512:  handouts

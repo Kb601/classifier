@@ -1,0 +1,115 @@
+cse 143 section notes page
+
+cse 143 notes and handouts from sections
+
+here's some stuff from section that includes supplementary notes,
+hints on homework, sample code, and other handouts:
+
+
+mazegen
+apparently there has been some demand for information about how we
+generated our random mazes.  here's some information about
+mazegen, our maze generator, and related
+algorithms.
+
+
+big-o analysis exercise
+
+with an eye towards the quiz on thursday, michael made up the
+following big-o analysis
+exercise.  questions and answers are available, and are likely to
+be similar to what might be asked on the quiz.  take a look!  topics
+cover much of what we have talked about in lecture the past week or
+so. 
+
+
+hw2 info
+
+for people in andy's sections (aa and ae), here is some additional
+
+explanations for the hw2 grading.
+
+pointer chasing exercise
+
+this is a exercise in chasing pointers in c++ programs by drawing
+pictures and evaluating c++ code.  although the code is neither
+beautiful nor meaningful, it's designed to give you practice with
+assigning pointers and traversing linked structures using them.  if
+you understand it, you can probably also debug your own programs using
+pointers (though hopefully they'll do it in a more intelligent way).
+both the original exercise
+and a solution set are
+available.  please let brad know if you find any
+mistakes.
+
+
+
+example adt
+
+here is an example of an adt for a string class.
+this should give you some ideas as to how to set up modules and what
+to put where.  plus it's just interesting.
+
+
+
+another sample adt
+and here's another example of an adt.  this one is an implementation of
+a fraction class.  two versions are provided:
+a simple, well-documented version that emulates the kind of files you'll
+be responsible for turning in, and a more complex and under-documented
+version for the curious.
+
+
+
+slides
+
+on-line versions of the lecture slides (6 per page) are available
+here, in postscript and acrobat formats.
+
+
+
+
+ c++ basics, tuesday 10/1 [postscript
+| acrobat]
+
+ modules, thursday 10/3 [postscript
+| acrobat]
+
+ style, thursday 10/3 [postscript
+| acrobat]
+
+
+
+ 
+
+
+
+on the lab machines acrobat reader is automatically
+started up by netscape when you follow the link.
+
+
+ on other macs, pc compatibles, and some versions of unix
+    acrobat reader may be downloaded free directly from 
+    adobe.
+    this web site also includes instructions for setting your web browser to
+    invoke acrobat reader automatically.  some versions of
+    ghostscript
+    also support acrobat.
+
+
+
+cse143-webmaster@cs.washington.edu
+
+
+
+
+cse 143 section notes page
+cse 143 section notes page
+cse 143 section notes page
+cse 143 section notes page
+cse 143 section notes page
+cse 143 section notes page
+cse 143 section notes page
+cse 143 section notes page
+cse 143 section notes page
+cse 143 section notes page

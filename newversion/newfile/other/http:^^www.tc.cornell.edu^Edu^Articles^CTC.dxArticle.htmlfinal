@@ -1,0 +1,287 @@
+forefronts teaching computer graphics with dx article
+
+ 
+cornell theory center
+
+
+
+this article originally appeared in cornell theory center's
+forefronts newsletter.  
+
+ 
+ 
+ teaching computer graphics and scientific
+visualization using the dataflow block diagram language dataexplorer
+ 
+
+
+by bruce land, visualization project leader, cornell theory center  
+
+abstract
+
+the scientific visualization language dataexplorer (dx) from ibm has
+been found to be useful in undergraduate education as a vehicle for
+teaching computer graphics at an introductory level. although it is
+designed for scientific data visualization, dx can be used to
+construct student lab exercises in computer graphics. dx has been used
+for two years as an environment which emphasizes graphics
+manipulations (e.g. rotation, perspective) while not requiring the
+programming overhead of traditional computer languages.  
+
+introduction
+
+computer graphics is a topic that requires mathematical, programming,
+and artistic skills, among others. the content of the computer
+graphics fundamentals course at cornell focuses on mathematical skills
+but must include programming to illuminate the math. the course covers
+the following topics:
+
+
+   construction of surfaces by explicit polygon lists, by parametric
+operations, and by hierarchical grouping of simple objects to form complex
+surfaces
+
+ 
+  modification of objects by 3d geometric transforms in order to position
+them in space and animate them
+
+ 
+  viewing of a group of objects including clipping to a window and
+perspective or parallel projection into a 2d screen space
+
+ 
+  rendering of polygonal and parametric surfaces by hidden surface removal,
+shading/lighting, by anti-aliasing, as well as by surface property
+modifications such as texture- or bump-mapping 
+
+ 
+  use of global illumination models to render interactions between
+surfaces
+
+   modeling of scientific data for scientific visualization.
+
+
+
+the programming aspect of the course attempts to give students practical
+experience with many of the techniques taught in lecture. lab exercises
+written in dx cover nine computer graphics topics. these exercises include:
+
+ 
+  construction of polyhedra from vertex and face descriptions;
+
+   construction of parametric surfaces including quadric surfaces (e.g.
+ellipsoids), figures of rotation, and tensor-product surfaces (e.g.
+bilinear);
+
+   hierarchical modeling and animation of complex objects; 
+
+   writing perspective viewing transforms;
+
+   comparing lighting techniques with wire frame, flat shaded, or gouraud
+shaded objects illuminated with ambient and point illumination;
+
+   producing variations on the standard phong lighting model, including
+spotlights and bump mapping of surfaces;
+
+   image techniques including production of texture mapped surfaces, image
+filtering and anti-aliasing;
+
+   visualization of a 2d scalar field (heights of a landscape) and a 3d
+vector field (a flow field); and
+
+   a design project to produce animation based on all the techniques
+learned.
+
+
+
+all exercises have example programs to introduce the concepts and
+descriptions of the manipulations required of the student.  
+
+
+the first two exercises deal with construction of objects and are an
+introduction to dx. in the first exercise, students are introduced to the
+notion of polyhedron construction with vertex and face lists. they are
+expected to design a couple of polyhedra and perform a simple animation of
+one object. they experiment with determining the normals to the surface.
+the second exercise introduces parametric surfaces. students design quadric
+surfaces, figures of rotation, and bilinear patches. after this lab they
+can design quite complex single objects.  
+
+
+exercise three teaches them how to hierarchically combine objects and how
+to concatenate 3d transforms to make complex motion. they design either:
+
+ 
+  a wagon that rolls forward, stops, then turns its front axle (and
+wheels);
+
+   a helicopter with main and tail rotors that starts the rotors, takes off,
+and flies away; or
+
+   a prop aircraft that behaves like the helicopter.
+
+
+
+when done correctly, the exercise shows them how to design parts of a
+complicated object (e.g. props or wheels), move them, and duplicate them
+for re-use several times in the final construction.  
+
+
+in exercise four,  students turn off perspective in dx and write their own pseudo-perspective transform for a simple scene.
+this introduces the use of homogeneous coordinates and matrix manipulation
+in dx. the calculation is complicated enough to introduce the various
+structuring aids of dx which make the code more readable.
+
+
+exercises five and six explore lighting. students first design a landscape
+to be lit by two simulated suns, a white dwarf, and a red giant in two
+different orbits. then they turn off the default lighting model in dx
+(phong illumination with gouraud shading) and design their own lighting.
+they code a lighting model based on light positions, viewer position, and
+object normals, and extend the model to produce a spotlight depth cueing
+based on intensity.
+  
+
+exercise seven introduces image manipulation and filtering. students are
+asked to anti-alias a simple scene using postfiltering and to determine a
+"best" scheme based on available filters and system resource (i.e. memory,
+cpu time). they then edge-enhance an image. finally they texture-map an
+image onto a quadric surface by parametrically modifying the image pixel
+coordinates. in dx, an image has extent in world space, with each pixel
+having a position.
+  
+
+exercise eight introduces scientific visualization by having the students
+make judgments based on graphical representation of fields. the first part
+of this exercise is to identify the geographic location of a landscape
+height field, then to enhance the slope and exposure by modifying the
+program. the second part is to identify the sources and sinks in a 3d
+vector flow field. they are shown how to draw flow lines, vector arrow
+icons, and isosurfaces of speed. they then combine these techniques to find
+the sources and sinks.
+  
+
+the final design project is to produce an animation of hierarchically
+modeled objects. typical projects have included:
+
+ 
+  a robot that stands up out of an ocean, turns, and fires a projectile at
+a tower on the far shore; 
+
+   a seagull that flies down and plucks a fish from the water; 
+
+   a castle with waving flags and drawbridge;
+
+   a car driving through a town with rotating signs and street lights;
+
+   a human walking;
+
+   simulation of the deformation of tennis racket strings during a ball
+impact; and
+
+   morphing between faculty face images.
+
+
+the complexity and sophistication of many of the projects can be amazing.  
+
+
+
+dx as a programming language
+
+at the introductory level, lack of programming tools often interferes with
+learning graphics operations. typically, graphical operations are either
+provided as a large library of routines that students must learn, or derive
+from relatively simple programming projects that students must code from
+scratch. the block diagram interface of dx can be customized to make a
+"visual subroutine library" of often-used graphics routines. students can
+construct very complex scenes including camera and lighting control in a
+short time. they can also "open up" various visual subroutines and modify
+or extend them. the graphical nature of the user interface and its easy
+extensibility make it possible for students to rapidly prototype a graphics
+operation, see the effects and modify the program. the structure of dx that
+allows such easy interaction is described next.  
+
+
+dx is a block diagram, point and click programming language designed for
+producing high quality images based on 3d data which may represent objects
+(walls, stars) or fields (density, electric field). dx can easily be
+extended to construct the objects and perform the operations needed for an
+introductory graphics class. the block diagram program is built up of
+"modules" and "wires" connecting them. a module is a primitive program
+function that appears on the screen as a block with input and output tabs.
+wires are dragged with the mouse from outputs to inputs. a group of modules
+can be hidden inside of another module to form a user "macro." system
+supplied dx modules include vector and scalar field rendering, and
+geometric operations (rotate, translate), in addition to x and y plotting.
+there is direct programming support for producing custom motif control panels. the theory center has added modules to make parametric surfaces,
+texture maps, bumpmaps, spotlights, and a variety of other graphically
+oriented functions.  
+
+
+students are expected to design visual programs to perform some particular
+assigned task. they are expected to produce working programs that are
+readable and documented. a visual language has a different style of
+organization for readability than text-based code, but for programs bigger
+than one screen wide, organization is no less important. any module can
+have a comment field and the theory center encourages a comment in all but
+the most obvious modules. programs tend to build an object of some kind
+(e.g. house) by defining its parts, combining them, and then moving them to
+some position. such a section of code tends to be small (perhaps 20
+modules) but cryptic unless the designer minimally labels the output of the
+code block. dx supports labeling of wires to document what is flowing
+through them. in many cases a small code block can be made into a macro,
+which then appears to be another module with a user-chosen name. at some
+point objects have to be combined to make higher order structures. careful
+arrangement of the hierarchical structure (which is all visual) helps
+during program tracing and debugging. we have found that, as with all
+programming, providing a few examples and a programming manual is an
+effective way of introducing students to the subject matter.  
+
+
+
+conclusions
+
+dx allows students to concentrate on learning the graphics content of the
+course rather than investigating the details of a programming environment.
+students can generate code to make images in a fraction of the time
+required of a c language environment, encouraging experimentation. at the
+time of writing, course evaluations are not yet available from students,
+but will be when this article appears in forefronts. preliminary student
+feedback indicates satisfaction with dx as a vehicle for learning graphics.
+the acquired background in computer graphics using dx is already being put
+to use in scientific visualization as students incorporate their class
+skills into research projects across campus. this year students in the
+course were mostly upper division computer science and engineering majors.
+it should be possible to construct a freshman-level course using dx which
+introduces computer graphics and visualization at an appropriate
+mathematical level and whets their appetites for further instruction. 
+a downside to dx use in the classroom is that it requires a graphics
+workstation such as an iris indigo, sparc station, hp workstation, or risc
+system/6000, not a mac or pc, which is the hardware most readily available
+to college and university students. hopefully the trend of cheaper
+workstations and more powerful personal computers will continue to open new
+possibilities. designing complex scenes in dx is easy enough that many
+projects put a large demand on the workstations for cpu and memory. during
+the final project many of the students ran out of memory while using 32
+mbyte machines. in most cases, scaling down the resolution of texture maps
+solved the large size, but in a few cases the objects and motions became
+too complex.  
+
+
+
+the lab exercise software plus student lab instructions are available
+on-line from an anonymous ftp site at cornell university
+(info.tc.cornell.edu).  contact bruce land (bruce@tc.cornell.edu) for more
+information.  
+
+
+forefronts teaching computer graphics with dx article
+forefronts teaching computer graphics with dx article
+forefronts teaching computer graphics with dx article
+forefronts teaching computer graphics with dx article
+forefronts teaching computer graphics with dx article
+forefronts teaching computer graphics with dx article
+forefronts teaching computer graphics with dx article
+forefronts teaching computer graphics with dx article
+forefronts teaching computer graphics with dx article
+forefronts teaching computer graphics with dx article

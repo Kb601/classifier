@@ -1,0 +1,112 @@
+benji's atp research page
+
+
+atp research
+
+the ipr system
+
+the ipr system proves theorems in mathematics by using
+a knowledge base of theorems, axioms and definitions.  rather than
+applying all of its knowledge systematically, the ipr prover picks a
+single bit of information at a time according to its determination of
+the current usefulness of the information.
+
+the ipr framework
+
+ipr uses the tableaux-calculus for first-order logic theorem proving.
+this method has some properties which recommend its use by provers
+which are intended to communicate with non-expert humans.  a branch
+of a tableau can be displayed as a sequent.
+
+the knowledge is stored in the knowledge base in the form of sequents.
+when the theorem prover reaches the q-limit, it chooses a branch of
+the tableau which needs more work and searches the knowledge base for
+the most useful bit of information.  it determines which theorem to
+use by comparing the branch (as a sequent) to the theorems in the
+knowledge base.
+
+the success of the prover on traditionally difficult problems shows
+that this method of storing and fetching theorems has merit.
+
+two tech reports offer more information about the ipr framework.  [intelligent
+use of a knowledge base in automated theorem proving.,challenge
+problems in first-order theories.] i am currently preparing more
+papers for submission.  i will attach some of these reports to this
+page as soon as possible.
+
+the english interface
+
+all of the output from ipr is in english.  when it finds a proof, it
+outputs a description of the steps it took and the theorems it applied
+in a form which might appear in a textbook.
+
+if the user chooses to interact during the theorem-proving process,
+ipr displays each branch of the proof in english.  for example:
+
+
+suppose all of the following:
+1.  (_b) is a linearly independent subset of the vector space (_v)
+2.  (_b0) is a basis of the vector space (_v)
+and show that
+the union of e and f is a basis of the vector space (_v)
+
+
+here, (_b), (_b0) and (_v) represent constants and e and f are
+variables.
+
+examples
+of proofs
+
+the first hard theorem ipr proved in 1994 was the 101st labeled
+theorem from john kelley's general topology:
+
+if a product is locally compact, then each coordinate space is
+locally compact.
+
+ipr proved this in the presence of 100 theorems.  each of the theorems
+were taken from earlier sections of the text related to the predicates
+involved in the theorem.  ipr analyses the knowledge base once for
+each formula in the proof.  when it needs to apply a theorem, it
+compares the usefulness of the theorems to the current situation and
+choses the single theorem which if considers most useful.  in this
+proof, ipr did not use any of the theorems except the three which are
+needed in the proof.  it chose those theorems and found the shortest
+possible proof without wasting any time on the other knowledge.
+
+a second example, this one involving much more complex reasoning, is
+the following:
+
+if s is a hausdorff topological space, then the diagonal of sxs is
+closed.
+
+the proof of this theorem (given a certain knowledge base) requires
+the application of twelve theorems.  the proof also requires some
+equality reasoning and a fairly tricky variable instantiation.  this
+variable instantiation is needed because the proof involves finding an
+open set in sxs containing an arbitrary point in sxs and disjoint from
+the diagonal. in the presence of a knowledge base containing over
+12 theorems, ipr finds this proof in under a minute on my pc at home.
+
+since my dissertation will be on this topic, expect this part of the
+web to grow.
+
+this work was done as
+part of the automated
+theorem proving group at the university of texas at
+austin.
+
+
+
+benjamin shults
+
+
+benji's atp research page
+benji's atp research page
+benji's atp research page
+benji's atp research page
+benji's atp research page
+benji's atp research page
+benji's atp research page
+benji's atp research page
+benji's atp research page
+benji's atp research page

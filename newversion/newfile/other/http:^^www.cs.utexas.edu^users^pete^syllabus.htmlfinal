@@ -1,0 +1,193 @@
+cs 380d: distributed computing i syllabus
+
+
+
+  cs 380d: distributed computing i
+  fall 1995  |  professor: jayadev misra  | ta: panagiotis
+      (peter) manolios
+  
+
+  course syllabus
+  table of contents
+  
+    course information
+    meeting time and location
+    instructor
+    teaching assistant
+    course topics
+    discussion sessions
+    study groups
+    grading system
+    exams
+    reading material
+    announcements
+   
+
+  distributed computing i
+
+  unique number: 47680.
+  course number: c s 380d.
+  prerequisite: c s 372.
+
+  meeting time and location
+  days: tue, thr
+  time:  11:00-12:30 am
+  place: wel 2.256
+  
+
+  instructor
+  name: professor
+		misra
+  office: tay 3.150c
+  office hours: tue, thr 2:30-3:30 pm or by appointment 
+  phone: 512-471-9550
+  email: 
+     
+      misra@cs.utexas.edu
+    
+  
+
+  teaching assistant
+  name: panagiotis (peter) manolios
+  office: tay 5.112
+  phone: 512-471-9575
+  email: 
+     
+      pete@cs.utexas.edu
+     
+  discussion sessions: mon. 5:00-6:00pm, fri. 10:00-11:00am in pai 5.60
+  office hours: mon. 6:00-7:00pm, fri. 11:00-noon in pai 5.60
+  
+
+  course topics
+  the goal of this course is to present a number of important ideas in
+  distributed computing and provide rigorous methods for reasoning about
+  distributed programs. the topics are:
+  
+     distributed detection algorithms
+     distributed resource allocation
+     logical clocks
+     global snapshot
+     logics for reasoning about distributed algorithms
+     safety and progress
+     program composition
+     distributed program construction
+  
+  
+
+  discussion sessions
+  the discussion sessions will allow us to discuss topics presented in class in
+  detail and on occasion to cover background material. weekly handouts 
+  containing exercises will be distributed (in class and on the web) and 
+  selected solutions will be 
+  presented during the discussion sessions. you only need attend one of the
+  weekly sessions; both cover the same material.
+
+  study groups
+  we recommend that you organize yourselves into study groups of five or six
+  students who meet once a week to discuss the course. you should review the
+  lectures, do the readings, and attempt the homework assignments before 
+  meeting as a group.
+
+  grading system
+  
+    first exam = 25%
+    second exam = 37.5%
+    third exam = 37.5%
+  
+  
+
+  exams
+  
+     october 3, 1995 in sachez building (szb) 370 from 11am-1pm
+     november 2, 1995 in garrison (gar) 7 from 11am-12:50pm
+     december 7, 1995 in garrison (gar) 7 from 11am-12:50pm
+  
+  
+
+  reading material
+  books
+  
+    parallel program design: a foundation by k. mani chandy
+        and jayadev misra, addison-wesley, 1988.
+    (for reference)predicate calculus and program semantics
+        by edsger w. dijkstra and carel s. scholten, springer-verlag, 1990.
+    (for reference)fairness
+        by n. francez, springer-verlag, 1986.
+  
+  
+
+  papers (tentative)
+  
+
+
+     leader election in rings
+     termination detection for diffusing computations
+     
+	termination detection in a ring
+     
+	a partial list of references on termination detection 
+     the drinking philosophers problem
+     time, clocks, and the ordering of events in a distributed system
+     the distributed snapshot of k.m. chandy and l. lamport
+     
+	references for the distributed snapshot of k.m. chandy and l. lamport
+	
+     
+	notes on program proving
+     an axiomatic proof technique for parallel programs i
+     proof of peterson's mutual exclusion algorithm
+     
+          safety 
+     
+          progress 
+     asynchronous compositions of programs
+  
+
+
+
+  announcements
+  
+    all students should send e-mail to  
+        panagiotis (peter) manolios , so a list of e-mail addresses can be
+        compiled.
+    the newsgroup  utexas.class.cs380d 
+        has been set up to facilitate discussion between class members.
+    drop dates: please consult the course schedule to learn the
+        the last dates to drop the course without academic penalty. 
+    updated info on rooms and times of exams 
+    in a few weeks the university co-op will begin the process of returning
+	unsold fall textbooks to the publishers, so if you want to purchase any
+	of the recommended books and have not yet done so, now is the time.
+  
+
+
+
+
+
+
+  last updated 12/5/95
+  page prepared by panagiotis manolios. any suggestions, comments welcome.
+  distributed computing i,
+  department of computer sciences
+  at  ut austin 
+
+  click to send e-mail to 
+  prof. misra or 
+  panagiotis (peter) manolios 
+ 
+
+
+
+
+
+cs 380d: distributed computing i syllabus
+cs 380d: distributed computing i syllabus
+cs 380d: distributed computing i syllabus
+cs 380d: distributed computing i syllabus
+cs 380d: distributed computing i syllabus
+cs 380d: distributed computing i syllabus
+cs 380d: distributed computing i syllabus
+cs 380d: distributed computing i syllabus
+cs 380d: distributed computing i syllabus
+cs 380d: distributed computing i syllabus

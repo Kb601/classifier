@@ -1,0 +1,152 @@
+mark guzdial information page
+
+graphics, visualization, and usability center 
+mark guzdial
+
+
+
+
+mark guzdial is an assistant professor in the college of computing at georgia
+institute of technology. he received his ph.d. in education and computer science
+(a joint degree) at the university of michigan in 1993, where he developed emile,
+an environment for high school science learners programming multimedia
+demonstrations and physics simulations. he is also the designer of mediatext, a
+multimedia composition environment used in elementary and high school classrooms.
+  mark is a member of the gvu center,
+  the cognitive science program, and
+  the edutech institute.
+mark recently co-organized a workshop with rick weingarten of
+computing research association for the national science foundation.
+the charge of the workshop was to set a research agenda for computer
+science in educational technology.  the draft report from
+that workshop is available on-line.
+current areas of interest
+educational computing, software-realized scaffolding,
+construction and design environments for
+students, constructionism, collaboration support, log file analysis
+and visualization, computational science (computer modeling,
+simulation, and visualization) for students
+
+mark guzdial's current research centers on facilitating student
+learning through student design, construction, and analysis of
+artifacts.  philosophically, he is a constructivist, even a
+constructionist, but he sees a need for support to enable and
+facilitate a student's construction of artifacts and knowledge.
+
+his goal is to provide to students similar kinds of
+opportunities that professional scientists and engineergs
+have for learning and exploring through
+computation.  he has developed simulation environments for learning
+science through construction, and is now exploring visualization and
+collaboration environments to facilitate science and engineering learning.  to
+evaluate the usability and learnability of the environments he
+creates, mark is developing techniques for analysis of user event
+traces (log files).
+recent classes with interesting home pages
+
+
+cs 2390 modeling and design, winter '96 
+which is where, webcamile was first used in cs 2390.
+
+cs
+2390 modeling and design, spring '96 where 
+stable was first used.
+
+cs
+6398, design and evaluation of educational software
+
+cs
+2390 modeling and design, fall '96
+current research projects
+
+
+nsf multimedia courseware project: with john stasko and jim foley,
+i am working on creating effective multimedia courseware for computer
+science courses using www.
+software-realized
+scaffolding and learner-centered design:  the design of emile
+revolved around providing software-realization of what educators
+called scaffolding, support which enables students to perform
+activities and to learn through those activities.  in collaboration
+with elliot soloway, kenneth e. hay, and yasmin kafai, an interface
+design emphasis on learner-centered design is evolving, part of
+which is software-realized scaffolding.
+camile
+(collaborative and multimedia interactive learning environment) is
+a new learning environment designed to support students in
+collaboration with multimedia annotations.  camile can be seen as
+mediatext on a network.
+device
+(dynamic environment for visualization in chemical engineering:
+device is an environment in which chemical engineering students learn
+through a process of design in a simulated world. 
+device is being
+developed by noel rappin. the eventual goal is to merge device-like
+simulation support with camile-like collaboration tools to create broad-based
+support for learning in chemical engineering -- scope, 
+scaffolded and contextualized programming environments for engineering education.  this
+project is sponsored by the national science foundation.
+log
+file analyses and visualizations are used to understand the
+effectiveness of the supports provided in these environments.
+cognitive 
+multimedia: a project with john stasko, richard catrambone,
+ashwin ram, and mike byrne, sponsored by onr, focuses on trying to understand the most
+effective ways to construct interactive multimedia.
+generalized scaffolding: stable is a first attempt at creating generalized
+scaffolding -- not modifying the environment, but providing
+scaffolding, multiple representations, generic "plan" libraries (a la
+gpceditor or emile), and collaborative environments in support of an
+existing work environment (visualworks smalltalk).  stable is being
+tested in cs 2390 during spring '96.  instructions on how to
+create stable cases are available.
+
+
+ research projects from the university of michigan
+working with elliot soloway and elliot's highly
+interactive computing environments group, mark was primarily involved
+in three projects at the university of michigan.
+
+ gpceditor
+(goal plan code editor) is a pascal programming environment that
+provides explicit supports for student design.
+mediatext
+is a multimedia composition environment for grades 6-12 students.
+mark designed mediatext with elliot, and mediatext is now a commercial
+product developed by constructive instruments and distributed by apple
+computer and wings for learning.
+emile
+is a programming environment for science students exploring physics by
+creating simulations.  emile was mark's dissertation work.  emile
+implements software-realized scaffolding which provides
+adaptable levels of support.
+
+copies of recent aera '95 papers
+are available in www formats.
+
+contact information:
+ma
+rk guzdial
+graphics, visualization & usability center
+college of computing
+801 atlantic drive
+georgia institute of technology
+atlanta, ga, 30332-0280
+404-894-5618
+e-mail :
+guzdial@cc.gatech.edu
+p.s.
+my family album. (updated
+october, 1996)
+
+
+mark guzdial information page
+mark guzdial information page
+mark guzdial information page
+mark guzdial information page
+mark guzdial information page
+mark guzdial information page
+mark guzdial information page
+mark guzdial information page
+mark guzdial information page
+mark guzdial information page

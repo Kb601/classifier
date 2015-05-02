@@ -1,0 +1,136 @@
+code publications
+  
+
+  
+      code publications
+
+
+
+extracting parallelism from constraint specifications,
+ajita john,
+j.c. browne.
+international conference on parallel and distributed processing
+techniques and applications (pdpta) , 
+sunnyvale, california, august 9-11, 1996.
+uses code as a target language for compilation, but focuses on extracting parallelism from constraints.
+
+
+compilation of constraint systems to procedural parallel programs,
+ajita john,
+j.c. browne.
+ workshop on languages and compilers for parallel computers,
+august, 1996, lncs, springer-verlag, to appear.
+uses code as a target language for compilation.
+
+
+a parallel programming language based on constraints,
+ajita john,
+j.c. browne.
+ 1996 international conference on high performance computing,
+december, 1996, to appear.
+uses code as a target language for compilation.
+
+
+
+complete parallelization of computations: integration of data partitioning and functional parallelism for dynamic data structures,
+dwip banerjee,
+j.c. browne.
+delivered at ipps, 1996.
+integrates data partitioning into the code model.
+
+
+visual programming and debugging for parallel computing, 
+j. c. browne,
+s. i. hyder,
+j. dongarra, 
+k. moore,
+p. newton.
+ieee parallel and distributed technology, spring 1995, volume 3, number 1, 1995.
+
+compares the visual parallel programming environments hence and code 2.
+
+
+
+a high level language for specifying graph-based languages and their programming environments,
+m. kleyn. dissertation, dept. of computer sciences, univ. of texas at austin, 1995.
+this dissertation describes a high-level specification language, glide, for defining integrated graphical/textual programming environments for visual programming languages (those based on directed graph models of computation, like code).
+
+
+distributed execution environments for the code 2.0 parallel programming system,
+rajeev vokkarne. thesis, dept. of computer sciences, univ. of texas at austin, 1995.
+thesis describing a distributed implementation of the code runtime system (for pvm).
+
+
+visual programming and parallel computing,
+p. newton.
+delivered at workshop on environments and tools for parallel scientific computing, walland, tn, may 26-27, 1994.
+short paper on virtues and limitations of hence 2.0 and code 2.0 as well as ramblings on processes as visual components.
+
+
+visual programming and debugging for parallel computing,
+j. c. browne,
+s. i. hyder, 
+j. dongarra, 
+k. moore, 
+p. newton. technical report tr94-229, dept. of computer sciences, univ. of texas at austin, 1994.
+compares the visual parallel programming environments hence and code 2 (a longer version of the above paper, with more references).
+
+
+a unified approach to concurrent debugging,
+s. i. hyder. dissertation, dept. of computer sciences, univ. of texas at austin, 1994.
+dissertation that describes an approach to concurrent debugging that has been implemented for the code 2 environment.
+
+
+a unified model for concurrent debugging,
+s. i. hyder, j. werth, j. c. browne. proceedings of the 1993 international conference on parallel processing, ieee computer society, august 1993.
+describes an approach to concurrent debugging that has been implemented for the code 2 environment.
+
+
+a high level language for specifying graph-based languages and their programming environments, m. kleyn, j.c. browne.  15th international conference on software engineering, baltimore md, april, 1993.
+describes a high-level specification language, glide, for defining integrated graphical/textual programming environments for visual programming languages (those based on directed graph models of computation, like code).
+
+
+a graphical retargetable parallel programming environment and its efficient implementation,
+p. newton. technical report tr93-28, dept. of computer sciences, univ. of texas at austin, 1993.
+a doctoral dissertation, discussing code 2.0 in depth.
+
+
+the code 2.0 graphical parallel programming language,
+p. newton,
+j.c. browne.
+proc. acm int. conf. on supercomputing, july, 1992.
+this paper describes a prototype implementation of code 2. some of the notations have changed, but the ideas are the same.  this paper remains a good broad introduction to code because it is brief.
+
+
+a general model for scheduling of parallel computations and its application to parallel i/o operations, r. jain, j. s. werth, and j. c. browne. proceedings of 1991 international conference on parallel processing, august 1991.
+
+the interaction of the formal and the practical in parallel programming environment development: code, j. werth, j. c. browne, s. sobek, t. j. lee, p. newton, and r. jain. lecture notes on computer science, vol. 589, new york: springer verlag, 1992.
+
+directions in software engineering education, j. s. werth and l. h. werth. proceedings of thirteenth international conference on software engineering,  may 1991.
+
+
+
+
+      
+
+
+
+
+      emery berger
+
+
+last modified: tue oct  8 15:57:21 cdt 
+
+  
+
+
+code publications
+code publications
+code publications
+code publications
+code publications
+code publications
+code publications
+code publications
+code publications
+code publications

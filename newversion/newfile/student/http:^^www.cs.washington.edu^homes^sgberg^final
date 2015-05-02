@@ -1,0 +1,212 @@
+stefan g. berg
+
+
+
+
+
+
+
+stefan g. berg
+
+
+
+
+
+
+
+
+
+ work  home 
+
+427 sieg hall             
+university of washington  
+box 352350                
+seattle, wa 98195-2350    
+u.s.a.                    
+
+5212 university way ne    
+apt. 203                  
+seattle, wa 98105-3532    
+u.s.a.                    
+
+phone: +1 206 543 5118    
+fax:   +1 206 543 2969    
+
+phone: +1 206 525 2147    
+fax:   +1 206 524 7725    
+
+
+
+
+
+
+
+
+email
+
+ sgberg@cs.washington.edu 
+
+
+
+
+
+
+
+contents
+
+
+
+ address information
+ about me
+ past projects and activities
+ current projects and activities
+ some interesting pages
+ 
+      my finger information. 
+
+
+
+
+
+
+
+
+
+ about me: 
+
+
+
+stefan was born in 
+cologne , 
+germany  in spring of 1973. in 1989, he completed his mittlere reife (10th
+grade) at the schillergymnasium in cologne before coming to the united states
+to receive a high school diploma from bloomington high school north (indiana)
+in 1991. stefan received his bachelor of science with honors and distinction
+in the field of computer science from
+indiana university in 1994. at the moment
+he is working towards a phd at the 
+university of washington  with an expected completion date sometime this
+century.
+
+
+
+
+
+past projects and activities:
+
+
+
+
+       cse505
+          project: implementation of an sk reduction machine.
+      teaching assistant for
+           cse471
+          .
+      
+          cse548 project: comparison of hardware and software solutions to
+          false sharing.
+      teaching assistant for
+           cse142
+          .
+       cse521
+          project: a study of linear-time sorting algorithms.
+      teaching assistant for
+           cse370
+          .
+
+
+
+
+
+
+
+current projects and activities:
+
+
+
+
+
+      
+          quals project: comparison of hardware and software solutions to
+          false sharing.
+
+
+
+
+
+
+some interesting pages:
+
+
+
+
+
+      a few
+          
+          pictures  about me and the people around me.
+      my rafting
+          
+          pictures .
+      my 
+          bookmarks. exciting!
+      the 
+          red square at the university of washington, this moment.
+      the
+          
+          weather  in seattle.
+
+
+
+
+
+
+print yourself
+
+something crazy i did. i didn't even come up with this particular
+solution myself, but the implementation was done by me. it's
+all on one line and shouldn't contain a trailing carriage return
+(384 bytes). compiles without warning with gcc. if you run it,
+this program will print it's exact source code. if you can do it
+in fewer bytes in c, i'd like to see it!
+
+
+v(c){putchar(c);}u(char*x){for(;*x;x++)if(*x-92)if(*x-34
+)v(*x);else{v(92);v(34);}else{v(92);v(92);}v(92);v(48);}
+char x[]={37,115,0};main(){char*b="v(c){putchar(c);}u(ch
+ar*x){for(;*x;x++)if(*x-92)if(*x-34)v(*x);else{v(92);v(3
+4);}else{v(92);v(92);}v(92);v(48);}char x[]={37,115,0};m
+ain(){char*b=\"\0\";printf(x,b);u(b);u(b+=148);printf(x,
+b);}\0";printf(x,b);u(b);u(b+=148);printf(x,b);}
+
+
+
+
+stefan's resume is available in
+
+postscript ,
+
+dvi , and
+
+tex  format.
+
+
+
+
+
+
+
+
+
+
+
+
+stefan g. berg
+stefan g. berg
+stefan g. berg
+stefan g. berg
+stefan g. berg
+stefan g. berg
+stefan g. berg
+stefan g. berg
+stefan g. berg
+stefan g. berg

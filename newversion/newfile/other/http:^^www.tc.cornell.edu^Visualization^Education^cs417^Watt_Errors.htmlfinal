@@ -1,0 +1,83 @@
+textbook errors
+
+
+
+
+
+errata for watt, "3d computer graphics" 
+ second edition, addison wesley
+ 
+the bulleted numbers refer to page number.
+
+
+18 
+the first equation on the page has two mistakes. v^2 should read |v|^2.
+also vw should read v dot w.
+
+60
+the third row, second column entry of t_view should be sin(phi) not sin(theta).
+
+62  the first 4x4 matrix is incorrect. it is not orthonormal 
+and thus cannot be the product of two rotations.
+
+72 the second constraint in the middle of the page should read:
+"normalizing the range of zs values so that the range of 
+d
+73 matrix equation (3.1) has an incorrect last column. it should read
+[0,0,1,0].
+
+100 h=(l+v)/2 should read h=norm(l+v).
+
+116 equation (4.8) should have a set of brackets so that 
+the "1/2" multiplies the entire expression.
+
+117 figure 4.27 is confusing at best. i think that the n vector 
+should be h and the r vector should be v.
+
+118 the third equation on the page gives mu as a function of fo. 
+the mu should be eta, the index of refraction. the equation is just 
+a rearranged version of the one above it.
+
+118 the second numbered bullet should read: "these values of eta ... "
+
+120
+  note that in the code the index of refraction is refered to as "mu". 
+
+130
+in figure 5.4 the notation "nt dot (p(t)-x)
+138 in equation (5.2), the last "y2" in the equation for nb 
+should be "ys". the "ns" on the right of the equation for ns should be "na".
+
+187 in figure 6.21 the parametric directions u and v are reversed.
+
+
+
+
+textbook errors
+
+
+textbook errors
+
+
+textbook errors
+
+
+textbook errors
+
+
+textbook errors
+
+
+textbook errors
+
+
+textbook errors
+
+
+textbook errors
+
+
+textbook errors
+
+
+textbook errors

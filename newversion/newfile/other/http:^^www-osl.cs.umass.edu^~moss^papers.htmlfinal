@@ -1,0 +1,184 @@
+publications of eliot moss
+publications of eliot moss
+
+
+
+compiling for heterogeneous systems: a survey and an approach, 
+
+kathryn s. mckinley,
+j. eliot b. moss,
+sharad k. singhai, glen e. weaver,
+charles c. weems, cmpsci technical report 95-82, october 1995,
+department of computer science, university of massachusetts, amherst, ma 01003.
+supersedes technical report 95-59.
+
+
+
+simple and effective analysis of statically-typed object-oriented
+programs, amer diwan, eliot moss, kathryn mckinley. to appear in
+oopsla '96.
+
+
+
+characterisation of object behaviour in standard ml of new jersey. 
+ darko stefanovic and j. eliot
+b. moss.  proceedings of the 1994 acm conference on lisp and
+functional programming, pp 43-54 (orlando, florida, 27-29
+june 1994).  lisp pointers 7(3), july-september 1994.
+
+
+
+
+protection traps and alternatives for memory management of an
+object-oriented language. ,  antony l. hosking and j. eliot
+b. moss.  proceedings of the fourteenth acm symposium on operating
+systems principles, pp 106-119 (asheville, north carolina, 5-8
+december 1993).  acm operating systems review 27(5), december 1993.
+
+
+incremental
+collection of mature objects, richard hudson and eliot moss. 
+international workshop on memory management, st. malo, france, sept. 1992,
+  pp. 388-403, available from springer-verlag.
+
+
+compiler
+support for garbage   collection in a statically typed language ,  amer
+diwan, eliot moss, and richard hudson.   sigplan pldi '92, pp. 273-282. 
+
+
+a
+comparative performance evaluation of write barrier implementations
+,  antony l. hosking, j. eliot b. moss and darko
+stefanovic.  proceedings of the acm conference on
+object-oriented programming systems, languages, and applications, pp
+92-109 (vancouver, canada, october 1992).  acm sigplan notices 27(10),
+october 1992.
+
+
+a
+language-independent garbage collector toolkit ,  richard hudson, eliot
+moss, amer diwan, and christopher f. weight.   university of massachusetts
+at amherst technical report tr 91-47.
+
+
+memory system
+  performance of programs with intensive heap allocation,  amer diwan,
+  david tarditi (cmu), and eliot moss.   to appear in acm transactions
+  on computer systems.  an earlier version is available as cmu technical report
+  cmu-cs-93-227  
+
+
+
+memory subsystem
+  performance of programs using copying garbage collection ,  amer
+diwan, david tarditi (cmu), and eliot moss.   popl '94, pp 1--14. this
+paper is also available as a cmu technical report cmu-cs-93-210.
+
+
+
+expressing
+object residency optimizations using pointer type annotations, 
+j. eliot b.  moss and antony l. hosking.  sixth international
+workshop on persistent object systems (tarascon, france, september
+1994).
+
+
+ object
+fault handling for persistent programming languages: a performance
+evaluation ,  antony l. hosking and j. eliot b. moss. 
+proceedings of the acm conference on object-oriented programming
+systems, languages, and applications, pp 288-303 (washington, dc,
+october 1993).  acm sigplan notices 27(11), november 1993.
+
+
+ update
+logging for persistent programming languages: a comparative
+performance evaluation ,  antony l. hosking, eric brown and
+j. eliot b. moss.  proceedings of the nineteenth international
+conference on very large data bases, pp 429-440 (dublin, ireland,
+august 1993).  morgan kaufmann, 1993.
+
+
+
+compiler support for persistent programming ,  antony
+l. hosking and j. eliot b. moss.  coins technical report 91-25,
+march 1991, department of computer science, university of
+massachusetts, amherst, ma 01003.
+
+
+ towards
+compile-time optimisations for persistence ,  antony l. hosking
+and j. eliot b. moss.  proceedings of the fourth international
+workshop on persistent object systems, pp 17-27 (martha's vineyard,
+massachusetts, september 1990). published as  implementing persistent
+object bases: principles and practice, alan dearle, gail m. shaw, and
+stanley b. zdonik (eds.). morgan kaufmann, 1990.
+
+
+
+
+design of an object faulting persistent smalltalk ,  antony
+l. hosking, j. eliot b. moss, and cynthia bliss.  coins technical
+report 90-45, department of computer science, university of
+massachusetts, amherst, ma 01003.
+
+
+
+
+working with
+persistent objects: to swizzle or not to swizzle,   j. eliot
+b. moss.  ieee transactions on software engineering, vol. 18, no. 8,
+august 1992, pp.   657-673. 
+
+
+
+design of the mneme persistent object store ,   j. eliot b. moss.  acm
+  trans. on information systems, volume 8, number 2, april 1990, pp. 103-139.
+
+
+ addressing large
+distributed collections of persistent   objects: the mneme project's approach
+,   j. eliot b. moss.  second international workshop on
+  database programming languages, gleneden beach, or, june 1989, hull,
+  morrison, and stemple, eds., morgan kaufmann, 1990, pp. 358-374.
+
+
+
+
+
+
+
+
+supporting full-text information retrieval with a persistent object
+store ,  eric w. brown, james p. callan, w. bruce croft, and j.
+eliot b. moss.  proceedings of the 4th international conference on
+extending database technology, pp 365-378 (cambridge, uk, march 1994).
+springer-verlag, 1994.
+
+
+
+
+transactional
+memory: architectural  support for lock-free data structures, maurice
+herlihy and eliot moss. international symposium on computer  architecture,
+may 1993 (camera ready version).  
+
+transactional
+memory: architectural  support for lock-free data structures, maurice
+herlihy and eliot moss. digital equipment corporation   cambridge research
+laboratory technical report crl 92/07, december 1992.   under revision for
+journal publication.  
+
+
+
+publications of eliot moss
+publications of eliot moss
+publications of eliot moss
+publications of eliot moss
+publications of eliot moss
+publications of eliot moss
+publications of eliot moss
+publications of eliot moss
+publications of eliot moss
+publications of eliot moss

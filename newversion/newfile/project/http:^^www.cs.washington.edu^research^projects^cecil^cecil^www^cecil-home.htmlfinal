@@ -1,0 +1,96 @@
+uw cecil/vortex project
+
+
+uw cecil/vortex project
+
+welcome to the home page for the cecil and vortex projects at uw cse.  we conduct research on programming language design and implementation, with an emphasis on these issues for object-oriented languages.
+
+cecil is a purely object-oriented language intended to support rapid
+construction of high-quality, extensible software.  cecil incorporates
+multi-methods, a simple prototype-based object model, a mechanism to
+support a structured form of computed inheritance, module-based
+encapsulation, and a flexible static type system which allows
+statically- and dynamically-typed code to mix freely.
+
+
+
+vortex is an optimizing compiler infrastructure for
+object-oriented and other high-level languages.  it targets both pure
+object-oriented languages like cecil and hybrid object-oriented
+languages like c++, modula-3, and java.  vortex currently incorporates
+high-level optimizations such as static class analysis, class hierachy
+analysis, profile-guided receiver class prediction, profile-guided
+selective procedure specialization, intraprocedural message splitting,
+automatic inlining, and static closure analyses.  it also includes a
+collection of standard intraprocedural analyses such as common
+subexpression elimination and dead assignment elimination.  the vortex
+compiler is written entirely in cecil.
+
+
+
+an initial beta release of the cecil/vortex system is currently
+available for sparcs running either sunos 4 or sunos 5 (solaris).
+send mail to cecil-interest-request with a message body of subscribe if you'd like to subscribe to a list of
+interested parties and get more information on how to obtain the
+beta release.
+
+
+we've recently finished a technical report that describes much of our implementation research.
+
+
+more information
+
+
+
+ project overview
+ a more detailed overview of the project's goals and direction.  a postscript version is also available.
+
+
+ project members
+ current and past project members
+
+ papers
+ papers we've written
+
+
+ sample projects
+ a list of some sample research projects (available to people from uw
+cse)
+
+
+  internal documentation
+ project internal documentation (available to people from uw cse)
+
+
+ support
+ this page lists some of the sources of support for our project
+
+
+ some related projects
+ pointers to a few other object-oriented language implementation projects
+
+
+
+
+
+
+
+
+
+last updated august 25, 1996. 
+
+
+cecil@cs.washington.edu
+
+
+
+uw cecil/vortex project
+uw cecil/vortex project
+uw cecil/vortex project
+uw cecil/vortex project
+uw cecil/vortex project
+uw cecil/vortex project
+uw cecil/vortex project
+uw cecil/vortex project
+uw cecil/vortex project
+uw cecil/vortex project

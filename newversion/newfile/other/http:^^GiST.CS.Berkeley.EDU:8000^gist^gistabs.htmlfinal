@@ -1,0 +1,37 @@
+generalized search trees for database systems
+
+
+abstract.
+	this paper introduces the generalized search tree (gist), an
+index structure supporting an extensible set of queries and data
+types.  the gist allows new data types to be indexed in a manner
+supporting queries natural to the types; this is in contrast to
+previous work on tree extensibility which only supported the
+traditional set of equality and range predicates.  in a single data
+structure, the gist provides all the basic search tree logic required
+by a database system, thereby unifying disparate structures such as
+b+-trees and r-trees in a single piece of code, and opening the
+application of search trees to general extensibility.
+
+	to illustrate the flexibility of the gist, we provide simple
+method implementations that allow it to behave like a b+-tree, an
+r-tree, and an rd-tree, a new index for data with set-valued
+attributes.  we also present a preliminary performance analysis of
+rd-trees, which leads to discussion on the nature of tree indices and
+how they behave for various datasets.
+ last modified: fri may 5 12:34:10 1995 by joe hellerstein
+jmh@cs.berkeley.edu
+
+
+
+
+generalized search trees for database systems
+generalized search trees for database systems
+generalized search trees for database systems
+generalized search trees for database systems
+generalized search trees for database systems
+generalized search trees for database systems
+generalized search trees for database systems
+generalized search trees for database systems
+generalized search trees for database systems
+generalized search trees for database systems

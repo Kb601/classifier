@@ -1,0 +1,133 @@
+papers for cse 505
+
+
+
+papers for cse 505
+
+
+
+papers distributed in class
+
+
+
+ david turner, "an overview of miranda," sigplan notices vol 21 no 12,
+dec 1986, pages 158-166.
+
+ david turner, "a new implementation technique for applicative
+languages," software--practice and experience, vol 9, 1979, pages
+31-49.
+
+ peter nauer (ed.), "report on the algorithmic language algol 60,"
+cacm, vol 6 no 1, 1963, pages 1-17.
+
+ xerox learning research group, "the smalltalk-80 system," byte,
+vol 6 no 8, august 1981, pages 36-48. 
+
+  alan snyder, "encapsulation and inheritance in object-oriented 
+languages," oopsla 86.
+
+ungar and smith, "self: the power of simplicity," lisp & symbolic computation, 1991.
+
+craig chambers, "object-oriented multi-methods in cecil," ecoop 92.
+
+luca cardelli, "a semantics of multiple inheritance," semantics of data 
+types, 1984.
+
+ peter canning, william cook, walter hill, and walter olthoff,
+"f-bounded polymorphism for object-oriented programming", fourth
+international conference on functional programming languages and computer
+architecture, acm, 1989.
+
+ gilad bracha and david griswold, "strongtalk: typechecking smalltalk in
+a production environment", oopsla 93.
+
+ bjorn freeman-benson and alan borning, "integrating constraints with
+an object-oriented language," proceedings of the 1992 european conference
+on object-oriented programming, june 1992, pages 268-286.
+
+ gus lopez, bjorn freeman-benson, and alan borning, "implementing
+constraint imperative programming languages: the kaleidoscope'93 virtual
+machine," proceedings of the 1994 acm conference on object-oriented
+programming systems, languages, and applications, portland, oregon, october
+1994.
+
+ joxan jaffar, spiro michaylov, peter stuckey, and roland yap, "the
+clp(r) language and system," acm transactions on programming languages and
+systems, july 1992, vol. 14 no. 3, pages 339-395.
+
+
+
+
+
+
+optional papers available in 4th floor filing cabinet
+
+
+
+ sigplan notices, special issue on haskell, vol 27 no 5, may 1992.
+
+ robin milner, "a theory of type polymorphism in programming,"
+journal of computer and system sciences, vol 17, 1978, pages 348-375.
+
+ donald knuth, "the remaining trouble spots in algol 60," 
+cacm, vol 10 no 10, 1967, pages 611-617.
+
+ ole-johan dahl and kristen nygaard, "simula--an algol-based
+simulation language," cacm vol 9 no 9, september 1966, pages 671-678.
+
+ alan kay and adele goldberg, "personal dynamic media,"
+ieee computer, march 1977.
+
+ peter deutsch, "building control structures in smalltalk-80," byte,
+vol 6 no 8, august 1981, pages 322-346. 
+
+ alan borning, "classes versus prototypes in object-oriented languages,"
+ proceedings of the acm/ieee fall joint computer conference, dallas, texas,
+november 1986, ages 36-40.
+
+ alan borning, " alan borning and tim o'shea, 
+``an empirically and aesthetically
+motivated simplification of smalltalk-80,'' proceedings of the european
+conference on object-oriented programming, association francaise pour
+la cybernetique economique et technique, paris, june 1987, pages 
+3-12.
+
+ smith, lentczner, smith, taivalsaari, ungar, 
+"prototype based languages: object lessons from class-free programming," 
+panel discussion, oopsla 94, pages 102-112.
+
+ henry lieberman, "using prototypical objects to implement shared
+behavior in object oriented systems," 
+oopsla 86, pages 214-223.
+
+ alan borning and daniel h. h. ingalls, "multiple inheritance in
+smalltalk-80," american association for artificial intelligence
+conference, pittsburgh, pennsylvania, august 1982, pages 234-237.
+
+ daniel ingalls, "a simple technique for handling multiple polymorphism," 
+oopsla 86, pages 347-349.
+
+ william cook, walter hill, and peter canning, "inheritance is not
+subtyping", popl (acm principles of programming languages conference),
+1990.
+
+ craig chambers and gary leavens, "typechecking and modules for
+multi-methods", oopsla'94.
+
+
+
+
+
+
+
+
+papers for cse 505
+papers for cse 505
+papers for cse 505
+papers for cse 505
+papers for cse 505
+papers for cse 505
+papers for cse 505
+papers for cse 505
+papers for cse 505
+papers for cse 505

@@ -1,0 +1,138 @@
+cse467 hardware lab policies
+
+
+
+
+
+cse467: advanced logic design
+carl ebeling, spring 1996 
+
+
+
+hardware laboratory - overview and policies
+                              
+lab assignments will be completed in 
+the digital design laboratory (327 sieg).  (you may also use the
+workstations in the 232 pentium lab after the design tools are installed.)
+there are 10 intel pentium workstation on workbenches 
+in the lab.  there are also a number of other pcs and macs which we
+will not be using much, if at all.
+the logic analyzers and digital oscilloscopes you will be using are at 
+approximately one half of the benches.  in addition, there also is a 
+datai/o pld and microcontroller programmer.  multi-meters, oscilloscopes, 
+and other tools and equipment are available.  
+
+ rules:there will be absolutely no food or drink brought
+into the lab and you should refrain from activities that disrupt
+fellow students.  please help us to keep the lab clean and neat with
+equipment, manuals, and tools in their proper place.  if you are going
+to be gone from the lab for any length of time, please clear your
+working space so someone else will be able to work.  since other
+students have access to the lab, do not assume that you can safely use
+a workbench indefinitely.  if for some reason you need to monopolize a
+bench or piece of equipment, make sure to leave a note explaining the
+situation with your name and a phone number where you can be reached.
+
+
+laboratory hours: the laboratory must be shared with the students 
+in cse370 and cse477.  cse467 and cse477 have priority at during the
+following times:
+cse467 a: tuesday 1:30-4:20
+cse467 b: thursday 1:30-4:20
+cse477: wednesday 2:30-5:20 and friday 2:30-5:20
+
+you will be asked to vacate a bench if no 
+others are available for those students.  all other times are available
+to all students with a simple limit of 2 hours per sitting.  a student 
+already at a bench for 2 hours will need to vacate and take a turn at the
+end of the line.  this restriction will only be put in place if things
+get really crowded.
+
+computer-aided design software (synario/xact): this 
+course will make heavy use of cad software in the form of synario and
+xact.  synario includes schematic capture, vhdl programming, simulation and
+synthesis for plds andfpgas. xact is a suite of tools used for mapping
+circuits to xilinx fpgas.  synario is installed on the ten networked
+nt workstations (the one with names).  xact is installed on some
+subset of the lab pcs, so you will have to shift between machines to
+use it.  the software is copy protected and any 
+attempt to tamper with this mechanism or otherwise make illegal copies 
+will be dealt with very severely and through the same channels as physical 
+property theft.  to defray the costs of acquiring this software we will 
+require a lab use fee of $20 (a separate check payable to the university 
+of washington).
+
+pentium computers: the pentiums in 327 (as well as those in 232) are
+connected to the network
+and run under the windows nt operating system.  accounts on the pentiums will
+be provided to you by the first lab session.  please use the disk
+space associated with your account to store lab files.
+also, practice common sense with respect to computer 
+virus protection.  if you use any other machines, get into the habit of 
+always using an anti-virus program (one will be available on the lab 
+machines).  
+we reserve the 
+right to reformat any local disk in the lab which we suspect to be infected or 
+otherwise damaged or corrupted.  in fact, we will regularly clean up all 
+the disks in the lab to eliminate accumulated files and free up disk space.  
+this policy will also protect you from plagiarism.  remember: do not leave any 
+files on a lab machines - they may be gone when you return and/or someone 
+else may put them to use.
+
+design kits: design kits are portable kits that contain
+everything needed to complete the laboratory 
+assignmentsthat.  project teams will check out designkits for the
+quarter (kits will be available the second week of the quarter).  
+in the designkit will be a card for keeping track of extra items that you  
+may need to check out during the quarter.  we will need a $200 security 
+deposit for the designkit.  
+
+security: you will be given a personal entry 
+code for the combination lock on the door of 327.  the lock will keep 
+track of when you enter the lab.  please make sure to keep the entry code 
+to yourself.  unauthorized access to the lab leads at best to 
+inconvenience and at worst to theft and equipment loss.  all these harm 
+you directly.  the lab will be available for your use 24 hours a day.  do 
+not allow anyone into the lab and make sure the windows and doors 
+are locked at all times.  we cannot guarantee that things you leave in 
+the lab unattended will not be stolen.  unfortunately, there is a tradeoff 
+between security and access.  if you are all good citizens we should be 
+able to have access and a secure environment.  stephen lee, the 
+engineering technician in charge of the lab, will be available during 
+normal business hours.  he will be the person from whom you will the 
+combination lock codes.  any problems with laboratory equipment and/or 
+software should be immediately reported to him.  do not remove any 
+equipment, documentation, or tools from the room.  please see stephen if 
+you need to check out a manual or anything else overnight.
+
+money:  you will need to bring two checks to the lab.  one for 
+$20 to defray the cost of the commercial software you will be 
+using and a $200 security deposit for the designkits you will be 
+issued and other materials, parts, tools, equipment, and documentation 
+you may check out from the lab.  make checks out to the "university of 
+washington".  these will be due by the end of the first week of class.
+the $200 checks will be returned at the end of the quarter when the 
+designkits and any other parts, equipment, or documentation borrowed in 
+the interim are returned in good shape.  you will be held personally 
+responsible for any damage to parts and equipment.  the $20 checks will 
+be cashed.
+
+
+
+
+ebeling@cs.washington.edu
+
+
+
+
+
+cse467 hardware lab policies
+cse467 hardware lab policies
+cse467 hardware lab policies
+cse467 hardware lab policies
+cse467 hardware lab policies
+cse467 hardware lab policies
+cse467 hardware lab policies
+cse467 hardware lab policies
+cse467 hardware lab policies
+cse467 hardware lab policies

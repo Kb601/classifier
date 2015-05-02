@@ -1,0 +1,81 @@
+cs 110 section 2 - handin directory
+
+
+
+
+ handin directory
+
+
+
+most of your programming assignments will be handed in online.  the file server for the vectra's in the 1350 lab has a special "handin" directory for you where you will copy your source code files, executable files and any related data files.  your files are timestamped with the current time and date when you copy them to your handin directory.  this timestamp will be used to check they were handed in on time or whether late day penalties apply.
+
+file names:
+
+please use the following file name convention when you copy files to your handin directory.  this greatly simplifies determining which files should be graded for each assignment:
+
+   your fortran source code files should be named
+   
+	program#.for
+   
+   for example,
+   
+	program1.for, program2.for
+   
+
+   your compiled executable files should be named
+   
+	program#.exe
+   
+   for example,
+   
+	program1.exe, program2.exe
+   
+
+
+copying files to your handin directory:
+
+to copy files to your handin directory type the following ms-dos command
+
+	copy  filename  r:\handin\bestor\your-login-name\filename
+
+for example,
+
+	copy  program1.for  r:\handin\bestor\jthomas\program1.for
+	copy  program1.exe  r:\handin\bestor\jthomas\program1.exe
+
+
+to confirm that your files were copied over you can display a list of all the files in your handin direcory by typing the ms-dos command
+
+	dir  r:\handin\bestor\your-login-name
+
+
+notes:
+
+   important - make sure you copy the correct versions of your program files because these are what will be graded.
+
+   do not copy any files to your handin directory until you have completely finished the assignment. otherwise, if you do but end up handing in the assignment late then an earlier incomplete version of your program may get graded accidentally before you hand in the final version.
+
+   if you have problems copying files to your handin directory ask a consultant to help you.
+
+
+
+
+
+
+
+
+copyright &copy 1996 gareth s. bestor (bestor@cs.wisc.edu).  last modified march 19, 1996.
+
+
+
+
+cs 110 section 2 - handin directory
+cs 110 section 2 - handin directory
+cs 110 section 2 - handin directory
+cs 110 section 2 - handin directory
+cs 110 section 2 - handin directory
+cs 110 section 2 - handin directory
+cs 110 section 2 - handin directory
+cs 110 section 2 - handin directory
+cs 110 section 2 - handin directory
+cs 110 section 2 - handin directory

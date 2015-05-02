@@ -1,0 +1,39 @@
+abstract of algebra / type theory cade94 paper
+
+abstract for: 
+paul b. jackson. exploring abstract algebra in constructive type theory.  in a.
+bundy, editor, 12th international conference on automated
+deduction, lecture notes in artifical intelligence. springer
+verlag, june 1994.  
+
+
+
+i describe my implementation of computational abstract algebra in
+the nuprl system. i focus on my development of multivariate
+polynomials. i show how i use nuprl's expressive type theory to
+define classes of free abelian monoids and free monoid algebras. these
+classes are combined to create a class of all implementations of
+polynomials. 
+
+i discuss the issues of subtyping and computational content that came
+up in designing the class definitions.  i give examples of relevant
+theory developments, tactics and proofs.  i consider how nuprl could
+act as an algebraic `oracle' for a computer algebra system and the
+relevance of this work for abstract functional programming.
+
+
+
+last modified jan 20th, 1995
+
+ paul jackson / jackson@cs.cornell.edu 
+
+abstract of algebra / type theory cade94 paper
+abstract of algebra / type theory cade94 paper
+abstract of algebra / type theory cade94 paper
+abstract of algebra / type theory cade94 paper
+abstract of algebra / type theory cade94 paper
+abstract of algebra / type theory cade94 paper
+abstract of algebra / type theory cade94 paper
+abstract of algebra / type theory cade94 paper
+abstract of algebra / type theory cade94 paper
+abstract of algebra / type theory cade94 paper

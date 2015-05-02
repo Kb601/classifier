@@ -1,0 +1,736 @@
+the world wide web virtual library:
+formal methods
+
+
+
+
+
+
+
+
+
+
+
+virtual library
+
+
+
+computing
+
+
+
+software engineering
+
+
+
+
+formal methods
+
+
+
+
+please mail 
+j.p.bowen@reading.ac.uk
+if you know of relevant on-line information not included here
+or would like to maintain information on a particular topic.
+use the comp.specification
+newsgroup, or the newer
+
+comp.specification.misc
+newsgroup, for general formal methods queries.
+
+
+
+
+
+
+
+
+this document contains some pointers to information
+on 
+formal methods
+available around the world on the
+
+world wide web (www), a global hypermedia system providing
+
+worldwide information.
+
+
+links for accessing on-line
+information in the following categories are available:
+
+
+
+ announcement
+ latest news
+ 
+     introductory articles
+ individual notations, methods and tools
+ publications
+     (including journals, papers, books, etc.)
+ 
+     electronic repositories
+ meetings
+ projects
+ companies
+
+     organizations
+ 
+     who's who on the web in
+     
+     formal methods
+ relevant newsgroups
+ related topics
+
+
+
+
+
+indicates new entries.
+
+
+indicates a (subjectively!) recommended link for especially good
+on-line information. if enough people email me, i will add a star to
+entries recommended by others.  
+
+
+
+latest news:
+this space will be used to indicate selected new entries
+and developments in the formal methods pages. 
+
+
+
+
+
+the steam boiler control specification problem
+by j.-r. abrial, e. börger and h. langmaack.
+a comparative case study for different formal techniques -
+further submissions are invited.
+(2 august 1995)
+
+
+
+comp.specification.* newsgroups.
+(12 july 1995)
+
+
+
+petri nets graphical notation.
+(11 april 1995)
+
+
+
+tools demonstration information
+for 
+wift95 workshop.
+(6 april 1995)
+
+
+a new
+
+lotos page.
+(16 february 1995)
+
+
+information on
+
+raise language and tools.
+(19 january 1995)
+
+
+a new section on the
+
+b-method has been added.
+(6 january 1995)
+
+
+
+
+
+
+
+individual notations, methods and tools
+
+
+
+
+
+acl2 theorem prover, a successor to the
+ boyer-moore theorem prover.
+in progress - watch this space!
+
+
+
+action semantics, a framework for specifying formal semantics
+of programming languages.
+
+
+
+algebraic design language,
+a higher-order software specification language.
+
+
+
+aslan, a specification
+language processor/proof obligation generator (email dick kemmerer on
+ kemm@cs.ucsb.edu for
+further details), and gil, a
+graphical interval logic tool (email laura dillon on  dillon@cs.ucsb.edu
+for further details), are
+available from a formal support tools archive (see the  index) at uc santa barbara.
+
+
+
+assertion definition language translator (adlt),
+a specification based testing toolset.
+
+
+ boyer-moore theorem prover
+(a forerunner of nqthm).
+available via 
+icot free software for use under unix at
+
+icot (japan),
+
+sics (sweden),
+
+gmd (germany) and
+
+univ. of oregon (usa).
+
+
+
+b-method, including the b-tool and b-toolkit.
+
+
+
+circal (circuit calculus) system supporting a process algebra which
+may be used to rigorously describe, verify and simulate concurrent
+systems.
+
+
+
+
+
+cold (common object-oriented language for design),
+ a wide-spectrum specification language.
+ 
+
+
+
+
+cwb (edinburgh concurrency workbench), and
+automated toolset.
+
+
+
+coq proof assistant.
+see also
+
+
+ctcoq, a working environment for the
+
+coq project theorem prover.
+
+
+
+cospan (coordinated specification analysis),
+a general-purpose rapid-prototyping tool,
+using the s/r (selection/resolution) language.
+
+
+
+csp (communicating sequential processes) including the
+ fdr tool.
+
+
+
+ disco
+is specification method for reactive systems including a  tool developed
+at the tampere university of
+technology, finland.
+
+
+
+estelle:
+
+
+
+edt (estelle development toolset)
+and 
+example specifications.
+contact 
+estelle-request@cs.umb.edu to join the mailing list.
+
+
+
+
+esterel,
+for verifying safety properties in synchronous distributed systems.
+
+
+
+eves tool, based on zf set theory, from ora, canada.
+
+
+
+
+
+evolving algebras, university of michigan, usa.
+
+
+
+extended ml
+framework for the specification and  formal development of
+modular standard ml programs.
+
+
+
+
+hol mechanical theorem proving system.
+
+
+
+hytech is an automatic tool for the analysis of embedded systems.
+it computes the condition under which a linear hybrid system satisfies
+a temporal-logic requirement.  installation requires a mathematica
+license.
+
+
+
+
+imps, an interactive mathematical proof system intended to provide
+mechanical support for traditional mathematical techniques and styles
+of practice.
+
+
+
+
+isabelle.
+see also the cambridge 
+automated reasoning group and ftp
+access including an 
+index.  email 
+larry.paulson-request@cl.cam.ac.uk
+for information, including requests concerning the
+isabelle-users@cl.cam.ac.uk mailing list.
+
+
+
+jape (just another proof editor) by
+
+bernard sufrin and
+
+
+richard bornat is available via
+ anonymous ftp.
+see also
+
+
+macos jape.
+
+
+
+kiv (karlsruhe interactive verifier).
+ a tool for the development of correct software using stepwise
+ refinement.
+
+
+
+
+lambda toolset from
+
+abstract hardware ltd, uk,
+supports 
+formal verification for hardware/software co-design.
+email 
+lambda@ahl.co.uk. to join the usergroup mailing list,
+email 
+lambda-usergroup-request@dcs.ed.ac.uk.
+
+
+
+
+larch and lp (larch
+prover).  see also dec src's  larch
+home page and the 
+larch project at  cmu.  the  larch tool set (look at the
+ readme
+file first) is available.
+
+
+
+leantap, a tableau-based deduction theorem prover for classical
+first-order logic.
+
+
+
+lego proof-checker.
+
+
+
+
+lotos (language of temporal ordering specifications).
+see also
+
+
+here.
+
+
+
+maintainer's assistant,
+a tool for reverse engineering and re-engineering code using
+formal methods.
+
+
+
+meije tools for the verification of concurrent programs.
+includes atg, a graphical editor/visualizer.
+
+
+
+mizar tool, a long-term effort aimed at developing
+software to support a working mathematician in preparing
+papers.
+
+
+
+
+
+model checking at cmu, a method for formally verifying
+finite-state concurrent systems. 
+
+
+
+mural tool to aid formal reasoning about
+specifications including a proof assistant and vdm support.
+see also the 
+mural project.
+
+
+
+murphi, a finite-state verification tool for concurrent systems.
+see also
+
+on-line papers.
+
+
+
+
+nqthm theorem prover and the 
+pc-nqthm interactive ``proof-checker'' enhancement
+of the  boyer-moore theorem prover
+from computational logic inc.
+see also
+
+
+nqthm users gopher information.
+
+
+
+
+nuprl tool based on intuitionistic type theory.
+
+
+
+obj - obj3 and 2obj.
+
+
+
+otter, an automated deduction system.
+
+
+
+
+petri nets, a formal graphical notation
+for modelling systems with concurrency.
+see also
+
+
+conferences.
+
+
+
+pi-calculus. (also 
+ccs - calculus of communicating systems.)
+see
+
+
+papers by robin milner et al.
+
+the 
+mobility workbench
+(see 
+readme file)
+and a 
+bibtex bibliography.
+
+
+
+
+proofpower is a commercial tool, developed and marketed by icl,
+supporting development and checking of specifications and formal proofs
+in  higher order logic and/or  z.
+support for z uses a deep(ish) embedding of z into hol, but includes
+syntax and type checking customized for z.
+
+
+
+
+pvs (prototype verification system) tool based on classical typed
+higher-order logic developed at the 
+sri international  computer science
+laboratory.
+
+
+
+
+raise language and tools from cri, denmark.
+email .
+raise@csd.cri.dk.
+
+
+
+refinement calculus by ralph back et al..
+
+
+
+
+sdl specification and description language.
+
+
+
+smv (symbolic model verifier) model checker for finite-state
+systems, using the specification language ctl (computation tree logic),
+a propositional branching-time temporal logic.
+see also 
+csml and mcb, a language for compositional
+description of
+finite state machines and a (non-symbolic) model checker for ctl,
+a 
+bdd library with extensions for sequential verification, and
+
+papers on various related topics.
+
+ 
+spin is an automated verification tool (model checker), using a
+language based on csp, for finite state systems, such
+as protocols or validation models of distributed systems, developed at
+at&amp;t bell labs.
+
+
+
+step, the  stanford temporal prover.
+
+ 
+tam. the temporal agent model from
+the 
+real-time systems research group at york university.
+
+
+
+
+tla (temporal logic of actions) has 
+tool support.
+
+
+
+
+tps and etps, the theorem proving system and the educational
+theorem proving system.
+
+
+
+ttm/rttl framework for real-time reactive systems.
+
+
+
+unity, a programming notation and a logic to reason about
+parallel and distributed programs.
+
+
+
+ vdm
+(vienna development method).  see also
+the mural tool, and vdm  text
+books.
+
+
+
+
+z notation for formal specification.
+
+
+
+see also:
+
+
+
+
+
+formal methods tools database
+(second sourced)
+maintained by tim denvir.
+
+
+request for information for a
+
+formal methods applications database by nico plat (november 1994).
+
+
+
+
+tools demonstration information
+for 
+wift95 workshop.
+
+
+
+
+
+newsgroups
+
+
+
+
+
+comp.specification including discussion of formal
+specification and methods.
+see also the newer
+
+comp.specification.misc
+newsgroup and other
+
+related newsgroups:
+
+
+
+
+
+
+comp.specification.larch - more specific discussion on the
+ larch.
+
+
+
+comp.specification.z - more specific discussion on the
+ z and related notations.
+messages are  archived
+(e.g., see 
+most recent messages).
+see also 
+faq message (frequently asked questions).
+
+
+
+
+ comp.software-eng -
+more general discussion on software engineering, including formal
+aspects.  messages relating to  formal
+methods and software safety in this newsgroup have been 
+archived. see also the
+
+
+comp.software-eng archive and
+
+faq message information especially 
+formal specification.
+
+
+
+news.announce.conferences - announcements of conferences
+including many specifically on formal methods
+or with a formal methods content (e.g., see 
+separated page on
+meetings).
+
+
+
+
+
+
+an electronic mailing list mostly concerned with educational issues
+relating to formal methods in computer science is available.  email 
+formal-methods-request@cs.uidaho.edu to join/leave the
+list and 
+formal-methods@cs.uidaho.edu to post to the list.  
+
+
+of related interest
+
+see also information on:
+
+
+
+
+
+
+
+automated reasoning systems
+(see also systems
+
+developed in germany)
+
+
+ concurrent systems
+
+
+ logic programming
+
+
+
+logical frameworks
+
+
+ safety-critical systems
+
+
+
+bnf (backus-naur form notation) 
+
+
+
+
+
+
+
+last updated by
+jonathan bowen,
+
+
+
+formal methods group,
+
+dept. of computer science,
+
+university of reading,
+5 december 1995.
+further information for possible inclusion is welcome.
+
+part of the  oucl
+ archive.
+
+
+
+
+the world wide web virtual library:
+formal methods
+the world wide web virtual library:
+formal methods
+the world wide web virtual library:
+formal methods
+the world wide web virtual library:
+formal methods
+the world wide web virtual library:
+formal methods
+the world wide web virtual library:
+formal methods
+the world wide web virtual library:
+formal methods
+the world wide web virtual library:
+formal methods
+the world wide web virtual library:
+formal methods
+the world wide web virtual library:
+formal methods

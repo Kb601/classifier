@@ -1,0 +1,144 @@
+cs223b - computer vision
+
+
+
+
+cs223b - computer vision 
+
+
+general information and resources
+
+
+ introduction to cs223b
+	 (postscript version)
+ read about course mechanics
+very carefully. this document also asks you to do a few things.
+ image collections and related links
+ image processing tools
+newsgroup:  su.class.cs223b
+
+
+
+
+lecture notes
+
+notes are unedited. use at your own risk.
+
+
+ overview
+ image formation 
+	(postscript version)
+  edges 
+	(postscript version)
+	and edge detection(nalwa, ch 3)
+ smoothing
+	(postscript version) 
+ segmentation (nalwa sec. 3.3 and general remarks
+        (postscript version))
+ shape from shading (nalwa, sec 2.2 and chapter 5; horn,
+chapters 10, 11)
+ texture (nalwa, chapter 6 and j.r. bergen, "theories of
+visual texture perception," in spatial vision, d. regan, ed.,
+crc press, 1991; voorhees and poggio, "computing texture
+boundaries from images," nature 333, pp.364-367)
+ shape from texture
+        (postscript version)
+ stereo triangulation
+	(postscript version)
+ the correspondence problem (nalwa, chapter 7)
+ correspondence methods: correlation, relaxation (poggio,
+"vision in man and machine"), dynamic programming (ohta
+and kanade, described in nalwa, chapter 7)
+ visual motion interpretation (nalwa, chapter 8)
+ feature tracking (postscript)
+ shape reconstruction (postscript) under
+orthographic projection (the figures are
+about 5 megabytes)
+ videotape on the state of the art in computer vision
+
+
+
+
+homework
+
+
+ homework 1, due on 1/23/96. ftp or copy
+material from directory /usr/class/cs223b/www/hw1 on leland.
+ homework 1 solutions.
+ homework 2, due on 2/1/96.
+ homework 2 solutions.
+ homework 3, due on 2/22/96.
+ homework 3 solutions.
+ homework 4, due on 3/7/96.
+ homework 4 solutions.
+
+
+
+
+midterm
+
+
+ sample and
+solution sample.
+  midterm statistics
+
+
+
+
+teaching evaluation
+an informal teaching evaluation form
+will be handed out in class.  if you would like to give me extra
+feedback, please fill out the electronic
+version which will be sent to me anonymously.
+
+
+
+teaching staff
+
+
+
+carlo tomasi,
+instructor
+
+tomasi@cs.stanford.edu
+
+office: gates building, room 156
+(415) 725-2593 (office)
+(415) 725-1449 (fax)
+office hours: by appointment (send mail or call)
+
+
+
+yossi rubner, teaching assistant
+
+rubner@cs.stanford.edu
+
+office: gates building, room 112
+(415) 723-4310 (office)
+(415) 725-1449 (fax)
+office hours: tue 3-5pm
+
+
+mina madrigal, administrative assistant
+
+mina@flamingo.stanford.edu
+
+office: gates building, room 146
+
+
+
+
+carlo tomasi /  tomasi@cs.stanford.edu 
+
+
+
+cs223b - computer vision
+cs223b - computer vision
+cs223b - computer vision
+cs223b - computer vision
+cs223b - computer vision
+cs223b - computer vision
+cs223b - computer vision
+cs223b - computer vision
+cs223b - computer vision
+cs223b - computer vision

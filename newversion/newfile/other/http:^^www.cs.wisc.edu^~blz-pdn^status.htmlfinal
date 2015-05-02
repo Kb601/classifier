@@ -1,0 +1,129 @@
+blizzard & paradyn www status report
+
+
+
+
+blizzard and paradyn:
+infrastructure and scalable tools for multi-paradigm parallel computers
+
+
+www status report as of january 1995
+
+
+
+
+wisconsin cow
+
+
+recent accomplishments:
+
+
+
+
+acquired and deployed a cluster of workstations (cow) consisting of 40
+dual-processor sun sparcstation20s workstations (see photo).  the cow
+and our previously-acquired thinking machines cm-5 allow us to develop
+solutions that scale from off-the-shelf hardware to large parallel
+computers.
+
+
+implemented a preliminary version of shared memory across cow
+workstation nodes that supports coarse-grain sharing as a precursor to
+our upcoming fine-grain shared memory system.
+
+
+implemented a preliminary version of "dynamic instrumentation" that
+allows the focus of measurement to change as different "information
+traffic jam" locations are investigated.
+
+
+
+
+last update: january 1994; contact barton miller (bart@cs.wisc.edu)
+
+
+
+background:
+
+the national defense and other key sectors--such as education, health
+care, and commerce--increasingly benefit from and relying upon massive
+computational power.  parallel computers constructed from an array of
+conventional computers offer a cost-effective approach to buying cpu
+cycles.  although the cost advantage is clear, getting the computers
+to work together effectively requires better methods for:
+
+
+cooperatively sharing information, and
+
+identifying and mitigating "information traffic jams."
+
+
+
+goals:
+
+
+this project addresses both concerns.  effective information sharing
+must permit programmers to tailor a program's sharing to the problem
+being solved--rather than being constrain by the limit options built
+into a system.  our system supports message passing (like postal
+mail), fine-grain shared memory (like reading over each other's
+shoulders), and hybrid combinations of the two.  our system can be
+implemented on low- to high-end parallel computers, so programs can be
+reused across a wide range of system.  for more information on this
+part of the project, click
+here.
+
+
+the second goal of project is to improve techniques for mitigating
+information traffic jams--what computer specialists call "performance
+debugging."  traditional tools for performance debugging have not
+scaled to large parallel machines because it is difficult to decide in
+advance what to measure and in what detail.  our tools transcend this
+problem by supporting "dynamic instrumentation" that allows
+measurement activity to adapt to the tool's current hypothesis for the
+information traffic jam's location.  for more information on this part
+of the project, click
+here.
+
+
+participants & support:
+
+
+the principal investigators are
+barton p. miller,
+mark d. hill,
+james r. larus, and
+david a. wood
+in  computer sciences 
+at the university of wisconsin.
+
+
+this work is supported in part by wright laboratory avionics directorate,
+air force material command, usaf, under grant #f33615-94-1-1525 and
+arpa order no. b550, nsf pyi/nyi awards ccr-9157366, mips- 8957278,
+and ccr-9357779, nsf grants ccr-9101035 and mip- 9225097, doe grant
+de-fg02-93er25176, university of wisconsin graduate school grant,
+wisconsin alumni research foundation fellowship and donations
+from a.t.&t. bell laboratories, digital equipment corporation, sun
+microsystems, thinking machines corporation, and xerox corporation. our
+thinking machines cm-5 and cluster of sun workstations were purchased
+through nsf institutional infrastructure grant no. cda-9024618 with
+matching funding from the university of wisconsin graduate school.
+
+
+last update: january 1994; contact barton miller (bart@cs.wisc.edu)
+
+
+
+
+
+blizzard & paradyn www status report
+blizzard & paradyn www status report
+blizzard & paradyn www status report
+blizzard & paradyn www status report
+blizzard & paradyn www status report
+blizzard & paradyn www status report
+blizzard & paradyn www status report
+blizzard & paradyn www status report
+blizzard & paradyn www status report
+blizzard & paradyn www status report

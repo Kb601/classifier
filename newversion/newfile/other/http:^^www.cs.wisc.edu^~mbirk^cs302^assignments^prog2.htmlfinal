@@ -1,0 +1,129 @@
+program 2 
+
+
+  program 2  
+
+
+ cs302 section 12
+ ta: michael birk
+ assigned: tue 9/17/96
+ due: tue 9/24/96
+
+
+
+in program 2, you are a computer programmer who has been hired by
+a local restaurant to write a program for a new computer which will
+replace an old cash register.  
+
+
+ what to do 
+
+the restaurant only has four items on the menu.  you may pick what those
+items are and set prices for them (each item must have a different price).
+you need to keep a running total of what is ordered and loop until
+the cash register operator asks the program to print out the total bill.
+also, you must keep track of how many of each item are purchased and
+display them in the final bill.  be creative with the name
+of your restaurant, what sorts of food your restaurant offers, and what
+the prices are (or, if you lack the imagination, you can use the menu
+shown below).
+
+
+here is an example of what your menu might look like.  the formatting
+does not need to be exactly like this, but all dollar amounts must be
+formatted to 2 decimal places.
+
+
+     the hamburger shack
+     -------------------------------
+     a.  hamburger            $1.00
+     b.  cheeseburger         $1.20
+     c.  double cheeseburger  $2.40
+     d.  bacon cheeseburger   $2.00
+
+     q.  quit adding items, and print the bill
+
+	 current subtotal:  $0.00
+	 enter your selection -->
+
+
+
+at this point, the cash register operator might press "a" (or, they
+might press "a".  your program should do the same thing either way).
+you should add the cost of item a to the running subtotal and
+redisplay the menu with the updated subtotal:
+
+
+     enter your selection --> a
+
+     new subtotal is $1.00
+
+     the hamburger shack
+     -------------------------------
+     a.  hamburger            $1.00
+     b.  cheeseburger         $1.20
+     c.  double cheeseburger  $2.40
+     d.  bacon cheeseburger   $2.00
+
+     q.  quit adding items, and print the bill
+
+     current subtotal: $1.00
+     enter your selection --> 
+
+
+
+when the operator chooses "q" from the menu, 
+your program should print out an itemized list of what
+was ordered (and the total cost for each item), the subtotal, the
+sales tax (use 5% for sales tax), and the total (subtotal +
+sales tax).  for example:
+
+
+     enter your selection --> q
+
+     customer bill
+     -------------
+     1 hamburger            $1.00
+     2 cheeseburger         $2.40
+     1 bacon cheeseburger   $2.00
+                           ------
+     subtotal               $5.40
+     sales tax              $0.27
+                           ======
+     amount due             $5.67
+
+
+
+notice that two cheeseburgers were ordered in this example, so the
+cost is listed as 2 times $1.20, or $2.40.  also notice that since
+no double cheeseburgers were ordered, they are not mentioned on
+the bill (it does not say "0 double cheeseburger").  the
+program should stop executing after the final bill is printed.
+
+
+what to hand in
+
+as in program 1, you will hand in a printed copy of both your source
+code and the output displayed when the program is run.
+the printed output should demonstrate all of the features of your program.
+it should show ordering one of some item, ordering more than
+one of another item, and not ordering any of a third item.  also,
+don't forget to have your program print your name and section number,
+so that they show up on all of your printouts!
+
+
+ mbirk@cs.wisc.edu 
+
+
+
+
+ program 2 
+ program 2 
+ program 2 
+ program 2 
+ program 2 
+ program 2 
+ program 2 
+ program 2 
+ program 2 
+ program 2

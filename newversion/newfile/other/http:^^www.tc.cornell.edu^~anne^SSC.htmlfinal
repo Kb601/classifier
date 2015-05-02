@@ -1,0 +1,147 @@
+software for scientific computing 
+
+
+ software for scientific computing 
+
+the development of new software and the evaluation of existing
+software for scientific computing are important to the future of
+science and high performance computing.  many existing groups and
+projects at the ctc already involve aspects of such work; among these
+are  cserg ,  acri , the  dx repository , the  software support
+group , and the parallel tools team.  the purpose of this page is
+to provide a repository for information on other such activities and
+materials of interest.  for the moment, chris myers and anne trefethen
+have created and contributed to this page, but other people and
+activities are certainly welcome.  so please contact either chris or
+anne if you're working on something that should be included here.
+
+
+
+
+ numerical libraries, class libraries and frameworks 
+
+chris and anne are interested in the use and
+development of reusable software in the form of numerical libraries,
+object-oriented class libraries and code frameworks
+(a.k.a. "templates" or "archetypes").  listed below are some packages
+of interest (either publicly installed on ctc machines, under
+development or evaluation on ctc machines, or "out there").
+
+
+lparx: c++ class library for parallel computing on 
+distributed grids, from uc-san diego 
+
+ primary ctc contact: c. myers
+ info at 
+
+http://www-cse.ucsd.edu/users/baden/lparx.html 
+ publicly available at ctc in /usr/local/app/lparx
+ crm currently using lparx as a substrate for development of 
+parallel adaptive mesh refinement (amr) software
+
+
+
+diffpack: c++ class library for solution of pdes 
+(serial only), from sintef (oslo)
+
+ primary ctc contact: c. myers
+ info at 
+ 
+http://www.oslo.sintef.no/avd/33/3340/diffpack 
+ staff available in /afs/theory/tc/cserg/diffpack
+
+
+
+
+
+
+petsc: portable extensible toolkit for scientific computing, 
+from argonne national labs
+
+ primary ctc contact: a. trefethen
+ info at  
+
+http://www.mcs.anl.gov/petsc/petsc.html 
+ staff available in /afs/theory/tc/pap/petsc
+
+
+
+
+
+
+
+iml++: c++ class library implementing a suite of iterative methods
+
+ primary ctc contact: a. trefethen
+ info at 
+ 
+http://larch.cam.nist.gov/~pozo/iml++.html 
+ includes link to hypertext book
+
+templates for the solution of linear systems: building blocks for
+iterative methods 
+ staff available in /afs/theory/tc/pap/lapack++
+
+
+
+lapack++: c++ implementation of some of the lapack linear algebra 
+routines 
+
+ primary ctc contact: a. trefethen
+ staff available in /afs/theory/tc/pap/lapack++
+
+
+
+
+lassptools: graphical and numerical utilities for scientific 
+computing
+
+ primary ctc contact: c. myers
+ info at 
+
+http://www.lassp.cornell.edu/lassptools/lassptools.html 
+ staff available in /afs/theory/tc/cserg/tools/bin
+
+
+ collaborative research on the development of software environments 
+
+
+macchess: software development for x-ray crystallography of 
+macromolecules
+ 
+ primary ctc contact: d. schneider
+
+eclipse: development of a problem-solving environment for 
+computational fracture mechanics
+
+ primary ctc contact: c. myers
+ info at 
+
+http://www.tc.cornell.edu/eclipse/eclipse.html 
+
+
+
+ other software-related information on the web 
+
+ netlib:  http://www.netlib.org 
+ guide to available mathematical software (gams): 
+ http://gams.nist.gov 
+ national hpcc software exchange (nhse): 
+ http://www.netlib.org/nse 
+ the c++ virtual library: 
+
+http://info.desy.de/user/projects/c++.html 
+
+
+
+
+software for scientific computing 
+software for scientific computing 
+software for scientific computing 
+software for scientific computing 
+software for scientific computing 
+software for scientific computing 
+software for scientific computing 
+software for scientific computing 
+software for scientific computing 
+software for scientific computing

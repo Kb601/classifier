@@ -1,0 +1,88 @@
+xuechen liu's homepage
+
+
+function scrollit_r21(seed)
+{
+   var m1 = "... thank you for visiting xuechen liu's homepage";
+   var m2 = "...";
+
+   var msg=m1+m2
+   var out = " ";
+
+   var c = 1;
+
+   if (seed > 100) {
+      seed--;
+      var cmd="scrollit_r21(" + seed + ")";
+      timertwo=window.settimeout(cmd,100);
+   }
+   else if (seed  0) {
+      for (c=0 ; c 
+
+
+
+
+
+
+
+
+
+  xuechen liu
+
+
+ graduate student at
+ department of computer science
+ university of new mexico
+ albuquerque, nm 87131
+ phone: (505) 246-8744 (h) (505) 277-6676 (o)
+ email: xcliu@cs.unm.edu
+
+
+
+
+
+
+
+
+
+
+programming language links
+
+
+ hot links
+
+
+courses for fall96
+
+
+unm career services
+
+
+usenet faqs
+
+
+ search engine
+
+
+
+
+
+
+this page is 
+still under construction.
+
+
+
+
+
+
+xuechen liu's homepage
+xuechen liu's homepage
+xuechen liu's homepage
+xuechen liu's homepage
+xuechen liu's homepage
+xuechen liu's homepage
+xuechen liu's homepage
+xuechen liu's homepage
+xuechen liu's homepage
+xuechen liu's homepage

@@ -1,0 +1,342 @@
+lecture notes - chapter 1 - some basics.
+
+
+
+ chapter 1 -- some basics
+
+
+
+administrative stuff:
+
+introduce self
+
+goals for course:
+  provide basic understanding for future courses
+  an introduction to computer architecture
+  learn low level details about how computers work
+
+hand out:  policy sheet
+           lab acct. forms
+           first assignment
+           academic misconduct policy form
+           brochure
+
+text at bookstore
+
+go over policy sheet in detail
+go over academic misconduct in detail
+
+unix tutorials
+
+log in soon!
+
+
+
+
+some introductory material
+--------------------------
+
+
+basic concept within computer science and engineering:
+     levels of abstraction
+     hierarchy
+     models
+
+     used (for our purposes) to design programs, computers
+
+     when a problem is large, it needs to be broken down --
+       we "divide and conquer"
+       one way is by introducing a hierarchy (level), and solving
+       the problem at each level
+     example: design of a computer
+       1. transistors available
+       2. gates, flip flops
+       3. components, like registers and adders
+       4. cpu, memory system, i/o devices
+       5. computer system
+	  
+
+			 | ------- cpu
+			 |
+   computer system ------| ------- memory
+			 |
+			 | ------- i/o stuff
+
+
+
+
+
+   components  gates  transistors
+
+
+
+
+
+     top-down vs. bottom-up design
+
+
+
+
+     another example:  software levels of abstraction
+       writing a large program -- >10,000 lines of code
+       top-down:
+       divide into modules, design each module separately.
+       define procedures (functions) that accomplish a task.
+       specify interfaces (parameters) for the procedures.
+
+       the implementation of a function is independent of
+       its interface specification!  it is a different level
+       in the abstraction of program design.
+
+
+    the "big picture" -- a computer with software running on it.
+
+
+
+      hll                                               computer
+      pascal, c, fortran  .  .  .  .  .  .  .  .  .     hardware
+
+
+    how do we get from one to the other?
+		   wanted:  write in nice abstract hll.
+		   have:  stupid computer that only knows how to
+			  execute machine language
+
+    what is machine language?
+	binary sequences -- interpreted by computer as instructions.
+	not very human readable.
+
+    to help the situation, introduce assembly language --
+	a more human readable form of machine language.
+	uses mneumonics for the instruction type, and operands
+	but, now we need something to translate assembly lang.
+	     to machine lang.:  an assembler
+   
+    lastly, if we had a program that translated hll programs
+	to assembly language, then we'd have it made.
+	a compiler does this.
+
+
+
+
+    complete picture:
+
+
+             -----------                  ------------
+    hll ---> | compiler|---> assembly --->| assembler|--->machine
+             -----------     language     ------------    language
+
+
+
+
+this course deals with the software aspects of assembly language,
+   assemblers and machine language.  it also deals with the
+   hardware aspects of what the computer does to execute programs.
+   it is an introduction to study of computer architecture:
+   the interface between hardware and software.
+
+
+
+about computer architecture
+
+   the relation between hardware (stuff you can touch)
+		   and  software (programs, code)
+
+
+   i can design a computer that has hardware which executes
+   programs in any programming language.
+     for example,  a computer that directly executes pascal.
+
+
+   so, why don't we do just that?
+   1.  from experience (in the engineering community), we know
+   that the hardware that executes hll programs directly
+   are slower than those that execute a more simple, basic
+   set of instructions.
+
+   2.  usability of the machine.  not everyone wants a pascal
+   machine.  any high level language can be translated into
+   assembly language.
+
+
+
+in this class, in whatever language you are writing programs,
+it will look like you have a machine that executes
+those programs directly.
+
+what we will do:
+
+
+
+   hll --->    sal --->    mal  --->  tal
+
+
+we assume that you know a hll.  from that, we can give you
+sal.  later in the semester, you will learn mal and tal.
+
+
+hll, sal, and mal are each abstractions.
+each defines a computer architecture.
+tal happens to be a real (manufactured) architecture.
+
+
+
+basic computer operation
+------------------------
+
+simplified diagram of a computer system (hardware!)
+
+     
+   -------             ----------
+   | cpu |  | memory |
+   -------      |      ----------
+                |
+                |
+             -------
+	     | i/o |
+             -------
+
+
+cpu -- controls the running of programs
+       executes instructions
+       makes requests of the memory
+memory -- where programs and program variables are stored
+	  handles requests from the cpu
+
+     (stored program computer concept)
+
+interaction between cpu and memory.
+    to execute an instruction, the cpu must be able to
+    request 3 things from memory:
+
+    1. instruction                     fetch
+    2. operand (variable) load         load
+    3. operand (variable) store        store
+
+
+    the memory really only needs to be able to do 2 operations
+
+    1. read   (fetch or load)
+    2. write  (store)
+
+
+    where?       a label specifies a unique place in memory.
+		 a label is often identified as an address.
+
+
+    read:   cpu specifies an address and a read operation
+	    memory responds with the contents of the address
+
+    write:  cpu specifies an address, data to be stored, and
+	    a write operation
+	    memory responds by overwriting the data at the
+	    address specified
+
+
+
+for discussion:   how (most) computers operate wrt the execution
+		  of instructions.
+
+
+     discussion by a generic assembly language instruction example:
+	    mult   a, b, c
+
+
+     instructions and operands are stored in memory.
+     before they can be used by the cpu, they must
+     be fetched/loaded
+
+     cpu steps involved:
+       1. fetch the instruction
+	  questions for later: which instruction, what address
+       2. figure out what the instruction is -- decode
+	  it is a mult instruction
+	  this also reveals how many operands there are, since
+	  the number of operands is fixed for any given instruction
+	  there are 3 operands
+       3. load operand(s)
+          operands are b and c
+       4. do the operation specified by the instruction
+	  multiply b and c together
+       5. store result(s) (if any)
+	  result goes into variable a
+
+     next step:
+     suppose we want to execute multiple instructions, like
+     a program
+
+     except for branch instructions, execute instructions sequentially
+
+     the cpu must keep track of which instruction is to be
+     executed
+
+     it does this by the use of an extra variable contained within
+     and maintained by the cpu, called a program counter, or pc
+     the contents of the variable is the address of the next
+     instruction to be executed.
+
+
+     modify the above cpu steps:
+       1.  fetch the instruction at the address given by the pc
+
+       added step.  modify the pc such that it contains the address of
+	       the next instruction to execute
+
+       2-5. the same as above
+
+
+  the added step could come at any time after step 1.  it is convenient
+  to think of it as step 2.
+
+  this set of steps works fine for all instructions except
+  branch instructions.  
+
+
+
+
+  branch instructions:
+       example:   beq x, y, label
+
+
+  1. fetch instruction -- address given by pc
+  2. update pc
+  3. decode
+     (its a beq instruction)
+  4. fetch operands (x and y)
+  5. compare operands (for equality)
+  6. if equal, overwrite pc with address implied by 3rd operand (label)
+
+
+
+the cpu steps involved:
+     1. fetch the instruction
+     2. update pc
+     3. decode
+     4. load operand(s)
+     5. do the operation specified by the instruction
+     6. store result(s) (if any)
+
+
+notice that this series of steps gets repeated constantly --
+to make the computer useful, all that is needed is a way
+to give the pc an initial value (the first instruction of a program),
+and to have a way of knowing when the program is done, so the
+pc can be given the starting address of another program.
+
+
+the cycle of steps is very important -- it forms the basis for
+understanding how a computer operates.  the cycle of steps
+is termed the instruction fetch/execute cycle.
+
+
+
+ lecture notes - chapter 1 - some basics.
+ lecture notes - chapter 1 - some basics.
+ lecture notes - chapter 1 - some basics.
+ lecture notes - chapter 1 - some basics.
+ lecture notes - chapter 1 - some basics.
+ lecture notes - chapter 1 - some basics.
+ lecture notes - chapter 1 - some basics.
+ lecture notes - chapter 1 - some basics.
+ lecture notes - chapter 1 - some basics.
+ lecture notes - chapter 1 - some basics.

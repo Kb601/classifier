@@ -1,0 +1,125 @@
+welcome to tom's home page 
+
+welcome to tom's home page
+
+
+thomas b. nelson ii
+
+michigan technological university
+
+computer science graduate student
+
+
+general information:
+
+office:         fisher 227c
+
+office phone:   487-2839
+
+office hours:   mwf 1-2pm
+
+
+
+current teaching duties:
+
+cs122 - introduction to computer science ii
+
+_______________________________________________________________
+
+
+final exam - review topics...
+
+
+chapt 1: pointers
+
+pointers ( operators *, &, ->, null )
+arrays ( implementation as pointers, and the [] operator )
+character strings - arrays of characters ( null terminator )
+structures ( almost same as classes )
+
+chapt 2: classes
+
+constructors, destructors, copy constructors & the defaults
+operator overloading - istream, ostream, friends, 'this' pointer
+
+chapt 3: templates
+
+global template functions
+template classes
+instantiation, and binding
+
+chapt 4: inheritance
+
+public vs. private
+has-a relationship, also composition
+public, private, and protected member status
+multiple inheritance
+constructors, destructors, copy constructors, and operators in inheritance
+
+chapt 5: algorithm analysis
+
+what is algorithm analysis?
+big oh notation
+now the commen big oh classes, i.e. linear, logarithmic, cubic, et cetera
+
+chapt 6: data structures
+
+
+know the appropriate operations, and their order, for the following data structures:
+
+stacks
+queues
+priority queues
+linked lists
+binary trees ( and general trees )
+hash tables
+
+chapt 7: recursion
+
+
+two rules:
+
+1 - have a base case, solvable w/out recursion
+2 - make progress towards the base case ( beware of cicular logic )
+
+
+note: this is a rough list of review topics.  i may have forgotten some topics so it's a good idea to check the syllabus and review the text.
+
+
+_______________________________________________________________
+
+
+below are some useful links...
+
+hear more about the
+ world wide web 
+visit the
+ cs dept. home page
+review the
+computer use policy
+find out how to 
+customize your own home page
+go to the
+ cs122  page.
+go to the gamma chi chapter of
+sigma tau gamma 's home page.
+
+
+
+note: if you are using mosaic you may click on the colored or underlined words, 
+if you are using lynx enter the number following the selection.
+
+
+
+-->
+
+ welcome to tom's home page 
+ welcome to tom's home page 
+ welcome to tom's home page 
+ welcome to tom's home page 
+ welcome to tom's home page 
+ welcome to tom's home page 
+ welcome to tom's home page 
+ welcome to tom's home page 
+ welcome to tom's home page 
+ welcome to tom's home page

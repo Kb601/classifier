@@ -1,0 +1,96 @@
+images inspired by chihuly glass
+
+
+
+
+
+ 
+	images inspired by chihuly glass 
+
+
+	by adam finkelstein
+
+
+
+
+dale chihuly
+is a seattle-based artist who works primarily in glass.
+he is a pioneer in this art form and has received worldwide attention
+for his work.  i had the pleasure viewing a large body of his glass
+at his installation in the seattle art museum in 1992.  there are no
+words to describe the beauty of his glass.  let it suffice to say that
+the computer-generated images below were inspired by chihuly glass,
+but they have a long way to go....
+
+
+
+
+
+	
+
+
+
+
+this is my first attempt at modeling something glass-like.  i used
+john snyder's generative modeling system to create the geometry.
+the base and outer rim are splines which were created by randomly
+perturbing the control points away from a circle.  the colors are
+simple spirals of blue and green paint.  i used john snyder's ray
+tracer to create the image from the geometry.
+
+despite its similarity to an ashtray from the 70's, i am quite pleased
+with most the image.  unfortunately, the shadow is too crisp; it
+exhibits none of the light focusing and spreading that would occur if
+light were sent through a real glass dish of that shape.  that led
+me to the next image:
+
+
+
+
+
+	
+
+
+
+
+i looked through some books on chiluly's art and found that in quite a
+few photographs, his glass is shown on a black, highly-reflective table.
+needless to say, it is a dramatic effect.  but more importantly, none of
+the complicated focusing effects appear in the shadow on the table, 
+because there is no shadow on the table -- just a reflection of the glass.
+
+so in the image above, i placed the glass on a highly reflective table.
+since such a table does not send light up to the glass (except in the 
+mirror direction from the lights) the glass would naturally appear too
+dark.  so i made the ``painted'' areas on the glass emit light, giving
+the work a slightly neon-esque effect.  people tell me it comes across
+as ``dramatic lighting'' so i'm happy with it.
+
+
+
+
+	
+
+
+
+this is a work in progress.  i am trying to figure out how to render
+these things in greg ward's radiance package.
+
+
+ 
+	
+	
+
+
+
+
+images inspired by chihuly glass
+images inspired by chihuly glass
+images inspired by chihuly glass
+images inspired by chihuly glass
+images inspired by chihuly glass
+images inspired by chihuly glass
+images inspired by chihuly glass
+images inspired by chihuly glass
+images inspired by chihuly glass
+images inspired by chihuly glass

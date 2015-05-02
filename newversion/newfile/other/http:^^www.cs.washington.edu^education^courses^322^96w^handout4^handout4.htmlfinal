@@ -1,0 +1,77 @@
+the halting problem
+
+
+
+
+
+
+
+                 
+ next:    about this document 
+  
+
+the halting problem
+
+
+
+the halting problem is defined to be:
+
+input: turing machine m and binary input x,
+
+property: m halts on input x.
+
+
+ theorem: the halting problem is undecidable.
+
+ proof:  the proof is by contradiction.  
+suppose that the halting problem is decidable.
+then there must be a turing machine h with the
+property that h halts on all inputs, and accepts  if and only if 
+m halts on input x.
+(recall that  is the binary representation of the turing machine m.)
+
+we define a new turing machine d which does the following on inputs of
+the form .
+
+copy the input  to form the string .
+
+run h on the input .
+
+if h halts without accepting then d halts.
+
+if h halts and accepts then d simply loops forever.
+
+
+there are two possibilities, d halts on input  or d does
+not halt on input .
+we will come to a contradiction in both cases.
+
+if  d halts on input , then by the definition of h,
+h accepts
+.  by the definition of d, d does not halt on input .
+
+if  d does not halt on input , then by the definition of h,
+h halts on input  without accepting.  
+by the definition of d, d halts on input .
+
+ 
+ 
+    about this document ... 
+
+ 
+
+james fix 
+tue mar 12 11:18:16 pst 1996
+
+
+
+the halting problem
+the halting problem
+the halting problem
+the halting problem
+the halting problem
+the halting problem
+the halting problem
+the halting problem
+the halting problem
+the halting problem

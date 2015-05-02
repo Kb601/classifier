@@ -1,0 +1,90 @@
+feature-based algorithms for detecting and classifying scene breaks
+
+
+
+
+
+feature-based algorithms for detecting and classifying scene breaks
+
+
+
+
+ramin zabih
+
+justin miller
+kevin mai
+
+
+
+abstract
+
+
+we describe a new approach to the detection and classification of scene breaks
+in video sequences.  our methods can detect and classify a variety of scene
+breaks, including cuts, fades, dissolves and wipes, even in sequences
+involving significant motion.  we use a feature-based approach, and detect the
+appearance of intensity edges far from previous edges.  a global motion
+computation is used to handle camera or object motion.  the algorithms we
+propose withstand compression artifacts such as those introduced by jpeg and
+mpeg, even at very high compression rates.  experimental evidence demonstrates
+that our method can detect and classify scene breaks that are difficult to
+detect with conventional approaches.  an initial implementation runs at about
+2 frames per second on a sun workstation.
+
+
+if you wish to view the paper, you can choose from two options:
+
+html
+the paper that will appear in the 1995 acm multimedia conference.
+also available in
+postscript form.
+
+
+postscript
+the rather large (4.5 mb!) postscript paper submitted to ieee pami.  
+note: some printers have trouble printing this out.  if you send us
+email we will send you a hardcopy.
+
+
+
+in addition, rob szewczyk
+has built an mpeg browser, which 
+uses our algorithm to detect scene breaks.  it allows a user to search
+for a variety of scene breaks, in combination with motion.
+for instance, it is possible to skip forward to the next time a left
+pan is followed by a dissolve.
+
+
+source code  for the browser and the algorithm are available on an
+"as is" basis.  in addition, there is a 
+
+binary version of the browser compiled under sunos.
+
+
+
+
+rdz@cs.cornell.edu
+mon jul 10 19:37:03 edt 1995
+
+
+
+
+feature-based algorithms for detecting and classifying scene breaks
+
+feature-based algorithms for detecting and classifying scene breaks
+
+feature-based algorithms for detecting and classifying scene breaks
+
+feature-based algorithms for detecting and classifying scene breaks
+
+feature-based algorithms for detecting and classifying scene breaks
+
+feature-based algorithms for detecting and classifying scene breaks
+
+feature-based algorithms for detecting and classifying scene breaks
+
+feature-based algorithms for detecting and classifying scene breaks
+
+feature-based algorithms for detecting and classifying scene breaks
+
+feature-based algorithms for detecting and classifying scene breaks

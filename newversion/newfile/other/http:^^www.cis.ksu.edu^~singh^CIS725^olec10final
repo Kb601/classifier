@@ -1,0 +1,10 @@
+< distance_i
+		     then  distance_i = x + weight(i,j); parent_i := j
+		           send m(distance_i) to all neighbors except j
+    od
+
+
+
+
+ 
+problems: number of messages

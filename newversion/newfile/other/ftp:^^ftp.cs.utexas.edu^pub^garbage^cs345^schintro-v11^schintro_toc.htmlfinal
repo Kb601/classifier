@@ -1,0 +1,435 @@
+an introduction to scheme and its implementation - table of contents
+
+
+an introduction to scheme and its implementation
+
+
+overview
+
+scheme: a small but powerful language
+who is this book for?
+why scheme?
+why scheme now?
+what this book is not
+structure of this book
+
+introduction
+
+what is scheme? (hunk a)
+basic scheme features
+
+code consists of expressions
+
+parenthesized prefix expressions
+expressions return values, but may have side-effects
+defining variables and procedures
+most operators are procedures
+definitions vs. assignments
+special forms
+control structures are expressions
+
+the boolean values #t and #f
+some other control-flow constructs: cond, and, and or
+
+cond
+and and or
+
+comments (hunk c)
+a note about parentheses and indenting
+
+let your editor help you
+indenting procedure calls and simple control constructs
+indenting cond
+indenting procedure definitions
+
+all values are pointers to objects
+
+all values are pointers
+implementations optimize away pointers
+objects on the heap
+
+scheme reclaims memory automatically
+objects have types, variables don't
+
+dynamic typing
+
+the empty list (hunk e)
+
+pairs and lists
+
+cdr-linked lists
+lists and quoting
+where the empty list got its name
+
+recursion over lists and other data structures
+type and equality predicates (hunk g)
+
+type predicates
+equality predicates
+choosing equality predicates  (hunk i)
+
+quoting and literals
+
+simple literals and self-evaluation
+
+local variables and lexical scope
+
+let
+
+indenting let expressions
+
+lexical scope
+
+binding environments and binding contours
+block structure diagrams for lets
+
+let*
+
+procedures (hunk k)
+
+procedures are first class
+higher-order procedures
+anonymous procedures and lambda
+lambda and lexical scope (hunk m)
+local definitions
+recursive local procedures and letrec
+multiple defines are like a letrec
+variable arity: procedures that take a variable number of arguments
+apply
+
+variable binding again
+
+identifiers and variables
+variables vs. bindings vs. values
+
+tail recursion (hunk o)
+macros
+continuations
+iteration constructs
+discussion and review
+
+using scheme (a tutorial)
+
+an interactive programming environment  (hunk b)
+
+starting scheme
+making mistakes and recovering from them
+returns and parentheses
+interrupting scheme
+exiting (quitting) scheme
+trying out more expressions
+booleans and conditionals
+sequencing
+other flow-of-control structures
+
+using cond
+using and and or
+
+making some objects (hunk d)
+lists (hunk f)
+
+using predicates (hunk h)
+
+using type predicates
+using equality predicates
+
+local variables, let, and lexical scope (hunk j)
+using first-class, higher-order, and anonymous procedures (hunk l)
+
+first-class procedures
+using and writing higher-order procedures
+
+interactively changing a program (hunk n)
+
+replacing procedure values
+loading code from a file
+loading and running whole programs
+
+some other useful data types
+
+strings
+symbols
+
+a note on identifiers
+
+lists again
+
+heterogeneous lists
+operations on lists
+
+
+basic programming examples (hunk p)
+
+an error signaling routine
+length
+copying lists
+append and reverse
+
+append
+reverse
+
+map and for-each
+
+map
+for-each
+
+member and assoc, and friends
+
+member, memq, and memv
+assoc, assq, and assv
+
+
+procedural abstraction
+
+procedure specialization
+procedure composition
+currying
+
+discussion and review
+
+writing an interpreter
+
+interpretation and compilation
+implementing a simple interpreter
+
+the read-eval-print loop
+the reader
+
+implementing read
+implementing read-list
+comments on the reader
+
+recursive evaluation
+a note on snarfing and bootstrapping
+
+snarfing
+bootstrapping and cross-compiling
+
+improving the simple interpreter
+
+discussion and review
+
+environments and procedures
+
+understanding let and lambda
+
+let
+lambda
+
+define and lambda
+currying
+procedures are closures
+
+
+lambda is cheap, and closures are fast
+an interpreter with let and lambda
+
+nested environments and recursive evaluation
+integrated, extensible treatment of special forms
+interpreting let
+variable references and set!
+interpreting lambda and procedure calling
+
+mutual recursion between eval and apply
+
+
+variants of let: letrec and let*
+
+understanding letrec
+
+using letrec and lambda to implement modules
+
+let*
+
+iteration constructs
+
+named let
+
+programming with procedures and environments
+do
+exercises
+
+recursion in scheme
+
+subproblems and reductions (non-tail and tail calls)
+the continuation chain
+exploiting tail recursion
+
+passing intermediate values as arguments
+
+summing a list
+implementing length tail-recursively
+
+reduce
+
+
+quasiquotation and macros
+
+quasiquote
+
+unquote-splicing
+
+defining new special forms
+
+macros vs. procedures
+
+implementing more scheme special forms
+
+let
+let*
+cond
+discussion
+
+lisp-style macros
+
+ultra-simple lispish macros
+
+better lisp-style macros
+problems with lisp-style macros
+ugly hacks around name conflicts
+
+
+implementing simple macros and quasiquote
+
+implementing simple macros
+implementing quasiquote and unquote
+
+translating backquotes to quasiquote
+quasiquote
+define-rewriter
+define-macro
+
+
+procedural macros vs. template-filling macros
+programming examples using macros
+
+records and object orientation
+
+records
+
+data abstraction
+implementing records
+
+objects
+
+object orientation
+implementing a simple object system
+
+generic functions and dynamic dispatch
+inheritance
+
+
+
+other useful features
+
+special forms
+input-output facilities
+
+read and write
+display
+ports
+with-input-\dots{} forms
+
+useful types and associated procedures
+
+numeric types
+
+floating-point numbers
+arbitrary-precision integers
+ratios
+coercions and exactness
+
+vectors
+strings and characters
+
+
+call-with-current-continuation
+
+implementing a better read-eval-print loop
+implementing catch and throw
+implementing backtracking
+implementing coroutines
+implementing cooperative multitasking
+caveats about call-with-current-continuation
+
+a simple scheme compiler
+
+what is a compiler?
+
+what is an interpreter?
+ok, so what's a compiler?
+
+what does a compiler generate?
+basic structure of the compiler
+data representations, calling convention, etc.
+
+the registers
+the evaluation stack (or eval stack, for short)
+the continuation chain
+environments
+closure representation and calling
+
+continuations
+
+applying a procedure doesn't save the caller's state
+continuation saving
+an example
+generating unique labels
+
+more on representations of environments
+compiling code for literals
+compiling code for top-level variable references
+precomputing local variable lookups using lexical scope
+
+lexical addressing and compile-time environments
+a detailed example
+
+preserving tail-recursiveness using compile-time continuations
+
+when should we save continuations?
+
+compiling returns
+
+
+compiling top-level expressions
+compiling lambda expressions inside procedures
+compiling top-level definitions
+interfacing to the runtime system
+
+garbage collection
+
+safe points
+gc at any time
+
+interrupts
+
+advanced compiler and runtime system techniques
+
+inlining small procedures
+type declarations and type analysis
+using more hardware registers
+closure analysis
+register allocating loop variables for loops
+conventional optimizations
+stack caches
+
+
+concept index
+
+
+this document was generated on 30 october 1996 using the
+texi2html
+translator version 1.45.
+
+
+
+an introduction to scheme and its implementation - table of contents
+an introduction to scheme and its implementation - table of contents
+an introduction to scheme and its implementation - table of contents
+an introduction to scheme and its implementation - table of contents
+an introduction to scheme and its implementation - table of contents
+an introduction to scheme and its implementation - table of contents
+an introduction to scheme and its implementation - table of contents
+an introduction to scheme and its implementation - table of contents
+an introduction to scheme and its implementation - table of contents
+an introduction to scheme and its implementation - table of contents

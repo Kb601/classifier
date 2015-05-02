@@ -1,0 +1,204 @@
+home page of lydia e. kavraki 
+
+
+
+
+	home page of lydia e. kavraki
+
+
+ 
+
+
+
+
+
+
+  lydia e. kavraki, assistant professor  
+ rice university 
+ department of computer science, ms 132 
+ 6100 main street  
+ houston, tx 77005  
+ office:   (713) 737-5737 
+ fax: (713) 285-5930 
+kavraki@cs.rice.edu 
+ 
+
+
+ 
+
+
+   research interests   
+
+robotics and artificial intelligence
+with emphasis on designing algorithms, analysis tools, and 
+environments to support the solution of complex high-dimensional
+problems governed by physical laws.  
+
+applications in  molecular biology (computer-aided
+pharmaceutical drug design), and medicine (robot-assisted surgery). 
+
+
+
+
+  teaching  
+
+spring 1997:  algorithmic robotics 
+
+
+ 
+
+
+ selected publications: 
+
+
+
+ motion planning, robotics, and randomized search 
+
+
+
+ 
+
+
+
+ l. kavraki and j.-c. latombe,  randomized 
+preprocessing of configuration space
+for fast path planning, in the proceedings of the international
+conference on robotics and automation, san diego, ca, 2138-2139, 1994.
+
+ l. kavraki, p. svestka, j.-c. latombe, and m. overmars,  
+
+probabilistic roadmaps for path planning in high dimensional
+configuration spaces, 
+ieee transactions on robotics and automation, 12(4), 1996, 566-580.
+(also available as stanford-cs-tr-94-1519.)
+
+
+ l. kavraki, j.-c. latombe, r. motwani, and p. raghavan,
+ randomized query processing in robot motion planning
+ proceedings of the 27th annual acm symposium on
+theory of computing (stoc), las vegas, nv, 1995,
+353-362.
+
+ l. kavraki, m. kolountzakis, and j.-c. latombe, 
+ analysis of probabilistic networks for path planning
+proceedings of the international
+conference on robotics and automation, minneapolis, mn, 1996. 
+
+ l. kavraki, j.-c. latombe, 
+randomized preprocessing of configuration space for
+path planning: articulated robots,
+ proceedings of the ieee/rsj/gi international conference on
+intelligent robots and systems (iros) , munchen, germany,
+1994, 1764-1771.
+
+ b. barraquand, l. kavraki, j.-c. latombe, t.-y. li, r. motwani, and p.
+raghavan, 
+a random sampling scheme for robot path planning,
+proc. of the 7th international symposium on robotics research,
+g.~giralt and g.~hirzinger (eds.), springer, new york, ny, 1996,
+249-264.
+
+ l. kavraki,  computation of configuration space obstacles
+using the fast fourier transform 
+ieee transactions on robotics and automation, 
+11(3), 1995, 408-413.
+
+
+
+
+ note: a simplified version of prm (probabilistic roadmap planner)
+described in the first paper above can be obtained by anonymous ftp from:
+flamingo.stanford.edu/pub/kavraki/prm.tar.gz
+
+
+
+ molecular biology and medical applications  
+
+
+ 
+
+
+
+ p. finn, d. halperin, l. kavraki, j.-c. latombe, r. motwani, c. shelton and 
+s. venkat,  geometric manipulation of flexible
+ligands  proceedings of the acm workshop on applied computational
+geometry philadelphia, may 1996. 
+
+ a. schweikard, r. tombropoulos, l. kavraki, j. adler, and j.-c. latombe,
+
+treatment planning for a radiosurgical system with
+general kinematics
+ proceedings of the ieee international
+conference on robotics and automation
+san diego, ca, 1994, 1720-1727.
+
+
+
+
+
+ part orientation and manufacturing 
+
+
+
+ l. kavraki,  on the number
+of equilibrium placements of mass distributions in elliptic 
+potential fields, stanford technical report. cs-tr-95-1559.
+
+ l. kavraki, j.-c. latombe, and r.h. wilson,  on the 
+complexity  of assembly partitioning, in   information 
+processing letters , 
+v 48(5), 1993, 229-235.
+
+ r.h. wilson, l. kavraki, j.-c. latombe, and t. lozano-p&eacute;rez, 
+ two-handed assembly sequencing, 
+international journal of robotics research, 
+14(4), 1995, 335-350.
+
+ l. kavraki, m.n. kolountzakis, 
+ 
+``partitioning an assembly into connected parts is np-hard'' 
+ information processing letters, 55, 1995, 159-165.
+
+
+
+
+
+ thesis 
+random networks in configuration space for fast path
+planning, technical report stan-cs-tr-95-1535,
+stanford university, january 1995. can be obtained by anonymous 
+ftp from flamingo.stanford.edu/pub/kavraki. 
+
+
+
+
+
+
+
+
+
+last updated 10/30/96 
+
+kavraki@cs.rice.edu
+
+
+
+
+
+
+
+
+
+
+
+
+ home page of lydia e. kavraki 
+ home page of lydia e. kavraki 
+ home page of lydia e. kavraki 
+ home page of lydia e. kavraki 
+ home page of lydia e. kavraki 
+ home page of lydia e. kavraki 
+ home page of lydia e. kavraki 
+ home page of lydia e. kavraki 
+ home page of lydia e. kavraki 
+ home page of lydia e. kavraki

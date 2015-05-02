@@ -1,0 +1,156 @@
+john c. mallery
+
+
+
+
+ yosemite valley
+
+[the nose on el capitan topo +
+beta | big wall | climbing magazine | rock climbing |
+rock &amp; ice | areas, rock, mountain |
+gyms
+| gear | guides | yosemite
+national park + photos + map]
+
+
+
+ john c. mallery
+
+is a research scientist directing the intelligent
+information infrastructure project (demos), but
+who is basically having fun hacking computational politics at the national
+and international level. his research areas span intelligent email routing,
+automatic form processing, distributed hypermedia, document categorization and
+routing, learning if-then rules on non-rectangular data, distributed data
+integration, knowledge representation, reference, analogy, sentence
+generation, natural language understanding.... and related fields.
+
+
+
+ current
+research: involves integrating, documenting, and deepening these systems as part of a three-year
+project aimed at developing tools for an intelligent infostructure, which
+special emphasis on the white house and the congress.
+
+  wish
+list: a knowledge-based operating system running on a mimd parallel
+machine.  the system should exceed the productivity of the lisp machine by
+several orders of magnitude and integrate seamlessly with a global knowledge
+base and with a global computational environment.
+
+
+funding: looking for a few motivated lisp hackers who are ready to work
+hard and win big on incredibly cool technology
+with mind boggling implications.
+
+
+
+
+
+artificial intelligence laboratory
+massachusetts institute of technology
+545 technology square, ne43-797
+cambridge, massachusetts 02139-4301
+  voice: (617) 253-5966
+    fax: (617) 253-5060
+  email: jcma@ai.mit.edu
+
+
+
+major lisp systems
+
+
+
+ relatus natural language system: an
+environment for parsing and representing texts that has built referentially
+integrated representations for text up to 600 pages
+in length.   the implementation runs the full cycle from parsing through
+representation back through generation. the emphasis is on a new
+constructivist, interpretive approach to
+perception and meaning.
+
+  communications linker system: a
+form-based system for automatically processing email (and now www) requests.
+also, serves a content-based routing system for documents and an automatic
+survey system. it has been applied in a hierarchical, adaptive
+survey of over 1600 respondents from 30 or so countries was conducted to
+ascertain the usage of white
+house electronic publications. it was generalized into wide-area
+collaboration system for the vice president's
+open meeting on the national performance review.
+
+  the feature vector editor and i2d rule
+learner: an object-oriented system for manipulating and analyzing
+data.  the i2d rule learner operates within this framework and has learned
+several hundred pages of empirically interesting rules on the history of
+international conflict since 1945.
+
+ common
+lisp hypermedia server: this fully object-oriented server makes it
+easy for ai researchers to interface complex systems to the world-wide web and
+reap the benefits of rapid prototyping in lisp for hypermedia applications.
+
+
+
+selected writings
+
+
+
+ ``the
+open meeting: a web-based system for conferencing and collaboration,''
+with r. hurwitz, proceedings of the fourth international conference on the
+world-wide web, boston: mit, december 12, 1995.
+
+``a common
+lisp hypermedia server,'' proceedings
+of the first international conference on the
+world-wide web, geneva: cern, may
+25, 1994.
+
+``beyond
+correlation: bringing artificial intelligence to event data,'' 
+international interactions, 1994, 20 (1-2): 101-145. postscript.
+
+ ``semantic
+content analysis: a new methodology for the relatus natural language
+environment,'' in artificial intelligence and international
+politics, v. hudson, ed., boulder: westview press, 1991. postscript.
+
+
+thinking about foreign policy: finding an appropriate role for artificially
+intelligent computers, cambridge: master's thesis, m.i.t.  political science
+department, 1988.  also, presented at  the 1988 annual meeting of the
+international studies association, st. louis, missouri, 1988. 
+postscript
+
+  ``hermeneutics,''
+with r. hurwitz and g.  duffy, the encyclopedia of artificial
+intelligence, new york: john wiley & sons, 1987. postscript.
+
+
+
+
+selected pointers on computational politics
+
+
+
+daniel
+k. schneider, modelisation
+de la demarche du decideur politique dans la perspective de l'intelligence
+artificielle, geneva: doctoral thesis, department of political
+science, university of geneva, 1994.
+
+
+
+
+
+john c. mallery
+john c. mallery
+john c. mallery
+john c. mallery
+john c. mallery
+john c. mallery
+john c. mallery
+john c. mallery
+john c. mallery
+john c. mallery

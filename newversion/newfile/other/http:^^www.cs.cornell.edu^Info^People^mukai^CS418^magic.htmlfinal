@@ -1,0 +1,62 @@
+white paper - cs418 final project
+
+cs418 final project
+the magic
+nobuhiko mukai
+cornell, cs418
+copyright 1996
+
+
+
+ animation 
+
+ 1. story 
+this animation tells a magic story, where a funny man appears. 
+he gets on an airplane and takes off. during the flight, he flies 
+over a mountainous area and drops a ball into a body of water, 
+which causes a wave.
+then, he flies near a clock tower and his airplane explodes.
+however, when we look at the clock tower, the clock disk opens 
+and he appears inside of the clock tower.
+
+2. technique 
+a. physics-based animation
+the ball falling and water wave are animated using physical 
+description. euler integrator is used for the falling ball
+and verlet integrator is used for the water wave.
+b. scientific visualization
+the mountain and cloud are made by random function and
+the color of the mountain is mapped according to the height.
+the river color is mapped according to the magnitude of the
+gradient and trees are made by cones.
+c. texture mapping
+the title flag is made by texture mapping. a two dimensional 
+image is used and changed to simulate the waving flag.
+d. volume texture mapping
+the two tone color of the airplane is made by volume texture 
+mapping.
+e. bump mapping
+in order to simulate a real lawn, bump mapping is used.
+the normals of the lawn is changed a little bit by random
+function.
+f. image techniques
+in the second scene, the first scene image fades out and
+the second scene image fades in gradually.
+g. fire work
+in order to simulate the bomb explosion, bomb size and color
+are changed as time passes.
+
+
+
+
+
+ white paper - cs418 final project
+ white paper - cs418 final project
+ white paper - cs418 final project
+ white paper - cs418 final project
+ white paper - cs418 final project
+ white paper - cs418 final project
+ white paper - cs418 final project
+ white paper - cs418 final project
+ white paper - cs418 final project
+ white paper - cs418 final project
