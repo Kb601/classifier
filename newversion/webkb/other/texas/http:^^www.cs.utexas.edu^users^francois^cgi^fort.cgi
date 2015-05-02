@@ -18,32 +18,13 @@ BACKGROUND="http://www.cs.utexas.edu/users/francois/ghoul.jpg">
 <h3><b></h3></b>
 <br><br><br><br></BODY></HTML>
 
-
-Today's Fortune cookie
-
-
-Today's Fortune cookie
-
-
-Today's Fortune cookie
-
-
-Today's Fortune cookie
-
-
-Today's Fortune cookie
-
-
-Today's Fortune cookie
-
-
-Today's Fortune cookie
-
-
-Today's Fortune cookie
-
-
-Today's Fortune cookie
-
-
-Today's Fortune cookie
+ Today 's Fortune cookie
+ Today 's Fortune cookie
+ Today 's Fortune cookie
+ Today 's Fortune cookie
+ Today 's Fortune cookie
+ Today 's Fortune cookie
+ Today 's Fortune cookie
+ Today 's Fortune cookie
+ Today 's Fortune cookie
+ Today 's Fortune cookie

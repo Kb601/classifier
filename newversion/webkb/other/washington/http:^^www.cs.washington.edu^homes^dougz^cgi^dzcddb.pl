@@ -233,13 +233,13 @@ Doug Zongker <a href="mailto:dougz@cs.washington.edu">(dougz@cs.washington.edu)<
 
 
 
-Doug's CD database
-Doug's CD database
-Doug's CD database
-Doug's CD database
-Doug's CD database
-Doug's CD database
-Doug's CD database
-Doug's CD database
-Doug's CD database
-Doug's CD database
+ PERSON 's CD database
+ PERSON 's CD database
+ PERSON 's CD database
+ PERSON 's CD database
+ PERSON 's CD database
+ PERSON 's CD database
+ PERSON 's CD database
+ PERSON 's CD database
+ PERSON 's CD database
+ PERSON 's CD database

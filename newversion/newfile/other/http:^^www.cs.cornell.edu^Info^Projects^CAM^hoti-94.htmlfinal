@@ -373,23 +373,13 @@ ssam              s
 [12]  thinking machines corporation, cambridge, massachusetts. connection machine cm-5, technical summary, november 1992.
 footnotes(1)the term cluster is used here to refer to collections of workstation-class machines interconnected by a low-latency high-bandwidth network.(2)this paper focuses exclusively on scalable multiprocessor architectures and specifically excludes bus-based shared-memory multiprocessors.(3)current atm switches have latencies about an order of magnitude higher than comparable multiprocessor networks, however, this difference does not seem to be inherent in atm networks, at least not for local area switches.(4)a discussion of differences in fault isolation characteristics is beyond the scope of this paper.(5)although some transmission media may cause burst errors which are beyond the correction capabilities of most crc codes.(6)cache coherent shared memory stretch this characterization given that the cache in the receiving node essentially performs another address translation which may miss and require additional communication with other nodes to complete the request.(7)all bandwidths are measured in megabytes per second.(8)the kernel write-protects the trap vectors after boot-up. the ssam prototype uses a permanently loaded trap which performs an indirect jump via a kernel variable to allow simple dynamic driver loading.(9)note that in a more realistic setting a fore asx-100 switch will add roughly 10us of latency to the write time and 20us to the round-trip read time [7].(10)one could easily describe the traps employed by ssam as additional emulated communication instructions. 
 
-low-latency communication over atm networks
-using active messages
-low-latency communication over atm networks
-using active messages
-low-latency communication over atm networks
-using active messages
-low-latency communication over atm networks
-using active messages
-low-latency communication over atm networks
-using active messages
-low-latency communication over atm networks
-using active messages
-low-latency communication over atm networks
-using active messages
-low-latency communication over atm networks
-using active messages
-low-latency communication over atm networks
-using active messages
-low-latency communication over atm networks
-using active messages
+ low-latency communication over atm networks using person person
+ low-latency communication over atm networks using person person
+ low-latency communication over atm networks using person person
+ low-latency communication over atm networks using person person
+ low-latency communication over atm networks using person person
+ low-latency communication over atm networks using person person
+ low-latency communication over atm networks using person person
+ low-latency communication over atm networks using person person
+ low-latency communication over atm networks using person person
+ low-latency communication over atm networks using person person

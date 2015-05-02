@@ -98,13 +98,13 @@ Visitors: 4930 since 10/04/96
 </form>
 <p><!WA7><img src="http://wyrm.adp.wisc.edu/icons/lines/clouds_line.gif"> 
 
-WyrmWeather
-WyrmWeather
-WyrmWeather
-WyrmWeather
-WyrmWeather
-WyrmWeather
-WyrmWeather
-WyrmWeather
-WyrmWeather
-WyrmWeather
+ WyrmWeather
+ WyrmWeather
+ WyrmWeather
+ WyrmWeather
+ WyrmWeather
+ WyrmWeather
+ WyrmWeather
+ WyrmWeather
+ WyrmWeather
+ WyrmWeather

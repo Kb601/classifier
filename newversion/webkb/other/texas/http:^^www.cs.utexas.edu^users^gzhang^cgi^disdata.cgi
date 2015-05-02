@@ -17,13 +17,13 @@ Content-Length: 386
         Enter keywords, then<input type=submit> or <input type=reset></body>
 </html>
 
-It is a perl test
-It is a perl test
-It is a perl test
-It is a perl test
-It is a perl test
-It is a perl test
-It is a perl test
-It is a perl test
-It is a perl test
-It is a perl test
+ It is a perl test
+ It is a perl test
+ It is a perl test
+ It is a perl test
+ It is a perl test
+ It is a perl test
+ It is a perl test
+ It is a perl test
+ It is a perl test
+ It is a perl test

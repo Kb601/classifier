@@ -86,13 +86,13 @@ approaches will be investigated for visualizing the processes of various string 
 project 5: parallelization of global optimization software (ronald van iwaarden)
 professor van iwaarden has developed a global optimization software package called vergo. it solves global optimization problems using interval arithmetic and automatic differentiation. this project will develop a version of vergo using mpi and pvm. both of these versions will be tested on a network of sun workstations to evaluate the efficiency of the different parallel implementations when running on either a single, multiple cpu machine or on many single cpu machines. 
 
-hope 1997 reu information
-hope 1997 reu information
-hope 1997 reu information
-hope 1997 reu information
-hope 1997 reu information
-hope 1997 reu information
-hope 1997 reu information
-hope 1997 reu information
-hope 1997 reu information
-hope 1997 reu information
+ hope 1997 reu information
+ hope 1997 reu information
+ hope 1997 reu information
+ hope 1997 reu information
+ hope 1997 reu information
+ hope 1997 reu information
+ hope 1997 reu information
+ hope 1997 reu information
+ hope 1997 reu information
+ hope 1997 reu information

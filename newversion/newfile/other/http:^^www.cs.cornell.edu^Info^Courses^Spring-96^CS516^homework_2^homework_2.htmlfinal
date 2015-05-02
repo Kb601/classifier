@@ -82,13 +82,13 @@ to mean the temperature of the i-th segment after n time steps.  we may approxim
   for 2.2 and 2.3, produce snapshots of your simulation for the three shapes defined above, with t=0, t=ft/4, t=(3/4)*ft, and t=ft (ft is the final time). for each shape, make sure you use the same grid size, time step, and ft for both the sequential and parallel simulation. please provide us with the url to a web page with the snapshots (with enough annotations so that we know which plot corresponds to which case). color printouts are strictly forbidden.
 
 
-homework 2
-homework 2
-homework 2
-homework 2
-homework 2
-homework 2
-homework 2
-homework 2
-homework 2
-homework 2
+ homework 2
+ homework 2
+ homework 2
+ homework 2
+ homework 2
+ homework 2
+ homework 2
+ homework 2
+ homework 2
+ homework 2

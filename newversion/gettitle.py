@@ -5,7 +5,7 @@
 import os
 import string
 from bs4 import BeautifulSoup
-#from nltk.tag.stanford import NERTagger
+import nltk
 
 
 def removeDsStore(path):
@@ -36,7 +36,6 @@ if __name__ == '__main__':
 	allwordsDict = dict()
 	onefileDict = dict()
 	filesDict = dict()
-	#st = NERTagger('/Users/Tony/Desktop/NLP/stanford-ner-2015-01-30/classifiers/english.all.3class.distsim.crf.ser.gz','/Users/Tony/Desktop/NLP/stanford-ner-2015-01-30/stanford-ner-3.5.1.jar')
 	# merge the main word dict with next one file dict
 	for fl in fileList:
 		print fl
@@ -60,8 +59,26 @@ if __name__ == '__main__':
 				newres += " PERSON"
 			else:
 				newres = newres + " " + str(res[0][i][0])
-		'''
+		
 		newres = title
+		'''
+		if title == None:
+			continue
+		s2=nltk.word_tokenize(title)
+		s3=nltk.pos_tag(s2)
+		s4 = nltk.ne_chunk(s3)
+		print s4
+		length = len(s4.pos())
+		newres=""
+		for i in range(length):
+			tmp = s4.pos()
+			print tmp
+			if(tmp[i][1]=="PERSON"):
+				newres += " PERSON"
+			else:
+				newres = newres + " " + tmp[i][0][0]
+		
+
 		if newres == None:
 			continue
 		with open(fl, 'a') as f:

@@ -92,13 +92,13 @@ Last updated September 1, 1996
 </BODY>
 </HTML>
 
-Texas Republican Convention 1996
-Texas Republican Convention 1996
-Texas Republican Convention 1996
-Texas Republican Convention 1996
-Texas Republican Convention 1996
-Texas Republican Convention 1996
-Texas Republican Convention 1996
-Texas Republican Convention 1996
-Texas Republican Convention 1996
-Texas Republican Convention 1996
+ Texas Republican Convention 1996
+ Texas Republican Convention 1996
+ Texas Republican Convention 1996
+ Texas Republican Convention 1996
+ Texas Republican Convention 1996
+ Texas Republican Convention 1996
+ Texas Republican Convention 1996
+ Texas Republican Convention 1996
+ Texas Republican Convention 1996
+ Texas Republican Convention 1996

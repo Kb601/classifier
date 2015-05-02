@@ -81,13 +81,13 @@ where  filename  is the name of the .dvi file.  if you don't have
 	dvips -p printername filename  
 
 
-tex
-tex
-tex
-tex
-tex
-tex
-tex
-tex
-tex
-tex
+ tex
+ tex
+ tex
+ tex
+ tex
+ tex
+ tex
+ tex
+ tex
+ tex
