@@ -77,7 +77,7 @@ if __name__ == '__main__':
 				newres += " PERSON"
 			else:
 				newres = newres + " " + tmp[i][0][0]
-		
+
 
 		if newres == None:
 			continue
