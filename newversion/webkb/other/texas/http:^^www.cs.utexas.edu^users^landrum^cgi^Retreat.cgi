@@ -44,3 +44,62 @@ Last updated June 17, 1996.
  PCH PERSON
  PCH PERSON
  PCH PERSON
+Presbyterian Church of the Hills
+Bodybuilders' Retreat
+The Beauty of the Ranch Resort
+Susan has moved in
+The children got to play,
+but we decided they needed more exercise
+Here comes Pete
+Supper!
+You are visitor #
+30
+
+
+Presbyterian Church of the Hills
+Bodybuilders' Retreat
+The Beauty of the Ranch Resort
+Susan has moved in
+The children got to play,
+but we decided they needed more exercise
+Here comes Pete
+Supper!
+You are visitor #
+30
+
+
+Presbyterian Church of the Hills
+Bodybuilders' Retreat
+The Beauty of the Ranch Resort
+Susan has moved in
+The children got to play,
+but we decided they needed more exercise
+Here comes Pete
+Supper!
+You are visitor #
+30
+
+
+Presbyterian Church of the Hills
+Bodybuilders' Retreat
+The Beauty of the Ranch Resort
+Susan has moved in
+The children got to play,
+but we decided they needed more exercise
+Here comes Pete
+Supper!
+You are visitor #
+30
+
+
+Presbyterian Church of the Hills
+Bodybuilders' Retreat
+The Beauty of the Ranch Resort
+Susan has moved in
+The children got to play,
+but we decided they needed more exercise
+Here comes Pete
+Supper!
+You are visitor #
+30
+

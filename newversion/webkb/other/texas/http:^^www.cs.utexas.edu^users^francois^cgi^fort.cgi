@@ -28,3 +28,17 @@ BACKGROUND="http://www.cs.utexas.edu/users/francois/ghoul.jpg">
  Today 's Fortune cookie
  Today 's Fortune cookie
  Today 's Fortune cookie
+Today's Chinese Proverb Reads :
+
+
+Today's Chinese Proverb Reads :
+
+
+Today's Chinese Proverb Reads :
+
+
+Today's Chinese Proverb Reads :
+
+
+Today's Chinese Proverb Reads :
+
