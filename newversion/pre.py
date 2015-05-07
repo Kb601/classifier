@@ -55,4 +55,4 @@ def getcontent(content):
 
 
 if __name__ == '__main__':
-	print getcontent("<TITLE>rr Tom</TITLE><body>dwerw</body>daf")
+	print hasname("<TITLE>rr Tom</TITLE><body>dwerw</body>daf")
